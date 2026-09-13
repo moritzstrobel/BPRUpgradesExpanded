@@ -10,7 +10,7 @@
     "prototype_sid": "TechnicianNPC",
     "all_prototype_sid": "AllTechnicianNPC",
     "concrete_prototype_sids": [
-      "ZalesieTechnician",
+      "sid_character_linza_0",
       "sid_character_konder_0",
       "sid_character_multik_0",
       "sid_character_hors_0",
@@ -20,7 +20,9 @@
       "sid_character_serega_vint_0",
       "CorpusGarpia",
       "sid_character_semenyc_0",
-      "CorpusMedlak"
+      "CorpusMedlak",
+      "sid_character_stepsel_0",
+      "sid_character_serzdot_eremeev_0"
     ]
   },
   "upgrades": [
@@ -35,7 +37,7 @@
       "horizontal_position": 2,
       "vertical_position": "EUpgradeVerticalPosition::Down",
       "target_part": "EUpgradeTargetPartType::Barrel",
-      "effect_sids": ["FireRateUp10Effect"],
+      "effect_sids": ["BPRUE_FireRateUp10Effect"],
       "required_upgrade_sids": ["GunAK74_Upgrade_Barrel_2_2"],
       "connection_lines": ["EConnectionLineState::Top"]
     },
@@ -47,12 +49,12 @@
       "image": "Stock/Upgrade/T_AK47_Upg_c_3.T_AK47_Upg_c_3",
       "icon": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_AimingSpeed.T_PDA_Upgrades_Icon_AimingSpeed'",
       "base_cost": 1500,
-      "horizontal_position": 3,
-      "vertical_position": "EUpgradeVerticalPosition::Top",
+      "horizontal_position": 2,
+      "vertical_position": "EUpgradeVerticalPosition::Down",
       "target_part": "EUpgradeTargetPartType::Stock",
-      "effect_sids": ["ReloadingTimeDecBy25"],
-      "required_upgrade_sids": ["GunAK74_Upgrade_Stock_3"],
-      "connection_lines": ["EConnectionLineState::Down"]
+      "effect_sids": ["BPRUE_ReloadingTimeDecBy25Effect"],
+      "required_upgrade_sids": ["GunAK74_Upgrade_Stock_2"],
+      "connection_lines": ["EConnectionLineState::Top"]
     },
     {
       "sid": "GunAK74_Upgrade_Body_3",
