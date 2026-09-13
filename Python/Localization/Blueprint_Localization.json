@@ -2,9 +2,39 @@
   "_comment": "Source of truth for Blueprint Progression Redone Upgrades Expanded localization. The importer performs an UPSERT: existing SIDs are updated, missing SIDs are appended, unrelated entries remain untouched.",
   "entries": [
     {
-      "sid": "sid_upgrades_AK74_Upgrades_Tier_1_name",
+      "sid": "sid_bprue_GunAK74_Upgrade_Barrel_2_3_name",
       "languages": {
-        "English": "AK74 Upgrade Blueprint - Tier I"
+        "English": "Enhanced Gas System"
+      }
+    },
+    {
+      "sid": "sid_bprue_GunAK74_Upgrade_Barrel_2_3_description",
+      "languages": {
+        "English": "Optimizes the gas system to increase the weapon's rate of fire by 10%."
+      }
+    },
+    {
+      "sid": "sid_bprue_GunAK74_Upgrade_Stock_4_name",
+      "languages": {
+        "English": "Quick-Reload Mechanism"
+      }
+    },
+    {
+      "sid": "sid_bprue_GunAK74_Upgrade_Stock_4_description",
+      "languages": {
+        "English": "Refines the weapon's handling during reloads, reducing reload time by 25%."
+      }
+    },
+    {
+      "sid": "sid_bprue_GunAK74_Upgrade_Body_3_name",
+      "languages": {
+        "English": "5.56x45 mm Conversion"
+      }
+    },
+    {
+      "sid": "sid_bprue_GunAK74_Upgrade_Body_3_description",
+      "languages": {
+        "English": "Converts the weapon from 5.45x39 mm to 5.56x45 mm and enables compatible ammunition."
       }
     }
   ]
