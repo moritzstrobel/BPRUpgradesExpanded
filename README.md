@@ -23,8 +23,10 @@ Generated output:
 
 ```text
 Content/GameLite/GameData/UpgradePrototypes/UpgradePrototypes_patch_BPRUE.cfg
-Content/GameLite/GameData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg
+Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg
 ```
+
+The generated files follow the same prototype-folder patch layout used by Blueprint Progression Redone: the patch file is placed in a folder matching the vanilla prototype file name while preserving the vanilla parent path.
 
 ## Current status
 
