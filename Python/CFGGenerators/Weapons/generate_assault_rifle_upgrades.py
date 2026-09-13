@@ -241,7 +241,7 @@ def module_effects(module: dict) -> list[str]:
     if kind == "fire_rate_high_speed":
         return ["BPRUE_FireIntervalNeg20Effect", "RecoilNeg15Effect", "BPRUE_DurabilityPerShotNeg20Effect"]
     if kind == "fire_rate_balanced":
-        return ["BPRUE_FireIntervalNeg10Effect", "RecoilPos10Effect", "BPRUE_DurabilityPerShotNeg10Effect"]
+        return ["BPRUE_FireIntervalNeg10Effect", "RecoilPos10Effect", "ShotRecoveryPos20Effect", "BPRUE_DurabilityPerShotNeg10Effect"]
     if kind == "fire_control_burst":
         return ["BPRUE_AddBurstFireModeEffect", "RecoilPos5Effect", "BPRUE_DurabilityPerShotNeg10Effect"]
     if kind == "fire_control_precision":
@@ -259,7 +259,7 @@ def module_group(kind: str | None) -> str | None:
     return kind
 
 
-def render_upgrade(upgrade: dict, interchangeable: list[str] | None = None) -> str:
+def render_upgrade(upgrade: dict, blocking: list[str] | None = None) -> str:
     kind = upgrade.get("kind")
     effects = module_effects(upgrade) if kind else upgrade.get("effect_sids", [])
     refkey = MODULE_TEMPLATE_SID if kind else UPGRADE_TEMPLATE_SID
@@ -277,8 +277,8 @@ def render_upgrade(upgrade: dict, interchangeable: list[str] | None = None) -> s
         f"   UpgradeTargetPart = {upgrade['target_part']}",
     ]
     lines += render_array("EffectPrototypeSIDs", effects)
-    if interchangeable:
-        lines += render_array("InterchangeableUpgradePrototypeSIDs", interchangeable)
+    if blocking:
+        lines += render_array("BlockingUpgradePrototypeSIDs", blocking)
     lines.append("struct.end")
     return "\n".join(lines)
 
@@ -293,7 +293,7 @@ def render_upgrade_patch(config: dict) -> str:
         "// -----------------------------------------------------------------------------",
         "",
         "// Assault-rifle BPRUE extensions are currently modeled as technician modules.",
-        "// Module groups are internally interchangeable: reload, fire-rate and fire-control.",
+        "// Module categories are permanent specialization choices: sibling options block each other.",
         "// Caliber conversions remain faction-family coherent (Eastern / Western).",
         "",
         f"{UPGRADE_TEMPLATE_SID} : struct.begin {{refurl=@BaseGame/UpgradePrototypes.cfg;refkey=[0]}}",
@@ -312,12 +312,12 @@ def render_upgrade_patch(config: dict) -> str:
         modules = family_modules(family_name, family)
         for module in modules:
             group = module_group(module.get("kind"))
-            interchangeable = [
+            blocking = [
                 other["sid"]
                 for other in modules
                 if other["sid"] != module["sid"] and module_group(other.get("kind")) == group
             ]
-            lines.append(render_upgrade(module, interchangeable or None))
+            lines.append(render_upgrade(module, blocking or None))
             lines.append("")
     return "\n".join(lines)
 
@@ -433,7 +433,7 @@ struct.end
 
 BPRUE_SemiAutoOnlyEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeFireTypeTemplate}
    SID = BPRUE_SemiAutoOnlyEffect
-   LocalizationSID = bprue_fire_modes
+   LocalizationSID = bprue_semi_auto_only
    FireTypes : struct.begin
       [0] = EFireType::SemiAutomatic
    struct.end
