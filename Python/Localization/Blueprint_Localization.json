@@ -1,28 +1,28 @@
 {
   "_comment": "Source of truth for Blueprint Progression Redone Upgrades Expanded localization. The importer performs an UPSERT: existing SIDs are updated, missing SIDs are appended, unrelated entries remain untouched.",
   "entries": [
-    {"sid":"sid_bprue_caliber_762_eastern_name","languages":{"English":"7.62 mm Power Conversion"}},
-    {"sid":"sid_bprue_caliber_762_eastern_description","languages":{"English":"Converts the weapon to the game's 7.62 mm sniper cartridge. Increases damage, recoil and weapon wear."}},
-    {"sid":"sid_bprue_caliber_762_nato_name","languages":{"English":"7.62x51 mm NATO Conversion"}},
-    {"sid":"sid_bprue_caliber_762_nato_description","languages":{"English":"Converts the weapon to 7.62x51 mm NATO ammunition. Increases damage, recoil and weapon wear."}},
+    {"sid":"sid_bprue_caliber_762_eastern_name","languages":{"English":"7.62 mm Power Conversion","Russian":"Переход на усиленный 7,62 мм"}},
+    {"sid":"sid_bprue_caliber_762_eastern_description","languages":{"English":"Converts the weapon to the game's 7.62 mm sniper cartridge. Increases damage, recoil and weapon wear.","Russian":"Переводит оружие на используемый в игре снайперский патрон 7,62 мм. Увеличивает урон, отдачу и износ оружия."}},
+    {"sid":"sid_bprue_caliber_762_nato_name","languages":{"English":"7.62x51 mm NATO Conversion","Russian":"Переход на 7,62x51 мм НАТО"}},
+    {"sid":"sid_bprue_caliber_762_nato_description","languages":{"English":"Converts the weapon to 7.62x51 mm NATO ammunition. Increases damage, recoil and weapon wear.","Russian":"Переводит оружие на боеприпасы 7,62x51 мм НАТО. Увеличивает урон, отдачу и износ оружия."}},
 
-    {"sid":"sid_bprue_reload_competition_name","languages":{"English":"Competition Reload System"}},
-    {"sid":"sid_bprue_reload_competition_description","languages":{"English":"Optimizes magazine handling for 20% faster reloads, at the cost of 15% increased recoil."}},
-    {"sid":"sid_bprue_reload_reinforced_name","languages":{"English":"Reinforced Feed System"}},
-    {"sid":"sid_bprue_reload_reinforced_description","languages":{"English":"A reinforced feed setup provides 10% faster reloads and reduces weapon wear by 20%, but slows the firing cycle by 5%."}},
+    {"sid":"sid_bprue_reload_competition_name","languages":{"English":"Competition Reload System","Russian":"Спортивная система перезарядки"}},
+    {"sid":"sid_bprue_reload_competition_description","languages":{"English":"Optimizes magazine handling for 20% faster reloads, at the cost of 15% increased recoil.","Russian":"Оптимизирует работу с магазином, ускоряя перезарядку на 20%, но увеличивая отдачу на 15%."}},
+    {"sid":"sid_bprue_reload_reinforced_name","languages":{"English":"Reinforced Feed System","Russian":"Усиленная система подачи"}},
+    {"sid":"sid_bprue_reload_reinforced_description","languages":{"English":"A reinforced feed setup provides 10% faster reloads and reduces weapon wear by 20%, but slows the firing cycle by 5%.","Russian":"Усиленная система подачи ускоряет перезарядку на 10% и снижает износ оружия на 20%, но замедляет цикл стрельбы на 5%."}},
 
-    {"sid":"sid_bprue_fire_rate_high_speed_name","languages":{"English":"High-Speed Operating System"}},
-    {"sid":"sid_bprue_fire_rate_high_speed_description","languages":{"English":"Pushes the action for 20% faster fire rate, but increases recoil by 15% and weapon wear by 20%."}},
-    {"sid":"sid_bprue_fire_rate_balanced_name","languages":{"English":"Balanced Gas System"}},
-    {"sid":"sid_bprue_fire_rate_balanced_description","languages":{"English":"Provides 10% faster fire rate and 10% lower recoil, at the cost of 10% increased weapon wear."}},
+    {"sid":"sid_bprue_fire_rate_high_speed_name","languages":{"English":"High-Speed Operating System","Russian":"Высокоскоростная автоматика"}},
+    {"sid":"sid_bprue_fire_rate_high_speed_description","languages":{"English":"Pushes the action for 20% faster fire rate, but increases recoil by 15% and weapon wear by 20%.","Russian":"Ускоряет работу автоматики, повышая темп стрельбы на 20%, но увеличивает отдачу на 15% и износ оружия на 20%."}},
+    {"sid":"sid_bprue_fire_rate_balanced_name","languages":{"English":"Balanced Gas System","Russian":"Сбалансированная газовая система"}},
+    {"sid":"sid_bprue_fire_rate_balanced_description","languages":{"English":"Provides 10% faster fire rate and 10% lower recoil, at the cost of 10% increased weapon wear.","Russian":"Повышает темп стрельбы на 10% и снижает отдачу на 10%, но увеличивает износ оружия на 10%."}},
 
-    {"sid":"sid_bprue_fire_control_burst_name","languages":{"English":"Burst Fire Control"}},
-    {"sid":"sid_bprue_fire_control_burst_description","languages":{"English":"Adds a three-round burst mode while retaining semi-automatic and automatic fire. Recoil is reduced by 5%, but weapon wear increases by 10%."}},
-    {"sid":"sid_bprue_fire_control_precision_name","languages":{"English":"Precision Fire Control"}},
-    {"sid":"sid_bprue_fire_control_precision_description","languages":{"English":"Reconfigures the fire-control group for semi-automatic fire only, removing automatic and burst modes. In exchange, damage is increased by 10% and armor penetration by 15%, while weapon wear increases by 20%."}},
+    {"sid":"sid_bprue_fire_control_burst_name","languages":{"English":"Burst Fire Control","Russian":"Механизм отсечки очереди"}},
+    {"sid":"sid_bprue_fire_control_burst_description","languages":{"English":"Adds a three-round burst mode while retaining semi-automatic and automatic fire. Recoil is reduced by 5%, but weapon wear increases by 10%.","Russian":"Добавляет режим отсечки по три выстрела, сохраняя одиночный и автоматический огонь. Отдача снижается на 5%, но износ оружия увеличивается на 10%."}},
+    {"sid":"sid_bprue_fire_control_precision_name","languages":{"English":"Precision Fire Control","Russian":"Точный ударно-спусковой механизм"}},
+    {"sid":"sid_bprue_fire_control_precision_description","languages":{"English":"Reconfigures the fire-control group for semi-automatic fire only, removing automatic and burst modes. In exchange, damage is increased by 10% and armor penetration by 15%, while weapon wear increases by 20%.","Russian":"Перенастраивает ударно-спусковой механизм только на одиночный огонь, отключая автоматический режим и отсечку очереди. Взамен урон увеличивается на 10%, бронепробиваемость — на 15%, а износ оружия — на 20%."}},
 
-    {"sid":"sid_effects_bprue_fire_rate_name","languages":{"English":"Fire rate"}},
-    {"sid":"sid_effects_bprue_reload_speed_name","languages":{"English":"Reload speed"}},
-    {"sid":"sid_effects_bprue_fire_modes_name","languages":{"English":"Fire mode"}}
+    {"sid":"sid_effects_bprue_fire_rate_name","languages":{"English":"Fire rate","Russian":"Темп стрельбы"}},
+    {"sid":"sid_effects_bprue_reload_speed_name","languages":{"English":"Reload speed","Russian":"Скорость перезарядки"}},
+    {"sid":"sid_effects_bprue_fire_modes_name","languages":{"English":"Fire mode","Russian":"Режим огня"}}
   ]
 }
