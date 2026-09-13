@@ -5,8 +5,7 @@ import sys
 SCRIPT_DIR = Path(__file__).resolve().parent
 
 GENERATORS = [
-    SCRIPT_DIR / "CFGGenerators" / "Weapons" / "generate_ak74_upgrades.py",
-    SCRIPT_DIR / "CFGGenerators" / "Weapons" / "generate_ak74_test_support.py",
+    SCRIPT_DIR / "CFGGenerators" / "Weapons" / "generate_assault_rifle_upgrades.py",
 ]
 
 def main() -> None:
