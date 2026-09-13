@@ -8,7 +8,7 @@ PYTHON_ROOT = SCRIPT_DIR.parents[1]
 CONTENT_ROOT = PYTHON_ROOT.parent
 CONFIG_PATH = SCRIPT_DIR / "ak74_upgrades.json"
 UPGRADE_OUTPUT_PATH = CONTENT_ROOT / "GameLite" / "GameData" / "UpgradePrototypes" / "UpgradePrototypes_patch_BPRUE.cfg"
-WEAPON_OUTPUT_PATH = CONTENT_ROOT / "GameLite" / "GameData" / "WeaponGeneralSetupPrototypes" / "WeaponGeneralSetupPrototypes_patch_BPRUE.cfg"
+WEAPON_OUTPUT_PATH = CONTENT_ROOT / "GameLite" / "GameData" / "WeaponData" / "WeaponGeneralSetupPrototypes" / "WeaponGeneralSetupPrototypes_patch_BPRUE.cfg"
 
 
 def load_config() -> dict:
