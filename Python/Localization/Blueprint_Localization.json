@@ -36,6 +36,18 @@
       "languages": {
         "English": "Converts the weapon from 5.45x39 mm to 5.56x45 mm and enables compatible ammunition."
       }
+    },
+    {
+      "sid": "sid_effects_bprue_fire_rate_name",
+      "languages": {
+        "English": "Fire rate increase"
+      }
+    },
+    {
+      "sid": "sid_effects_bprue_reload_speed_name",
+      "languages": {
+        "English": "Reload speed"
+      }
     }
   ]
 }
