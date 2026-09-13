@@ -272,7 +272,12 @@ def render_upgrade(upgrade: dict, blocking: list[str] | None = None) -> str:
         f"   Image = {upgrade['image']}",
         f"   Icon = {upgrade['icon']}",
         f"   BaseCost = {upgrade['base_cost']}",
-        f"   HorizontalPosition = {upgrade['horizontal_position']}",
+    ]
+    # Vanilla technician modules usually rely on the module UI's implicit
+    # horizontal placement. Keep HorizontalPosition only for normal upgrades.
+    if not kind:
+        lines.append(f"   HorizontalPosition = {upgrade['horizontal_position']}")
+    lines += [
         f"   VerticalPosition = {upgrade['vertical_position']}",
         f"   UpgradeTargetPart = {upgrade['target_part']}",
     ]
