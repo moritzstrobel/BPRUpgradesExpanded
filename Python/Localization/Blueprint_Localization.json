@@ -10,7 +10,7 @@
     {
       "sid": "sid_bprue_GunAK74_Upgrade_Barrel_2_3_description",
       "languages": {
-        "English": "Optimizes the gas system to increase the weapon's rate of fire by 10%."
+        "English": "Optimizes the gas system to increase the weapon's rate of fire by 50% for testing."
       }
     },
     {
@@ -38,6 +38,18 @@
       }
     },
     {
+      "sid": "sid_bprue_GunAK74_Upgrade_Body_4_name",
+      "languages": {
+        "English": "Three-Round Burst"
+      }
+    },
+    {
+      "sid": "sid_bprue_GunAK74_Upgrade_Body_4_description",
+      "languages": {
+        "English": "Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."
+      }
+    },
+    {
       "sid": "sid_effects_bprue_fire_rate_name",
       "languages": {
         "English": "Fire rate increase"
@@ -47,6 +59,12 @@
       "sid": "sid_effects_bprue_reload_speed_name",
       "languages": {
         "English": "Reload speed"
+      }
+    },
+    {
+      "sid": "sid_effects_bprue_fire_modes_name",
+      "languages": {
+        "English": "Three-round burst mode"
       }
     }
   ]
