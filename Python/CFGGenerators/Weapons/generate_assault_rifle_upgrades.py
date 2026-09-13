@@ -241,7 +241,7 @@ def module_effects(module: dict) -> list[str]:
     if kind == "fire_rate_high_speed":
         return ["BPRUE_FireIntervalNeg20Effect", "RecoilNeg15Effect", "BPRUE_DurabilityPerShotNeg20Effect"]
     if kind == "fire_rate_balanced":
-        return ["BPRUE_FireIntervalNeg10Effect", "RecoilPos10Effect", "BPRUE_DurabilityPerShotNeg10Effect"]
+        return ["BPRUE_FireIntervalNeg10Effect", "RecoilPos10Effect", "ShotRecoveryPos20Effect", "BPRUE_DurabilityPerShotNeg10Effect"]
     if kind == "fire_control_burst":
         return ["BPRUE_AddBurstFireModeEffect", "RecoilPos5Effect", "BPRUE_DurabilityPerShotNeg10Effect"]
     if kind == "fire_control_precision":
