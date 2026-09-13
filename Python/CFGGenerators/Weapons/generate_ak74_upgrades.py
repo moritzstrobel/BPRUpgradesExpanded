@@ -36,6 +36,9 @@ def render_upgrade(upgrade: dict, image_root: str) -> str:
         f"   BaseCost = {upgrade['base_cost']}",
         f"   HorizontalPosition = {upgrade['horizontal_position']}",
         f"   VerticalPosition = {upgrade['vertical_position']}",
+        "   DiscountCoefficient = 0.f",
+        "   RepairCostModifier = 0.2f",
+        "   IsModification = false",
         f"   UpgradeTargetPart = {upgrade['target_part']}",
     ]
 
