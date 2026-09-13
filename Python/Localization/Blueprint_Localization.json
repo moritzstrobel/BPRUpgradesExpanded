@@ -19,7 +19,7 @@
     {"sid":"sid_bprue_fire_control_burst_name","languages":{"English":"Burst Fire Control"}},
     {"sid":"sid_bprue_fire_control_burst_description","languages":{"English":"Adds a three-round burst mode while retaining semi-automatic and automatic fire. Recoil is reduced by 5%, but weapon wear increases by 10%."}},
     {"sid":"sid_bprue_fire_control_precision_name","languages":{"English":"Precision Fire Control"}},
-    {"sid":"sid_bprue_fire_control_precision_description","languages":{"English":"Restricts the weapon to semi-automatic fire in exchange for 10% more damage and 15% more armor penetration. Weapon wear increases by 20%."}},
+    {"sid":"sid_bprue_fire_control_precision_description","languages":{"English":"Reconfigures the fire-control group for semi-automatic fire only, removing automatic and burst modes. In exchange, damage is increased by 10% and armor penetration by 15%, while weapon wear increases by 20%."}},
 
     {"sid":"sid_effects_bprue_fire_rate_name","languages":{"English":"Fire rate"}},
     {"sid":"sid_effects_bprue_reload_speed_name","languages":{"English":"Reload speed"}},
