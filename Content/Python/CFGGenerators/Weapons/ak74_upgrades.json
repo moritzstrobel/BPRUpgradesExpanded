@@ -1,8 +1,10 @@
 {
   "schema_version": 1,
   "weapon": {
-    "name": "AK-74",
+    "name": "AKM-74S",
+    "prototype_sid": "GunAK74_ST",
     "prototype_prefix": "GunAK74",
+    "upgrade_list_start_index": 10,
     "image_root": "/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/AK74"
   },
   "upgrades": [
