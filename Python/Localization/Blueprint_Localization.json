@@ -1,0 +1,11 @@
+{
+  "_comment": "Source of truth for Blueprint Progression Redone Upgrades Expanded localization. The importer performs an UPSERT: existing SIDs are updated, missing SIDs are appended, unrelated entries remain untouched.",
+  "entries": [
+    {
+      "sid": "sid_upgrades_AK74_Upgrades_Tier_1_name",
+      "languages": {
+        "English": "AK74 Upgrade Blueprint - Tier I"
+      }
+    }
+  ]
+}
