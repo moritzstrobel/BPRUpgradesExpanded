@@ -17,55 +17,39 @@ UPGRADE_TEMPLATE_SID = "BPRUE_UpgradeTemplate"
 MODULE_TEMPLATE_SID = "BPRUE_ModuleTemplate"
 
 CALIBER_EFFECTS = {
-    "A545": {
-        "change": "ChangeCaliber545Effect",
-        "add_ammo": "ChangeAmmoTypes545Effect",
-        "remove_ammo": ["ChangeAmmoTypesNo556Effect", "BPRUE_ChangeAmmoTypesNo762Effect", "ChangeAmmoTypesNo939Effect"],
-    },
-    "A556": {
-        "change": "ChangeCaliber556Effect",
-        "add_ammo": "ChangeAmmoTypes556Effect",
-        "remove_ammo": ["ChangeAmmoTypesNo545Effect", "BPRUE_ChangeAmmoTypesNo762Effect", "ChangeAmmoTypesNo939Effect"],
-    },
-    "A762Sniper": {
-        "change": "ChangeCaliber762Effect",
-        "add_ammo": "ChangeAmmoTypes762Effect",
-        "remove_ammo": ["ChangeAmmoTypesNo545Effect", "ChangeAmmoTypesNo556Effect", "ChangeAmmoTypesNo939Effect"],
-    },
-    "A939": {
-        "change": "BPRUE_ChangeCaliber939Effect",
-        "add_ammo": "ChangeAmmoTypes939Effect",
-        "remove_ammo": ["ChangeAmmoTypesNo545Effect", "ChangeAmmoTypesNo556Effect", "BPRUE_ChangeAmmoTypesNo762Effect"],
-    },
+    "A545": {"change": "ChangeCaliber545Effect", "add_ammo": "ChangeAmmoTypes545Effect", "remove_ammo": ["ChangeAmmoTypesNo556Effect", "BPRUE_ChangeAmmoTypesNo762Effect", "ChangeAmmoTypesNo939Effect"]},
+    "A556": {"change": "ChangeCaliber556Effect", "add_ammo": "ChangeAmmoTypes556Effect", "remove_ammo": ["ChangeAmmoTypesNo545Effect", "BPRUE_ChangeAmmoTypesNo762Effect", "ChangeAmmoTypesNo939Effect"]},
+    "A762Sniper": {"change": "ChangeCaliber762Effect", "add_ammo": "ChangeAmmoTypes762Effect", "remove_ammo": ["ChangeAmmoTypesNo545Effect", "ChangeAmmoTypesNo556Effect", "ChangeAmmoTypesNo939Effect"]},
+    "A939": {"change": "BPRUE_ChangeCaliber939Effect", "add_ammo": "ChangeAmmoTypes939Effect", "remove_ammo": ["ChangeAmmoTypesNo545Effect", "ChangeAmmoTypesNo556Effect", "BPRUE_ChangeAmmoTypesNo762Effect"]},
 }
 
-# Working layout pattern taken from DurabilityTiers:
-# - a normal extension inherits directly from the vanilla upgrade it extends
-# - the first extension is HorizontalPosition = 1
-# - it explicitly requires that vanilla parent
-# - the connection line is opposite to the node's vertical position
-# Modules stay independent and continue to use the BPRUE module template.
-STANDARD_UPGRADE_PARENTS = {
-    "GunAK74_Upgrade_BPRUE_FireRate": "GunAK74_Upgrade_Barrel_2_1",
-    "GunAK74_Upgrade_BPRUE_Reload": "GunAK74_Upgrade_Body_2",
-    "GunFora_Upgrade_BPRUE_FireRate": "GunFora_Upgrade_Barrel_3",
-    "GunFora_Upgrade_BPRUE_Reload": "GunFora_Upgrade_Body_3_2",
-    "GunG37_Upgrade_BPRUE_FireRate": "GunG37_Upgrade_Barrel_2_1",
-    "GunG37_Upgrade_BPRUE_Reload": "GunG37_Upgrade_Body_1_2",
-    "GunGvintar_Upgrade_BPRUE_FireRate": "GunGvintar_Upgrade_Barrel_3",
-    "GunGvintar_Upgrade_BPRUE_Reload": "GunGvintar_Upgrade_Body_3",
-    "GunM16_Upgrade_BPRUE_FireRate": "GunM16_Upgrade_Barrel_3",
-    "GunM16_Upgrade_BPRUE_Reload": "GunM16_Upgrade_Body_1",
-    "GunGrim_Upgrade_BPRUE_FireRate": "GunGrim_Upgrade_Barrel_2",
-    "GunGrim_Upgrade_BPRUE_Reload": "GunGrim_Upgrade_Body_3_2",
-    "GunLavina_Upgrade_BPRUE_FireRate": "GunLavina_Upgrade_Barrel_3",
-    "GunLavina_Upgrade_BPRUE_Reload": "GunLavina_Upgrade_Body_3",
-    "GunDnipro_Upgrade_BPRUE_FireRate": "GunDnipro_Upgrade_Barrel_3",
-    "GunDnipro_Upgrade_BPRUE_Reload": "GunDnipro_Upgrade_Body_2",
-    "GunKharod_Upgrade_BPRUE_FireRate": "GunKharod_Upgrade_Barrel_3_1",
-    "GunKharod_Upgrade_BPRUE_Reload": "GunKharod_Upgrade_Body_1",
-    "GunArev_Upgrade_BPRUE_FireRate": "GunArev_Upgrade_Barrel_3_1",
-    "GunArev_Upgrade_BPRUE_Reload": "GunArev_Upgrade_Body_3",
+# Normal extensions follow the working DurabilityTiers pattern. The value is
+# (required parent SID, horizontal position). Most BPRUE nodes are the first
+# extension of a vanilla node (H1). ARev additionally carries an explicit H1 ->
+# H2 -> H3 test chain so we can verify that the UI can be forced into a row.
+STANDARD_UPGRADE_CONNECTIONS = {
+    "GunAK74_Upgrade_BPRUE_FireRate": ("GunAK74_Upgrade_Barrel_2_1", 1),
+    "GunAK74_Upgrade_BPRUE_Reload": ("GunAK74_Upgrade_Body_2", 1),
+    "GunFora_Upgrade_BPRUE_FireRate": ("GunFora_Upgrade_Barrel_3", 1),
+    "GunFora_Upgrade_BPRUE_Reload": ("GunFora_Upgrade_Body_3_2", 1),
+    "GunG37_Upgrade_BPRUE_FireRate": ("GunG37_Upgrade_Barrel_2_1", 1),
+    "GunG37_Upgrade_BPRUE_Reload": ("GunG37_Upgrade_Body_1_2", 1),
+    "GunGvintar_Upgrade_BPRUE_FireRate": ("GunGvintar_Upgrade_Barrel_3", 1),
+    "GunGvintar_Upgrade_BPRUE_Reload": ("GunGvintar_Upgrade_Body_3", 1),
+    "GunM16_Upgrade_BPRUE_FireRate": ("GunM16_Upgrade_Barrel_3", 1),
+    "GunM16_Upgrade_BPRUE_Reload": ("GunM16_Upgrade_Body_1", 1),
+    "GunGrim_Upgrade_BPRUE_FireRate": ("GunGrim_Upgrade_Barrel_2", 1),
+    "GunGrim_Upgrade_BPRUE_Reload": ("GunGrim_Upgrade_Body_3_2", 1),
+    "GunLavina_Upgrade_BPRUE_FireRate": ("GunLavina_Upgrade_Barrel_3", 1),
+    "GunLavina_Upgrade_BPRUE_Reload": ("GunLavina_Upgrade_Body_3", 1),
+    "GunDnipro_Upgrade_BPRUE_FireRate": ("GunDnipro_Upgrade_Barrel_3", 1),
+    "GunDnipro_Upgrade_BPRUE_Reload": ("GunDnipro_Upgrade_Body_2", 1),
+    "GunKharod_Upgrade_BPRUE_FireRate": ("GunKharod_Upgrade_Barrel_3_1", 1),
+    "GunKharod_Upgrade_BPRUE_Reload": ("GunKharod_Upgrade_Body_1", 1),
+    "GunArev_Upgrade_BPRUE_FireRate": ("GunArev_Upgrade_Barrel_3_1", 1),
+    "GunArev_Upgrade_BPRUE_FireRate_H2": ("GunArev_Upgrade_BPRUE_FireRate", 2),
+    "GunArev_Upgrade_BPRUE_FireRate_H3": ("GunArev_Upgrade_BPRUE_FireRate_H2", 3),
+    "GunArev_Upgrade_BPRUE_Reload": ("GunArev_Upgrade_Body_3", 1),
 }
 
 
@@ -84,17 +68,40 @@ def render_array(name: str, values: list[str], indent: str = "   ", bpatch: bool
     return lines
 
 
+def arev_row_test_upgrades(family: dict) -> list[dict]:
+    fire_rate = next(u for u in family.get("standard_upgrades", []) if u["sid"] == "GunArev_Upgrade_BPRUE_FireRate")
+    result = []
+    for sid, cost in [
+        ("GunArev_Upgrade_BPRUE_FireRate_H2", fire_rate["base_cost"] + 800),
+        ("GunArev_Upgrade_BPRUE_FireRate_H3", fire_rate["base_cost"] + 1600),
+    ]:
+        upgrade = dict(fire_rate)
+        upgrade["sid"] = sid
+        # Reuse the existing localization deliberately: this is a temporary
+        # layout test, while each additional +10% effect makes the stages easy
+        # to validate mechanically as cumulative fire-rate upgrades.
+        upgrade["base_cost"] = cost
+        result.append(upgrade)
+    return result
+
+
+def family_standard_upgrades(family_name: str, family: dict) -> list[dict]:
+    upgrades = list(family.get("standard_upgrades", []))
+    if family_name == "Arev":
+        upgrades.extend(arev_row_test_upgrades(family))
+    return upgrades
+
+
 def all_upgrades(config: dict) -> list[dict]:
     result: list[dict] = []
-    for family in config["families"].values():
-        result.extend(family.get("standard_upgrades", []))
+    for family_name, family in config["families"].items():
+        result.extend(family_standard_upgrades(family_name, family))
         result.extend(family.get("modules", []))
     return result
 
 
 def caliber_module_effects(module: dict) -> list[str]:
-    caliber = module["caliber"]
-    effects = CALIBER_EFFECTS[caliber]
+    effects = CALIBER_EFFECTS[module["caliber"]]
     result = [effects["change"], *effects["remove_ammo"], effects["add_ammo"]]
     balance_class = module.get("balance_class")
     if balance_class == "power":
@@ -118,11 +125,12 @@ def render_upgrade(upgrade: dict, interchangeable: list[str] | None = None) -> s
     required_upgrade_sids: list[str] = []
     connection_lines: list[str] = []
 
-    if kind is None and upgrade["sid"] in STANDARD_UPGRADE_PARENTS:
-        parent_sid = STANDARD_UPGRADE_PARENTS[upgrade["sid"]]
+    if kind is None and upgrade["sid"] in STANDARD_UPGRADE_CONNECTIONS:
+        parent_sid, horizontal_position = STANDARD_UPGRADE_CONNECTIONS[upgrade["sid"]]
+        # H1 inherits the vanilla upgrade just like DurabilityTiers. H2/H3 are
+        # BPRUE-owned nodes, so inherit from the preceding BPRUE stage.
         refkey = parent_sid
         ref_suffix = ";bpatch"
-        horizontal_position = 1
         required_upgrade_sids = [parent_sid]
         connection_lines = [
             "EConnectionLineState::Down"
@@ -143,70 +151,42 @@ def render_upgrade(upgrade: dict, interchangeable: list[str] | None = None) -> s
         f"   UpgradeTargetPart = {upgrade['target_part']}",
     ]
     lines += render_array("EffectPrototypeSIDs", effects, bpatch=kind is None)
-
     if required_upgrade_sids:
         lines += render_array("RequiredUpgradePrototypeSIDs", required_upgrade_sids)
         lines += render_array("ConnectionLines", connection_lines)
-
     if interchangeable:
         lines += render_array("InterchangeableUpgradePrototypeSIDs", interchangeable)
-
     lines.append("struct.end")
     return "\n".join(lines)
 
 
 def render_upgrade_patch(config: dict) -> str:
     lines = [
-        "// -----------------------------------------------------------------------------",
-        "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND",
-        "//",
-        "// Source: Python/CFGGenerators/Weapons/assault_rifles_upgrades.json",
-        "// Generated by: generate_assault_rifle_upgrades.py",
-        "// -----------------------------------------------------------------------------",
-        "",
+        "// -----------------------------------------------------------------------------", "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND", "//",
+        "// Source: Python/CFGGenerators/Weapons/assault_rifles_upgrades.json", "// Generated by: generate_assault_rifle_upgrades.py",
+        "// -----------------------------------------------------------------------------", "",
         "// BPRUE master templates are kept for independent modules.",
-        "// Standard upgrades inherit directly from their vanilla parent, matching",
-        "// the working DurabilityTiers extension pattern.",
-        "",
-        f"{UPGRADE_TEMPLATE_SID} : struct.begin {{refurl=@BaseGame/UpgradePrototypes.cfg;refkey=[0]}}",
-        f"   SID = {UPGRADE_TEMPLATE_SID}",
-        "struct.end",
-        "",
-        f"{MODULE_TEMPLATE_SID} : struct.begin {{refkey={UPGRADE_TEMPLATE_SID}}}",
-        f"   SID = {MODULE_TEMPLATE_SID}",
-        "   IsModification = true",
-        "struct.end",
-        "",
-        "// Normal upgrades: vanilla refkey + bpatch, HorizontalPosition 1, explicit",
-        "// prerequisite and matching connection line. Modules remain independent.",
-        "",
+        "// Standard upgrades follow the working DurabilityTiers extension pattern.", "",
+        f"{UPGRADE_TEMPLATE_SID} : struct.begin {{refurl=@BaseGame/UpgradePrototypes.cfg;refkey=[0]}}", f"   SID = {UPGRADE_TEMPLATE_SID}", "struct.end", "",
+        f"{MODULE_TEMPLATE_SID} : struct.begin {{refkey={UPGRADE_TEMPLATE_SID}}}", f"   SID = {MODULE_TEMPLATE_SID}", "   IsModification = true", "struct.end", "",
     ]
-
     for family_name, family in config["families"].items():
         lines.append(f"// --- {family_name} ------------------------------------------------------------")
-        for upgrade in family.get("standard_upgrades", []):
-            lines.append(render_upgrade(upgrade))
-            lines.append("")
-
+        for upgrade in family_standard_upgrades(family_name, family):
+            lines.append(render_upgrade(upgrade)); lines.append("")
         caliber_modules = [m for m in family.get("modules", []) if m.get("kind") == "caliber"]
         caliber_sids = [m["sid"] for m in caliber_modules]
         for module in family.get("modules", []):
-            interchangeable = None
-            if module.get("kind") == "caliber":
-                interchangeable = [sid for sid in caliber_sids if sid != module["sid"]]
-            lines.append(render_upgrade(module, interchangeable))
-            lines.append("")
-
+            interchangeable = [sid for sid in caliber_sids if sid != module["sid"]] if module.get("kind") == "caliber" else None
+            lines.append(render_upgrade(module, interchangeable)); lines.append("")
     return "\n".join(lines)
 
 
 def render_effect_patch(config: dict) -> str:
     fire_interval = config["shared_balance"]["fire_interval_percent"]
     reload_time = config["shared_balance"]["reload_time_percent"]
-
     return f"""// -----------------------------------------------------------------------------
 // AUTO-GENERATED FILE - DO NOT EDIT BY HAND
-//
 // Source: Python/CFGGenerators/Weapons/assault_rifles_upgrades.json
 // Generated by: generate_assault_rifle_upgrades.py
 // -----------------------------------------------------------------------------
@@ -261,14 +241,12 @@ BPRUE_AddBurstFireModeEffect : struct.begin {{refurl=@BaseGame/EffectPrototypes.
    ShowUpgradeEffectValue = false
 struct.end
 
-// Vanilla has ChangeCaliber effects for 5.45, 5.56 and 7.62 Sniper but not 9x39.
 BPRUE_ChangeCaliber939Effect : struct.begin {{refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeCaliberTemplate}}
    SID = BPRUE_ChangeCaliber939Effect
    Caliber = EAmmoCaliber::A939
    ShowUpgradeEffectValue = false
 struct.end
 
-// Vanilla exposes ChangeAmmoTypes762Effect but no complete matching remove effect.
 BPRUE_ChangeAmmoTypesNo762Effect : struct.begin {{refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}}
    SID = BPRUE_ChangeAmmoTypesNo762Effect
    AmmoTypeProjectiles : struct.begin
@@ -293,100 +271,45 @@ struct.end
 
 
 def render_weapon_patch(config: dict) -> str:
-    lines = [
-        "// -----------------------------------------------------------------------------",
-        "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND",
-        "//",
-        "// Source: Python/CFGGenerators/Weapons/assault_rifles_upgrades.json",
-        "// Generated by: generate_assault_rifle_upgrades.py",
-        "// -----------------------------------------------------------------------------",
-        "",
-    ]
-
+    lines = ["// -----------------------------------------------------------------------------", "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND", "// Source: Python/CFGGenerators/Weapons/assault_rifles_upgrades.json", "// Generated by: generate_assault_rifle_upgrades.py", "// -----------------------------------------------------------------------------", ""]
     for family_name, family in config["families"].items():
-        upgrades = [*family.get("standard_upgrades", []), *family.get("modules", [])]
-        lines += [
-            f"// {family_name}",
-            f"{family['weapon_sid']} : struct.begin {{bpatch}}",
-        ]
+        upgrades = [*family_standard_upgrades(family_name, family), *family.get("modules", [])]
+        lines += [f"// {family_name}", f"{family['weapon_sid']} : struct.begin {{bpatch}}"]
         if any(module.get("kind") == "burst" for module in family.get("modules", [])):
             lines.append(f"   FireQueueCount = {family.get('fire_queue_count', 3)}")
         lines.append("   UpgradePrototypeSIDs : struct.begin {bpatch}")
         for upgrade in upgrades:
             lines.append(f"      {upgrade['sid']} = {upgrade['sid']}")
-        lines += [
-            "   struct.end",
-            "struct.end",
-            "",
-        ]
-
+        lines += ["   struct.end", "struct.end", ""]
     return "\n".join(lines)
 
 
 def render_appended_upgrade_entries(upgrades: list[dict], indent: str = "      ") -> list[str]:
     lines: list[str] = []
     for upgrade in upgrades:
-        lines += [
-            f"{indent}[*] : struct.begin",
-            f"{indent}   UpgradePrototypeSID = {upgrade['sid']}",
-            f"{indent}   Enabled = true",
-            f"{indent}struct.end",
-        ]
+        lines += [f"{indent}[*] : struct.begin", f"{indent}   UpgradePrototypeSID = {upgrade['sid']}", f"{indent}   Enabled = true", f"{indent}struct.end"]
     return lines
 
 
 def render_npc_patch(config: dict) -> str:
     technician = config["technician"]
     upgrades = all_upgrades(config)
-
-    lines = [
-        "// -----------------------------------------------------------------------------",
-        "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND",
-        "//",
-        "// Source: Python/CFGGenerators/Weapons/assault_rifles_upgrades.json",
-        "// Generated by: generate_assault_rifle_upgrades.py",
-        "// -----------------------------------------------------------------------------",
-        "",
-        "// Draft setup: all BPRUE assault-rifle upgrades are available at all technicians.",
-        "// Technician progression can be restricted after the family designs are finalized.",
-        "",
-    ]
-
-    prototype_sids = [
-        technician["prototype_sid"],
-        technician["all_prototype_sid"],
-        *technician.get("concrete_prototype_sids", []),
-    ]
-
+    lines = ["// -----------------------------------------------------------------------------", "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND", "// Source: Python/CFGGenerators/Weapons/assault_rifles_upgrades.json", "// Generated by: generate_assault_rifle_upgrades.py", "// -----------------------------------------------------------------------------", "", "// Draft setup: all BPRUE assault-rifle upgrades are available at all technicians.", ""]
+    prototype_sids = [technician["prototype_sid"], technician["all_prototype_sid"], *technician.get("concrete_prototype_sids", [])]
     seen: set[str] = set()
     for prototype_sid in prototype_sids:
         if prototype_sid in seen:
             continue
         seen.add(prototype_sid)
-        lines += [
-            f"{prototype_sid} : struct.begin {{bpatch}}",
-            "   Upgrades : struct.begin {bpatch}",
-        ]
+        lines += [f"{prototype_sid} : struct.begin {{bpatch}}", "   Upgrades : struct.begin {bpatch}"]
         lines += render_appended_upgrade_entries(upgrades)
-        lines += [
-            "   struct.end",
-            "struct.end",
-            "",
-        ]
-
+        lines += ["   struct.end", "struct.end", ""]
     return "\n".join(lines)
 
 
 def main() -> None:
     config = load_config()
-
-    outputs = {
-        UPGRADE_OUTPUT_PATH: render_upgrade_patch(config),
-        EFFECT_OUTPUT_PATH: render_effect_patch(config),
-        WEAPON_OUTPUT_PATH: render_weapon_patch(config),
-        NPC_OUTPUT_PATH: render_npc_patch(config),
-    }
-
+    outputs = {UPGRADE_OUTPUT_PATH: render_upgrade_patch(config), EFFECT_OUTPUT_PATH: render_effect_patch(config), WEAPON_OUTPUT_PATH: render_weapon_patch(config), NPC_OUTPUT_PATH: render_npc_patch(config)}
     for path, content in outputs.items():
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(content, encoding="utf-8")
