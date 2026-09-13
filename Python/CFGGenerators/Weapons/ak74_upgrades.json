@@ -4,7 +4,8 @@
     "name": "AKM-74S",
     "prototype_sid": "GunAK74_ST",
     "prototype_prefix": "GunAK74",
-    "image_root": "/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/AK74"
+    "image_root": "/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/AK74",
+    "fire_queue_count": 3
   },
   "technician": {
     "prototype_sid": "TechnicianNPC",
@@ -43,9 +44,15 @@
       "horizontal_position": 2,
       "vertical_position": "EUpgradeVerticalPosition::Down",
       "target_part": "EUpgradeTargetPartType::Barrel",
-      "effect_sids": ["BPRUE_FireRateUp10Effect"],
-      "required_upgrade_sids": ["GunAK74_Upgrade_Barrel_2_2"],
-      "connection_lines": ["EConnectionLineState::Top"]
+      "effect_sids": [
+        "BPRUE_FireRateUp10Effect"
+      ],
+      "required_upgrade_sids": [
+        "GunAK74_Upgrade_Barrel_2_2"
+      ],
+      "connection_lines": [
+        "EConnectionLineState::Top"
+      ]
     },
     {
       "sid": "GunAK74_Upgrade_Stock_4",
@@ -58,9 +65,15 @@
       "horizontal_position": 2,
       "vertical_position": "EUpgradeVerticalPosition::Down",
       "target_part": "EUpgradeTargetPartType::Stock",
-      "effect_sids": ["BPRUE_ReloadingTimeDecBy25Effect"],
-      "required_upgrade_sids": ["GunAK74_Upgrade_Stock_2"],
-      "connection_lines": ["EConnectionLineState::Top"]
+      "effect_sids": [
+        "BPRUE_ReloadingTimeDecBy25Effect"
+      ],
+      "required_upgrade_sids": [
+        "GunAK74_Upgrade_Stock_2"
+      ],
+      "connection_lines": [
+        "EConnectionLineState::Top"
+      ]
     },
     {
       "sid": "GunAK74_Upgrade_Body_3",
@@ -78,8 +91,33 @@
         "ChangeAmmoTypesNo545Effect",
         "ChangeAmmoTypes556Effect"
       ],
-      "required_upgrade_sids": ["GunAK74_Upgrade_Body_2"],
-      "connection_lines": ["EConnectionLineState::Down"]
+      "required_upgrade_sids": [
+        "GunAK74_Upgrade_Body_2"
+      ],
+      "connection_lines": [
+        "EConnectionLineState::Down"
+      ]
+    },
+    {
+      "sid": "GunAK74_Upgrade_Body_4",
+      "refkey": "GunAK74_Upgrade_Body_2",
+      "text_sid": "sid_bprue_GunAK74_Upgrade_Body_4_name",
+      "hint_sid": "sid_bprue_GunAK74_Upgrade_Body_4_description",
+      "image": "Body/Upgrade/T_AK47_Upg_b_2.T_AK47_Upg_b_2",
+      "icon": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_Autosh.T_PDA_Upgrades_Icon_Autosh'",
+      "base_cost": 1800,
+      "horizontal_position": 2,
+      "vertical_position": "EUpgradeVerticalPosition::Down",
+      "target_part": "EUpgradeTargetPartType::Body",
+      "effect_sids": [
+        "BPRUE_AddBurstFireModeEffect"
+      ],
+      "required_upgrade_sids": [
+        "GunAK74_Upgrade_Body_2"
+      ],
+      "connection_lines": [
+        "EConnectionLineState::Top"
+      ]
     }
   ]
 }
