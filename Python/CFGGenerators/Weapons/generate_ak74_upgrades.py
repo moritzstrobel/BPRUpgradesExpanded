@@ -15,10 +15,11 @@ def load_config() -> dict:
     return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
 
 
-def render_string_array(name: str, values: list[str], indent: str = "   ") -> list[str]:
+def render_string_array(name: str, values: list[str], indent: str = "   ", bpatch: bool = False) -> list[str]:
     if not values:
         return []
-    lines = [f"{indent}{name} : struct.begin"]
+    patch_suffix = " {bpatch}" if bpatch else ""
+    lines = [f"{indent}{name} : struct.begin{patch_suffix}"]
     for index, value in enumerate(values):
         lines.append(f"{indent}   [{index}] = {value}")
     lines.append(f"{indent}struct.end")
@@ -27,7 +28,7 @@ def render_string_array(name: str, values: list[str], indent: str = "   ") -> li
 
 def render_upgrade(upgrade: dict, image_root: str) -> str:
     lines = [
-        f"{upgrade['sid']} : struct.begin {{refkey=[0]}}",
+        f"{upgrade['sid']} : struct.begin {{refkey={upgrade['refkey']};bpatch}}",
         f"   SID = {upgrade['sid']}",
         f"   Text = {upgrade['text_sid']}",
         f"   Hint = {upgrade['hint_sid']}",
@@ -36,13 +37,10 @@ def render_upgrade(upgrade: dict, image_root: str) -> str:
         f"   BaseCost = {upgrade['base_cost']}",
         f"   HorizontalPosition = {upgrade['horizontal_position']}",
         f"   VerticalPosition = {upgrade['vertical_position']}",
-        "   DiscountCoefficient = 0.f",
-        "   RepairCostModifier = 0.2f",
-        "   IsModification = false",
         f"   UpgradeTargetPart = {upgrade['target_part']}",
     ]
 
-    lines += render_string_array("EffectPrototypeSIDs", upgrade.get("effect_sids", []))
+    lines += render_string_array("EffectPrototypeSIDs", upgrade.get("effect_sids", []), bpatch=True)
     lines += render_string_array("RequiredUpgradePrototypeSIDs", upgrade.get("required_upgrade_sids", []))
 
     if upgrade.get("connection_lines"):
@@ -53,7 +51,6 @@ def render_upgrade(upgrade: dict, image_root: str) -> str:
 
 
 def render_weapon_patch(weapon: dict, upgrades: list[dict]) -> str:
-    start_index = int(weapon["upgrade_list_start_index"])
     lines = [
         "// -----------------------------------------------------------------------------",
         "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND",
@@ -67,8 +64,8 @@ def render_weapon_patch(weapon: dict, upgrades: list[dict]) -> str:
         "   UpgradePrototypeSIDs : struct.begin {bpatch}",
     ]
 
-    for offset, upgrade in enumerate(upgrades):
-        lines.append(f"      [{start_index + offset}] = {upgrade['sid']}")
+    for upgrade in upgrades:
+        lines.append(f"      {upgrade['sid']} = {upgrade['sid']}")
 
     lines += [
         "   struct.end",
@@ -92,7 +89,7 @@ def main() -> None:
         "// -----------------------------------------------------------------------------",
         "",
         "// Experimental AKM-74S upgrades.",
-        "// Reuses existing vanilla effects; no new EffectPrototype is required.",
+        "// Reuses existing vanilla effects and derives each new node from a concrete vanilla upgrade.",
         "",
     ]
 
