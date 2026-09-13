@@ -39,6 +39,32 @@ CALIBER_EFFECTS = {
     },
 }
 
+# DurabilityTiers establishes the working pattern for extending a normal upgrade tree:
+# each new node sits one horizontal slot after an existing node, requires that node,
+# and renders a connection line back to it. Keep modules independent.
+STANDARD_UPGRADE_CONNECTIONS = {
+    "GunAK74_Upgrade_BPRUE_FireRate": ("GunAK74_Upgrade_Barrel_2_1", 2),
+    "GunAK74_Upgrade_BPRUE_Reload": ("GunAK74_Upgrade_Body_2", 2),
+    "GunFora_Upgrade_BPRUE_FireRate": ("GunFora_Upgrade_Barrel_3", 3),
+    "GunFora_Upgrade_BPRUE_Reload": ("GunFora_Upgrade_Body_3_2", 3),
+    "GunG37_Upgrade_BPRUE_FireRate": ("GunG37_Upgrade_Barrel_2_1", 2),
+    "GunG37_Upgrade_BPRUE_Reload": ("GunG37_Upgrade_Body_1_2", 1),
+    "GunGvintar_Upgrade_BPRUE_FireRate": ("GunGvintar_Upgrade_Barrel_3", 3),
+    "GunGvintar_Upgrade_BPRUE_Reload": ("GunGvintar_Upgrade_Body_3", 3),
+    "GunM16_Upgrade_BPRUE_FireRate": ("GunM16_Upgrade_Barrel_3", 3),
+    "GunM16_Upgrade_BPRUE_Reload": ("GunM16_Upgrade_Body_1", 1),
+    "GunGrim_Upgrade_BPRUE_FireRate": ("GunGrim_Upgrade_Barrel_2", 2),
+    "GunGrim_Upgrade_BPRUE_Reload": ("GunGrim_Upgrade_Body_3_2", 3),
+    "GunLavina_Upgrade_BPRUE_FireRate": ("GunLavina_Upgrade_Barrel_3", 3),
+    "GunLavina_Upgrade_BPRUE_Reload": ("GunLavina_Upgrade_Body_3", 3),
+    "GunDnipro_Upgrade_BPRUE_FireRate": ("GunDnipro_Upgrade_Barrel_3", 3),
+    "GunDnipro_Upgrade_BPRUE_Reload": ("GunDnipro_Upgrade_Body_2", 2),
+    "GunKharod_Upgrade_BPRUE_FireRate": ("GunKharod_Upgrade_Barrel_3_1", 3),
+    "GunKharod_Upgrade_BPRUE_Reload": ("GunKharod_Upgrade_Body_1", 1),
+    "GunArev_Upgrade_BPRUE_FireRate": ("GunArev_Upgrade_Barrel_3_1", 3),
+    "GunArev_Upgrade_BPRUE_Reload": ("GunArev_Upgrade_Body_3", 3),
+}
+
 
 def load_config() -> dict:
     return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
@@ -84,6 +110,14 @@ def render_upgrade(upgrade: dict, interchangeable: list[str] | None = None) -> s
         effects = ["BPRUE_AddBurstFireModeEffect"]
 
     refkey = MODULE_TEMPLATE_SID if kind in {"caliber", "burst"} else UPGRADE_TEMPLATE_SID
+    horizontal_position = upgrade["horizontal_position"]
+    required_upgrade_sids: list[str] = []
+    connection_lines: list[str] = []
+
+    if kind is None and upgrade["sid"] in STANDARD_UPGRADE_CONNECTIONS:
+        parent_sid, horizontal_position = STANDARD_UPGRADE_CONNECTIONS[upgrade["sid"]]
+        required_upgrade_sids = [parent_sid]
+        connection_lines = ["EConnectionLineState::Top"]
 
     lines = [
         f"{upgrade['sid']} : struct.begin {{refkey={refkey}}}",
@@ -93,11 +127,15 @@ def render_upgrade(upgrade: dict, interchangeable: list[str] | None = None) -> s
         f"   Image = {upgrade['image']}",
         f"   Icon = {upgrade['icon']}",
         f"   BaseCost = {upgrade['base_cost']}",
-        f"   HorizontalPosition = {upgrade['horizontal_position']}",
+        f"   HorizontalPosition = {horizontal_position}",
         f"   VerticalPosition = {upgrade['vertical_position']}",
         f"   UpgradeTargetPart = {upgrade['target_part']}",
     ]
     lines += render_array("EffectPrototypeSIDs", effects)
+
+    if required_upgrade_sids:
+        lines += render_array("RequiredUpgradePrototypeSIDs", required_upgrade_sids)
+        lines += render_array("ConnectionLines", connection_lines)
 
     if interchangeable:
         lines += render_array("InterchangeableUpgradePrototypeSIDs", interchangeable)
@@ -128,8 +166,9 @@ def render_upgrade_patch(config: dict) -> str:
         "struct.end",
         "",
         "// First assault-rifle-family expansion draft.",
-        "// Normal upgrades intentionally use horizontal slot 3 without prerequisites.",
-        "// Caliber and burst conversions are rendered as technician modules.",
+        "// Normal upgrades extend existing vanilla trees using the DurabilityTiers pattern:",
+        "// RequiredUpgradePrototypeSIDs + ConnectionLines + the next horizontal slot.",
+        "// Caliber and burst conversions remain independent technician modules.",
         "",
     ]
 
