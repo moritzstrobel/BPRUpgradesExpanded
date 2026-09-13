@@ -39,30 +39,33 @@ CALIBER_EFFECTS = {
     },
 }
 
-# DurabilityTiers establishes the working pattern for extending a normal upgrade tree:
-# each new node sits one horizontal slot after an existing node, requires that node,
-# and renders a connection line back to it. Keep modules independent.
-STANDARD_UPGRADE_CONNECTIONS = {
-    "GunAK74_Upgrade_BPRUE_FireRate": ("GunAK74_Upgrade_Barrel_2_1", 2),
-    "GunAK74_Upgrade_BPRUE_Reload": ("GunAK74_Upgrade_Body_2", 2),
-    "GunFora_Upgrade_BPRUE_FireRate": ("GunFora_Upgrade_Barrel_3", 3),
-    "GunFora_Upgrade_BPRUE_Reload": ("GunFora_Upgrade_Body_3_2", 3),
-    "GunG37_Upgrade_BPRUE_FireRate": ("GunG37_Upgrade_Barrel_2_1", 2),
-    "GunG37_Upgrade_BPRUE_Reload": ("GunG37_Upgrade_Body_1_2", 1),
-    "GunGvintar_Upgrade_BPRUE_FireRate": ("GunGvintar_Upgrade_Barrel_3", 3),
-    "GunGvintar_Upgrade_BPRUE_Reload": ("GunGvintar_Upgrade_Body_3", 3),
-    "GunM16_Upgrade_BPRUE_FireRate": ("GunM16_Upgrade_Barrel_3", 3),
-    "GunM16_Upgrade_BPRUE_Reload": ("GunM16_Upgrade_Body_1", 1),
-    "GunGrim_Upgrade_BPRUE_FireRate": ("GunGrim_Upgrade_Barrel_2", 2),
-    "GunGrim_Upgrade_BPRUE_Reload": ("GunGrim_Upgrade_Body_3_2", 3),
-    "GunLavina_Upgrade_BPRUE_FireRate": ("GunLavina_Upgrade_Barrel_3", 3),
-    "GunLavina_Upgrade_BPRUE_Reload": ("GunLavina_Upgrade_Body_3", 3),
-    "GunDnipro_Upgrade_BPRUE_FireRate": ("GunDnipro_Upgrade_Barrel_3", 3),
-    "GunDnipro_Upgrade_BPRUE_Reload": ("GunDnipro_Upgrade_Body_2", 2),
-    "GunKharod_Upgrade_BPRUE_FireRate": ("GunKharod_Upgrade_Barrel_3_1", 3),
-    "GunKharod_Upgrade_BPRUE_Reload": ("GunKharod_Upgrade_Body_1", 1),
-    "GunArev_Upgrade_BPRUE_FireRate": ("GunArev_Upgrade_Barrel_3_1", 3),
-    "GunArev_Upgrade_BPRUE_Reload": ("GunArev_Upgrade_Body_3", 3),
+# Working layout pattern taken from DurabilityTiers:
+# - a normal extension inherits directly from the vanilla upgrade it extends
+# - the first extension is HorizontalPosition = 1
+# - it explicitly requires that vanilla parent
+# - the connection line is opposite to the node's vertical position
+# Modules stay independent and continue to use the BPRUE module template.
+STANDARD_UPGRADE_PARENTS = {
+    "GunAK74_Upgrade_BPRUE_FireRate": "GunAK74_Upgrade_Barrel_2_1",
+    "GunAK74_Upgrade_BPRUE_Reload": "GunAK74_Upgrade_Body_2",
+    "GunFora_Upgrade_BPRUE_FireRate": "GunFora_Upgrade_Barrel_3",
+    "GunFora_Upgrade_BPRUE_Reload": "GunFora_Upgrade_Body_3_2",
+    "GunG37_Upgrade_BPRUE_FireRate": "GunG37_Upgrade_Barrel_2_1",
+    "GunG37_Upgrade_BPRUE_Reload": "GunG37_Upgrade_Body_1_2",
+    "GunGvintar_Upgrade_BPRUE_FireRate": "GunGvintar_Upgrade_Barrel_3",
+    "GunGvintar_Upgrade_BPRUE_Reload": "GunGvintar_Upgrade_Body_3",
+    "GunM16_Upgrade_BPRUE_FireRate": "GunM16_Upgrade_Barrel_3",
+    "GunM16_Upgrade_BPRUE_Reload": "GunM16_Upgrade_Body_1",
+    "GunGrim_Upgrade_BPRUE_FireRate": "GunGrim_Upgrade_Barrel_2",
+    "GunGrim_Upgrade_BPRUE_Reload": "GunGrim_Upgrade_Body_3_2",
+    "GunLavina_Upgrade_BPRUE_FireRate": "GunLavina_Upgrade_Barrel_3",
+    "GunLavina_Upgrade_BPRUE_Reload": "GunLavina_Upgrade_Body_3",
+    "GunDnipro_Upgrade_BPRUE_FireRate": "GunDnipro_Upgrade_Barrel_3",
+    "GunDnipro_Upgrade_BPRUE_Reload": "GunDnipro_Upgrade_Body_2",
+    "GunKharod_Upgrade_BPRUE_FireRate": "GunKharod_Upgrade_Barrel_3_1",
+    "GunKharod_Upgrade_BPRUE_Reload": "GunKharod_Upgrade_Body_1",
+    "GunArev_Upgrade_BPRUE_FireRate": "GunArev_Upgrade_Barrel_3_1",
+    "GunArev_Upgrade_BPRUE_Reload": "GunArev_Upgrade_Body_3",
 }
 
 
@@ -110,17 +113,25 @@ def render_upgrade(upgrade: dict, interchangeable: list[str] | None = None) -> s
         effects = ["BPRUE_AddBurstFireModeEffect"]
 
     refkey = MODULE_TEMPLATE_SID if kind in {"caliber", "burst"} else UPGRADE_TEMPLATE_SID
+    ref_suffix = ""
     horizontal_position = upgrade["horizontal_position"]
     required_upgrade_sids: list[str] = []
     connection_lines: list[str] = []
 
-    if kind is None and upgrade["sid"] in STANDARD_UPGRADE_CONNECTIONS:
-        parent_sid, horizontal_position = STANDARD_UPGRADE_CONNECTIONS[upgrade["sid"]]
+    if kind is None and upgrade["sid"] in STANDARD_UPGRADE_PARENTS:
+        parent_sid = STANDARD_UPGRADE_PARENTS[upgrade["sid"]]
+        refkey = parent_sid
+        ref_suffix = ";bpatch"
+        horizontal_position = 1
         required_upgrade_sids = [parent_sid]
-        connection_lines = ["EConnectionLineState::Top"]
+        connection_lines = [
+            "EConnectionLineState::Down"
+            if upgrade["vertical_position"] == "EUpgradeVerticalPosition::Top"
+            else "EConnectionLineState::Top"
+        ]
 
     lines = [
-        f"{upgrade['sid']} : struct.begin {{refkey={refkey}}}",
+        f"{upgrade['sid']} : struct.begin {{refkey={refkey}{ref_suffix}}}",
         f"   SID = {upgrade['sid']}",
         f"   Text = {upgrade['text_sid']}",
         f"   Hint = {upgrade['hint_sid']}",
@@ -131,7 +142,7 @@ def render_upgrade(upgrade: dict, interchangeable: list[str] | None = None) -> s
         f"   VerticalPosition = {upgrade['vertical_position']}",
         f"   UpgradeTargetPart = {upgrade['target_part']}",
     ]
-    lines += render_array("EffectPrototypeSIDs", effects)
+    lines += render_array("EffectPrototypeSIDs", effects, bpatch=kind is None)
 
     if required_upgrade_sids:
         lines += render_array("RequiredUpgradePrototypeSIDs", required_upgrade_sids)
@@ -153,8 +164,9 @@ def render_upgrade_patch(config: dict) -> str:
         "// Generated by: generate_assault_rifle_upgrades.py",
         "// -----------------------------------------------------------------------------",
         "",
-        "// BPRUE master templates: inherit explicitly from the vanilla UpgradePrototypes",
-        "// base template, then keep all generated upgrades on BPRUE-owned references.",
+        "// BPRUE master templates are kept for independent modules.",
+        "// Standard upgrades inherit directly from their vanilla parent, matching",
+        "// the working DurabilityTiers extension pattern.",
         "",
         f"{UPGRADE_TEMPLATE_SID} : struct.begin {{refurl=@BaseGame/UpgradePrototypes.cfg;refkey=[0]}}",
         f"   SID = {UPGRADE_TEMPLATE_SID}",
@@ -165,10 +177,8 @@ def render_upgrade_patch(config: dict) -> str:
         "   IsModification = true",
         "struct.end",
         "",
-        "// First assault-rifle-family expansion draft.",
-        "// Normal upgrades extend existing vanilla trees using the DurabilityTiers pattern:",
-        "// RequiredUpgradePrototypeSIDs + ConnectionLines + the next horizontal slot.",
-        "// Caliber and burst conversions remain independent technician modules.",
+        "// Normal upgrades: vanilla refkey + bpatch, HorizontalPosition 1, explicit",
+        "// prerequisite and matching connection line. Modules remain independent.",
         "",
     ]
 
