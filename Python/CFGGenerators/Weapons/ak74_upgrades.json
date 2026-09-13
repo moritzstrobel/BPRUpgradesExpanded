@@ -10,6 +10,12 @@
     "prototype_sid": "TechnicianNPC",
     "all_prototype_sid": "AllTechnicianNPC"
   },
+  "test_trader": {
+    "name": "Zalissya",
+    "generator_sid": "TraderZalesie_TradeItemGenerator",
+    "start_index": 120,
+    "player_ranks": ["Newbie", "Experienced", "Veteran", "Master"]
+  },
   "upgrades": [
     {
       "sid": "GunAK74_Upgrade_Barrel_2_3",
