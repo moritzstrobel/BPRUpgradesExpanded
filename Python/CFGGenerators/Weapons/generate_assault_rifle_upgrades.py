@@ -93,14 +93,43 @@ def all_upgrades(config: dict) -> list[dict]:
     return result
 
 
-def caliber_module_effects(module: dict) -> list[str]:
+def caliber_balance_class(module: dict, family: dict) -> str:
+    target_caliber = module["caliber"]
+    base_caliber = family.get("base_caliber")
+
+    # Re-selecting the weapon's native caliber should only restore the base
+    # ammunition setup; it must not grant a free stat package.
+    if target_caliber == base_caliber:
+        return "neutral"
+
+    if target_caliber == "A762Sniper":
+        return "power"
+
+    if base_caliber == "A545" and target_caliber == "A556":
+        return "performance"
+
+    if base_caliber == "A556" and target_caliber == "A545":
+        return "economy"
+
+    return module.get("balance_class", "lateral")
+
+
+def caliber_module_effects(module: dict, family: dict) -> list[str]:
     effects = CALIBER_EFFECTS[module["caliber"]]
     result = [effects["change"], *effects["remove_ammo"], effects["add_ammo"]]
-    balance_class = module.get("balance_class")
-    if balance_class == "power":
-        result += ["BPRUE_DamagePos10Effect", "BPRUE_DurabilityPerShotNeg20Effect"]
+    balance_class = caliber_balance_class(module, family)
+
+    if balance_class == "performance":
+        # 5.45 -> 5.56: more punch, paid for with recoil and wear.
+        result += ["BPRUE_DamagePos10Effect", "RecoilNeg15Effect", "BPRUE_DurabilityPerShotNeg10Effect"]
     elif balance_class == "economy":
-        result += ["BPRUE_DamageNeg10Effect", "BPRUE_DurabilityPerShotPos20Effect", "RecoilPos10Effect"]
+        # 5.56 -> 5.45: less punch, but softer recoil and lower weapon wear.
+        result += ["DamageNeg10Effect", "RecoilPos10Effect", "DurabilityPerShotPos20Effect"]
+    elif balance_class == "power":
+        # High-power 7.62 Sniper conversion: strong damage increase with a
+        # noticeably harsher recoil impulse and accelerated wear.
+        result += ["BPRUE_DamagePos10Effect", "RecoilNeg20Effect", "BPRUE_DurabilityPerShotNeg20Effect"]
+
     return result
 
 
@@ -123,11 +152,11 @@ def standard_upgrade_layout(upgrade: dict) -> tuple[str, str, int] | None:
     return None
 
 
-def render_upgrade(upgrade: dict, interchangeable: list[str] | None = None) -> str:
+def render_upgrade(upgrade: dict, family: dict, interchangeable: list[str] | None = None) -> str:
     effects = upgrade.get("effect_sids", [])
     kind = upgrade.get("kind")
     if kind == "caliber":
-        effects = caliber_module_effects(upgrade)
+        effects = caliber_module_effects(upgrade, family)
     elif kind == "burst":
         effects = ["BPRUE_AddBurstFireModeEffect"]
 
@@ -185,12 +214,12 @@ def render_upgrade_patch(config: dict) -> str:
     for family_name, family in config["families"].items():
         lines.append(f"// --- {family_name} ------------------------------------------------------------")
         for upgrade in family_standard_upgrades(family_name, family):
-            lines.append(render_upgrade(upgrade)); lines.append("")
+            lines.append(render_upgrade(upgrade, family)); lines.append("")
         caliber_modules = [m for m in family.get("modules", []) if m.get("kind") == "caliber"]
         caliber_sids = [m["sid"] for m in caliber_modules]
         for module in family.get("modules", []):
             interchangeable = [sid for sid in caliber_sids if sid != module["sid"]] if module.get("kind") == "caliber" else None
-            lines.append(render_upgrade(module, interchangeable)); lines.append("")
+            lines.append(render_upgrade(module, family, interchangeable)); lines.append("")
     return "\n".join(lines)
 
 
@@ -218,6 +247,15 @@ BPRUE_DamagePos10Effect : struct.begin {{refurl=@BaseGame/EffectPrototypes.cfg;r
    SID = BPRUE_DamagePos10Effect
    ValueMin = 10%
    ValueMax = 10%
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
+BPRUE_DurabilityPerShotNeg10Effect : struct.begin {{refurl=@BaseGame/EffectPrototypes.cfg;refkey=DurabilityPerShotTemplate}}
+   SID = BPRUE_DurabilityPerShotNeg10Effect
+   ValueMin = 10%
+   ValueMax = 10%
+   Positive = EBeneficial::Negative
    ShowUpgradeEffectValue = true
    ShowUpgradeEffect = true
 struct.end
