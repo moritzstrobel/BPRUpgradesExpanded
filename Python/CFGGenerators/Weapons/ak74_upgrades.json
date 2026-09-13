@@ -8,13 +8,20 @@
   },
   "technician": {
     "prototype_sid": "TechnicianNPC",
-    "all_prototype_sid": "AllTechnicianNPC"
-  },
-  "test_trader": {
-    "name": "Zalissya",
-    "generator_sid": "TraderZalesie_TradeItemGenerator",
-    "start_index": 120,
-    "player_ranks": ["Newbie", "Experienced", "Veteran", "Master"]
+    "all_prototype_sid": "AllTechnicianNPC",
+    "concrete_prototype_sids": [
+      "ZalesieTechnician",
+      "sid_character_konder_0",
+      "sid_character_multik_0",
+      "sid_character_hors_0",
+      "sid_character_kovyraska_0",
+      "sid_character_serzant_ivajlov_0",
+      "sid_character_serzant_hmaruk_0",
+      "sid_character_serega_vint_0",
+      "CorpusGarpia",
+      "sid_character_semenyc_0",
+      "CorpusMedlak"
+    ]
   },
   "upgrades": [
     {
@@ -31,6 +38,40 @@
       "effect_sids": ["FireRateUp10Effect"],
       "required_upgrade_sids": ["GunAK74_Upgrade_Barrel_2_2"],
       "connection_lines": ["EConnectionLineState::Top"]
+    },
+    {
+      "sid": "GunAK74_Upgrade_Stock_4",
+      "refkey": "GunAK74_Upgrade_Stock_3",
+      "text_sid": "sid_upgrades_GunAK74_Upgrade_Stock_3_name",
+      "hint_sid": "sid_upgrades_GunAK74_Upgrade_Stock_3_description",
+      "image": "Stock/Upgrade/T_AK47_Upg_c_3.T_AK47_Upg_c_3",
+      "icon": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_AimingSpeed.T_PDA_Upgrades_Icon_AimingSpeed'",
+      "base_cost": 1500,
+      "horizontal_position": 3,
+      "vertical_position": "EUpgradeVerticalPosition::Top",
+      "target_part": "EUpgradeTargetPartType::Stock",
+      "effect_sids": ["ReloadingTimeDecBy25"],
+      "required_upgrade_sids": ["GunAK74_Upgrade_Stock_3"],
+      "connection_lines": ["EConnectionLineState::Down"]
+    },
+    {
+      "sid": "GunAK74_Upgrade_Body_3",
+      "refkey": "GunAK74_Upgrade_Body_2",
+      "text_sid": "sid_effects_change_caliber_to_5_56_name",
+      "hint_sid": "sid_upgrades_GunFora_Upgrade_Body_2_1_description",
+      "image": "Body/Upgrade/T_AK47_Upg_b_2.T_AK47_Upg_b_2",
+      "icon": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_CaliberChange.T_PDA_Upgrades_Icon_CaliberChange'",
+      "base_cost": 2200,
+      "horizontal_position": 2,
+      "vertical_position": "EUpgradeVerticalPosition::Top",
+      "target_part": "EUpgradeTargetPartType::Body",
+      "effect_sids": [
+        "ChangeCaliber556Effect",
+        "ChangeAmmoTypesNo545Effect",
+        "ChangeAmmoTypes556Effect"
+      ],
+      "required_upgrade_sids": ["GunAK74_Upgrade_Body_2"],
+      "connection_lines": ["EConnectionLineState::Down"]
     }
   ]
 }
