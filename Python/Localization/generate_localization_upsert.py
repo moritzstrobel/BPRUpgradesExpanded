@@ -7,7 +7,7 @@ import unreal
 # CONFIG
 # ============================================================
 
-ASSET_PATH = "/Testmod/Localization/L_BPRUpgradesExpanded"
+ASSET_PATH = "/BPRUpgradesExpanded/Localization/L_BPRUpgradesExpanded"
 
 # JSON lies in the same directory as this Python script.
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
