@@ -1,0 +1,22 @@
+{
+  "_comment": "Source of truth for Blueprint Progression Redone Upgrades Expanded localization. The importer performs an UPSERT: existing SIDs are updated, missing SIDs are appended, unrelated entries remain untouched.",
+  "entries": [
+    {"sid":"sid_bprue_GunAK74_Upgrade_Barrel_2_3_name","languages":{"English":"Enhanced Gas System"}},
+    {"sid":"sid_bprue_GunAK74_Upgrade_Barrel_2_3_description","languages":{"English":"Optimizes the gas system to increase the weapon's rate of fire by 50% for testing."}},
+    {"sid":"sid_bprue_GunAK74_Upgrade_Stock_4_name","languages":{"English":"Quick-Reload Mechanism"}},
+    {"sid":"sid_bprue_GunAK74_Upgrade_Stock_4_description","languages":{"English":"Refines the weapon's handling during reloads, reducing reload time by 25%."}},
+    {"sid":"sid_bprue_GunAK74_Upgrade_Body_3_name","languages":{"English":"5.56x45 mm Conversion"}},
+    {"sid":"sid_bprue_GunAK74_Upgrade_Body_3_description","languages":{"English":"Converts the weapon from 5.45x39 mm to 5.56x45 mm and enables compatible ammunition."}},
+    {"sid":"sid_bprue_GunAK74_Upgrade_Caliber_545_name","languages":{"English":"5.45x39 mm Conversion"}},
+    {"sid":"sid_bprue_GunAK74_Upgrade_Caliber_545_description","languages":{"English":"Configures the weapon for 5.45x39 mm ammunition. Interchangeable with the other caliber conversions."}},
+    {"sid":"sid_bprue_GunAK74_Upgrade_Caliber_556_name","languages":{"English":"5.56x45 mm Conversion"}},
+    {"sid":"sid_bprue_GunAK74_Upgrade_Caliber_556_description","languages":{"English":"Configures the weapon for 5.56x45 mm ammunition. Interchangeable with the other caliber conversions."}},
+    {"sid":"sid_bprue_GunAK74_Upgrade_Caliber_762_name","languages":{"English":"7.62 mm Conversion (Test)"}},
+    {"sid":"sid_bprue_GunAK74_Upgrade_Caliber_762_description","languages":{"English":"Test conversion using the game's 7.62 sniper ammunition, intended only to verify standalone interchangeable caliber modules."}},
+    {"sid":"sid_bprue_GunAK74_Upgrade_Body_4_name","languages":{"English":"Three-Round Burst"}},
+    {"sid":"sid_bprue_GunAK74_Upgrade_Body_4_description","languages":{"English":"Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."}},
+    {"sid":"sid_effects_bprue_fire_rate_name","languages":{"English":"Fire rate increase"}},
+    {"sid":"sid_effects_bprue_reload_speed_name","languages":{"English":"Reload speed"}},
+    {"sid":"sid_effects_bprue_fire_modes_name","languages":{"English":"Three-round burst mode"}}
+  ]
+}

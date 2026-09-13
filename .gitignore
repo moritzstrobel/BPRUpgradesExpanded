@@ -1,0 +1,22 @@
+# Unreal / Zone Kit
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+
+# IDE / OS
+.vscode/
+.idea/
+*.suo
+*.user
+.DS_Store
+Thumbs.db
+
+# Packaged output
+*.pak
+*.ucas
+*.utoc
+
+# Python
+__pycache__/
+*.pyc
