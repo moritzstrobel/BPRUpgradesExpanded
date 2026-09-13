@@ -23,33 +23,29 @@ CALIBER_EFFECTS = {
     "A939": {"change": "BPRUE_ChangeCaliber939Effect", "add_ammo": "ChangeAmmoTypes939Effect", "remove_ammo": ["ChangeAmmoTypesNo545Effect", "ChangeAmmoTypesNo556Effect", "BPRUE_ChangeAmmoTypesNo762Effect"]},
 }
 
-# Normal extensions follow the working DurabilityTiers pattern. The value is
-# (required parent SID, horizontal position). Most BPRUE nodes are the first
-# extension of a vanilla node (H1). ARev additionally carries an explicit H1 ->
-# H2 -> H3 test chain so we can verify that the UI can be forced into a row.
-STANDARD_UPGRADE_CONNECTIONS = {
-    "GunAK74_Upgrade_BPRUE_FireRate": ("GunAK74_Upgrade_Barrel_2_1", 1),
-    "GunAK74_Upgrade_BPRUE_Reload": ("GunAK74_Upgrade_Body_2", 1),
-    "GunFora_Upgrade_BPRUE_FireRate": ("GunFora_Upgrade_Barrel_3", 1),
-    "GunFora_Upgrade_BPRUE_Reload": ("GunFora_Upgrade_Body_3_2", 1),
-    "GunG37_Upgrade_BPRUE_FireRate": ("GunG37_Upgrade_Barrel_2_1", 1),
-    "GunG37_Upgrade_BPRUE_Reload": ("GunG37_Upgrade_Body_1_2", 1),
-    "GunGvintar_Upgrade_BPRUE_FireRate": ("GunGvintar_Upgrade_Barrel_3", 1),
-    "GunGvintar_Upgrade_BPRUE_Reload": ("GunGvintar_Upgrade_Body_3", 1),
-    "GunM16_Upgrade_BPRUE_FireRate": ("GunM16_Upgrade_Barrel_3", 1),
-    "GunM16_Upgrade_BPRUE_Reload": ("GunM16_Upgrade_Body_1", 1),
-    "GunGrim_Upgrade_BPRUE_FireRate": ("GunGrim_Upgrade_Barrel_2", 1),
-    "GunGrim_Upgrade_BPRUE_Reload": ("GunGrim_Upgrade_Body_3_2", 1),
-    "GunLavina_Upgrade_BPRUE_FireRate": ("GunLavina_Upgrade_Barrel_3", 1),
-    "GunLavina_Upgrade_BPRUE_Reload": ("GunLavina_Upgrade_Body_3", 1),
-    "GunDnipro_Upgrade_BPRUE_FireRate": ("GunDnipro_Upgrade_Barrel_3", 1),
-    "GunDnipro_Upgrade_BPRUE_Reload": ("GunDnipro_Upgrade_Body_2", 1),
-    "GunKharod_Upgrade_BPRUE_FireRate": ("GunKharod_Upgrade_Barrel_3_1", 1),
-    "GunKharod_Upgrade_BPRUE_Reload": ("GunKharod_Upgrade_Body_1", 1),
-    "GunArev_Upgrade_BPRUE_FireRate": ("GunArev_Upgrade_Barrel_3_1", 1),
-    "GunArev_Upgrade_BPRUE_FireRate_H2": ("GunArev_Upgrade_BPRUE_FireRate", 2),
-    "GunArev_Upgrade_BPRUE_FireRate_H3": ("GunArev_Upgrade_BPRUE_FireRate_H2", 3),
-    "GunArev_Upgrade_BPRUE_Reload": ("GunArev_Upgrade_Body_3", 1),
+# First fire-rate tier / reload node anchors into the existing vanilla tree.
+# Fire-rate H2/H3 then continue the BPRUE row at horizontal positions 2 and 3.
+STANDARD_UPGRADE_PARENTS = {
+    "GunAK74_Upgrade_BPRUE_FireRate": "GunAK74_Upgrade_Barrel_2_1",
+    "GunAK74_Upgrade_BPRUE_Reload": "GunAK74_Upgrade_Body_2",
+    "GunFora_Upgrade_BPRUE_FireRate": "GunFora_Upgrade_Barrel_3",
+    "GunFora_Upgrade_BPRUE_Reload": "GunFora_Upgrade_Body_3_2",
+    "GunG37_Upgrade_BPRUE_FireRate": "GunG37_Upgrade_Barrel_2_1",
+    "GunG37_Upgrade_BPRUE_Reload": "GunG37_Upgrade_Body_1_2",
+    "GunGvintar_Upgrade_BPRUE_FireRate": "GunGvintar_Upgrade_Barrel_3",
+    "GunGvintar_Upgrade_BPRUE_Reload": "GunGvintar_Upgrade_Body_3",
+    "GunM16_Upgrade_BPRUE_FireRate": "GunM16_Upgrade_Barrel_3",
+    "GunM16_Upgrade_BPRUE_Reload": "GunM16_Upgrade_Body_1",
+    "GunGrim_Upgrade_BPRUE_FireRate": "GunGrim_Upgrade_Barrel_2",
+    "GunGrim_Upgrade_BPRUE_Reload": "GunGrim_Upgrade_Body_3_2",
+    "GunLavina_Upgrade_BPRUE_FireRate": "GunLavina_Upgrade_Barrel_3",
+    "GunLavina_Upgrade_BPRUE_Reload": "GunLavina_Upgrade_Body_3",
+    "GunDnipro_Upgrade_BPRUE_FireRate": "GunDnipro_Upgrade_Barrel_3",
+    "GunDnipro_Upgrade_BPRUE_Reload": "GunDnipro_Upgrade_Body_2",
+    "GunKharod_Upgrade_BPRUE_FireRate": "GunKharod_Upgrade_Barrel_3_1",
+    "GunKharod_Upgrade_BPRUE_Reload": "GunKharod_Upgrade_Body_1",
+    "GunArev_Upgrade_BPRUE_FireRate": "GunArev_Upgrade_Barrel_3_1",
+    "GunArev_Upgrade_BPRUE_Reload": "GunArev_Upgrade_Body_3",
 }
 
 
@@ -68,28 +64,25 @@ def render_array(name: str, values: list[str], indent: str = "   ", bpatch: bool
     return lines
 
 
-def arev_row_test_upgrades(family: dict) -> list[dict]:
-    fire_rate = next(u for u in family.get("standard_upgrades", []) if u["sid"] == "GunArev_Upgrade_BPRUE_FireRate")
-    result = []
-    for sid, cost in [
-        ("GunArev_Upgrade_BPRUE_FireRate_H2", fire_rate["base_cost"] + 800),
-        ("GunArev_Upgrade_BPRUE_FireRate_H3", fire_rate["base_cost"] + 1600),
-    ]:
+def fire_rate_tier_upgrades(fire_rate: dict) -> list[dict]:
+    result: list[dict] = []
+    for suffix, cost_add in [("_H2", 800), ("_H3", 1600)]:
         upgrade = dict(fire_rate)
-        upgrade["sid"] = sid
-        # Reuse the existing localization deliberately: this is a temporary
-        # layout test, while each additional +10% effect makes the stages easy
-        # to validate mechanically as cumulative fire-rate upgrades.
-        upgrade["base_cost"] = cost
+        upgrade["sid"] = f"{fire_rate['sid']}{suffix}"
+        # Reuse the same localization for now; the three stages are primarily
+        # a progression/layout mechanic and each stage adds another +10% fire rate.
+        upgrade["base_cost"] = fire_rate["base_cost"] + cost_add
         result.append(upgrade)
     return result
 
 
 def family_standard_upgrades(family_name: str, family: dict) -> list[dict]:
-    upgrades = list(family.get("standard_upgrades", []))
-    if family_name == "Arev":
-        upgrades.extend(arev_row_test_upgrades(family))
-    return upgrades
+    result: list[dict] = []
+    for upgrade in family.get("standard_upgrades", []):
+        result.append(upgrade)
+        if upgrade["sid"].endswith("_BPRUE_FireRate"):
+            result.extend(fire_rate_tier_upgrades(upgrade))
+    return result
 
 
 def all_upgrades(config: dict) -> list[dict]:
@@ -111,6 +104,25 @@ def caliber_module_effects(module: dict) -> list[str]:
     return result
 
 
+def standard_upgrade_layout(upgrade: dict) -> tuple[str, str, int] | None:
+    sid = upgrade["sid"]
+
+    if sid.endswith("_BPRUE_FireRate_H2"):
+        previous_sid = sid[:-3]
+        return previous_sid, previous_sid, 2
+
+    if sid.endswith("_BPRUE_FireRate_H3"):
+        base_sid = sid[:-3]
+        previous_sid = f"{base_sid}_H2"
+        return previous_sid, previous_sid, 3
+
+    parent_sid = STANDARD_UPGRADE_PARENTS.get(sid)
+    if parent_sid:
+        return parent_sid, parent_sid, 1
+
+    return None
+
+
 def render_upgrade(upgrade: dict, interchangeable: list[str] | None = None) -> str:
     effects = upgrade.get("effect_sids", [])
     kind = upgrade.get("kind")
@@ -125,18 +137,17 @@ def render_upgrade(upgrade: dict, interchangeable: list[str] | None = None) -> s
     required_upgrade_sids: list[str] = []
     connection_lines: list[str] = []
 
-    if kind is None and upgrade["sid"] in STANDARD_UPGRADE_CONNECTIONS:
-        parent_sid, horizontal_position = STANDARD_UPGRADE_CONNECTIONS[upgrade["sid"]]
-        # H1 inherits the vanilla upgrade just like DurabilityTiers. H2/H3 are
-        # BPRUE-owned nodes, so inherit from the preceding BPRUE stage.
-        refkey = parent_sid
-        ref_suffix = ";bpatch"
-        required_upgrade_sids = [parent_sid]
-        connection_lines = [
-            "EConnectionLineState::Down"
-            if upgrade["vertical_position"] == "EUpgradeVerticalPosition::Top"
-            else "EConnectionLineState::Top"
-        ]
+    if kind is None:
+        layout = standard_upgrade_layout(upgrade)
+        if layout:
+            refkey, required_sid, horizontal_position = layout
+            ref_suffix = ";bpatch"
+            required_upgrade_sids = [required_sid]
+            connection_lines = [
+                "EConnectionLineState::Down"
+                if upgrade["vertical_position"] == "EUpgradeVerticalPosition::Top"
+                else "EConnectionLineState::Top"
+            ]
 
     lines = [
         f"{upgrade['sid']} : struct.begin {{refkey={refkey}{ref_suffix}}}",
@@ -166,7 +177,8 @@ def render_upgrade_patch(config: dict) -> str:
         "// Source: Python/CFGGenerators/Weapons/assault_rifles_upgrades.json", "// Generated by: generate_assault_rifle_upgrades.py",
         "// -----------------------------------------------------------------------------", "",
         "// BPRUE master templates are kept for independent modules.",
-        "// Standard upgrades follow the working DurabilityTiers extension pattern.", "",
+        "// Standard upgrades follow the working DurabilityTiers extension pattern.",
+        "// Every assault rifle receives a three-stage +10% fire-rate progression.", "",
         f"{UPGRADE_TEMPLATE_SID} : struct.begin {{refurl=@BaseGame/UpgradePrototypes.cfg;refkey=[0]}}", f"   SID = {UPGRADE_TEMPLATE_SID}", "struct.end", "",
         f"{MODULE_TEMPLATE_SID} : struct.begin {{refkey={UPGRADE_TEMPLATE_SID}}}", f"   SID = {MODULE_TEMPLATE_SID}", "   IsModification = true", "struct.end", "",
     ]
@@ -206,8 +218,8 @@ BPRUE_DamagePos10Effect : struct.begin {{refurl=@BaseGame/EffectPrototypes.cfg;r
    SID = BPRUE_DamagePos10Effect
    ValueMin = 10%
    ValueMax = 10%
-   ShowUpgradeEffectValue = false
-   ShowUpgradeEffect = false
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
 struct.end
 
 BPRUE_DurabilityPerShotNeg20Effect : struct.begin {{refurl=@BaseGame/EffectPrototypes.cfg;refkey=DurabilityPerShotTemplate}}
@@ -215,8 +227,8 @@ BPRUE_DurabilityPerShotNeg20Effect : struct.begin {{refurl=@BaseGame/EffectProto
    ValueMin = 20%
    ValueMax = 20%
    Positive = EBeneficial::Negative
-   ShowUpgradeEffectValue = false
-   ShowUpgradeEffect = false
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
 struct.end
 
 BPRUE_ReloadingTimeNeg15Effect : struct.begin {{refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}}
