@@ -101,6 +101,15 @@
     {"sid":"sid_bprue_GunArev_Upgrade_Burst_name","languages":{"English":"Three-Round Burst"}},
     {"sid":"sid_bprue_GunArev_Upgrade_Burst_description","languages":{"English":"Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."}},
 
+    {"sid":"sid_bprue_caliber_762_eastern_name","languages":{"English":"7.62 mm Power Conversion"}},
+    {"sid":"sid_bprue_caliber_762_eastern_description","languages":{"English":"Converts the weapon to the game's 7.62 mm sniper cartridge. Increases damage, recoil and weapon wear."}},
+    {"sid":"sid_bprue_caliber_762_nato_name","languages":{"English":"7.62x51 mm NATO Conversion"}},
+    {"sid":"sid_bprue_caliber_762_nato_description","languages":{"English":"Converts the weapon to 7.62x51 mm NATO ammunition. Increases damage, recoil and weapon wear."}},
+    {"sid":"sid_bprue_reload_competition_name","languages":{"English":"Competition Reload System"}},
+    {"sid":"sid_bprue_reload_competition_description","languages":{"English":"Optimizes magazine handling for 20% faster reloads, at the cost of 15% increased recoil."}},
+    {"sid":"sid_bprue_reload_reinforced_name","languages":{"English":"Reinforced Feed System"}},
+    {"sid":"sid_bprue_reload_reinforced_description","languages":{"English":"A reinforced feed setup provides 10% faster reloads and reduces weapon wear by 20%, but slows the firing cycle by 5%."}},
+
     {"sid":"sid_effects_bprue_fire_rate_name","languages":{"English":"Fire rate increase"}},
     {"sid":"sid_effects_bprue_reload_speed_name","languages":{"English":"Reload speed"}},
     {"sid":"sid_effects_bprue_fire_modes_name","languages":{"English":"Three-round burst mode"}}
