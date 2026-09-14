@@ -7,6 +7,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 GENERATORS = [
     SCRIPT_DIR / "CFGGenerators" / "Weapons" / "generate_assault_rifle_upgrades.py",
     SCRIPT_DIR / "CFGGenerators" / "Weapons" / "generate_smg_upgrades.py",
+    SCRIPT_DIR / "CFGGenerators" / "Weapons" / "generate_shotgun_upgrades.py",
     SCRIPT_DIR / "CFGGenerators" / "Weapons" / "merge_technician_conversion_upgrades.py",
 ]
 
