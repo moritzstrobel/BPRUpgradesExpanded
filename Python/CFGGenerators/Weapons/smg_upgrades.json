@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "description": "SMG specialization modules emphasize readiness, reload speed and aggressive close-range handling with explicit trade-offs.",
+  "families": {
+    "Viper": {"weapon_sid": "GunViper_PP", "prototype_prefix": "GunViper"},
+    "AKU": {"weapon_sid": "GunAKU_PP", "prototype_prefix": "GunAKU"},
+    "Bucket": {"weapon_sid": "GunBucket_PP", "prototype_prefix": "GunBucket"},
+    "Integral": {"weapon_sid": "GunIntegral_PP", "prototype_prefix": "GunIntegral"},
+    "Zubr": {"weapon_sid": "GunZubr_PP", "prototype_prefix": "GunZubr"},
+    "Fora230": {"weapon_sid": "GunFora230_PP", "prototype_prefix": "GunFora230"}
+  },
+  "module_groups": {
+    "readiness": ["quick_draw", "stabilized"],
+    "reload": ["competition_reload", "tactical_reload"],
+    "action": ["high_speed_action", "controlled_action"]
+  }
+}
