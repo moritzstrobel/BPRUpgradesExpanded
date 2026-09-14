@@ -48,6 +48,13 @@
     {"sid":"sid_bprue_smg_controlled_action_name","languages":{"English":"Controlled Action","Russian":"Контролируемая автоматика"}},
     {"sid":"sid_bprue_smg_controlled_action_description","languages":{"English":"Lengthens the firing cycle by 5% in exchange for 15% lower recoil, 20% faster recoil recovery and 10% faster reloads. Choosing this action specialization is permanent.","Russian":"Удлиняет цикл стрельбы на 5%, взамен снижая отдачу на 15%, ускоряя восстановление после отдачи на 20% и перезарядку на 10%. Выбор этой специализации автоматики является окончательным."}},
 
+    {"sid":"sid_bprue_smg_caliber_a918_name","languages":{"English":"9x18 mm Conversion","Russian":"Конверсия под 9x18 мм"}},
+    {"sid":"sid_bprue_smg_caliber_a918_description","languages":{"English":"Permanently converts the weapon to 9x18 mm ammunition and replaces its compatible ammunition set. This caliber specialization cannot be combined with another caliber conversion.","Russian":"Навсегда переводит оружие на боеприпасы 9x18 мм и заменяет набор совместимых боеприпасов. Эту специализацию калибра нельзя совместить с другой конверсией калибра."}},
+    {"sid":"sid_bprue_smg_caliber_a919_name","languages":{"English":"9x19 mm Conversion","Russian":"Конверсия под 9x19 мм"}},
+    {"sid":"sid_bprue_smg_caliber_a919_description","languages":{"English":"Permanently converts the weapon to 9x19 mm ammunition and replaces its compatible ammunition set. This caliber specialization cannot be combined with another caliber conversion.","Russian":"Навсегда переводит оружие на боеприпасы 9x19 мм и заменяет набор совместимых боеприпасов. Эту специализацию калибра нельзя совместить с другой конверсией калибра."}},
+    {"sid":"sid_bprue_smg_caliber_a045_name","languages":{"English":".45 ACP Conversion","Russian":"Конверсия под .45 ACP"}},
+    {"sid":"sid_bprue_smg_caliber_a045_description","languages":{"English":"Permanently converts the weapon to .45 ACP ammunition and replaces its compatible ammunition set. This caliber specialization cannot be combined with another caliber conversion.","Russian":"Навсегда переводит оружие на боеприпасы .45 ACP и заменяет набор совместимых боеприпасов. Эту специализацию калибра нельзя совместить с другой конверсией калибра."}},
+
     {"sid":"sid_effects_bprue_fire_rate_name","languages":{"English":"Fire rate","Russian":"Темп стрельбы"}},
     {"sid":"sid_effects_bprue_reload_speed_name","languages":{"English":"Reload speed","Russian":"Скорость перезарядки"}},
     {"sid":"sid_effects_bprue_fire_modes_name","languages":{"English":"Fire mode","Russian":"Режим огня"}},

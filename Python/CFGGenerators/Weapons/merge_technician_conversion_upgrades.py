@@ -19,6 +19,14 @@ SMG_MODULE_SIDS = [
     "BPRUE_SMG_Upgrade_Reload_Competition", "BPRUE_SMG_Upgrade_Reload_Tactical",
     "BPRUE_SMG_Upgrade_Action_HighSpeed", "BPRUE_SMG_Upgrade_Action_Controlled",
 ]
+SMG_CALIBER_SIDS = [
+    "GunViper_Upgrade_BPRUE_Caliber_A918", "GunViper_Upgrade_BPRUE_Caliber_A045",
+    "GunBucket_Upgrade_BPRUE_Caliber_A919", "GunBucket_Upgrade_BPRUE_Caliber_A045",
+    "GunIntegral_Upgrade_BPRUE_Caliber_A918", "GunIntegral_Upgrade_BPRUE_Caliber_A045",
+    "GunZubr_Upgrade_BPRUE_Caliber_A918", "GunZubr_Upgrade_BPRUE_Caliber_A045",
+    "GunFora230_Upgrade_BPRUE_Caliber_A918", "GunFora230_Upgrade_BPRUE_Caliber_A045",
+    "GunM10_Upgrade_BPRUE_Caliber_A919", "GunM10_Upgrade_BPRUE_Caliber_A918",
+]
 
 
 def load_technician_sids() -> list[str]:
@@ -42,9 +50,21 @@ def merge_into_technician_block(content: str, technician_sid: str, upgrade_sids:
 
 
 def main() -> None:
-    content = NPC_OUTPUT_PATH.read_text(encoding="utf-8"); upgrade_sids = CONVERSION_UPGRADE_SIDS + SMG_MODULE_SIDS
-    for technician_sid in load_technician_sids(): content = merge_into_technician_block(content, technician_sid, upgrade_sids)
-    content = content.replace("// Draft setup: all BPRUE assault-rifle modules are available at all technicians.", "// All BPRUE assault-rifle modules, SMG specialization modules and pistol-conversion upgrades are available at all technicians.")
-    NPC_OUTPUT_PATH.write_text(content, encoding="utf-8"); print(f"Merged SMG modules and pistol-conversion upgrades into {NPC_OUTPUT_PATH}")
+    content = NPC_OUTPUT_PATH.read_text(encoding="utf-8")
+    upgrade_sids = CONVERSION_UPGRADE_SIDS + SMG_MODULE_SIDS + SMG_CALIBER_SIDS
+    for technician_sid in load_technician_sids():
+        content = merge_into_technician_block(content, technician_sid, upgrade_sids)
+    content = content.replace(
+        "// Draft setup: all BPRUE assault-rifle modules are available at all technicians.",
+        "// All BPRUE assault-rifle modules, SMG specialization/caliber modules and pistol-conversion upgrades are available at all technicians.",
+    )
+    content = content.replace(
+        "// All BPRUE assault-rifle modules, SMG specialization modules and pistol-conversion upgrades are available at all technicians.",
+        "// All BPRUE assault-rifle modules, SMG specialization/caliber modules and pistol-conversion upgrades are available at all technicians.",
+    )
+    NPC_OUTPUT_PATH.write_text(content, encoding="utf-8")
+    print(f"Merged SMG specialization, caliber and pistol-conversion upgrades into {NPC_OUTPUT_PATH}")
 
-if __name__ == "__main__": main()
+
+if __name__ == "__main__":
+    main()
