@@ -12,50 +12,35 @@ EFFECT_OUTPUT_PATH = CONTENT_ROOT / "GameLite" / "ModGameData" / "BPRUpgradesExp
 WEAPON_OUTPUT_PATH = CONTENT_ROOT / "GameLite" / "GameData" / "WeaponData" / "WeaponGeneralSetupPrototypes" / "WeaponGeneralSetupPrototypes_patch_BPRUE_SMGModules.cfg"
 
 MODULES = {
-    "quick_draw": ("Readiness_QuickDraw", "sid_bprue_smg_quick_draw_name", "sid_bprue_smg_quick_draw_description", 2200, "EUpgradeVerticalPosition::Top", "EUpgradeTargetPartType::Body", ["AimingTimePos15Effect", "AimingMovementPos10Effect", "BPRUE_SMG_ReloadingTimePos10Effect"]),
-    "stabilized": ("Readiness_Stabilized", "sid_bprue_smg_stabilized_name", "sid_bprue_smg_stabilized_description", 2400, "EUpgradeVerticalPosition::Top", "EUpgradeTargetPartType::Body", ["RecoilPos15Effect", "ShotRecoveryPos20Effect", "AimingTimeNeg10Effect"]),
-    "competition_reload": ("Reload_Competition", "sid_bprue_smg_competition_reload_name", "sid_bprue_smg_competition_reload_description", 2400, "EUpgradeVerticalPosition::Down", "EUpgradeTargetPartType::Body", ["BPRUE_ReloadingTimeNeg20Effect", "AimingTimeNeg10Effect"]),
-    "tactical_reload": ("Reload_Tactical", "sid_bprue_smg_tactical_reload_name", "sid_bprue_smg_tactical_reload_description", 2300, "EUpgradeVerticalPosition::Down", "EUpgradeTargetPartType::Body", ["BPRUE_ReloadingTimeNeg10Effect", "AimingTimePos15Effect", "BPRUE_DurabilityPerShotNeg10Effect"]),
-    "high_speed_action": ("Action_HighSpeed", "sid_bprue_smg_high_speed_action_name", "sid_bprue_smg_high_speed_action_description", 3000, "EUpgradeVerticalPosition::Top", "EUpgradeTargetPartType::Barrel", ["BPRUE_FireIntervalNeg20Effect", "RecoilNeg15Effect", "BPRUE_DurabilityPerShotNeg20Effect", "BPRUE_SMG_ReloadingTimePos10Effect"]),
-    "controlled_action": ("Action_Controlled", "sid_bprue_smg_controlled_action_name", "sid_bprue_smg_controlled_action_description", 2800, "EUpgradeVerticalPosition::Top", "EUpgradeTargetPartType::Barrel", ["BPRUE_FireIntervalPos5Effect", "RecoilPos15Effect", "ShotRecoveryPos20Effect", "BPRUE_ReloadingTimeNeg10Effect"]),
+    "quick_draw": ("Readiness_QuickDraw", "sid_bprue_smg_quick_draw_name", "sid_bprue_smg_quick_draw_description", 2200, "Top", "Body", ["AimingTimePos15Effect", "AimingMovementPos10Effect", "BPRUE_SMG_ReloadingTimePos10Effect"]),
+    "stabilized": ("Readiness_Stabilized", "sid_bprue_smg_stabilized_name", "sid_bprue_smg_stabilized_description", 2400, "Top", "Body", ["RecoilPos15Effect", "ShotRecoveryPos20Effect", "AimingTimeNeg10Effect"]),
+    "competition_reload": ("Reload_Competition", "sid_bprue_smg_competition_reload_name", "sid_bprue_smg_competition_reload_description", 2400, "Down", "Body", ["BPRUE_ReloadingTimeNeg20Effect", "AimingTimeNeg10Effect"]),
+    "tactical_reload": ("Reload_Tactical", "sid_bprue_smg_tactical_reload_name", "sid_bprue_smg_tactical_reload_description", 2300, "Down", "Body", ["BPRUE_ReloadingTimeNeg10Effect", "AimingTimePos15Effect", "BPRUE_DurabilityPerShotNeg10Effect"]),
+    "high_speed_action": ("Action_HighSpeed", "sid_bprue_smg_high_speed_action_name", "sid_bprue_smg_high_speed_action_description", 3000, "Top", "Barrel", ["BPRUE_FireIntervalNeg20Effect", "RecoilNeg15Effect", "BPRUE_DurabilityPerShotNeg20Effect", "BPRUE_SMG_ReloadingTimePos10Effect"]),
+    "controlled_action": ("Action_Controlled", "sid_bprue_smg_controlled_action_name", "sid_bprue_smg_controlled_action_description", 2800, "Top", "Barrel", ["BPRUE_FireIntervalPos5Effect", "RecoilPos15Effect", "ShotRecoveryPos20Effect", "BPRUE_ReloadingTimeNeg10Effect"]),
 }
-
 IMAGE = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/AK74/Barrel/Upgrade/T_AK47_Upg_a_1.T_AK47_Upg_a_1'"
 ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_Recoil.T_PDA_Upgrades_Icon_Recoil'"
 
 def load_config(): return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
+def sid(key): return f"BPRUE_SMG_Upgrade_{MODULES[key][0]}"
 
-def sid(prefix: str, key: str) -> str: return f"{prefix}_Upgrade_BPRUE_SMG_{MODULES[key][0]}"
+def array(name, values):
+    return [f"   {name} : struct.begin", *[f"      [{i}] = {v}" for i, v in enumerate(values)], "   struct.end"]
 
-def all_module_sids(config: dict) -> list[str]:
-    return [sid(f["prototype_prefix"], key) for f in config["families"].values() for group in config["module_groups"].values() for key in group]
-
-def render_array(name: str, values: list[str], indent="   ") -> list[str]:
-    lines = [f"{indent}{name} : struct.begin"]
-    for i, value in enumerate(values): lines.append(f"{indent}   [{i}] = {value}")
-    lines.append(f"{indent}struct.end")
-    return lines
-
-def render_upgrades(config: dict) -> str:
+def render_upgrades(config):
     lines = ["// AUTO-GENERATED - Source: smg_upgrades.json", "", "BPRUE_SMGModuleTemplate : struct.begin {refurl=@BaseGame/UpgradePrototypes.cfg;refkey=[0]}", "   SID = BPRUE_SMGModuleTemplate", "   IsModification = true", "struct.end", ""]
-    for family_name, family in config["families"].items():
-        prefix = family["prototype_prefix"]
-        lines += [f"// --- {family_name} ---"]
-        for group_name, keys in config["module_groups"].items():
-            group_sids = [sid(prefix, k) for k in keys]
-            for key in keys:
-                suffix, text, hint, cost, vertical, target, effects = MODULES[key]
-                current = sid(prefix, key)
-                lines += [f"{current} : struct.begin {{refkey=BPRUE_SMGModuleTemplate}}", f"   SID = {current}", f"   Text = {text}", f"   Hint = {hint}", f"   Image = {IMAGE}", f"   Icon = {ICON}", f"   BaseCost = {cost}", f"   VerticalPosition = {vertical}", f"   UpgradeTargetPart = {target}"]
-                lines += render_array("EffectPrototypeSIDs", effects)
-                lines += render_array("BlockingUpgradePrototypeSIDs", [x for x in group_sids if x != current])
-                lines += ["struct.end", ""]
+    for group, keys in config["module_groups"].items():
+        group_sids = [sid(k) for k in keys]
+        for key in keys:
+            suffix, text, hint, cost, vertical, target, effects = MODULES[key]; current = sid(key)
+            lines += [f"{current} : struct.begin {{refkey=BPRUE_SMGModuleTemplate}}", f"   SID = {current}", f"   Text = {text}", f"   Hint = {hint}", f"   Image = {IMAGE}", f"   Icon = {ICON}", f"   BaseCost = {cost}", f"   VerticalPosition = EUpgradeVerticalPosition::{vertical}", f"   UpgradeTargetPart = EUpgradeTargetPartType::{target}"]
+            lines += array("EffectPrototypeSIDs", effects) + array("BlockingUpgradePrototypeSIDs", [x for x in group_sids if x != current]) + ["struct.end", ""]
     return "\n".join(lines)
 
-def render_effects() -> str:
+def render_effects():
     return """// AUTO-GENERATED - Source: smg_upgrades.json
 
-// Positive ReloadingTime increases reload duration; used as an explicit downside.
 BPRUE_SMG_ReloadingTimePos10Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_SMG_ReloadingTimePos10Effect
    Text = Increase Reloading Time
@@ -70,14 +55,11 @@ BPRUE_SMG_ReloadingTimePos10Effect : struct.begin {refurl=@BaseGame/EffectProtot
 struct.end
 """
 
-def render_weapons(config: dict) -> str:
-    lines = ["// AUTO-GENERATED - Source: smg_upgrades.json", ""]
-    for family_name, family in config["families"].items():
-        prefix = family["prototype_prefix"]
-        lines += [f"// {family_name}", f"{family['weapon_sid']} : struct.begin {{bpatch}}", "   UpgradePrototypeSIDs : struct.begin {bpatch}"]
-        for group in config["module_groups"].values():
-            for key in group: lines.append(f"      [*] = {sid(prefix, key)}")
-        lines += ["   struct.end", "struct.end", ""]
+def render_weapons(config):
+    module_sids = [sid(key) for keys in config["module_groups"].values() for key in keys]
+    lines = ["// AUTO-GENERATED - Source: smg_upgrades.json", "", "// Shared specialization modules; each pair is mutually exclusive.", ""]
+    for name, family in config["families"].items():
+        lines += [f"{family['weapon_sid']} : struct.begin {{bpatch}}", "   UpgradePrototypeSIDs : struct.begin {bpatch}", *[f"      [*] = {x}" for x in module_sids], "   struct.end", "struct.end", ""]
     return "\n".join(lines)
 
 def main():
