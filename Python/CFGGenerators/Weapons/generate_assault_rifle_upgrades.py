@@ -8,8 +8,8 @@ PYTHON_ROOT = SCRIPT_DIR.parents[1]
 CONTENT_ROOT = PYTHON_ROOT.parent
 
 CONFIG_PATH = SCRIPT_DIR / "assault_rifles_upgrades.json"
-UPGRADE_OUTPUT_PATH = CONTENT_ROOT / "GameLite" / "GameData" / "UpgradePrototypes" / "UpgradePrototypes_patch_BPRUE.cfg"
-EFFECT_OUTPUT_PATH = CONTENT_ROOT / "GameLite" / "GameData" / "EffectPrototypes" / "EffectPrototypes_patch_BPRUE.cfg"
+UPGRADE_OUTPUT_PATH = CONTENT_ROOT / "GameLite" / "ModGameData" / "BPRUpgradesExpanded" / "UpgradePrototypes" / "BPRUE_UpgradePrototypes.cfg"
+EFFECT_OUTPUT_PATH = CONTENT_ROOT / "GameLite" / "ModGameData" / "BPRUpgradesExpanded" / "EffectPrototypes" / "BPRUE_EffectPrototypes.cfg"
 WEAPON_OUTPUT_PATH = CONTENT_ROOT / "GameLite" / "GameData" / "WeaponData" / "WeaponGeneralSetupPrototypes" / "WeaponGeneralSetupPrototypes_patch_BPRUE.cfg"
 NPC_OUTPUT_PATH = CONTENT_ROOT / "GameLite" / "GameData" / "NPCPrototypes" / "NPCPrototypes_patch_BPRUE.cfg"
 
