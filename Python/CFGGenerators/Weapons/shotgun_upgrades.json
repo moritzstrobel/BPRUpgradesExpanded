@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "description": "Shotgun specialization system: three mutually exclusive modules per group for pattern, action and feeding.",
+  "families": {
+    "TOZ": {"weapon_sid":"GunTOZ_SG","general_setup_sid":"GunTOZ_SG","prototype_prefix":"GunTOZ","action_label":"break","feeding_mode":"break","cost_scale":0.8},
+    "M860": {"weapon_sid":"GunM860_SG","general_setup_sid":"GunM860_SG","prototype_prefix":"GunM860","action_label":"pump","feeding_mode":"tube","cost_scale":1.0},
+    "SPSA": {"weapon_sid":"GunSPSA_SG","general_setup_sid":"GunSPSA_SG","prototype_prefix":"GunSPSA","action_label":"gas","feeding_mode":"tube","cost_scale":1.3},
+    "D12": {"weapon_sid":"GunD12_SG","general_setup_sid":"GunD12_SG","prototype_prefix":"GunD12","action_label":"gas","feeding_mode":"magazine","cost_scale":1.5},
+    "Ram2": {"weapon_sid":"GunRam2_SG","general_setup_sid":"GunRam2_SG","prototype_prefix":"GunRam2","action_label":"double","feeding_mode":"tube","cost_scale":1.6}
+  },
+  "module_groups": {
+    "pattern": ["breacher", "field_choke", "full_choke"],
+    "action": ["high_speed", "tuned", "reinforced"],
+    "feeding": ["extended", "competition", "tactical"]
+  }
+}
