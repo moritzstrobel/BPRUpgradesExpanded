@@ -3,7 +3,6 @@ from __future__ import annotations
 import argparse
 import json
 import re
-import sys
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -114,7 +113,9 @@ def configured_weapons() -> dict[str, set[str]]:
 
 
 def analyze_weapon(weapon_sid: str, block: list[str]) -> dict:
-    sections_block = child_struct(block, "UpgradeSections")
+    # Vanilla calls the five upgrade UI slots SectionSettings. They are part of
+    # the weapon prototype itself, not the GeneralSetup prototype.
+    sections_block = child_struct(block, "SectionSettings")
     sections = []
     if sections_block:
         for item in indexed_structs(sections_block):
@@ -126,8 +127,11 @@ def analyze_weapon(weapon_sid: str, block: list[str]) -> dict:
                 "target_part": target_raw.rsplit("::", 1)[-1] if target_raw else None,
                 "enabled": enabled_raw.lower() == "true" if enabled_raw else None,
                 "bottom": scalar(item, "BottomPosition"),
+                "top": scalar(item, "TopPosition"),
                 "right": scalar(item, "RightPoition") or scalar(item, "RightPosition"),
                 "left": scalar(item, "LeftPosition"),
+                "module_line_direction": scalar(item, "ModuleLineDirection"),
+                "upgrade_line_direction": scalar(item, "UpgradeLineDirection"),
             })
     return {
         "weapon_sid": weapon_sid,
@@ -139,8 +143,8 @@ def analyze_weapon(weapon_sid: str, block: list[str]) -> dict:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Analyze Vanilla UpgradeSections for BPRUE weapons")
-    parser.add_argument("--all-vanilla", action="store_true", help="Analyze every Vanilla weapon block containing UpgradeSections")
+    parser = argparse.ArgumentParser(description="Analyze Vanilla SectionSettings for BPRUE weapons")
+    parser.add_argument("--all-vanilla", action="store_true", help="Analyze every Vanilla weapon block containing SectionSettings")
     args = parser.parse_args()
 
     if not VANILLA_WEAPONS.exists():
@@ -150,7 +154,7 @@ def main() -> None:
     configured = configured_weapons()
 
     if args.all_vanilla:
-        weapon_sids = sorted(sid for sid, block in blocks.items() if child_struct(block, "UpgradeSections"))
+        weapon_sids = sorted(sid for sid, block in blocks.items() if child_struct(block, "SectionSettings"))
     else:
         weapon_sids = sorted(configured)
 
@@ -183,7 +187,7 @@ def main() -> None:
         section_text = ", ".join(
             f"{section['target_part']}={'ON' if section['enabled'] else 'off'}"
             for section in entry["sections"]
-        ) or "NO UpgradeSections"
+        ) or "NO SectionSettings"
         print(f"{entry['weapon_sid']}: {entry['section_count']} sections | {section_text}")
     if missing:
         print("Missing:", ", ".join(missing))
