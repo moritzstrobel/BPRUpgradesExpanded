@@ -11,6 +11,7 @@ GENERATORS = [
     SCRIPT_DIR / "CFGGenerators" / "Weapons" / "generate_shotgun_upgrades.py",
     SCRIPT_DIR / "CFGGenerators" / "Weapons" / "generate_pistol_upgrades.py",
     SCRIPT_DIR / "CFGGenerators" / "Weapons" / "generate_sniper_upgrades.py",
+    SCRIPT_DIR / "CFGGenerators" / "Weapons" / "merge_upgrade_prototypes.py",
     SCRIPT_DIR / "CFGGenerators" / "Weapons" / "merge_weapon_general_setup_patches.py",
     SCRIPT_DIR / "CFGGenerators" / "Weapons" / "merge_technician_conversion_upgrades.py",
 ]
