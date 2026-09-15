@@ -24,13 +24,17 @@ MODULE_EFFECTS = {
     "range_configuration": ("FlatnessUp15Effect", "DispersionPos10Effect", "BPRUE_Shared_AimingTimePenalty10Effect"),
 }
 
+# IMPORTANT: layout group names are deliberately unique. Existing class-specific
+# generators already use names such as Handling, Action and Ballistics. Reusing
+# those names causes apply_module_layout to merge both module families into one
+# column, which can exceed the three available vertical slots.
 GROUP_META = {
-    "handling": ("Handling", "Body", "Down", 3000),
-    "recoil_precision": ("Precision", "Barrel", "Top", 3200),
-    "action": ("ActionProfile", "Barrel", "Top", 3400),
-    "ballistics": ("BallisticsProfile", "Barrel", "Top", 3600),
-    "reliability": ("Reliability", "Body", "Down", 3000),
-    "range_profile": ("RangeProfile", "Barrel", "Top", 3400),
+    "handling": ("ModuleHandling", "Body", "Down", 3000),
+    "recoil_precision": ("ModulePrecision", "Barrel", "Top", 3200),
+    "action": ("ModuleAction", "Barrel", "Top", 3400),
+    "ballistics": ("ModuleBallistics", "Barrel", "Top", 3600),
+    "reliability": ("ModuleReliability", "Body", "Down", 3000),
+    "range_profile": ("ModuleRangeProfile", "Barrel", "Top", 3400),
 }
 
 
