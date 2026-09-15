@@ -60,10 +60,10 @@ def render_general_setup_patch(
     lines.append("")
 
     for general_setup_sid, upgrades in model.by_general_setup().items():
-        lines += [
-            f"{general_setup_sid} : struct.begin {{bpatch}}",
-            "   UpgradePrototypeSIDs : struct.begin {bpatch}",
-        ]
+        lines.append(f"{general_setup_sid} : struct.begin {{bpatch}}")
+        for name, value in model.general_setup_properties(general_setup_sid):
+            lines.append(f"   {name} = {value}")
+        lines.append("   UpgradePrototypeSIDs : struct.begin {bpatch}")
         lines += [f"      [*] = {upgrade.sid}" for upgrade in upgrades]
         lines += ["   struct.end", "struct.end", ""]
 
