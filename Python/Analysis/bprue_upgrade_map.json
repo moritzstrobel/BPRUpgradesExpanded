@@ -2166,7 +2166,24 @@
                 "blocking_sids": [
                   "GunM10_Upgrade_BPRUE_Caliber_A919"
                 ]
-              },
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunM10_Upgrade_BPRUE_Caliber_A919",
+                "class": "SMG",
+                "group": "Caliber",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM10_Upgrade_BPRUE_Caliber_A918"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
               {
                 "sid": "GunM10_Upgrade_BPRUE_Pistol_Handling_Tactical",
                 "class": "Pistol",
@@ -2181,17 +2198,6 @@
               }
             ],
             "Top": [
-              {
-                "sid": "GunM10_Upgrade_BPRUE_Caliber_A919",
-                "class": "SMG",
-                "group": "Caliber",
-                "is_modification": true,
-                "horizontal_explicit": true,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "GunM10_Upgrade_BPRUE_Caliber_A918"
-                ]
-              },
               {
                 "sid": "GunM10_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
                 "class": "Pistol",

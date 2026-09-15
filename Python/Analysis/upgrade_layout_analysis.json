@@ -2857,34 +2857,48 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
-            1
+            1,
+            2
           ],
           "bprue_first_column": 1,
           "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
+          "bprue_column_count": 2,
           "bprue_upgrade_count": 5,
           "bprue_columns_detail": [
             {
               "horizontal_position": 1,
-              "upgrade_count": 5,
+              "upgrade_count": 2,
               "vertical_positions": [
                 "Down",
+                "Top"
+              ],
+              "groups": [
+                "Caliber"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunM10_Upgrade_BPRUE_Caliber_A918",
+                "GunM10_Upgrade_BPRUE_Caliber_A919"
+              ]
+            },
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 3,
+              "vertical_positions": [
                 "Down",
-                "Top",
                 "Top",
                 "Unspecified"
               ],
               "groups": [
-                "Caliber",
                 "Handling"
               ],
               "has_top": true,
               "has_down": true,
               "has_unspecified": true,
               "sids": [
-                "GunM10_Upgrade_BPRUE_Caliber_A918",
                 "GunM10_Upgrade_BPRUE_Pistol_Handling_Tactical",
-                "GunM10_Upgrade_BPRUE_Caliber_A919",
                 "GunM10_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
                 "GunM10_Upgrade_BPRUE_Pistol_Handling_Stabilized"
               ]
@@ -2930,17 +2944,14 @@
         {
           "type": "more_than_two_variants_in_column",
           "target_part": "Body",
-          "horizontal_position": 1,
-          "upgrade_count": 5,
+          "horizontal_position": 2,
+          "upgrade_count": 3,
           "vertical_positions": [
             "Down",
-            "Down",
-            "Top",
             "Top",
             "Unspecified"
           ],
           "groups": [
-            "Caliber",
             "Handling"
           ]
         }
