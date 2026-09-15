@@ -10,9 +10,11 @@ TARGET = UPGRADE_DIR / "BPRUE_UpgradePrototypes.cfg"
 
 # Generator-specific files are temporary build products. The assault-rifle
 # generator already owns BPRUE_UpgradePrototypes.cfg, so keep that as the base
-# and append every other weapon class to it in a deterministic order.
+# and append every other weapon class plus the SMG conversion upgrades in a
+# deterministic order.
 SOURCES = [
     UPGRADE_DIR / "BPRUE_SMGUpgradePrototypes.cfg",
+    UPGRADE_DIR / "BPRUE_SMGConversionUpgradePrototypes.cfg",
     UPGRADE_DIR / "BPRUE_ShotgunUpgradePrototypes.cfg",
     UPGRADE_DIR / "BPRUE_PistolUpgradePrototypes.cfg",
     UPGRADE_DIR / "BPRUE_SniperUpgradePrototypes.cfg",
@@ -50,7 +52,7 @@ def main() -> None:
         source.unlink(missing_ok=True)
 
     print(f"Consolidated upgrade prototypes into {TARGET}")
-    print("Removed split SMG, shotgun, pistol and sniper upgrade prototype files.")
+    print("Removed split SMG, SMG conversion, shotgun, pistol and sniper upgrade prototype files.")
 
 
 if __name__ == "__main__":
