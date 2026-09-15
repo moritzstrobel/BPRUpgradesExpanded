@@ -15,43 +15,60 @@ GROUP_ORDER = {
     "Sniper": {"Body": ["Marksman"], "Barrel": ["Ballistics", "Action", "Signature"]},
 }
 
+# Some GeneralSetups participate in more than one generator/class (currently M10
+# as Pistol + SMG caliber conversion). Class order makes their combined layout
+# deterministic while preserving the normal per-class group order.
+CLASS_ORDER = ("AR", "SMG", "SG", "Pistol", "Sniper")
 
-def _present_groups(model: UpgradeBuildModel) -> dict[tuple[str, str, str], list[str]]:
-    """Return ordered groups that actually exist for each setup/class/target.
 
-    GROUP_ORDER defines ordering only. It must not reserve columns for groups that
-    are absent from a concrete weapon, otherwise artificial holes are introduced.
+def _layout_groups(model: UpgradeBuildModel) -> dict[tuple[str, str], list[tuple[str, str]]]:
+    """Return ordered BPRUE groups per concrete GeneralSetup and target part.
+
+    Columns belong to the final GeneralSetup UI table, not to a generator/class.
+    Therefore groups from different weapon classes that target the same setup/part
+    must be allocated together instead of independently starting at the same column.
     """
-    found: dict[tuple[str, str, str], set[str]] = defaultdict(set)
+    found: dict[tuple[str, str], set[tuple[str, str]]] = defaultdict(set)
+
     for upgrade in model.upgrades:
         allowed = GROUP_ORDER.get(upgrade.weapon_class, {}).get(upgrade.target_part, [])
         if upgrade.group not in allowed:
             continue
         for setup_sid in upgrade.general_setup_sids:
-            found[(setup_sid, upgrade.weapon_class, upgrade.target_part)].add(upgrade.group)
+            found[(setup_sid, upgrade.target_part)].add((upgrade.weapon_class, upgrade.group))
 
-    ordered: dict[tuple[str, str, str], list[str]] = {}
+    ordered: dict[tuple[str, str], list[tuple[str, str]]] = {}
+    class_rank = {weapon_class: index for index, weapon_class in enumerate(CLASS_ORDER)}
+
     for key, groups in found.items():
-        _, weapon_class, target_part = key
-        ordered[key] = [
-            group
-            for group in GROUP_ORDER[weapon_class][target_part]
-            if group in groups
-        ]
+        _, target_part = key
+
+        def sort_key(item: tuple[str, str]) -> tuple[int, int, str, str]:
+            weapon_class, group = item
+            class_groups = GROUP_ORDER[weapon_class][target_part]
+            return (
+                class_rank.get(weapon_class, len(class_rank)),
+                class_groups.index(group),
+                weapon_class,
+                group,
+            )
+
+        ordered[key] = sorted(groups, key=sort_key)
+
     return ordered
 
 
 def apply_layout_to_model(model: UpgradeBuildModel) -> None:
     """Resolve final module coordinates before CFG rendering.
 
-    For each concrete GeneralSetup/class/target, only groups that are actually
-    present consume columns. The first present group starts directly after the last
-    Vanilla IsModification=true column. Variants in one group use Top, Down, then
-    omit VerticalPosition for any further alternatives.
+    For each concrete GeneralSetup/target part, every BPRUE group that is actually
+    present consumes exactly one column, even when multiple class generators feed
+    the same setup. The first group starts directly after the last Vanilla
+    IsModification=true column. Variants use Top, Down, then omit VerticalPosition.
     """
-    present_groups = _present_groups(model)
-    column_cache: dict[tuple[str, str, str], dict[str, int]] = {}
-    variant_counts: dict[tuple[str, str, int, str], int] = {}
+    layout_groups = _layout_groups(model)
+    column_cache: dict[tuple[str, str], dict[tuple[str, str], int]] = {}
+    variant_counts: dict[tuple[str, str, str, int], int] = {}
     resolved = []
 
     for upgrade in model.upgrades:
@@ -68,19 +85,27 @@ def apply_layout_to_model(model: UpgradeBuildModel) -> None:
             )
 
         setup_sid = setup_sids[0]
-        cache_key = (setup_sid, upgrade.weapon_class, upgrade.target_part)
+        cache_key = (setup_sid, upgrade.target_part)
         columns = column_cache.get(cache_key)
         if columns is None:
-            groups = present_groups[cache_key]
-            columns = group_columns_for_general_setups(
+            groups = layout_groups[cache_key]
+            # Reuse the Vanilla-aware start-column helper with synthetic unique
+            # names, then map those columns back to (weapon_class, group).
+            synthetic_groups = [f"{weapon_class}:{group}" for weapon_class, group in groups]
+            synthetic_columns = group_columns_for_general_setups(
                 [setup_sid],
                 upgrade.target_part,
-                groups,
+                synthetic_groups,
             )
+            columns = {
+                group_key: synthetic_columns[synthetic]
+                for group_key, synthetic in zip(groups, synthetic_groups)
+            }
             column_cache[cache_key] = columns
 
-        column = columns[upgrade.group]
-        variant_key = (setup_sid, upgrade.group, column, upgrade.weapon_class)
+        group_key = (upgrade.weapon_class, upgrade.group)
+        column = columns[group_key]
+        variant_key = (setup_sid, upgrade.weapon_class, upgrade.group, column)
         index = variant_counts.get(variant_key, 0)
         vertical = "Top" if index == 0 else "Down" if index == 1 else None
         variant_counts[variant_key] = index + 1
