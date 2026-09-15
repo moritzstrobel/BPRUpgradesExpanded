@@ -20,6 +20,18 @@ MODULES = {
     "controlled_action": ("Action_Controlled", "sid_bprue_smg_controlled_action_name", "sid_bprue_smg_controlled_action_description", 2800, "Top", "Barrel", ["BPRUE_FireIntervalPos5Effect", "RecoilPos15Effect", "ShotRecoveryPos20Effect", "BPRUE_ReloadingTimeNeg10Effect"]),
 }
 
+# UpgradePrototypeSIDs for a weapon must be owned by one generated patch. The
+# conversion attachment patch only owns CompatibleAttachments. Fora230 is kept
+# out of this cleanup for now because its conversion and module patches target
+# different GeneralSetup SIDs and needs separate verification.
+PISTOL_CONVERSION_UPGRADES = {
+    "GunViper_PP": "GunViper_Upgrade_BPRUE_PistolConversion",
+    "GunAKU_PP": "GunAKU_Upgrade_BPRUE_PistolConversion",
+    "GunBucket_PP": "GunBucket_Upgrade_BPRUE_PistolConversion",
+    "GunIntegral_PP": "GunIntegral_Upgrade_BPRUE_PistolConversion",
+    "GunZubr_PP": "GunZubr_Upgrade_BPRUE_PistolConversion",
+}
+
 CALIBER_DATA = {
     "A918": {
         "name_sid": "sid_bprue_smg_caliber_a918_name",
@@ -200,10 +212,17 @@ def render_weapons(config):
         target = by_general_setup.setdefault(family["general_setup_sid"], [])
         target.extend(caliber_sid(family, caliber) for caliber in family["conversions"])
 
+    # Keep all UpgradePrototypeSIDs for these weapons in this one patch. Their
+    # conversion CFG only patches CompatibleAttachments, avoiding two bpatches
+    # of the same UpgradePrototypeSIDs array.
+    for general_setup_sid, conversion_sid in PISTOL_CONVERSION_UPGRADES.items():
+        by_general_setup.setdefault(general_setup_sid, []).append(conversion_sid)
+
     lines = [
         "// AUTO-GENERATED - Source: smg_upgrades.json",
         "",
-        "// Shared specialization modules plus permanent caliber conversions where applicable.",
+        "// Shared specialization modules, caliber conversions and pistol-conversion upgrades.",
+        "// This file is the single owner of UpgradePrototypeSIDs for these SMGs.",
         "",
     ]
     for general_setup_sid, upgrade_sids in by_general_setup.items():
