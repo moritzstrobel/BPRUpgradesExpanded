@@ -49,8 +49,8 @@ def load_config() -> dict:
     return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
 
 
-def sid(key: str) -> str:
-    return f"BPRUE_SMG_Upgrade_{MODULES[key][0]}"
+def sid(family: dict, key: str) -> str:
+    return f"{family['prototype_prefix']}_Upgrade_BPRUE_{MODULES[key][0]}"
 
 
 def caliber_sid(family: dict, caliber: str) -> str:
@@ -59,33 +59,36 @@ def caliber_sid(family: dict, caliber: str) -> str:
 
 def build_upgrades(config: dict) -> list[UpgradeDefinition]:
     upgrades: list[UpgradeDefinition] = []
-    shared_setups = tuple(dict.fromkeys(family["general_setup_sid"] for family in config["families"].values()))
-    if not shared_setups:
+    families = config.get("families", {})
+    if not families:
         raise ValueError("SMG config contains no families")
 
-    # Shared SMG modules are one prototype referenced by every participating SMG.
-    for group, keys in config["module_groups"].items():
-        group_sids = [sid(key) for key in keys]
-        for key in keys:
-            _, text, hint, cost, vertical, target, effects = MODULES[key]
-            current = sid(key)
-            upgrades.append(UpgradeDefinition(
-                sid=current,
-                general_setup_sid=shared_setups[0],
-                additional_general_setup_sids=shared_setups[1:],
-                weapon_class="SMG",
-                group=group.title(),
-                target_part=target,
-                text_sid=text,
-                hint_sid=hint,
-                image=IMAGE,
-                icon=ICON,
-                cost=cost,
-                effects=tuple(effects),
-                blocking_sids=tuple(other for other in group_sids if other != current),
-                vertical_position=vertical,
-                template_sid=TEMPLATE_SID,
-            ))
+    # Layout-bearing upgrade prototypes are weapon-specific. The effects, text and
+    # icons remain shared, but each weapon needs its own prototype so its horizontal
+    # positions can start directly after that weapon's Vanilla modification columns.
+    for family in families.values():
+        general_setup_sid = family["general_setup_sid"]
+        for group, keys in config["module_groups"].items():
+            group_sids = [sid(family, key) for key in keys]
+            for key in keys:
+                _, text, hint, cost, vertical, target, effects = MODULES[key]
+                current = sid(family, key)
+                upgrades.append(UpgradeDefinition(
+                    sid=current,
+                    general_setup_sid=general_setup_sid,
+                    weapon_class="SMG",
+                    group=group.title(),
+                    target_part=target,
+                    text_sid=text,
+                    hint_sid=hint,
+                    image=IMAGE,
+                    icon=ICON,
+                    cost=cost,
+                    effects=tuple(effects),
+                    blocking_sids=tuple(other for other in group_sids if other != current),
+                    vertical_position=vertical,
+                    template_sid=TEMPLATE_SID,
+                ))
 
     # Caliber conversions are family-specific prototypes.
     for family in config.get("caliber_families", {}).values():
@@ -203,7 +206,7 @@ def main() -> None:
             model,
             source="smg_upgrades.json",
             template_sid=TEMPLATE_SID,
-            header_comments=("Shared specialization modules, caliber conversions and pistol-conversion upgrades.",),
+            header_comments=("Weapon-specific specialization modules, caliber conversions and pistol-conversion upgrades.",),
         ),
         EFFECT_OUTPUT_PATH: render_effects(),
         WEAPON_OUTPUT_PATH: render_general_setup_patch(
