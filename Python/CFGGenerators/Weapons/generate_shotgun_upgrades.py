@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 
 from upgrade_build_model import UpgradeBuildModel, UpgradeDefinition
+from upgrade_renderers import render_general_setup_patch, render_upgrade_prototypes
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PYTHON_ROOT = SCRIPT_DIR.parents[1]
@@ -69,31 +70,6 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
     return upgrades
 
 
-def render_upgrade(model: UpgradeBuildModel) -> str:
-    lines = [
-        '// AUTO-GENERATED - Source: shotgun_upgrades.json via UpgradeBuildModel', '',
-        f'{TEMPLATE_SID} : struct.begin {{refurl=@BaseGame/UpgradePrototypes.cfg;refkey=[0]}}',
-        f'   SID = {TEMPLATE_SID}', '   IsModification = true', 'struct.end', '',
-    ]
-    for m in model.upgrades:
-        lines += [
-            f'{m.sid} : struct.begin {{refkey={m.template_sid}}}', f'   SID = {m.sid}',
-            f'   Text = {m.text_sid}', f'   Hint = {m.hint_sid}', f'   Image = {m.image}',
-            f'   Icon = {m.icon}', f'   BaseCost = {m.cost}',
-        ]
-        if m.horizontal_position is not None:
-            lines.append(f'   HorizontalPosition = {m.horizontal_position}')
-        if m.vertical_position is not None:
-            lines.append(f'   VerticalPosition = EUpgradeVerticalPosition::{m.vertical_position}')
-        lines += [f'   UpgradeTargetPart = EUpgradeTargetPartType::{m.target_part}', '   EffectPrototypeSIDs : struct.begin']
-        lines += [f'      [{i}] = {effect}' for i, effect in enumerate(m.effects)] + ['   struct.end']
-        if m.blocking_sids:
-            lines += ['   BlockingUpgradePrototypeSIDs : struct.begin']
-            lines += [f'      [{i}] = {blocked}' for i, blocked in enumerate(m.blocking_sids)] + ['   struct.end']
-        lines += ['struct.end', '']
-    return '\n'.join(lines)
-
-
 def render_effects() -> str:
     return '''// AUTO-GENERATED - Source: shotgun_upgrades.json
 
@@ -148,27 +124,20 @@ struct.end
 '''
 
 
-def render_weapons(model: UpgradeBuildModel) -> str:
-    lines = ['// AUTO-GENERATED - Source: UpgradeBuildModel', '']
-    for general_setup_sid, upgrades in model.by_general_setup().items():
-        lines += [f'{general_setup_sid} : struct.begin {{bpatch}}', '   UpgradePrototypeSIDs : struct.begin {bpatch}']
-        lines += [f'      [*] = {upgrade.sid}' for upgrade in upgrades]
-        lines += ['   struct.end', 'struct.end', '']
-    return '\n'.join(lines)
-
-
 def main() -> None:
     config = cfg()
     model = UpgradeBuildModel()
     model.extend(build_upgrades(config))
     model.validate()
 
-    UPGRADE_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    EFFECT_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    WEAPON_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    UPGRADE_OUTPUT.write_text(render_upgrade(model), encoding='utf8')
-    EFFECT_OUTPUT.write_text(render_effects(), encoding='utf8')
-    WEAPON_OUTPUT.write_text(render_weapons(model), encoding='utf8')
+    outputs = {
+        UPGRADE_OUTPUT: render_upgrade_prototypes(model, source='shotgun_upgrades.json', template_sid=TEMPLATE_SID),
+        EFFECT_OUTPUT: render_effects(),
+        WEAPON_OUTPUT: render_general_setup_patch(model),
+    }
+    for path, content in outputs.items():
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(content, encoding='utf8')
     print(f'Generated shotgun specialization CFGs from {model.summary()}')
 
 
