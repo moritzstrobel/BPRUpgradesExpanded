@@ -10,15 +10,81 @@ TECHNICIAN_SIDS = (
     "Surup", "medlak_0", "PowerPlug_Pripyat", "serz_ivaj_0", "supack_technician_banzaj_0",
 )
 
+ICON_ROOT = "/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons"
+
+
+def _vanilla_icon(name: str) -> str:
+    asset = f"T_PDA_Upgrades_Icon_{name}"
+    return f"Texture2D'{ICON_ROOT}/{asset}.{asset}'"
+
+
+# Derived from the real Vanilla UpgradePrototypes.cfg. Rules are deliberately
+# ordered from the most specific effect semantics to broader fallbacks.
+EFFECT_ICON_RULES = (
+    (("ChangeCaliber", "ChangeAmmoTypes"), "CaliberChange"),
+    (("ChangeFireType",), "Autosh"),
+    (("ProjectileSpeed",), "Velocity"),
+    (("DamageFalloff",), "DropDamage"),
+    (("FireDistance",), "Range"),
+    (("ArmorPen", "ArmorPiercing"), "ArmorPiercing"),
+    (("DurabilityPerShot",), "ShootingDepreciation"),
+    (("Durability",), "Depreciation"),
+    (("WeaponWithdraw",), "Readiness"),
+    (("AimingMovement",), "MovementAiming"),
+    (("ShotRecovery",), "AimingReturn"),
+    (("DispersionIncreaseSpeed",), "SlowingSpread"),
+    (("MaxDispersion",), "MaxSpread"),
+    (("IdleSway",), "AimingAccuracy"),
+    (("AimingTime",), "AimingSpeed"),
+    (("Dispersion",), "SpreadReduction"),
+    (("Weight",), "WeightLoss"),
+    (("Recoil",), "Recoil"),
+)
+
+# Vanilla has no direct icon/effect precedent for several BPRUE concepts (most
+# notably fire interval and reload time). In those cases use the closest visual
+# Vanilla concept instead of falling back to the old generic Recoil icon.
+GROUP_ICON_FALLBACKS = {
+    "Caliber": "CaliberChange",
+    "Conversion": "CaliberChange",
+    "FireControl": "Autosh",
+    "FireRate": "Velocity",
+    "Reload": "Readiness",
+    "Readiness": "Readiness",
+    "Stock": "MovementAiming",
+    "Handling": "MovementAiming",
+    "Marksman": "AimingAccuracy",
+    "Ballistics": "Range",
+    "Pattern": "SpreadReduction",
+    "Signature": "ShootingDepreciation",
+    "Action": "Recoil",
+}
+
+
+def semantic_upgrade_icon(upgrade: UpgradeDefinition) -> str:
+    """Choose the closest Vanilla icon for the upgrade's dominant purpose.
+
+    Exact Vanilla effect semantics win. If BPRUE introduces an effect without a
+    Vanilla icon precedent, use a group-level nearest-match icon. The explicitly
+    configured generator icon remains the final safety fallback.
+    """
+    effects = upgrade.effects
+    for needles, icon_name in EFFECT_ICON_RULES:
+        if any(needle in effect for effect in effects for needle in needles):
+            return _vanilla_icon(icon_name)
+    fallback = GROUP_ICON_FALLBACKS.get(upgrade.group)
+    return _vanilla_icon(fallback) if fallback else upgrade.icon
+
 
 def _render_upgrade(upgrade: UpgradeDefinition, fallback_template: str | None = None) -> list[str]:
     template = upgrade.template_sid or fallback_template
     if not template:
         raise ValueError(f"{upgrade.sid}: no template SID configured")
+    icon = semantic_upgrade_icon(upgrade)
     lines = [
         f"{upgrade.sid} : struct.begin {{refkey={template}}}",
         f"   SID = {upgrade.sid}", f"   Text = {upgrade.text_sid}", f"   Hint = {upgrade.hint_sid}",
-        f"   Image = {upgrade.image}", f"   Icon = {upgrade.icon}", f"   BaseCost = {upgrade.cost}",
+        f"   Image = {upgrade.image}", f"   Icon = {icon}", f"   BaseCost = {upgrade.cost}",
     ]
     if upgrade.horizontal_position is not None:
         lines.append(f"   HorizontalPosition = {upgrade.horizontal_position}")
