@@ -8,6 +8,7 @@ PYTHON_ROOT = SCRIPT_DIR.parents[1]
 CONTENT_ROOT = PYTHON_ROOT.parent
 AR_CONFIG_PATH = SCRIPT_DIR / "assault_rifles_upgrades.json"
 SHOTGUN_CONFIG_PATH = SCRIPT_DIR / "shotgun_upgrades.json"
+PISTOL_CONFIG_PATH = SCRIPT_DIR / "pistol_upgrades.json"
 NPC_OUTPUT_PATH = CONTENT_ROOT / "GameLite" / "GameData" / "NPCPrototypes" / "NPCPrototypes_patch_BPRUE.cfg"
 
 CONVERSION_UPGRADE_SIDS = [
@@ -49,6 +50,15 @@ def shotgun_module_sids() -> list[str]:
     return result
 
 
+def pistol_signature_sids() -> list[str]:
+    config = json.loads(PISTOL_CONFIG_PATH.read_text(encoding="utf-8"))
+    result: list[str] = []
+    for family in config["families"].values():
+        key = family["signature"].title().replace("_", "")
+        result.append(f"{family['prototype_prefix']}_Upgrade_BPRUE_Pistol_Signature_{key}")
+    return result
+
+
 def merge_into_technician_block(content: str, technician_sid: str, upgrade_sids: list[str]) -> str:
     block_start = f"{technician_sid} : struct.begin {{bpatch}}\n"
     start = content.find(block_start)
@@ -74,19 +84,23 @@ def merge_into_technician_block(content: str, technician_sid: str, upgrade_sids:
 
 def main() -> None:
     content = NPC_OUTPUT_PATH.read_text(encoding="utf-8")
-    upgrade_sids = CONVERSION_UPGRADE_SIDS + SMG_MODULE_SIDS + SMG_CALIBER_SIDS + shotgun_module_sids()
+    upgrade_sids = CONVERSION_UPGRADE_SIDS + SMG_MODULE_SIDS + SMG_CALIBER_SIDS + shotgun_module_sids() + pistol_signature_sids()
     for technician_sid in load_technician_sids():
         content = merge_into_technician_block(content, technician_sid, upgrade_sids)
     content = content.replace(
         "// Draft setup: all BPRUE assault-rifle modules are available at all technicians.",
-        "// All BPRUE assault-rifle, SMG and shotgun specialization modules are available at all technicians.",
+        "// All BPRUE assault-rifle, SMG, shotgun and pistol signature modules are available at all technicians.",
     )
     content = content.replace(
         "// All BPRUE assault-rifle modules, SMG specialization/caliber modules and pistol-conversion upgrades are available at all technicians.",
+        "// All BPRUE assault-rifle, SMG, shotgun and pistol signature modules are available at all technicians.",
+    )
+    content = content.replace(
         "// All BPRUE assault-rifle, SMG and shotgun specialization modules are available at all technicians.",
+        "// All BPRUE assault-rifle, SMG, shotgun and pistol signature modules are available at all technicians.",
     )
     NPC_OUTPUT_PATH.write_text(content, encoding="utf-8")
-    print(f"Merged SMG and shotgun specialization upgrades into {NPC_OUTPUT_PATH}")
+    print(f"Merged SMG, shotgun and pistol signature upgrades into {NPC_OUTPUT_PATH}")
 
 
 if __name__ == "__main__":
