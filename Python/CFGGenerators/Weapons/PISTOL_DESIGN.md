@@ -1,35 +1,23 @@
 # Pistol specialization design
 
-Normal pistol families use two shared three-way specialization groups plus one standalone family-specific signature module. Unique weapon variants are excluded and will be handled separately.
+Normal pistol families will eventually use shared specialization groups plus one standalone family-specific signature module. This PR now implements the signature-module phase first. Unique weapon variants remain excluded and will be handled separately.
 
-## Shared groups
-
-### Action
-- High-Speed Action: faster cycle, higher recoil and wear.
-- Balanced Action: moderately faster cycle and lower recoil, small wear penalty.
-- Controlled Action: slower cycle, lower recoil and faster recoil recovery.
-
-### Handling
-- Quick-Draw Setup: lighter and faster to aim, with increased recoil.
-- Tactical Setup: balanced aiming, aimed movement and recovery improvements.
-- Stabilized Setup: lower recoil and faster recovery, but slower aiming.
-
-## Signature modules
+## Implemented signature modules
 
 ### PTM — Quick-Response Package
-Emergency-backup role: very fast aiming/reload and low weight, traded for recoil and wear.
+Emergency-backup role: +20% aiming speed, +20% reload speed and -15% weight, traded for +15% recoil and +10% wear per shot.
 
 ### UDP — Match Barrel Assembly
-Precision/mid-range sidearm: tighter dispersion, longer effective falloff and higher projectile speed, traded for slower handling.
+Precision/mid-range sidearm: +30% dispersion improvement, +20% effective falloff distance and +20% projectile speed, traded for 10% slower aiming.
 
 ### APB/APSB — Automatic Sear
-APB is natively three-round burst (`EFireType::Queue`, `FireQueueCount = 3`). Uses vanilla `ChangeFireTypeEffectBurstAuto` to expose Queue + Automatic modes.
+APB is natively three-round burst (`EFireType::Queue`, `FireQueueCount = 3`). Uses vanilla `ChangeFireTypeEffectBurstAuto` to expose Queue + Automatic modes, traded for +15% recoil and +20% wear per shot.
 
 ### Rhino — Hunting Cylinder
-Conservative first pass because Rhino already has a vanilla 12-gauge conversion branch. Ammo-specific behavior is deferred until that interaction is mapped.
+Heavy-hunter role: +20% armor penetration and +20% projectile speed, traded for a 10% slower firing cycle. This deliberately does not touch the Rhino's existing vanilla 12-gauge conversion path.
 
 ### M10 Gordon — Selectable Fire Control
-M10 is natively automatic. Vanilla `ChangeFireTypeEffectSemiAuto` exposes SemiAutomatic + Automatic.
+M10 is natively automatic. Vanilla `ChangeFireTypeEffectSemiAuto` exposes SemiAutomatic + Automatic, with a small recoil-control benefit.
 
 ## Verified baseline
 - `GunAPB_HG`: FireInterval 0.085; Queue; FireQueueCount 3.
@@ -37,3 +25,6 @@ M10 is natively automatic. Vanilla `ChangeFireTypeEffectSemiAuto` exposes SemiAu
 - `GunPM_HG`: FireInterval 0.09; AimingTime 0.25.
 - `GunUDP_HG`: FireInterval 0.08; AimingTime 0.25.
 - `GunRhino_HG`: FireInterval 0.7; AimingTime 0.38.
+
+## Next pistol phase
+The shared pistol specialization groups are intentionally not generated yet. They can be designed around the remaining two active upgrade nodes after the five signatures have been runtime-tested.
