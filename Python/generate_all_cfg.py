@@ -13,7 +13,7 @@ import generate_shotgun_upgrades as shotgun
 import generate_smg_upgrades as smg
 import generate_sniper_upgrades as sniper
 from apply_module_layout import apply_layout_to_model
-from merge_smg_weapon_patches import CONVERSION_ATTACHMENTS, attachment_block
+from smg_conversion_attachments import CONVERSION_ATTACHMENTS, attachment_block
 from upgrade_build_model import UpgradeBuildModel
 from upgrade_renderers import render_consolidated_upgrade_prototypes, render_final_general_setup_patch
 
@@ -24,13 +24,7 @@ NPC_PATH = CONTENT_ROOT / "GameLite/GameData/NPCPrototypes/NPCPrototypes_patch_B
 
 
 def build_model() -> tuple[UpgradeBuildModel, dict]:
-    configs = {
-        "ar": ar.load_config(),
-        "smg": smg.load_config(),
-        "shotgun": shotgun.cfg(),
-        "pistol": pistol.load_config(),
-        "sniper": sniper.load_config(),
-    }
+    configs = {"ar": ar.load_config(), "smg": smg.load_config(), "shotgun": shotgun.cfg(), "pistol": pistol.load_config(), "sniper": sniper.load_config()}
     model = UpgradeBuildModel()
     model.extend(ar.build_upgrades(configs["ar"]))
     model.extend(smg.build_upgrades(configs["smg"]))
@@ -74,22 +68,16 @@ def main() -> None:
     upgrade_text = render_consolidated_upgrade_prototypes(model)
     setup_text = render_final_general_setup_patch(model, attachments)
     npc_text = ar.render_npc_patch(configs["ar"], model)
-
-    # Validate the complete graph before touching final CFG outputs.
     validate_rendered_outputs(model, upgrade_text, setup_text, npc_text)
 
     write(UPGRADES_PATH, upgrade_text)
     write(GENERAL_SETUP_PATH, setup_text)
     write(NPC_PATH, npc_text)
-
-    # Effect prototypes remain class-owned because they are independent prototype
-    # definitions, not graph fragments that need merging.
     write(ar.EFFECT_OUTPUT_PATH, ar.render_effect_patch(configs["ar"]))
     write(smg.EFFECT_OUTPUT_PATH, smg.render_effects())
     write(shotgun.EFFECT_OUTPUT, shotgun.render_effects())
     write(pistol.EFFECT_OUTPUT, pistol.render_effects())
     write(sniper.EFFECT_OUTPUT, sniper.render_effects())
-
     print(f"Validated and rendered {len(model.upgrades)} upgrades in one build pass.")
 
 
