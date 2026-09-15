@@ -3,116 +3,190 @@ from __future__ import annotations
 from collections import defaultdict
 from dataclasses import replace
 
-from upgrade_build_model import UpgradeBuildModel
-from vanilla_upgrade_layout import group_columns_for_general_setups
-
+from upgrade_build_model import UpgradeBuildModel, UpgradeDefinition
+from vanilla_upgrade_layout import (
+    MAX_VISIBLE_HORIZONTAL_POSITION,
+    available_target_parts,
+    effective_vanilla_modifications,
+    vanilla_general_setup_upgrades,
+)
 
 GROUP_ORDER = {
     "AR": {"Body": ["Caliber", "FireControl", "Reload"], "Barrel": ["FireRate"], "Stock": ["Stock"]},
-    "SMG": {"Body": ["Readiness", "Reload", "Caliber", "Conversion"], "Barrel": ["Action"]},
+    "SMG": {"Body": ["Readiness", "Reload"], "Barrel": ["Action"]},
     "SG": {"Body": ["Action", "Handling"], "Barrel": ["Pattern"]},
     "Pistol": {"Body": ["Handling"], "Barrel": ["Action", "Signature"]},
     "Sniper": {"Body": ["Marksman"], "Barrel": ["Ballistics", "Action", "Signature"]},
 }
-
-# Some GeneralSetups participate in more than one generator/class (currently M10
-# as Pistol + SMG caliber conversion). Class order makes their combined layout
-# deterministic while preserving the normal per-class group order.
 CLASS_ORDER = ("AR", "SMG", "SG", "Pistol", "Sniper")
+VERTICALS = ("Top", "Down", None)
+
+# Semantic fallback order. Preferred target_part always comes first; these are
+# considered only when its visible H0-H2 columns cannot fit the complete group.
+FALLBACK_PARTS = {
+    "Barrel": ("Body", "Stock", "Handguard", "PistolGrip"),
+    "Body": ("Stock", "Handguard", "PistolGrip", "Barrel"),
+    "Stock": ("Body", "PistolGrip", "Handguard", "Barrel"),
+    "Handguard": ("Body", "Barrel", "Stock", "PistolGrip"),
+    "PistolGrip": ("Body", "Stock", "Handguard", "Barrel"),
+}
 
 
-def _layout_groups(model: UpgradeBuildModel) -> dict[tuple[str, str], list[tuple[str, str]]]:
-    """Return ordered BPRUE groups per concrete GeneralSetup and target part.
+def _group_rank(upgrade: UpgradeDefinition) -> tuple[int, int, str, str]:
+    class_rank = {name: index for index, name in enumerate(CLASS_ORDER)}
+    groups = GROUP_ORDER.get(upgrade.weapon_class, {}).get(upgrade.target_part, [])
+    return (
+        class_rank.get(upgrade.weapon_class, len(class_rank)),
+        groups.index(upgrade.group) if upgrade.group in groups else len(groups),
+        upgrade.weapon_class,
+        upgrade.group,
+    )
 
-    Columns belong to the final GeneralSetup UI table, not to a generator/class.
-    Therefore groups from different weapon classes that target the same setup/part
-    must be allocated together instead of independently starting at the same column.
+
+def _vanilla_occupancy(setup_sid: str) -> dict[tuple[str, int], int]:
+    """Count Vanilla modification entries per visible target/column.
+
+    We only know Vanilla horizontal columns here, not a reliable per-upgrade vertical
+    cell. A Vanilla column is therefore treated as unavailable to grouped BPRUE rows,
+    while standalone packing first uses holes in BPRUE-created columns. This avoids
+    guessing Vanilla vertical occupancy during this test pass.
     """
-    found: dict[tuple[str, str], set[tuple[str, str]]] = defaultdict(set)
+    mods = effective_vanilla_modifications()
+    result: dict[tuple[str, int], int] = defaultdict(int)
+    for sid in vanilla_general_setup_upgrades().get(setup_sid, []):
+        mod = mods.get(sid)
+        if mod:
+            target, horizontal = mod
+            if 0 <= horizontal <= MAX_VISIBLE_HORIZONTAL_POSITION:
+                result[(target, horizontal)] += 1
+    return result
 
-    for upgrade in model.upgrades:
-        allowed = GROUP_ORDER.get(upgrade.weapon_class, {}).get(upgrade.target_part, [])
-        if upgrade.group not in allowed:
-            continue
-        for setup_sid in upgrade.general_setup_sids:
-            found[(setup_sid, upgrade.target_part)].add((upgrade.weapon_class, upgrade.group))
 
-    ordered: dict[tuple[str, str], list[tuple[str, str]]] = {}
-    class_rank = {weapon_class: index for index, weapon_class in enumerate(CLASS_ORDER)}
+def _target_order(setup_sid: str, preferred: str) -> tuple[str, ...]:
+    available = available_target_parts(setup_sid, include_disabled=True)
+    if not available:
+        raise ValueError(f"{setup_sid}: no WeaponPrototype SectionSettings found")
+    wanted = (preferred, *FALLBACK_PARTS.get(preferred, ()))
+    ordered = [part for part in wanted if part in available]
+    ordered.extend(part for part in available if part not in ordered)
+    return tuple(ordered)
 
-    for key, groups in found.items():
-        _, target_part = key
 
-        def sort_key(item: tuple[str, str]) -> tuple[int, int, str, str]:
-            weapon_class, group = item
-            class_groups = GROUP_ORDER[weapon_class][target_part]
-            return (
-                class_rank.get(weapon_class, len(class_rank)),
-                class_groups.index(group),
-                weapon_class,
-                group,
-            )
+def _first_free_column(setup_sid: str, preferred: str, occupied_columns: set[tuple[str, int]]) -> tuple[str, int]:
+    for target in _target_order(setup_sid, preferred):
+        for horizontal in range(MAX_VISIBLE_HORIZONTAL_POSITION + 1):
+            if (target, horizontal) not in occupied_columns:
+                return target, horizontal
+    raise ValueError(f"{setup_sid}: no visible H0-H{MAX_VISIBLE_HORIZONTAL_POSITION} column left for group on {preferred}")
 
-        ordered[key] = sorted(groups, key=sort_key)
 
-    return ordered
+def _standalone_cell(
+    setup_sid: str,
+    preferred: str,
+    cells: dict[tuple[str, int], set[int]],
+    vanilla_columns: set[tuple[str, int]],
+) -> tuple[str, int, int]:
+    targets = _target_order(setup_sid, preferred)
+
+    # Pass A: fill holes in columns already created by BPRUE groups. This is the
+    # intended Tetris behavior: rows are laid out first, standalones fill gaps.
+    for target in targets:
+        for horizontal in range(MAX_VISIBLE_HORIZONTAL_POSITION + 1):
+            key = (target, horizontal)
+            if key in vanilla_columns:
+                continue
+            used = cells.get(key)
+            if not used:
+                continue
+            for vertical in range(len(VERTICALS)):
+                if vertical not in used:
+                    return target, horizontal, vertical
+
+    # Pass B: use an entirely free visible column, preferring the semantic part.
+    for target in targets:
+        for horizontal in range(MAX_VISIBLE_HORIZONTAL_POSITION + 1):
+            key = (target, horizontal)
+            if key not in vanilla_columns and not cells.get(key):
+                return target, horizontal, 0
+
+    raise ValueError(f"{setup_sid}: no visible cell left for standalone upgrade on {preferred}")
 
 
 def apply_layout_to_model(model: UpgradeBuildModel) -> None:
-    """Resolve final module coordinates before CFG rendering.
+    """Two-pass visible-slot allocator.
 
-    For each concrete GeneralSetup/target part, every BPRUE group that is actually
-    present consumes exactly one column, even when multiple class generators feed
-    the same setup. The first group starts directly after the last Vanilla
-    IsModification=true column. Variants use Top, Down, then omit VerticalPosition.
+    Pass 1 places normal groups as intact rows/columns. If H0-H2 on the preferred
+    target are exhausted, the whole group moves to another predefined weapon section.
+    Pass 2 packs standalone upgrades into remaining BPRUE cells, then free columns.
+    No generated upgrade may ever receive H3+.
     """
-    layout_groups = _layout_groups(model)
-    column_cache: dict[tuple[str, str], dict[tuple[str, str], int]] = {}
-    variant_counts: dict[tuple[str, str, str, int], int] = {}
-    resolved = []
-
+    by_setup: dict[str, list[UpgradeDefinition]] = defaultdict(list)
     for upgrade in model.upgrades:
-        allowed = GROUP_ORDER.get(upgrade.weapon_class, {}).get(upgrade.target_part, [])
-        if upgrade.group not in allowed:
-            resolved.append(upgrade)
-            continue
-
-        setup_sids = tuple(upgrade.general_setup_sids)
-        if len(setup_sids) != 1:
+        if len(upgrade.general_setup_sids) != 1:
             raise ValueError(
                 f"Layout-bearing upgrade {upgrade.sid} targets multiple GeneralSetups: "
-                f"{', '.join(setup_sids)}. Split it into weapon-specific prototypes."
+                f"{', '.join(upgrade.general_setup_sids)}. Split it into weapon-specific prototypes."
+            )
+        by_setup[upgrade.general_setup_sids[0]].append(upgrade)
+
+    resolved_by_sid: dict[str, UpgradeDefinition] = {}
+
+    for setup_sid, upgrades in by_setup.items():
+        vanilla = _vanilla_occupancy(setup_sid)
+        vanilla_columns = set(vanilla)
+        occupied_columns = set(vanilla_columns)
+        cells: dict[tuple[str, int], set[int]] = defaultdict(set)
+
+        grouped: dict[tuple[str, str], list[UpgradeDefinition]] = defaultdict(list)
+        standalones: list[UpgradeDefinition] = []
+        passthrough: list[UpgradeDefinition] = []
+
+        for upgrade in upgrades:
+            if upgrade.standalone:
+                standalones.append(upgrade)
+                continue
+            allowed = GROUP_ORDER.get(upgrade.weapon_class, {}).get(upgrade.target_part, [])
+            if upgrade.group not in allowed:
+                passthrough.append(upgrade)
+                continue
+            grouped[(upgrade.weapon_class, upgrade.group)].append(upgrade)
+
+        group_items = sorted(grouped.items(), key=lambda item: _group_rank(item[1][0]))
+        for (_weapon_class, _group), variants in group_items:
+            if len(variants) > len(VERTICALS):
+                raise ValueError(f"{setup_sid}/{variants[0].group}: {len(variants)} variants exceed 3 vertical slots")
+            preferred = variants[0].target_part
+            target, horizontal = _first_free_column(setup_sid, preferred, occupied_columns)
+            occupied_columns.add((target, horizontal))
+            for index, upgrade in enumerate(variants):
+                cells[(target, horizontal)].add(index)
+                resolved_by_sid[upgrade.sid] = replace(
+                    upgrade,
+                    target_part=target,
+                    horizontal_position=None if horizontal == 0 else horizontal,
+                    vertical_position=VERTICALS[index],
+                )
+
+        # Standalones are intentionally last. Their gameplay blocking relationships
+        # are untouched; only their visual cell is independent.
+        for upgrade in standalones:
+            target, horizontal, vertical_index = _standalone_cell(
+                setup_sid, upgrade.target_part, cells, vanilla_columns
+            )
+            cells[(target, horizontal)].add(vertical_index)
+            occupied_columns.add((target, horizontal))
+            resolved_by_sid[upgrade.sid] = replace(
+                upgrade,
+                target_part=target,
+                horizontal_position=None if horizontal == 0 else horizontal,
+                vertical_position=VERTICALS[vertical_index],
             )
 
-        setup_sid = setup_sids[0]
-        cache_key = (setup_sid, upgrade.target_part)
-        columns = column_cache.get(cache_key)
-        if columns is None:
-            groups = layout_groups[cache_key]
-            # Reuse the Vanilla-aware start-column helper with synthetic unique
-            # names, then map those columns back to (weapon_class, group).
-            synthetic_groups = [f"{weapon_class}:{group}" for weapon_class, group in groups]
-            synthetic_columns = group_columns_for_general_setups(
-                [setup_sid],
-                upgrade.target_part,
-                synthetic_groups,
-            )
-            columns = {
-                group_key: synthetic_columns[synthetic]
-                for group_key, synthetic in zip(groups, synthetic_groups)
-            }
-            column_cache[cache_key] = columns
+        for upgrade in passthrough:
+            resolved_by_sid[upgrade.sid] = upgrade
 
-        group_key = (upgrade.weapon_class, upgrade.group)
-        column = columns[group_key]
-        variant_key = (setup_sid, upgrade.weapon_class, upgrade.group, column)
-        index = variant_counts.get(variant_key, 0)
-        vertical = "Top" if index == 0 else "Down" if index == 1 else None
-        variant_counts[variant_key] = index + 1
-        resolved.append(replace(
-            upgrade,
-            horizontal_position=None if column == 0 else column,
-            vertical_position=vertical,
-        ))
+    missing = [upgrade.sid for upgrade in model.upgrades if upgrade.sid not in resolved_by_sid]
+    if missing:
+        raise ValueError("Layout allocator did not resolve: " + ", ".join(missing))
 
-    model.upgrades = resolved
+    model.upgrades = [resolved_by_sid[upgrade.sid] for upgrade in model.upgrades]
