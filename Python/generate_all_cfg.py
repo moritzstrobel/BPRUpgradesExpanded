@@ -29,9 +29,11 @@ from upgrade_renderers import (
     render_final_general_setup_patch,
     render_technician_patch,
 )
+from vanilla_upgrade_layout import render_vanilla_compaction_patch, vanilla_compaction
 
 CONTENT_ROOT = SCRIPT_DIR.parent
 UPGRADES_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/UpgradePrototypes/BPRUE_UpgradePrototypes.cfg"
+VANILLA_COMPACTION_PATH = CONTENT_ROOT / "GameLite/GameData/UpgradePrototypes/UpgradePrototypes_patch_BPRUE.cfg"
 GENERAL_SETUP_PATH = CONTENT_ROOT / "GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg"
 NPC_PATH = CONTENT_ROOT / "GameLite/GameData/NPCPrototypes/NPCPrototypes_patch_BPRUE.cfg"
 
@@ -83,6 +85,9 @@ def main() -> None:
     npc_text = render_technician_patch(model)
     validate_rendered_outputs(model, upgrade_text, setup_text, npc_text)
 
+    compaction = vanilla_compaction()
+    print(f"Compacting {len(compaction)} safe Vanilla modification prototypes")
+    write(VANILLA_COMPACTION_PATH, render_vanilla_compaction_patch())
     write(UPGRADES_PATH, upgrade_text)
     write(GENERAL_SETUP_PATH, setup_text)
     write(NPC_PATH, npc_text)
