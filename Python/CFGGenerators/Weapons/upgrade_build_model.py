@@ -24,6 +24,12 @@ class UpgradeDefinition:
     technician: bool = True
     template_sid: str | None = None
     horizontal_position: int | None = None
+    additional_general_setup_sids: tuple[str, ...] = ()
+    require_effects: bool = True
+
+    @property
+    def general_setup_sids(self) -> tuple[str, ...]:
+        return tuple(dict.fromkeys((self.general_setup_sid, *self.additional_general_setup_sids)))
 
 
 @dataclass(frozen=True)
@@ -71,9 +77,11 @@ class UpgradeBuildModel:
 
             if not upgrade.general_setup_sid:
                 errors.append(f"{upgrade.sid}: missing GeneralSetup SID")
+            if any(not sid for sid in upgrade.general_setup_sids):
+                errors.append(f"{upgrade.sid}: empty GeneralSetup SID")
             if not upgrade.target_part:
                 errors.append(f"{upgrade.sid}: missing UpgradeTargetPart")
-            if not upgrade.effects:
+            if upgrade.require_effects and not upgrade.effects:
                 errors.append(f"{upgrade.sid}: no effects configured")
 
         known = set(by_sid)
@@ -95,7 +103,8 @@ class UpgradeBuildModel:
     def by_general_setup(self) -> dict[str, list[UpgradeDefinition]]:
         result: dict[str, list[UpgradeDefinition]] = {}
         for upgrade in self.upgrades:
-            result.setdefault(upgrade.general_setup_sid, []).append(upgrade)
+            for sid in upgrade.general_setup_sids:
+                result.setdefault(sid, []).append(upgrade)
         return result
 
     def general_setup_properties(self, sid: str) -> tuple[tuple[str, str], ...]:
