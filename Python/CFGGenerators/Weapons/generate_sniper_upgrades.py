@@ -76,28 +76,38 @@ def render_upgrades(config: dict) -> str:
 
 def render_effects() -> str:
     definitions = [
-        ("BPRUE_Sniper_RecoilPenalty10Effect", "RecoilTemplate", "10%", "Negative"),
-        ("BPRUE_Sniper_RecoilPenalty15Effect", "RecoilTemplate", "15%", "Negative"),
-        ("BPRUE_Sniper_RecoilPenalty20Effect", "RecoilTemplate", "20%", "Negative"),
-        ("BPRUE_Sniper_AimingTimePenalty10Effect", "AimingTimeTemplate", "10%", "Negative"),
-        ("BPRUE_Sniper_AimingTimePenalty15Effect", "AimingTimeTemplate", "15%", "Negative"),
-        ("BPRUE_Sniper_AimingTimePos20Effect", "AimingTimeTemplate", "-20%", "Positive"),
-        ("BPRUE_Sniper_WeightPenalty10Effect", "WeightTemplate", "10%", "Negative"),
-        ("BPRUE_Sniper_FireIntervalPenalty10Effect", "FireIntervalTemplate", "10%", "Negative"),
-        ("BPRUE_Sniper_FireIntervalPenalty25Effect", "FireIntervalTemplate", "25%", "Negative"),
-        ("BPRUE_Sniper_DispersionPenalty15Effect", "DispersionTemplate", "15%", "Negative"),
-        ("BPRUE_Sniper_FireIntervalNeg15Effect", "FireIntervalTemplate", "-15%", "Positive"),
-        ("BPRUE_Sniper_FireIntervalNeg25Effect", "FireIntervalTemplate", "-25%", "Positive"),
-        ("BPRUE_Sniper_FireIntervalNeg30Effect", "FireIntervalTemplate", "-30%", "Positive"),
-        ("BPRUE_Sniper_ShotRecoveryPos25Effect", "ShotRecoveryTemplate", "-25%", "Positive"),
-        ("BPRUE_Sniper_ShotRecoveryPos30Effect", "ShotRecoveryTemplate", "-30%", "Positive"),
-        ("BPRUE_Sniper_IdleSwayXPos30Effect", "IdleSwayXTemplate", "-30%", "Positive"),
-        ("BPRUE_Sniper_IdleSwayYPos30Effect", "IdleSwayYTemplate", "-30%", "Positive"),
-        ("BPRUE_DurabilityPerShotNeg15Effect", "DurabilityPerShotTemplate", "15%", "Negative"),
+        ("BPRUE_Sniper_RecoilPenalty10Effect", "Recoil", "10%", "Negative"),
+        ("BPRUE_Sniper_RecoilPenalty15Effect", "Recoil", "15%", "Negative"),
+        ("BPRUE_Sniper_RecoilPenalty20Effect", "Recoil", "20%", "Negative"),
+        ("BPRUE_Sniper_AimingTimePenalty10Effect", "AimingTime", "10%", "Negative"),
+        ("BPRUE_Sniper_AimingTimePenalty15Effect", "AimingTime", "15%", "Negative"),
+        ("BPRUE_Sniper_AimingTimePos20Effect", "AimingTime", "-20%", "Positive"),
+        ("BPRUE_Sniper_WeightPenalty10Effect", "Weight", "10%", "Negative"),
+        ("BPRUE_Sniper_FireIntervalPenalty10Effect", "FireInterval", "10%", "Negative"),
+        ("BPRUE_Sniper_FireIntervalPenalty25Effect", "FireInterval", "25%", "Negative"),
+        ("BPRUE_Sniper_DispersionPenalty15Effect", "Dispersion", "15%", "Negative"),
+        ("BPRUE_Sniper_FireIntervalNeg15Effect", "FireInterval", "-15%", "Positive"),
+        ("BPRUE_Sniper_FireIntervalNeg25Effect", "FireInterval", "-25%", "Positive"),
+        ("BPRUE_Sniper_FireIntervalNeg30Effect", "FireInterval", "-30%", "Positive"),
+        ("BPRUE_Sniper_ShotRecoveryPos25Effect", "ShotRecovery", "-25%", "Positive"),
+        ("BPRUE_Sniper_ShotRecoveryPos30Effect", "ShotRecovery", "-30%", "Positive"),
+        ("BPRUE_Sniper_IdleSwayXPos30Effect", "IdleSwayX", "-30%", "Positive"),
+        ("BPRUE_Sniper_IdleSwayYPos30Effect", "IdleSwayY", "-30%", "Positive"),
+        ("BPRUE_DurabilityPerShotNeg15Effect", "DurabilityPerShot", "15%", "Negative"),
     ]
     lines = ["// AUTO-GENERATED - Source: sniper_upgrades.json", ""]
-    for sid, template, value, beneficial in definitions:
-        lines += [f"{sid} : struct.begin {{refurl=@BaseGame/EffectPrototypes.cfg;refkey={template}}}", f"   SID = {sid}", f"   ValueMin = {value}", f"   ValueMax = {value}", f"   Positive = EBeneficial::{beneficial}", "struct.end", ""]
+    for sid, effect_type, value, beneficial in definitions:
+        lines += [
+            f"{sid} : struct.begin {{refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}}",
+            f"   SID = {sid}",
+            f"   Type = EEffectType::{effect_type}",
+            f"   ValueMin = {value}",
+            f"   ValueMax = {value}",
+            "   bIsPermanent = true",
+            f"   Positive = EBeneficial::{beneficial}",
+            "struct.end",
+            "",
+        ]
     return "\n".join(lines)
 
 def render_weapons(config: dict) -> str:
