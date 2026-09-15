@@ -63,9 +63,6 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
     if not families:
         raise ValueError("SMG config contains no families")
 
-    # Layout-bearing upgrade prototypes are weapon-specific. The effects, text and
-    # icons remain shared, but each weapon needs its own prototype so its horizontal
-    # positions can start directly after that weapon's Vanilla modification columns.
     for family in families.values():
         general_setup_sid = family["general_setup_sid"]
         for group, keys in config["module_groups"].items():
@@ -74,23 +71,15 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
                 _, text, hint, cost, vertical, target, effects = MODULES[key]
                 current = sid(family, key)
                 upgrades.append(UpgradeDefinition(
-                    sid=current,
-                    general_setup_sid=general_setup_sid,
-                    weapon_class="SMG",
-                    group=group.title(),
-                    target_part=target,
-                    text_sid=text,
-                    hint_sid=hint,
-                    image=IMAGE,
-                    icon=ICON,
-                    cost=cost,
-                    effects=tuple(effects),
+                    sid=current, general_setup_sid=general_setup_sid, weapon_class="SMG",
+                    group=group.title(), target_part=target, text_sid=text, hint_sid=hint,
+                    image=IMAGE, icon=ICON, cost=cost, effects=tuple(effects),
                     blocking_sids=tuple(other for other in group_sids if other != current),
-                    vertical_position=vertical,
-                    template_sid=TEMPLATE_SID,
+                    vertical_position=vertical, template_sid=TEMPLATE_SID,
                 ))
 
-    # Caliber conversions are family-specific prototypes.
+    # Ammo/caliber conversions are independent layout items. Their mutual blocking
+    # still carries the gameplay relationship, but they no longer reserve a row.
     for family in config.get("caliber_families", {}).values():
         conversion_sids = [caliber_sid(family, caliber) for caliber in family["conversions"]]
         source_remove_effect = CALIBER_DATA[family["base_caliber"]]["remove_ammo_effect"]
@@ -98,39 +87,22 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
             data = CALIBER_DATA[caliber]
             current = caliber_sid(family, caliber)
             upgrades.append(UpgradeDefinition(
-                sid=current,
-                general_setup_sid=family["general_setup_sid"],
-                weapon_class="SMG",
-                group="Caliber",
-                target_part="Body",
-                text_sid=data["name_sid"],
-                hint_sid=data["hint_sid"],
-                image=IMAGE,
-                icon=CALIBER_ICON,
-                cost=data["cost"],
+                sid=current, general_setup_sid=family["general_setup_sid"], weapon_class="SMG",
+                group="Caliber", target_part="Body", text_sid=data["name_sid"], hint_sid=data["hint_sid"],
+                image=IMAGE, icon=CALIBER_ICON, cost=data["cost"],
                 effects=(data["change_effect"], source_remove_effect, data["add_ammo_effect"]),
                 blocking_sids=tuple(other for other in conversion_sids if other != current),
-                vertical_position="Top",
-                template_sid=TEMPLATE_SID,
+                template_sid=TEMPLATE_SID, standalone=True,
             ))
 
-    # Pistol conversions deliberately have no direct EffectPrototypeSIDs. Their
-    # conversion behavior is supplied by the existing weapon/attachment patch path.
+    # Weapon/pistol conversions are also standalones. Conversion behavior is
+    # supplied by the existing weapon/attachment patch path.
     for general_setup_sid, (current, text, hint, cost) in PISTOL_CONVERSIONS.items():
         upgrades.append(UpgradeDefinition(
-            sid=current,
-            general_setup_sid=general_setup_sid,
-            weapon_class="SMG",
-            group="Conversion",
-            target_part="Body",
-            text_sid=text,
-            hint_sid=hint,
-            image=IMAGE,
-            icon=CALIBER_ICON,
-            cost=cost,
-            vertical_position="Down",
-            template_sid=TEMPLATE_SID,
-            require_effects=False,
+            sid=current, general_setup_sid=general_setup_sid, weapon_class="SMG",
+            group="Conversion", target_part="Body", text_sid=text, hint_sid=hint,
+            image=IMAGE, icon=CALIBER_ICON, cost=cost, template_sid=TEMPLATE_SID,
+            require_effects=False, standalone=True,
         ))
 
     return upgrades
@@ -202,17 +174,11 @@ def main() -> None:
     model.validate()
 
     outputs = {
-        UPGRADE_OUTPUT_PATH: render_upgrade_prototypes(
-            model,
-            source="smg_upgrades.json",
-            template_sid=TEMPLATE_SID,
-            header_comments=("Weapon-specific specialization modules, caliber conversions and pistol-conversion upgrades.",),
-        ),
+        UPGRADE_OUTPUT_PATH: render_upgrade_prototypes(model, source="smg_upgrades.json", template_sid=TEMPLATE_SID,
+            header_comments=("Weapon-specific specialization modules, caliber conversions and pistol-conversion upgrades.",)),
         EFFECT_OUTPUT_PATH: render_effects(),
-        WEAPON_OUTPUT_PATH: render_general_setup_patch(
-            model,
-            header_comments=("This file is the single owner of UpgradePrototypeSIDs for participating SMGs.",),
-        ),
+        WEAPON_OUTPUT_PATH: render_general_setup_patch(model,
+            header_comments=("This file is the single owner of UpgradePrototypeSIDs for participating SMGs.",)),
     }
     for path, content in outputs.items():
         path.parent.mkdir(parents=True, exist_ok=True)
