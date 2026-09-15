@@ -13,7 +13,6 @@ CONFIG_PATH = SCRIPT_DIR / "smg_upgrades.json"
 UPGRADE_OUTPUT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/UpgradePrototypes/BPRUE_SMGUpgradePrototypes.cfg"
 EFFECT_OUTPUT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_SMGEffectPrototypes.cfg"
 WEAPON_OUTPUT_PATH = CONTENT_ROOT / "GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE_SMGModules.cfg"
-
 TEMPLATE_SID = "BPRUE_SMGModuleTemplate"
 
 MODULES = {
@@ -23,6 +22,9 @@ MODULES = {
     "tactical_reload": ("Reload_Tactical", "sid_bprue_smg_tactical_reload_name", "sid_bprue_smg_tactical_reload_description", 2300, "Down", "Body", ["BPRUE_ReloadingTimeNeg10Effect", "AimingTimePos15Effect", "BPRUE_DurabilityPerShotNeg10Effect"]),
     "high_speed_action": ("Action_HighSpeed", "sid_bprue_smg_high_speed_action_name", "sid_bprue_smg_high_speed_action_description", 3000, "Top", "Barrel", ["BPRUE_FireIntervalNeg20Effect", "RecoilNeg15Effect", "BPRUE_DurabilityPerShotNeg20Effect", "BPRUE_SMG_ReloadingTimePos10Effect"]),
     "controlled_action": ("Action_Controlled", "sid_bprue_smg_controlled_action_name", "sid_bprue_smg_controlled_action_description", 2800, "Top", "Barrel", ["BPRUE_FireIntervalPos5Effect", "RecoilPos15Effect", "ShotRecoveryPos20Effect", "BPRUE_ReloadingTimeNeg10Effect"]),
+    "stock_lightweight": ("Stock_Lightweight", "sid_bprue_smg_stock_lightweight_name", "sid_bprue_smg_stock_lightweight_description", 2500, "Top", "Stock", ["AimingTimePos15Effect", "AimingMovementPos10Effect", "RecoilNeg15Effect"]),
+    "stock_tactical": ("Stock_Tactical", "sid_bprue_smg_stock_tactical_name", "sid_bprue_smg_stock_tactical_description", 2700, "Down", "Stock", ["RecoilPos15Effect", "ShotRecoveryPos20Effect", "AimingTimeNeg10Effect"]),
+    "stock_stabilized": ("Stock_Stabilized", "sid_bprue_smg_stock_stabilized_name", "sid_bprue_smg_stock_stabilized_description", 2900, None, "Stock", ["RecoilPos20Effect", "MaxDispersionPos15Effect", "BPRUE_Sniper_WeightPenalty10Effect"]),
 }
 
 PISTOL_CONVERSIONS = {
@@ -44,69 +46,28 @@ IMAGE = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/We
 ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_Recoil.T_PDA_Upgrades_Icon_Recoil'"
 CALIBER_ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_CaliberChange.T_PDA_Upgrades_Icon_CaliberChange'"
 
-
-def load_config() -> dict:
-    return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
-
-
-def sid(family: dict, key: str) -> str:
-    return f"{family['prototype_prefix']}_Upgrade_BPRUE_{MODULES[key][0]}"
-
-
-def caliber_sid(family: dict, caliber: str) -> str:
-    return f"{family['prototype_prefix']}_Upgrade_BPRUE_Caliber_{caliber}"
-
+def load_config() -> dict: return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
+def sid(family: dict, key: str) -> str: return f"{family['prototype_prefix']}_Upgrade_BPRUE_{MODULES[key][0]}"
+def caliber_sid(family: dict, caliber: str) -> str: return f"{family['prototype_prefix']}_Upgrade_BPRUE_Caliber_{caliber}"
 
 def build_upgrades(config: dict) -> list[UpgradeDefinition]:
-    upgrades: list[UpgradeDefinition] = []
-    families = config.get("families", {})
-    if not families:
-        raise ValueError("SMG config contains no families")
-
+    upgrades=[]; families=config.get("families", {})
+    if not families: raise ValueError("SMG config contains no families")
     for family in families.values():
-        general_setup_sid = family["general_setup_sid"]
+        setup=family["general_setup_sid"]
         for group, keys in config["module_groups"].items():
-            group_sids = [sid(family, key) for key in keys]
+            group_sids=[sid(family,key) for key in keys]
             for key in keys:
-                _, text, hint, cost, vertical, target, effects = MODULES[key]
-                current = sid(family, key)
-                upgrades.append(UpgradeDefinition(
-                    sid=current, general_setup_sid=general_setup_sid, weapon_class="SMG",
-                    group=group.title(), target_part=target, text_sid=text, hint_sid=hint,
-                    image=IMAGE, icon=ICON, cost=cost, effects=tuple(effects),
-                    blocking_sids=tuple(other for other in group_sids if other != current),
-                    vertical_position=vertical, template_sid=TEMPLATE_SID,
-                ))
-
-    # Ammo/caliber conversions are independent layout items. Their mutual blocking
-    # still carries the gameplay relationship, but they no longer reserve a row.
+                _,text,hint,cost,vertical,target,effects=MODULES[key]; current=sid(family,key)
+                upgrades.append(UpgradeDefinition(sid=current,general_setup_sid=setup,weapon_class="SMG",group=group.title(),target_part=target,text_sid=text,hint_sid=hint,image=IMAGE,icon=ICON,cost=cost,effects=tuple(effects),blocking_sids=tuple(x for x in group_sids if x!=current),vertical_position=vertical,template_sid=TEMPLATE_SID))
     for family in config.get("caliber_families", {}).values():
-        conversion_sids = [caliber_sid(family, caliber) for caliber in family["conversions"]]
-        source_remove_effect = CALIBER_DATA[family["base_caliber"]]["remove_ammo_effect"]
+        conversion_sids=[caliber_sid(family,c) for c in family["conversions"]]; source_remove=CALIBER_DATA[family["base_caliber"]]["remove_ammo_effect"]
         for caliber in family["conversions"]:
-            data = CALIBER_DATA[caliber]
-            current = caliber_sid(family, caliber)
-            upgrades.append(UpgradeDefinition(
-                sid=current, general_setup_sid=family["general_setup_sid"], weapon_class="SMG",
-                group="Caliber", target_part="Body", text_sid=data["name_sid"], hint_sid=data["hint_sid"],
-                image=IMAGE, icon=CALIBER_ICON, cost=data["cost"],
-                effects=(data["change_effect"], source_remove_effect, data["add_ammo_effect"]),
-                blocking_sids=tuple(other for other in conversion_sids if other != current),
-                template_sid=TEMPLATE_SID, standalone=True,
-            ))
-
-    # Weapon/pistol conversions are also standalones. Conversion behavior is
-    # supplied by the existing weapon/attachment patch path.
-    for general_setup_sid, (current, text, hint, cost) in PISTOL_CONVERSIONS.items():
-        upgrades.append(UpgradeDefinition(
-            sid=current, general_setup_sid=general_setup_sid, weapon_class="SMG",
-            group="Conversion", target_part="Body", text_sid=text, hint_sid=hint,
-            image=IMAGE, icon=CALIBER_ICON, cost=cost, template_sid=TEMPLATE_SID,
-            require_effects=False, standalone=True,
-        ))
-
+            data=CALIBER_DATA[caliber]; current=caliber_sid(family,caliber)
+            upgrades.append(UpgradeDefinition(sid=current,general_setup_sid=family["general_setup_sid"],weapon_class="SMG",group="Caliber",target_part="Body",text_sid=data["name_sid"],hint_sid=data["hint_sid"],image=IMAGE,icon=CALIBER_ICON,cost=data["cost"],effects=(data["change_effect"],source_remove,data["add_ammo_effect"]),blocking_sids=tuple(x for x in conversion_sids if x!=current),template_sid=TEMPLATE_SID,standalone=True))
+    for setup,(current,text,hint,cost) in PISTOL_CONVERSIONS.items():
+        upgrades.append(UpgradeDefinition(sid=current,general_setup_sid=setup,weapon_class="SMG",group="Conversion",target_part="Body",text_sid=text,hint_sid=hint,image=IMAGE,icon=CALIBER_ICON,cost=cost,template_sid=TEMPLATE_SID,require_effects=False,standalone=True))
     return upgrades
-
 
 def render_effects() -> str:
     return """// AUTO-GENERATED - Source: smg_upgrades.json
@@ -166,26 +127,8 @@ BPRUE_VIPER_TEST : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0
 struct.end
 """
 
-
-def main() -> None:
-    config = load_config()
-    model = UpgradeBuildModel()
-    model.extend(build_upgrades(config))
-    model.validate()
-
-    outputs = {
-        UPGRADE_OUTPUT_PATH: render_upgrade_prototypes(model, source="smg_upgrades.json", template_sid=TEMPLATE_SID,
-            header_comments=("Weapon-specific specialization modules, caliber conversions and pistol-conversion upgrades.",)),
-        EFFECT_OUTPUT_PATH: render_effects(),
-        WEAPON_OUTPUT_PATH: render_general_setup_patch(model,
-            header_comments=("This file is the single owner of UpgradePrototypeSIDs for participating SMGs.",)),
-    }
-    for path, content in outputs.items():
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(content, encoding="utf-8")
-        print(f"Generated {path}")
-    print(f"Generated SMG CFGs from {model.summary()}")
-
-
-if __name__ == "__main__":
-    main()
+def main():
+    config=load_config(); model=UpgradeBuildModel(); model.extend(build_upgrades(config)); model.validate()
+    outputs={UPGRADE_OUTPUT_PATH:render_upgrade_prototypes(model,source="smg_upgrades.json",template_sid=TEMPLATE_SID),EFFECT_OUTPUT_PATH:render_effects(),WEAPON_OUTPUT_PATH:render_general_setup_patch(model)}
+    for path,content in outputs.items(): path.parent.mkdir(parents=True,exist_ok=True); path.write_text(content,encoding="utf-8"); print(f"Generated {path}")
+if __name__ == "__main__": main()
