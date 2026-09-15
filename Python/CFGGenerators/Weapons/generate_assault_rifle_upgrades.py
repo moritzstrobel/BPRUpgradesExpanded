@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 from upgrade_build_model import UpgradeBuildModel, UpgradeDefinition
-from upgrade_renderers import render_upgrade_prototypes
+from upgrade_renderers import render_general_setup_patch, render_upgrade_prototypes
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PYTHON_ROOT = SCRIPT_DIR.parents[1]
@@ -166,6 +166,16 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
                 template_sid=MODULE_TEMPLATE_SID,
             ))
     return result
+
+
+def configure_general_setups(config: dict, model: UpgradeBuildModel) -> None:
+    for family_name, family in config["families"].items():
+        modules = family_modules(family_name, family)
+        if any(module_group(module["kind"]) == "FireControl" for module in modules):
+            model.configure_general_setup(
+                family["weapon_sid"],
+                FireQueueCount=family.get("fire_queue_count", 3),
+            )
 
 
 def render_effect_patch(config: dict) -> str:
@@ -357,21 +367,6 @@ struct.end
 """
 
 
-def render_weapon_patch(config: dict, model: UpgradeBuildModel) -> str:
-    lines = ["// AUTO-GENERATED - Source: UpgradeBuildModel", ""]
-    by_setup = model.by_general_setup()
-    for family_name, family in config["families"].items():
-        setup_sid = family["weapon_sid"]
-        upgrades = by_setup.get(setup_sid, [])
-        lines += [f"// {family_name}", f"{setup_sid} : struct.begin {{bpatch}}"]
-        if any(upgrade.group == "FireControl" for upgrade in upgrades):
-            lines.append(f"   FireQueueCount = {family.get('fire_queue_count', 3)}")
-        lines.append("   UpgradePrototypeSIDs : struct.begin {bpatch}")
-        lines += [f"      [*] = {upgrade.sid}" for upgrade in upgrades]
-        lines += ["   struct.end", "struct.end", ""]
-    return "\n".join(lines)
-
-
 def render_appended_upgrade_entries(upgrades: list[UpgradeDefinition], indent: str = "      ") -> list[str]:
     lines: list[str] = []
     for upgrade in upgrades:
@@ -399,6 +394,7 @@ def main() -> None:
     config = load_config()
     model = UpgradeBuildModel()
     model.extend(build_upgrades(config))
+    configure_general_setups(config, model)
     model.validate()
 
     outputs = {
@@ -412,7 +408,7 @@ def main() -> None:
             ),
         ),
         EFFECT_OUTPUT_PATH: render_effect_patch(config),
-        WEAPON_OUTPUT_PATH: render_weapon_patch(config, model),
+        WEAPON_OUTPUT_PATH: render_general_setup_patch(model),
         NPC_OUTPUT_PATH: render_npc_patch(config, model),
     }
     for path, content in outputs.items():
