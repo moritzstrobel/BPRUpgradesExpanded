@@ -41,7 +41,7 @@ NPC_PATH = CONTENT_ROOT / "GameLite/GameData/NPCPrototypes/NPCPrototypes_patch_B
 
 # Section hotspot coordinates are screen-relative. Keep newly enabled sections at
 # least this far from every already active/enabled hotspot.
-MIN_SECTION_DISTANCE = 40.0
+MIN_SECTION_DISTANCE = 100.0
 SECTION_NUDGE_STEP = 20.0
 SECTION_NUDGE_RINGS = 12
 
