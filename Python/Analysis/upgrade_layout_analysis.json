@@ -3,15 +3,16 @@
     "analyzed_general_setups": 32,
     "missing_vanilla_general_setups": [],
     "anomaly_counts": {
-      "more_than_two_variants_in_column": 70,
-      "new_target_part": 2,
-      "no_vanilla_modification_table": 17
+      "more_than_two_variants_in_column": 115,
+      "new_target_part": 3,
+      "no_vanilla_modification_table": 18,
+      "non_contiguous_bprue_columns": 4
     }
   },
   "weapons": {
     "GunAK74_ST": {
       "vanilla_upgrade_count": 10,
-      "bprue_upgrade_count": 10,
+      "bprue_upgrade_count": 18,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -25,13 +26,42 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 2,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 8,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 6,
+              "vertical_positions": [
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleAction",
+                "ModuleBallistics",
+                "ModulePrecision"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunAK74_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
+                "GunAK74_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
+                "GunAK74_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
+                "GunAK74_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
+                "GunAK74_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
+                "GunAK74_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 2,
@@ -69,21 +99,26 @@
           "bprue_first_column": 0,
           "gap_after_last_vanilla_modification": null,
           "bprue_column_count": 3,
-          "bprue_upgrade_count": 5,
+          "bprue_upgrade_count": 7,
           "bprue_columns_detail": [
             {
               "horizontal_position": 0,
-              "upgrade_count": 1,
+              "upgrade_count": 3,
               "vertical_positions": [
+                "Down",
+                "Down",
                 "Top"
               ],
               "groups": [
-                "Caliber"
+                "Caliber",
+                "ModuleReliability"
               ],
               "has_top": true,
-              "has_down": false,
+              "has_down": true,
               "has_unspecified": false,
               "sids": [
+                "GunAK74_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
+                "GunAK74_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
                 "GunAK74_Upgrade_BPRUE_Caliber_762"
               ]
             },
@@ -170,8 +205,42 @@
       },
       "anomalies": [
         {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 6,
+          "vertical_positions": [
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "ModuleAction",
+            "ModuleBallistics",
+            "ModulePrecision"
+          ]
+        },
+        {
           "type": "no_vanilla_modification_table",
           "target_part": "Body"
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 0,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Down",
+            "Top"
+          ],
+          "groups": [
+            "Caliber",
+            "ModuleReliability"
+          ]
         },
         {
           "type": "more_than_two_variants_in_column",
@@ -191,7 +260,7 @@
     },
     "GunAKU_PP": {
       "vanilla_upgrade_count": 12,
-      "bprue_upgrade_count": 7,
+      "bprue_upgrade_count": 18,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -204,13 +273,42 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 2,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 8,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 6,
+              "vertical_positions": [
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleAction",
+                "ModuleBallistics",
+                "ModuleRangeProfile"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunAKU_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
+                "GunAKU_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction",
+                "GunAKU_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget",
+                "GunAKU_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing",
+                "GunAKU_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration",
+                "GunAKU_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 2,
@@ -243,14 +341,33 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 5,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 7,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Down"
+              ],
+              "groups": [
+                "ModuleHandling"
+              ],
+              "has_top": false,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunAKU_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
+                "GunAKU_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -318,15 +435,57 @@
             0
           ],
           "vanilla_max_modification_column": 0,
-          "bprue_columns": [],
-          "bprue_first_column": null,
-          "gap_after_last_vanilla_modification": null,
-          "bprue_column_count": 0,
-          "bprue_upgrade_count": 0,
-          "bprue_columns_detail": []
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Stock"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunAKU_Upgrade_BPRUE_Stock_Tactical",
+                "GunAKU_Upgrade_BPRUE_Stock_Lightweight",
+                "GunAKU_Upgrade_BPRUE_Stock_Stabilized"
+              ]
+            }
+          ]
         }
       },
       "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 6,
+          "vertical_positions": [
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "ModuleAction",
+            "ModuleBallistics",
+            "ModuleRangeProfile"
+          ]
+        },
         {
           "type": "more_than_two_variants_in_column",
           "target_part": "Body",
@@ -341,12 +500,26 @@
             "Conversion",
             "Readiness"
           ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Stock",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Stock"
+          ]
         }
       ]
     },
     "GunAPB_HG": {
       "vanilla_upgrade_count": 15,
-      "bprue_upgrade_count": 7,
+      "bprue_upgrade_count": 13,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -361,14 +534,38 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 4,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 8,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 4,
+              "vertical_positions": [
+                "Top",
+                "Top",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleBallistics",
+                "ModulePrecision"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunAPB_Upgrade_BPRUE_PistolShared_ModulePrecision_RecoilControl",
+                "GunAPB_Upgrade_BPRUE_PistolShared_ModulePrecision_PrecisionTuning",
+                "GunAPB_Upgrade_BPRUE_PistolShared_ModuleBallistics_SoftTarget",
+                "GunAPB_Upgrade_BPRUE_PistolShared_ModuleBallistics_ArmorPiercing"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -419,13 +616,32 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 3,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 5,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Down"
+              ],
+              "groups": [
+                "ModuleHandling"
+              ],
+              "has_top": false,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunAPB_Upgrade_BPRUE_PistolShared_ModuleHandling_LightweightAssembly",
+                "GunAPB_Upgrade_BPRUE_PistolShared_ModuleHandling_ReinforcedAssembly"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -470,6 +686,22 @@
         {
           "type": "more_than_two_variants_in_column",
           "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 4,
+          "vertical_positions": [
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "ModuleBallistics",
+            "ModulePrecision"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
           "horizontal_position": 1,
           "upgrade_count": 3,
           "vertical_positions": [
@@ -499,7 +731,7 @@
     },
     "GunArev_ST_GS": {
       "vanilla_upgrade_count": 27,
-      "bprue_upgrade_count": 10,
+      "bprue_upgrade_count": 18,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -514,13 +746,42 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 2,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 8,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 6,
+              "vertical_positions": [
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleAction",
+                "ModuleBallistics",
+                "ModulePrecision"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunArev_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
+                "GunArev_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
+                "GunArev_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
+                "GunArev_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
+                "GunArev_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
+                "GunArev_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 2,
@@ -559,21 +820,26 @@
           "bprue_first_column": 0,
           "gap_after_last_vanilla_modification": null,
           "bprue_column_count": 3,
-          "bprue_upgrade_count": 5,
+          "bprue_upgrade_count": 7,
           "bprue_columns_detail": [
             {
               "horizontal_position": 0,
-              "upgrade_count": 1,
+              "upgrade_count": 3,
               "vertical_positions": [
+                "Down",
+                "Down",
                 "Top"
               ],
               "groups": [
-                "Caliber"
+                "Caliber",
+                "ModuleReliability"
               ],
               "has_top": true,
-              "has_down": false,
+              "has_down": true,
               "has_unspecified": false,
               "sids": [
+                "GunArev_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
+                "GunArev_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
                 "GunArev_Upgrade_BPRUE_Caliber_762NATO"
               ]
             },
@@ -695,8 +961,42 @@
       },
       "anomalies": [
         {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 6,
+          "vertical_positions": [
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "ModuleAction",
+            "ModuleBallistics",
+            "ModulePrecision"
+          ]
+        },
+        {
           "type": "no_vanilla_modification_table",
           "target_part": "Body"
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 0,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Down",
+            "Top"
+          ],
+          "groups": [
+            "Caliber",
+            "ModuleReliability"
+          ]
         },
         {
           "type": "more_than_two_variants_in_column",
@@ -716,7 +1016,7 @@
     },
     "GunBucket_PP": {
       "vanilla_upgrade_count": 15,
-      "bprue_upgrade_count": 9,
+      "bprue_upgrade_count": 20,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -731,13 +1031,42 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 3,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 9,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 6,
+              "vertical_positions": [
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleAction",
+                "ModuleBallistics",
+                "ModuleRangeProfile"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunBucket_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
+                "GunBucket_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction",
+                "GunBucket_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget",
+                "GunBucket_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing",
+                "GunBucket_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration",
+                "GunBucket_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -775,13 +1104,32 @@
           ],
           "vanilla_max_modification_column": 1,
           "bprue_columns": [
+            0,
             2
           ],
-          "bprue_first_column": 2,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 3,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -2,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 5,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Down"
+              ],
+              "groups": [
+                "ModuleHandling"
+              ],
+              "has_top": false,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunBucket_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
+                "GunBucket_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly"
+              ]
+            },
             {
               "horizontal_position": 2,
               "upgrade_count": 3,
@@ -833,15 +1181,36 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
-            1
+            1,
+            2
           ],
           "bprue_first_column": 1,
           "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 3,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 6,
           "bprue_columns_detail": [
             {
               "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Stock"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunBucket_Upgrade_BPRUE_Stock_Tactical",
+                "GunBucket_Upgrade_BPRUE_Stock_Lightweight",
+                "GunBucket_Upgrade_BPRUE_Stock_Stabilized"
+              ]
+            },
+            {
+              "horizontal_position": 2,
               "upgrade_count": 3,
               "vertical_positions": [
                 "Down",
@@ -868,6 +1237,25 @@
         {
           "type": "more_than_two_variants_in_column",
           "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 6,
+          "vertical_positions": [
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "ModuleAction",
+            "ModuleBallistics",
+            "ModuleRangeProfile"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
           "horizontal_position": 1,
           "upgrade_count": 3,
           "vertical_positions": [
@@ -878,6 +1266,14 @@
           "groups": [
             "Action",
             "Conversion"
+          ]
+        },
+        {
+          "type": "non_contiguous_bprue_columns",
+          "target_part": "Body",
+          "columns": [
+            0,
+            2
           ]
         },
         {
@@ -906,6 +1302,20 @@
             "Unspecified"
           ],
           "groups": [
+            "Stock"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Stock",
+          "horizontal_position": 2,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
             "Caliber",
             "Reload"
           ]
@@ -914,7 +1324,7 @@
     },
     "GunD12_SG": {
       "vanilla_upgrade_count": 26,
-      "bprue_upgrade_count": 9,
+      "bprue_upgrade_count": 15,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -929,13 +1339,32 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 3,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 5,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleRangeProfile"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunD12_Upgrade_BPRUE_SGShared_ModuleRangeProfile_CqbConfiguration",
+                "GunD12_Upgrade_BPRUE_SGShared_ModuleRangeProfile_RangeConfiguration"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -970,14 +1399,38 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 6,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 10,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 4,
+              "vertical_positions": [
+                "Down",
+                "Down",
+                "Down",
+                "Down"
+              ],
+              "groups": [
+                "ModuleHandling",
+                "ModuleReliability"
+              ],
+              "has_top": false,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunD12_Upgrade_BPRUE_SGShared_ModuleHandling_LightweightAssembly",
+                "GunD12_Upgrade_BPRUE_SGShared_ModuleHandling_ReinforcedAssembly",
+                "GunD12_Upgrade_BPRUE_SGShared_ModuleReliability_HardenedComponents",
+                "GunD12_Upgrade_BPRUE_SGShared_ModuleReliability_LightweightComponents"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -1093,6 +1546,22 @@
         {
           "type": "more_than_two_variants_in_column",
           "target_part": "Body",
+          "horizontal_position": 0,
+          "upgrade_count": 4,
+          "vertical_positions": [
+            "Down",
+            "Down",
+            "Down",
+            "Down"
+          ],
+          "groups": [
+            "ModuleHandling",
+            "ModuleReliability"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
           "horizontal_position": 1,
           "upgrade_count": 3,
           "vertical_positions": [
@@ -1122,7 +1591,7 @@
     },
     "GunDnipro_ST": {
       "vanilla_upgrade_count": 22,
-      "bprue_upgrade_count": 10,
+      "bprue_upgrade_count": 18,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -1137,13 +1606,42 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 2,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 8,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 6,
+              "vertical_positions": [
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleAction",
+                "ModuleBallistics",
+                "ModulePrecision"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunDnipro_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
+                "GunDnipro_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
+                "GunDnipro_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
+                "GunDnipro_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
+                "GunDnipro_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
+                "GunDnipro_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 2,
@@ -1181,21 +1679,26 @@
           "bprue_first_column": 0,
           "gap_after_last_vanilla_modification": null,
           "bprue_column_count": 3,
-          "bprue_upgrade_count": 5,
+          "bprue_upgrade_count": 7,
           "bprue_columns_detail": [
             {
               "horizontal_position": 0,
-              "upgrade_count": 1,
+              "upgrade_count": 3,
               "vertical_positions": [
+                "Down",
+                "Down",
                 "Top"
               ],
               "groups": [
-                "Caliber"
+                "Caliber",
+                "ModuleReliability"
               ],
               "has_top": true,
-              "has_down": false,
+              "has_down": true,
               "has_unspecified": false,
               "sids": [
+                "GunDnipro_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
+                "GunDnipro_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
                 "GunDnipro_Upgrade_BPRUE_Caliber_762"
               ]
             },
@@ -1301,8 +1804,42 @@
       },
       "anomalies": [
         {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 6,
+          "vertical_positions": [
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "ModuleAction",
+            "ModuleBallistics",
+            "ModulePrecision"
+          ]
+        },
+        {
           "type": "no_vanilla_modification_table",
           "target_part": "Body"
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 0,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Down",
+            "Top"
+          ],
+          "groups": [
+            "Caliber",
+            "ModuleReliability"
+          ]
         },
         {
           "type": "more_than_two_variants_in_column",
@@ -1322,7 +1859,7 @@
     },
     "GunFora230_PP_GS": {
       "vanilla_upgrade_count": 15,
-      "bprue_upgrade_count": 9,
+      "bprue_upgrade_count": 20,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -1336,13 +1873,42 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 3,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 9,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 6,
+              "vertical_positions": [
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleAction",
+                "ModuleBallistics",
+                "ModuleRangeProfile"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunFora230_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
+                "GunFora230_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction",
+                "GunFora230_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget",
+                "GunFora230_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing",
+                "GunFora230_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration",
+                "GunFora230_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -1378,14 +1944,33 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 6,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 8,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Down"
+              ],
+              "groups": [
+                "ModuleHandling"
+              ],
+              "has_top": false,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunFora230_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
+                "GunFora230_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -1458,15 +2043,57 @@
             0
           ],
           "vanilla_max_modification_column": 0,
-          "bprue_columns": [],
-          "bprue_first_column": null,
-          "gap_after_last_vanilla_modification": null,
-          "bprue_column_count": 0,
-          "bprue_upgrade_count": 0,
-          "bprue_columns_detail": []
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Stock"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunFora230_Upgrade_BPRUE_Stock_Tactical",
+                "GunFora230_Upgrade_BPRUE_Stock_Lightweight",
+                "GunFora230_Upgrade_BPRUE_Stock_Stabilized"
+              ]
+            }
+          ]
         }
       },
       "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 6,
+          "vertical_positions": [
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "ModuleAction",
+            "ModuleBallistics",
+            "ModuleRangeProfile"
+          ]
+        },
         {
           "type": "more_than_two_variants_in_column",
           "target_part": "Barrel",
@@ -1511,12 +2138,26 @@
             "Caliber",
             "Reload"
           ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Stock",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Stock"
+          ]
         }
       ]
     },
     "GunFora_ST": {
       "vanilla_upgrade_count": 17,
-      "bprue_upgrade_count": 10,
+      "bprue_upgrade_count": 18,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -1531,13 +2172,42 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 2,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 8,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 6,
+              "vertical_positions": [
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleAction",
+                "ModuleBallistics",
+                "ModulePrecision"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunFora_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
+                "GunFora_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
+                "GunFora_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
+                "GunFora_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
+                "GunFora_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
+                "GunFora_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 2,
@@ -1576,21 +2246,26 @@
           "bprue_first_column": 0,
           "gap_after_last_vanilla_modification": null,
           "bprue_column_count": 3,
-          "bprue_upgrade_count": 5,
+          "bprue_upgrade_count": 7,
           "bprue_columns_detail": [
             {
               "horizontal_position": 0,
-              "upgrade_count": 1,
+              "upgrade_count": 3,
               "vertical_positions": [
+                "Down",
+                "Down",
                 "Top"
               ],
               "groups": [
-                "Caliber"
+                "Caliber",
+                "ModuleReliability"
               ],
               "has_top": true,
-              "has_down": false,
+              "has_down": true,
               "has_unspecified": false,
               "sids": [
+                "GunFora_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
+                "GunFora_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
                 "GunFora_Upgrade_BPRUE_Caliber_762"
               ]
             },
@@ -1694,8 +2369,42 @@
       },
       "anomalies": [
         {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 6,
+          "vertical_positions": [
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "ModuleAction",
+            "ModuleBallistics",
+            "ModulePrecision"
+          ]
+        },
+        {
           "type": "no_vanilla_modification_table",
           "target_part": "Body"
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 0,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Down",
+            "Top"
+          ],
+          "groups": [
+            "Caliber",
+            "ModuleReliability"
+          ]
         },
         {
           "type": "more_than_two_variants_in_column",
@@ -1715,7 +2424,7 @@
     },
     "GunG37_ST": {
       "vanilla_upgrade_count": 18,
-      "bprue_upgrade_count": 10,
+      "bprue_upgrade_count": 18,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -1729,13 +2438,42 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 2,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 8,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 6,
+              "vertical_positions": [
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleAction",
+                "ModuleBallistics",
+                "ModulePrecision"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunG37_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
+                "GunG37_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
+                "GunG37_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
+                "GunG37_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
+                "GunG37_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
+                "GunG37_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 2,
@@ -1767,14 +2505,33 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 3,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 5,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Down"
+              ],
+              "groups": [
+                "ModuleReliability"
+              ],
+              "has_top": false,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunG37_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
+                "GunG37_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 1,
@@ -1894,6 +2651,25 @@
       "anomalies": [
         {
           "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 6,
+          "vertical_positions": [
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "ModuleAction",
+            "ModuleBallistics",
+            "ModulePrecision"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
           "target_part": "Stock",
           "horizontal_position": 1,
           "upgrade_count": 3,
@@ -1910,7 +2686,7 @@
     },
     "GunGrim_ST": {
       "vanilla_upgrade_count": 21,
-      "bprue_upgrade_count": 9,
+      "bprue_upgrade_count": 17,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -1924,13 +2700,42 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 2,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 8,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 6,
+              "vertical_positions": [
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleAction",
+                "ModuleBallistics",
+                "ModulePrecision"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunGrim_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
+                "GunGrim_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
+                "GunGrim_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
+                "GunGrim_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
+                "GunGrim_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
+                "GunGrim_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 2,
@@ -1965,13 +2770,32 @@
           ],
           "vanilla_max_modification_column": 1,
           "bprue_columns": [
+            0,
             2
           ],
-          "bprue_first_column": 2,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 2,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -2,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 4,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Down"
+              ],
+              "groups": [
+                "ModuleReliability"
+              ],
+              "has_top": false,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunGrim_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
+                "GunGrim_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents"
+              ]
+            },
             {
               "horizontal_position": 2,
               "upgrade_count": 2,
@@ -2073,6 +2897,33 @@
       "anomalies": [
         {
           "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 6,
+          "vertical_positions": [
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "ModuleAction",
+            "ModuleBallistics",
+            "ModulePrecision"
+          ]
+        },
+        {
+          "type": "non_contiguous_bprue_columns",
+          "target_part": "Body",
+          "columns": [
+            0,
+            2
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
           "target_part": "Stock",
           "horizontal_position": 1,
           "upgrade_count": 3,
@@ -2089,7 +2940,7 @@
     },
     "GunGvintar_ST": {
       "vanilla_upgrade_count": 15,
-      "bprue_upgrade_count": 9,
+      "bprue_upgrade_count": 17,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -2107,24 +2958,39 @@
           "bprue_first_column": 0,
           "gap_after_last_vanilla_modification": null,
           "bprue_column_count": 1,
-          "bprue_upgrade_count": 2,
+          "bprue_upgrade_count": 8,
           "bprue_columns_detail": [
             {
               "horizontal_position": 0,
-              "upgrade_count": 2,
+              "upgrade_count": 8,
               "vertical_positions": [
                 "Down",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
                 "Top"
               ],
               "groups": [
-                "FireRate"
+                "FireRate",
+                "ModuleAction",
+                "ModuleBallistics",
+                "ModulePrecision"
               ],
               "has_top": true,
               "has_down": true,
               "has_unspecified": false,
               "sids": [
                 "GunGvintar_Upgrade_BPRUE_FireRate_Balanced",
-                "GunGvintar_Upgrade_BPRUE_FireRate_HighSpeed"
+                "GunGvintar_Upgrade_BPRUE_FireRate_HighSpeed",
+                "GunGvintar_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
+                "GunGvintar_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
+                "GunGvintar_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
+                "GunGvintar_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
+                "GunGvintar_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
+                "GunGvintar_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing"
               ]
             }
           ]
@@ -2142,14 +3008,33 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 4,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 6,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Down"
+              ],
+              "groups": [
+                "ModuleReliability"
+              ],
+              "has_top": false,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunGvintar_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
+                "GunGvintar_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 2,
@@ -2237,6 +3122,28 @@
         },
         {
           "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 8,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "FireRate",
+            "ModuleAction",
+            "ModuleBallistics",
+            "ModulePrecision"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
           "target_part": "Stock",
           "horizontal_position": 1,
           "upgrade_count": 3,
@@ -2253,7 +3160,7 @@
     },
     "GunIntegral_PP": {
       "vanilla_upgrade_count": 18,
-      "bprue_upgrade_count": 9,
+      "bprue_upgrade_count": 20,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -2268,13 +3175,42 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 3,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 9,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 6,
+              "vertical_positions": [
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleAction",
+                "ModuleBallistics",
+                "ModuleRangeProfile"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
+                "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction",
+                "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget",
+                "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing",
+                "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration",
+                "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -2312,12 +3248,70 @@
             2
           ],
           "vanilla_max_modification_column": 2,
-          "bprue_columns": [],
-          "bprue_first_column": null,
+          "bprue_columns": [
+            0
+          ],
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -3,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 2,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Down"
+              ],
+              "groups": [
+                "ModuleHandling"
+              ],
+              "has_top": false,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
+                "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly"
+              ]
+            }
+          ]
+        },
+        "Handguard": {
+          "vanilla_has_target": false,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [
+            0
+          ],
+          "bprue_first_column": 0,
           "gap_after_last_vanilla_modification": null,
-          "bprue_column_count": 0,
-          "bprue_upgrade_count": 0,
-          "bprue_columns_detail": []
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Caliber",
+                "Reload"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunIntegral_Upgrade_BPRUE_Reload_Tactical",
+                "GunIntegral_Upgrade_BPRUE_Reload_Competition",
+                "GunIntegral_Upgrade_BPRUE_Caliber_A045"
+              ]
+            }
+          ]
         },
         "Stock": {
           "vanilla_has_target": true,
@@ -2369,22 +3363,40 @@
                 "Unspecified"
               ],
               "groups": [
-                "Caliber",
-                "Reload"
+                "Stock"
               ],
               "has_top": true,
               "has_down": true,
               "has_unspecified": true,
               "sids": [
-                "GunIntegral_Upgrade_BPRUE_Reload_Tactical",
-                "GunIntegral_Upgrade_BPRUE_Reload_Competition",
-                "GunIntegral_Upgrade_BPRUE_Caliber_A045"
+                "GunIntegral_Upgrade_BPRUE_Stock_Tactical",
+                "GunIntegral_Upgrade_BPRUE_Stock_Lightweight",
+                "GunIntegral_Upgrade_BPRUE_Stock_Stabilized"
               ]
             }
           ]
         }
       },
       "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 6,
+          "vertical_positions": [
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "ModuleAction",
+            "ModuleBallistics",
+            "ModuleRangeProfile"
+          ]
+        },
         {
           "type": "more_than_two_variants_in_column",
           "target_part": "Barrel",
@@ -2398,6 +3410,29 @@
           "groups": [
             "Action",
             "Conversion"
+          ]
+        },
+        {
+          "type": "new_target_part",
+          "target_part": "Handguard"
+        },
+        {
+          "type": "no_vanilla_modification_table",
+          "target_part": "Handguard"
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Handguard",
+          "horizontal_position": 0,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Caliber",
+            "Reload"
           ]
         },
         {
@@ -2426,15 +3461,14 @@
             "Unspecified"
           ],
           "groups": [
-            "Caliber",
-            "Reload"
+            "Stock"
           ]
         }
       ]
     },
     "GunKharod_ST": {
       "vanilla_upgrade_count": 21,
-      "bprue_upgrade_count": 10,
+      "bprue_upgrade_count": 18,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -2449,13 +3483,42 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 2,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 8,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 6,
+              "vertical_positions": [
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleAction",
+                "ModuleBallistics",
+                "ModulePrecision"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunKharod_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
+                "GunKharod_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
+                "GunKharod_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
+                "GunKharod_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
+                "GunKharod_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
+                "GunKharod_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 2,
@@ -2492,21 +3555,26 @@
           "bprue_first_column": 0,
           "gap_after_last_vanilla_modification": null,
           "bprue_column_count": 3,
-          "bprue_upgrade_count": 5,
+          "bprue_upgrade_count": 7,
           "bprue_columns_detail": [
             {
               "horizontal_position": 0,
-              "upgrade_count": 1,
+              "upgrade_count": 3,
               "vertical_positions": [
+                "Down",
+                "Down",
                 "Top"
               ],
               "groups": [
-                "Caliber"
+                "Caliber",
+                "ModuleReliability"
               ],
               "has_top": true,
-              "has_down": false,
+              "has_down": true,
               "has_unspecified": false,
               "sids": [
+                "GunKharod_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
+                "GunKharod_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
                 "GunKharod_Upgrade_BPRUE_Caliber_762NATO"
               ]
             },
@@ -2629,8 +3697,42 @@
       },
       "anomalies": [
         {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 6,
+          "vertical_positions": [
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "ModuleAction",
+            "ModuleBallistics",
+            "ModulePrecision"
+          ]
+        },
+        {
           "type": "no_vanilla_modification_table",
           "target_part": "Body"
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 0,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Down",
+            "Top"
+          ],
+          "groups": [
+            "Caliber",
+            "ModuleReliability"
+          ]
         },
         {
           "type": "more_than_two_variants_in_column",
@@ -2650,7 +3752,7 @@
     },
     "GunLavina_ST": {
       "vanilla_upgrade_count": 20,
-      "bprue_upgrade_count": 9,
+      "bprue_upgrade_count": 17,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -2668,24 +3770,39 @@
           "bprue_first_column": 0,
           "gap_after_last_vanilla_modification": null,
           "bprue_column_count": 1,
-          "bprue_upgrade_count": 2,
+          "bprue_upgrade_count": 8,
           "bprue_columns_detail": [
             {
               "horizontal_position": 0,
-              "upgrade_count": 2,
+              "upgrade_count": 8,
               "vertical_positions": [
                 "Down",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
                 "Top"
               ],
               "groups": [
-                "FireRate"
+                "FireRate",
+                "ModuleAction",
+                "ModuleBallistics",
+                "ModulePrecision"
               ],
               "has_top": true,
               "has_down": true,
               "has_unspecified": false,
               "sids": [
                 "GunLavina_Upgrade_BPRUE_FireRate_Balanced",
-                "GunLavina_Upgrade_BPRUE_FireRate_HighSpeed"
+                "GunLavina_Upgrade_BPRUE_FireRate_HighSpeed",
+                "GunLavina_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
+                "GunLavina_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
+                "GunLavina_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
+                "GunLavina_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
+                "GunLavina_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
+                "GunLavina_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing"
               ]
             }
           ]
@@ -2703,14 +3820,33 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 4,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 6,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Down"
+              ],
+              "groups": [
+                "ModuleReliability"
+              ],
+              "has_top": false,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunLavina_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
+                "GunLavina_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 2,
@@ -2833,6 +3969,28 @@
         },
         {
           "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 8,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "FireRate",
+            "ModuleAction",
+            "ModuleBallistics",
+            "ModulePrecision"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
           "target_part": "Stock",
           "horizontal_position": 1,
           "upgrade_count": 3,
@@ -2849,7 +4007,7 @@
     },
     "GunM10_HG": {
       "vanilla_upgrade_count": 8,
-      "bprue_upgrade_count": 9,
+      "bprue_upgrade_count": 15,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -2867,18 +4025,24 @@
           "bprue_first_column": 0,
           "gap_after_last_vanilla_modification": null,
           "bprue_column_count": 2,
-          "bprue_upgrade_count": 6,
+          "bprue_upgrade_count": 10,
           "bprue_columns_detail": [
             {
               "horizontal_position": 0,
-              "upgrade_count": 3,
+              "upgrade_count": 7,
               "vertical_positions": [
                 "Down",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
                 "Top",
                 "Unspecified"
               ],
               "groups": [
-                "Action"
+                "Action",
+                "ModuleBallistics",
+                "ModulePrecision"
               ],
               "has_top": true,
               "has_down": true,
@@ -2886,6 +4050,10 @@
               "sids": [
                 "GunM10_Upgrade_BPRUE_Pistol_Action_Balanced",
                 "GunM10_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                "GunM10_Upgrade_BPRUE_PistolShared_ModulePrecision_RecoilControl",
+                "GunM10_Upgrade_BPRUE_PistolShared_ModulePrecision_PrecisionTuning",
+                "GunM10_Upgrade_BPRUE_PistolShared_ModuleBallistics_SoftTarget",
+                "GunM10_Upgrade_BPRUE_PistolShared_ModuleBallistics_ArmorPiercing",
                 "GunM10_Upgrade_BPRUE_Pistol_Action_Controlled"
               ]
             },
@@ -2923,13 +4091,32 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 3,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 5,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Down"
+              ],
+              "groups": [
+                "ModuleHandling"
+              ],
+              "has_top": false,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunM10_Upgrade_BPRUE_PistolShared_ModuleHandling_LightweightAssembly",
+                "GunM10_Upgrade_BPRUE_PistolShared_ModuleHandling_ReinforcedAssembly"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -2978,14 +4165,20 @@
           "type": "more_than_two_variants_in_column",
           "target_part": "Barrel",
           "horizontal_position": 0,
-          "upgrade_count": 3,
+          "upgrade_count": 7,
           "vertical_positions": [
             "Down",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
             "Top",
             "Unspecified"
           ],
           "groups": [
-            "Action"
+            "Action",
+            "ModuleBallistics",
+            "ModulePrecision"
           ]
         },
         {
@@ -3021,7 +4214,7 @@
     },
     "GunM16_ST": {
       "vanilla_upgrade_count": 10,
-      "bprue_upgrade_count": 10,
+      "bprue_upgrade_count": 18,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -3039,24 +4232,39 @@
           "bprue_first_column": 0,
           "gap_after_last_vanilla_modification": null,
           "bprue_column_count": 1,
-          "bprue_upgrade_count": 2,
+          "bprue_upgrade_count": 8,
           "bprue_columns_detail": [
             {
               "horizontal_position": 0,
-              "upgrade_count": 2,
+              "upgrade_count": 8,
               "vertical_positions": [
                 "Down",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
                 "Top"
               ],
               "groups": [
-                "FireRate"
+                "FireRate",
+                "ModuleAction",
+                "ModuleBallistics",
+                "ModulePrecision"
               ],
               "has_top": true,
               "has_down": true,
               "has_unspecified": false,
               "sids": [
                 "GunM16_Upgrade_BPRUE_FireRate_Balanced",
-                "GunM16_Upgrade_BPRUE_FireRate_HighSpeed"
+                "GunM16_Upgrade_BPRUE_FireRate_HighSpeed",
+                "GunM16_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
+                "GunM16_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
+                "GunM16_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
+                "GunM16_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
+                "GunM16_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
+                "GunM16_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing"
               ]
             }
           ]
@@ -3072,14 +4280,33 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 3,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 5,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Down"
+              ],
+              "groups": [
+                "ModuleReliability"
+              ],
+              "has_top": false,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunM16_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
+                "GunM16_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 1,
@@ -3199,6 +4426,28 @@
         },
         {
           "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 8,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "FireRate",
+            "ModuleAction",
+            "ModuleBallistics",
+            "ModulePrecision"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
           "target_part": "Stock",
           "horizontal_position": 1,
           "upgrade_count": 3,
@@ -3215,7 +4464,7 @@
     },
     "GunM701_SP": {
       "vanilla_upgrade_count": 18,
-      "bprue_upgrade_count": 10,
+      "bprue_upgrade_count": 21,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -3230,14 +4479,43 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 6,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 12,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 6,
+              "vertical_positions": [
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleBallistics",
+                "ModulePrecision",
+                "ModuleRangeProfile"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunM701_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+                "GunM701_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+                "GunM701_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+                "GunM701_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+                "GunM701_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+                "GunM701_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -3293,14 +4571,33 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 4,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 6,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Down"
+              ],
+              "groups": [
+                "ModuleReliability"
+              ],
+              "has_top": false,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunM701_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+                "GunM701_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -3351,15 +4648,57 @@
             0
           ],
           "vanilla_max_modification_column": 0,
-          "bprue_columns": [],
-          "bprue_first_column": null,
-          "gap_after_last_vanilla_modification": null,
-          "bprue_column_count": 0,
-          "bprue_upgrade_count": 0,
-          "bprue_columns_detail": []
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Stock"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunM701_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+                "GunM701_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                "GunM701_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
+              ]
+            }
+          ]
         }
       },
       "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 6,
+          "vertical_positions": [
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "ModuleBallistics",
+            "ModulePrecision",
+            "ModuleRangeProfile"
+          ]
+        },
         {
           "type": "more_than_two_variants_in_column",
           "target_part": "Barrel",
@@ -3401,12 +4740,26 @@
           "groups": [
             "Marksman"
           ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Stock",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Stock"
+          ]
         }
       ]
     },
     "GunM860_SG": {
       "vanilla_upgrade_count": 12,
-      "bprue_upgrade_count": 9,
+      "bprue_upgrade_count": 15,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -3420,13 +4773,32 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 3,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 5,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleRangeProfile"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunM860_Upgrade_BPRUE_SGShared_ModuleRangeProfile_CqbConfiguration",
+                "GunM860_Upgrade_BPRUE_SGShared_ModuleRangeProfile_RangeConfiguration"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -3460,14 +4832,38 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 6,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 10,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 4,
+              "vertical_positions": [
+                "Down",
+                "Down",
+                "Down",
+                "Down"
+              ],
+              "groups": [
+                "ModuleHandling",
+                "ModuleReliability"
+              ],
+              "has_top": false,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunM860_Upgrade_BPRUE_SGShared_ModuleHandling_LightweightAssembly",
+                "GunM860_Upgrade_BPRUE_SGShared_ModuleHandling_ReinforcedAssembly",
+                "GunM860_Upgrade_BPRUE_SGShared_ModuleReliability_HardenedComponents",
+                "GunM860_Upgrade_BPRUE_SGShared_ModuleReliability_LightweightComponents"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -3548,6 +4944,22 @@
         {
           "type": "more_than_two_variants_in_column",
           "target_part": "Body",
+          "horizontal_position": 0,
+          "upgrade_count": 4,
+          "vertical_positions": [
+            "Down",
+            "Down",
+            "Down",
+            "Down"
+          ],
+          "groups": [
+            "ModuleHandling",
+            "ModuleReliability"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
           "horizontal_position": 1,
           "upgrade_count": 3,
           "vertical_positions": [
@@ -3577,7 +4989,7 @@
     },
     "GunMark_SP": {
       "vanilla_upgrade_count": 17,
-      "bprue_upgrade_count": 10,
+      "bprue_upgrade_count": 21,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -3591,14 +5003,43 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 6,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 12,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 6,
+              "vertical_positions": [
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleBallistics",
+                "ModulePrecision",
+                "ModuleRangeProfile"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunMark_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+                "GunMark_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+                "GunMark_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+                "GunMark_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+                "GunMark_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+                "GunMark_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -3652,14 +5093,33 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 4,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 6,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Down"
+              ],
+              "groups": [
+                "ModuleReliability"
+              ],
+              "has_top": false,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunMark_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+                "GunMark_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -3744,15 +5204,57 @@
             0
           ],
           "vanilla_max_modification_column": 0,
-          "bprue_columns": [],
-          "bprue_first_column": null,
-          "gap_after_last_vanilla_modification": null,
-          "bprue_column_count": 0,
-          "bprue_upgrade_count": 0,
-          "bprue_columns_detail": []
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Stock"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunMark_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+                "GunMark_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                "GunMark_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
+              ]
+            }
+          ]
         }
       },
       "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 6,
+          "vertical_positions": [
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "ModuleBallistics",
+            "ModulePrecision",
+            "ModuleRangeProfile"
+          ]
+        },
         {
           "type": "more_than_two_variants_in_column",
           "target_part": "Barrel",
@@ -3794,12 +5296,26 @@
           "groups": [
             "Marksman"
           ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Stock",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Stock"
+          ]
         }
       ]
     },
     "GunPM_HG": {
       "vanilla_upgrade_count": 4,
-      "bprue_upgrade_count": 7,
+      "bprue_upgrade_count": 13,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -3817,18 +5333,24 @@
           "bprue_first_column": 0,
           "gap_after_last_vanilla_modification": null,
           "bprue_column_count": 2,
-          "bprue_upgrade_count": 4,
+          "bprue_upgrade_count": 8,
           "bprue_columns_detail": [
             {
               "horizontal_position": 0,
-              "upgrade_count": 3,
+              "upgrade_count": 7,
               "vertical_positions": [
                 "Down",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
                 "Top",
                 "Unspecified"
               ],
               "groups": [
-                "Action"
+                "Action",
+                "ModuleBallistics",
+                "ModulePrecision"
               ],
               "has_top": true,
               "has_down": true,
@@ -3836,6 +5358,10 @@
               "sids": [
                 "GunPM_Upgrade_BPRUE_Pistol_Action_Balanced",
                 "GunPM_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                "GunPM_Upgrade_BPRUE_PistolShared_ModulePrecision_RecoilControl",
+                "GunPM_Upgrade_BPRUE_PistolShared_ModulePrecision_PrecisionTuning",
+                "GunPM_Upgrade_BPRUE_PistolShared_ModuleBallistics_SoftTarget",
+                "GunPM_Upgrade_BPRUE_PistolShared_ModuleBallistics_ArmorPiercing",
                 "GunPM_Upgrade_BPRUE_Pistol_Action_Controlled"
               ]
             },
@@ -3871,24 +5397,29 @@
           "bprue_first_column": 0,
           "gap_after_last_vanilla_modification": null,
           "bprue_column_count": 1,
-          "bprue_upgrade_count": 3,
+          "bprue_upgrade_count": 5,
           "bprue_columns_detail": [
             {
               "horizontal_position": 0,
-              "upgrade_count": 3,
+              "upgrade_count": 5,
               "vertical_positions": [
+                "Down",
+                "Down",
                 "Down",
                 "Top",
                 "Unspecified"
               ],
               "groups": [
-                "Handling"
+                "Handling",
+                "ModuleHandling"
               ],
               "has_top": true,
               "has_down": true,
               "has_unspecified": true,
               "sids": [
                 "GunPM_Upgrade_BPRUE_Pistol_Handling_Tactical",
+                "GunPM_Upgrade_BPRUE_PistolShared_ModuleHandling_LightweightAssembly",
+                "GunPM_Upgrade_BPRUE_PistolShared_ModuleHandling_ReinforcedAssembly",
                 "GunPM_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
                 "GunPM_Upgrade_BPRUE_Pistol_Handling_Stabilized"
               ]
@@ -3905,14 +5436,20 @@
           "type": "more_than_two_variants_in_column",
           "target_part": "Barrel",
           "horizontal_position": 0,
-          "upgrade_count": 3,
+          "upgrade_count": 7,
           "vertical_positions": [
             "Down",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
             "Top",
             "Unspecified"
           ],
           "groups": [
-            "Action"
+            "Action",
+            "ModuleBallistics",
+            "ModulePrecision"
           ]
         },
         {
@@ -3923,21 +5460,24 @@
           "type": "more_than_two_variants_in_column",
           "target_part": "Body",
           "horizontal_position": 0,
-          "upgrade_count": 3,
+          "upgrade_count": 5,
           "vertical_positions": [
+            "Down",
+            "Down",
             "Down",
             "Top",
             "Unspecified"
           ],
           "groups": [
-            "Handling"
+            "Handling",
+            "ModuleHandling"
           ]
         }
       ]
     },
     "GunRam2_SG": {
       "vanilla_upgrade_count": 16,
-      "bprue_upgrade_count": 9,
+      "bprue_upgrade_count": 15,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -3950,13 +5490,32 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 3,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 5,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleRangeProfile"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunRam2_Upgrade_BPRUE_SGShared_ModuleRangeProfile_CqbConfiguration",
+                "GunRam2_Upgrade_BPRUE_SGShared_ModuleRangeProfile_RangeConfiguration"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -3995,24 +5554,34 @@
           "bprue_first_column": 0,
           "gap_after_last_vanilla_modification": null,
           "bprue_column_count": 2,
-          "bprue_upgrade_count": 6,
+          "bprue_upgrade_count": 10,
           "bprue_columns_detail": [
             {
               "horizontal_position": 0,
-              "upgrade_count": 3,
+              "upgrade_count": 7,
               "vertical_positions": [
+                "Down",
+                "Down",
+                "Down",
+                "Down",
                 "Down",
                 "Top",
                 "Unspecified"
               ],
               "groups": [
-                "Action"
+                "Action",
+                "ModuleHandling",
+                "ModuleReliability"
               ],
               "has_top": true,
               "has_down": true,
               "has_unspecified": true,
               "sids": [
                 "GunRam2_Upgrade_BPRUE_SG_Action_Tuned",
+                "GunRam2_Upgrade_BPRUE_SGShared_ModuleHandling_LightweightAssembly",
+                "GunRam2_Upgrade_BPRUE_SGShared_ModuleHandling_ReinforcedAssembly",
+                "GunRam2_Upgrade_BPRUE_SGShared_ModuleReliability_HardenedComponents",
+                "GunRam2_Upgrade_BPRUE_SGShared_ModuleReliability_LightweightComponents",
                 "GunRam2_Upgrade_BPRUE_SG_Action_HighSpeed",
                 "GunRam2_Upgrade_BPRUE_SG_Action_Reinforced"
               ]
@@ -4101,14 +5670,20 @@
           "type": "more_than_two_variants_in_column",
           "target_part": "Body",
           "horizontal_position": 0,
-          "upgrade_count": 3,
+          "upgrade_count": 7,
           "vertical_positions": [
+            "Down",
+            "Down",
+            "Down",
+            "Down",
             "Down",
             "Top",
             "Unspecified"
           ],
           "groups": [
-            "Action"
+            "Action",
+            "ModuleHandling",
+            "ModuleReliability"
           ]
         },
         {
@@ -4129,7 +5704,7 @@
     },
     "GunRhino_HG": {
       "vanilla_upgrade_count": 13,
-      "bprue_upgrade_count": 7,
+      "bprue_upgrade_count": 13,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -4144,14 +5719,38 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 4,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 8,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 4,
+              "vertical_positions": [
+                "Top",
+                "Top",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleBallistics",
+                "ModulePrecision"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunRhino_Upgrade_BPRUE_PistolShared_ModulePrecision_RecoilControl",
+                "GunRhino_Upgrade_BPRUE_PistolShared_ModulePrecision_PrecisionTuning",
+                "GunRhino_Upgrade_BPRUE_PistolShared_ModuleBallistics_SoftTarget",
+                "GunRhino_Upgrade_BPRUE_PistolShared_ModuleBallistics_ArmorPiercing"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -4202,13 +5801,32 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 3,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 5,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Down"
+              ],
+              "groups": [
+                "ModuleHandling"
+              ],
+              "has_top": false,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunRhino_Upgrade_BPRUE_PistolShared_ModuleHandling_LightweightAssembly",
+                "GunRhino_Upgrade_BPRUE_PistolShared_ModuleHandling_ReinforcedAssembly"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -4253,6 +5871,22 @@
         {
           "type": "more_than_two_variants_in_column",
           "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 4,
+          "vertical_positions": [
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "ModuleBallistics",
+            "ModulePrecision"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
           "horizontal_position": 1,
           "upgrade_count": 3,
           "vertical_positions": [
@@ -4282,7 +5916,7 @@
     },
     "GunSKP_DMR_GS": {
       "vanilla_upgrade_count": 23,
-      "bprue_upgrade_count": 10,
+      "bprue_upgrade_count": 21,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -4297,14 +5931,43 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 6,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 12,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 6,
+              "vertical_positions": [
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleBallistics",
+                "ModulePrecision",
+                "ModuleRangeProfile"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunSKP_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+                "GunSKP_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+                "GunSKP_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+                "GunSKP_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+                "GunSKP_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+                "GunSKP_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -4359,14 +6022,33 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 4,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 6,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Down"
+              ],
+              "groups": [
+                "ModuleReliability"
+              ],
+              "has_top": false,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunSKP_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+                "GunSKP_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -4450,15 +6132,57 @@
             0
           ],
           "vanilla_max_modification_column": 0,
-          "bprue_columns": [],
-          "bprue_first_column": null,
-          "gap_after_last_vanilla_modification": null,
-          "bprue_column_count": 0,
-          "bprue_upgrade_count": 0,
-          "bprue_columns_detail": []
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Stock"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunSKP_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+                "GunSKP_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                "GunSKP_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
+              ]
+            }
+          ]
         }
       },
       "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 6,
+          "vertical_positions": [
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "ModuleBallistics",
+            "ModulePrecision",
+            "ModuleRangeProfile"
+          ]
+        },
         {
           "type": "more_than_two_variants_in_column",
           "target_part": "Barrel",
@@ -4500,12 +6224,26 @@
           "groups": [
             "Marksman"
           ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Stock",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Stock"
+          ]
         }
       ]
     },
     "GunSPSA_SG": {
       "vanilla_upgrade_count": 19,
-      "bprue_upgrade_count": 9,
+      "bprue_upgrade_count": 15,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -4520,13 +6258,32 @@
           ],
           "vanilla_max_modification_column": 1,
           "bprue_columns": [
+            0,
             2
           ],
-          "bprue_first_column": 2,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 3,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -2,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 5,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleRangeProfile"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunSPSA_Upgrade_BPRUE_SGShared_ModuleRangeProfile_CqbConfiguration",
+                "GunSPSA_Upgrade_BPRUE_SGShared_ModuleRangeProfile_RangeConfiguration"
+              ]
+            },
             {
               "horizontal_position": 2,
               "upgrade_count": 3,
@@ -4562,14 +6319,38 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 6,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 10,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 4,
+              "vertical_positions": [
+                "Down",
+                "Down",
+                "Down",
+                "Down"
+              ],
+              "groups": [
+                "ModuleHandling",
+                "ModuleReliability"
+              ],
+              "has_top": false,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunSPSA_Upgrade_BPRUE_SGShared_ModuleHandling_LightweightAssembly",
+                "GunSPSA_Upgrade_BPRUE_SGShared_ModuleHandling_ReinforcedAssembly",
+                "GunSPSA_Upgrade_BPRUE_SGShared_ModuleReliability_HardenedComponents",
+                "GunSPSA_Upgrade_BPRUE_SGShared_ModuleReliability_LightweightComponents"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -4634,6 +6415,14 @@
       },
       "anomalies": [
         {
+          "type": "non_contiguous_bprue_columns",
+          "target_part": "Barrel",
+          "columns": [
+            0,
+            2
+          ]
+        },
+        {
           "type": "more_than_two_variants_in_column",
           "target_part": "Barrel",
           "horizontal_position": 2,
@@ -4645,6 +6434,22 @@
           ],
           "groups": [
             "Pattern"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 0,
+          "upgrade_count": 4,
+          "vertical_positions": [
+            "Down",
+            "Down",
+            "Down",
+            "Down"
+          ],
+          "groups": [
+            "ModuleHandling",
+            "ModuleReliability"
           ]
         },
         {
@@ -4679,7 +6484,7 @@
     },
     "GunSVDM_SP": {
       "vanilla_upgrade_count": 14,
-      "bprue_upgrade_count": 10,
+      "bprue_upgrade_count": 21,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -4694,14 +6499,43 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 6,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 12,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 6,
+              "vertical_positions": [
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleBallistics",
+                "ModulePrecision",
+                "ModuleRangeProfile"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunSVDM_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+                "GunSVDM_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+                "GunSVDM_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+                "GunSVDM_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+                "GunSVDM_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+                "GunSVDM_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -4755,14 +6589,33 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 4,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 6,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Down"
+              ],
+              "groups": [
+                "ModuleReliability"
+              ],
+              "has_top": false,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunSVDM_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+                "GunSVDM_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -4812,15 +6665,57 @@
             0
           ],
           "vanilla_max_modification_column": 0,
-          "bprue_columns": [],
-          "bprue_first_column": null,
-          "gap_after_last_vanilla_modification": null,
-          "bprue_column_count": 0,
-          "bprue_upgrade_count": 0,
-          "bprue_columns_detail": []
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Stock"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunSVDM_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+                "GunSVDM_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                "GunSVDM_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
+              ]
+            }
+          ]
         }
       },
       "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 6,
+          "vertical_positions": [
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "ModuleBallistics",
+            "ModulePrecision",
+            "ModuleRangeProfile"
+          ]
+        },
         {
           "type": "more_than_two_variants_in_column",
           "target_part": "Barrel",
@@ -4862,12 +6757,26 @@
           "groups": [
             "Marksman"
           ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Stock",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Stock"
+          ]
         }
       ]
     },
     "GunSVU_SP": {
       "vanilla_upgrade_count": 26,
-      "bprue_upgrade_count": 10,
+      "bprue_upgrade_count": 21,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -4882,14 +6791,43 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 6,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 12,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 6,
+              "vertical_positions": [
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleBallistics",
+                "ModulePrecision",
+                "ModuleRangeProfile"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunSVU_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+                "GunSVU_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+                "GunSVU_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+                "GunSVU_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+                "GunSVU_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+                "GunSVU_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -4945,24 +6883,29 @@
           "bprue_first_column": 0,
           "gap_after_last_vanilla_modification": null,
           "bprue_column_count": 2,
-          "bprue_upgrade_count": 4,
+          "bprue_upgrade_count": 6,
           "bprue_columns_detail": [
             {
               "horizontal_position": 0,
-              "upgrade_count": 3,
+              "upgrade_count": 5,
               "vertical_positions": [
+                "Down",
+                "Down",
                 "Down",
                 "Top",
                 "Unspecified"
               ],
               "groups": [
-                "Marksman"
+                "Marksman",
+                "ModuleReliability"
               ],
               "has_top": true,
               "has_down": true,
               "has_unspecified": true,
               "sids": [
                 "GunSVU_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
+                "GunSVU_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+                "GunSVU_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents",
                 "GunSVU_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
                 "GunSVU_Upgrade_BPRUE_Sniper_Marksman_Benchrest"
               ]
@@ -5034,15 +6977,57 @@
             0
           ],
           "vanilla_max_modification_column": 0,
-          "bprue_columns": [],
-          "bprue_first_column": null,
-          "gap_after_last_vanilla_modification": null,
-          "bprue_column_count": 0,
-          "bprue_upgrade_count": 0,
-          "bprue_columns_detail": []
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Stock"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunSVU_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+                "GunSVU_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                "GunSVU_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
+              ]
+            }
+          ]
         }
       },
       "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 6,
+          "vertical_positions": [
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "ModuleBallistics",
+            "ModulePrecision",
+            "ModuleRangeProfile"
+          ]
+        },
         {
           "type": "more_than_two_variants_in_column",
           "target_part": "Barrel",
@@ -5083,6 +7068,23 @@
           "type": "more_than_two_variants_in_column",
           "target_part": "Body",
           "horizontal_position": 0,
+          "upgrade_count": 5,
+          "vertical_positions": [
+            "Down",
+            "Down",
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Marksman",
+            "ModuleReliability"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Stock",
+          "horizontal_position": 1,
           "upgrade_count": 3,
           "vertical_positions": [
             "Down",
@@ -5090,14 +7092,14 @@
             "Unspecified"
           ],
           "groups": [
-            "Marksman"
+            "Stock"
           ]
         }
       ]
     },
     "GunTOZ_SG": {
       "vanilla_upgrade_count": 8,
-      "bprue_upgrade_count": 9,
+      "bprue_upgrade_count": 15,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -5114,17 +7116,20 @@
           "bprue_first_column": 0,
           "gap_after_last_vanilla_modification": null,
           "bprue_column_count": 1,
-          "bprue_upgrade_count": 3,
+          "bprue_upgrade_count": 5,
           "bprue_columns_detail": [
             {
               "horizontal_position": 0,
-              "upgrade_count": 3,
+              "upgrade_count": 5,
               "vertical_positions": [
                 "Down",
+                "Top",
+                "Top",
                 "Top",
                 "Unspecified"
               ],
               "groups": [
+                "ModuleRangeProfile",
                 "Pattern"
               ],
               "has_top": true,
@@ -5133,6 +7138,8 @@
               "sids": [
                 "GunTOZ_Upgrade_BPRUE_SG_Pattern_FieldChoke",
                 "GunTOZ_Upgrade_BPRUE_SG_Pattern_Breacher",
+                "GunTOZ_Upgrade_BPRUE_SGShared_ModuleRangeProfile_CqbConfiguration",
+                "GunTOZ_Upgrade_BPRUE_SGShared_ModuleRangeProfile_RangeConfiguration",
                 "GunTOZ_Upgrade_BPRUE_SG_Pattern_FullChoke"
               ]
             }
@@ -5153,24 +7160,34 @@
           "bprue_first_column": 0,
           "gap_after_last_vanilla_modification": null,
           "bprue_column_count": 2,
-          "bprue_upgrade_count": 6,
+          "bprue_upgrade_count": 10,
           "bprue_columns_detail": [
             {
               "horizontal_position": 0,
-              "upgrade_count": 3,
+              "upgrade_count": 7,
               "vertical_positions": [
+                "Down",
+                "Down",
+                "Down",
+                "Down",
                 "Down",
                 "Top",
                 "Unspecified"
               ],
               "groups": [
-                "Action"
+                "Action",
+                "ModuleHandling",
+                "ModuleReliability"
               ],
               "has_top": true,
               "has_down": true,
               "has_unspecified": true,
               "sids": [
                 "GunTOZ_Upgrade_BPRUE_SG_Action_Tuned",
+                "GunTOZ_Upgrade_BPRUE_SGShared_ModuleHandling_LightweightAssembly",
+                "GunTOZ_Upgrade_BPRUE_SGShared_ModuleHandling_ReinforcedAssembly",
+                "GunTOZ_Upgrade_BPRUE_SGShared_ModuleReliability_HardenedComponents",
+                "GunTOZ_Upgrade_BPRUE_SGShared_ModuleReliability_LightweightComponents",
                 "GunTOZ_Upgrade_BPRUE_SG_Action_HighSpeed",
                 "GunTOZ_Upgrade_BPRUE_SG_Action_Reinforced"
               ]
@@ -5241,13 +7258,16 @@
           "type": "more_than_two_variants_in_column",
           "target_part": "Barrel",
           "horizontal_position": 0,
-          "upgrade_count": 3,
+          "upgrade_count": 5,
           "vertical_positions": [
             "Down",
+            "Top",
+            "Top",
             "Top",
             "Unspecified"
           ],
           "groups": [
+            "ModuleRangeProfile",
             "Pattern"
           ]
         },
@@ -5259,14 +7279,20 @@
           "type": "more_than_two_variants_in_column",
           "target_part": "Body",
           "horizontal_position": 0,
-          "upgrade_count": 3,
+          "upgrade_count": 7,
           "vertical_positions": [
+            "Down",
+            "Down",
+            "Down",
+            "Down",
             "Down",
             "Top",
             "Unspecified"
           ],
           "groups": [
-            "Action"
+            "Action",
+            "ModuleHandling",
+            "ModuleReliability"
           ]
         },
         {
@@ -5287,7 +7313,7 @@
     },
     "GunThreeLine_SP_GS": {
       "vanilla_upgrade_count": 13,
-      "bprue_upgrade_count": 10,
+      "bprue_upgrade_count": 21,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -5303,13 +7329,42 @@
           ],
           "vanilla_max_modification_column": 1,
           "bprue_columns": [
+            0,
             2
           ],
-          "bprue_first_column": 2,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 3,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -2,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 9,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 6,
+              "vertical_positions": [
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleBallistics",
+                "ModulePrecision",
+                "ModuleRangeProfile"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunThreeLine_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+                "GunThreeLine_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+                "GunThreeLine_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+                "GunThreeLine_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+                "GunThreeLine_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+                "GunThreeLine_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration"
+              ]
+            },
             {
               "horizontal_position": 2,
               "upgrade_count": 3,
@@ -5346,24 +7401,29 @@
           "bprue_first_column": 0,
           "gap_after_last_vanilla_modification": null,
           "bprue_column_count": 3,
-          "bprue_upgrade_count": 7,
+          "bprue_upgrade_count": 9,
           "bprue_columns_detail": [
             {
               "horizontal_position": 0,
-              "upgrade_count": 3,
+              "upgrade_count": 5,
               "vertical_positions": [
+                "Down",
+                "Down",
                 "Down",
                 "Top",
                 "Unspecified"
               ],
               "groups": [
-                "Marksman"
+                "Marksman",
+                "ModuleReliability"
               ],
               "has_top": true,
               "has_down": true,
               "has_unspecified": true,
               "sids": [
                 "GunThreeLine_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
+                "GunThreeLine_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+                "GunThreeLine_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents",
                 "GunThreeLine_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
                 "GunThreeLine_Upgrade_BPRUE_Sniper_Marksman_Benchrest"
               ]
@@ -5434,15 +7494,65 @@
             0
           ],
           "vanilla_max_modification_column": 0,
-          "bprue_columns": [],
-          "bprue_first_column": null,
-          "gap_after_last_vanilla_modification": null,
-          "bprue_column_count": 0,
-          "bprue_upgrade_count": 0,
-          "bprue_columns_detail": []
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Stock"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunThreeLine_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+                "GunThreeLine_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                "GunThreeLine_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
+              ]
+            }
+          ]
         }
       },
       "anomalies": [
+        {
+          "type": "non_contiguous_bprue_columns",
+          "target_part": "Barrel",
+          "columns": [
+            0,
+            2
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 6,
+          "vertical_positions": [
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "ModuleBallistics",
+            "ModulePrecision",
+            "ModuleRangeProfile"
+          ]
+        },
         {
           "type": "more_than_two_variants_in_column",
           "target_part": "Barrel",
@@ -5469,14 +7579,17 @@
           "type": "more_than_two_variants_in_column",
           "target_part": "Body",
           "horizontal_position": 0,
-          "upgrade_count": 3,
+          "upgrade_count": 5,
           "vertical_positions": [
+            "Down",
+            "Down",
             "Down",
             "Top",
             "Unspecified"
           ],
           "groups": [
-            "Marksman"
+            "Marksman",
+            "ModuleReliability"
           ]
         },
         {
@@ -5492,12 +7605,26 @@
           "groups": [
             "Action"
           ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Stock",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Stock"
+          ]
         }
       ]
     },
     "GunUDP_HG": {
       "vanilla_upgrade_count": 6,
-      "bprue_upgrade_count": 7,
+      "bprue_upgrade_count": 13,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -5511,14 +7638,38 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 4,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 8,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 4,
+              "vertical_positions": [
+                "Top",
+                "Top",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleBallistics",
+                "ModulePrecision"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunUDP_Upgrade_BPRUE_PistolShared_ModulePrecision_RecoilControl",
+                "GunUDP_Upgrade_BPRUE_PistolShared_ModulePrecision_PrecisionTuning",
+                "GunUDP_Upgrade_BPRUE_PistolShared_ModuleBallistics_SoftTarget",
+                "GunUDP_Upgrade_BPRUE_PistolShared_ModuleBallistics_ArmorPiercing"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -5572,24 +7723,29 @@
           "bprue_first_column": 0,
           "gap_after_last_vanilla_modification": null,
           "bprue_column_count": 1,
-          "bprue_upgrade_count": 3,
+          "bprue_upgrade_count": 5,
           "bprue_columns_detail": [
             {
               "horizontal_position": 0,
-              "upgrade_count": 3,
+              "upgrade_count": 5,
               "vertical_positions": [
+                "Down",
+                "Down",
                 "Down",
                 "Top",
                 "Unspecified"
               ],
               "groups": [
-                "Handling"
+                "Handling",
+                "ModuleHandling"
               ],
               "has_top": true,
               "has_down": true,
               "has_unspecified": true,
               "sids": [
                 "GunUDP_Upgrade_BPRUE_Pistol_Handling_Tactical",
+                "GunUDP_Upgrade_BPRUE_PistolShared_ModuleHandling_LightweightAssembly",
+                "GunUDP_Upgrade_BPRUE_PistolShared_ModuleHandling_ReinforcedAssembly",
                 "GunUDP_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
                 "GunUDP_Upgrade_BPRUE_Pistol_Handling_Stabilized"
               ]
@@ -5598,6 +7754,22 @@
         }
       },
       "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 4,
+          "vertical_positions": [
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "ModuleBallistics",
+            "ModulePrecision"
+          ]
+        },
         {
           "type": "more_than_two_variants_in_column",
           "target_part": "Barrel",
@@ -5620,21 +7792,24 @@
           "type": "more_than_two_variants_in_column",
           "target_part": "Body",
           "horizontal_position": 0,
-          "upgrade_count": 3,
+          "upgrade_count": 5,
           "vertical_positions": [
+            "Down",
+            "Down",
             "Down",
             "Top",
             "Unspecified"
           ],
           "groups": [
-            "Handling"
+            "Handling",
+            "ModuleHandling"
           ]
         }
       ]
     },
     "GunViper_PP": {
       "vanilla_upgrade_count": 13,
-      "bprue_upgrade_count": 9,
+      "bprue_upgrade_count": 20,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -5649,13 +7824,42 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 3,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 9,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 6,
+              "vertical_positions": [
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleAction",
+                "ModuleBallistics",
+                "ModuleRangeProfile"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunViper_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
+                "GunViper_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction",
+                "GunViper_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget",
+                "GunViper_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing",
+                "GunViper_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration",
+                "GunViper_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -5692,14 +7896,33 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 6,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 8,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Down"
+              ],
+              "groups": [
+                "ModuleHandling"
+              ],
+              "has_top": false,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunViper_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
+                "GunViper_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -5754,15 +7977,57 @@
             0
           ],
           "vanilla_max_modification_column": 0,
-          "bprue_columns": [],
-          "bprue_first_column": null,
-          "gap_after_last_vanilla_modification": null,
-          "bprue_column_count": 0,
-          "bprue_upgrade_count": 0,
-          "bprue_columns_detail": []
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Stock"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunViper_Upgrade_BPRUE_Stock_Tactical",
+                "GunViper_Upgrade_BPRUE_Stock_Lightweight",
+                "GunViper_Upgrade_BPRUE_Stock_Stabilized"
+              ]
+            }
+          ]
         }
       },
       "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 6,
+          "vertical_positions": [
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "ModuleAction",
+            "ModuleBallistics",
+            "ModuleRangeProfile"
+          ]
+        },
         {
           "type": "more_than_two_variants_in_column",
           "target_part": "Barrel",
@@ -5807,12 +8072,26 @@
             "Caliber",
             "Reload"
           ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Stock",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Stock"
+          ]
         }
       ]
     },
     "GunZubr_PP": {
       "vanilla_upgrade_count": 19,
-      "bprue_upgrade_count": 9,
+      "bprue_upgrade_count": 20,
       "targets": {
         "Barrel": {
           "vanilla_has_target": true,
@@ -5827,13 +8106,42 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 1,
-          "bprue_upgrade_count": 3,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 9,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 6,
+              "vertical_positions": [
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "ModuleAction",
+                "ModuleBallistics",
+                "ModuleRangeProfile"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunZubr_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
+                "GunZubr_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction",
+                "GunZubr_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget",
+                "GunZubr_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing",
+                "GunZubr_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration",
+                "GunZubr_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -5869,14 +8177,33 @@
           ],
           "vanilla_max_modification_column": 0,
           "bprue_columns": [
+            0,
             1,
             2
           ],
-          "bprue_first_column": 1,
-          "gap_after_last_vanilla_modification": 0,
-          "bprue_column_count": 2,
-          "bprue_upgrade_count": 6,
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": -1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 8,
           "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Down"
+              ],
+              "groups": [
+                "ModuleHandling"
+              ],
+              "has_top": false,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunZubr_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
+                "GunZubr_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly"
+              ]
+            },
             {
               "horizontal_position": 1,
               "upgrade_count": 3,
@@ -5966,15 +8293,57 @@
             0
           ],
           "vanilla_max_modification_column": 0,
-          "bprue_columns": [],
-          "bprue_first_column": null,
-          "gap_after_last_vanilla_modification": null,
-          "bprue_column_count": 0,
-          "bprue_upgrade_count": 0,
-          "bprue_columns_detail": []
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Stock"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunZubr_Upgrade_BPRUE_Stock_Tactical",
+                "GunZubr_Upgrade_BPRUE_Stock_Lightweight",
+                "GunZubr_Upgrade_BPRUE_Stock_Stabilized"
+              ]
+            }
+          ]
         }
       },
       "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 6,
+          "vertical_positions": [
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "ModuleAction",
+            "ModuleBallistics",
+            "ModuleRangeProfile"
+          ]
+        },
         {
           "type": "more_than_two_variants_in_column",
           "target_part": "Barrel",
@@ -6018,6 +8387,20 @@
           "groups": [
             "Caliber",
             "Reload"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Stock",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Stock"
           ]
         }
       ]
