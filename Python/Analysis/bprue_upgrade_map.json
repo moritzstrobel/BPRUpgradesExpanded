@@ -1,7 +1,7 @@
 {
   "source": "unified UpgradeBuildModel after apply_layout_to_model()",
   "weapon_count": 32,
-  "upgrade_count": 261,
+  "upgrade_count": 291,
   "weapons": {
     "GunAK74_ST": {
       "upgrade_count": 10,
@@ -162,87 +162,91 @@
           "1": {
             "Down": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Action_Controlled",
+                "sid": "GunAKU_Upgrade_BPRUE_Action_Controlled",
                 "class": "SMG",
                 "group": "Action",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Action_HighSpeed"
+                  "GunAKU_Upgrade_BPRUE_Action_HighSpeed"
                 ]
               }
             ],
             "Top": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Action_HighSpeed",
+                "sid": "GunAKU_Upgrade_BPRUE_Action_HighSpeed",
                 "class": "SMG",
                 "group": "Action",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Action_Controlled"
+                  "GunAKU_Upgrade_BPRUE_Action_Controlled"
                 ]
               }
             ]
           }
         },
         "Body": {
-          "3": {
+          "1": {
             "Down": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Readiness_Stabilized",
+                "sid": "GunAKU_Upgrade_BPRUE_Readiness_Stabilized",
                 "class": "SMG",
                 "group": "Readiness",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Readiness_QuickDraw"
+                  "GunAKU_Upgrade_BPRUE_Readiness_QuickDraw"
                 ]
               }
             ],
             "Top": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Readiness_QuickDraw",
+                "sid": "GunAKU_Upgrade_BPRUE_Readiness_QuickDraw",
                 "class": "SMG",
                 "group": "Readiness",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Readiness_Stabilized"
+                  "GunAKU_Upgrade_BPRUE_Readiness_Stabilized"
                 ]
               }
             ]
           },
-          "4": {
+          "2": {
             "Down": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Reload_Tactical",
+                "sid": "GunAKU_Upgrade_BPRUE_Reload_Tactical",
                 "class": "SMG",
                 "group": "Reload",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Reload_Competition"
+                  "GunAKU_Upgrade_BPRUE_Reload_Competition"
                 ]
               }
             ],
             "Top": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Reload_Competition",
+                "sid": "GunAKU_Upgrade_BPRUE_Reload_Competition",
                 "class": "SMG",
                 "group": "Reload",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Reload_Tactical"
+                  "GunAKU_Upgrade_BPRUE_Reload_Tactical"
                 ]
-              },
+              }
+            ]
+          },
+          "3": {
+            "Top": [
               {
                 "sid": "GunAKU_Upgrade_BPRUE_PistolConversion",
                 "class": "SMG",
@@ -526,74 +530,91 @@
           "1": {
             "Down": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Action_Controlled",
+                "sid": "GunBucket_Upgrade_BPRUE_Action_Controlled",
                 "class": "SMG",
                 "group": "Action",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Action_HighSpeed"
+                  "GunBucket_Upgrade_BPRUE_Action_HighSpeed"
                 ]
               }
             ],
             "Top": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Action_HighSpeed",
+                "sid": "GunBucket_Upgrade_BPRUE_Action_HighSpeed",
                 "class": "SMG",
                 "group": "Action",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Action_Controlled"
+                  "GunBucket_Upgrade_BPRUE_Action_Controlled"
                 ]
               }
             ]
           }
         },
         "Body": {
-          "3": {
+          "2": {
             "Down": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Readiness_Stabilized",
+                "sid": "GunBucket_Upgrade_BPRUE_Readiness_Stabilized",
                 "class": "SMG",
                 "group": "Readiness",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Readiness_QuickDraw"
+                  "GunBucket_Upgrade_BPRUE_Readiness_QuickDraw"
                 ]
               }
             ],
             "Top": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Readiness_QuickDraw",
+                "sid": "GunBucket_Upgrade_BPRUE_Readiness_QuickDraw",
                 "class": "SMG",
                 "group": "Readiness",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Readiness_Stabilized"
+                  "GunBucket_Upgrade_BPRUE_Readiness_Stabilized"
                 ]
               }
             ]
           },
-          "4": {
+          "3": {
             "Down": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Reload_Tactical",
+                "sid": "GunBucket_Upgrade_BPRUE_Reload_Tactical",
                 "class": "SMG",
                 "group": "Reload",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Reload_Competition"
+                  "GunBucket_Upgrade_BPRUE_Reload_Competition"
                 ]
-              },
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunBucket_Upgrade_BPRUE_Reload_Competition",
+                "class": "SMG",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunBucket_Upgrade_BPRUE_Reload_Tactical"
+                ]
+              }
+            ]
+          },
+          "4": {
+            "Down": [
               {
                 "sid": "GunBucket_Upgrade_BPRUE_Caliber_A045",
                 "class": "SMG",
@@ -607,17 +628,6 @@
               }
             ],
             "Top": [
-              {
-                "sid": "BPRUE_SMG_Upgrade_Reload_Competition",
-                "class": "SMG",
-                "group": "Reload",
-                "is_modification": true,
-                "horizontal_explicit": true,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Reload_Tactical"
-                ]
-              },
               {
                 "sid": "GunBucket_Upgrade_BPRUE_Caliber_A919",
                 "class": "SMG",
@@ -947,46 +957,91 @@
           "1": {
             "Down": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Action_Controlled",
+                "sid": "GunFora230_Upgrade_BPRUE_Action_Controlled",
                 "class": "SMG",
                 "group": "Action",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Action_HighSpeed"
+                  "GunFora230_Upgrade_BPRUE_Action_HighSpeed"
                 ]
               }
             ],
             "Top": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Action_HighSpeed",
+                "sid": "GunFora230_Upgrade_BPRUE_Action_HighSpeed",
                 "class": "SMG",
                 "group": "Action",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Action_Controlled"
+                  "GunFora230_Upgrade_BPRUE_Action_Controlled"
                 ]
               }
             ]
           }
         },
         "Body": {
-          "3": {
+          "1": {
             "Down": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Readiness_Stabilized",
+                "sid": "GunFora230_Upgrade_BPRUE_Readiness_Stabilized",
                 "class": "SMG",
                 "group": "Readiness",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Readiness_QuickDraw"
+                  "GunFora230_Upgrade_BPRUE_Readiness_QuickDraw"
                 ]
-              },
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunFora230_Upgrade_BPRUE_Readiness_QuickDraw",
+                "class": "SMG",
+                "group": "Readiness",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora230_Upgrade_BPRUE_Readiness_Stabilized"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunFora230_Upgrade_BPRUE_Reload_Tactical",
+                "class": "SMG",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora230_Upgrade_BPRUE_Reload_Competition"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunFora230_Upgrade_BPRUE_Reload_Competition",
+                "class": "SMG",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora230_Upgrade_BPRUE_Reload_Tactical"
+                ]
+              }
+            ]
+          },
+          "3": {
+            "Down": [
               {
                 "sid": "GunFora230_Upgrade_BPRUE_Caliber_A045",
                 "class": "SMG",
@@ -1001,17 +1056,6 @@
             ],
             "Top": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Readiness_QuickDraw",
-                "class": "SMG",
-                "group": "Readiness",
-                "is_modification": true,
-                "horizontal_explicit": true,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Readiness_Stabilized"
-                ]
-              },
-              {
                 "sid": "GunFora230_Upgrade_BPRUE_Caliber_A918",
                 "class": "SMG",
                 "group": "Caliber",
@@ -1025,31 +1069,7 @@
             ]
           },
           "4": {
-            "Down": [
-              {
-                "sid": "BPRUE_SMG_Upgrade_Reload_Tactical",
-                "class": "SMG",
-                "group": "Reload",
-                "is_modification": true,
-                "horizontal_explicit": true,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Reload_Competition"
-                ]
-              }
-            ],
             "Top": [
-              {
-                "sid": "BPRUE_SMG_Upgrade_Reload_Competition",
-                "class": "SMG",
-                "group": "Reload",
-                "is_modification": true,
-                "horizontal_explicit": true,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Reload_Tactical"
-                ]
-              },
               {
                 "sid": "GunFora230_Upgrade_BPRUE_PistolConversion",
                 "class": "SMG",
@@ -1402,7 +1422,7 @@
           }
         },
         "Body": {
-          "3": {
+          "2": {
             "Down": [
               {
                 "sid": "GunGrim_Upgrade_BPRUE_FireControl_Precision",
@@ -1430,7 +1450,7 @@
               }
             ]
           },
-          "4": {
+          "3": {
             "Down": [
               {
                 "sid": "GunGrim_Upgrade_BPRUE_Reload_Reinforced",
@@ -1541,7 +1561,7 @@
           }
         },
         "Body": {
-          "2": {
+          "1": {
             "Down": [
               {
                 "sid": "GunGvintar_Upgrade_BPRUE_FireControl_Precision",
@@ -1569,7 +1589,7 @@
               }
             ]
           },
-          "3": {
+          "2": {
             "Down": [
               {
                 "sid": "GunGvintar_Upgrade_BPRUE_Reload_Reinforced",
@@ -1653,27 +1673,27 @@
           "1": {
             "Down": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Action_Controlled",
+                "sid": "GunIntegral_Upgrade_BPRUE_Action_Controlled",
                 "class": "SMG",
                 "group": "Action",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Action_HighSpeed"
+                  "GunIntegral_Upgrade_BPRUE_Action_HighSpeed"
                 ]
               }
             ],
             "Top": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Action_HighSpeed",
+                "sid": "GunIntegral_Upgrade_BPRUE_Action_HighSpeed",
                 "class": "SMG",
                 "group": "Action",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Action_Controlled"
+                  "GunIntegral_Upgrade_BPRUE_Action_Controlled"
                 ]
               }
             ]
@@ -1683,27 +1703,27 @@
           "3": {
             "Down": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Readiness_Stabilized",
+                "sid": "GunIntegral_Upgrade_BPRUE_Readiness_Stabilized",
                 "class": "SMG",
                 "group": "Readiness",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Readiness_QuickDraw"
+                  "GunIntegral_Upgrade_BPRUE_Readiness_QuickDraw"
                 ]
               }
             ],
             "Top": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Readiness_QuickDraw",
+                "sid": "GunIntegral_Upgrade_BPRUE_Readiness_QuickDraw",
                 "class": "SMG",
                 "group": "Readiness",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Readiness_Stabilized"
+                  "GunIntegral_Upgrade_BPRUE_Readiness_Stabilized"
                 ]
               }
             ]
@@ -1711,27 +1731,27 @@
           "4": {
             "Down": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Reload_Tactical",
+                "sid": "GunIntegral_Upgrade_BPRUE_Reload_Tactical",
                 "class": "SMG",
                 "group": "Reload",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Reload_Competition"
+                  "GunIntegral_Upgrade_BPRUE_Reload_Competition"
                 ]
               }
             ],
             "Top": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Reload_Competition",
+                "sid": "GunIntegral_Upgrade_BPRUE_Reload_Competition",
                 "class": "SMG",
                 "group": "Reload",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Reload_Tactical"
+                  "GunIntegral_Upgrade_BPRUE_Reload_Tactical"
                 ]
               }
             ]
@@ -1966,7 +1986,7 @@
           }
         },
         "Body": {
-          "2": {
+          "1": {
             "Down": [
               {
                 "sid": "GunLavina_Upgrade_BPRUE_FireControl_Precision",
@@ -1994,7 +2014,7 @@
               }
             ]
           },
-          "3": {
+          "2": {
             "Down": [
               {
                 "sid": "GunLavina_Upgrade_BPRUE_Reload_Reinforced",
@@ -2137,6 +2157,17 @@
           "1": {
             "Down": [
               {
+                "sid": "GunM10_Upgrade_BPRUE_Caliber_A918",
+                "class": "SMG",
+                "group": "Caliber",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM10_Upgrade_BPRUE_Caliber_A919"
+                ]
+              },
+              {
                 "sid": "GunM10_Upgrade_BPRUE_Pistol_Handling_Tactical",
                 "class": "Pistol",
                 "group": "Handling",
@@ -2150,6 +2181,17 @@
               }
             ],
             "Top": [
+              {
+                "sid": "GunM10_Upgrade_BPRUE_Caliber_A919",
+                "class": "SMG",
+                "group": "Caliber",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM10_Upgrade_BPRUE_Caliber_A918"
+                ]
+              },
               {
                 "sid": "GunM10_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
                 "class": "Pistol",
@@ -2174,34 +2216,6 @@
                 "blocking_sids": [
                   "GunM10_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
                   "GunM10_Upgrade_BPRUE_Pistol_Handling_Tactical"
-                ]
-              }
-            ]
-          },
-          "3": {
-            "Down": [
-              {
-                "sid": "GunM10_Upgrade_BPRUE_Caliber_A918",
-                "class": "SMG",
-                "group": "Caliber",
-                "is_modification": true,
-                "horizontal_explicit": true,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "GunM10_Upgrade_BPRUE_Caliber_A919"
-                ]
-              }
-            ],
-            "Top": [
-              {
-                "sid": "GunM10_Upgrade_BPRUE_Caliber_A919",
-                "class": "SMG",
-                "group": "Caliber",
-                "is_modification": true,
-                "horizontal_explicit": true,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "GunM10_Upgrade_BPRUE_Caliber_A918"
                 ]
               }
             ]
@@ -4186,46 +4200,91 @@
           "1": {
             "Down": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Action_Controlled",
+                "sid": "GunViper_Upgrade_BPRUE_Action_Controlled",
                 "class": "SMG",
                 "group": "Action",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Action_HighSpeed"
+                  "GunViper_Upgrade_BPRUE_Action_HighSpeed"
                 ]
               }
             ],
             "Top": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Action_HighSpeed",
+                "sid": "GunViper_Upgrade_BPRUE_Action_HighSpeed",
                 "class": "SMG",
                 "group": "Action",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Action_Controlled"
+                  "GunViper_Upgrade_BPRUE_Action_Controlled"
                 ]
               }
             ]
           }
         },
         "Body": {
-          "3": {
+          "1": {
             "Down": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Readiness_Stabilized",
+                "sid": "GunViper_Upgrade_BPRUE_Readiness_Stabilized",
                 "class": "SMG",
                 "group": "Readiness",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Readiness_QuickDraw"
+                  "GunViper_Upgrade_BPRUE_Readiness_QuickDraw"
                 ]
-              },
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunViper_Upgrade_BPRUE_Readiness_QuickDraw",
+                "class": "SMG",
+                "group": "Readiness",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunViper_Upgrade_BPRUE_Readiness_Stabilized"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunViper_Upgrade_BPRUE_Reload_Tactical",
+                "class": "SMG",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunViper_Upgrade_BPRUE_Reload_Competition"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunViper_Upgrade_BPRUE_Reload_Competition",
+                "class": "SMG",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunViper_Upgrade_BPRUE_Reload_Tactical"
+                ]
+              }
+            ]
+          },
+          "3": {
+            "Down": [
               {
                 "sid": "GunViper_Upgrade_BPRUE_Caliber_A045",
                 "class": "SMG",
@@ -4240,17 +4299,6 @@
             ],
             "Top": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Readiness_QuickDraw",
-                "class": "SMG",
-                "group": "Readiness",
-                "is_modification": true,
-                "horizontal_explicit": true,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Readiness_Stabilized"
-                ]
-              },
-              {
                 "sid": "GunViper_Upgrade_BPRUE_Caliber_A918",
                 "class": "SMG",
                 "group": "Caliber",
@@ -4264,31 +4312,7 @@
             ]
           },
           "4": {
-            "Down": [
-              {
-                "sid": "BPRUE_SMG_Upgrade_Reload_Tactical",
-                "class": "SMG",
-                "group": "Reload",
-                "is_modification": true,
-                "horizontal_explicit": true,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Reload_Competition"
-                ]
-              }
-            ],
             "Top": [
-              {
-                "sid": "BPRUE_SMG_Upgrade_Reload_Competition",
-                "class": "SMG",
-                "group": "Reload",
-                "is_modification": true,
-                "horizontal_explicit": true,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Reload_Tactical"
-                ]
-              },
               {
                 "sid": "GunViper_Upgrade_BPRUE_PistolConversion",
                 "class": "SMG",
@@ -4310,46 +4334,91 @@
           "1": {
             "Down": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Action_Controlled",
+                "sid": "GunZubr_Upgrade_BPRUE_Action_Controlled",
                 "class": "SMG",
                 "group": "Action",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Action_HighSpeed"
+                  "GunZubr_Upgrade_BPRUE_Action_HighSpeed"
                 ]
               }
             ],
             "Top": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Action_HighSpeed",
+                "sid": "GunZubr_Upgrade_BPRUE_Action_HighSpeed",
                 "class": "SMG",
                 "group": "Action",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Action_Controlled"
+                  "GunZubr_Upgrade_BPRUE_Action_Controlled"
                 ]
               }
             ]
           }
         },
         "Body": {
-          "3": {
+          "1": {
             "Down": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Readiness_Stabilized",
+                "sid": "GunZubr_Upgrade_BPRUE_Readiness_Stabilized",
                 "class": "SMG",
                 "group": "Readiness",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Readiness_QuickDraw"
+                  "GunZubr_Upgrade_BPRUE_Readiness_QuickDraw"
                 ]
-              },
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunZubr_Upgrade_BPRUE_Readiness_QuickDraw",
+                "class": "SMG",
+                "group": "Readiness",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunZubr_Upgrade_BPRUE_Readiness_Stabilized"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunZubr_Upgrade_BPRUE_Reload_Tactical",
+                "class": "SMG",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunZubr_Upgrade_BPRUE_Reload_Competition"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunZubr_Upgrade_BPRUE_Reload_Competition",
+                "class": "SMG",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunZubr_Upgrade_BPRUE_Reload_Tactical"
+                ]
+              }
+            ]
+          },
+          "3": {
+            "Down": [
               {
                 "sid": "GunZubr_Upgrade_BPRUE_Caliber_A045",
                 "class": "SMG",
@@ -4364,17 +4433,6 @@
             ],
             "Top": [
               {
-                "sid": "BPRUE_SMG_Upgrade_Readiness_QuickDraw",
-                "class": "SMG",
-                "group": "Readiness",
-                "is_modification": true,
-                "horizontal_explicit": true,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Readiness_Stabilized"
-                ]
-              },
-              {
                 "sid": "GunZubr_Upgrade_BPRUE_Caliber_A918",
                 "class": "SMG",
                 "group": "Caliber",
@@ -4388,31 +4446,7 @@
             ]
           },
           "4": {
-            "Down": [
-              {
-                "sid": "BPRUE_SMG_Upgrade_Reload_Tactical",
-                "class": "SMG",
-                "group": "Reload",
-                "is_modification": true,
-                "horizontal_explicit": true,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Reload_Competition"
-                ]
-              }
-            ],
             "Top": [
-              {
-                "sid": "BPRUE_SMG_Upgrade_Reload_Competition",
-                "class": "SMG",
-                "group": "Reload",
-                "is_modification": true,
-                "horizontal_explicit": true,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Reload_Tactical"
-                ]
-              },
               {
                 "sid": "GunZubr_Upgrade_BPRUE_PistolConversion",
                 "class": "SMG",
