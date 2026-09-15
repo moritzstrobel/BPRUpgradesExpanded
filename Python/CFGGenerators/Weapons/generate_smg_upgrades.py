@@ -20,43 +20,19 @@ MODULES = {
     "controlled_action": ("Action_Controlled", "sid_bprue_smg_controlled_action_name", "sid_bprue_smg_controlled_action_description", 2800, "Top", "Barrel", ["BPRUE_FireIntervalPos5Effect", "RecoilPos15Effect", "ShotRecoveryPos20Effect", "BPRUE_ReloadingTimeNeg10Effect"]),
 }
 
-# UpgradePrototypeSIDs for a weapon must be owned by one generated patch. The
-# conversion attachment patch only owns CompatibleAttachments. Fora230 is kept
-# out of this cleanup for now because its conversion and module patches target
-# different GeneralSetup SIDs and needs separate verification.
-PISTOL_CONVERSION_UPGRADES = {
-    "GunViper_PP": "GunViper_Upgrade_BPRUE_PistolConversion",
-    "GunAKU_PP": "GunAKU_Upgrade_BPRUE_PistolConversion",
-    "GunBucket_PP": "GunBucket_Upgrade_BPRUE_PistolConversion",
-    "GunIntegral_PP": "GunIntegral_Upgrade_BPRUE_PistolConversion",
-    "GunZubr_PP": "GunZubr_Upgrade_BPRUE_PistolConversion",
+PISTOL_CONVERSIONS = {
+    "GunViper_PP": ("GunViper_Upgrade_BPRUE_PistolConversion", "sid_bprue_viper_pistol_conversion_name", "sid_bprue_viper_pistol_conversion_description", 2500),
+    "GunAKU_PP": ("GunAKU_Upgrade_BPRUE_PistolConversion", "sid_bprue_smg_pistol_conversion_name", "sid_bprue_smg_pistol_conversion_description", 2500),
+    "GunBucket_PP": ("GunBucket_Upgrade_BPRUE_PistolConversion", "sid_bprue_smg_pistol_conversion_name", "sid_bprue_smg_pistol_conversion_description", 3000),
+    "GunIntegral_PP": ("GunIntegral_Upgrade_BPRUE_PistolConversion", "sid_bprue_smg_pistol_conversion_name", "sid_bprue_smg_pistol_conversion_description", 3500),
+    "GunZubr_PP": ("GunZubr_Upgrade_BPRUE_PistolConversion", "sid_bprue_smg_pistol_conversion_name", "sid_bprue_smg_pistol_conversion_description", 4000),
+    "GunFora230_PP_GS": ("GunFora230_Upgrade_BPRUE_PistolConversion", "sid_bprue_smg_pistol_conversion_name", "sid_bprue_smg_pistol_conversion_description", 3000),
 }
 
 CALIBER_DATA = {
-    "A918": {
-        "name_sid": "sid_bprue_smg_caliber_a918_name",
-        "hint_sid": "sid_bprue_smg_caliber_a918_description",
-        "change_effect": "ChangeCaliber918Effect",
-        "add_ammo_effect": "ChangeAmmoTypes918Effect",
-        "remove_ammo_effect": "BPRUE_SMG_ChangeAmmoTypesNo918Effect",
-        "cost": 2400,
-    },
-    "A919": {
-        "name_sid": "sid_bprue_smg_caliber_a919_name",
-        "hint_sid": "sid_bprue_smg_caliber_a919_description",
-        "change_effect": "ChangeCaliber919Effect",
-        "add_ammo_effect": "BPRUE_SMG_ChangeAmmoTypes919Effect",
-        "remove_ammo_effect": "ChangeAmmoTypesNo919Effect",
-        "cost": 2600,
-    },
-    "A045": {
-        "name_sid": "sid_bprue_smg_caliber_a045_name",
-        "hint_sid": "sid_bprue_smg_caliber_a045_description",
-        "change_effect": "ChangeCaliber045Effect",
-        "add_ammo_effect": "ChangeAmmoTypes045Effect",
-        "remove_ammo_effect": "ChangeAmmoTypesNo045Effect",
-        "cost": 3000,
-    },
+    "A918": {"name_sid": "sid_bprue_smg_caliber_a918_name", "hint_sid": "sid_bprue_smg_caliber_a918_description", "change_effect": "ChangeCaliber918Effect", "add_ammo_effect": "ChangeAmmoTypes918Effect", "remove_ammo_effect": "BPRUE_SMG_ChangeAmmoTypesNo918Effect", "cost": 2400},
+    "A919": {"name_sid": "sid_bprue_smg_caliber_a919_name", "hint_sid": "sid_bprue_smg_caliber_a919_description", "change_effect": "ChangeCaliber919Effect", "add_ammo_effect": "BPRUE_SMG_ChangeAmmoTypes919Effect", "remove_ammo_effect": "ChangeAmmoTypesNo919Effect", "cost": 2600},
+    "A045": {"name_sid": "sid_bprue_smg_caliber_a045_name", "hint_sid": "sid_bprue_smg_caliber_a045_description", "change_effect": "ChangeCaliber045Effect", "add_ammo_effect": "ChangeAmmoTypes045Effect", "remove_ammo_effect": "ChangeAmmoTypesNo045Effect", "cost": 3000},
 }
 
 IMAGE = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/AK74/Barrel/Upgrade/T_AK47_Upg_a_1.T_AK47_Upg_a_1'"
@@ -98,12 +74,8 @@ def render_upgrades(config):
             current = sid(key)
             lines += [
                 f"{current} : struct.begin {{refkey=BPRUE_SMGModuleTemplate}}",
-                f"   SID = {current}",
-                f"   Text = {text}",
-                f"   Hint = {hint}",
-                f"   Image = {IMAGE}",
-                f"   Icon = {ICON}",
-                f"   BaseCost = {cost}",
+                f"   SID = {current}", f"   Text = {text}", f"   Hint = {hint}",
+                f"   Image = {IMAGE}", f"   Icon = {ICON}", f"   BaseCost = {cost}",
                 f"   VerticalPosition = EUpgradeVerticalPosition::{vertical}",
                 f"   UpgradeTargetPart = EUpgradeTargetPartType::{target}",
             ]
@@ -111,31 +83,43 @@ def render_upgrades(config):
             lines += array("BlockingUpgradePrototypeSIDs", [x for x in group_sids if x != current])
             lines += ["struct.end", ""]
 
-    for family_name, family in config.get("caliber_families", {}).items():
+    for family in config.get("caliber_families", {}).values():
         conversion_sids = [caliber_sid(family, caliber) for caliber in family["conversions"]]
-        source_caliber = family["base_caliber"]
-        source_remove_effect = CALIBER_DATA[source_caliber]["remove_ammo_effect"]
+        source_remove_effect = CALIBER_DATA[family["base_caliber"]]["remove_ammo_effect"]
         for caliber in family["conversions"]:
             data = CALIBER_DATA[caliber]
             current = caliber_sid(family, caliber)
             lines += [
                 f"{current} : struct.begin {{refkey=BPRUE_SMGModuleTemplate}}",
-                f"   SID = {current}",
-                f"   Text = {data['name_sid']}",
-                f"   Hint = {data['hint_sid']}",
-                f"   Image = {IMAGE}",
-                f"   Icon = {CALIBER_ICON}",
-                f"   BaseCost = {data['cost']}",
+                f"   SID = {current}", f"   Text = {data['name_sid']}", f"   Hint = {data['hint_sid']}",
+                f"   Image = {IMAGE}", f"   Icon = {CALIBER_ICON}", f"   BaseCost = {data['cost']}",
                 "   VerticalPosition = EUpgradeVerticalPosition::Top",
                 "   UpgradeTargetPart = EUpgradeTargetPartType::Body",
             ]
-            lines += array("EffectPrototypeSIDs", [
-                data["change_effect"],
-                source_remove_effect,
-                data["add_ammo_effect"],
-            ])
+            lines += array("EffectPrototypeSIDs", [data["change_effect"], source_remove_effect, data["add_ammo_effect"]])
             lines += array("BlockingUpgradePrototypeSIDs", [x for x in conversion_sids if x != current])
             lines += ["struct.end", ""]
+
+    # Pistol-conversion upgrades used to be a checked-in split CFG that the
+    # merger tried to preserve between runs. Generate them here instead so they
+    # pass through the same layout step as every other SMG specialization.
+    lines += [
+        "// --- SMG pistol-conversion modules --------------------------------------",
+        "",
+        "BPRUE_SMGConversionUpgradeTemplate : struct.begin {refkey=BPRUE_SMGModuleTemplate}",
+        "   SID = BPRUE_SMGConversionUpgradeTemplate",
+        "struct.end",
+        "",
+    ]
+    for _, (current, text, hint, cost) in PISTOL_CONVERSIONS.items():
+        lines += [
+            f"{current} : struct.begin {{refkey=BPRUE_SMGConversionUpgradeTemplate}}",
+            f"   SID = {current}", f"   Text = {text}", f"   Hint = {hint}",
+            f"   Image = {IMAGE}", f"   Icon = {CALIBER_ICON}", f"   BaseCost = {cost}",
+            "   VerticalPosition = EUpgradeVerticalPosition::Down",
+            "   UpgradeTargetPart = EUpgradeTargetPartType::Body",
+            "struct.end", "",
+        ]
 
     return "\n".join(lines)
 
@@ -189,8 +173,6 @@ BPRUE_SMG_ChangeAmmoTypesNo918Effect : struct.begin {refurl=@BaseGame/EffectProt
    ShowUpgradeEffect = false
 struct.end
 
-// Required by the Viper compact/pistol conversion attachment. Keep this in the
-// generated SMG effect output so generate_all_cfg.py cannot remove it.
 BPRUE_VIPER_TEST : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_VIPER_TEST
    Type = EEffectType::CameraShake
@@ -204,26 +186,18 @@ struct.end
 def render_weapons(config):
     module_sids = [sid(key) for keys in config["module_groups"].values() for key in keys]
     by_general_setup: dict[str, list[str]] = {}
-
     for family in config["families"].values():
         by_general_setup.setdefault(family["general_setup_sid"], []).extend(module_sids)
-
     for family in config.get("caliber_families", {}).values():
         target = by_general_setup.setdefault(family["general_setup_sid"], [])
         target.extend(caliber_sid(family, caliber) for caliber in family["conversions"])
-
-    # Keep all UpgradePrototypeSIDs for these weapons in this one patch. Their
-    # conversion CFG only patches CompatibleAttachments, avoiding two bpatches
-    # of the same UpgradePrototypeSIDs array.
-    for general_setup_sid, conversion_sid in PISTOL_CONVERSION_UPGRADES.items():
+    for general_setup_sid, (conversion_sid, _, _, _) in PISTOL_CONVERSIONS.items():
         by_general_setup.setdefault(general_setup_sid, []).append(conversion_sid)
 
     lines = [
-        "// AUTO-GENERATED - Source: smg_upgrades.json",
-        "",
+        "// AUTO-GENERATED - Source: smg_upgrades.json", "",
         "// Shared specialization modules, caliber conversions and pistol-conversion upgrades.",
-        "// This file is the single owner of UpgradePrototypeSIDs for these SMGs.",
-        "",
+        "// This file is the single owner of UpgradePrototypeSIDs for these SMGs.", "",
     ]
     for general_setup_sid, upgrade_sids in by_general_setup.items():
         unique_sids = list(dict.fromkeys(upgrade_sids))
@@ -231,20 +205,14 @@ def render_weapons(config):
             f"{general_setup_sid} : struct.begin {{bpatch}}",
             "   UpgradePrototypeSIDs : struct.begin {bpatch}",
             *[f"      [*] = {x}" for x in unique_sids],
-            "   struct.end",
-            "struct.end",
-            "",
+            "   struct.end", "struct.end", "",
         ]
     return "\n".join(lines)
 
 
 def main():
     config = load_config()
-    for path, content in {
-        UPGRADE_OUTPUT_PATH: render_upgrades(config),
-        EFFECT_OUTPUT_PATH: render_effects(),
-        WEAPON_OUTPUT_PATH: render_weapons(config),
-    }.items():
+    for path, content in {UPGRADE_OUTPUT_PATH: render_upgrades(config), EFFECT_OUTPUT_PATH: render_effects(), WEAPON_OUTPUT_PATH: render_weapons(config)}.items():
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(content, encoding="utf-8")
         print(f"Generated {path}")
