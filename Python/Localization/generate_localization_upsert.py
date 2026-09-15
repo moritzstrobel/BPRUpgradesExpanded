@@ -6,15 +6,14 @@ ASSET_PATH = "/BPRUpgradesExpanded/Localization/L_BPRUpgradesExpanded"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 LOCALIZATION_FILES = (
     os.path.join(SCRIPT_DIR, "Blueprint_Localization.json"),
+    os.path.join(SCRIPT_DIR, "Weapon_Module_Localization.json"),
     os.path.join(SCRIPT_DIR, "Effect_Localization.json"),
 )
 
 
 def log(message): unreal.log(f"[BlueprintLocalization] {message}")
-
 def escape_unreal_string(value):
     return str(value).replace("\\", "\\\\").replace('"', '\\"').replace("\r", "").replace("\n", "\\n")
-
 
 def read_localization_files(paths):
     normalized=[]; seen=set()
@@ -34,11 +33,9 @@ def read_localization_files(paths):
         log(f"Read {len(entries)} entries from {os.path.basename(path)}")
     return normalized
 
-
 def make_struct_text(sid,languages):
     parts=[f'({language}, "{escape_unreal_string(text)}")' for language,text in languages.items()]
     return f'(SID="{escape_unreal_string(sid)}",LanguagesToLocalizedStrings=({",".join(parts)}))'
-
 
 def get_sid(entry): return str(entry.get_editor_property("SID"))
 
