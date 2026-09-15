@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "description": "Pistol specialization system: two shared three-way module groups plus one weapon-specific signature module per normal pistol family. Unique variants are intentionally excluded.",
+  "families": {
+    "PTM": {"weapon_sid":"GunPM_HG","general_setup_sid":"GunPM_HG","prototype_prefix":"GunPM","cost_scale":0.75,"signature":"quick_response"},
+    "UDP": {"weapon_sid":"GunUDP_HG","general_setup_sid":"GunUDP_HG","prototype_prefix":"GunUDP","cost_scale":1.0,"signature":"match_barrel"},
+    "APSB": {"weapon_sid":"GunAPB_HG","general_setup_sid":"GunAPB_HG","prototype_prefix":"GunAPB","cost_scale":1.15,"signature":"automatic_sear"},
+    "Rhino": {"weapon_sid":"GunRhino_HG","general_setup_sid":"GunRhino_HG","prototype_prefix":"GunRhino","cost_scale":1.4,"signature":"hunting_cylinder"},
+    "M10": {"weapon_sid":"GunM10_HG","general_setup_sid":"GunM10_HG","prototype_prefix":"GunM10","cost_scale":1.0,"signature":"selectable_fire_control"}
+  },
+  "module_groups": {
+    "action": ["high_speed", "balanced", "controlled"],
+    "handling": ["quick_draw", "tactical", "stabilized"]
+  },
+  "signature_modules": {
+    "quick_response": {"name":"Quick-Response Package","concept":"Turns the PTM into an extreme emergency sidearm with faster draw, aiming and reload at the cost of recoil and wear."},
+    "match_barrel": {"name":"Match Barrel Assembly","concept":"Pushes the UDP toward a precise mid-range sidearm with tighter dispersion and better effective range at the cost of handling."},
+    "automatic_sear": {"name":"Automatic Sear","concept":"Adds automatic fire to the APB's existing three-round burst fire mode using the vanilla ChangeFireTypeEffectBurstAuto effect."},
+    "hunting_cylinder": {"name":"Hunting Cylinder","concept":"Heavy-hitting Rhino specialization. Exact ammo/effect behavior remains intentionally conservative until its existing 12-gauge conversion path is accounted for."},
+    "selectable_fire_control": {"name":"Selectable Fire Control","concept":"Adds semi-automatic fire alongside the M10's native automatic mode using the vanilla ChangeFireTypeEffectSemiAuto effect."}
+  }
+}
