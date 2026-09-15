@@ -4,8 +4,17 @@ import sys
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-WEAPONS_DIR = SCRIPT_DIR / "CFGGenerators" / "Weapons"
-sys.path.insert(0, str(WEAPONS_DIR))
+CFG_ROOT = SCRIPT_DIR / "CFGGenerators"
+COMMON_DIR = CFG_ROOT / "Common"
+CLASS_DIRS = (
+    CFG_ROOT / "AssaultRifles",
+    CFG_ROOT / "SMGs",
+    CFG_ROOT / "Shotguns",
+    CFG_ROOT / "Pistols",
+    CFG_ROOT / "Snipers",
+)
+for module_dir in (COMMON_DIR, *CLASS_DIRS):
+    sys.path.insert(0, str(module_dir))
 
 import generate_assault_rifle_upgrades as ar
 import generate_pistol_upgrades as pistol
@@ -15,7 +24,11 @@ import generate_sniper_upgrades as sniper
 from apply_module_layout import apply_layout_to_model
 from smg_conversion_attachments import CONVERSION_ATTACHMENTS, attachment_block
 from upgrade_build_model import UpgradeBuildModel
-from upgrade_renderers import render_consolidated_upgrade_prototypes, render_final_general_setup_patch, render_technician_patch
+from upgrade_renderers import (
+    render_consolidated_upgrade_prototypes,
+    render_final_general_setup_patch,
+    render_technician_patch,
+)
 
 CONTENT_ROOT = SCRIPT_DIR.parent
 UPGRADES_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/UpgradePrototypes/BPRUE_UpgradePrototypes.cfg"
