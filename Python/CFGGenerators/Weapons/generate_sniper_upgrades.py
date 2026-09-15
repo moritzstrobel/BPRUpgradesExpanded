@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 
 from upgrade_build_model import UpgradeBuildModel, UpgradeDefinition
+from upgrade_renderers import render_general_setup_patch, render_upgrade_prototypes
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PYTHON_ROOT = SCRIPT_DIR.parents[1]
@@ -102,32 +103,6 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
     return upgrades
 
 
-def render_upgrades(model: UpgradeBuildModel) -> str:
-    lines = [
-        "// AUTO-GENERATED - Source: sniper_upgrades.json via UpgradeBuildModel",
-        "// Three mutually-exclusive specialization groups plus one standalone family signature.", "",
-        f"{TEMPLATE_SID} : struct.begin {{refurl=@BaseGame/UpgradePrototypes.cfg;refkey=[0]}}",
-        f"   SID = {TEMPLATE_SID}", "   IsModification = true", "struct.end", "",
-    ]
-    for upgrade in model.upgrades:
-        lines += [
-            f"{upgrade.sid} : struct.begin {{refkey={upgrade.template_sid}}}",
-            f"   SID = {upgrade.sid}", f"   Text = {upgrade.text_sid}", f"   Hint = {upgrade.hint_sid}",
-            f"   Image = {upgrade.image}", f"   Icon = {upgrade.icon}", f"   BaseCost = {upgrade.cost}",
-        ]
-        if upgrade.horizontal_position is not None:
-            lines.append(f"   HorizontalPosition = {upgrade.horizontal_position}")
-        if upgrade.vertical_position is not None:
-            lines.append(f"   VerticalPosition = EUpgradeVerticalPosition::{upgrade.vertical_position}")
-        lines += [f"   UpgradeTargetPart = EUpgradeTargetPartType::{upgrade.target_part}", "   EffectPrototypeSIDs : struct.begin"]
-        lines += [f"      [{i}] = {effect}" for i, effect in enumerate(upgrade.effects)] + ["   struct.end"]
-        if upgrade.blocking_sids:
-            lines += ["   BlockingUpgradePrototypeSIDs : struct.begin"]
-            lines += [f"      [{i}] = {blocked}" for i, blocked in enumerate(upgrade.blocking_sids)] + ["   struct.end"]
-        lines += ["struct.end", ""]
-    return "\n".join(lines)
-
-
 def render_effects() -> str:
     definitions = [
         ("BPRUE_Sniper_RecoilPenalty10Effect", "Recoil", "10%", "Negative"),
@@ -155,15 +130,6 @@ def render_effects() -> str:
     return "\n".join(lines)
 
 
-def render_weapons(model: UpgradeBuildModel) -> str:
-    lines = ["// AUTO-GENERATED - Source: UpgradeBuildModel", "// Vintar, GP3A and unique variants are intentionally excluded from this pass.", ""]
-    for general_setup_sid, upgrades in model.by_general_setup().items():
-        lines += [f"{general_setup_sid} : struct.begin {{bpatch}}", "   UpgradePrototypeSIDs : struct.begin {bpatch}"]
-        lines += [f"      [*] = {upgrade.sid}" for upgrade in upgrades]
-        lines += ["   struct.end", "struct.end", ""]
-    return "\n".join(lines)
-
-
 def all_upgrade_sids(config: dict) -> list[str]:
     return [upgrade.sid for upgrade in build_upgrades(config)]
 
@@ -173,7 +139,20 @@ def main() -> None:
     model = UpgradeBuildModel()
     model.extend(build_upgrades(config))
     model.validate()
-    for path, content in {UPGRADE_OUTPUT: render_upgrades(model), EFFECT_OUTPUT: render_effects(), WEAPON_OUTPUT: render_weapons(model)}.items():
+    outputs = {
+        UPGRADE_OUTPUT: render_upgrade_prototypes(
+            model,
+            source="sniper_upgrades.json",
+            template_sid=TEMPLATE_SID,
+            header_comments=("Three mutually-exclusive specialization groups plus one standalone family signature.",),
+        ),
+        EFFECT_OUTPUT: render_effects(),
+        WEAPON_OUTPUT: render_general_setup_patch(
+            model,
+            header_comments=("Vintar, GP3A and unique variants are intentionally excluded from this pass.",),
+        ),
+    }
+    for path, content in outputs.items():
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(content, encoding="utf-8")
         print(f"Generated {path}")
