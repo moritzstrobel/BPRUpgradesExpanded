@@ -176,6 +176,16 @@ BPRUE_SMG_ChangeAmmoTypesNo918Effect : struct.begin {refurl=@BaseGame/EffectProt
    ShowUpgradeEffectValue = false
    ShowUpgradeEffect = false
 struct.end
+
+// Required by the Viper compact/pistol conversion attachment. Keep this in the
+// generated SMG effect output so generate_all_cfg.py cannot remove it.
+BPRUE_VIPER_TEST : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_VIPER_TEST
+   Type = EEffectType::CameraShake
+   Positive = EBeneficial::Negative
+   CameraShakeEffectSubtype = ECameraShakeEffectSubtype::AddEffect
+   CameraShakePrototypeSID = BPR_PM_WeaponConversion_Shake
+struct.end
 """
 
 
