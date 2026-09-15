@@ -152,7 +152,12 @@ def patch_block(
     configs: dict[str, dict],
     columns: dict[str, dict[str, dict[str, int]]],
 ) -> tuple[list[str], tuple[str, str, int, tuple[str, ...]] | None]:
-    """Apply the calculated column to one generated top-level upgrade block."""
+    """Apply the calculated horizontal column to one generated module block.
+
+    Vanilla treats the first column as the implicit default: HorizontalPosition
+    is omitted for column 0. Vertical placement is normalized later by the final
+    merger because it depends on the number/order of variants sharing a column.
+    """
     sid = block[0].split(" :", 1)[0].strip()
     classified = classify(sid)
     if not classified:
@@ -178,15 +183,20 @@ def patch_block(
 
     setups = relevant_general_setups(sid, weapon_class, configs)
     column = columns[weapon_class][target][group]
-    new_line = f"   HorizontalPosition = {column}"
 
-    if horizontal_index is not None:
-        block[horizontal_index] = new_line
+    # Match vanilla serialization: H=0 is represented by no field at all.
+    if column == 0:
+        if horizontal_index is not None:
+            block.pop(horizontal_index)
     else:
-        insert_at = next(
-            (i for i, line in enumerate(block) if line.strip().startswith("VerticalPosition =")),
-            len(block) - 1,
-        )
-        block.insert(insert_at, new_line)
+        new_line = f"   HorizontalPosition = {column}"
+        if horizontal_index is not None:
+            block[horizontal_index] = new_line
+        else:
+            insert_at = next(
+                (i for i, line in enumerate(block) if line.strip().startswith("VerticalPosition =")),
+                len(block) - 1,
+            )
+            block.insert(insert_at, new_line)
 
     return block, (target, group, column, tuple(setups))
