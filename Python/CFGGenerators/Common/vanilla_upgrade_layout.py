@@ -54,24 +54,27 @@ def _direct_scalar(block: list[str], name: str) -> str | None:
 
 
 def _direct_child(block: list[str], name: str) -> list[str] | None:
-    i = 1
-    while i < len(block) - 1:
-        line = block[i]
+    """Find a named child struct without assuming a particular indentation width.
+
+    Vanilla WeaponPrototypes is not indentation-consistent across all weapon blocks.
+    The previous parser required exactly three leading spaces, while the proven
+    analysis parser correctly treats whitespace as formatting only.
+    """
+    for index, line in enumerate(block[1:-1], start=1):
         stripped = line.strip()
-        if line.startswith("   ") and not line.startswith("      ") and stripped.startswith(name + " : struct.begin"):
-            child = [line]
-            depth = 1
-            i += 1
-            while i < len(block) - 1 and depth:
-                child.append(block[i])
-                s = block[i].strip()
-                if "struct.begin" in s:
-                    depth += 1
-                if s == "struct.end":
-                    depth -= 1
-                i += 1
-            return child
-        i += 1
+        if not stripped.startswith(name + " : struct.begin"):
+            continue
+        child = [line]
+        depth = 1
+        for nested in block[index + 1:]:
+            child.append(nested)
+            nested_stripped = nested.strip()
+            if "struct.begin" in nested_stripped:
+                depth += 1
+            if nested_stripped == "struct.end":
+                depth -= 1
+                if depth == 0:
+                    return child
     return None
 
 
@@ -112,10 +115,8 @@ def _array_values(child: list[str] | None) -> list[str]:
 
 @lru_cache(maxsize=1)
 def vanilla_modifications() -> dict[str, tuple[str, int]]:
-    """Return vanilla modification SID -> (target part, horizontal column)."""
     if not VANILLA_UPGRADES.exists():
         raise FileNotFoundError(VANILLA_UPGRADES)
-
     result: dict[str, tuple[str, int]] = {}
     for block in _top_level_blocks(VANILLA_UPGRADES.read_text(encoding="utf-8")):
         if (_direct_scalar(block, "IsModification") or "").lower() != "true":
@@ -131,10 +132,8 @@ def vanilla_modifications() -> dict[str, tuple[str, int]]:
 
 @lru_cache(maxsize=1)
 def vanilla_general_setup_upgrades() -> dict[str, list[str]]:
-    """Return GeneralSetup SID -> its vanilla UpgradePrototypeSIDs."""
     if not VANILLA_GENERAL_SETUPS.exists():
         raise FileNotFoundError(VANILLA_GENERAL_SETUPS)
-
     result: dict[str, list[str]] = {}
     for block in _top_level_blocks(VANILLA_GENERAL_SETUPS.read_text(encoding="utf-8")):
         values = _array_values(_direct_child(block, "UpgradePrototypeSIDs"))
@@ -145,14 +144,8 @@ def vanilla_general_setup_upgrades() -> dict[str, list[str]]:
 
 @lru_cache(maxsize=1)
 def weapon_sections_by_general_setup() -> dict[str, dict[str, bool]]:
-    """Return every predefined weapon UI section keyed by GeneralWeaponSetup.
-
-    The bool is Vanilla SectionIsEnabled. Disabled sections are intentionally kept:
-    once the section-enabling PoC is proven, they become valid fallback capacity.
-    """
     if not VANILLA_WEAPONS.exists():
         raise FileNotFoundError(VANILLA_WEAPONS)
-
     result: dict[str, dict[str, bool]] = {}
     for block in _top_level_blocks(VANILLA_WEAPONS.read_text(encoding="utf-8")):
         general_setup = _direct_scalar(block, "GeneralWeaponSetup")
@@ -172,19 +165,14 @@ def weapon_sections_by_general_setup() -> dict[str, dict[str, bool]]:
 
 def available_target_parts(general_setup_sid: str, include_disabled: bool = False) -> tuple[str, ...]:
     sections = weapon_sections_by_general_setup().get(general_setup_sid, {})
-    return tuple(
-        target for target, enabled in sections.items()
-        if enabled or include_disabled
-    )
+    return tuple(target for target, enabled in sections.items() if enabled or include_disabled)
 
 
 @lru_cache(maxsize=1)
 def vanilla_compaction() -> dict[str, tuple[str, int, int]]:
-    """Return safe Vanilla column moves as SID -> (target, old H, new H)."""
     modifications = vanilla_modifications()
     setups = vanilla_general_setup_upgrades()
     requested: dict[str, set[tuple[str, int]]] = defaultdict(set)
-
     for upgrade_sids in setups.values():
         by_target: dict[str, list[tuple[str, int]]] = defaultdict(list)
         for sid in upgrade_sids:
@@ -192,13 +180,11 @@ def vanilla_compaction() -> dict[str, tuple[str, int, int]]:
             if modification:
                 target, horizontal = modification
                 by_target[target].append((sid, horizontal))
-
         for target, entries in by_target.items():
             occupied = sorted({horizontal for _, horizontal in entries})
             compact = {old: new for new, old in enumerate(occupied)}
             for sid, old in entries:
                 requested[sid].add((target, compact[old]))
-
     moves: dict[str, tuple[str, int, int]] = {}
     for sid, requests in requested.items():
         if len(requests) != 1:
@@ -220,22 +206,10 @@ def effective_vanilla_modifications() -> dict[str, tuple[str, int]]:
 
 def render_vanilla_compaction_patch() -> str:
     moves = vanilla_compaction()
-    lines = [
-        "// -----------------------------------------------------------------------------",
-        "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND",
-        "// Compacts safe Vanilla IsModification=true upgrade columns for BPRUE.",
-        "// -----------------------------------------------------------------------------",
-        "",
-    ]
+    lines = ["// -----------------------------------------------------------------------------", "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND", "// Compacts safe Vanilla IsModification=true upgrade columns for BPRUE.", "// -----------------------------------------------------------------------------", ""]
     for sid in sorted(moves):
         target, old, new = moves[sid]
-        lines += [
-            f"// {target}: H{old} -> H{new}",
-            f"{sid} : struct.begin {{bpatch}}",
-            f"   HorizontalPosition = {new}",
-            "struct.end",
-            "",
-        ]
+        lines += [f"// {target}: H{old} -> H{new}", f"{sid} : struct.begin {{bpatch}}", f"   HorizontalPosition = {new}", "struct.end", ""]
     return "\n".join(lines).rstrip() + "\n"
 
 
@@ -243,7 +217,6 @@ def modification_max_columns_for_general_setups(general_setup_sids: list[str]) -
     modifications = effective_vanilla_modifications()
     setup_upgrades = vanilla_general_setup_upgrades()
     maxima: dict[str, int] = {}
-
     for general_setup_sid in general_setup_sids:
         for upgrade_sid in setup_upgrades.get(general_setup_sid, []):
             modification = modifications.get(upgrade_sid)
@@ -255,7 +228,6 @@ def modification_max_columns_for_general_setups(general_setup_sids: list[str]) -
 
 
 def free_visible_columns(general_setup_sid: str, target_part: str) -> tuple[int, ...]:
-    """Visible H0-H2 columns not occupied by Vanilla modification columns."""
     maxima = modification_max_columns_for_general_setups([general_setup_sid])
     start = maxima.get(target_part, -1) + 1
     if start > MAX_VISIBLE_HORIZONTAL_POSITION:
@@ -263,9 +235,7 @@ def free_visible_columns(general_setup_sid: str, target_part: str) -> tuple[int,
     return tuple(range(start, MAX_VISIBLE_HORIZONTAL_POSITION + 1))
 
 
-def group_columns_for_general_setups(
-    general_setup_sids: list[str], target_part: str, groups: list[str]
-) -> dict[str, int]:
+def group_columns_for_general_setups(general_setup_sids: list[str], target_part: str, groups: list[str]) -> dict[str, int]:
     maxima = modification_max_columns_for_general_setups(general_setup_sids)
     start = maxima.get(target_part, -1) + 1
     return {group: start + index for index, group in enumerate(groups)}
