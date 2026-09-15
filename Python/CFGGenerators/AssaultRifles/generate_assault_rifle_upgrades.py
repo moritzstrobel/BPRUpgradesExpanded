@@ -123,6 +123,7 @@ struct.end
 
 BPRUE_DamagePos10Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=DamageTemplate}
    SID = BPRUE_DamagePos10Effect
+   LocalizationSID = bprue_damage
    ValueMin = 10%
    ValueMax = 10%
    ShowUpgradeEffectValue = true
@@ -131,6 +132,7 @@ struct.end
 
 BPRUE_DurabilityPerShotNeg10Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=DurabilityPerShotTemplate}
    SID = BPRUE_DurabilityPerShotNeg10Effect
+   LocalizationSID = bprue_weapon_wear
    ValueMin = 10%
    ValueMax = 10%
    Positive = EBeneficial::Negative
@@ -140,6 +142,7 @@ struct.end
 
 BPRUE_DurabilityPerShotNeg20Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=DurabilityPerShotTemplate}
    SID = BPRUE_DurabilityPerShotNeg20Effect
+   LocalizationSID = bprue_weapon_wear
    ValueMin = 20%
    ValueMax = 20%
    Positive = EBeneficial::Negative
