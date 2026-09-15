@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+from collections import defaultdict
 from functools import lru_cache
 from pathlib import Path
 
@@ -116,13 +117,77 @@ def vanilla_general_setup_upgrades() -> dict[str, list[str]]:
     return result
 
 
-def modification_max_columns_for_general_setups(general_setup_sids: list[str]) -> dict[str, int]:
-    """Max modification column per target part, restricted to concrete weapons.
+@lru_cache(maxsize=1)
+def vanilla_compaction() -> dict[str, tuple[str, int, int]]:
+    """Return safe Vanilla column moves as SID -> (target, old H, new H).
 
-    This is intentionally NOT global. A high Body column on an unrelated weapon
-    must never push SMG/sniper modules outside the layout of their own weapons.
+    Each GeneralSetup is compacted independently by mapping its occupied modification
+    columns to 0..N while preserving column order. Upgrade prototypes are global, so
+    a move is emitted only when every GeneralSetup using that SID requests the same
+    target/new column. Ambiguous shared prototypes are deliberately left untouched.
     """
     modifications = vanilla_modifications()
+    setups = vanilla_general_setup_upgrades()
+    requested: dict[str, set[tuple[str, int]]] = defaultdict(set)
+
+    for upgrade_sids in setups.values():
+        by_target: dict[str, list[tuple[str, int]]] = defaultdict(list)
+        for sid in upgrade_sids:
+            modification = modifications.get(sid)
+            if modification:
+                target, horizontal = modification
+                by_target[target].append((sid, horizontal))
+
+        for target, entries in by_target.items():
+            occupied = sorted({horizontal for _, horizontal in entries})
+            compact = {old: new for new, old in enumerate(occupied)}
+            for sid, old in entries:
+                requested[sid].add((target, compact[old]))
+
+    moves: dict[str, tuple[str, int, int]] = {}
+    for sid, requests in requested.items():
+        if len(requests) != 1:
+            continue
+        target, new = next(iter(requests))
+        original_target, old = modifications[sid]
+        if target == original_target and new != old:
+            moves[sid] = (target, old, new)
+    return moves
+
+
+@lru_cache(maxsize=1)
+def effective_vanilla_modifications() -> dict[str, tuple[str, int]]:
+    """Vanilla modification layout after applying the generated compaction patch."""
+    result = dict(vanilla_modifications())
+    for sid, (target, _old, new) in vanilla_compaction().items():
+        result[sid] = (target, new)
+    return result
+
+
+def render_vanilla_compaction_patch() -> str:
+    moves = vanilla_compaction()
+    lines = [
+        "// -----------------------------------------------------------------------------",
+        "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND",
+        "// Compacts safe Vanilla IsModification=true upgrade columns for BPRUE.",
+        "// -----------------------------------------------------------------------------",
+        "",
+    ]
+    for sid in sorted(moves):
+        target, old, new = moves[sid]
+        lines += [
+            f"// {target}: H{old} -> H{new}",
+            f"{sid} : struct.begin {{bpatch}}",
+            f"   HorizontalPosition = {new}",
+            "struct.end",
+            "",
+        ]
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def modification_max_columns_for_general_setups(general_setup_sids: list[str]) -> dict[str, int]:
+    """Max effective Vanilla modification column per target part for concrete weapons."""
+    modifications = effective_vanilla_modifications()
     setup_upgrades = vanilla_general_setup_upgrades()
     maxima: dict[str, int] = {}
 
