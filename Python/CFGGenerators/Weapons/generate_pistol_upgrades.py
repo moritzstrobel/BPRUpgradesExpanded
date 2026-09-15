@@ -62,7 +62,7 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
             for key, (cost, effects) in definitions.items():
                 current = module_sid(prefix, group, key)
                 result.append(UpgradeDefinition(
-                    sid=current, general_setup_sids=(setup,), weapon_class="Pistol", group=group,
+                    sid=current, general_setup_sid=setup, weapon_class="Pistol", group=group,
                     target_part=target, text_sid=f"sid_bprue_pistol_{key}_name",
                     hint_sid=f"sid_bprue_pistol_{key}_description", image=IMAGE, icon=ICON,
                     cost=round(cost * scale), effects=tuple(effects),
@@ -72,7 +72,7 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
         key = family["signature"]
         cost, effects = SIGNATURES[key]
         result.append(UpgradeDefinition(
-            sid=signature_sid(prefix, key), general_setup_sids=(setup,), weapon_class="Pistol",
+            sid=signature_sid(prefix, key), general_setup_sid=setup, weapon_class="Pistol",
             group="Signature", target_part="Barrel", text_sid=f"sid_bprue_pistol_{key}_name",
             hint_sid=f"sid_bprue_pistol_{key}_description", image=IMAGE, icon=ICON,
             cost=round(cost * scale), effects=tuple(effects), vertical_position="Top",
