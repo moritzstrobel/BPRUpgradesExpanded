@@ -9,6 +9,7 @@ CONTENT_ROOT = PYTHON_ROOT.parent
 AR_CONFIG_PATH = SCRIPT_DIR / "assault_rifles_upgrades.json"
 SHOTGUN_CONFIG_PATH = SCRIPT_DIR / "shotgun_upgrades.json"
 PISTOL_CONFIG_PATH = SCRIPT_DIR / "pistol_upgrades.json"
+SNIPER_CONFIG_PATH = SCRIPT_DIR / "sniper_upgrades.json"
 NPC_OUTPUT_PATH = CONTENT_ROOT / "GameLite" / "GameData" / "NPCPrototypes" / "NPCPrototypes_patch_BPRUE.cfg"
 
 CONVERSION_UPGRADE_SIDS = [
@@ -30,38 +31,42 @@ SMG_CALIBER_SIDS = [
     "GunM10_Upgrade_BPRUE_Caliber_A919", "GunM10_Upgrade_BPRUE_Caliber_A918",
 ]
 
-
 def load_technician_sids() -> list[str]:
     config = json.loads(AR_CONFIG_PATH.read_text(encoding="utf-8"))
     technician = config["technician"]
     return list(dict.fromkeys([technician["prototype_sid"], technician["all_prototype_sid"], *technician.get("concrete_prototype_sids", [])]))
 
-
 def shotgun_module_sids() -> list[str]:
     config = json.loads(SHOTGUN_CONFIG_PATH.read_text(encoding="utf-8"))
-    result: list[str] = []
+    result = []
     for family in config["families"].values():
         prefix = family["prototype_prefix"]
         for group, choices in config["module_groups"].items():
-            group_name = group.title()
             for choice in choices:
-                result.append(f"{prefix}_Upgrade_BPRUE_SG_{group_name}_{choice.title().replace('_', '')}")
+                result.append(f"{prefix}_Upgrade_BPRUE_SG_{group.title()}_{choice.title().replace('_', '')}")
     return result
-
 
 def pistol_module_sids() -> list[str]:
     config = json.loads(PISTOL_CONFIG_PATH.read_text(encoding="utf-8"))
-    result: list[str] = []
+    result = []
     for family in config["families"].values():
         prefix = family["prototype_prefix"]
         for group, choices in config["module_groups"].items():
-            group_name = group.title()
             for choice in choices:
-                result.append(f"{prefix}_Upgrade_BPRUE_Pistol_{group_name}_{choice.title().replace('_', '')}")
-        signature = family["signature"].title().replace("_", "")
-        result.append(f"{prefix}_Upgrade_BPRUE_Pistol_Signature_{signature}")
+                result.append(f"{prefix}_Upgrade_BPRUE_Pistol_{group.title()}_{choice.title().replace('_', '')}")
+        result.append(f"{prefix}_Upgrade_BPRUE_Pistol_Signature_{family['signature'].title().replace('_', '')}")
     return result
 
+def sniper_module_sids() -> list[str]:
+    config = json.loads(SNIPER_CONFIG_PATH.read_text(encoding="utf-8"))
+    result = []
+    for family in config["families"].values():
+        prefix = family["prototype_prefix"]
+        for group, choices in config["module_groups"].items():
+            for choice in choices:
+                result.append(f"{prefix}_Upgrade_BPRUE_Sniper_{group.title()}_{choice.title().replace('_', '')}")
+        result.append(f"{prefix}_Upgrade_BPRUE_Sniper_Signature_{family['signature'].title().replace('_', '')}")
+    return result
 
 def merge_into_technician_block(content: str, technician_sid: str, upgrade_sids: list[str]) -> str:
     block_start = f"{technician_sid} : struct.begin {{bpatch}}\n"
@@ -80,15 +85,14 @@ def merge_into_technician_block(content: str, technician_sid: str, upgrade_sids:
     if marker_pos < 0:
         raise ValueError(f"Upgrades block not found: {technician_sid}")
     insert_pos = start + marker_pos + len(marker)
-    entries: list[str] = []
+    entries = []
     for sid in missing:
         entries += ["      [*] : struct.begin", f"         UpgradePrototypeSID = {sid}", "         Enabled = true", "      struct.end"]
     return content[:insert_pos] + "\n".join(entries) + "\n" + content[insert_pos:]
 
-
 def main() -> None:
     content = NPC_OUTPUT_PATH.read_text(encoding="utf-8")
-    upgrade_sids = CONVERSION_UPGRADE_SIDS + SMG_MODULE_SIDS + SMG_CALIBER_SIDS + shotgun_module_sids() + pistol_module_sids()
+    upgrade_sids = CONVERSION_UPGRADE_SIDS + SMG_MODULE_SIDS + SMG_CALIBER_SIDS + shotgun_module_sids() + pistol_module_sids() + sniper_module_sids()
     for technician_sid in load_technician_sids():
         content = merge_into_technician_block(content, technician_sid, upgrade_sids)
     for old_comment in (
@@ -96,11 +100,11 @@ def main() -> None:
         "// All BPRUE assault-rifle modules, SMG specialization/caliber modules and pistol-conversion upgrades are available at all technicians.",
         "// All BPRUE assault-rifle, SMG and shotgun specialization modules are available at all technicians.",
         "// All BPRUE assault-rifle, SMG, shotgun and pistol signature modules are available at all technicians.",
+        "// All BPRUE assault-rifle, SMG, shotgun and pistol specialization modules are available at all technicians.",
     ):
-        content = content.replace(old_comment, "// All BPRUE assault-rifle, SMG, shotgun and pistol specialization modules are available at all technicians.")
+        content = content.replace(old_comment, "// All BPRUE assault-rifle, SMG, shotgun, pistol and sniper specialization modules are available at all technicians.")
     NPC_OUTPUT_PATH.write_text(content, encoding="utf-8")
-    print(f"Merged SMG, shotgun and pistol specialization upgrades into {NPC_OUTPUT_PATH}")
-
+    print(f"Merged SMG, shotgun, pistol and sniper specialization upgrades into {NPC_OUTPUT_PATH}")
 
 if __name__ == "__main__":
     main()
