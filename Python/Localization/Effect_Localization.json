@@ -1,0 +1,15 @@
+{
+  "_comment": "Shared UI labels for BPRUE EffectPrototypes. LocalizationSID values in CFG omit the sid_effects_ prefix and _name suffix used by the localization asset.",
+  "entries": [
+    {"sid":"sid_effects_bprue_recoil_name","languages":{"English":"Recoil","Russian":"Отдача"}},
+    {"sid":"sid_effects_bprue_aiming_speed_name","languages":{"English":"Aiming speed","Russian":"Скорость прицеливания"}},
+    {"sid":"sid_effects_bprue_weight_name","languages":{"English":"Weapon weight","Russian":"Вес оружия"}},
+    {"sid":"sid_effects_bprue_accuracy_name","languages":{"English":"Accuracy","Russian":"Точность"}},
+    {"sid":"sid_effects_bprue_recoil_recovery_name","languages":{"English":"Recoil recovery","Russian":"Восстановление после отдачи"}},
+    {"sid":"sid_effects_bprue_aiming_stability_name","languages":{"English":"Aiming stability","Russian":"Стабильность прицеливания"}},
+    {"sid":"sid_effects_bprue_weapon_wear_name","languages":{"English":"Weapon wear","Russian":"Износ оружия"}},
+    {"sid":"sid_effects_bprue_pellet_count_name","languages":{"English":"Pellet count","Russian":"Количество дробин"}},
+    {"sid":"sid_effects_bprue_effective_range_name","languages":{"English":"Effective range","Russian":"Эффективная дальность"}},
+    {"sid":"sid_effects_bprue_damage_name","languages":{"English":"Damage","Russian":"Урон"}}
+  ]
+}

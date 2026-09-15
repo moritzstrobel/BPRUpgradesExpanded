@@ -1,0 +1,2122 @@
+{
+  "weapon_count": 32,
+  "missing_weapons": [],
+  "section_count_distribution": {
+    "5": 32
+  },
+  "weapons": [
+    {
+      "weapon_sid": "GunAK74_ST",
+      "section_count": 5,
+      "enabled_count": 3,
+      "disabled_count": 2,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "3.014559",
+          "right": "100.000000",
+          "left": "306.115112",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-54.683498",
+          "right": "100.000000",
+          "left": "8.022902",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-53.250229",
+          "right": "100.000000",
+          "left": "-63.876678",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "15.830881",
+          "right": "100.000000",
+          "left": "-206.023209",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-68.977211",
+          "right": "100.000000",
+          "left": "-375.381561",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "AssaultRifles"
+      ]
+    },
+    {
+      "weapon_sid": "GunAKU_PP",
+      "section_count": 5,
+      "enabled_count": 4,
+      "disabled_count": 1,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-30.650976",
+          "right": "100.000000",
+          "left": "231.321609",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-70.489159",
+          "right": "100.000000",
+          "left": "68.134018",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-60.276127",
+          "right": "100.000000",
+          "left": "-85.048820",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "55.519634",
+          "right": "100.000000",
+          "left": "-198.979034",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-98.671959",
+          "right": "100.000000",
+          "left": "-401.919983",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "SMGs"
+      ]
+    },
+    {
+      "weapon_sid": "GunAPB_HG",
+      "section_count": 5,
+      "enabled_count": 3,
+      "disabled_count": 2,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-58.576141",
+          "right": "100.000000",
+          "left": "168.075165",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-68.935555",
+          "right": "100.000000",
+          "left": "-1.661914",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-65.182724",
+          "right": "100.000000",
+          "left": "-131.327164",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "2.206796",
+          "right": "100.000000",
+          "left": "-164.465561",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": false,
+          "bottom": "100.000000",
+          "top": "-113.000000",
+          "right": "100.000000",
+          "left": "-450.000000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        }
+      ],
+      "classes": [
+        "Pistols"
+      ]
+    },
+    {
+      "weapon_sid": "GunArev_ST",
+      "section_count": 5,
+      "enabled_count": 5,
+      "disabled_count": 0,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-20.500000",
+          "right": "100.000000",
+          "left": "245.500000",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-55.500000",
+          "right": "100.000000",
+          "left": "13.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-92.500000",
+          "right": "100.000000",
+          "left": "-136.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "0.500000",
+          "right": "100.000000",
+          "left": "-202.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "100.000000",
+          "top": "-163.500000",
+          "right": "100.000000",
+          "left": "-338.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "AssaultRifles"
+      ]
+    },
+    {
+      "weapon_sid": "GunBucket_PP",
+      "section_count": 5,
+      "enabled_count": 4,
+      "disabled_count": 1,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-29.660309",
+          "right": "100.000000",
+          "left": "241.062881",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-39.130508",
+          "right": "100.000000",
+          "left": "89.029732",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-40.845089",
+          "right": "100.000000",
+          "left": "-43.006897",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "12.552917",
+          "right": "100.000000",
+          "left": "-138.073196",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "100.000000",
+          "top": "-115.600502",
+          "right": "100.000000",
+          "left": "-289.081909",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "SMGs"
+      ]
+    },
+    {
+      "weapon_sid": "GunD12_SG",
+      "section_count": 5,
+      "enabled_count": 5,
+      "disabled_count": 0,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-10.149179",
+          "right": "100.000000",
+          "left": "310.500336",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-46.552826",
+          "right": "100.000000",
+          "left": "47.738400",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-58.017174",
+          "right": "100.000000",
+          "left": "-60.195942",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-17.480515",
+          "right": "100.000000",
+          "left": "-226.732361",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "100.000000",
+          "top": "-143.500000",
+          "right": "100.000000",
+          "left": "-418.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "Shotguns"
+      ]
+    },
+    {
+      "weapon_sid": "GunDnipro_ST",
+      "section_count": 5,
+      "enabled_count": 4,
+      "disabled_count": 1,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "13.327178",
+          "right": "100.000000",
+          "left": "257.679596",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-9.716832",
+          "right": "100.000000",
+          "left": "12.011201",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-23.303967",
+          "right": "100.000000",
+          "left": "-65.751625",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "8.663312",
+          "right": "100.000000",
+          "left": "-182.918015",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "100.000000",
+          "top": "-123.500000",
+          "right": "100.000000",
+          "left": "-390.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "AssaultRifles"
+      ]
+    },
+    {
+      "weapon_sid": "GunFora230_PP",
+      "section_count": 5,
+      "enabled_count": 4,
+      "disabled_count": 1,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-8.500000",
+          "right": "100.000000",
+          "left": "249.500000",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "72.500000",
+          "right": "100.000000",
+          "left": "101.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-60.500000",
+          "right": "100.000000",
+          "left": "23.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "40.500000",
+          "right": "100.000000",
+          "left": "-62.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "100.000000",
+          "top": "-115.500000",
+          "right": "100.000000",
+          "left": "-414.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "SMGs"
+      ]
+    },
+    {
+      "weapon_sid": "GunFora_ST",
+      "section_count": 5,
+      "enabled_count": 4,
+      "disabled_count": 1,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "0.484189",
+          "right": "100.000000",
+          "left": "235.798843",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-16.847351",
+          "right": "100.000000",
+          "left": "24.879658",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-25.066002",
+          "right": "100.000000",
+          "left": "-159.988205",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "16.491449",
+          "right": "100.000000",
+          "left": "-253.947571",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "100.000000",
+          "top": "-127.500000",
+          "right": "100.000000",
+          "left": "-342.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        }
+      ],
+      "classes": [
+        "AssaultRifles"
+      ]
+    },
+    {
+      "weapon_sid": "GunG37_ST",
+      "section_count": 5,
+      "enabled_count": 4,
+      "disabled_count": 1,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "33.112823",
+          "right": "100.000000",
+          "left": "355.600159",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-25.600060",
+          "right": "100.000000",
+          "left": "27.893497",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-66.467735",
+          "right": "100.000000",
+          "left": "-174.095505",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "16.491449",
+          "right": "100.000000",
+          "left": "-253.947571",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-58.223103",
+          "right": "100.000000",
+          "left": "-435.554626",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "AssaultRifles"
+      ]
+    },
+    {
+      "weapon_sid": "GunGrim_ST",
+      "section_count": 5,
+      "enabled_count": 4,
+      "disabled_count": 1,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-17.095027",
+          "right": "100.000000",
+          "left": "180.930389",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-12.095027",
+          "right": "100.000000",
+          "left": "12.739715",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-39.819347",
+          "right": "100.000000",
+          "left": "-10.777539",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "37.296680",
+          "right": "100.000000",
+          "left": "-79.873512",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "100.000000",
+          "top": "-135.500000",
+          "right": "100.000000",
+          "left": "-346.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "AssaultRifles"
+      ]
+    },
+    {
+      "weapon_sid": "GunGvintar_ST",
+      "section_count": 5,
+      "enabled_count": 3,
+      "disabled_count": 2,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "41.192047",
+          "right": "100.000000",
+          "left": "362.771179",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-12.095027",
+          "right": "100.000000",
+          "left": "12.739715",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "4.874133",
+          "right": "100.000000",
+          "left": "-11.148050",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "28.696833",
+          "right": "100.000000",
+          "left": "-79.939995",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "100.000000",
+          "top": "-44.022968",
+          "right": "100.000000",
+          "left": "-319.383392",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "AssaultRifles"
+      ]
+    },
+    {
+      "weapon_sid": "GunIntegral_PP",
+      "section_count": 5,
+      "enabled_count": 3,
+      "disabled_count": 2,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-15.306286",
+          "right": "100.000000",
+          "left": "183.883041",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-39.130508",
+          "right": "100.000000",
+          "left": "89.029732",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-83.933662",
+          "right": "100.000000",
+          "left": "-64.056709",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "25.474556",
+          "right": "100.000000",
+          "left": "-137.056305",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "100.000000",
+          "top": "-123.500000",
+          "right": "100.000000",
+          "left": "-310.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "SMGs"
+      ]
+    },
+    {
+      "weapon_sid": "GunKharod_ST",
+      "section_count": 5,
+      "enabled_count": 5,
+      "disabled_count": 0,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "11.584202",
+          "right": "100.000000",
+          "left": "291.045502",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-28.348610",
+          "right": "100.000000",
+          "left": "7.893366",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-59.005779",
+          "right": "100.000000",
+          "left": "-100.432930",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "32.345318",
+          "right": "100.000000",
+          "left": "-179.313141",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "100.000000",
+          "top": "-135.500000",
+          "right": "100.000000",
+          "left": "-350.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "AssaultRifles"
+      ]
+    },
+    {
+      "weapon_sid": "GunLavina_ST",
+      "section_count": 5,
+      "enabled_count": 5,
+      "disabled_count": 0,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "13.698163",
+          "right": "100.000000",
+          "left": "361.045563",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-47.873219",
+          "right": "100.000000",
+          "left": "23.736126",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-17.112082",
+          "right": "100.000000",
+          "left": "-5.716089",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "14.755567",
+          "right": "100.000000",
+          "left": "-194.658630",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "100.000000",
+          "top": "-97.582352",
+          "right": "100.000000",
+          "left": "-329.895782",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "AssaultRifles"
+      ]
+    },
+    {
+      "weapon_sid": "GunM10_HG",
+      "section_count": 5,
+      "enabled_count": 3,
+      "disabled_count": 2,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-74.194099",
+          "right": "100.000000",
+          "left": "183.742111",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-68.935555",
+          "right": "100.000000",
+          "left": "-1.661914",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-98.467461",
+          "right": "100.000000",
+          "left": "-89.695366",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-37.359566",
+          "right": "100.000000",
+          "left": "-71.301689",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": false,
+          "bottom": "100.000000",
+          "top": "-113.000000",
+          "right": "100.000000",
+          "left": "-450.000000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        }
+      ],
+      "classes": [
+        "Pistols",
+        "SMGs"
+      ]
+    },
+    {
+      "weapon_sid": "GunM16_ST",
+      "section_count": 5,
+      "enabled_count": 4,
+      "disabled_count": 1,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "21.141029",
+          "right": "100.000000",
+          "left": "278.526794",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-54.683498",
+          "right": "100.000000",
+          "left": "8.022902",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-65.124634",
+          "right": "100.000000",
+          "left": "-155.365036",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "40.809273",
+          "right": "100.000000",
+          "left": "-272.601044",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-106.928993",
+          "right": "100.000000",
+          "left": "-344.640564",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "AssaultRifles"
+      ]
+    },
+    {
+      "weapon_sid": "GunM701_SP",
+      "section_count": 5,
+      "enabled_count": 3,
+      "disabled_count": 2,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-4.673919",
+          "right": "100.000000",
+          "left": "310.361298",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-14.801543",
+          "right": "100.000000",
+          "left": "10.093752",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-62.087734",
+          "right": "100.000000",
+          "left": "-132.733597",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "6.971598",
+          "right": "100.000000",
+          "left": "-308.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "100.000000",
+          "top": "-55.969830",
+          "right": "100.000000",
+          "left": "-321.419373",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "Snipers"
+      ]
+    },
+    {
+      "weapon_sid": "GunM860_SG",
+      "section_count": 5,
+      "enabled_count": 3,
+      "disabled_count": 2,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-22.179873",
+          "right": "100.000000",
+          "left": "214.729034",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-36.164566",
+          "right": "100.000000",
+          "left": "-52.295883",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-61.800316",
+          "right": "100.000000",
+          "left": "-132.284119",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-21.390570",
+          "right": "100.000000",
+          "left": "-254.692108",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "100.000000",
+          "top": "-98.224602",
+          "right": "100.000000",
+          "left": "-317.971771",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "Shotguns"
+      ]
+    },
+    {
+      "weapon_sid": "GunMark_SP",
+      "section_count": 5,
+      "enabled_count": 5,
+      "disabled_count": 0,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "16.838556",
+          "right": "100.000000",
+          "left": "312.144135",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-18.279421",
+          "right": "100.000000",
+          "left": "14.798338",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-14.319671",
+          "right": "100.000000",
+          "left": "-126.504646",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "6.971598",
+          "right": "100.000000",
+          "left": "-324.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "100.000000",
+          "top": "-111.500000",
+          "right": "100.000000",
+          "left": "-446.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "Snipers"
+      ]
+    },
+    {
+      "weapon_sid": "GunPM_HG",
+      "section_count": 5,
+      "enabled_count": 2,
+      "disabled_count": 3,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-55.705299",
+          "right": "100.000000",
+          "left": "122.565140",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-68.935555",
+          "right": "100.000000",
+          "left": "-1.661914",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-59.830521",
+          "right": "100.000000",
+          "left": "-25.970579",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "50.439106",
+          "right": "100.000000",
+          "left": "-253.196289",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": false,
+          "bottom": "100.000000",
+          "top": "-113.000000",
+          "right": "100.000000",
+          "left": "-450.000000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "Pistols"
+      ]
+    },
+    {
+      "weapon_sid": "GunRam2_SG",
+      "section_count": 5,
+      "enabled_count": 4,
+      "disabled_count": 1,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "36.142544",
+          "right": "100.000000",
+          "left": "285.770508",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "4.237406",
+          "right": "100.000000",
+          "left": "79.263184",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "16.366854",
+          "right": "100.000000",
+          "left": "-37.679054",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "77.476654",
+          "right": "100.000000",
+          "left": "-139.498825",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "100.000000",
+          "top": "-143.500000",
+          "right": "100.000000",
+          "left": "-390.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "Shotguns"
+      ]
+    },
+    {
+      "weapon_sid": "GunRhino_HG",
+      "section_count": 5,
+      "enabled_count": 3,
+      "disabled_count": 2,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-2.031956",
+          "right": "100.000000",
+          "left": "231.716278",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-68.935555",
+          "right": "100.000000",
+          "left": "-1.661914",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-40.134121",
+          "right": "100.000000",
+          "left": "-44.316967",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-33.384678",
+          "right": "100.000000",
+          "left": "-191.164551",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": false,
+          "bottom": "100.000000",
+          "top": "-113.000000",
+          "right": "100.000000",
+          "left": "-450.000000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        }
+      ],
+      "classes": [
+        "Pistols"
+      ]
+    },
+    {
+      "weapon_sid": "GunSKP_DMR",
+      "section_count": 5,
+      "enabled_count": 5,
+      "disabled_count": 0,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-0.500000",
+          "right": "100.000000",
+          "left": "309.500000",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-39.500000",
+          "right": "100.000000",
+          "left": "-10.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-76.500000",
+          "right": "100.000000",
+          "left": "-148.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-23.500000",
+          "right": "100.000000",
+          "left": "-278.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "100.000000",
+          "top": "-147.500000",
+          "right": "100.000000",
+          "left": "-466.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "Snipers"
+      ]
+    },
+    {
+      "weapon_sid": "GunSPSA_SG",
+      "section_count": 5,
+      "enabled_count": 3,
+      "disabled_count": 2,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "12.510911",
+          "right": "100.000000",
+          "left": "355.246490",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-36.164566",
+          "right": "100.000000",
+          "left": "-52.295883",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-67.327873",
+          "right": "100.000000",
+          "left": "-167.849731",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-21.390570",
+          "right": "100.000000",
+          "left": "-254.692108",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "100.000000",
+          "top": "-114.042580",
+          "right": "100.000000",
+          "left": "-364.109192",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "Shotguns"
+      ]
+    },
+    {
+      "weapon_sid": "GunSVDM_SP",
+      "section_count": 5,
+      "enabled_count": 3,
+      "disabled_count": 2,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "30.718592",
+          "right": "100.000000",
+          "left": "295.078064",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-9.834079",
+          "right": "100.000000",
+          "left": "-2.949190",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-34.006496",
+          "right": "100.000000",
+          "left": "-142.337570",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-5.828052",
+          "right": "100.000000",
+          "left": "-250.216049",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "100.000000",
+          "top": "-100.533318",
+          "right": "100.000000",
+          "left": "-446.169434",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "Snipers"
+      ]
+    },
+    {
+      "weapon_sid": "GunSVU_SP",
+      "section_count": 5,
+      "enabled_count": 4,
+      "disabled_count": 1,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "33.824478",
+          "right": "100.000000",
+          "left": "281.739929",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-16.115124",
+          "right": "100.000000",
+          "left": "30.930067",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-52.144398",
+          "right": "100.000000",
+          "left": "-124.536491",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "48.029026",
+          "right": "100.000000",
+          "left": "-168.191162",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "100.000000",
+          "top": "-119.500000",
+          "right": "100.000000",
+          "left": "-418.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "Snipers"
+      ]
+    },
+    {
+      "weapon_sid": "GunTOZ_SG",
+      "section_count": 5,
+      "enabled_count": 4,
+      "disabled_count": 1,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "30.891251",
+          "right": "100.000000",
+          "left": "364.219879",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-39.477451",
+          "right": "100.000000",
+          "left": "-68.546707",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-32.113628",
+          "right": "100.000000",
+          "left": "-94.838013",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-21.390570",
+          "right": "100.000000",
+          "left": "-254.692108",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-44.516525",
+          "right": "100.000000",
+          "left": "-408.856354",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "Shotguns"
+      ]
+    },
+    {
+      "weapon_sid": "GunThreeLine_SP",
+      "section_count": 5,
+      "enabled_count": 3,
+      "disabled_count": 2,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "11.500000",
+          "right": "100.000000",
+          "left": "305.500000",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-16.115124",
+          "right": "100.000000",
+          "left": "30.930067",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-52.144398",
+          "right": "100.000000",
+          "left": "-124.536491",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-63.500000",
+          "right": "100.000000",
+          "left": "-202.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "100.000000",
+          "top": "-111.500000",
+          "right": "100.000000",
+          "left": "-494.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "Snipers"
+      ]
+    },
+    {
+      "weapon_sid": "GunUDP_HG",
+      "section_count": 5,
+      "enabled_count": 2,
+      "disabled_count": 3,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-53.912861",
+          "right": "100.000000",
+          "left": "147.569580",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-68.935555",
+          "right": "100.000000",
+          "left": "-1.661914",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-79.464020",
+          "right": "100.000000",
+          "left": "-68.883026",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "50.439106",
+          "right": "100.000000",
+          "left": "-253.196289",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": false,
+          "bottom": "100.000000",
+          "top": "-113.000000",
+          "right": "100.000000",
+          "left": "-450.000000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        }
+      ],
+      "classes": [
+        "Pistols"
+      ]
+    },
+    {
+      "weapon_sid": "GunViper_PP",
+      "section_count": 5,
+      "enabled_count": 3,
+      "disabled_count": 2,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "4.455519",
+          "right": "100.000000",
+          "left": "286.293793",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "-68.935555",
+          "right": "100.000000",
+          "left": "-1.661914",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-21.323212",
+          "right": "100.000000",
+          "left": "-54.885292",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": false,
+          "bottom": "30.000000",
+          "top": "55.519634",
+          "right": "100.000000",
+          "left": "-198.979034",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "100.000000",
+          "top": "-159.500000",
+          "right": "100.000000",
+          "left": "-350.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "SMGs"
+      ]
+    },
+    {
+      "weapon_sid": "GunZubr_PP",
+      "section_count": 5,
+      "enabled_count": 5,
+      "disabled_count": 0,
+      "sections": [
+        {
+          "index": 0,
+          "target_part": "Barrel",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-4.115444",
+          "right": "100.000000",
+          "left": "239.735382",
+          "module_line_direction": "ELineDirection::Left",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 1,
+          "target_part": "Handguard",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-50.346859",
+          "right": "100.000000",
+          "left": "13.958710",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 2,
+          "target_part": "Body",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "-37.840736",
+          "right": "100.000000",
+          "left": "-76.168961",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 3,
+          "target_part": "PistolGrip",
+          "enabled": true,
+          "bottom": "30.000000",
+          "top": "15.830881",
+          "right": "100.000000",
+          "left": "-199.190186",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Left"
+        },
+        {
+          "index": 4,
+          "target_part": "Stock",
+          "enabled": true,
+          "bottom": "100.000000",
+          "top": "-127.500000",
+          "right": "100.000000",
+          "left": "-430.500000",
+          "module_line_direction": "ELineDirection::Right",
+          "upgrade_line_direction": "ELineDirection::Right"
+        }
+      ],
+      "classes": [
+        "SMGs"
+      ]
+    }
+  ]
+}

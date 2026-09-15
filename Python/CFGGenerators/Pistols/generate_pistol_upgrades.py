@@ -3,6 +3,9 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from upgrade_build_model import UpgradeBuildModel, UpgradeDefinition
+from upgrade_renderers import render_general_setup_patch, render_upgrade_prototypes
+
 SCRIPT_DIR = Path(__file__).resolve().parent
 PYTHON_ROOT = SCRIPT_DIR.parents[1]
 CONTENT_ROOT = PYTHON_ROOT.parent
@@ -11,6 +14,7 @@ UPGRADE_OUTPUT = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/Upgrad
 EFFECT_OUTPUT = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_PistolEffectPrototypes.cfg"
 WEAPON_OUTPUT = CONTENT_ROOT / "GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE_PistolModules.cfg"
 
+TEMPLATE_SID = "BPRUE_PistolModuleTemplate"
 ACTION = {
     "high_speed": (2200, ["BPRUE_FireIntervalNeg20Effect", "BPRUE_Pistol_RecoilPenalty15Effect", "BPRUE_DurabilityPerShotNeg20Effect"]),
     "balanced": (2100, ["BPRUE_FireIntervalNeg10Effect", "RecoilPos10Effect", "ShotRecoveryPos20Effect", "BPRUE_DurabilityPerShotNeg10Effect"]),
@@ -28,7 +32,6 @@ SIGNATURES = {
     "hunting_cylinder": (4500, ["ArmorPiercingPos20Effect", "ProjectileSpeedPos20Effect", "BPRUE_Pistol_FireIntervalPos10Effect"]),
     "selectable_fire_control": (3200, ["ChangeFireTypeEffectSemiAuto", "RecoilPos10Effect"]),
 }
-
 IMAGE = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Handgun/APB/Barrel/Upgrade/T_APBU_a_1.T_APBU_a_1'"
 ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_Recoil.T_PDA_Upgrades_Icon_Recoil'"
 
@@ -45,67 +48,24 @@ def signature_sid(prefix: str, key: str) -> str:
     return f"{prefix}_Upgrade_BPRUE_Pistol_Signature_{key.title().replace('_', '')}"
 
 
-def modules_for(family: dict) -> list[dict]:
-    result: list[dict] = []
-    scale = family.get("cost_scale", 1.0)
-    for group, definitions in (("Action", ACTION), ("Handling", HANDLING)):
-        for key, (cost, effects) in definitions.items():
-            result.append({
-                "sid": module_sid(family["prototype_prefix"], group, key),
-                "group": group,
-                "key": key,
-                "cost": round(cost * scale),
-                "effects": effects,
-                "block": [module_sid(family["prototype_prefix"], group, other) for other in definitions if other != key],
-            })
-    key = family["signature"]
-    cost, effects = SIGNATURES[key]
-    result.append({
-        "sid": signature_sid(family["prototype_prefix"], key),
-        "group": "Signature",
-        "key": key,
-        "cost": round(cost * scale),
-        "effects": effects,
-        "block": [],
-    })
-    return result
-
-
-def render_upgrades(config: dict) -> str:
-    lines = [
-        "// AUTO-GENERATED - Source: pistol_upgrades.json",
-        "// Two mutually-exclusive three-way groups plus one standalone family signature.",
-        "",
-        "BPRUE_PistolModuleTemplate : struct.begin {refurl=@BaseGame/UpgradePrototypes.cfg;refkey=[0]}",
-        "   SID = BPRUE_PistolModuleTemplate",
-        "   IsModification = true",
-        "struct.end",
-        "",
-    ]
+def build_upgrades(config: dict) -> list[UpgradeDefinition]:
+    result: list[UpgradeDefinition] = []
     for family in config["families"].values():
-        for module in modules_for(family):
-            target = "Body" if module["group"] == "Handling" else "Barrel"
-            vertical = "Down" if module["group"] == "Handling" else "Top"
-            lines += [
-                f"{module['sid']} : struct.begin {{refkey=BPRUE_PistolModuleTemplate}}",
-                f"   SID = {module['sid']}",
-                f"   Text = sid_bprue_pistol_{module['key']}_name",
-                f"   Hint = sid_bprue_pistol_{module['key']}_description",
-                f"   Image = {IMAGE}",
-                f"   Icon = {ICON}",
-                f"   BaseCost = {module['cost']}",
-                f"   VerticalPosition = EUpgradeVerticalPosition::{vertical}",
-                f"   UpgradeTargetPart = EUpgradeTargetPartType::{target}",
-                "   EffectPrototypeSIDs : struct.begin",
-            ]
-            lines += [f"      [{i}] = {effect}" for i, effect in enumerate(module["effects"])]
-            lines += ["   struct.end"]
-            if module["block"]:
-                lines += ["   BlockingUpgradePrototypeSIDs : struct.begin"]
-                lines += [f"      [{i}] = {sid}" for i, sid in enumerate(module["block"])]
-                lines += ["   struct.end"]
-            lines += ["struct.end", ""]
-    return "\n".join(lines)
+        prefix, setup, scale = family["prototype_prefix"], family["general_setup_sid"], family.get("cost_scale", 1.0)
+        for group, definitions, target, vertical in (("Action", ACTION, "Barrel", "Top"), ("Handling", HANDLING, "Body", "Down")):
+            group_sids = [module_sid(prefix, group, key) for key in definitions]
+            for key, (cost, effects) in definitions.items():
+                current = module_sid(prefix, group, key)
+                result.append(UpgradeDefinition(sid=current, general_setup_sid=setup, weapon_class="Pistol", group=group,
+                    target_part=target, text_sid=f"sid_bprue_pistol_{key}_name", hint_sid=f"sid_bprue_pistol_{key}_description",
+                    image=IMAGE, icon=ICON, cost=round(cost * scale), effects=tuple(effects),
+                    blocking_sids=tuple(sid for sid in group_sids if sid != current), vertical_position=vertical, template_sid=TEMPLATE_SID))
+        key = family["signature"]
+        cost, effects = SIGNATURES[key]
+        result.append(UpgradeDefinition(sid=signature_sid(prefix, key), general_setup_sid=setup, weapon_class="Pistol",
+            group="Signature", target_part="Barrel", text_sid=f"sid_bprue_pistol_{key}_name", hint_sid=f"sid_bprue_pistol_{key}_description",
+            image=IMAGE, icon=ICON, cost=round(cost * scale), effects=tuple(effects), vertical_position="Top", template_sid=TEMPLATE_SID))
+    return result
 
 
 def render_effects() -> str:
@@ -115,10 +75,13 @@ def render_effects() -> str:
 BPRUE_Pistol_RecoilPenalty10Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_Pistol_RecoilPenalty10Effect
    Type = EEffectType::Recoil
+   LocalizationSID = bprue_recoil
    ValueMin = 10%
    ValueMax = 10%
    bIsPermanent = true
    Positive = EBeneficial::Negative
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
 struct.end
 
 BPRUE_Pistol_RecoilPenalty15Effect : struct.begin {refkey=BPRUE_Pistol_RecoilPenalty10Effect}
@@ -130,45 +93,30 @@ struct.end
 BPRUE_Pistol_FireIntervalPos10Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_Pistol_FireIntervalPos10Effect
    Type = EEffectType::FireInterval
+   LocalizationSID = bprue_fire_rate
    ValueMin = 10%
    ValueMax = 10%
    bIsPermanent = true
    Positive = EBeneficial::Negative
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
 struct.end
 """
 
 
-def render_weapons(config: dict) -> str:
-    lines = [
-        "// AUTO-GENERATED - Source: pistol_upgrades.json",
-        "// Registers two shared three-way specialization groups and one signature per normal pistol family.",
-        "",
-    ]
-    for family in config["families"].values():
-        lines += [
-            f"{family['general_setup_sid']} : struct.begin {{bpatch}}",
-            "   UpgradePrototypeSIDs : struct.begin {bpatch}",
-        ]
-        lines += [f"      [*] = {module['sid']}" for module in modules_for(family)]
-        lines += ["   struct.end", "struct.end", ""]
-    return "\n".join(lines)
-
-
 def all_upgrade_sids(config: dict) -> list[str]:
-    return [module["sid"] for family in config["families"].values() for module in modules_for(family)]
+    return [upgrade.sid for upgrade in build_upgrades(config)]
 
 
 def main() -> None:
-    config = load_config()
-    for path, content in {
-        UPGRADE_OUTPUT: render_upgrades(config),
-        EFFECT_OUTPUT: render_effects(),
-        WEAPON_OUTPUT: render_weapons(config),
-    }.items():
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(content, encoding="utf-8")
-        print(f"Generated {path}")
+    config = load_config(); model = UpgradeBuildModel(); model.extend(build_upgrades(config)); model.validate()
+    outputs = {UPGRADE_OUTPUT: render_upgrade_prototypes(model, source="pistol_upgrades.json", template_sid=TEMPLATE_SID,
+        header_comments=("Two mutually-exclusive three-way groups plus one standalone family signature.",)),
+        EFFECT_OUTPUT: render_effects(), WEAPON_OUTPUT: render_general_setup_patch(model,
+        header_comments=("Registers two three-way specialization groups and one signature per normal pistol family.",))}
+    for path, content in outputs.items():
+        path.parent.mkdir(parents=True, exist_ok=True); path.write_text(content, encoding="utf-8"); print(f"Generated {path}")
+    print(f"Generated pistol specialization CFGs from {model.summary()}")
 
 
-if __name__ == "__main__":
-    main()
+if __name__ == "__main__": main()

@@ -2,429 +2,79 @@ import json
 import os
 import unreal
 
-
-# ============================================================
-# CONFIG
-# ============================================================
-
 ASSET_PATH = "/BPRUpgradesExpanded/Localization/L_BPRUpgradesExpanded"
-
-# JSON lies in the same directory as this Python script.
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-LOCALIZATION_FILE = os.path.join(
-    SCRIPT_DIR,
-    "Blueprint_Localization.json"
+LOCALIZATION_FILES = (
+    os.path.join(SCRIPT_DIR, "Blueprint_Localization.json"),
+    os.path.join(SCRIPT_DIR, "Weapon_Module_Localization.json"),
+    os.path.join(SCRIPT_DIR, "Effect_Localization.json"),
 )
 
 
-# ============================================================
-# HELPERS
-# ============================================================
-
-def log(message):
-    unreal.log(f"[BlueprintLocalization] {message}")
-
-
-def warn(message):
-    unreal.log_warning(f"[BlueprintLocalization] {message}")
-
-
+def log(message): unreal.log(f"[BlueprintLocalization] {message}")
 def escape_unreal_string(value):
-    """
-    Escape a Python string so it can safely be used inside
-    Unreal's Struct import_text representation.
-    """
-    return (
-        str(value)
-        .replace("\\", "\\\\")
-        .replace('"', '\\"')
-        .replace("\r", "")
-        .replace("\n", "\\n")
-    )
+    return str(value).replace("\\", "\\\\").replace('"', '\\"').replace("\r", "").replace("\n", "\\n")
 
-
-def read_localization_file(path):
-    """
-    Expected JSON format:
-
-    {
-      "entries": [
-        {
-          "sid": "sid_items_PM_Upgrades_Tier_1_name",
-          "languages": {
-            "English": "PM Upgrade Blueprint - Tier I"
-          }
-        }
-      ]
-    }
-    """
-    with open(path, "r", encoding="utf-8") as file:
-        data = json.load(file)
-
-    entries = data.get("entries")
-
-    if not isinstance(entries, list):
-        raise RuntimeError(
-            "Localization JSON must contain an 'entries' array."
-        )
-
-    normalized = []
-
-    for index, entry in enumerate(entries, start=1):
-        if not isinstance(entry, dict):
-            raise RuntimeError(
-                f"Entry #{index} is not an object."
-            )
-
-        sid = str(entry.get("sid", "")).strip()
-        languages = entry.get("languages")
-
-        if not sid:
-            raise RuntimeError(
-                f"Entry #{index} has an empty SID."
-            )
-
-        if not isinstance(languages, dict) or not languages:
-            raise RuntimeError(
-                f"Entry '{sid}' has no valid 'languages' object."
-            )
-
-        normalized_languages = {}
-
-        for language, text in languages.items():
-            language = str(language).strip()
-
-            if not language:
-                raise RuntimeError(
-                    f"Entry '{sid}' contains an empty language key."
-                )
-
-            normalized_languages[language] = str(text)
-
-        normalized.append(
-            {
-                "sid": sid,
-                "languages": normalized_languages
-            }
-        )
-
+def read_localization_files(paths):
+    normalized=[]; seen=set()
+    for path in paths:
+        if not os.path.isfile(path): raise RuntimeError(f"Localization file does not exist:\n{path}")
+        with open(path,"r",encoding="utf-8") as file: entries=json.load(file).get("entries")
+        if not isinstance(entries,list): raise RuntimeError(f"Localization JSON must contain an 'entries' array: {path}")
+        for index,entry in enumerate(entries,start=1):
+            if not isinstance(entry,dict): raise RuntimeError(f"Entry #{index} in {path} is not an object.")
+            sid=str(entry.get("sid","")).strip(); languages=entry.get("languages")
+            if not sid: raise RuntimeError(f"Entry #{index} in {path} has an empty SID.")
+            if sid in seen: raise RuntimeError(f"Duplicate localization SID across sources: {sid}")
+            if not isinstance(languages,dict) or not languages: raise RuntimeError(f"Entry '{sid}' has no valid languages object.")
+            normalized_languages={str(language).strip():str(text) for language,text in languages.items() if str(language).strip()}
+            if len(normalized_languages)!=len(languages): raise RuntimeError(f"Entry '{sid}' contains an empty language key.")
+            normalized.append({"sid":sid,"languages":normalized_languages}); seen.add(sid)
+        log(f"Read {len(entries)} entries from {os.path.basename(path)}")
     return normalized
 
+def make_struct_text(sid,languages):
+    parts=[f'({language}, "{escape_unreal_string(text)}")' for language,text in languages.items()]
+    return f'(SID="{escape_unreal_string(sid)}",LanguagesToLocalizedStrings=({",".join(parts)}))'
 
-def make_struct_text(sid, languages):
-    """
-    Build the Struct import_text representation:
-
-    (SID="...",
-     LanguagesToLocalizedStrings=((English, "...")))
-    """
-    safe_sid = escape_unreal_string(sid)
-
-    language_parts = []
-
-    for language, text in languages.items():
-        safe_text = escape_unreal_string(text)
-        language_parts.append(
-            f'({language}, "{safe_text}")'
-        )
-
-    languages_text = ",".join(language_parts)
-
-    return (
-        f'(SID="{safe_sid}",'
-        f'LanguagesToLocalizedStrings=({languages_text}))'
-    )
-
-
-def get_sid(localized_entry):
-    """
-    Read SID from an existing ModTextToolLocalizedText struct.
-    """
-    sid = localized_entry.get_editor_property("SID")
-    return str(sid)
-
-
-# ============================================================
-# START
-# ============================================================
+def get_sid(entry): return str(entry.get_editor_property("SID"))
 
 log("========================================")
 log("Starting localization UPSERT")
-log("========================================")
+entries=read_localization_files(LOCALIZATION_FILES)
+asset=unreal.load_asset(ASSET_PATH)
+if asset is None: raise RuntimeError(f"Could not load localization asset: {ASSET_PATH}")
+localized_texts=asset.get_editor_property("LocalizedTexts")
+existing_count=len(localized_texts)
+if existing_count==0: raise RuntimeError("LocalizedTexts is empty. Create one temporary localization entry manually before running the importer.")
+existing_by_sid={}
+for entry in localized_texts:
+    sid=get_sid(entry)
+    if sid in existing_by_sid: raise RuntimeError(f"Duplicate SID already exists in localization asset: {sid}")
+    existing_by_sid[sid]=entry
 
-
-# ============================================================
-# CHECK INPUT FILE
-# ============================================================
-
-if not os.path.isfile(LOCALIZATION_FILE):
-    raise RuntimeError(
-        f"Localization file does not exist:\n{LOCALIZATION_FILE}"
-    )
-
-log(f"Localization file: {LOCALIZATION_FILE}")
-
-
-# ============================================================
-# LOAD LOCALIZATION DATA
-# ============================================================
-
-entries = read_localization_file(LOCALIZATION_FILE)
-
-if len(entries) == 0:
-    raise RuntimeError(
-        "Localization JSON contains no usable entries."
-    )
-
-log(f"Read {len(entries)} localization entries")
-
-
-# Detect duplicate SIDs in JSON before touching the asset.
-seen_input_sids = set()
-input_duplicates = []
-
+updated=0; to_add=[]
 for entry in entries:
-    sid = entry["sid"]
+    existing=existing_by_sid.get(entry["sid"])
+    if existing is None: to_add.append(entry)
+    else: existing.import_text(make_struct_text(entry["sid"],entry["languages"])); updated+=1
 
-    if sid in seen_input_sids:
-        input_duplicates.append(sid)
-
-    seen_input_sids.add(sid)
-
-if input_duplicates:
-    raise RuntimeError(
-        "Duplicate localization SIDs found in JSON:\n"
-        + "\n".join(sorted(set(input_duplicates)))
-    )
-
-log("No duplicate SIDs found in JSON")
-
-
-# ============================================================
-# LOAD ASSET
-# ============================================================
-
-asset = unreal.load_asset(ASSET_PATH)
-
-if asset is None:
-    raise RuntimeError(
-        f"Could not load localization asset: {ASSET_PATH}"
-    )
-
-log(f"Loaded asset: {asset}")
-
-
-# ============================================================
-# GET EXISTING LOCALIZED TEXT ARRAY
-# ============================================================
-
-localized_texts = asset.get_editor_property("LocalizedTexts")
-
-existing_count_before = len(localized_texts)
-
-log(
-    f"Existing LocalizedTexts entries: "
-    f"{existing_count_before}"
-)
-
-if existing_count_before == 0:
-    raise RuntimeError(
-        "LocalizedTexts is empty.\n\n"
-        "The current Zone Kit Python API does not expose a constructor "
-        "for ModTextToolLocalizedText.\n"
-        "Create ONE temporary localization entry manually inside "
-        "L_Testmod first, then run this script again."
-    )
-
-
-# ============================================================
-# BUILD INDEX OF EXISTING ENTRIES
-# ============================================================
-
-existing_by_sid = {}
-asset_duplicates = []
-
-for index, localized_entry in enumerate(localized_texts):
-    sid = get_sid(localized_entry)
-
-    if sid in existing_by_sid:
-        asset_duplicates.append(sid)
-    else:
-        existing_by_sid[sid] = localized_entry
-
-if asset_duplicates:
-    raise RuntimeError(
-        "Duplicate localization SIDs already exist in L_Testmod.\n"
-        "Resolve these before running the importer:\n"
-        + "\n".join(sorted(set(asset_duplicates)))
-    )
-
-log(
-    f"Indexed {len(existing_by_sid)} existing unique SIDs"
-)
-
-
-# ============================================================
-# UPDATE EXISTING ENTRIES
-# ============================================================
-
-updated = 0
-to_add = []
-
-for entry in entries:
-    sid = entry["sid"]
-    struct_text = make_struct_text(
-        sid,
-        entry["languages"]
-    )
-
-    existing = existing_by_sid.get(sid)
-
-    if existing is None:
-        to_add.append(entry)
-        continue
-
-    existing.import_text(struct_text)
-    updated += 1
-
-log(f"Updated existing entries: {updated}")
-log(f"New entries to append:    {len(to_add)}")
-
-
-# ============================================================
-# APPEND NEW ENTRIES
-# ============================================================
-
-added = 0
-
+added=0
 if to_add:
-    # Python cannot directly instantiate ModTextToolLocalizedText.
-    # Reuse one existing struct as a temporary working object.
-    #
-    # IMPORTANT:
-    # Array.append() copies Unreal structs BY VALUE.
-    # We therefore:
-    #   1. save the working struct's current state,
-    #   2. mutate it for each new SID,
-    #   3. append a copied value,
-    #   4. restore the working struct afterwards.
-    template = localized_texts[0]
-    template_backup = template.export_text()
-
+    template=localized_texts[0]; backup=template.export_text()
     try:
-        for index, entry in enumerate(to_add, start=1):
-            struct_text = make_struct_text(
-                entry["sid"],
-                entry["languages"]
-            )
+        for entry in to_add:
+            template.import_text(make_struct_text(entry["sid"],entry["languages"])); localized_texts.append(template); added+=1
+    finally: template.import_text(backup)
 
-            template.import_text(struct_text)
-            localized_texts.append(template)
-            added += 1
+final_sids=[]
+for entry in localized_texts: final_sids.append(get_sid(entry))
+if len(final_sids)!=len(set(final_sids)): raise RuntimeError("Duplicate SIDs detected after UPSERT.")
+missing=sorted({entry['sid'] for entry in entries}-set(final_sids))
+if missing: raise RuntimeError("SIDs missing after UPSERT:\n"+"\n".join(missing))
+if len(localized_texts)!=existing_count+added: raise RuntimeError("Entry count mismatch after UPSERT.")
 
-            if index % 25 == 0 or index == len(to_add):
-                log(
-                    f"Appended {index}/{len(to_add)} new entries"
-                )
-
-    finally:
-        # Always restore the original value of element [0],
-        # even if generation fails part-way through.
-        template.import_text(template_backup)
-
-log(f"Added new entries: {added}")
-
-
-# ============================================================
-# VALIDATION
-# ============================================================
-
-expected_final_count = existing_count_before + added
-actual_final_count = len(localized_texts)
-
-if actual_final_count != expected_final_count:
-    raise RuntimeError(
-        "Entry count mismatch!\n"
-        f"Expected: {expected_final_count}\n"
-        f"Actual:   {actual_final_count}"
-    )
-
-# Ensure every SID from JSON now exists exactly once.
-final_sids = set()
-final_duplicates = []
-
-for localized_entry in localized_texts:
-    sid = get_sid(localized_entry)
-
-    if sid in final_sids:
-        final_duplicates.append(sid)
-
-    final_sids.add(sid)
-
-if final_duplicates:
-    raise RuntimeError(
-        "Duplicate SIDs detected after UPSERT:\n"
-        + "\n".join(sorted(set(final_duplicates)))
-    )
-
-missing_after_upsert = sorted(
-    seen_input_sids - final_sids
-)
-
-if missing_after_upsert:
-    raise RuntimeError(
-        "Some JSON SIDs are still missing after UPSERT:\n"
-        + "\n".join(missing_after_upsert)
-    )
-
-untouched = existing_count_before - updated
-
-log("Validation successful")
-log(f"Untouched old entries: {untouched}")
-log(f"Final entry count:     {actual_final_count}")
-
-
-# ============================================================
-# WRITE PROPERTY TO ASSET
-# ============================================================
-
-asset.modify()
-
-asset.set_editor_property(
-    "LocalizedTexts",
-    localized_texts
-)
-
-log("LocalizedTexts written to asset")
-
-
-# ============================================================
-# SAVE
-# ============================================================
-
-saved = unreal.EditorAssetLibrary.save_asset(
-    ASSET_PATH,
-    only_if_is_dirty=False
-)
-
-if not saved:
-    raise RuntimeError(
-        f"Failed to save asset: {ASSET_PATH}"
-    )
-
-log("Asset saved successfully")
-
-
-# ============================================================
-# DONE
-# ============================================================
-
-log("========================================")
-log("SUCCESS - localization UPSERT complete")
-log(f"Input entries:    {len(entries)}")
-log(f"Updated:          {updated}")
-log(f"Added:            {added}")
-log(f"Untouched old:    {untouched}")
-log(f"Final asset size: {actual_final_count}")
-log(f"Asset: {ASSET_PATH}")
+asset.modify(); asset.set_editor_property("LocalizedTexts",localized_texts)
+if not unreal.EditorAssetLibrary.save_asset(ASSET_PATH,only_if_is_dirty=False): raise RuntimeError(f"Failed to save asset: {ASSET_PATH}")
+log(f"SUCCESS - input={len(entries)}, updated={updated}, added={added}, final={len(localized_texts)}")
 log("========================================")

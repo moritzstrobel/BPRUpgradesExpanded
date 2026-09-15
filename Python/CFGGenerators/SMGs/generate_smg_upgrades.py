@@ -3,13 +3,18 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from upgrade_build_model import UpgradeBuildModel, UpgradeDefinition
+from upgrade_renderers import render_general_setup_patch, render_upgrade_prototypes
+
 SCRIPT_DIR = Path(__file__).resolve().parent
 PYTHON_ROOT = SCRIPT_DIR.parents[1]
 CONTENT_ROOT = PYTHON_ROOT.parent
 CONFIG_PATH = SCRIPT_DIR / "smg_upgrades.json"
-UPGRADE_OUTPUT_PATH = CONTENT_ROOT / "GameLite" / "ModGameData" / "BPRUpgradesExpanded" / "UpgradePrototypes" / "BPRUE_SMGUpgradePrototypes.cfg"
-EFFECT_OUTPUT_PATH = CONTENT_ROOT / "GameLite" / "ModGameData" / "BPRUpgradesExpanded" / "EffectPrototypes" / "BPRUE_SMGEffectPrototypes.cfg"
-WEAPON_OUTPUT_PATH = CONTENT_ROOT / "GameLite" / "GameData" / "WeaponData" / "WeaponGeneralSetupPrototypes" / "WeaponGeneralSetupPrototypes_patch_BPRUE_SMGModules.cfg"
+UPGRADE_OUTPUT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/UpgradePrototypes/BPRUE_SMGUpgradePrototypes.cfg"
+EFFECT_OUTPUT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_SMGEffectPrototypes.cfg"
+WEAPON_OUTPUT_PATH = CONTENT_ROOT / "GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE_SMGModules.cfg"
+
+TEMPLATE_SID = "BPRUE_SMGModuleTemplate"
 
 MODULES = {
     "quick_draw": ("Readiness_QuickDraw", "sid_bprue_smg_quick_draw_name", "sid_bprue_smg_quick_draw_description", 2200, "Top", "Body", ["AimingTimePos15Effect", "AimingMovementPos10Effect", "BPRUE_SMG_ReloadingTimePos10Effect"]),
@@ -40,91 +45,70 @@ ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Ico
 CALIBER_ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_CaliberChange.T_PDA_Upgrades_Icon_CaliberChange'"
 
 
-def load_config():
+def load_config() -> dict:
     return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
 
 
-def sid(key):
-    return f"BPRUE_SMG_Upgrade_{MODULES[key][0]}"
+def sid(family: dict, key: str) -> str:
+    return f"{family['prototype_prefix']}_Upgrade_BPRUE_{MODULES[key][0]}"
 
 
 def caliber_sid(family: dict, caliber: str) -> str:
     return f"{family['prototype_prefix']}_Upgrade_BPRUE_Caliber_{caliber}"
 
 
-def array(name, values):
-    return [f"   {name} : struct.begin", *[f"      [{i}] = {v}" for i, v in enumerate(values)], "   struct.end"]
+def build_upgrades(config: dict) -> list[UpgradeDefinition]:
+    upgrades: list[UpgradeDefinition] = []
+    families = config.get("families", {})
+    if not families:
+        raise ValueError("SMG config contains no families")
 
+    for family in families.values():
+        general_setup_sid = family["general_setup_sid"]
+        for group, keys in config["module_groups"].items():
+            group_sids = [sid(family, key) for key in keys]
+            for key in keys:
+                _, text, hint, cost, vertical, target, effects = MODULES[key]
+                current = sid(family, key)
+                upgrades.append(UpgradeDefinition(
+                    sid=current, general_setup_sid=general_setup_sid, weapon_class="SMG",
+                    group=group.title(), target_part=target, text_sid=text, hint_sid=hint,
+                    image=IMAGE, icon=ICON, cost=cost, effects=tuple(effects),
+                    blocking_sids=tuple(other for other in group_sids if other != current),
+                    vertical_position=vertical, template_sid=TEMPLATE_SID,
+                ))
 
-def render_upgrades(config):
-    lines = [
-        "// AUTO-GENERATED - Source: smg_upgrades.json",
-        "",
-        "BPRUE_SMGModuleTemplate : struct.begin {refurl=@BaseGame/UpgradePrototypes.cfg;refkey=[0]}",
-        "   SID = BPRUE_SMGModuleTemplate",
-        "   IsModification = true",
-        "struct.end",
-        "",
-    ]
-
-    for group, keys in config["module_groups"].items():
-        group_sids = [sid(k) for k in keys]
-        for key in keys:
-            suffix, text, hint, cost, vertical, target, effects = MODULES[key]
-            current = sid(key)
-            lines += [
-                f"{current} : struct.begin {{refkey=BPRUE_SMGModuleTemplate}}",
-                f"   SID = {current}", f"   Text = {text}", f"   Hint = {hint}",
-                f"   Image = {IMAGE}", f"   Icon = {ICON}", f"   BaseCost = {cost}",
-                f"   VerticalPosition = EUpgradeVerticalPosition::{vertical}",
-                f"   UpgradeTargetPart = EUpgradeTargetPartType::{target}",
-            ]
-            lines += array("EffectPrototypeSIDs", effects)
-            lines += array("BlockingUpgradePrototypeSIDs", [x for x in group_sids if x != current])
-            lines += ["struct.end", ""]
-
+    # Ammo/caliber conversions are independent layout items. Their mutual blocking
+    # still carries the gameplay relationship, but they no longer reserve a row.
     for family in config.get("caliber_families", {}).values():
         conversion_sids = [caliber_sid(family, caliber) for caliber in family["conversions"]]
         source_remove_effect = CALIBER_DATA[family["base_caliber"]]["remove_ammo_effect"]
         for caliber in family["conversions"]:
             data = CALIBER_DATA[caliber]
             current = caliber_sid(family, caliber)
-            lines += [
-                f"{current} : struct.begin {{refkey=BPRUE_SMGModuleTemplate}}",
-                f"   SID = {current}", f"   Text = {data['name_sid']}", f"   Hint = {data['hint_sid']}",
-                f"   Image = {IMAGE}", f"   Icon = {CALIBER_ICON}", f"   BaseCost = {data['cost']}",
-                "   VerticalPosition = EUpgradeVerticalPosition::Top",
-                "   UpgradeTargetPart = EUpgradeTargetPartType::Body",
-            ]
-            lines += array("EffectPrototypeSIDs", [data["change_effect"], source_remove_effect, data["add_ammo_effect"]])
-            lines += array("BlockingUpgradePrototypeSIDs", [x for x in conversion_sids if x != current])
-            lines += ["struct.end", ""]
+            upgrades.append(UpgradeDefinition(
+                sid=current, general_setup_sid=family["general_setup_sid"], weapon_class="SMG",
+                group="Caliber", target_part="Body", text_sid=data["name_sid"], hint_sid=data["hint_sid"],
+                image=IMAGE, icon=CALIBER_ICON, cost=data["cost"],
+                effects=(data["change_effect"], source_remove_effect, data["add_ammo_effect"]),
+                blocking_sids=tuple(other for other in conversion_sids if other != current),
+                template_sid=TEMPLATE_SID, standalone=True,
+            ))
 
-    # Pistol-conversion upgrades used to be a checked-in split CFG that the
-    # merger tried to preserve between runs. Generate them here instead so they
-    # pass through the same layout step as every other SMG specialization.
-    lines += [
-        "// --- SMG pistol-conversion modules --------------------------------------",
-        "",
-        "BPRUE_SMGConversionUpgradeTemplate : struct.begin {refkey=BPRUE_SMGModuleTemplate}",
-        "   SID = BPRUE_SMGConversionUpgradeTemplate",
-        "struct.end",
-        "",
-    ]
-    for _, (current, text, hint, cost) in PISTOL_CONVERSIONS.items():
-        lines += [
-            f"{current} : struct.begin {{refkey=BPRUE_SMGConversionUpgradeTemplate}}",
-            f"   SID = {current}", f"   Text = {text}", f"   Hint = {hint}",
-            f"   Image = {IMAGE}", f"   Icon = {CALIBER_ICON}", f"   BaseCost = {cost}",
-            "   VerticalPosition = EUpgradeVerticalPosition::Down",
-            "   UpgradeTargetPart = EUpgradeTargetPartType::Body",
-            "struct.end", "",
-        ]
+    # Weapon/pistol conversions are also standalones. Conversion behavior is
+    # supplied by the existing weapon/attachment patch path.
+    for general_setup_sid, (current, text, hint, cost) in PISTOL_CONVERSIONS.items():
+        upgrades.append(UpgradeDefinition(
+            sid=current, general_setup_sid=general_setup_sid, weapon_class="SMG",
+            group="Conversion", target_part="Body", text_sid=text, hint_sid=hint,
+            image=IMAGE, icon=CALIBER_ICON, cost=cost, template_sid=TEMPLATE_SID,
+            require_effects=False, standalone=True,
+        ))
 
-    return "\n".join(lines)
+    return upgrades
 
 
-def render_effects():
+def render_effects() -> str:
     return """// AUTO-GENERATED - Source: smg_upgrades.json
 
 BPRUE_SMG_ReloadingTimePos10Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
@@ -183,39 +167,24 @@ struct.end
 """
 
 
-def render_weapons(config):
-    module_sids = [sid(key) for keys in config["module_groups"].values() for key in keys]
-    by_general_setup: dict[str, list[str]] = {}
-    for family in config["families"].values():
-        by_general_setup.setdefault(family["general_setup_sid"], []).extend(module_sids)
-    for family in config.get("caliber_families", {}).values():
-        target = by_general_setup.setdefault(family["general_setup_sid"], [])
-        target.extend(caliber_sid(family, caliber) for caliber in family["conversions"])
-    for general_setup_sid, (conversion_sid, _, _, _) in PISTOL_CONVERSIONS.items():
-        by_general_setup.setdefault(general_setup_sid, []).append(conversion_sid)
-
-    lines = [
-        "// AUTO-GENERATED - Source: smg_upgrades.json", "",
-        "// Shared specialization modules, caliber conversions and pistol-conversion upgrades.",
-        "// This file is the single owner of UpgradePrototypeSIDs for these SMGs.", "",
-    ]
-    for general_setup_sid, upgrade_sids in by_general_setup.items():
-        unique_sids = list(dict.fromkeys(upgrade_sids))
-        lines += [
-            f"{general_setup_sid} : struct.begin {{bpatch}}",
-            "   UpgradePrototypeSIDs : struct.begin {bpatch}",
-            *[f"      [*] = {x}" for x in unique_sids],
-            "   struct.end", "struct.end", "",
-        ]
-    return "\n".join(lines)
-
-
-def main():
+def main() -> None:
     config = load_config()
-    for path, content in {UPGRADE_OUTPUT_PATH: render_upgrades(config), EFFECT_OUTPUT_PATH: render_effects(), WEAPON_OUTPUT_PATH: render_weapons(config)}.items():
+    model = UpgradeBuildModel()
+    model.extend(build_upgrades(config))
+    model.validate()
+
+    outputs = {
+        UPGRADE_OUTPUT_PATH: render_upgrade_prototypes(model, source="smg_upgrades.json", template_sid=TEMPLATE_SID,
+            header_comments=("Weapon-specific specialization modules, caliber conversions and pistol-conversion upgrades.",)),
+        EFFECT_OUTPUT_PATH: render_effects(),
+        WEAPON_OUTPUT_PATH: render_general_setup_patch(model,
+            header_comments=("This file is the single owner of UpgradePrototypeSIDs for participating SMGs.",)),
+    }
+    for path, content in outputs.items():
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(content, encoding="utf-8")
         print(f"Generated {path}")
+    print(f"Generated SMG CFGs from {model.summary()}")
 
 
 if __name__ == "__main__":
