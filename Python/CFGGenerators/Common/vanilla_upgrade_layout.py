@@ -9,6 +9,8 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 PYTHON_ROOT = SCRIPT_DIR.parents[1]
 VANILLA_UPGRADES = PYTHON_ROOT / "VanillaReference" / "UpgradePrototypes.cfg"
 VANILLA_GENERAL_SETUPS = PYTHON_ROOT / "VanillaReference" / "WeaponGeneralSetupPrototypes.cfg"
+VANILLA_WEAPONS = PYTHON_ROOT / "VanillaReference" / "WeaponPrototypes.cfg"
+MAX_VISIBLE_HORIZONTAL_POSITION = 2
 
 
 def _top_level_blocks(text: str) -> list[list[str]]:
@@ -73,6 +75,30 @@ def _direct_child(block: list[str], name: str) -> list[str] | None:
     return None
 
 
+def _indexed_children(block: list[str] | None) -> list[list[str]]:
+    if not block:
+        return []
+    result: list[list[str]] = []
+    i = 1
+    while i < len(block) - 1:
+        if re.match(r"\s*\[\d+\]\s*:\s*struct\.begin", block[i]):
+            child = [block[i]]
+            depth = 1
+            i += 1
+            while i < len(block) and depth:
+                child.append(block[i])
+                stripped = block[i].strip()
+                if "struct.begin" in stripped:
+                    depth += 1
+                if stripped == "struct.end":
+                    depth -= 1
+                i += 1
+            result.append(child)
+            continue
+        i += 1
+    return result
+
+
 def _array_values(child: list[str] | None) -> list[str]:
     if not child:
         return []
@@ -118,14 +144,43 @@ def vanilla_general_setup_upgrades() -> dict[str, list[str]]:
 
 
 @lru_cache(maxsize=1)
-def vanilla_compaction() -> dict[str, tuple[str, int, int]]:
-    """Return safe Vanilla column moves as SID -> (target, old H, new H).
+def weapon_sections_by_general_setup() -> dict[str, dict[str, bool]]:
+    """Return every predefined weapon UI section keyed by GeneralWeaponSetup.
 
-    Each GeneralSetup is compacted independently by mapping its occupied modification
-    columns to 0..N while preserving column order. Upgrade prototypes are global, so
-    a move is emitted only when every GeneralSetup using that SID requests the same
-    target/new column. Ambiguous shared prototypes are deliberately left untouched.
+    The bool is Vanilla SectionIsEnabled. Disabled sections are intentionally kept:
+    once the section-enabling PoC is proven, they become valid fallback capacity.
     """
+    if not VANILLA_WEAPONS.exists():
+        raise FileNotFoundError(VANILLA_WEAPONS)
+
+    result: dict[str, dict[str, bool]] = {}
+    for block in _top_level_blocks(VANILLA_WEAPONS.read_text(encoding="utf-8")):
+        general_setup = _direct_scalar(block, "GeneralWeaponSetup")
+        settings = _direct_child(block, "SectionSettings")
+        if not general_setup or not settings:
+            continue
+        sections: dict[str, bool] = {}
+        for section in _indexed_children(settings):
+            target = _direct_scalar(section, "UpgradeTargetPartType")
+            enabled = _direct_scalar(section, "SectionIsEnabled")
+            if target:
+                sections[target.rsplit("::", 1)[-1]] = (enabled or "").lower() == "true"
+        if sections:
+            result[general_setup] = sections
+    return result
+
+
+def available_target_parts(general_setup_sid: str, include_disabled: bool = False) -> tuple[str, ...]:
+    sections = weapon_sections_by_general_setup().get(general_setup_sid, {})
+    return tuple(
+        target for target, enabled in sections.items()
+        if enabled or include_disabled
+    )
+
+
+@lru_cache(maxsize=1)
+def vanilla_compaction() -> dict[str, tuple[str, int, int]]:
+    """Return safe Vanilla column moves as SID -> (target, old H, new H)."""
     modifications = vanilla_modifications()
     setups = vanilla_general_setup_upgrades()
     requested: dict[str, set[tuple[str, int]]] = defaultdict(set)
@@ -157,7 +212,6 @@ def vanilla_compaction() -> dict[str, tuple[str, int, int]]:
 
 @lru_cache(maxsize=1)
 def effective_vanilla_modifications() -> dict[str, tuple[str, int]]:
-    """Vanilla modification layout after applying the generated compaction patch."""
     result = dict(vanilla_modifications())
     for sid, (target, _old, new) in vanilla_compaction().items():
         result[sid] = (target, new)
@@ -186,7 +240,6 @@ def render_vanilla_compaction_patch() -> str:
 
 
 def modification_max_columns_for_general_setups(general_setup_sids: list[str]) -> dict[str, int]:
-    """Max effective Vanilla modification column per target part for concrete weapons."""
     modifications = effective_vanilla_modifications()
     setup_upgrades = vanilla_general_setup_upgrades()
     maxima: dict[str, int] = {}
@@ -199,6 +252,15 @@ def modification_max_columns_for_general_setups(general_setup_sids: list[str]) -
             target, horizontal = modification
             maxima[target] = max(maxima.get(target, -1), horizontal)
     return maxima
+
+
+def free_visible_columns(general_setup_sid: str, target_part: str) -> tuple[int, ...]:
+    """Visible H0-H2 columns not occupied by Vanilla modification columns."""
+    maxima = modification_max_columns_for_general_setups([general_setup_sid])
+    start = maxima.get(target_part, -1) + 1
+    if start > MAX_VISIBLE_HORIZONTAL_POSITION:
+        return ()
+    return tuple(range(start, MAX_VISIBLE_HORIZONTAL_POSITION + 1))
 
 
 def group_columns_for_general_setups(
