@@ -38,31 +38,12 @@ CONVERSION_ATTACHMENTS = {
         "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Zubr/T_inv_w_zubr_ru_colimscope_mini_1.T_inv_w_zubr_ru_colimscope_mini_1'",
         "ColimScopeSocket", 155, 9, "GunZubr_Upgrade_BPRUE_PistolConversion",
     ),
+    "GunFora230_PP_GS": (
+        "BPRUE_Fora230_PistolConversionKit",
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Viper/T_inv_w_viper_toprail.T_inv_w_viper_toprail'",
+        "ColimScopeSocket", 155, 9, "GunFora230_Upgrade_BPRUE_PistolConversion",
+    ),
 }
-
-FORA_ONLY = """// -----------------------------------------------------------------------------
-// BPRUE SMG pistol-conversion patch
-// Fora230 intentionally remains separate pending GeneralSetup SID verification.
-// -----------------------------------------------------------------------------
-
-GunFora230_PP : struct.begin {bpatch}
-   CompatibleAttachments : struct.begin {bpatch}
-      [*] : struct.begin
-         AttachPrototypeSID = BPRUE_Fora230_PistolConversionKit
-         WeaponSpecificIcon = Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Viper/T_inv_w_viper_toprail.T_inv_w_viper_toprail'
-         Socket = ColimScopeSocket
-         IconPosX = 155
-         IconPosY = 9
-         RequiredUpgradeIDs : struct.begin
-            [0] = GunFora230_Upgrade_BPRUE_PistolConversion
-         struct.end
-      struct.end
-   struct.end
-   UpgradePrototypeSIDs : struct.begin {bpatch}
-      [*] = GunFora230_Upgrade_BPRUE_PistolConversion
-   struct.end
-struct.end
-"""
 
 
 def attachment_block(data: tuple[str, str, str, int, int, str]) -> list[str]:
@@ -112,9 +93,9 @@ def merge_modules() -> None:
 
 def main() -> None:
     merge_modules()
-    CONVERSIONS_PATH.write_text(FORA_ONLY, encoding="utf-8")
-    print(f"Consolidated SMG weapon patches in {MODULES_PATH}")
-    print(f"Kept Fora230-only patch in {CONVERSIONS_PATH}")
+    if CONVERSIONS_PATH.exists():
+        CONVERSIONS_PATH.unlink()
+    print(f"Consolidated all SMG weapon patches in {MODULES_PATH}")
 
 
 if __name__ == "__main__":
