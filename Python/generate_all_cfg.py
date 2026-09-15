@@ -15,7 +15,7 @@ import generate_sniper_upgrades as sniper
 from apply_module_layout import apply_layout_to_model
 from smg_conversion_attachments import CONVERSION_ATTACHMENTS, attachment_block
 from upgrade_build_model import UpgradeBuildModel
-from upgrade_renderers import render_consolidated_upgrade_prototypes, render_final_general_setup_patch
+from upgrade_renderers import render_consolidated_upgrade_prototypes, render_final_general_setup_patch, render_technician_patch
 
 CONTENT_ROOT = SCRIPT_DIR.parent
 UPGRADES_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/UpgradePrototypes/BPRUE_UpgradePrototypes.cfg"
@@ -67,7 +67,7 @@ def main() -> None:
     attachments = {sid: attachment_block(data) for sid, data in CONVERSION_ATTACHMENTS.items()}
     upgrade_text = render_consolidated_upgrade_prototypes(model)
     setup_text = render_final_general_setup_patch(model, attachments)
-    npc_text = ar.render_npc_patch(configs["ar"], model)
+    npc_text = render_technician_patch(model)
     validate_rendered_outputs(model, upgrade_text, setup_text, npc_text)
 
     write(UPGRADES_PATH, upgrade_text)
