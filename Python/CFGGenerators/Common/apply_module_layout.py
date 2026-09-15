@@ -8,13 +8,14 @@ from upgrade_build_model import UpgradeBuildModel
 from vanilla_upgrade_layout import group_columns_for_general_setups
 
 SCRIPT_DIR = Path(__file__).resolve().parent
+CFG_ROOT = SCRIPT_DIR.parent
 
 CONFIG_FILES = {
-    "AR": SCRIPT_DIR / "assault_rifles_upgrades.json",
-    "SMG": SCRIPT_DIR / "smg_upgrades.json",
-    "SG": SCRIPT_DIR / "shotgun_upgrades.json",
-    "Pistol": SCRIPT_DIR / "pistol_upgrades.json",
-    "Sniper": SCRIPT_DIR / "sniper_upgrades.json",
+    "AR": CFG_ROOT / "AssaultRifles" / "assault_rifles_upgrades.json",
+    "SMG": CFG_ROOT / "SMGs" / "smg_upgrades.json",
+    "SG": CFG_ROOT / "Shotguns" / "shotgun_upgrades.json",
+    "Pistol": CFG_ROOT / "Pistols" / "pistol_upgrades.json",
+    "Sniper": CFG_ROOT / "Snipers" / "sniper_upgrades.json",
 }
 
 GROUP_ORDER = {
