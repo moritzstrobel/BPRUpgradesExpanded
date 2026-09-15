@@ -1,0 +1,5993 @@
+{
+  "summary": {
+    "analyzed_general_setups": 32,
+    "missing_vanilla_general_setups": [],
+    "anomaly_counts": {
+      "gap_after_vanilla_modifications": 8,
+      "more_than_two_variants_in_column": 61,
+      "new_target_part": 2,
+      "no_vanilla_modification_table": 17,
+      "non_contiguous_bprue_columns": 1
+    }
+  },
+  "weapons": {
+    "GunAK74_ST": {
+      "vanilla_upgrade_count": 10,
+      "bprue_upgrade_count": 10,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 2,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "FireRate"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunAK74_Upgrade_BPRUE_FireRate_Balanced",
+                "GunAK74_Upgrade_BPRUE_FireRate_HighSpeed"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [
+            0,
+            1,
+            2
+          ],
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 5,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 1,
+              "vertical_positions": [
+                "Top"
+              ],
+              "groups": [
+                "Caliber"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunAK74_Upgrade_BPRUE_Caliber_762"
+              ]
+            },
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "FireControl"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunAK74_Upgrade_BPRUE_FireControl_Precision",
+                "GunAK74_Upgrade_BPRUE_FireControl_Burst"
+              ]
+            },
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "Reload"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunAK74_Upgrade_BPRUE_Reload_Reinforced",
+                "GunAK74_Upgrade_BPRUE_Reload_Competition"
+              ]
+            }
+          ]
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Stock"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunAK74_Upgrade_BPRUE_Stock_Stabilized",
+                "GunAK74_Upgrade_BPRUE_Stock_Lightweight",
+                "GunAK74_Upgrade_BPRUE_Stock_Marksman"
+              ]
+            }
+          ]
+        }
+      },
+      "anomalies": [
+        {
+          "type": "no_vanilla_modification_table",
+          "target_part": "Body"
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Stock",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Stock"
+          ]
+        }
+      ]
+    },
+    "GunAKU_PP": {
+      "vanilla_upgrade_count": 12,
+      "bprue_upgrade_count": 7,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 2,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "Action"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "BPRUE_SMG_Upgrade_Action_Controlled",
+                "BPRUE_SMG_Upgrade_Action_HighSpeed"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            3,
+            4
+          ],
+          "bprue_first_column": 3,
+          "gap_after_last_vanilla_modification": 2,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 5,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 3,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "Readiness"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "BPRUE_SMG_Upgrade_Readiness_Stabilized",
+                "BPRUE_SMG_Upgrade_Readiness_QuickDraw"
+              ]
+            },
+            {
+              "horizontal_position": 4,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "Conversion",
+                "Reload"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "BPRUE_SMG_Upgrade_Reload_Tactical",
+                "BPRUE_SMG_Upgrade_Reload_Competition",
+                "GunAKU_Upgrade_BPRUE_PistolConversion"
+              ]
+            }
+          ]
+        },
+        "Handguard": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        }
+      },
+      "anomalies": [
+        {
+          "type": "gap_after_vanilla_modifications",
+          "target_part": "Body",
+          "columns": 2
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 4,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "Conversion",
+            "Reload"
+          ]
+        }
+      ]
+    },
+    "GunAPB_HG": {
+      "vanilla_upgrade_count": 15,
+      "bprue_upgrade_count": 7,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1,
+            2
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 4,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Action"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunAPB_Upgrade_BPRUE_Pistol_Action_Balanced",
+                "GunAPB_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                "GunAPB_Upgrade_BPRUE_Pistol_Action_Controlled"
+              ]
+            },
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 1,
+              "vertical_positions": [
+                "Top"
+              ],
+              "groups": [
+                "Signature"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunAPB_Upgrade_BPRUE_Pistol_Signature_AutomaticSear"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Handling"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunAPB_Upgrade_BPRUE_Pistol_Handling_Tactical",
+                "GunAPB_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                "GunAPB_Upgrade_BPRUE_Pistol_Handling_Stabilized"
+              ]
+            }
+          ]
+        },
+        "PistolGrip": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        }
+      },
+      "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Action"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Handling"
+          ]
+        }
+      ]
+    },
+    "GunArev_ST_GS": {
+      "vanilla_upgrade_count": 27,
+      "bprue_upgrade_count": 10,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 2,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "FireRate"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunArev_Upgrade_BPRUE_FireRate_Balanced",
+                "GunArev_Upgrade_BPRUE_FireRate_HighSpeed"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [
+            0,
+            1,
+            2
+          ],
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 5,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 1,
+              "vertical_positions": [
+                "Top"
+              ],
+              "groups": [
+                "Caliber"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunArev_Upgrade_BPRUE_Caliber_762NATO"
+              ]
+            },
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "FireControl"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunArev_Upgrade_BPRUE_FireControl_Precision",
+                "GunArev_Upgrade_BPRUE_FireControl_Burst"
+              ]
+            },
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "Reload"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunArev_Upgrade_BPRUE_Reload_Reinforced",
+                "GunArev_Upgrade_BPRUE_Reload_Competition"
+              ]
+            }
+          ]
+        },
+        "Handguard": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0,
+            1
+          ],
+          "vanilla_max_modification_column": 1,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "PistolGrip": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Stock"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunArev_Upgrade_BPRUE_Stock_Stabilized",
+                "GunArev_Upgrade_BPRUE_Stock_Lightweight",
+                "GunArev_Upgrade_BPRUE_Stock_Marksman"
+              ]
+            }
+          ]
+        }
+      },
+      "anomalies": [
+        {
+          "type": "no_vanilla_modification_table",
+          "target_part": "Body"
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Stock",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Stock"
+          ]
+        }
+      ]
+    },
+    "GunBucket_PP": {
+      "vanilla_upgrade_count": 15,
+      "bprue_upgrade_count": 9,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 2,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "Action"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "BPRUE_SMG_Upgrade_Action_Controlled",
+                "BPRUE_SMG_Upgrade_Action_HighSpeed"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0,
+            1
+          ],
+          "vanilla_max_modification_column": 1,
+          "bprue_columns": [
+            3,
+            4,
+            5
+          ],
+          "bprue_first_column": 3,
+          "gap_after_last_vanilla_modification": 1,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 7,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 3,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "Readiness"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "BPRUE_SMG_Upgrade_Readiness_Stabilized",
+                "BPRUE_SMG_Upgrade_Readiness_QuickDraw"
+              ]
+            },
+            {
+              "horizontal_position": 4,
+              "upgrade_count": 4,
+              "vertical_positions": [
+                "Down",
+                "Down",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "Caliber",
+                "Reload"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "BPRUE_SMG_Upgrade_Reload_Tactical",
+                "GunBucket_Upgrade_BPRUE_Caliber_A045",
+                "BPRUE_SMG_Upgrade_Reload_Competition",
+                "GunBucket_Upgrade_BPRUE_Caliber_A919"
+              ]
+            },
+            {
+              "horizontal_position": 5,
+              "upgrade_count": 1,
+              "vertical_positions": [
+                "Top"
+              ],
+              "groups": [
+                "Conversion"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunBucket_Upgrade_BPRUE_PistolConversion"
+              ]
+            }
+          ]
+        },
+        "PistolGrip": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        }
+      },
+      "anomalies": [
+        {
+          "type": "gap_after_vanilla_modifications",
+          "target_part": "Body",
+          "columns": 1
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 4,
+          "upgrade_count": 4,
+          "vertical_positions": [
+            "Down",
+            "Down",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "Caliber",
+            "Reload"
+          ]
+        }
+      ]
+    },
+    "GunD12_SG": {
+      "vanilla_upgrade_count": 26,
+      "bprue_upgrade_count": 9,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Pattern"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunD12_Upgrade_BPRUE_SG_Pattern_FieldChoke",
+                "GunD12_Upgrade_BPRUE_SG_Pattern_Breacher",
+                "GunD12_Upgrade_BPRUE_SG_Pattern_FullChoke"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1,
+            2
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 6,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Action"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunD12_Upgrade_BPRUE_SG_Action_Tuned",
+                "GunD12_Upgrade_BPRUE_SG_Action_HighSpeed",
+                "GunD12_Upgrade_BPRUE_SG_Action_Reinforced"
+              ]
+            },
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Handling"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunD12_Upgrade_BPRUE_SG_Handling_Combat",
+                "GunD12_Upgrade_BPRUE_SG_Handling_Lightweight",
+                "GunD12_Upgrade_BPRUE_SG_Handling_Stabilized"
+              ]
+            }
+          ]
+        },
+        "Handguard": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0,
+            1
+          ],
+          "vanilla_max_modification_column": 1,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "PistolGrip": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        }
+      },
+      "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Pattern"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Action"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 2,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Handling"
+          ]
+        }
+      ]
+    },
+    "GunDnipro_ST": {
+      "vanilla_upgrade_count": 22,
+      "bprue_upgrade_count": 10,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 2,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "FireRate"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunDnipro_Upgrade_BPRUE_FireRate_Balanced",
+                "GunDnipro_Upgrade_BPRUE_FireRate_HighSpeed"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [
+            0,
+            1,
+            2
+          ],
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 5,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 1,
+              "vertical_positions": [
+                "Top"
+              ],
+              "groups": [
+                "Caliber"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunDnipro_Upgrade_BPRUE_Caliber_762"
+              ]
+            },
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "FireControl"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunDnipro_Upgrade_BPRUE_FireControl_Precision",
+                "GunDnipro_Upgrade_BPRUE_FireControl_Burst"
+              ]
+            },
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "Reload"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunDnipro_Upgrade_BPRUE_Reload_Reinforced",
+                "GunDnipro_Upgrade_BPRUE_Reload_Competition"
+              ]
+            }
+          ]
+        },
+        "Handguard": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0,
+            1
+          ],
+          "vanilla_max_modification_column": 1,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Stock"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunDnipro_Upgrade_BPRUE_Stock_Stabilized",
+                "GunDnipro_Upgrade_BPRUE_Stock_Lightweight",
+                "GunDnipro_Upgrade_BPRUE_Stock_Marksman"
+              ]
+            }
+          ]
+        }
+      },
+      "anomalies": [
+        {
+          "type": "no_vanilla_modification_table",
+          "target_part": "Body"
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Stock",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Stock"
+          ]
+        }
+      ]
+    },
+    "GunFora230_PP_GS": {
+      "vanilla_upgrade_count": 15,
+      "bprue_upgrade_count": 9,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 2,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "Action"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "BPRUE_SMG_Upgrade_Action_Controlled",
+                "BPRUE_SMG_Upgrade_Action_HighSpeed"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            3,
+            4
+          ],
+          "bprue_first_column": 3,
+          "gap_after_last_vanilla_modification": 2,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 7,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 3,
+              "upgrade_count": 4,
+              "vertical_positions": [
+                "Down",
+                "Down",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "Caliber",
+                "Readiness"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "BPRUE_SMG_Upgrade_Readiness_Stabilized",
+                "GunFora230_Upgrade_BPRUE_Caliber_A045",
+                "BPRUE_SMG_Upgrade_Readiness_QuickDraw",
+                "GunFora230_Upgrade_BPRUE_Caliber_A918"
+              ]
+            },
+            {
+              "horizontal_position": 4,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "Conversion",
+                "Reload"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "BPRUE_SMG_Upgrade_Reload_Tactical",
+                "BPRUE_SMG_Upgrade_Reload_Competition",
+                "GunFora230_Upgrade_BPRUE_PistolConversion"
+              ]
+            }
+          ]
+        },
+        "Handguard": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        }
+      },
+      "anomalies": [
+        {
+          "type": "gap_after_vanilla_modifications",
+          "target_part": "Body",
+          "columns": 2
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 3,
+          "upgrade_count": 4,
+          "vertical_positions": [
+            "Down",
+            "Down",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "Caliber",
+            "Readiness"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 4,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "Conversion",
+            "Reload"
+          ]
+        }
+      ]
+    },
+    "GunFora_ST": {
+      "vanilla_upgrade_count": 17,
+      "bprue_upgrade_count": 10,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 2,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "FireRate"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunFora_Upgrade_BPRUE_FireRate_Balanced",
+                "GunFora_Upgrade_BPRUE_FireRate_HighSpeed"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [
+            0,
+            1,
+            2
+          ],
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 5,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 1,
+              "vertical_positions": [
+                "Top"
+              ],
+              "groups": [
+                "Caliber"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunFora_Upgrade_BPRUE_Caliber_762"
+              ]
+            },
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "FireControl"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunFora_Upgrade_BPRUE_FireControl_Precision",
+                "GunFora_Upgrade_BPRUE_FireControl_Burst"
+              ]
+            },
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "Reload"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunFora_Upgrade_BPRUE_Reload_Reinforced",
+                "GunFora_Upgrade_BPRUE_Reload_Competition"
+              ]
+            }
+          ]
+        },
+        "Handguard": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0,
+            1
+          ],
+          "vanilla_max_modification_column": 1,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Stock"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunFora_Upgrade_BPRUE_Stock_Stabilized",
+                "GunFora_Upgrade_BPRUE_Stock_Lightweight",
+                "GunFora_Upgrade_BPRUE_Stock_Marksman"
+              ]
+            }
+          ]
+        }
+      },
+      "anomalies": [
+        {
+          "type": "no_vanilla_modification_table",
+          "target_part": "Body"
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Stock",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Stock"
+          ]
+        }
+      ]
+    },
+    "GunG37_ST": {
+      "vanilla_upgrade_count": 18,
+      "bprue_upgrade_count": 10,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 2,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "FireRate"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunG37_Upgrade_BPRUE_FireRate_Balanced",
+                "GunG37_Upgrade_BPRUE_FireRate_HighSpeed"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1,
+            2,
+            3
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 5,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 1,
+              "vertical_positions": [
+                "Top"
+              ],
+              "groups": [
+                "Caliber"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunG37_Upgrade_BPRUE_Caliber_762NATO"
+              ]
+            },
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "FireControl"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunG37_Upgrade_BPRUE_FireControl_Precision",
+                "GunG37_Upgrade_BPRUE_FireControl_Burst"
+              ]
+            },
+            {
+              "horizontal_position": 3,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "Reload"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunG37_Upgrade_BPRUE_Reload_Reinforced",
+                "GunG37_Upgrade_BPRUE_Reload_Competition"
+              ]
+            }
+          ]
+        },
+        "Handguard": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0,
+            1
+          ],
+          "vanilla_max_modification_column": 1,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Stock"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunG37_Upgrade_BPRUE_Stock_Stabilized",
+                "GunG37_Upgrade_BPRUE_Stock_Lightweight",
+                "GunG37_Upgrade_BPRUE_Stock_Marksman"
+              ]
+            }
+          ]
+        }
+      },
+      "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Stock",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Stock"
+          ]
+        }
+      ]
+    },
+    "GunGrim_ST": {
+      "vanilla_upgrade_count": 21,
+      "bprue_upgrade_count": 9,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 2,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "FireRate"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunGrim_Upgrade_BPRUE_FireRate_Balanced",
+                "GunGrim_Upgrade_BPRUE_FireRate_HighSpeed"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0,
+            1
+          ],
+          "vanilla_max_modification_column": 1,
+          "bprue_columns": [
+            3,
+            4
+          ],
+          "bprue_first_column": 3,
+          "gap_after_last_vanilla_modification": 1,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 4,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 3,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "FireControl"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunGrim_Upgrade_BPRUE_FireControl_Precision",
+                "GunGrim_Upgrade_BPRUE_FireControl_Burst"
+              ]
+            },
+            {
+              "horizontal_position": 4,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "Reload"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunGrim_Upgrade_BPRUE_Reload_Reinforced",
+                "GunGrim_Upgrade_BPRUE_Reload_Competition"
+              ]
+            }
+          ]
+        },
+        "PistolGrip": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Stock"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunGrim_Upgrade_BPRUE_Stock_Stabilized",
+                "GunGrim_Upgrade_BPRUE_Stock_Lightweight",
+                "GunGrim_Upgrade_BPRUE_Stock_Marksman"
+              ]
+            }
+          ]
+        }
+      },
+      "anomalies": [
+        {
+          "type": "gap_after_vanilla_modifications",
+          "target_part": "Body",
+          "columns": 1
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Stock",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Stock"
+          ]
+        }
+      ]
+    },
+    "GunGvintar_ST": {
+      "vanilla_upgrade_count": 15,
+      "bprue_upgrade_count": 9,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [
+            0
+          ],
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 2,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "FireRate"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunGvintar_Upgrade_BPRUE_FireRate_Balanced",
+                "GunGvintar_Upgrade_BPRUE_FireRate_HighSpeed"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            2,
+            3
+          ],
+          "bprue_first_column": 2,
+          "gap_after_last_vanilla_modification": 1,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 4,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "FireControl"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunGvintar_Upgrade_BPRUE_FireControl_Precision",
+                "GunGvintar_Upgrade_BPRUE_FireControl_Burst"
+              ]
+            },
+            {
+              "horizontal_position": 3,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "Reload"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunGvintar_Upgrade_BPRUE_Reload_Reinforced",
+                "GunGvintar_Upgrade_BPRUE_Reload_Competition"
+              ]
+            }
+          ]
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Stock"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunGvintar_Upgrade_BPRUE_Stock_Stabilized",
+                "GunGvintar_Upgrade_BPRUE_Stock_Lightweight",
+                "GunGvintar_Upgrade_BPRUE_Stock_Marksman"
+              ]
+            }
+          ]
+        }
+      },
+      "anomalies": [
+        {
+          "type": "no_vanilla_modification_table",
+          "target_part": "Barrel"
+        },
+        {
+          "type": "gap_after_vanilla_modifications",
+          "target_part": "Body",
+          "columns": 1
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Stock",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Stock"
+          ]
+        }
+      ]
+    },
+    "GunIntegral_PP": {
+      "vanilla_upgrade_count": 18,
+      "bprue_upgrade_count": 9,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 2,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "Action"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "BPRUE_SMG_Upgrade_Action_Controlled",
+                "BPRUE_SMG_Upgrade_Action_HighSpeed"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_max_modification_column": 2,
+          "bprue_columns": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "bprue_first_column": 3,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 4,
+          "bprue_upgrade_count": 7,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 3,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "Readiness"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "BPRUE_SMG_Upgrade_Readiness_Stabilized",
+                "BPRUE_SMG_Upgrade_Readiness_QuickDraw"
+              ]
+            },
+            {
+              "horizontal_position": 4,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "Reload"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "BPRUE_SMG_Upgrade_Reload_Tactical",
+                "BPRUE_SMG_Upgrade_Reload_Competition"
+              ]
+            },
+            {
+              "horizontal_position": 5,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "Caliber"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunIntegral_Upgrade_BPRUE_Caliber_A045",
+                "GunIntegral_Upgrade_BPRUE_Caliber_A918"
+              ]
+            },
+            {
+              "horizontal_position": 6,
+              "upgrade_count": 1,
+              "vertical_positions": [
+                "Top"
+              ],
+              "groups": [
+                "Conversion"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunIntegral_Upgrade_BPRUE_PistolConversion"
+              ]
+            }
+          ]
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        }
+      },
+      "anomalies": []
+    },
+    "GunKharod_ST": {
+      "vanilla_upgrade_count": 21,
+      "bprue_upgrade_count": 10,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 2,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "FireRate"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunKharod_Upgrade_BPRUE_FireRate_Balanced",
+                "GunKharod_Upgrade_BPRUE_FireRate_HighSpeed"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [
+            0,
+            1,
+            2
+          ],
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 5,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 1,
+              "vertical_positions": [
+                "Top"
+              ],
+              "groups": [
+                "Caliber"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunKharod_Upgrade_BPRUE_Caliber_762NATO"
+              ]
+            },
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "FireControl"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunKharod_Upgrade_BPRUE_FireControl_Precision",
+                "GunKharod_Upgrade_BPRUE_FireControl_Burst"
+              ]
+            },
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "Reload"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunKharod_Upgrade_BPRUE_Reload_Reinforced",
+                "GunKharod_Upgrade_BPRUE_Reload_Competition"
+              ]
+            }
+          ]
+        },
+        "Handguard": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0,
+            1
+          ],
+          "vanilla_max_modification_column": 1,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "PistolGrip": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Stock"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunKharod_Upgrade_BPRUE_Stock_Stabilized",
+                "GunKharod_Upgrade_BPRUE_Stock_Lightweight",
+                "GunKharod_Upgrade_BPRUE_Stock_Marksman"
+              ]
+            }
+          ]
+        }
+      },
+      "anomalies": [
+        {
+          "type": "no_vanilla_modification_table",
+          "target_part": "Body"
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Stock",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Stock"
+          ]
+        }
+      ]
+    },
+    "GunLavina_ST": {
+      "vanilla_upgrade_count": 20,
+      "bprue_upgrade_count": 9,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [
+            0
+          ],
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 2,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "FireRate"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunLavina_Upgrade_BPRUE_FireRate_Balanced",
+                "GunLavina_Upgrade_BPRUE_FireRate_HighSpeed"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            2,
+            3
+          ],
+          "bprue_first_column": 2,
+          "gap_after_last_vanilla_modification": 1,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 4,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "FireControl"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunLavina_Upgrade_BPRUE_FireControl_Precision",
+                "GunLavina_Upgrade_BPRUE_FireControl_Burst"
+              ]
+            },
+            {
+              "horizontal_position": 3,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "Reload"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunLavina_Upgrade_BPRUE_Reload_Reinforced",
+                "GunLavina_Upgrade_BPRUE_Reload_Competition"
+              ]
+            }
+          ]
+        },
+        "Handguard": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0,
+            1
+          ],
+          "vanilla_max_modification_column": 1,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "PistolGrip": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Stock"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunLavina_Upgrade_BPRUE_Stock_Stabilized",
+                "GunLavina_Upgrade_BPRUE_Stock_Lightweight",
+                "GunLavina_Upgrade_BPRUE_Stock_Marksman"
+              ]
+            }
+          ]
+        }
+      },
+      "anomalies": [
+        {
+          "type": "no_vanilla_modification_table",
+          "target_part": "Barrel"
+        },
+        {
+          "type": "gap_after_vanilla_modifications",
+          "target_part": "Body",
+          "columns": 1
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Stock",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Stock"
+          ]
+        }
+      ]
+    },
+    "GunM10_HG": {
+      "vanilla_upgrade_count": 8,
+      "bprue_upgrade_count": 9,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [
+            0,
+            1
+          ],
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 4,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Action"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunM10_Upgrade_BPRUE_Pistol_Action_Balanced",
+                "GunM10_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                "GunM10_Upgrade_BPRUE_Pistol_Action_Controlled"
+              ]
+            },
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 1,
+              "vertical_positions": [
+                "Top"
+              ],
+              "groups": [
+                "Signature"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunM10_Upgrade_BPRUE_Pistol_Signature_SelectableFireControl"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1,
+            3
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 5,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Handling"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunM10_Upgrade_BPRUE_Pistol_Handling_Tactical",
+                "GunM10_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                "GunM10_Upgrade_BPRUE_Pistol_Handling_Stabilized"
+              ]
+            },
+            {
+              "horizontal_position": 3,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "Caliber"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunM10_Upgrade_BPRUE_Caliber_A918",
+                "GunM10_Upgrade_BPRUE_Caliber_A919"
+              ]
+            }
+          ]
+        },
+        "PistolGrip": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        }
+      },
+      "anomalies": [
+        {
+          "type": "no_vanilla_modification_table",
+          "target_part": "Barrel"
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Action"
+          ]
+        },
+        {
+          "type": "non_contiguous_bprue_columns",
+          "target_part": "Body",
+          "columns": [
+            1,
+            3
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Handling"
+          ]
+        }
+      ]
+    },
+    "GunM16_ST": {
+      "vanilla_upgrade_count": 10,
+      "bprue_upgrade_count": 10,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [
+            0
+          ],
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 2,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "FireRate"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunM16_Upgrade_BPRUE_FireRate_Balanced",
+                "GunM16_Upgrade_BPRUE_FireRate_HighSpeed"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1,
+            2,
+            3
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 5,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 1,
+              "vertical_positions": [
+                "Top"
+              ],
+              "groups": [
+                "Caliber"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunM16_Upgrade_BPRUE_Caliber_762NATO"
+              ]
+            },
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "FireControl"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunM16_Upgrade_BPRUE_FireControl_Precision",
+                "GunM16_Upgrade_BPRUE_FireControl_Burst"
+              ]
+            },
+            {
+              "horizontal_position": 3,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "Reload"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "GunM16_Upgrade_BPRUE_Reload_Reinforced",
+                "GunM16_Upgrade_BPRUE_Reload_Competition"
+              ]
+            }
+          ]
+        },
+        "PistolGrip": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Stock"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunM16_Upgrade_BPRUE_Stock_Stabilized",
+                "GunM16_Upgrade_BPRUE_Stock_Lightweight",
+                "GunM16_Upgrade_BPRUE_Stock_Marksman"
+              ]
+            }
+          ]
+        }
+      },
+      "anomalies": [
+        {
+          "type": "no_vanilla_modification_table",
+          "target_part": "Barrel"
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Stock",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Stock"
+          ]
+        }
+      ]
+    },
+    "GunM701_SP": {
+      "vanilla_upgrade_count": 18,
+      "bprue_upgrade_count": 10,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1,
+            2,
+            3
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 7,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Ballistics"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunM701_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
+                "GunM701_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity",
+                "GunM701_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel"
+              ]
+            },
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Action"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunM701_Upgrade_BPRUE_Sniper_Action_Precision",
+                "GunM701_Upgrade_BPRUE_Sniper_Action_Rapid",
+                "GunM701_Upgrade_BPRUE_Sniper_Action_Reinforced"
+              ]
+            },
+            {
+              "horizontal_position": 3,
+              "upgrade_count": 1,
+              "vertical_positions": [
+                "Top"
+              ],
+              "groups": [
+                "Signature"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunM701_Upgrade_BPRUE_Sniper_Signature_AntiMateriel"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Marksman"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunM701_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
+                "GunM701_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
+                "GunM701_Upgrade_BPRUE_Sniper_Marksman_Benchrest"
+              ]
+            }
+          ]
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        }
+      },
+      "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Ballistics"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 2,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Action"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Marksman"
+          ]
+        }
+      ]
+    },
+    "GunM860_SG": {
+      "vanilla_upgrade_count": 12,
+      "bprue_upgrade_count": 9,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Pattern"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunM860_Upgrade_BPRUE_SG_Pattern_FieldChoke",
+                "GunM860_Upgrade_BPRUE_SG_Pattern_Breacher",
+                "GunM860_Upgrade_BPRUE_SG_Pattern_FullChoke"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1,
+            2
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 6,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Action"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunM860_Upgrade_BPRUE_SG_Action_Tuned",
+                "GunM860_Upgrade_BPRUE_SG_Action_HighSpeed",
+                "GunM860_Upgrade_BPRUE_SG_Action_Reinforced"
+              ]
+            },
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Handling"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunM860_Upgrade_BPRUE_SG_Handling_Combat",
+                "GunM860_Upgrade_BPRUE_SG_Handling_Lightweight",
+                "GunM860_Upgrade_BPRUE_SG_Handling_Stabilized"
+              ]
+            }
+          ]
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        }
+      },
+      "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Pattern"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Action"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 2,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Handling"
+          ]
+        }
+      ]
+    },
+    "GunMark_SP": {
+      "vanilla_upgrade_count": 17,
+      "bprue_upgrade_count": 10,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1,
+            2,
+            3
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 7,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Ballistics"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunMark_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
+                "GunMark_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity",
+                "GunMark_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel"
+              ]
+            },
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Action"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunMark_Upgrade_BPRUE_Sniper_Action_Precision",
+                "GunMark_Upgrade_BPRUE_Sniper_Action_Rapid",
+                "GunMark_Upgrade_BPRUE_Sniper_Action_Reinforced"
+              ]
+            },
+            {
+              "horizontal_position": 3,
+              "upgrade_count": 1,
+              "vertical_positions": [
+                "Top"
+              ],
+              "groups": [
+                "Signature"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunMark_Upgrade_BPRUE_Sniper_Signature_MatchTrigger"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Marksman"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunMark_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
+                "GunMark_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
+                "GunMark_Upgrade_BPRUE_Sniper_Marksman_Benchrest"
+              ]
+            }
+          ]
+        },
+        "Handguard": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0,
+            1
+          ],
+          "vanilla_max_modification_column": 1,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "PistolGrip": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        }
+      },
+      "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Ballistics"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 2,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Action"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Marksman"
+          ]
+        }
+      ]
+    },
+    "GunPM_HG": {
+      "vanilla_upgrade_count": 4,
+      "bprue_upgrade_count": 7,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [
+            0,
+            1
+          ],
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 4,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Action"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunPM_Upgrade_BPRUE_Pistol_Action_Balanced",
+                "GunPM_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                "GunPM_Upgrade_BPRUE_Pistol_Action_Controlled"
+              ]
+            },
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 1,
+              "vertical_positions": [
+                "Top"
+              ],
+              "groups": [
+                "Signature"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunPM_Upgrade_BPRUE_Pistol_Signature_QuickResponse"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [
+            0
+          ],
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Handling"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunPM_Upgrade_BPRUE_Pistol_Handling_Tactical",
+                "GunPM_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                "GunPM_Upgrade_BPRUE_Pistol_Handling_Stabilized"
+              ]
+            }
+          ]
+        }
+      },
+      "anomalies": [
+        {
+          "type": "no_vanilla_modification_table",
+          "target_part": "Barrel"
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Action"
+          ]
+        },
+        {
+          "type": "no_vanilla_modification_table",
+          "target_part": "Body"
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 0,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Handling"
+          ]
+        }
+      ]
+    },
+    "GunRam2_SG": {
+      "vanilla_upgrade_count": 16,
+      "bprue_upgrade_count": 9,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Pattern"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunRam2_Upgrade_BPRUE_SG_Pattern_FieldChoke",
+                "GunRam2_Upgrade_BPRUE_SG_Pattern_Breacher",
+                "GunRam2_Upgrade_BPRUE_SG_Pattern_FullChoke"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [
+            0,
+            1
+          ],
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 6,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Action"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunRam2_Upgrade_BPRUE_SG_Action_Tuned",
+                "GunRam2_Upgrade_BPRUE_SG_Action_HighSpeed",
+                "GunRam2_Upgrade_BPRUE_SG_Action_Reinforced"
+              ]
+            },
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Handling"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunRam2_Upgrade_BPRUE_SG_Handling_Combat",
+                "GunRam2_Upgrade_BPRUE_SG_Handling_Lightweight",
+                "GunRam2_Upgrade_BPRUE_SG_Handling_Stabilized"
+              ]
+            }
+          ]
+        },
+        "Handguard": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0,
+            1
+          ],
+          "vanilla_max_modification_column": 1,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        }
+      },
+      "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Pattern"
+          ]
+        },
+        {
+          "type": "no_vanilla_modification_table",
+          "target_part": "Body"
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 0,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Action"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Handling"
+          ]
+        }
+      ]
+    },
+    "GunRhino_HG": {
+      "vanilla_upgrade_count": 13,
+      "bprue_upgrade_count": 7,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1,
+            2
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 4,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Action"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunRhino_Upgrade_BPRUE_Pistol_Action_Balanced",
+                "GunRhino_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                "GunRhino_Upgrade_BPRUE_Pistol_Action_Controlled"
+              ]
+            },
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 1,
+              "vertical_positions": [
+                "Top"
+              ],
+              "groups": [
+                "Signature"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunRhino_Upgrade_BPRUE_Pistol_Signature_HuntingCylinder"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Handling"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunRhino_Upgrade_BPRUE_Pistol_Handling_Tactical",
+                "GunRhino_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                "GunRhino_Upgrade_BPRUE_Pistol_Handling_Stabilized"
+              ]
+            }
+          ]
+        },
+        "PistolGrip": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        }
+      },
+      "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Action"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Handling"
+          ]
+        }
+      ]
+    },
+    "GunSKP_DMR_GS": {
+      "vanilla_upgrade_count": 23,
+      "bprue_upgrade_count": 10,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1,
+            2,
+            3
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 7,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Ballistics"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunSKP_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
+                "GunSKP_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity",
+                "GunSKP_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel"
+              ]
+            },
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Action"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunSKP_Upgrade_BPRUE_Sniper_Action_Precision",
+                "GunSKP_Upgrade_BPRUE_Sniper_Action_Rapid",
+                "GunSKP_Upgrade_BPRUE_Sniper_Action_Reinforced"
+              ]
+            },
+            {
+              "horizontal_position": 3,
+              "upgrade_count": 1,
+              "vertical_positions": [
+                "Top"
+              ],
+              "groups": [
+                "Signature"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunSKP_Upgrade_BPRUE_Sniper_Signature_BattleRifle"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Marksman"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunSKP_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
+                "GunSKP_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
+                "GunSKP_Upgrade_BPRUE_Sniper_Marksman_Benchrest"
+              ]
+            }
+          ]
+        },
+        "Handguard": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0,
+            1
+          ],
+          "vanilla_max_modification_column": 1,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "PistolGrip": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        }
+      },
+      "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Ballistics"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 2,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Action"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Marksman"
+          ]
+        }
+      ]
+    },
+    "GunSPSA_SG": {
+      "vanilla_upgrade_count": 19,
+      "bprue_upgrade_count": 9,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0,
+            1
+          ],
+          "vanilla_max_modification_column": 1,
+          "bprue_columns": [
+            2
+          ],
+          "bprue_first_column": 2,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Pattern"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunSPSA_Upgrade_BPRUE_SG_Pattern_FieldChoke",
+                "GunSPSA_Upgrade_BPRUE_SG_Pattern_Breacher",
+                "GunSPSA_Upgrade_BPRUE_SG_Pattern_FullChoke"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1,
+            2
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 6,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Action"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunSPSA_Upgrade_BPRUE_SG_Action_Tuned",
+                "GunSPSA_Upgrade_BPRUE_SG_Action_HighSpeed",
+                "GunSPSA_Upgrade_BPRUE_SG_Action_Reinforced"
+              ]
+            },
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Handling"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunSPSA_Upgrade_BPRUE_SG_Handling_Combat",
+                "GunSPSA_Upgrade_BPRUE_SG_Handling_Lightweight",
+                "GunSPSA_Upgrade_BPRUE_SG_Handling_Stabilized"
+              ]
+            }
+          ]
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        }
+      },
+      "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 2,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Pattern"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Action"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 2,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Handling"
+          ]
+        }
+      ]
+    },
+    "GunSVDM_SP": {
+      "vanilla_upgrade_count": 14,
+      "bprue_upgrade_count": 10,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1,
+            2,
+            3
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 7,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Ballistics"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunSVDM_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
+                "GunSVDM_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity",
+                "GunSVDM_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel"
+              ]
+            },
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Action"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunSVDM_Upgrade_BPRUE_Sniper_Action_Precision",
+                "GunSVDM_Upgrade_BPRUE_Sniper_Action_Rapid",
+                "GunSVDM_Upgrade_BPRUE_Sniper_Action_Reinforced"
+              ]
+            },
+            {
+              "horizontal_position": 3,
+              "upgrade_count": 1,
+              "vertical_positions": [
+                "Top"
+              ],
+              "groups": [
+                "Signature"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunSVDM_Upgrade_BPRUE_Sniper_Signature_RapidMarksman"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Marksman"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunSVDM_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
+                "GunSVDM_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
+                "GunSVDM_Upgrade_BPRUE_Sniper_Marksman_Benchrest"
+              ]
+            }
+          ]
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        }
+      },
+      "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Ballistics"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 2,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Action"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Marksman"
+          ]
+        }
+      ]
+    },
+    "GunSVU_SP": {
+      "vanilla_upgrade_count": 26,
+      "bprue_upgrade_count": 10,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1,
+            2,
+            3
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 7,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Ballistics"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunSVU_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
+                "GunSVU_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity",
+                "GunSVU_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel"
+              ]
+            },
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Action"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunSVU_Upgrade_BPRUE_Sniper_Action_Precision",
+                "GunSVU_Upgrade_BPRUE_Sniper_Action_Rapid",
+                "GunSVU_Upgrade_BPRUE_Sniper_Action_Reinforced"
+              ]
+            },
+            {
+              "horizontal_position": 3,
+              "upgrade_count": 1,
+              "vertical_positions": [
+                "Top"
+              ],
+              "groups": [
+                "Signature"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunSVU_Upgrade_BPRUE_Sniper_Signature_ReconMarksman"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": false,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [
+            0
+          ],
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Marksman"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunSVU_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
+                "GunSVU_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
+                "GunSVU_Upgrade_BPRUE_Sniper_Marksman_Benchrest"
+              ]
+            }
+          ]
+        },
+        "Handguard": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0,
+            1
+          ],
+          "vanilla_max_modification_column": 1,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "PistolGrip": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        }
+      },
+      "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Ballistics"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 2,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Action"
+          ]
+        },
+        {
+          "type": "new_target_part",
+          "target_part": "Body"
+        },
+        {
+          "type": "no_vanilla_modification_table",
+          "target_part": "Body"
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 0,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Marksman"
+          ]
+        }
+      ]
+    },
+    "GunTOZ_SG": {
+      "vanilla_upgrade_count": 8,
+      "bprue_upgrade_count": 9,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [
+            0
+          ],
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Pattern"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunTOZ_Upgrade_BPRUE_SG_Pattern_FieldChoke",
+                "GunTOZ_Upgrade_BPRUE_SG_Pattern_Breacher",
+                "GunTOZ_Upgrade_BPRUE_SG_Pattern_FullChoke"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [
+            0,
+            1
+          ],
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 6,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Action"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunTOZ_Upgrade_BPRUE_SG_Action_Tuned",
+                "GunTOZ_Upgrade_BPRUE_SG_Action_HighSpeed",
+                "GunTOZ_Upgrade_BPRUE_SG_Action_Reinforced"
+              ]
+            },
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Handling"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunTOZ_Upgrade_BPRUE_SG_Handling_Combat",
+                "GunTOZ_Upgrade_BPRUE_SG_Handling_Lightweight",
+                "GunTOZ_Upgrade_BPRUE_SG_Handling_Stabilized"
+              ]
+            }
+          ]
+        },
+        "Handguard": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        }
+      },
+      "anomalies": [
+        {
+          "type": "no_vanilla_modification_table",
+          "target_part": "Barrel"
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 0,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Pattern"
+          ]
+        },
+        {
+          "type": "no_vanilla_modification_table",
+          "target_part": "Body"
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 0,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Action"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Handling"
+          ]
+        }
+      ]
+    },
+    "GunThreeLine_SP_GS": {
+      "vanilla_upgrade_count": 13,
+      "bprue_upgrade_count": 10,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0,
+            1
+          ],
+          "vanilla_max_modification_column": 1,
+          "bprue_columns": [
+            2,
+            3,
+            4
+          ],
+          "bprue_first_column": 2,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 3,
+          "bprue_upgrade_count": 7,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Ballistics"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunThreeLine_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
+                "GunThreeLine_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity",
+                "GunThreeLine_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel"
+              ]
+            },
+            {
+              "horizontal_position": 3,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Action"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunThreeLine_Upgrade_BPRUE_Sniper_Action_Precision",
+                "GunThreeLine_Upgrade_BPRUE_Sniper_Action_Rapid",
+                "GunThreeLine_Upgrade_BPRUE_Sniper_Action_Reinforced"
+              ]
+            },
+            {
+              "horizontal_position": 4,
+              "upgrade_count": 1,
+              "vertical_positions": [
+                "Top"
+              ],
+              "groups": [
+                "Signature"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunThreeLine_Upgrade_BPRUE_Sniper_Signature_MadMinute"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": false,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [
+            0
+          ],
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Marksman"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunThreeLine_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
+                "GunThreeLine_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
+                "GunThreeLine_Upgrade_BPRUE_Sniper_Marksman_Benchrest"
+              ]
+            }
+          ]
+        },
+        "PistolGrip": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        }
+      },
+      "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 2,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Ballistics"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 3,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Action"
+          ]
+        },
+        {
+          "type": "new_target_part",
+          "target_part": "Body"
+        },
+        {
+          "type": "no_vanilla_modification_table",
+          "target_part": "Body"
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 0,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Marksman"
+          ]
+        }
+      ]
+    },
+    "GunUDP_HG": {
+      "vanilla_upgrade_count": 6,
+      "bprue_upgrade_count": 7,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1,
+            2
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 4,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Action"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunUDP_Upgrade_BPRUE_Pistol_Action_Balanced",
+                "GunUDP_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                "GunUDP_Upgrade_BPRUE_Pistol_Action_Controlled"
+              ]
+            },
+            {
+              "horizontal_position": 2,
+              "upgrade_count": 1,
+              "vertical_positions": [
+                "Top"
+              ],
+              "groups": [
+                "Signature"
+              ],
+              "has_top": true,
+              "has_down": false,
+              "has_unspecified": false,
+              "sids": [
+                "GunUDP_Upgrade_BPRUE_Pistol_Signature_MatchBarrel"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [
+            0
+          ],
+          "bprue_first_column": 0,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 3,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 0,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Unspecified"
+              ],
+              "groups": [
+                "Handling"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": true,
+              "sids": [
+                "GunUDP_Upgrade_BPRUE_Pistol_Handling_Tactical",
+                "GunUDP_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                "GunUDP_Upgrade_BPRUE_Pistol_Handling_Stabilized"
+              ]
+            }
+          ]
+        }
+      },
+      "anomalies": [
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Barrel",
+          "horizontal_position": 1,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Action"
+          ]
+        },
+        {
+          "type": "no_vanilla_modification_table",
+          "target_part": "Body"
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 0,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Unspecified"
+          ],
+          "groups": [
+            "Handling"
+          ]
+        }
+      ]
+    },
+    "GunViper_PP": {
+      "vanilla_upgrade_count": 13,
+      "bprue_upgrade_count": 9,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 2,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "Action"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "BPRUE_SMG_Upgrade_Action_Controlled",
+                "BPRUE_SMG_Upgrade_Action_HighSpeed"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            3,
+            4
+          ],
+          "bprue_first_column": 3,
+          "gap_after_last_vanilla_modification": 2,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 7,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 3,
+              "upgrade_count": 4,
+              "vertical_positions": [
+                "Down",
+                "Down",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "Caliber",
+                "Readiness"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "BPRUE_SMG_Upgrade_Readiness_Stabilized",
+                "GunViper_Upgrade_BPRUE_Caliber_A045",
+                "BPRUE_SMG_Upgrade_Readiness_QuickDraw",
+                "GunViper_Upgrade_BPRUE_Caliber_A918"
+              ]
+            },
+            {
+              "horizontal_position": 4,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "Conversion",
+                "Reload"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "BPRUE_SMG_Upgrade_Reload_Tactical",
+                "BPRUE_SMG_Upgrade_Reload_Competition",
+                "GunViper_Upgrade_BPRUE_PistolConversion"
+              ]
+            }
+          ]
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        }
+      },
+      "anomalies": [
+        {
+          "type": "gap_after_vanilla_modifications",
+          "target_part": "Body",
+          "columns": 2
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 3,
+          "upgrade_count": 4,
+          "vertical_positions": [
+            "Down",
+            "Down",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "Caliber",
+            "Readiness"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 4,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "Conversion",
+            "Reload"
+          ]
+        }
+      ]
+    },
+    "GunZubr_PP": {
+      "vanilla_upgrade_count": 19,
+      "bprue_upgrade_count": 9,
+      "targets": {
+        "Barrel": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            1
+          ],
+          "bprue_first_column": 1,
+          "gap_after_last_vanilla_modification": 0,
+          "bprue_column_count": 1,
+          "bprue_upgrade_count": 2,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 1,
+              "upgrade_count": 2,
+              "vertical_positions": [
+                "Down",
+                "Top"
+              ],
+              "groups": [
+                "Action"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "BPRUE_SMG_Upgrade_Action_Controlled",
+                "BPRUE_SMG_Upgrade_Action_HighSpeed"
+              ]
+            }
+          ]
+        },
+        "Body": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [
+            3,
+            4
+          ],
+          "bprue_first_column": 3,
+          "gap_after_last_vanilla_modification": 2,
+          "bprue_column_count": 2,
+          "bprue_upgrade_count": 7,
+          "bprue_columns_detail": [
+            {
+              "horizontal_position": 3,
+              "upgrade_count": 4,
+              "vertical_positions": [
+                "Down",
+                "Down",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "Caliber",
+                "Readiness"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "BPRUE_SMG_Upgrade_Readiness_Stabilized",
+                "GunZubr_Upgrade_BPRUE_Caliber_A045",
+                "BPRUE_SMG_Upgrade_Readiness_QuickDraw",
+                "GunZubr_Upgrade_BPRUE_Caliber_A918"
+              ]
+            },
+            {
+              "horizontal_position": 4,
+              "upgrade_count": 3,
+              "vertical_positions": [
+                "Down",
+                "Top",
+                "Top"
+              ],
+              "groups": [
+                "Conversion",
+                "Reload"
+              ],
+              "has_top": true,
+              "has_down": true,
+              "has_unspecified": false,
+              "sids": [
+                "BPRUE_SMG_Upgrade_Reload_Tactical",
+                "BPRUE_SMG_Upgrade_Reload_Competition",
+                "GunZubr_Upgrade_BPRUE_PistolConversion"
+              ]
+            }
+          ]
+        },
+        "Handguard": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0,
+            1
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "PistolGrip": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": false,
+          "vanilla_all_columns": [
+            0,
+            1,
+            2
+          ],
+          "vanilla_modification_columns": [],
+          "vanilla_max_modification_column": null,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        },
+        "Stock": {
+          "vanilla_has_target": true,
+          "vanilla_has_modifications": true,
+          "vanilla_all_columns": [
+            0
+          ],
+          "vanilla_modification_columns": [
+            0
+          ],
+          "vanilla_max_modification_column": 0,
+          "bprue_columns": [],
+          "bprue_first_column": null,
+          "gap_after_last_vanilla_modification": null,
+          "bprue_column_count": 0,
+          "bprue_upgrade_count": 0,
+          "bprue_columns_detail": []
+        }
+      },
+      "anomalies": [
+        {
+          "type": "gap_after_vanilla_modifications",
+          "target_part": "Body",
+          "columns": 2
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 3,
+          "upgrade_count": 4,
+          "vertical_positions": [
+            "Down",
+            "Down",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "Caliber",
+            "Readiness"
+          ]
+        },
+        {
+          "type": "more_than_two_variants_in_column",
+          "target_part": "Body",
+          "horizontal_position": 4,
+          "upgrade_count": 3,
+          "vertical_positions": [
+            "Down",
+            "Top",
+            "Top"
+          ],
+          "groups": [
+            "Conversion",
+            "Reload"
+          ]
+        }
+      ]
+    }
+  }
+}

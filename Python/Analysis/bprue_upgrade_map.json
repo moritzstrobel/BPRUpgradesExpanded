@@ -37,20 +37,20 @@
           }
         },
         "Body": {
-          "2": {
+          "0": {
             "Top": [
               {
                 "sid": "GunAK74_Upgrade_BPRUE_Caliber_762",
                 "class": "AR",
                 "group": "Caliber",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": []
               }
             ]
           },
-          "3": {
+          "1": {
             "Down": [
               {
                 "sid": "GunAK74_Upgrade_BPRUE_FireControl_Precision",
@@ -78,7 +78,7 @@
               }
             ]
           },
-          "4": {
+          "2": {
             "Down": [
               {
                 "sid": "GunAK74_Upgrade_BPRUE_Reload_Reinforced",
@@ -242,11 +242,7 @@
                 "blocking_sids": [
                   "BPRUE_SMG_Upgrade_Reload_Tactical"
                 ]
-              }
-            ]
-          },
-          "6": {
-            "Top": [
+              },
               {
                 "sid": "GunAKU_Upgrade_BPRUE_PistolConversion",
                 "class": "SMG",
@@ -405,20 +401,20 @@
           }
         },
         "Body": {
-          "2": {
+          "0": {
             "Top": [
               {
                 "sid": "GunArev_Upgrade_BPRUE_Caliber_762NATO",
                 "class": "AR",
                 "group": "Caliber",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": []
               }
             ]
           },
-          "3": {
+          "1": {
             "Down": [
               {
                 "sid": "GunArev_Upgrade_BPRUE_FireControl_Precision",
@@ -446,7 +442,7 @@
               }
             ]
           },
-          "4": {
+          "2": {
             "Down": [
               {
                 "sid": "GunArev_Upgrade_BPRUE_Reload_Reinforced",
@@ -597,24 +593,7 @@
                 "blocking_sids": [
                   "BPRUE_SMG_Upgrade_Reload_Competition"
                 ]
-              }
-            ],
-            "Top": [
-              {
-                "sid": "BPRUE_SMG_Upgrade_Reload_Competition",
-                "class": "SMG",
-                "group": "Reload",
-                "is_modification": true,
-                "horizontal_explicit": true,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "BPRUE_SMG_Upgrade_Reload_Tactical"
-                ]
-              }
-            ]
-          },
-          "5": {
-            "Down": [
+              },
               {
                 "sid": "GunBucket_Upgrade_BPRUE_Caliber_A045",
                 "class": "SMG",
@@ -629,6 +608,17 @@
             ],
             "Top": [
               {
+                "sid": "BPRUE_SMG_Upgrade_Reload_Competition",
+                "class": "SMG",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "BPRUE_SMG_Upgrade_Reload_Tactical"
+                ]
+              },
+              {
                 "sid": "GunBucket_Upgrade_BPRUE_Caliber_A919",
                 "class": "SMG",
                 "group": "Caliber",
@@ -641,7 +631,7 @@
               }
             ]
           },
-          "6": {
+          "5": {
             "Top": [
               {
                 "sid": "GunBucket_Upgrade_BPRUE_PistolConversion",
@@ -661,7 +651,7 @@
       "upgrade_count": 9,
       "slots": {
         "Barrel": {
-          "2": {
+          "1": {
             "Down": [
               {
                 "sid": "GunD12_Upgrade_BPRUE_SG_Pattern_FieldChoke",
@@ -832,20 +822,20 @@
           }
         },
         "Body": {
-          "2": {
+          "0": {
             "Top": [
               {
                 "sid": "GunDnipro_Upgrade_BPRUE_Caliber_762",
                 "class": "AR",
                 "group": "Caliber",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": []
               }
             ]
           },
-          "3": {
+          "1": {
             "Down": [
               {
                 "sid": "GunDnipro_Upgrade_BPRUE_FireControl_Precision",
@@ -873,7 +863,7 @@
               }
             ]
           },
-          "4": {
+          "2": {
             "Down": [
               {
                 "sid": "GunDnipro_Upgrade_BPRUE_Reload_Reinforced",
@@ -996,6 +986,17 @@
                 "blocking_sids": [
                   "BPRUE_SMG_Upgrade_Readiness_QuickDraw"
                 ]
+              },
+              {
+                "sid": "GunFora230_Upgrade_BPRUE_Caliber_A045",
+                "class": "SMG",
+                "group": "Caliber",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora230_Upgrade_BPRUE_Caliber_A918"
+                ]
               }
             ],
             "Top": [
@@ -1008,6 +1009,17 @@
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "BPRUE_SMG_Upgrade_Readiness_Stabilized"
+                ]
+              },
+              {
+                "sid": "GunFora230_Upgrade_BPRUE_Caliber_A918",
+                "class": "SMG",
+                "group": "Caliber",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora230_Upgrade_BPRUE_Caliber_A045"
                 ]
               }
             ]
@@ -1037,39 +1049,7 @@
                 "blocking_sids": [
                   "BPRUE_SMG_Upgrade_Reload_Tactical"
                 ]
-              }
-            ]
-          },
-          "5": {
-            "Down": [
-              {
-                "sid": "GunFora230_Upgrade_BPRUE_Caliber_A045",
-                "class": "SMG",
-                "group": "Caliber",
-                "is_modification": true,
-                "horizontal_explicit": true,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "GunFora230_Upgrade_BPRUE_Caliber_A918"
-                ]
-              }
-            ],
-            "Top": [
-              {
-                "sid": "GunFora230_Upgrade_BPRUE_Caliber_A918",
-                "class": "SMG",
-                "group": "Caliber",
-                "is_modification": true,
-                "horizontal_explicit": true,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "GunFora230_Upgrade_BPRUE_Caliber_A045"
-                ]
-              }
-            ]
-          },
-          "6": {
-            "Top": [
+              },
               {
                 "sid": "GunFora230_Upgrade_BPRUE_PistolConversion",
                 "class": "SMG",
@@ -1118,20 +1098,20 @@
           }
         },
         "Body": {
-          "2": {
+          "0": {
             "Top": [
               {
                 "sid": "GunFora_Upgrade_BPRUE_Caliber_762",
                 "class": "AR",
                 "group": "Caliber",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": []
               }
             ]
           },
-          "3": {
+          "1": {
             "Down": [
               {
                 "sid": "GunFora_Upgrade_BPRUE_FireControl_Precision",
@@ -1159,7 +1139,7 @@
               }
             ]
           },
-          "4": {
+          "2": {
             "Down": [
               {
                 "sid": "GunFora_Upgrade_BPRUE_Reload_Reinforced",
@@ -1270,7 +1250,7 @@
           }
         },
         "Body": {
-          "2": {
+          "1": {
             "Top": [
               {
                 "sid": "GunG37_Upgrade_BPRUE_Caliber_762NATO",
@@ -1283,7 +1263,7 @@
               }
             ]
           },
-          "3": {
+          "2": {
             "Down": [
               {
                 "sid": "GunG37_Upgrade_BPRUE_FireControl_Precision",
@@ -1311,7 +1291,7 @@
               }
             ]
           },
-          "4": {
+          "3": {
             "Down": [
               {
                 "sid": "GunG37_Upgrade_BPRUE_Reload_Reinforced",
@@ -1531,14 +1511,14 @@
       "upgrade_count": 9,
       "slots": {
         "Barrel": {
-          "1": {
+          "0": {
             "Down": [
               {
                 "sid": "GunGvintar_Upgrade_BPRUE_FireRate_Balanced",
                 "class": "AR",
                 "group": "FireRate",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunGvintar_Upgrade_BPRUE_FireRate_HighSpeed"
@@ -1551,7 +1531,7 @@
                 "class": "AR",
                 "group": "FireRate",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunGvintar_Upgrade_BPRUE_FireRate_Balanced"
@@ -1561,7 +1541,7 @@
           }
         },
         "Body": {
-          "3": {
+          "2": {
             "Down": [
               {
                 "sid": "GunGvintar_Upgrade_BPRUE_FireControl_Precision",
@@ -1589,7 +1569,7 @@
               }
             ]
           },
-          "4": {
+          "3": {
             "Down": [
               {
                 "sid": "GunGvintar_Upgrade_BPRUE_Reload_Reinforced",
@@ -1834,20 +1814,20 @@
           }
         },
         "Body": {
-          "2": {
+          "0": {
             "Top": [
               {
                 "sid": "GunKharod_Upgrade_BPRUE_Caliber_762NATO",
                 "class": "AR",
                 "group": "Caliber",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": []
               }
             ]
           },
-          "3": {
+          "1": {
             "Down": [
               {
                 "sid": "GunKharod_Upgrade_BPRUE_FireControl_Precision",
@@ -1875,7 +1855,7 @@
               }
             ]
           },
-          "4": {
+          "2": {
             "Down": [
               {
                 "sid": "GunKharod_Upgrade_BPRUE_Reload_Reinforced",
@@ -1956,14 +1936,14 @@
       "upgrade_count": 9,
       "slots": {
         "Barrel": {
-          "1": {
+          "0": {
             "Down": [
               {
                 "sid": "GunLavina_Upgrade_BPRUE_FireRate_Balanced",
                 "class": "AR",
                 "group": "FireRate",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunLavina_Upgrade_BPRUE_FireRate_HighSpeed"
@@ -1976,7 +1956,7 @@
                 "class": "AR",
                 "group": "FireRate",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunLavina_Upgrade_BPRUE_FireRate_Balanced"
@@ -1986,7 +1966,7 @@
           }
         },
         "Body": {
-          "3": {
+          "2": {
             "Down": [
               {
                 "sid": "GunLavina_Upgrade_BPRUE_FireControl_Precision",
@@ -2014,7 +1994,7 @@
               }
             ]
           },
-          "4": {
+          "3": {
             "Down": [
               {
                 "sid": "GunLavina_Upgrade_BPRUE_Reload_Reinforced",
@@ -2095,14 +2075,14 @@
       "upgrade_count": 9,
       "slots": {
         "Barrel": {
-          "1": {
+          "0": {
             "Down": [
               {
                 "sid": "GunM10_Upgrade_BPRUE_Pistol_Action_Balanced",
                 "class": "Pistol",
                 "group": "Action",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunM10_Upgrade_BPRUE_Pistol_Action_HighSpeed",
@@ -2116,7 +2096,7 @@
                 "class": "Pistol",
                 "group": "Action",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunM10_Upgrade_BPRUE_Pistol_Action_Balanced",
@@ -2130,7 +2110,7 @@
                 "class": "Pistol",
                 "group": "Action",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": false,
                 "blocking_sids": [
                   "GunM10_Upgrade_BPRUE_Pistol_Action_HighSpeed",
@@ -2139,7 +2119,7 @@
               }
             ]
           },
-          "2": {
+          "1": {
             "Top": [
               {
                 "sid": "GunM10_Upgrade_BPRUE_Pistol_Signature_SelectableFireControl",
@@ -2198,7 +2178,7 @@
               }
             ]
           },
-          "5": {
+          "3": {
             "Down": [
               {
                 "sid": "GunM10_Upgrade_BPRUE_Caliber_A918",
@@ -2233,14 +2213,14 @@
       "upgrade_count": 10,
       "slots": {
         "Barrel": {
-          "1": {
+          "0": {
             "Down": [
               {
                 "sid": "GunM16_Upgrade_BPRUE_FireRate_Balanced",
                 "class": "AR",
                 "group": "FireRate",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunM16_Upgrade_BPRUE_FireRate_HighSpeed"
@@ -2253,7 +2233,7 @@
                 "class": "AR",
                 "group": "FireRate",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunM16_Upgrade_BPRUE_FireRate_Balanced"
@@ -2263,7 +2243,7 @@
           }
         },
         "Body": {
-          "2": {
+          "1": {
             "Top": [
               {
                 "sid": "GunM16_Upgrade_BPRUE_Caliber_762NATO",
@@ -2276,7 +2256,7 @@
               }
             ]
           },
-          "3": {
+          "2": {
             "Down": [
               {
                 "sid": "GunM16_Upgrade_BPRUE_FireControl_Precision",
@@ -2304,7 +2284,7 @@
               }
             ]
           },
-          "4": {
+          "3": {
             "Down": [
               {
                 "sid": "GunM16_Upgrade_BPRUE_Reload_Reinforced",
@@ -2385,7 +2365,7 @@
       "upgrade_count": 10,
       "slots": {
         "Barrel": {
-          "2": {
+          "1": {
             "Down": [
               {
                 "sid": "GunM701_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
@@ -2429,7 +2409,7 @@
               }
             ]
           },
-          "3": {
+          "2": {
             "Down": [
               {
                 "sid": "GunM701_Upgrade_BPRUE_Sniper_Action_Precision",
@@ -2473,7 +2453,7 @@
               }
             ]
           },
-          "4": {
+          "3": {
             "Top": [
               {
                 "sid": "GunM701_Upgrade_BPRUE_Sniper_Signature_AntiMateriel",
@@ -2539,7 +2519,7 @@
       "upgrade_count": 9,
       "slots": {
         "Barrel": {
-          "2": {
+          "1": {
             "Down": [
               {
                 "sid": "GunM860_Upgrade_BPRUE_SG_Pattern_FieldChoke",
@@ -2680,7 +2660,7 @@
       "upgrade_count": 10,
       "slots": {
         "Barrel": {
-          "2": {
+          "1": {
             "Down": [
               {
                 "sid": "GunMark_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
@@ -2724,7 +2704,7 @@
               }
             ]
           },
-          "3": {
+          "2": {
             "Down": [
               {
                 "sid": "GunMark_Upgrade_BPRUE_Sniper_Action_Precision",
@@ -2768,7 +2748,7 @@
               }
             ]
           },
-          "4": {
+          "3": {
             "Top": [
               {
                 "sid": "GunMark_Upgrade_BPRUE_Sniper_Signature_MatchTrigger",
@@ -2834,14 +2814,14 @@
       "upgrade_count": 7,
       "slots": {
         "Barrel": {
-          "1": {
+          "0": {
             "Down": [
               {
                 "sid": "GunPM_Upgrade_BPRUE_Pistol_Action_Balanced",
                 "class": "Pistol",
                 "group": "Action",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunPM_Upgrade_BPRUE_Pistol_Action_HighSpeed",
@@ -2855,7 +2835,7 @@
                 "class": "Pistol",
                 "group": "Action",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunPM_Upgrade_BPRUE_Pistol_Action_Balanced",
@@ -2869,7 +2849,7 @@
                 "class": "Pistol",
                 "group": "Action",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": false,
                 "blocking_sids": [
                   "GunPM_Upgrade_BPRUE_Pistol_Action_HighSpeed",
@@ -2878,7 +2858,7 @@
               }
             ]
           },
-          "2": {
+          "1": {
             "Top": [
               {
                 "sid": "GunPM_Upgrade_BPRUE_Pistol_Signature_QuickResponse",
@@ -2893,14 +2873,14 @@
           }
         },
         "Body": {
-          "1": {
+          "0": {
             "Down": [
               {
                 "sid": "GunPM_Upgrade_BPRUE_Pistol_Handling_Tactical",
                 "class": "Pistol",
                 "group": "Handling",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunPM_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
@@ -2914,7 +2894,7 @@
                 "class": "Pistol",
                 "group": "Handling",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunPM_Upgrade_BPRUE_Pistol_Handling_Tactical",
@@ -2928,7 +2908,7 @@
                 "class": "Pistol",
                 "group": "Handling",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": false,
                 "blocking_sids": [
                   "GunPM_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
@@ -2944,7 +2924,7 @@
       "upgrade_count": 9,
       "slots": {
         "Barrel": {
-          "2": {
+          "1": {
             "Down": [
               {
                 "sid": "GunRam2_Upgrade_BPRUE_SG_Pattern_FieldChoke",
@@ -2990,14 +2970,14 @@
           }
         },
         "Body": {
-          "1": {
+          "0": {
             "Down": [
               {
                 "sid": "GunRam2_Upgrade_BPRUE_SG_Action_Tuned",
                 "class": "SG",
                 "group": "Action",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunRam2_Upgrade_BPRUE_SG_Action_HighSpeed",
@@ -3011,7 +2991,7 @@
                 "class": "SG",
                 "group": "Action",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunRam2_Upgrade_BPRUE_SG_Action_Tuned",
@@ -3025,7 +3005,7 @@
                 "class": "SG",
                 "group": "Action",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": false,
                 "blocking_sids": [
                   "GunRam2_Upgrade_BPRUE_SG_Action_HighSpeed",
@@ -3034,7 +3014,7 @@
               }
             ]
           },
-          "2": {
+          "1": {
             "Down": [
               {
                 "sid": "GunRam2_Upgrade_BPRUE_SG_Handling_Combat",
@@ -3195,7 +3175,7 @@
       "upgrade_count": 10,
       "slots": {
         "Barrel": {
-          "2": {
+          "1": {
             "Down": [
               {
                 "sid": "GunSKP_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
@@ -3239,7 +3219,7 @@
               }
             ]
           },
-          "3": {
+          "2": {
             "Down": [
               {
                 "sid": "GunSKP_Upgrade_BPRUE_Sniper_Action_Precision",
@@ -3283,7 +3263,7 @@
               }
             ]
           },
-          "4": {
+          "3": {
             "Top": [
               {
                 "sid": "GunSKP_Upgrade_BPRUE_Sniper_Signature_BattleRifle",
@@ -3490,7 +3470,7 @@
       "upgrade_count": 10,
       "slots": {
         "Barrel": {
-          "2": {
+          "1": {
             "Down": [
               {
                 "sid": "GunSVDM_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
@@ -3534,7 +3514,7 @@
               }
             ]
           },
-          "3": {
+          "2": {
             "Down": [
               {
                 "sid": "GunSVDM_Upgrade_BPRUE_Sniper_Action_Precision",
@@ -3578,7 +3558,7 @@
               }
             ]
           },
-          "4": {
+          "3": {
             "Top": [
               {
                 "sid": "GunSVDM_Upgrade_BPRUE_Sniper_Signature_RapidMarksman",
@@ -3644,7 +3624,7 @@
       "upgrade_count": 10,
       "slots": {
         "Barrel": {
-          "2": {
+          "1": {
             "Down": [
               {
                 "sid": "GunSVU_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
@@ -3688,7 +3668,7 @@
               }
             ]
           },
-          "3": {
+          "2": {
             "Down": [
               {
                 "sid": "GunSVU_Upgrade_BPRUE_Sniper_Action_Precision",
@@ -3732,7 +3712,7 @@
               }
             ]
           },
-          "4": {
+          "3": {
             "Top": [
               {
                 "sid": "GunSVU_Upgrade_BPRUE_Sniper_Signature_ReconMarksman",
@@ -3747,14 +3727,14 @@
           }
         },
         "Body": {
-          "1": {
+          "0": {
             "Down": [
               {
                 "sid": "GunSVU_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
                 "class": "Sniper",
                 "group": "Marksman",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunSVU_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
@@ -3768,7 +3748,7 @@
                 "class": "Sniper",
                 "group": "Marksman",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunSVU_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
@@ -3782,7 +3762,7 @@
                 "class": "Sniper",
                 "group": "Marksman",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": false,
                 "blocking_sids": [
                   "GunSVU_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
@@ -3798,14 +3778,14 @@
       "upgrade_count": 9,
       "slots": {
         "Barrel": {
-          "2": {
+          "0": {
             "Down": [
               {
                 "sid": "GunTOZ_Upgrade_BPRUE_SG_Pattern_FieldChoke",
                 "class": "SG",
                 "group": "Pattern",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunTOZ_Upgrade_BPRUE_SG_Pattern_Breacher",
@@ -3819,7 +3799,7 @@
                 "class": "SG",
                 "group": "Pattern",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunTOZ_Upgrade_BPRUE_SG_Pattern_FieldChoke",
@@ -3833,7 +3813,7 @@
                 "class": "SG",
                 "group": "Pattern",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": false,
                 "blocking_sids": [
                   "GunTOZ_Upgrade_BPRUE_SG_Pattern_Breacher",
@@ -3844,14 +3824,14 @@
           }
         },
         "Body": {
-          "1": {
+          "0": {
             "Down": [
               {
                 "sid": "GunTOZ_Upgrade_BPRUE_SG_Action_Tuned",
                 "class": "SG",
                 "group": "Action",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunTOZ_Upgrade_BPRUE_SG_Action_HighSpeed",
@@ -3865,7 +3845,7 @@
                 "class": "SG",
                 "group": "Action",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunTOZ_Upgrade_BPRUE_SG_Action_Tuned",
@@ -3879,7 +3859,7 @@
                 "class": "SG",
                 "group": "Action",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": false,
                 "blocking_sids": [
                   "GunTOZ_Upgrade_BPRUE_SG_Action_HighSpeed",
@@ -3888,7 +3868,7 @@
               }
             ]
           },
-          "2": {
+          "1": {
             "Down": [
               {
                 "sid": "GunTOZ_Upgrade_BPRUE_SG_Handling_Combat",
@@ -4042,14 +4022,14 @@
           }
         },
         "Body": {
-          "1": {
+          "0": {
             "Down": [
               {
                 "sid": "GunThreeLine_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
                 "class": "Sniper",
                 "group": "Marksman",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunThreeLine_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
@@ -4063,7 +4043,7 @@
                 "class": "Sniper",
                 "group": "Marksman",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunThreeLine_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
@@ -4077,7 +4057,7 @@
                 "class": "Sniper",
                 "group": "Marksman",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": false,
                 "blocking_sids": [
                   "GunThreeLine_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
@@ -4152,14 +4132,14 @@
           }
         },
         "Body": {
-          "1": {
+          "0": {
             "Down": [
               {
                 "sid": "GunUDP_Upgrade_BPRUE_Pistol_Handling_Tactical",
                 "class": "Pistol",
                 "group": "Handling",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunUDP_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
@@ -4173,7 +4153,7 @@
                 "class": "Pistol",
                 "group": "Handling",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunUDP_Upgrade_BPRUE_Pistol_Handling_Tactical",
@@ -4187,7 +4167,7 @@
                 "class": "Pistol",
                 "group": "Handling",
                 "is_modification": true,
-                "horizontal_explicit": true,
+                "horizontal_explicit": false,
                 "vertical_explicit": false,
                 "blocking_sids": [
                   "GunUDP_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
@@ -4245,6 +4225,17 @@
                 "blocking_sids": [
                   "BPRUE_SMG_Upgrade_Readiness_QuickDraw"
                 ]
+              },
+              {
+                "sid": "GunViper_Upgrade_BPRUE_Caliber_A045",
+                "class": "SMG",
+                "group": "Caliber",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunViper_Upgrade_BPRUE_Caliber_A918"
+                ]
               }
             ],
             "Top": [
@@ -4257,6 +4248,17 @@
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "BPRUE_SMG_Upgrade_Readiness_Stabilized"
+                ]
+              },
+              {
+                "sid": "GunViper_Upgrade_BPRUE_Caliber_A918",
+                "class": "SMG",
+                "group": "Caliber",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunViper_Upgrade_BPRUE_Caliber_A045"
                 ]
               }
             ]
@@ -4286,39 +4288,7 @@
                 "blocking_sids": [
                   "BPRUE_SMG_Upgrade_Reload_Tactical"
                 ]
-              }
-            ]
-          },
-          "5": {
-            "Down": [
-              {
-                "sid": "GunViper_Upgrade_BPRUE_Caliber_A045",
-                "class": "SMG",
-                "group": "Caliber",
-                "is_modification": true,
-                "horizontal_explicit": true,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "GunViper_Upgrade_BPRUE_Caliber_A918"
-                ]
-              }
-            ],
-            "Top": [
-              {
-                "sid": "GunViper_Upgrade_BPRUE_Caliber_A918",
-                "class": "SMG",
-                "group": "Caliber",
-                "is_modification": true,
-                "horizontal_explicit": true,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "GunViper_Upgrade_BPRUE_Caliber_A045"
-                ]
-              }
-            ]
-          },
-          "6": {
-            "Top": [
+              },
               {
                 "sid": "GunViper_Upgrade_BPRUE_PistolConversion",
                 "class": "SMG",
@@ -4379,6 +4349,17 @@
                 "blocking_sids": [
                   "BPRUE_SMG_Upgrade_Readiness_QuickDraw"
                 ]
+              },
+              {
+                "sid": "GunZubr_Upgrade_BPRUE_Caliber_A045",
+                "class": "SMG",
+                "group": "Caliber",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunZubr_Upgrade_BPRUE_Caliber_A918"
+                ]
               }
             ],
             "Top": [
@@ -4391,6 +4372,17 @@
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "BPRUE_SMG_Upgrade_Readiness_Stabilized"
+                ]
+              },
+              {
+                "sid": "GunZubr_Upgrade_BPRUE_Caliber_A918",
+                "class": "SMG",
+                "group": "Caliber",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunZubr_Upgrade_BPRUE_Caliber_A045"
                 ]
               }
             ]
@@ -4420,39 +4412,7 @@
                 "blocking_sids": [
                   "BPRUE_SMG_Upgrade_Reload_Tactical"
                 ]
-              }
-            ]
-          },
-          "5": {
-            "Down": [
-              {
-                "sid": "GunZubr_Upgrade_BPRUE_Caliber_A045",
-                "class": "SMG",
-                "group": "Caliber",
-                "is_modification": true,
-                "horizontal_explicit": true,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "GunZubr_Upgrade_BPRUE_Caliber_A918"
-                ]
-              }
-            ],
-            "Top": [
-              {
-                "sid": "GunZubr_Upgrade_BPRUE_Caliber_A918",
-                "class": "SMG",
-                "group": "Caliber",
-                "is_modification": true,
-                "horizontal_explicit": true,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "GunZubr_Upgrade_BPRUE_Caliber_A045"
-                ]
-              }
-            ]
-          },
-          "6": {
-            "Top": [
+              },
               {
                 "sid": "GunZubr_Upgrade_BPRUE_PistolConversion",
                 "class": "SMG",
