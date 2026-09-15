@@ -1,9 +1,12 @@
 from __future__ import annotations
 
-import re
+import json
 from pathlib import Path
 
-from vanilla_upgrade_layout import group_columns, vanilla_modification_max_columns
+from vanilla_upgrade_layout import (
+    group_columns_for_general_setups,
+    modification_max_columns_for_general_setups,
+)
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PYTHON_ROOT = SCRIPT_DIR.parents[1]
@@ -18,9 +21,14 @@ FILES = [
     UPGRADE_DIR / "BPRUE_SniperUpgradePrototypes.cfg",
 ]
 
-# Each logical module group gets one column. Columns are allocated independently
-# per target part, immediately to the right of the highest vanilla modification
-# column found in Python/VanillaReference/UpgradePrototypes.cfg.
+CONFIG_FILES = {
+    "AR": SCRIPT_DIR / "assault_rifles_upgrades.json",
+    "SMG": SCRIPT_DIR / "smg_upgrades.json",
+    "SG": SCRIPT_DIR / "shotgun_upgrades.json",
+    "Pistol": SCRIPT_DIR / "pistol_upgrades.json",
+    "Sniper": SCRIPT_DIR / "sniper_upgrades.json",
+}
+
 GROUP_ORDER = {
     "AR": {
         "Body": ["Caliber", "FireControl", "Reload"],
@@ -46,6 +54,35 @@ GROUP_ORDER = {
 }
 
 
+def load_configs() -> dict[str, dict]:
+    return {
+        weapon_class: json.loads(path.read_text(encoding="utf-8"))
+        for weapon_class, path in CONFIG_FILES.items()
+    }
+
+
+def family_records(configs: dict[str, dict], weapon_class: str) -> list[tuple[str, str]]:
+    """Return (prototype prefix, GeneralSetup SID) for a weapon class."""
+    config = configs[weapon_class]
+    records: list[tuple[str, str]] = []
+
+    for family in config.get("families", {}).values():
+        prefix = family.get("prototype_prefix")
+        general_setup = family.get("general_setup_sid") or family.get("weapon_sid")
+        if prefix and general_setup and (prefix, general_setup) not in records:
+            records.append((prefix, general_setup))
+
+    # SMG caliber_families also contains M10, which is intentionally shared with
+    # the pistol generator and is not part of the normal SMG families map.
+    if weapon_class == "SMG":
+        for family in config.get("caliber_families", {}).values():
+            prefix = family.get("prototype_prefix")
+            general_setup = family.get("general_setup_sid")
+            if prefix and general_setup and (prefix, general_setup) not in records:
+                records.append((prefix, general_setup))
+    return records
+
+
 def classify(sid: str) -> tuple[str, str] | None:
     if "_Upgrade_BPRUE_Sniper_" in sid:
         tail = sid.split("_Upgrade_BPRUE_Sniper_", 1)[1]
@@ -60,8 +97,6 @@ def classify(sid: str) -> tuple[str, str] | None:
         tail = sid.split("BPRUE_SMG_Upgrade_", 1)[1]
         return "SMG", tail.split("_", 1)[0]
     if "_Upgrade_BPRUE_Caliber_" in sid:
-        # SMG caliber upgrades live in the SMG split file; AR caliber upgrades
-        # live in the AR base file. The caller supplies the file class hint.
         return "AUTO_CALIBER", "Caliber"
     if "_Upgrade_BPRUE_PistolConversion" in sid:
         return "SMG", "Conversion"
@@ -88,7 +123,39 @@ def file_class_hint(path: Path) -> str:
     return "AR"
 
 
-def patch_block(block: list[str], hint: str) -> tuple[list[str], tuple[str, str, int] | None]:
+def relevant_general_setups(
+    sid: str, weapon_class: str, configs: dict[str, dict]
+) -> list[str]:
+    records = family_records(configs, weapon_class)
+
+    # Shared SMG module prototypes have no weapon prefix and are intentionally
+    # reused by every SMG. Their position therefore has to be safe for the SMG
+    # families only, not for every Body/Barrel modification in the whole game.
+    if sid.startswith("BPRUE_SMG_Upgrade_"):
+        normal_families = configs["SMG"].get("families", {}).values()
+        return list(dict.fromkeys(
+            family.get("general_setup_sid") or family.get("weapon_sid")
+            for family in normal_families
+            if family.get("general_setup_sid") or family.get("weapon_sid")
+        ))
+
+    # All other generated module SIDs contain their family prototype prefix.
+    # Longest-prefix-first avoids accidental short-prefix matches.
+    matches = [
+        general_setup
+        for prefix, general_setup in sorted(records, key=lambda item: len(item[0]), reverse=True)
+        if sid.startswith(prefix + "_")
+    ]
+    if matches:
+        return list(dict.fromkeys(matches))
+
+    # Fail loudly instead of silently falling back to a global layout again.
+    raise ValueError(f"Cannot resolve BPRUE upgrade {sid} to a {weapon_class} GeneralSetup family")
+
+
+def patch_block(
+    block: list[str], hint: str, configs: dict[str, dict]
+) -> tuple[list[str], tuple[str, str, int, tuple[str, ...]] | None]:
     sid = block[0].split(" :", 1)[0].strip()
     classified = classify(sid)
     if not classified:
@@ -110,7 +177,9 @@ def patch_block(block: list[str], hint: str) -> tuple[list[str], tuple[str, str,
     groups = GROUP_ORDER[weapon_class][target]
     if group not in groups:
         return block, None
-    column = group_columns(target, groups)[group]
+
+    setups = relevant_general_setups(sid, weapon_class, configs)
+    column = group_columns_for_general_setups(setups, target, groups)[group]
 
     new_line = f"   HorizontalPosition = {column}"
     if horizontal_index is not None:
@@ -121,15 +190,15 @@ def patch_block(block: list[str], hint: str) -> tuple[list[str], tuple[str, str,
             len(block) - 1,
         )
         block.insert(insert_at, new_line)
-    return block, (target, group, column)
+    return block, (target, group, column, tuple(setups))
 
 
-def process(path: Path) -> list[tuple[str, str, int]]:
+def process(path: Path, configs: dict[str, dict]) -> list[tuple[str, str, int, tuple[str, ...]]]:
     if not path.exists():
         raise FileNotFoundError(path)
     lines = path.read_text(encoding="utf-8").splitlines()
     out: list[str] = []
-    placements: list[tuple[str, str, int]] = []
+    placements: list[tuple[str, str, int, tuple[str, ...]]] = []
     i = 0
     hint = file_class_hint(path)
     while i < len(lines):
@@ -146,7 +215,7 @@ def process(path: Path) -> list[tuple[str, str, int]]:
                 if stripped == "struct.end":
                     depth -= 1
                 i += 1
-            block, placement = patch_block(block, hint)
+            block, placement = patch_block(block, hint, configs)
             out.extend(block)
             if placement and placement not in placements:
                 placements.append(placement)
@@ -158,12 +227,23 @@ def process(path: Path) -> list[tuple[str, str, int]]:
 
 
 def main() -> None:
-    maxima = vanilla_modification_max_columns()
-    print("Vanilla modification max columns: " + ", ".join(f"{k}={v}" for k, v in sorted(maxima.items())))
+    configs = load_configs()
+    print("Applying BPRUE module layout from per-family vanilla modification columns")
+    for weapon_class in GROUP_ORDER:
+        setups = [setup for _, setup in family_records(configs, weapon_class)]
+        maxima = modification_max_columns_for_general_setups(setups)
+        print(
+            f"  {weapon_class} vanilla family maxima: "
+            + (", ".join(f"{k}={v}" for k, v in sorted(maxima.items())) or "none")
+        )
+
     for path in FILES:
-        placements = process(path)
+        placements = process(path, configs)
         if placements:
-            formatted = ", ".join(f"{target}/{group}={column}" for target, group, column in placements)
+            formatted = ", ".join(
+                f"{target}/{group}={column} [{','.join(setups)}]"
+                for target, group, column, setups in placements
+            )
             print(f"Applied module columns to {path.name}: {formatted}")
 
 
