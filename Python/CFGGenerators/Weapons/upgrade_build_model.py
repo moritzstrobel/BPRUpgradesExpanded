@@ -26,17 +26,34 @@ class UpgradeDefinition:
     horizontal_position: int | None = None
 
 
+@dataclass(frozen=True)
+class GeneralSetupDefinition:
+    """Additional properties that belong to a weapon GeneralSetup patch."""
+
+    sid: str
+    properties: tuple[tuple[str, str], ...] = ()
+
+
 @dataclass
 class UpgradeBuildModel:
     """Complete in-memory source of truth for generated weapon upgrades."""
 
     upgrades: list[UpgradeDefinition] = field(default_factory=list)
+    general_setups: dict[str, GeneralSetupDefinition] = field(default_factory=dict)
 
     def add(self, upgrade: UpgradeDefinition) -> None:
         self.upgrades.append(upgrade)
 
     def extend(self, upgrades: Iterable[UpgradeDefinition]) -> None:
         self.upgrades.extend(upgrades)
+
+    def configure_general_setup(self, sid: str, **properties: object) -> None:
+        normalized = tuple((name, str(value)) for name, value in properties.items() if value is not None)
+        definition = GeneralSetupDefinition(sid=sid, properties=normalized)
+        previous = self.general_setups.get(sid)
+        if previous is not None and previous != definition:
+            raise ValueError(f"conflicting GeneralSetup configuration for {sid}")
+        self.general_setups[sid] = definition
 
     def validate(self) -> None:
         errors: list[str] = []
@@ -68,6 +85,10 @@ class UpgradeBuildModel:
                     + ", ".join(unknown_blocks)
                 )
 
+        configured_without_upgrades = set(self.general_setups) - set(self.by_general_setup())
+        for sid in sorted(configured_without_upgrades):
+            errors.append(f"{sid}: GeneralSetup configured but has no generated upgrades")
+
         if errors:
             raise ValueError("Invalid BPRUE upgrade build model:\n  - " + "\n  - ".join(errors))
 
@@ -76,6 +97,10 @@ class UpgradeBuildModel:
         for upgrade in self.upgrades:
             result.setdefault(upgrade.general_setup_sid, []).append(upgrade)
         return result
+
+    def general_setup_properties(self, sid: str) -> tuple[tuple[str, str], ...]:
+        definition = self.general_setups.get(sid)
+        return definition.properties if definition else ()
 
     def technician_upgrades(self) -> list[UpgradeDefinition]:
         return [upgrade for upgrade in self.upgrades if upgrade.technician]
