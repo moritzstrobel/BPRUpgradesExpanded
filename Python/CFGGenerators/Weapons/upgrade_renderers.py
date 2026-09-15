@@ -35,12 +35,11 @@ def render_upgrade_prototypes(
             lines.append(f"   HorizontalPosition = {upgrade.horizontal_position}")
         if upgrade.vertical_position is not None:
             lines.append(f"   VerticalPosition = EUpgradeVerticalPosition::{upgrade.vertical_position}")
-        lines += [
-            f"   UpgradeTargetPart = EUpgradeTargetPartType::{upgrade.target_part}",
-            "   EffectPrototypeSIDs : struct.begin",
-        ]
-        lines += [f"      [{index}] = {effect}" for index, effect in enumerate(upgrade.effects)]
-        lines.append("   struct.end")
+        lines.append(f"   UpgradeTargetPart = EUpgradeTargetPartType::{upgrade.target_part}")
+        if upgrade.effects:
+            lines.append("   EffectPrototypeSIDs : struct.begin")
+            lines += [f"      [{index}] = {effect}" for index, effect in enumerate(upgrade.effects)]
+            lines.append("   struct.end")
         if upgrade.blocking_sids:
             lines.append("   BlockingUpgradePrototypeSIDs : struct.begin")
             lines += [f"      [{index}] = {sid}" for index, sid in enumerate(upgrade.blocking_sids)]
