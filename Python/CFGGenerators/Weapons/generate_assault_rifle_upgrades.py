@@ -10,7 +10,6 @@ PYTHON_ROOT = SCRIPT_DIR.parents[1]
 CONTENT_ROOT = PYTHON_ROOT.parent
 CONFIG_PATH = SCRIPT_DIR / "assault_rifles_upgrades.json"
 EFFECT_OUTPUT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_EffectPrototypes.cfg"
-NPC_OUTPUT_PATH = CONTENT_ROOT / "GameLite/GameData/NPCPrototypes/NPCPrototypes_patch_BPRUE.cfg"
 MODULE_TEMPLATE_SID = "BPRUE_ModuleTemplate"
 
 POWER_CALIBER = {
@@ -23,17 +22,18 @@ CALIBER_EFFECTS = {
 }
 DEFAULT_ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_Recoil.T_PDA_Upgrades_Icon_Recoil'"
 CALIBER_ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_CaliberChange.T_PDA_Upgrades_Icon_CaliberChange'"
-MODULE_SPECS = (
-    ("FireControl", "Burst", "Body", 3000, "sid_bprue_fire_control_burst_name", "sid_bprue_fire_control_burst_description", ("BPRUE_AddBurstFireModeEffect", "RecoilPos5Effect", "BPRUE_DurabilityPerShotNeg10Effect")),
-    ("FireControl", "Precision", "Body", 3600, "sid_bprue_fire_control_precision_name", "sid_bprue_fire_control_precision_description", ("BPRUE_SemiAutoOnlyEffect", "BPRUE_DamagePos10Effect", "ArmorPiercingPos15Effect", "BPRUE_DurabilityPerShotNeg20Effect")),
-    ("FireRate", "HighSpeed", "Barrel", 3400, "sid_bprue_fire_rate_high_speed_name", "sid_bprue_fire_rate_high_speed_description", ("BPRUE_FireIntervalNeg20Effect", "RecoilNeg15Effect", "BPRUE_DurabilityPerShotNeg20Effect")),
-    ("FireRate", "Balanced", "Barrel", 3200, "sid_bprue_fire_rate_balanced_name", "sid_bprue_fire_rate_balanced_description", ("BPRUE_FireIntervalNeg10Effect", "RecoilPos10Effect", "ShotRecoveryPos20Effect", "BPRUE_DurabilityPerShotNeg10Effect")),
-    ("Reload", "Competition", "Body", 2800, "sid_bprue_reload_competition_name", "sid_bprue_reload_competition_description", ("BPRUE_ReloadingTimeNeg20Effect", "RecoilNeg15Effect")),
-    ("Reload", "Reinforced", "Body", 3000, "sid_bprue_reload_reinforced_name", "sid_bprue_reload_reinforced_description", ("BPRUE_ReloadingTimeNeg10Effect", "DurabilityPerShotPos20Effect", "BPRUE_FireIntervalPos5Effect")),
-    ("Stock", "Lightweight", "Stock", 3000, "sid_bprue_stock_lightweight_name", "sid_bprue_stock_lightweight_description", ("AimingTimePos15Effect", "AimingMovementPos10Effect", "RecoilNeg15Effect")),
-    ("Stock", "Stabilized", "Stock", 3200, "sid_bprue_stock_stabilized_name", "sid_bprue_stock_stabilized_description", ("RecoilPos15Effect", "ShotRecoveryPos20Effect", "AimingTimeNeg10Effect")),
-    ("Stock", "Marksman", "Stock", 3400, "sid_bprue_stock_marksman_name", "sid_bprue_stock_marksman_description", ("IdleSwayXPos20Effect", "IdleSwayYPos20Effect", "MaxDispersionPos15Effect", "AimingTimeNeg15Effect")),
-)
+
+MODULE_SPECS = {
+    ("fire_control", "burst"): ("FireControl", "Burst", "Body", 3000, "sid_bprue_fire_control_burst_name", "sid_bprue_fire_control_burst_description", ("BPRUE_AddBurstFireModeEffect", "RecoilPos5Effect", "BPRUE_DurabilityPerShotNeg10Effect")),
+    ("fire_control", "precision"): ("FireControl", "Precision", "Body", 3600, "sid_bprue_fire_control_precision_name", "sid_bprue_fire_control_precision_description", ("BPRUE_SemiAutoOnlyEffect", "BPRUE_DamagePos10Effect", "ArmorPiercingPos15Effect", "BPRUE_DurabilityPerShotNeg20Effect")),
+    ("fire_rate", "high_speed"): ("FireRate", "HighSpeed", "Barrel", 3400, "sid_bprue_fire_rate_high_speed_name", "sid_bprue_fire_rate_high_speed_description", ("BPRUE_FireIntervalNeg20Effect", "RecoilNeg15Effect", "BPRUE_DurabilityPerShotNeg20Effect")),
+    ("fire_rate", "balanced"): ("FireRate", "Balanced", "Barrel", 3200, "sid_bprue_fire_rate_balanced_name", "sid_bprue_fire_rate_balanced_description", ("BPRUE_FireIntervalNeg10Effect", "RecoilPos10Effect", "ShotRecoveryPos20Effect", "BPRUE_DurabilityPerShotNeg10Effect")),
+    ("reload", "competition"): ("Reload", "Competition", "Body", 2800, "sid_bprue_reload_competition_name", "sid_bprue_reload_competition_description", ("BPRUE_ReloadingTimeNeg20Effect", "RecoilNeg15Effect")),
+    ("reload", "reinforced"): ("Reload", "Reinforced", "Body", 3000, "sid_bprue_reload_reinforced_name", "sid_bprue_reload_reinforced_description", ("BPRUE_ReloadingTimeNeg10Effect", "DurabilityPerShotPos20Effect", "BPRUE_FireIntervalPos5Effect")),
+    ("stock", "lightweight"): ("Stock", "Lightweight", "Stock", 3000, "sid_bprue_stock_lightweight_name", "sid_bprue_stock_lightweight_description", ("AimingTimePos15Effect", "AimingMovementPos10Effect", "RecoilNeg15Effect")),
+    ("stock", "stabilized"): ("Stock", "Stabilized", "Stock", 3200, "sid_bprue_stock_stabilized_name", "sid_bprue_stock_stabilized_description", ("RecoilPos15Effect", "ShotRecoveryPos20Effect", "AimingTimeNeg10Effect")),
+    ("stock", "marksman"): ("Stock", "Marksman", "Stock", 3400, "sid_bprue_stock_marksman_name", "sid_bprue_stock_marksman_description", ("IdleSwayXPos20Effect", "IdleSwayYPos20Effect", "MaxDispersionPos15Effect", "AimingTimeNeg15Effect")),
+}
 
 
 def load_config() -> dict:
@@ -41,11 +41,11 @@ def load_config() -> dict:
 
 
 def _definition(family: dict, group: str, variant: str, target: str, cost: int, text: str, hint: str, effects: tuple[str, ...], icon: str = DEFAULT_ICON) -> UpgradeDefinition:
-    prefix = family["prototype_prefix"]
     return UpgradeDefinition(
-        sid=f"{prefix}_Upgrade_BPRUE_{group}_{variant}", general_setup_sid=family["weapon_sid"],
-        weapon_class="AR", group=group, target_part=target, text_sid=text, hint_sid=hint,
-        image=family["image"], icon=icon, cost=cost, effects=effects, template_sid=MODULE_TEMPLATE_SID,
+        sid=f"{family['prototype_prefix']}_Upgrade_BPRUE_{group}_{variant}",
+        general_setup_sid=family["general_setup_sid"], weapon_class="AR", group=group,
+        target_part=target, text_sid=text, hint_sid=hint, image=family["image"], icon=icon,
+        cost=cost, effects=effects, template_sid=MODULE_TEMPLATE_SID,
     )
 
 
@@ -61,8 +61,9 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
                 family, "Caliber", suffix, "Body", cost, text, hint,
                 (change, *removes, add, "BPRUE_DamagePos10Effect", "RecoilNeg20Effect", "BPRUE_DurabilityPerShotNeg20Effect"), CALIBER_ICON,
             ))
-        for spec in MODULE_SPECS:
-            family_upgrades.append(_definition(family, *spec))
+        for group, variants in config["module_groups"].items():
+            for variant in variants:
+                family_upgrades.append(_definition(family, *MODULE_SPECS[(group, variant)]))
 
         by_group: dict[str, list[UpgradeDefinition]] = {}
         for upgrade in family_upgrades:
@@ -75,11 +76,10 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
 
 def configure_general_setups(config: dict, model: UpgradeBuildModel) -> None:
     for family in config["families"].values():
-        model.configure_general_setup(family["weapon_sid"], FireQueueCount=3)
+        model.configure_general_setup(family["general_setup_sid"], FireQueueCount=3)
 
 
 def render_effect_patch(config: dict) -> str:
-    # Effect definitions are intentionally class-owned; the family config no longer duplicates them.
     return _EFFECTS
 
 
@@ -207,16 +207,3 @@ BPRUE_SemiAutoOnlyEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;r
    FireMode = EFireMode::Auto
 struct.end
 '''
-
-
-def render_npc_patch(config: dict, model: UpgradeBuildModel) -> str:
-    technician = config["technician"]
-    technician_sids = list(dict.fromkeys([technician["prototype_sid"], technician["all_prototype_sid"], *technician.get("concrete_prototype_sids", [])]))
-    upgrades = model.technician_upgrades()
-    lines = ["// AUTO-GENERATED - all BPRUE weapon specialization modules are available at all technicians.", ""]
-    for technician_sid in technician_sids:
-        lines += [f"{technician_sid} : struct.begin {{bpatch}}", "   Upgrades : struct.begin {bpatch}"]
-        for upgrade in upgrades:
-            lines += ["      [*] : struct.begin", f"         UpgradePrototypeSID = {upgrade.sid}", "         Enabled = true", "      struct.end"]
-        lines += ["   struct.end", "struct.end", ""]
-    return "\n".join(lines)
