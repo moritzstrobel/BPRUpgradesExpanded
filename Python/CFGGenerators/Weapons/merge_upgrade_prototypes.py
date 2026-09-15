@@ -21,17 +21,47 @@ GENERATED_SOURCES = [
 ]
 
 
-def apply_layout(content: str, path: Path, configs: dict, columns: dict) -> str:
-    """Apply module columns while content is already in memory for consolidation.
+def set_vertical_position(block: list[str], variant_index: int) -> list[str]:
+    """Render variants in a module column like the vanilla Top/Down pattern.
 
-    This deliberately replaces the old pipeline step that wrote each generated
-    class CFG, reopened it in apply_module_layout.py, rewrote it, and then opened
-    it a third time here just to merge it.
+    Variant 1 -> Top, variant 2 -> Down. For the experimental third variant we
+    intentionally omit VerticalPosition and let the game use its default. This
+    only affects groups that actually contain a third entry in the same column.
     """
+    vertical_index = next(
+        (i for i, line in enumerate(block) if line.strip().startswith("VerticalPosition =")),
+        None,
+    )
+
+    if variant_index >= 2:
+        if vertical_index is not None:
+            block.pop(vertical_index)
+        return block
+
+    value = "Top" if variant_index == 0 else "Down"
+    new_line = f"   VerticalPosition = EUpgradeVerticalPosition::{value}"
+    if vertical_index is not None:
+        block[vertical_index] = new_line
+    else:
+        insert_at = next(
+            (i for i, line in enumerate(block) if line.strip().startswith("UpgradeTargetPart =")),
+            len(block) - 1,
+        )
+        block.insert(insert_at, new_line)
+    return block
+
+
+def apply_layout(content: str, path: Path, configs: dict, columns: dict) -> str:
+    """Apply module coordinates while content is already in memory for consolidation."""
     lines = content.splitlines()
     out: list[str] = []
     i = 0
     hint = file_class_hint(path)
+
+    # Keyed by target/group/column plus concrete GeneralSetup ownership. This is
+    # important for family-specific prototypes: each weapon starts its own
+    # Top/Down sequence even when another family uses the same group/column.
+    variant_counts: dict[tuple[str, str, int, tuple[str, ...]], int] = {}
 
     while i < len(lines):
         line = lines[i]
@@ -47,7 +77,13 @@ def apply_layout(content: str, path: Path, configs: dict, columns: dict) -> str:
                 if stripped == "struct.end":
                     depth -= 1
                 i += 1
-            block, _ = patch_block(block, hint, configs, columns)
+
+            block, placement = patch_block(block, hint, configs, columns)
+            if placement is not None:
+                index = variant_counts.get(placement, 0)
+                block = set_vertical_position(block, index)
+                variant_counts[placement] = index + 1
+
             out.extend(block)
             continue
         out.append(line)
