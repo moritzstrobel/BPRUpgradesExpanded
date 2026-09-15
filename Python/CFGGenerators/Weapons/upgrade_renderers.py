@@ -3,6 +3,13 @@ from __future__ import annotations
 from upgrade_build_model import UpgradeBuildModel, UpgradeDefinition
 from vanilla_upgrade_layout import vanilla_general_setup_upgrades
 
+TECHNICIAN_SIDS = (
+    "TechnicianNPC", "AllTechnicianNPC", "Linza", "Konder", "Hors", "Stepsel",
+    "SerzEremeev", "nikolaj", "laborant_aupova", "serzdot_eremeev_0", "kovyraska_0",
+    "multik_0", "semenyc_0", "serzant_ivajlov_0", "serzant_hmaruk_0", "garpia_0",
+    "Surup", "medlak_0", "PowerPlug_Pripyat", "serz_ivaj_0", "supack_technician_banzaj_0",
+)
+
 
 def _render_upgrade(upgrade: UpgradeDefinition, fallback_template: str | None = None) -> list[str]:
     template = upgrade.template_sid or fallback_template
@@ -79,4 +86,15 @@ def render_final_general_setup_patch(model: UpgradeBuildModel, attachment_blocks
         lines.append("   struct.end")
         lines += attachments.get(setup_sid, [])
         lines += ["struct.end", ""]
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def render_technician_patch(model: UpgradeBuildModel) -> str:
+    upgrades = model.technician_upgrades()
+    lines = ["// AUTO-GENERATED - all BPRUE weapon specialization modules are available at all technicians.", ""]
+    for technician_sid in TECHNICIAN_SIDS:
+        lines += [f"{technician_sid} : struct.begin {{bpatch}}", "   Upgrades : struct.begin {bpatch}"]
+        for upgrade in upgrades:
+            lines += ["      [*] : struct.begin", f"         UpgradePrototypeSID = {upgrade.sid}", "         Enabled = true", "      struct.end"]
+        lines += ["   struct.end", "struct.end", ""]
     return "\n".join(lines).rstrip() + "\n"
