@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "description": "Sniper/DMR specialization system: three mutually-exclusive modules in Ballistics, Action and Marksman groups plus one standalone signature per family. Vintar, GP3A and unique weapons are intentionally excluded from this first pass.",
+  "description": "Sniper/DMR specialization system: mutually-exclusive modules in Ballistics, Action, Marksman and Stock groups plus one standalone signature per family. Vintar, GP3A and unique weapons are intentionally excluded from this pass.",
   "families": {
     "SVDM": {"weapon_sid":"GunSVDM_SP","general_setup_sid":"GunSVDM_SP","prototype_prefix":"GunSVDM","signature":"rapid_marksman","cost_scale":1.1},
     "SVU": {"weapon_sid":"GunSVU_SP","general_setup_sid":"GunSVU_SP","prototype_prefix":"GunSVU","signature":"recon_marksman","cost_scale":1.15},
@@ -12,6 +12,7 @@
   "module_groups": {
     "ballistics": ["high_velocity", "match_barrel", "heavy_barrel"],
     "action": ["rapid", "precision", "reinforced"],
-    "marksman": ["snap_shooter", "field_marksman", "benchrest"]
+    "marksman": ["snap_shooter", "field_marksman", "benchrest"],
+    "stock": ["lightweight_stock", "adjustable_stock", "precision_stock"]
   }
 }
