@@ -11,6 +11,7 @@ CFG_GENERATORS = PYTHON_ROOT / "CFGGenerators"
 
 LOCALIZATION_FILES = (
     LOCALIZATION_DIR / "Blueprint_Localization.json",
+    LOCALIZATION_DIR / "Weapon_Module_Localization.json",
     LOCALIZATION_DIR / "Effect_Localization.json",
 )
 
@@ -43,14 +44,12 @@ def main() -> None:
     localization_sids = load_localization_sids()
     errors: list[str] = []
 
-    # Validate generated upgrade Text/Hint references against localization source.
     upgrade_cfg = REPO_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/UpgradePrototypes/BPRUE_UpgradePrototypes.cfg"
     if upgrade_cfg.exists():
         for sid in sorted(set(UPGRADE_TEXT_RE.findall(upgrade_cfg.read_text(encoding="utf-8")))):
             if sid.startswith("sid_bprue_") and sid not in localization_sids:
                 errors.append(f"missing upgrade localization: {sid}")
 
-    # Every visible BPRUE effect must declare a LocalizationSID and that SID must exist.
     effect_dir = REPO_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes"
     for path in sorted(effect_dir.glob("BPRUE_*EffectPrototypes.cfg")):
         text = path.read_text(encoding="utf-8")
