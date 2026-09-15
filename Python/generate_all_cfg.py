@@ -29,12 +29,11 @@ from upgrade_renderers import (
     render_final_general_setup_patch,
     render_technician_patch,
 )
-from vanilla_upgrade_layout import render_vanilla_compaction_patch, vanilla_compaction
 
 CONTENT_ROOT = SCRIPT_DIR.parent
 UPGRADES_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/UpgradePrototypes/BPRUE_UpgradePrototypes.cfg"
-VANILLA_COMPACTION_PATH = CONTENT_ROOT / "GameLite/GameData/UpgradePrototypes/UpgradePrototypes_patch_BPRUE.cfg"
 GENERAL_SETUP_PATH = CONTENT_ROOT / "GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg"
+WEAPON_PATH = CONTENT_ROOT / "GameLite/GameData/WeaponData/WeaponPrototypes/WeaponPrototypes_patch_BPRUE.cfg"
 NPC_PATH = CONTENT_ROOT / "GameLite/GameData/NPCPrototypes/NPCPrototypes_patch_BPRUE.cfg"
 
 
@@ -68,6 +67,26 @@ def validate_rendered_outputs(model: UpgradeBuildModel, upgrade_text: str, setup
         raise ValueError("Generated upgrade output validation failed:\n  - " + "\n  - ".join(errors))
 
 
+def render_weapon_section_poc() -> str:
+    """PoC: expose the already-defined but disabled Three-Line Body section.
+
+    The Three-Line Marksman group already targets Body, so no upgrade semantics are
+    changed here. This isolates the test to SectionIsEnabled itself.
+    """
+    return """// AUTO-GENERATED - BPRUE weapon-section PoC
+// Three-Line already defines SectionSettings[2] as Body; Vanilla keeps it disabled.
+// Enable only that existing section to verify that disabled UI parts can host BPRUE modules.
+
+GunThreeLine_SP : struct.begin {bpatch}
+   SectionSettings : struct.begin {bpatch}
+      [2] : struct.begin {bpatch}
+         SectionIsEnabled = true
+      struct.end
+   struct.end
+struct.end
+"""
+
+
 def write(path: Path, content: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content, encoding="utf-8")
@@ -85,11 +104,9 @@ def main() -> None:
     npc_text = render_technician_patch(model)
     validate_rendered_outputs(model, upgrade_text, setup_text, npc_text)
 
-    compaction = vanilla_compaction()
-    print(f"Compacting {len(compaction)} safe Vanilla modification prototypes")
-    write(VANILLA_COMPACTION_PATH, render_vanilla_compaction_patch())
     write(UPGRADES_PATH, upgrade_text)
     write(GENERAL_SETUP_PATH, setup_text)
+    write(WEAPON_PATH, render_weapon_section_poc())
     write(NPC_PATH, npc_text)
     write(ar.EFFECT_OUTPUT_PATH, ar.render_effect_patch(configs["ar"]))
     write(smg.EFFECT_OUTPUT_PATH, smg.render_effects())
