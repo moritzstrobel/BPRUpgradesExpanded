@@ -26,6 +26,9 @@ class UpgradeDefinition:
     horizontal_position: int | None = None
     additional_general_setup_sids: tuple[str, ...] = ()
     require_effects: bool = True
+    # Standalones are packed only after normal grouped rows. They may fill any
+    # remaining visible cell instead of reserving a complete horizontal column.
+    standalone: bool = False
 
     @property
     def general_setup_sids(self) -> tuple[str, ...]:
@@ -83,6 +86,8 @@ class UpgradeBuildModel:
                 errors.append(f"{upgrade.sid}: missing UpgradeTargetPart")
             if upgrade.require_effects and not upgrade.effects:
                 errors.append(f"{upgrade.sid}: no effects configured")
+            if upgrade.horizontal_position is not None and not 0 <= upgrade.horizontal_position <= 2:
+                errors.append(f"{upgrade.sid}: invisible HorizontalPosition H{upgrade.horizontal_position}")
 
         known = set(by_sid)
         for upgrade in self.upgrades:
