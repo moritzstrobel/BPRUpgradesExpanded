@@ -59,7 +59,7 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
             change, removes, add = CALIBER_EFFECTS[caliber]
             family_upgrades.append(_definition(
                 family, "Caliber", suffix, "Body", cost, text, hint,
-                (change, *removes, add, "BPRUE_DamagePos10Effect", "RecoilNeg20Effect", "BPRUE_DurabilityPerShotNeg20Effect"), CALIBER_ICON,
+                (change, *removes, add, "BPRUE_DamagePos10Effect", "BPRUE_RecoilPenalty20Effect", "BPRUE_DurabilityPerShotNeg20Effect"), CALIBER_ICON,
             ))
         for group, variants in config["module_groups"].items():
             for variant in variants:
@@ -126,6 +126,16 @@ BPRUE_DamagePos10Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;re
    LocalizationSID = bprue_damage
    ValueMin = 10%
    ValueMax = 10%
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
+BPRUE_RecoilPenalty20Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=RecoilTemplate}
+   SID = BPRUE_RecoilPenalty20Effect
+   LocalizationSID = bprue_recoil
+   ValueMin = -20%
+   ValueMax = -20%
+   Positive = EBeneficial::Negative
    ShowUpgradeEffectValue = true
    ShowUpgradeEffect = true
 struct.end
