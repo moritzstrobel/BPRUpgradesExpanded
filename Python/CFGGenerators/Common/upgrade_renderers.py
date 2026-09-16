@@ -1,14 +1,9 @@
 from __future__ import annotations
 
+from technician_support import technician_upgrade_assignments
 from upgrade_build_model import UpgradeBuildModel, UpgradeDefinition
 from vanilla_upgrade_layout import dlc_general_setup_upgrades, vanilla_general_setup_upgrades
 
-TECHNICIAN_SIDS = (
-    "TechnicianNPC", "AllTechnicianNPC", "Linza", "Konder", "Hors", "Stepsel",
-    "SerzEremeev", "nikolaj", "laborant_aupova", "serzdot_eremeev_0", "kovyraska_0",
-    "multik_0", "semenyc_0", "serzant_ivajlov_0", "serzant_hmaruk_0", "garpia_0",
-    "Surup", "medlak_0", "PowerPlug_Pripyat", "serz_ivaj_0", "supack_technician_banzaj_0",
-)
 ICON_ROOT = "/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons"
 BPRUE_MODULE_IMAGE = "Texture2D'/BPRUpgradesExpanded/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/T_Module_Base.T_Module_Base'"
 
@@ -119,9 +114,17 @@ def render_dlc_general_setup_patch(model: UpgradeBuildModel, content_pack: str) 
 
 
 def render_technician_patch(model: UpgradeBuildModel) -> str:
-    upgrades = model.technician_upgrades(); lines = ["// AUTO-GENERATED - all BPRUE weapon specialization modules are available at all technicians.", ""]
-    for technician_sid in TECHNICIAN_SIDS:
+    assignments = technician_upgrade_assignments(model)
+    lines = [
+        "// AUTO-GENERATED - BPRUE upgrades follow each technician's effective Vanilla weapon support.",
+        "// Technician templates are intentionally not patched; only concrete Vanilla technician NPCs are emitted.",
+        "",
+    ]
+    for technician_sid, upgrades in assignments.items():
+        if not upgrades:
+            continue
         lines += [f"{technician_sid} : struct.begin {{bpatch}}", "   Upgrades : struct.begin {bpatch}"]
-        for upgrade in upgrades: lines += ["      [*] : struct.begin", f"         UpgradePrototypeSID = {upgrade.sid}", "         Enabled = true", "      struct.end"]
+        for upgrade in upgrades:
+            lines += ["      [*] : struct.begin", f"         UpgradePrototypeSID = {upgrade.sid}", "         Enabled = true", "      struct.end"]
         lines += ["   struct.end", "struct.end", ""]
     return "\n".join(lines).rstrip() + "\n"
