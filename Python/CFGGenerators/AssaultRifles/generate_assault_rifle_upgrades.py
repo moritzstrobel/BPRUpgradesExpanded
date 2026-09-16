@@ -174,10 +174,10 @@ BPRUE_ReloadingTimeNeg10Effect : struct.begin {refurl=@BaseGame/EffectPrototypes
    ShowUpgradeEffect = true
 struct.end
 
-BPRUE_ChangeCaliber762NATOEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+BPRUE_ChangeCaliber762NATOEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeCaliberTemplate}
    SID = BPRUE_ChangeCaliber762NATOEffect
-   Type = EEffectType::ChangeCaliber
-   Caliber = EBulletCaliber::A762NATO
+   Caliber = EAmmoCaliber::A762NATO
+   ShowUpgradeEffectValue = false
 struct.end
 
 BPRUE_ChangeAmmoTypes762NATOEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}
@@ -187,15 +187,59 @@ BPRUE_ChangeAmmoTypes762NATOEffect : struct.begin {refurl=@BaseGame/EffectProtot
          AmmoType = EAmmoType::Default
          ProjectilePrototypeSID = P762NATO
       struct.end
+      [1] : struct.begin
+         AmmoType = EAmmoType::ArmorPiercing
+         ProjectilePrototypeSID = P762NATO
+      struct.end
+      [2] : struct.begin
+         AmmoType = EAmmoType::Supersonic
+         ProjectilePrototypeSID = P762NATO
+      struct.end
    struct.end
+   ShowUpgradeEffectValue = false
+   ShowUpgradeEffect = false
 struct.end
 
 BPRUE_ChangeAmmoTypesNo762Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}
    SID = BPRUE_ChangeAmmoTypesNo762Effect
+   AmmoTypeProjectiles : struct.begin
+      [0] : struct.begin
+         AmmoType = EAmmoType::Default
+         ProjectilePrototypeSID = P762Sniper
+      struct.end
+      [1] : struct.begin
+         AmmoType = EAmmoType::ArmorPiercing
+         ProjectilePrototypeSID = P762Sniper
+      struct.end
+      [2] : struct.begin
+         AmmoType = EAmmoType::Supersonic
+         ProjectilePrototypeSID = P762Sniper
+      struct.end
+   struct.end
+   Positive = EBeneficial::Negative
+   ShowUpgradeEffectValue = false
+   ShowUpgradeEffect = false
 struct.end
 
 BPRUE_ChangeAmmoTypesNo762NATOEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}
    SID = BPRUE_ChangeAmmoTypesNo762NATOEffect
+   AmmoTypeProjectiles : struct.begin
+      [0] : struct.begin
+         AmmoType = EAmmoType::Default
+         ProjectilePrototypeSID = P762NATO
+      struct.end
+      [1] : struct.begin
+         AmmoType = EAmmoType::ArmorPiercing
+         ProjectilePrototypeSID = P762NATO
+      struct.end
+      [2] : struct.begin
+         AmmoType = EAmmoType::Supersonic
+         ProjectilePrototypeSID = P762NATO
+      struct.end
+   struct.end
+   Positive = EBeneficial::Negative
+   ShowUpgradeEffectValue = false
+   ShowUpgradeEffect = false
 struct.end
 
 BPRUE_AddBurstFireModeEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
