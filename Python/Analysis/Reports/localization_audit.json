@@ -18,17 +18,10 @@
   },
   "effects": {
     "referenced_effect_count": 142,
-    "visible_effect_count": 121,
-    "vanilla_localization_count": 41,
-    "error_count": 6,
-    "errors": [
-      "ChangeCaliber919Effect: visible effect referenced by BaseGame has no effective LocalizationSID",
-      "ChangeFireTypeEffectBurstAuto: visible effect referenced by BaseGame has no effective LocalizationSID",
-      "ChangeFireTypeEffectSemiAuto: visible effect referenced by BaseGame has no effective LocalizationSID",
-      "DistanceDropOffLengthPos20Effect: visible effect referenced by BaseGame, DLC1 has no effective LocalizationSID",
-      "FlatnessUp10Effect: visible effect referenced by BaseGame, DLC1 has no effective LocalizationSID",
-      "FlatnessUp15Effect: visible effect referenced by BaseGame, DLC1 has no effective LocalizationSID"
-    ],
+    "visible_effect_count": 115,
+    "vanilla_localization_count": 38,
+    "error_count": 0,
+    "errors": [],
     "effects": [
       {
         "sid": "AimingMovementPos10Effect",
@@ -1639,17 +1632,15 @@
         "scopes": [
           "BaseGame"
         ],
-        "visible": true,
-        "localization_sid": "weapon_caliberChange",
+        "visible": false,
+        "localization_sid": null,
         "resolution_chain": [
-          "ChangeCaliber045Effect",
-          "ChangeCaliberTemplate"
+          "ChangeCaliber045Effect"
         ],
         "sources": [
-          "BaseGame",
-          "BaseGame"
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
         ],
-        "status": "vanilla_localization"
+        "status": "ok"
       },
       {
         "sid": "ChangeCaliber762Effect",
@@ -1657,79 +1648,75 @@
           "BaseGame",
           "DLC1"
         ],
-        "visible": true,
-        "localization_sid": "weapon_caliberChange",
+        "visible": false,
+        "localization_sid": null,
         "resolution_chain": [
-          "ChangeCaliber762Effect",
-          "ChangeCaliberTemplate"
+          "ChangeCaliber762Effect"
         ],
         "sources": [
-          "BaseGame",
-          "BaseGame"
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
         ],
-        "status": "vanilla_localization"
+        "status": "ok"
       },
       {
         "sid": "ChangeCaliber918Effect",
         "scopes": [
           "BaseGame"
         ],
-        "visible": true,
-        "localization_sid": "weapon_caliberChange",
+        "visible": false,
+        "localization_sid": null,
         "resolution_chain": [
-          "ChangeCaliber918Effect",
-          "ChangeCaliberTemplate"
+          "ChangeCaliber918Effect"
         ],
         "sources": [
-          "BaseGame",
-          "BaseGame"
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
         ],
-        "status": "vanilla_localization"
+        "status": "ok"
       },
       {
         "sid": "ChangeCaliber919Effect",
         "scopes": [
           "BaseGame"
         ],
-        "visible": true,
+        "visible": false,
         "localization_sid": null,
         "resolution_chain": [
           "ChangeCaliber919Effect"
         ],
         "sources": [
-          "BaseGame"
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
         ],
-        "status": "visible_without_localization"
+        "status": "ok"
       },
       {
         "sid": "ChangeFireTypeEffectBurstAuto",
         "scopes": [
           "BaseGame"
         ],
-        "visible": true,
+        "visible": false,
         "localization_sid": null,
         "resolution_chain": [
           "ChangeFireTypeEffectBurstAuto"
         ],
         "sources": [
-          "BaseGame"
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
         ],
-        "status": "visible_without_localization"
+        "status": "ok"
       },
       {
         "sid": "ChangeFireTypeEffectSemiAuto",
         "scopes": [
           "BaseGame"
         ],
-        "visible": true,
+        "visible": false,
         "localization_sid": null,
         "resolution_chain": [
           "ChangeFireTypeEffectSemiAuto"
         ],
         "sources": [
-          "BaseGame"
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
         ],
-        "status": "visible_without_localization"
+        "status": "ok"
       },
       {
         "sid": "CoverPiercingPos20Effect",
@@ -1933,16 +1920,14 @@
           "DLC1"
         ],
         "visible": true,
-        "localization_sid": null,
+        "localization_sid": "bprue_effective_range",
         "resolution_chain": [
-          "DistanceDropOffLengthPos20Effect",
-          "DistanceDropOffLengthTemplate"
+          "DistanceDropOffLengthPos20Effect"
         ],
         "sources": [
-          "BaseGame",
-          "BaseGame"
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
         ],
-        "status": "visible_without_localization"
+        "status": "ok"
       },
       {
         "sid": "DurabilityPerShotPos20Effect",
@@ -2040,14 +2025,14 @@
           "DLC1"
         ],
         "visible": true,
-        "localization_sid": null,
+        "localization_sid": "bprue_effective_range",
         "resolution_chain": [
           "FlatnessUp10Effect"
         ],
         "sources": [
-          "BaseGame"
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
         ],
-        "status": "visible_without_localization"
+        "status": "ok"
       },
       {
         "sid": "FlatnessUp15Effect",
@@ -2056,14 +2041,14 @@
           "DLC1"
         ],
         "visible": true,
-        "localization_sid": null,
+        "localization_sid": "bprue_effective_range",
         "resolution_chain": [
           "FlatnessUp15Effect"
         ],
         "sources": [
-          "BaseGame"
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
         ],
-        "status": "visible_without_localization"
+        "status": "ok"
       },
       {
         "sid": "IdleSwayXPos15Effect",
@@ -2404,5 +2389,5 @@
   },
   "unique_missing_upgrade_sid_count": 0,
   "missing_upgrade_sids": {},
-  "error_count": 6
+  "error_count": 0
 }
