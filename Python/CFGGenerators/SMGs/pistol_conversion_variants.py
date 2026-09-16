@@ -10,9 +10,9 @@ from vanilla_upgrade_layout import vanilla_general_setup_upgrades
 class PistolConversionVariant:
     """One runtime weapon replacement produced by a pistol-slot conversion quest.
 
-    The quest replaces the original weapon item with ``weapon_sid``.  That
-    replacement must use its own GeneralSetup so the conversion upgrade can be
-    removed without changing the upgrade tree of the original weapon.
+    The quest replaces the original weapon item with ``weapon_sid``. That
+    replacement uses a dedicated GeneralSetup derived from the BaseGame setup,
+    with only the pistol conversion upgrade removed.
     """
 
     weapon_sid: str
@@ -22,50 +22,16 @@ class PistolConversionVariant:
 
 
 PISTOL_CONVERSION_VARIANTS: tuple[PistolConversionVariant, ...] = (
-    PistolConversionVariant(
-        weapon_sid="BPRUE_GunViper_Pistol_PP",
-        source_general_setup_sid="GunViper_PP",
-        variant_general_setup_sid="BPRUE_GunViper_Pistol_GS",
-        conversion_upgrade_sid="GunViper_Upgrade_BPRUE_PistolConversion",
-    ),
-    PistolConversionVariant(
-        weapon_sid="BPRUE_GunAKU_Pistol_PP",
-        source_general_setup_sid="GunAKU_PP",
-        variant_general_setup_sid="BPRUE_GunAKU_Pistol_GS",
-        conversion_upgrade_sid="GunAKU_Upgrade_BPRUE_PistolConversion",
-    ),
-    PistolConversionVariant(
-        weapon_sid="BPRUE_GunBucket_Pistol_PP",
-        source_general_setup_sid="GunBucket_PP",
-        variant_general_setup_sid="BPRUE_GunBucket_Pistol_GS",
-        conversion_upgrade_sid="GunBucket_Upgrade_BPRUE_PistolConversion",
-    ),
-    PistolConversionVariant(
-        weapon_sid="BPRUE_GunIntegral_Pistol_PP",
-        source_general_setup_sid="GunIntegral_PP",
-        variant_general_setup_sid="BPRUE_GunIntegral_Pistol_GS",
-        conversion_upgrade_sid="GunIntegral_Upgrade_BPRUE_PistolConversion",
-    ),
-    PistolConversionVariant(
-        weapon_sid="BPRUE_GunZubr_Pistol_PP",
-        source_general_setup_sid="GunZubr_PP",
-        variant_general_setup_sid="BPRUE_GunZubr_Pistol_GS",
-        conversion_upgrade_sid="GunZubr_Upgrade_BPRUE_PistolConversion",
-    ),
-    PistolConversionVariant(
-        weapon_sid="BPRUE_GunFora230_Pistol_PP",
-        source_general_setup_sid="GunFora230_PP_GS",
-        variant_general_setup_sid="BPRUE_GunFora230_Pistol_GS",
-        conversion_upgrade_sid="GunFora230_Upgrade_BPRUE_PistolConversion",
-    ),
+    PistolConversionVariant("BPRUE_GunViper_Pistol_PP", "GunViper_PP", "BPRUE_GunViper_Pistol_GS", "GunViper_Upgrade_BPRUE_PistolConversion"),
+    PistolConversionVariant("BPRUE_GunAKU_Pistol_PP", "GunAKU_PP", "BPRUE_GunAKU_Pistol_GS", "GunAKU_Upgrade_BPRUE_PistolConversion"),
+    PistolConversionVariant("BPRUE_GunBucket_Pistol_PP", "GunBucket_PP", "BPRUE_GunBucket_Pistol_GS", "GunBucket_Upgrade_BPRUE_PistolConversion"),
+    PistolConversionVariant("BPRUE_GunIntegral_Pistol_PP", "GunIntegral_PP", "BPRUE_GunIntegral_Pistol_GS", "GunIntegral_Upgrade_BPRUE_PistolConversion"),
+    PistolConversionVariant("BPRUE_GunZubr_Pistol_PP", "GunZubr_PP", "BPRUE_GunZubr_Pistol_GS", "GunZubr_Upgrade_BPRUE_PistolConversion"),
+    PistolConversionVariant("BPRUE_GunFora230_Pistol_PP", "GunFora230_PP_GS", "BPRUE_GunFora230_Pistol_GS", "GunFora230_Upgrade_BPRUE_PistolConversion"),
 )
 
 
-def _final_upgrade_sids(
-    model: UpgradeBuildModel,
-    setup_sid: str,
-    vanilla: dict[str, list[str]],
-) -> list[str]:
+def _final_upgrade_sids(model: UpgradeBuildModel, setup_sid: str, vanilla: dict[str, list[str]]) -> list[str]:
     """Return the exact final Vanilla + BPRUE array used by the main renderer."""
     if setup_sid not in vanilla:
         raise ValueError(f"No effective UpgradePrototypeSIDs found for {setup_sid}")
@@ -76,16 +42,13 @@ def _final_upgrade_sids(
 def render_pistol_conversion_variant_patches(model: UpgradeBuildModel) -> tuple[str, str]:
     """Render GeneralSetup + WeaponPrototype patches for converted SMG items.
 
-    The conversion upgrade index is resolved from the *final* combined upgrade
-    array.  No numeric index is stored in configuration, so adding/removing
+    The conversion upgrade index is resolved from the final combined upgrade
+    array. No numeric index is stored in configuration, so adding/removing
     BPRUE upgrades cannot silently make the removenode target stale.
-
-    Returns ``(general_setup_text, weapon_patch_text)``.
     """
     vanilla = vanilla_general_setup_upgrades()
     setup_lines: list[str] = []
     weapon_lines: list[str] = []
-
     seen_weapons: set[str] = set()
     seen_variant_setups: set[str] = set()
 
@@ -93,29 +56,22 @@ def render_pistol_conversion_variant_patches(model: UpgradeBuildModel) -> tuple[
         if variant.weapon_sid in seen_weapons:
             raise ValueError(f"Duplicate pistol conversion weapon SID: {variant.weapon_sid}")
         if variant.variant_general_setup_sid in seen_variant_setups:
-            raise ValueError(
-                f"Duplicate pistol conversion GeneralSetup SID: {variant.variant_general_setup_sid}"
-            )
+            raise ValueError(f"Duplicate pistol conversion GeneralSetup SID: {variant.variant_general_setup_sid}")
         seen_weapons.add(variant.weapon_sid)
         seen_variant_setups.add(variant.variant_general_setup_sid)
 
         final_sids = _final_upgrade_sids(model, variant.source_general_setup_sid, vanilla)
-        matches = [
-            index
-            for index, sid in enumerate(final_sids)
-            if sid == variant.conversion_upgrade_sid
-        ]
+        matches = [index for index, sid in enumerate(final_sids) if sid == variant.conversion_upgrade_sid]
         if len(matches) != 1:
             raise ValueError(
                 f"{variant.source_general_setup_sid}: expected exactly one "
-                f"{variant.conversion_upgrade_sid} in final UpgradePrototypeSIDs, "
-                f"found {len(matches)}"
+                f"{variant.conversion_upgrade_sid} in final UpgradePrototypeSIDs, found {len(matches)}"
             )
         conversion_index = matches[0]
 
         setup_lines += [
             f"{variant.variant_general_setup_sid} : struct.begin "
-            f"{{refkey={variant.source_general_setup_sid}}}",
+            f"{{refurl=@BaseGame/WeaponData/WeaponGeneralSetupPrototypes.cfg;refkey={variant.source_general_setup_sid}}}",
             f"   SID = {variant.variant_general_setup_sid}",
             "   UpgradePrototypeSIDs : struct.begin {bpatch}",
             f"      [{conversion_index}] : removenode",
@@ -130,7 +86,4 @@ def render_pistol_conversion_variant_patches(model: UpgradeBuildModel) -> tuple[
             "",
         ]
 
-    return (
-        "\n".join(setup_lines).rstrip() + "\n",
-        "\n".join(weapon_lines).rstrip() + "\n",
-    )
+    return "\n".join(setup_lines).rstrip() + "\n", "\n".join(weapon_lines).rstrip() + "\n"
