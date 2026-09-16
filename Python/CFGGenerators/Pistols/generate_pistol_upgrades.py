@@ -49,9 +49,29 @@ def signature_sid(prefix: str, key: str) -> str:
     return f"{prefix}_Upgrade_BPRUE_Pistol_Signature_{key.title().replace('_', '')}"
 
 
+def expanded_families(config: dict):
+    """Yield normal families and unique variants expanded from their base family.
+
+    Unique variants intentionally receive fresh UpgradePrototype SIDs targeting
+    their own GeneralSetup. They reuse the base family's module definitions,
+    cost scale and base signature. A separate unique signature can be layered on
+    later without coupling the unique to the base weapon's generated prototypes.
+    """
+    for name, family in config["families"].items():
+        yield name, family, False
+
+    for name, unique in config.get("uniques", {}).items():
+        base_name = unique["base_family"]
+        if base_name not in config["families"]:
+            raise ValueError(f"Unique pistol {name} references unknown base_family {base_name}")
+        family = dict(config["families"][base_name])
+        family.update(unique)
+        yield name, family, True
+
+
 def build_upgrades(config: dict) -> list[UpgradeDefinition]:
     result: list[UpgradeDefinition] = []
-    for family in config["families"].values():
+    for _, family, _ in expanded_families(config):
         prefix, setup, scale = family["prototype_prefix"], family["general_setup_sid"], family.get("cost_scale", 1.0)
         for group, definitions, target, vertical in (("Action", ACTION, "Barrel", "Top"), ("Handling", HANDLING, "Body", "Down")):
             group_sids = [module_sid(prefix, group, key) for key in definitions]
@@ -112,9 +132,9 @@ def all_upgrade_sids(config: dict) -> list[str]:
 def main() -> None:
     config = load_config(); model = UpgradeBuildModel(); model.extend(build_upgrades(config)); model.validate()
     outputs = {UPGRADE_OUTPUT: render_upgrade_prototypes(model, source="pistol_upgrades.json", template_sid=TEMPLATE_SID,
-        header_comments=("Two mutually-exclusive three-way groups plus one standalone family signature.",)),
+        header_comments=("Two mutually-exclusive three-way groups plus one standalone family signature; unique variants reuse their base-family modules with unique prototype SIDs.",)),
         EFFECT_OUTPUT: render_effects(), WEAPON_OUTPUT: render_general_setup_patch(model,
-        header_comments=("Registers two three-way specialization groups and one signature per normal pistol family.",))}
+        header_comments=("Registers BPRUE specialization groups for normal pistol families and configured unique variants.",))}
     for path, content in outputs.items():
         path.parent.mkdir(parents=True, exist_ok=True); path.write_text(content, encoding="utf-8"); print(f"Generated {path}")
     print(f"Generated pistol specialization CFGs from {model.summary()}")
