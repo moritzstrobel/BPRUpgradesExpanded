@@ -21,11 +21,12 @@ from upgrade_renderers import (
 from unique_weapon_modules import add_unique_modules
 from vanilla_upgrade_layout import DLC_ROOT, _direct_child, _direct_scalar, _indexed_children, _refkey, _sid, _top_level_blocks, render_vanilla_compaction_patch
 
-from CFGGenerators.AssaultRifles import generate_ar_upgrades as ar
+from CFGGenerators.AssaultRifles import generate_assault_rifle_upgrades as ar
 from CFGGenerators.MachineGuns import generate_machine_gun_upgrades as machine_gun
 from CFGGenerators.Pistols import generate_pistol_upgrades as pistol
 from CFGGenerators.Shotguns import generate_shotgun_upgrades as shotgun
 from CFGGenerators.SMGs import generate_smg_upgrades as smg
+from CFGGenerators.SMGs.smg_conversion_attachments import CONVERSION_ATTACHMENTS, attachment_block
 from CFGGenerators.Snipers import generate_sniper_upgrades as sniper
 from CFGGenerators.Common.shared_effects import render_shared_effects
 from CFGGenerators.Common.shared_upgrades import build_shared_upgrades
