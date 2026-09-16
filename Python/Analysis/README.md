@@ -10,6 +10,12 @@ This directory contains repository analysis scripts. Keep executable analysis to
 - `analyze_upgrade_layouts.py` — performs higher-level structural layout checks.
 - `analyze_weapon_upgrade_sections.py` — inspects Vanilla weapon `SectionSettings` for configured BPRUE weapons.
 
+## Weapon coverage
+
+- `analyze_weapon_coverage.py` — compares Vanilla weapon GeneralSetups with the weapon families configured in BPRUE. It separates likely unique/special/variant candidates from `suspected_missing` weapons instead of treating a raw SID diff as authoritative. Use `--show-excluded` to inspect the filtered candidates as well.
+
+The coverage report is deliberately conservative: `suspected_missing` means "worth inspecting", not "confirmed missing". Likewise, unique/variant exclusions remain in the JSON report so the filter can be audited.
+
 ## Reports
 
 Generated/snapshotted JSON reports live in `Reports/`:
@@ -19,5 +25,6 @@ Generated/snapshotted JSON reports live in `Reports/`:
 - `upgrade_map_comparison.json`
 - `upgrade_layout_analysis.json`
 - `weapon_upgrade_sections.json`
+- `weapon_coverage.json`
 
 New analysis tools should follow the same rule: code in `Analysis/`, generated data in `Analysis/Reports/`.
