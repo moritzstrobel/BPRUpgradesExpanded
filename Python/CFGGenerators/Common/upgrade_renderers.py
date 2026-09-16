@@ -31,6 +31,20 @@ GROUP_ICON_FALLBACKS = {
     "Marksman": "AimingAccuracy", "Ballistics": "Range", "Pattern": "SpreadReduction", "Signature": "ShootingDepreciation", "Action": "Recoil",
 }
 
+# Caliber conversion descriptions must follow the actual effect profile, not only
+# the target caliber. This matters especially for 9x19, whose trade-offs differ
+# depending on the source weapon's original caliber.
+CALIBER_HINT_EFFECT_MARKERS = (
+    (("BPRUE_DamagePos15Effect", "BPRUE_ArmorPiercingPos15Effect", "BPRUE_RecoilPenalty25Effect"), "sid_bprue_caliber_762_eastern_tradeoff_description"),
+    (("BPRUE_DamagePos10Effect", "BPRUE_ArmorPiercingPos15Effect", "BPRUE_RecoilPenalty20Effect", "BPRUE_DurabilityPerShotNeg15Effect"), "sid_bprue_caliber_762_nato_tradeoff_description"),
+    (("BPRUE_SMG_DamagePos10Effect", "BPRUE_SMG_EffectiveRangePos10Effect", "BPRUE_SMG_RecoilPenalty10Effect"), "sid_bprue_smg_caliber_918_to_919_description"),
+    (("BPRUE_SMG_RecoilPos15Effect", "BPRUE_SMG_DurabilityPerShotPos10Effect", "BPRUE_SMG_DamagePenalty10Effect"), "sid_bprue_smg_caliber_919_to_918_description"),
+    (("BPRUE_SMG_DamagePos15Effect", "BPRUE_SMG_RecoilPenalty20Effect", "BPRUE_SMG_EffectiveRangePenalty10Effect"), "sid_bprue_smg_caliber_919_to_045_description"),
+    (("BPRUE_SMG_RecoilPos10Effect", "BPRUE_SMG_EffectiveRangePos10Effect", "BPRUE_SMG_DamagePenalty10Effect"), "sid_bprue_smg_caliber_045_to_919_description"),
+    (("BPRUE_SMG_DamagePos15Effect", "BPRUE_SMG_RecoilPenalty25Effect", "BPRUE_SMG_EffectiveRangePenalty15Effect"), "sid_bprue_smg_caliber_918_to_045_description"),
+    (("BPRUE_SMG_RecoilPos15Effect", "BPRUE_SMG_EffectiveRangePos15Effect", "BPRUE_SMG_DamagePenalty15Effect"), "sid_bprue_smg_caliber_045_to_918_description"),
+)
+
 
 def semantic_upgrade_icon(upgrade: UpgradeDefinition) -> str:
     for needles, icon_name in EFFECT_ICON_RULES:
@@ -39,10 +53,18 @@ def semantic_upgrade_icon(upgrade: UpgradeDefinition) -> str:
     return _vanilla_icon(fallback) if fallback else upgrade.icon
 
 
+def semantic_upgrade_hint(upgrade: UpgradeDefinition) -> str:
+    if upgrade.group != "Caliber": return upgrade.hint_sid
+    effect_set = set(upgrade.effects)
+    for markers, hint_sid in CALIBER_HINT_EFFECT_MARKERS:
+        if all(marker in effect_set for marker in markers): return hint_sid
+    return upgrade.hint_sid
+
+
 def _render_upgrade(upgrade: UpgradeDefinition, fallback_template: str | None = None) -> list[str]:
     template = upgrade.template_sid or fallback_template
     if not template: raise ValueError(f"{upgrade.sid}: no template SID configured")
-    lines = [f"{upgrade.sid} : struct.begin {{refkey={template}}}", f"   SID = {upgrade.sid}", f"   Text = {upgrade.text_sid}", f"   Hint = {upgrade.hint_sid}", f"   Image = {BPRUE_MODULE_IMAGE}", f"   Icon = {semantic_upgrade_icon(upgrade)}", f"   BaseCost = {upgrade.cost}"]
+    lines = [f"{upgrade.sid} : struct.begin {{refkey={template}}}", f"   SID = {upgrade.sid}", f"   Text = {upgrade.text_sid}", f"   Hint = {semantic_upgrade_hint(upgrade)}", f"   Image = {BPRUE_MODULE_IMAGE}", f"   Icon = {semantic_upgrade_icon(upgrade)}", f"   BaseCost = {upgrade.cost}"]
     if upgrade.horizontal_position is not None: lines.append(f"   HorizontalPosition = {upgrade.horizontal_position}")
     if upgrade.vertical_position is not None: lines.append(f"   VerticalPosition = EUpgradeVerticalPosition::{upgrade.vertical_position}")
     lines.append(f"   UpgradeTargetPart = EUpgradeTargetPartType::{upgrade.target_part}")

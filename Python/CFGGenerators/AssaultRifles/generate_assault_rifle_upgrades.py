@@ -17,8 +17,8 @@ POWER_CALIBER = {
     "A556": ("A762NATO", "762NATO", "sid_bprue_caliber_762_nato_name", "sid_bprue_caliber_762_nato_description", 3200),
 }
 CALIBER_EFFECTS = {
-    "A762Sniper": ("ChangeCaliber762Effect", ("ChangeAmmoTypesNo545Effect", "ChangeAmmoTypesNo556Effect", "BPRUE_ChangeAmmoTypesNo762NATOEffect", "ChangeAmmoTypesNo939Effect"), "ChangeAmmoTypes762Effect"),
-    "A762NATO": ("BPRUE_ChangeCaliber762NATOEffect", ("ChangeAmmoTypesNo545Effect", "ChangeAmmoTypesNo556Effect", "BPRUE_ChangeAmmoTypesNo762Effect", "ChangeAmmoTypesNo939Effect"), "BPRUE_ChangeAmmoTypes762NATOEffect"),
+    "A762Sniper": ("ChangeCaliber762Effect", ("ChangeAmmoTypesNo545Effect", "ChangeAmmoTypesNo556Effect", "BPRUE_ChangeAmmoTypesNo762NATOEffect", "ChangeAmmoTypesNo939Effect"), "ChangeAmmoTypes762Effect", ("BPRUE_DamagePos15Effect", "BPRUE_ArmorPiercingPos15Effect", "BPRUE_RecoilPenalty25Effect", "BPRUE_DurabilityPerShotNeg20Effect")),
+    "A762NATO": ("BPRUE_ChangeCaliber762NATOEffect", ("ChangeAmmoTypesNo545Effect", "ChangeAmmoTypesNo556Effect", "BPRUE_ChangeAmmoTypesNo762Effect", "ChangeAmmoTypesNo939Effect"), "BPRUE_ChangeAmmoTypes762NATOEffect", ("BPRUE_DamagePos10Effect", "BPRUE_ArmorPiercingPos15Effect", "BPRUE_RecoilPenalty20Effect", "BPRUE_DurabilityPerShotNeg15Effect")),
 }
 DEFAULT_ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_Recoil.T_PDA_Upgrades_Icon_Recoil'"
 CALIBER_ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_CaliberChange.T_PDA_Upgrades_Icon_CaliberChange'"
@@ -41,12 +41,7 @@ def load_config() -> dict:
 
 
 def _definition(family: dict, group: str, variant: str, target: str, cost: int, text: str, hint: str, effects: tuple[str, ...], icon: str = DEFAULT_ICON) -> UpgradeDefinition:
-    return UpgradeDefinition(
-        sid=f"{family['prototype_prefix']}_Upgrade_BPRUE_{group}_{variant}",
-        general_setup_sid=family["general_setup_sid"], weapon_class="AR", group=group,
-        target_part=target, text_sid=text, hint_sid=hint, image=family["image"], icon=icon,
-        cost=cost, effects=effects, template_sid=MODULE_TEMPLATE_SID,
-    )
+    return UpgradeDefinition(sid=f"{family['prototype_prefix']}_Upgrade_BPRUE_{group}_{variant}", general_setup_sid=family["general_setup_sid"], weapon_class="AR", group=group, target_part=target, text_sid=text, hint_sid=hint, image=family["image"], icon=icon, cost=cost, effects=effects, template_sid=MODULE_TEMPLATE_SID)
 
 
 def build_upgrades(config: dict) -> list[UpgradeDefinition]:
@@ -56,18 +51,13 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
         power = POWER_CALIBER.get(family["base_caliber"]) if family.get("bprue_caliber_conversion", True) else None
         if power:
             caliber, suffix, text, hint, cost = power
-            change, removes, add = CALIBER_EFFECTS[caliber]
-            family_upgrades.append(_definition(
-                family, "Caliber", suffix, "Body", cost, text, hint,
-                (change, *removes, add, "BPRUE_DamagePos10Effect", "BPRUE_RecoilPenalty20Effect", "BPRUE_DurabilityPerShotNeg20Effect"), CALIBER_ICON,
-            ))
+            change, removes, add, stat_effects = CALIBER_EFFECTS[caliber]
+            family_upgrades.append(_definition(family, "Caliber", suffix, "Body", cost, text, hint, (change, *removes, add, *stat_effects), CALIBER_ICON))
         for group, variants in config["module_groups"].items():
             for variant in variants:
                 family_upgrades.append(_definition(family, *MODULE_SPECS[(group, variant)]))
-
         by_group: dict[str, list[UpgradeDefinition]] = {}
-        for upgrade in family_upgrades:
-            by_group.setdefault(upgrade.group, []).append(upgrade)
+        for upgrade in family_upgrades: by_group.setdefault(upgrade.group, []).append(upgrade)
         for upgrade in family_upgrades:
             siblings = tuple(item.sid for item in by_group[upgrade.group] if item.sid != upgrade.sid)
             result.append(UpgradeDefinition(**{**upgrade.__dict__, "blocking_sids": siblings}))
@@ -75,13 +65,10 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
 
 
 def configure_general_setups(config: dict, model: UpgradeBuildModel) -> None:
-    for family in config["families"].values():
-        model.configure_general_setup(family["general_setup_sid"], FireQueueCount=3)
+    for family in config["families"].values(): model.configure_general_setup(family["general_setup_sid"], FireQueueCount=3)
 
 
-def render_effect_patch(config: dict) -> str:
-    return _EFFECTS
-
+def render_effect_patch(config: dict) -> str: return _EFFECTS
 
 _EFFECTS = r'''// AUTO-GENERATED - BPRUE assault-rifle shared effects
 
@@ -130,6 +117,27 @@ BPRUE_DamagePos10Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;re
    ShowUpgradeEffect = true
 struct.end
 
+BPRUE_DamagePos15Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=DamageTemplate}
+   SID = BPRUE_DamagePos15Effect
+   LocalizationSID = bprue_damage
+   ValueMin = 15%
+   ValueMax = 15%
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
+BPRUE_ArmorPiercingPos15Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_ArmorPiercingPos15Effect
+   Type = EEffectType::ArmorPiercing
+   LocalizationSID = bprue_armor_piercing
+   ValueMin = 15%
+   ValueMax = 15%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
 BPRUE_RecoilPenalty20Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=RecoilTemplate}
    SID = BPRUE_RecoilPenalty20Effect
    LocalizationSID = bprue_recoil
@@ -140,11 +148,31 @@ BPRUE_RecoilPenalty20Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cf
    ShowUpgradeEffect = true
 struct.end
 
+BPRUE_RecoilPenalty25Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=RecoilTemplate}
+   SID = BPRUE_RecoilPenalty25Effect
+   LocalizationSID = bprue_recoil
+   ValueMin = -25%
+   ValueMax = -25%
+   Positive = EBeneficial::Negative
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
 BPRUE_DurabilityPerShotNeg10Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=DurabilityPerShotTemplate}
    SID = BPRUE_DurabilityPerShotNeg10Effect
    LocalizationSID = bprue_weapon_wear
    ValueMin = 10%
    ValueMax = 10%
+   Positive = EBeneficial::Negative
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
+BPRUE_DurabilityPerShotNeg15Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=DurabilityPerShotTemplate}
+   SID = BPRUE_DurabilityPerShotNeg15Effect
+   LocalizationSID = bprue_weapon_wear
+   ValueMin = 15%
+   ValueMax = 15%
    Positive = EBeneficial::Negative
    ShowUpgradeEffectValue = true
    ShowUpgradeEffect = true
@@ -188,6 +216,7 @@ BPRUE_ChangeCaliber762NATOEffect : struct.begin {refurl=@BaseGame/EffectPrototyp
    SID = BPRUE_ChangeCaliber762NATOEffect
    Caliber = EAmmoCaliber::A762NATO
    ShowUpgradeEffectValue = false
+   ShowUpgradeEffect = false
 struct.end
 
 BPRUE_ChangeAmmoTypes762NATOEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}
@@ -256,11 +285,15 @@ BPRUE_AddBurstFireModeEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.c
    SID = BPRUE_AddBurstFireModeEffect
    Type = EEffectType::AddFireMode
    FireMode = EFireMode::Burst
+   ShowUpgradeEffectValue = false
+   ShowUpgradeEffect = false
 struct.end
 
 BPRUE_SemiAutoOnlyEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_SemiAutoOnlyEffect
    Type = EEffectType::RemoveFireMode
    FireMode = EFireMode::Auto
+   ShowUpgradeEffectValue = false
+   ShowUpgradeEffect = false
 struct.end
 '''

@@ -6,6 +6,7 @@ ASSET_PATH = "/BPRUpgradesExpanded/Localization/L_BPRUpgradesExpanded"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 LOCALIZATION_FILES = (
     os.path.join(SCRIPT_DIR, "Blueprint_Localization.json"),
+    os.path.join(SCRIPT_DIR, "Conversion_Localization.json"),
     os.path.join(SCRIPT_DIR, "Weapon_Module_Localization.json"),
     os.path.join(SCRIPT_DIR, "Kora_Localization.json"),
     os.path.join(SCRIPT_DIR, "MachineGun_Localization.json"),

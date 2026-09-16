@@ -40,14 +40,36 @@ GENERAL_SETUP_PATH = CONTENT_ROOT / "GameLite/GameData/WeaponData/WeaponGeneralS
 WEAPON_PATH = CONTENT_ROOT / "GameLite/GameData/ItemPrototypes/WeaponPrototypes/WeaponPrototypes_patch_BPRUE.cfg"
 NPC_PATH = CONTENT_ROOT / "GameLite/GameData/NPCPrototypes/NPCPrototypes_patch_BPRUE.cfg"
 VANILLA_COMPACTION_PATH = CONTENT_ROOT / "GameLite/GameData/UpgradePrototypes/UpgradePrototypes_patch_BPRUE.cfg"
+VANILLA_EFFECT_UI_PATH = CONTENT_ROOT / "GameLite/GameData/EffectPrototypes/EffectPrototypes_patch_BPRUE_UI.cfg"
+BPRUE_EFFECT_UI_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_EffectUIOverrides.cfg"
 MACHINE_GUN_EFFECT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_MachineGunEffectPrototypes.cfg"
 SHARED_EFFECT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_SharedEffectPrototypes.cfg"
-# SectionSettings coordinates are weapon-image UI coordinates, not node radii. A 24-unit
-# center distance is still visually almost on top of another hotspot in-game.
 MIN_SECTION_DISTANCE = 80.0
 SECTION_NUDGE_STEP = 20.0
 SECTION_NUDGE_RINGS = 12
 SECTION_SEARCH_DIRECTIONS = 16
+
+VANILLA_EFFECT_LOCALIZATION_OVERRIDES = {
+    "RecoilDown10Effect": "bprue_recoil",
+    "RecoilDown15Effect": "bprue_recoil",
+    "WeightDown15Effect": "bprue_weight",
+    "DistanceDropOffLengthPos20Effect": "bprue_effective_range",
+    "FlatnessUp10Effect": "bprue_effective_range",
+    "FlatnessUp15Effect": "bprue_effective_range",
+}
+VANILLA_TECHNICAL_EFFECTS_HIDDEN_FROM_UI = (
+    "ChangeCaliber045Effect",
+    "ChangeCaliber762Effect",
+    "ChangeCaliber918Effect",
+    "ChangeCaliber919Effect",
+    "ChangeFireTypeEffectBurstAuto",
+    "ChangeFireTypeEffectSemiAuto",
+)
+TECHNICAL_EFFECTS_HIDDEN_FROM_UI = (
+    "BPRUE_AddBurstFireModeEffect",
+    "BPRUE_SemiAutoOnlyEffect",
+    "BPRUE_ChangeCaliber762NATOEffect",
+)
 
 
 def _shared_upgrades(configs):
@@ -55,13 +77,6 @@ def _shared_upgrades(configs):
 
 
 def build_model(*, apply_layout: bool = True) -> tuple[UpgradeBuildModel, dict]:
-    """Build the base/Unique model.
-
-    DLC cloning must happen from the pre-layout model. Base layout allocation can
-    move a module to a fallback target part; cloning that already-moved module
-    would make the DLC allocator treat its group as passthrough and preserve the
-    BaseGame position instead of allocating against the DLC weapon's own layout.
-    """
     configs = {"ar": ar.load_config(), "smg": smg.load_config(), "shotgun": shotgun.cfg(), "pistol": pistol.load_config(), "sniper": sniper.load_config(), "machine_gun": machine_gun.load_config()}
     model = UpgradeBuildModel()
     for upgrades in (ar.build_upgrades(configs["ar"]), smg.build_upgrades(configs["smg"]), shotgun.build_upgrades(configs["shotgun"]), pistol.build_upgrades(configs["pistol"]), sniper.build_upgrades(configs["sniper"]), machine_gun.build_upgrades(configs["machine_gun"]), _shared_upgrades(configs)): model.extend(upgrades)
@@ -89,6 +104,29 @@ def validate_rendered_outputs(model, upgrade_text, setup_text, npc_text=None):
     if errors: raise ValueError("Generated upgrade output validation failed:\n  - " + "\n  - ".join(errors))
 
 
+def render_vanilla_effect_ui_patch() -> str:
+    lines = [
+        "// -----------------------------------------------------------------------------",
+        "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND",
+        "// BPRUE UI compatibility patch for reused BaseGame upgrade effects.",
+        "// Adds/overrides only UI metadata; gameplay values remain untouched.",
+        "// -----------------------------------------------------------------------------",
+        "",
+    ]
+    for sid, localization_sid in VANILLA_EFFECT_LOCALIZATION_OVERRIDES.items():
+        lines += [f"{sid} : struct.begin {{bpatch}}", f"   LocalizationSID = {localization_sid}", "   ShowUpgradeEffectValue = true", "   ShowUpgradeEffect = true", "struct.end", ""]
+    for sid in VANILLA_TECHNICAL_EFFECTS_HIDDEN_FROM_UI:
+        lines += [f"{sid} : struct.begin {{bpatch}}", "   ShowUpgradeEffectValue = false", "   ShowUpgradeEffect = false", "struct.end", ""]
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def render_bprue_effect_ui_patch() -> str:
+    lines = ["// -----------------------------------------------------------------------------", "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND", "// Technical BPRUE effects are mechanics, not player-facing stat rows.", "// -----------------------------------------------------------------------------", ""]
+    for sid in TECHNICAL_EFFECTS_HIDDEN_FROM_UI:
+        lines += [f"{sid} : struct.begin {{bpatch}}", "   ShowUpgradeEffectValue = false", "   ShowUpgradeEffect = false", "struct.end", ""]
+    return "\n".join(lines).rstrip() + "\n"
+
+
 def _float_scalar(block, name):
     raw = _direct_scalar(block, name)
     if raw is None: return None
@@ -96,46 +134,22 @@ def _float_scalar(block, name):
     except ValueError: return None
 
 
-def _section_index(section):
-    match = re.match(r"\s*\[(\d+)\]", section[0])
-    if not match: raise ValueError(f"Invalid SectionSettings entry: {section[0]!r}")
+def _section_index(block):
+    if not block:
+        raise ValueError("SectionSettings child is empty")
+    header = block[0] if isinstance(block, list) else block
+    match = re.search(r"\[(\d+)\]\s*:\s*struct\.begin", header)
+    if not match:
+        raise ValueError("SectionSettings child has no numeric index")
     return int(match.group(1))
 
 
-def _far_enough(point, occupied):
-    return all(math.dist(point, other) >= MIN_SECTION_DISTANCE for other in occupied)
-
-
-def _section_search_directions():
-    return tuple(
-        (math.cos(2.0 * math.pi * index / SECTION_SEARCH_DIRECTIONS), math.sin(2.0 * math.pi * index / SECTION_SEARCH_DIRECTIONS))
-        for index in range(SECTION_SEARCH_DIRECTIONS)
-    )
-
-
-def _resolve_section_position(origin, occupied):
-    if _far_enough(origin, occupied):
-        return origin
-    directions = _section_search_directions()
-    for ring in range(1, SECTION_NUDGE_RINGS + 1):
-        radius = ring * SECTION_NUDGE_STEP
-        candidates = []
-        for direction_index, (dx, dy) in enumerate(directions):
-            point = (origin[0] + dx * radius, origin[1] + dy * radius)
-            if _far_enough(point, occupied):
-                candidates.append((math.dist(origin, point), direction_index, point[0], point[1]))
-        if candidates:
-            _, _, x, y = min(candidates)
-            return x, y
-    raise ValueError(f"Could not separate weapon section hotspot at {origin} after {SECTION_NUDGE_RINGS} rings ({SECTION_NUDGE_RINGS * SECTION_NUDGE_STEP:.1f} units)")
-
-
-def _blocks_by_sid(path: Path) -> dict[str, list[str]]:
+def _blocks_by_sid(path):
     if not path.exists(): return {}
-    return {_sid(block): block for block in _top_level_blocks(path.read_text(encoding="utf-8"))}
+    return {_sid(block): block for block in _top_level_blocks(path.read_text(encoding="utf-8", errors="ignore")) if _sid(block)}
 
 
-def _effective_scalar(sid: str, name: str, primary: dict[str, list[str]], fallback: dict[str, list[str]]) -> str | None:
+def _effective_scalar(sid, name, primary, fallback):
     seen = set(); current = sid
     while current and current not in seen:
         seen.add(current); block = primary.get(current) or fallback.get(current)
@@ -146,20 +160,34 @@ def _effective_scalar(sid: str, name: str, primary: dict[str, list[str]], fallba
     return None
 
 
-def _effective_section_settings(sid: str, primary: dict[str, list[str]], fallback: dict[str, list[str]]) -> list[str] | None:
+def _effective_section_settings(sid, primary, fallback):
     seen = set(); current = sid
     while current and current not in seen:
         seen.add(current); block = primary.get(current) or fallback.get(current)
         if not block: return None
         settings = _direct_child(block, "SectionSettings")
-        if settings: return settings
+        if settings is not None: return settings
         current = _refkey(block)
     return None
 
 
-def render_weapon_sections_patch(model: UpgradeBuildModel, *, content_pack: str | None = None) -> str:
-    wanted_setups = set(model.by_general_setup()); vanilla = _blocks_by_sid(VANILLA_WEAPONS)
+def _distance(a, b): return math.hypot(a[0] - b[0], a[1] - b[1])
+
+def _resolve_section_position(origin, occupied):
+    if all(_distance(origin, point) >= MIN_SECTION_DISTANCE for point in occupied): return origin
+    for ring in range(1, SECTION_NUDGE_RINGS + 1):
+        radius = SECTION_NUDGE_STEP * ring
+        for direction in range(SECTION_SEARCH_DIRECTIONS):
+            angle = (2.0 * math.pi * direction) / SECTION_SEARCH_DIRECTIONS
+            candidate = (origin[0] + math.cos(angle) * radius, origin[1] + math.sin(angle) * radius)
+            if all(_distance(candidate, point) >= MIN_SECTION_DISTANCE for point in occupied): return candidate
+    raise ValueError(f"Unable to place upgrade section near {origin} without collision")
+
+
+def render_weapon_sections_patch(model, content_pack=None):
+    wanted_setups = {setup for upgrade in model.upgrades for setup in upgrade.general_setup_sids}
     source_path = DLC_ROOT / content_pack / "ItemPrototypes.cfg" if content_pack else VANILLA_WEAPONS
+    vanilla = _blocks_by_sid(VANILLA_WEAPONS)
     primary = _blocks_by_sid(source_path); fallback = vanilla if content_pack else {}
     patches = []; enabled_count = moved_count = weapon_count = 0
     for weapon_sid, weapon in primary.items():
@@ -182,8 +210,7 @@ def render_weapon_sections_patch(model: UpgradeBuildModel, *, content_pack: str 
         lines = [f"{weapon_sid} : struct.begin {{bpatch}}", "   SectionSettings : struct.begin {bpatch}"]
         for entry, position, moved in changed:
             lines += [f"      [{entry['index']}] : struct.begin {{bpatch}}", "         SectionIsEnabled = true"]
-            if moved:
-                lines += [f"         // BPRUE hotspot moved from ({entry['origin'][0]:.6f}, {entry['origin'][1]:.6f}) for UI spacing", f"         LeftPosition = {position[0]:.6f}", f"         TopPosition = {position[1]:.6f}"]
+            if moved: lines += [f"         // BPRUE hotspot moved from ({entry['origin'][0]:.6f}, {entry['origin'][1]:.6f}) for UI spacing", f"         LeftPosition = {position[0]:.6f}", f"         TopPosition = {position[1]:.6f}"]
             lines.append("      struct.end")
         lines += ["   struct.end", "struct.end", ""]; patches.extend(lines)
     scope = f"DLCGameData/{content_pack}" if content_pack else "BaseGame"
@@ -194,22 +221,24 @@ def render_weapon_sections_patch(model: UpgradeBuildModel, *, content_pack: str 
 def write(path, content): path.parent.mkdir(parents=True, exist_ok=True); path.write_text(content, encoding="utf-8"); print(f"Generated {path}")
 
 
+def _remove_independent_dlc_output():
+    root = CONTENT_ROOT / "GameLite/DLCGameData/BPRUpgradesExpanded"
+    for relative in ("UpgradePrototypes/UpgradePrototypes.cfg", "WeaponData/WeaponGeneralSetupPrototypes.cfg", "ItemPrototypes/ItemPrototypes.cfg"):
+        path = root / relative
+        if path.exists(): path.unlink(); print(f"Removed experimental DLC output {path}")
+
+
 def main():
     print("Building unified weapon upgrade model")
-    model, configs = build_model(apply_layout=False)
-    dlc_models = build_dlc_outputs(model, configs)
-    apply_layout_to_model(model); model.validate(); print(f"Built {model.summary()}")
+    model, configs = build_model(apply_layout=False); dlc_models = build_dlc_outputs(model, configs); apply_layout_to_model(model); model.validate(); print(f"Built {model.summary()}")
     attachments = {sid: attachment_block(data) for sid, data in CONVERSION_ATTACHMENTS.items()}
     upgrade_text = render_consolidated_upgrade_prototypes(model); setup_text = render_final_general_setup_patch(model, attachments); npc_text = render_technician_patch(model); weapon_text = render_weapon_sections_patch(model)
     validate_rendered_outputs(model, upgrade_text, setup_text, npc_text)
     write(UPGRADES_PATH, upgrade_text); write(GENERAL_SETUP_PATH, setup_text); write(WEAPON_PATH, weapon_text); write(NPC_PATH, npc_text); write(VANILLA_COMPACTION_PATH, render_vanilla_compaction_patch())
+    write(VANILLA_EFFECT_UI_PATH, render_vanilla_effect_ui_patch()); write(BPRUE_EFFECT_UI_PATH, render_bprue_effect_ui_patch()); _remove_independent_dlc_output()
     for pack, dlc_model in sorted(dlc_models.items()):
-        dlc_upgrade_text = render_consolidated_upgrade_prototypes(dlc_model); dlc_setup_text = render_dlc_general_setup_patch(dlc_model, pack); dlc_weapon_text = render_weapon_sections_patch(dlc_model, content_pack=pack)
-        validate_rendered_outputs(dlc_model, dlc_upgrade_text, dlc_setup_text)
-        pack_root = DLC_OUTPUT_ROOT / pack
-        write(pack_root / "UpgradePrototypes/UpgradePrototypes_patch_BPRUE.cfg", dlc_upgrade_text)
-        write(pack_root / "WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg", dlc_setup_text)
-        write(pack_root / "ItemPrototypes/ItemPrototypes_patch_BPRUE.cfg", dlc_weapon_text)
+        dlc_upgrade_text = render_consolidated_upgrade_prototypes(dlc_model); dlc_setup_text = render_dlc_general_setup_patch(dlc_model, pack); dlc_weapon_text = render_weapon_sections_patch(dlc_model, content_pack=pack); validate_rendered_outputs(dlc_model, dlc_upgrade_text, dlc_setup_text)
+        pack_root = DLC_OUTPUT_ROOT / pack; write(pack_root / "UpgradePrototypes/UpgradePrototypes_patch_BPRUE.cfg", dlc_upgrade_text); write(pack_root / "WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg", dlc_setup_text); write(pack_root / "ItemPrototypes/ItemPrototypes_patch_BPRUE.cfg", dlc_weapon_text)
     write(ar.EFFECT_OUTPUT_PATH, ar.render_effect_patch(configs["ar"])); write(smg.EFFECT_OUTPUT_PATH, smg.render_effects()); write(shotgun.EFFECT_OUTPUT, shotgun.render_effects()); write(pistol.EFFECT_OUTPUT, pistol.render_effects()); write(sniper.EFFECT_OUTPUT, sniper.render_effects()); write(MACHINE_GUN_EFFECT_PATH, machine_gun.render_effects()); write(SHARED_EFFECT_PATH, render_shared_effects())
     print(f"Validated and rendered {len(model.upgrades)} base/Unique upgrades plus {sum(len(m.upgrades) for m in dlc_models.values())} DLC upgrades.")
 

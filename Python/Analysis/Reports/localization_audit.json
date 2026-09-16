@@ -14,34 +14,2378 @@
       "hint_sid_count": 46,
       "missing_count": 0,
       "missing_sids": []
-    },
-    "Deluxe": {
-      "upgrade_count": 102,
-      "text_sid_count": 61,
-      "hint_sid_count": 61,
-      "missing_count": 0,
-      "missing_sids": []
-    },
-    "PreOrder": {
-      "upgrade_count": 17,
-      "text_sid_count": 17,
-      "hint_sid_count": 17,
-      "missing_count": 0,
-      "missing_sids": []
-    },
-    "Ultimate": {
-      "upgrade_count": 63,
-      "text_sid_count": 47,
-      "hint_sid_count": 47,
-      "missing_count": 0,
-      "missing_sids": []
     }
   },
   "effects": {
-    "visible_effect_count": 69,
-    "localized_effect_count": 69,
+    "referenced_effect_count": 142,
+    "visible_effect_count": 115,
+    "vanilla_localization_count": 38,
     "error_count": 0,
-    "errors": []
+    "errors": [],
+    "effects": [
+      {
+        "sid": "AimingMovementPos10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_aimMovement",
+        "resolution_chain": [
+          "AimingMovementPos10Effect",
+          "AimingMovementTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "AimingMovementPos15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_aimMovement",
+        "resolution_chain": [
+          "AimingMovementPos15Effect",
+          "AimingMovementTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "AimingMovementPos20Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_aimMovement",
+        "resolution_chain": [
+          "AimingMovementPos20Effect",
+          "AimingMovementTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "AimingTimeNeg10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_aimRocking",
+        "resolution_chain": [
+          "AimingTimeNeg10Effect",
+          "AimingTimeTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "AimingTimeNeg15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_aimRocking",
+        "resolution_chain": [
+          "AimingTimeNeg15Effect",
+          "AimingTimeTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "AimingTimePos10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_aimRocking",
+        "resolution_chain": [
+          "AimingTimePos10Effect",
+          "AimingTimeTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "AimingTimePos15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_aimRocking",
+        "resolution_chain": [
+          "AimingTimePos15Effect",
+          "AimingTimeTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "ArmorPiercingPos15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_armorPiercing",
+        "resolution_chain": [
+          "ArmorPiercingPos15Effect",
+          "ArmorPiercingTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "ArmorPiercingPos20Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_armorPiercing",
+        "resolution_chain": [
+          "ArmorPiercingPos20Effect",
+          "ArmorPiercingTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "ArmorPiercingPos25Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_armorPiercing",
+        "resolution_chain": [
+          "ArmorPiercingPos25Effect",
+          "ArmorPiercingTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "ArmorPiercingPos30Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_armorPiercing",
+        "resolution_chain": [
+          "ArmorPiercingPos30Effect",
+          "ArmorPiercingTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "BPRUE_AddBurstFireModeEffect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": false,
+        "localization_sid": null,
+        "resolution_chain": [
+          "BPRUE_AddBurstFireModeEffect"
+        ],
+        "sources": [
+          "BPRUE_EffectUIOverrides.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_ArmorPiercingPos15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_armor_piercing",
+        "resolution_chain": [
+          "BPRUE_ArmorPiercingPos15Effect"
+        ],
+        "sources": [
+          "BPRUE_EffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_ChangeAmmoTypes762NATOEffect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": false,
+        "localization_sid": "weapon_caliberChange",
+        "resolution_chain": [
+          "BPRUE_ChangeAmmoTypes762NATOEffect",
+          "ChangeAmmoTypesTemplate"
+        ],
+        "sources": [
+          "BPRUE_EffectPrototypes.cfg",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_ChangeAmmoTypesNo762Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": false,
+        "localization_sid": "weapon_caliberChange",
+        "resolution_chain": [
+          "BPRUE_ChangeAmmoTypesNo762Effect",
+          "ChangeAmmoTypesTemplate"
+        ],
+        "sources": [
+          "BPRUE_EffectPrototypes.cfg",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_ChangeAmmoTypesNo762NATOEffect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": false,
+        "localization_sid": "weapon_caliberChange",
+        "resolution_chain": [
+          "BPRUE_ChangeAmmoTypesNo762NATOEffect",
+          "ChangeAmmoTypesTemplate"
+        ],
+        "sources": [
+          "BPRUE_EffectPrototypes.cfg",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_ChangeCaliber762NATOEffect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": false,
+        "localization_sid": null,
+        "resolution_chain": [
+          "BPRUE_ChangeCaliber762NATOEffect"
+        ],
+        "sources": [
+          "BPRUE_EffectUIOverrides.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_DamagePos10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_damage",
+        "resolution_chain": [
+          "BPRUE_DamagePos10Effect",
+          "DamageTemplate"
+        ],
+        "sources": [
+          "BPRUE_EffectPrototypes.cfg",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_DamagePos15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_damage",
+        "resolution_chain": [
+          "BPRUE_DamagePos15Effect",
+          "DamageTemplate"
+        ],
+        "sources": [
+          "BPRUE_EffectPrototypes.cfg",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_DurabilityPerShotNeg10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_weapon_wear",
+        "resolution_chain": [
+          "BPRUE_DurabilityPerShotNeg10Effect",
+          "DurabilityPerShotTemplate"
+        ],
+        "sources": [
+          "BPRUE_EffectPrototypes.cfg",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_DurabilityPerShotNeg15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_weapon_wear",
+        "resolution_chain": [
+          "BPRUE_DurabilityPerShotNeg15Effect"
+        ],
+        "sources": [
+          "BPRUE_SniperEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_DurabilityPerShotNeg20Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_weapon_wear",
+        "resolution_chain": [
+          "BPRUE_DurabilityPerShotNeg20Effect",
+          "DurabilityPerShotTemplate"
+        ],
+        "sources": [
+          "BPRUE_EffectPrototypes.cfg",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_FireIntervalNeg10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_fire_rate",
+        "resolution_chain": [
+          "BPRUE_FireIntervalNeg10Effect"
+        ],
+        "sources": [
+          "BPRUE_EffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_FireIntervalNeg20Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_fire_rate",
+        "resolution_chain": [
+          "BPRUE_FireIntervalNeg20Effect"
+        ],
+        "sources": [
+          "BPRUE_EffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_FireIntervalPos5Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_fire_rate",
+        "resolution_chain": [
+          "BPRUE_FireIntervalPos5Effect"
+        ],
+        "sources": [
+          "BPRUE_EffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_MG_FireIntervalPenalty10Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_fire_rate",
+        "resolution_chain": [
+          "BPRUE_MG_FireIntervalPenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_MachineGunEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_MG_RecoilPenalty10Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_recoil",
+        "resolution_chain": [
+          "BPRUE_MG_RecoilPenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_MachineGunEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_MG_ReloadPenalty10Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_reload_speed",
+        "resolution_chain": [
+          "BPRUE_MG_ReloadPenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_MachineGunEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_MG_WeightPenalty10Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_weight",
+        "resolution_chain": [
+          "BPRUE_MG_WeightPenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_MachineGunEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Pistol_AimingTimePos20Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_aiming_speed",
+        "resolution_chain": [
+          "BPRUE_Pistol_AimingTimePos20Effect"
+        ],
+        "sources": [
+          "BPRUE_PistolEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Pistol_FireIntervalPos10Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_fire_rate",
+        "resolution_chain": [
+          "BPRUE_Pistol_FireIntervalPos10Effect"
+        ],
+        "sources": [
+          "BPRUE_PistolEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Pistol_RecoilPenalty10Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_recoil",
+        "resolution_chain": [
+          "BPRUE_Pistol_RecoilPenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_PistolEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Pistol_RecoilPenalty15Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_recoil",
+        "resolution_chain": [
+          "BPRUE_Pistol_RecoilPenalty15Effect",
+          "BPRUE_Pistol_RecoilPenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_PistolEffectPrototypes.cfg",
+          "BPRUE_PistolEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_RecoilPenalty20Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_recoil",
+        "resolution_chain": [
+          "BPRUE_RecoilPenalty20Effect",
+          "RecoilTemplate"
+        ],
+        "sources": [
+          "BPRUE_EffectPrototypes.cfg",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_RecoilPenalty25Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_recoil",
+        "resolution_chain": [
+          "BPRUE_RecoilPenalty25Effect",
+          "RecoilTemplate"
+        ],
+        "sources": [
+          "BPRUE_EffectPrototypes.cfg",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_ReloadingTimeNeg10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_reload_speed",
+        "resolution_chain": [
+          "BPRUE_ReloadingTimeNeg10Effect"
+        ],
+        "sources": [
+          "BPRUE_EffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_ReloadingTimeNeg20Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_reload_speed",
+        "resolution_chain": [
+          "BPRUE_ReloadingTimeNeg20Effect"
+        ],
+        "sources": [
+          "BPRUE_EffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SG_DistanceDropOffNeg15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_effective_range",
+        "resolution_chain": [
+          "BPRUE_SG_DistanceDropOffNeg15Effect",
+          "DistanceDropOffLengthTemplate"
+        ],
+        "sources": [
+          "BPRUE_ShotgunEffectPrototypes.cfg",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SG_FireIntervalPos10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_fire_rate",
+        "resolution_chain": [
+          "BPRUE_SG_FireIntervalPos10Effect"
+        ],
+        "sources": [
+          "BPRUE_ShotgunEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SG_FractionCount10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_pellet_count",
+        "resolution_chain": [
+          "BPRUE_SG_FractionCount10Effect",
+          "BPRUE_SG_FractionCount16Effect"
+        ],
+        "sources": [
+          "BPRUE_ShotgunEffectPrototypes.cfg",
+          "BPRUE_ShotgunEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SG_FractionCount12Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_pellet_count",
+        "resolution_chain": [
+          "BPRUE_SG_FractionCount12Effect",
+          "BPRUE_SG_FractionCount16Effect"
+        ],
+        "sources": [
+          "BPRUE_ShotgunEffectPrototypes.cfg",
+          "BPRUE_ShotgunEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SG_FractionCount16Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_pellet_count",
+        "resolution_chain": [
+          "BPRUE_SG_FractionCount16Effect"
+        ],
+        "sources": [
+          "BPRUE_ShotgunEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SG_RecoilPenalty15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_recoil",
+        "resolution_chain": [
+          "BPRUE_SG_RecoilPenalty15Effect"
+        ],
+        "sources": [
+          "BPRUE_ShotgunEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SG_WeightPos5Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_weight",
+        "resolution_chain": [
+          "BPRUE_SG_WeightPos5Effect"
+        ],
+        "sources": [
+          "BPRUE_ShotgunEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SMG_ChangeAmmoTypes919Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": false,
+        "localization_sid": "weapon_caliberChange",
+        "resolution_chain": [
+          "BPRUE_SMG_ChangeAmmoTypes919Effect",
+          "ChangeAmmoTypesTemplate"
+        ],
+        "sources": [
+          "BPRUE_SMGEffectPrototypes.cfg",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SMG_ChangeAmmoTypesNo918Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": false,
+        "localization_sid": "weapon_caliberChange",
+        "resolution_chain": [
+          "BPRUE_SMG_ChangeAmmoTypesNo918Effect",
+          "ChangeAmmoTypesTemplate"
+        ],
+        "sources": [
+          "BPRUE_SMGEffectPrototypes.cfg",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SMG_DamagePenalty10Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_damage",
+        "resolution_chain": [
+          "BPRUE_SMG_DamagePenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_SMGEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SMG_DamagePos10Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_damage",
+        "resolution_chain": [
+          "BPRUE_SMG_DamagePos10Effect"
+        ],
+        "sources": [
+          "BPRUE_SMGEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SMG_DamagePos15Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_damage",
+        "resolution_chain": [
+          "BPRUE_SMG_DamagePos15Effect"
+        ],
+        "sources": [
+          "BPRUE_SMGEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SMG_DurabilityPerShotPos10Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_weapon_wear",
+        "resolution_chain": [
+          "BPRUE_SMG_DurabilityPerShotPos10Effect"
+        ],
+        "sources": [
+          "BPRUE_SMGEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SMG_EffectiveRangePenalty10Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_effective_range",
+        "resolution_chain": [
+          "BPRUE_SMG_EffectiveRangePenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_SMGEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SMG_EffectiveRangePos10Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_effective_range",
+        "resolution_chain": [
+          "BPRUE_SMG_EffectiveRangePos10Effect"
+        ],
+        "sources": [
+          "BPRUE_SMGEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SMG_RecoilPenalty10Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_recoil",
+        "resolution_chain": [
+          "BPRUE_SMG_RecoilPenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_SMGEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SMG_RecoilPenalty20Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_recoil",
+        "resolution_chain": [
+          "BPRUE_SMG_RecoilPenalty20Effect"
+        ],
+        "sources": [
+          "BPRUE_SMGEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SMG_RecoilPos10Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_recoil",
+        "resolution_chain": [
+          "BPRUE_SMG_RecoilPos10Effect"
+        ],
+        "sources": [
+          "BPRUE_SMGEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SMG_RecoilPos15Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_recoil",
+        "resolution_chain": [
+          "BPRUE_SMG_RecoilPos15Effect"
+        ],
+        "sources": [
+          "BPRUE_SMGEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SMG_ReloadingTimePos10Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_reload_speed",
+        "resolution_chain": [
+          "BPRUE_SMG_ReloadingTimePos10Effect"
+        ],
+        "sources": [
+          "BPRUE_SMGEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SemiAutoOnlyEffect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": false,
+        "localization_sid": null,
+        "resolution_chain": [
+          "BPRUE_SemiAutoOnlyEffect"
+        ],
+        "sources": [
+          "BPRUE_EffectUIOverrides.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Shared_AimingTimePenalty10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_aiming_speed",
+        "resolution_chain": [
+          "BPRUE_Shared_AimingTimePenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_SharedSpecializationEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Shared_AimingTimePos8Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_aiming_speed",
+        "resolution_chain": [
+          "BPRUE_Shared_AimingTimePos8Effect"
+        ],
+        "sources": [
+          "BPRUE_SharedSpecializationEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Shared_ArmorPiercingPenalty20Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_armor_piercing",
+        "resolution_chain": [
+          "BPRUE_Shared_ArmorPiercingPenalty20Effect"
+        ],
+        "sources": [
+          "BPRUE_SharedSpecializationEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Shared_DamagePenalty10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_damage",
+        "resolution_chain": [
+          "BPRUE_Shared_DamagePenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_SharedSpecializationEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Shared_DispersionPenalty5Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_accuracy",
+        "resolution_chain": [
+          "BPRUE_Shared_DispersionPenalty5Effect"
+        ],
+        "sources": [
+          "BPRUE_SharedSpecializationEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Shared_DurabilityPenalty15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_durability",
+        "resolution_chain": [
+          "BPRUE_Shared_DurabilityPenalty15Effect"
+        ],
+        "sources": [
+          "BPRUE_SharedSpecializationEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Shared_DurabilityPerShotPenalty8Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_weapon_wear",
+        "resolution_chain": [
+          "BPRUE_Shared_DurabilityPerShotPenalty8Effect"
+        ],
+        "sources": [
+          "BPRUE_SharedSpecializationEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Shared_FireIntervalNeg12Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_fire_rate",
+        "resolution_chain": [
+          "BPRUE_Shared_FireIntervalNeg12Effect"
+        ],
+        "sources": [
+          "BPRUE_SharedSpecializationEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Shared_FireIntervalPenalty10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_fire_rate",
+        "resolution_chain": [
+          "BPRUE_Shared_FireIntervalPenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_SharedSpecializationEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Shared_FlatnessPenalty10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_effective_range",
+        "resolution_chain": [
+          "BPRUE_Shared_FlatnessPenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_SharedSpecializationEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Shared_RecoilPenalty10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_recoil",
+        "resolution_chain": [
+          "BPRUE_Shared_RecoilPenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_SharedSpecializationEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Shared_RecoilPenalty8Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_recoil",
+        "resolution_chain": [
+          "BPRUE_Shared_RecoilPenalty8Effect"
+        ],
+        "sources": [
+          "BPRUE_SharedSpecializationEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Shared_WeightDown12Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_weight",
+        "resolution_chain": [
+          "BPRUE_Shared_WeightDown12Effect"
+        ],
+        "sources": [
+          "BPRUE_SharedSpecializationEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Shared_WeightPenalty10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_weight",
+        "resolution_chain": [
+          "BPRUE_Shared_WeightPenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_SharedSpecializationEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Shared_WeightPenalty5Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_weight",
+        "resolution_chain": [
+          "BPRUE_Shared_WeightPenalty5Effect"
+        ],
+        "sources": [
+          "BPRUE_SharedSpecializationEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Sniper_AimingTimePenalty10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_aiming_speed",
+        "resolution_chain": [
+          "BPRUE_Sniper_AimingTimePenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_SniperEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Sniper_AimingTimePenalty15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_aiming_speed",
+        "resolution_chain": [
+          "BPRUE_Sniper_AimingTimePenalty15Effect"
+        ],
+        "sources": [
+          "BPRUE_SniperEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Sniper_AimingTimePos20Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_aiming_speed",
+        "resolution_chain": [
+          "BPRUE_Sniper_AimingTimePos20Effect"
+        ],
+        "sources": [
+          "BPRUE_SniperEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Sniper_DispersionPenalty15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_accuracy",
+        "resolution_chain": [
+          "BPRUE_Sniper_DispersionPenalty15Effect"
+        ],
+        "sources": [
+          "BPRUE_SniperEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Sniper_FireIntervalNeg15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_fire_rate",
+        "resolution_chain": [
+          "BPRUE_Sniper_FireIntervalNeg15Effect"
+        ],
+        "sources": [
+          "BPRUE_SniperEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Sniper_FireIntervalNeg25Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_fire_rate",
+        "resolution_chain": [
+          "BPRUE_Sniper_FireIntervalNeg25Effect"
+        ],
+        "sources": [
+          "BPRUE_SniperEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Sniper_FireIntervalNeg30Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_fire_rate",
+        "resolution_chain": [
+          "BPRUE_Sniper_FireIntervalNeg30Effect"
+        ],
+        "sources": [
+          "BPRUE_SniperEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Sniper_FireIntervalPenalty10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_fire_rate",
+        "resolution_chain": [
+          "BPRUE_Sniper_FireIntervalPenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_SniperEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Sniper_FireIntervalPenalty25Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_fire_rate",
+        "resolution_chain": [
+          "BPRUE_Sniper_FireIntervalPenalty25Effect"
+        ],
+        "sources": [
+          "BPRUE_SniperEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Sniper_IdleSwayXPos30Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_aiming_stability",
+        "resolution_chain": [
+          "BPRUE_Sniper_IdleSwayXPos30Effect"
+        ],
+        "sources": [
+          "BPRUE_SniperEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Sniper_IdleSwayYPos30Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_aiming_stability",
+        "resolution_chain": [
+          "BPRUE_Sniper_IdleSwayYPos30Effect"
+        ],
+        "sources": [
+          "BPRUE_SniperEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Sniper_RecoilPenalty10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_recoil",
+        "resolution_chain": [
+          "BPRUE_Sniper_RecoilPenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_SniperEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Sniper_RecoilPenalty15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_recoil",
+        "resolution_chain": [
+          "BPRUE_Sniper_RecoilPenalty15Effect"
+        ],
+        "sources": [
+          "BPRUE_SniperEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Sniper_RecoilPenalty20Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_recoil",
+        "resolution_chain": [
+          "BPRUE_Sniper_RecoilPenalty20Effect"
+        ],
+        "sources": [
+          "BPRUE_SniperEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Sniper_ShotRecoveryPos25Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_recoil_recovery",
+        "resolution_chain": [
+          "BPRUE_Sniper_ShotRecoveryPos25Effect"
+        ],
+        "sources": [
+          "BPRUE_SniperEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Sniper_ShotRecoveryPos30Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_recoil_recovery",
+        "resolution_chain": [
+          "BPRUE_Sniper_ShotRecoveryPos30Effect"
+        ],
+        "sources": [
+          "BPRUE_SniperEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Sniper_WeightPenalty10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_weight",
+        "resolution_chain": [
+          "BPRUE_Sniper_WeightPenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_SniperEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "ChangeAmmoTypes045Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": false,
+        "localization_sid": "weapon_caliberChange",
+        "resolution_chain": [
+          "ChangeAmmoTypes045Effect",
+          "ChangeAmmoTypesTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "ChangeAmmoTypes762Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": false,
+        "localization_sid": "weapon_caliberChange",
+        "resolution_chain": [
+          "ChangeAmmoTypes762Effect",
+          "ChangeAmmoTypesTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "ChangeAmmoTypes918Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": false,
+        "localization_sid": "weapon_caliberChange",
+        "resolution_chain": [
+          "ChangeAmmoTypes918Effect",
+          "ChangeAmmoTypesTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "ChangeAmmoTypesNo045Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": false,
+        "localization_sid": "weapon_caliberChange",
+        "resolution_chain": [
+          "ChangeAmmoTypesNo045Effect",
+          "ChangeAmmoTypesTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "ChangeAmmoTypesNo545Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": false,
+        "localization_sid": "weapon_caliberChange",
+        "resolution_chain": [
+          "ChangeAmmoTypesNo545Effect",
+          "ChangeAmmoTypesTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "ChangeAmmoTypesNo556Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": false,
+        "localization_sid": "weapon_caliberChange",
+        "resolution_chain": [
+          "ChangeAmmoTypesNo556Effect",
+          "ChangeAmmoTypesTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "ChangeAmmoTypesNo919Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": false,
+        "localization_sid": "weapon_caliberChange",
+        "resolution_chain": [
+          "ChangeAmmoTypesNo919Effect",
+          "ChangeAmmoTypesTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "ChangeAmmoTypesNo939Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": false,
+        "localization_sid": "weapon_caliberChange",
+        "resolution_chain": [
+          "ChangeAmmoTypesNo939Effect",
+          "ChangeAmmoTypesTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "ChangeCaliber045Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": false,
+        "localization_sid": null,
+        "resolution_chain": [
+          "ChangeCaliber045Effect"
+        ],
+        "sources": [
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "ChangeCaliber762Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": false,
+        "localization_sid": null,
+        "resolution_chain": [
+          "ChangeCaliber762Effect"
+        ],
+        "sources": [
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "ChangeCaliber918Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": false,
+        "localization_sid": null,
+        "resolution_chain": [
+          "ChangeCaliber918Effect"
+        ],
+        "sources": [
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "ChangeCaliber919Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": false,
+        "localization_sid": null,
+        "resolution_chain": [
+          "ChangeCaliber919Effect"
+        ],
+        "sources": [
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "ChangeFireTypeEffectBurstAuto",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": false,
+        "localization_sid": null,
+        "resolution_chain": [
+          "ChangeFireTypeEffectBurstAuto"
+        ],
+        "sources": [
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "ChangeFireTypeEffectSemiAuto",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": false,
+        "localization_sid": null,
+        "resolution_chain": [
+          "ChangeFireTypeEffectSemiAuto"
+        ],
+        "sources": [
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "CoverPiercingPos20Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": false,
+        "localization_sid": null,
+        "resolution_chain": [
+          "CoverPiercingPos20Effect",
+          "CoverPiercingTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "CoverPiercingPos30Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": false,
+        "localization_sid": null,
+        "resolution_chain": [
+          "CoverPiercingPos30Effect",
+          "CoverPiercingTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "DamagePos15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": false,
+        "localization_sid": "weapon_damage",
+        "resolution_chain": [
+          "DamagePos15Effect",
+          "DamageTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "DamagePos30Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_damage",
+        "resolution_chain": [
+          "DamagePos30Effect",
+          "DamageTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "DispersionNeg40Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_reductionSpread",
+        "resolution_chain": [
+          "DispersionNeg40Effect",
+          "DispersionTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "DispersionPos10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_reductionSpread",
+        "resolution_chain": [
+          "DispersionPos10Effect",
+          "DispersionTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "DispersionPos15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_reductionSpread",
+        "resolution_chain": [
+          "DispersionPos15Effect",
+          "DispersionTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "DispersionPos20Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_reductionSpread",
+        "resolution_chain": [
+          "DispersionPos20Effect",
+          "DispersionTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "DispersionPos25Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_reductionSpread",
+        "resolution_chain": [
+          "DispersionPos25Effect",
+          "DispersionTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "DispersionPos30Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_reductionSpread",
+        "resolution_chain": [
+          "DispersionPos30Effect",
+          "DispersionTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "DistanceDropOffLengthPos10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_flatness",
+        "resolution_chain": [
+          "DistanceDropOffLengthPos10Effect",
+          "DistanceDropOffLengthTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "DistanceDropOffLengthPos20Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_effective_range",
+        "resolution_chain": [
+          "DistanceDropOffLengthPos20Effect"
+        ],
+        "sources": [
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "DurabilityPerShotPos20Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_wearingExternal",
+        "resolution_chain": [
+          "DurabilityPerShotPos20Effect",
+          "DurabilityPerShotTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "DurabilityPos10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_wearing",
+        "resolution_chain": [
+          "DurabilityPos10Effect",
+          "DurabilityTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "DurabilityPos15Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_wearing",
+        "resolution_chain": [
+          "DurabilityPos15Effect",
+          "DurabilityTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "DurabilityPos20Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_wearing",
+        "resolution_chain": [
+          "DurabilityPos20Effect",
+          "DurabilityTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "FireDistancePos15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_range",
+        "resolution_chain": [
+          "FireDistancePos15Effect",
+          "FireDistanceTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "FlatnessUp10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_effective_range",
+        "resolution_chain": [
+          "FlatnessUp10Effect"
+        ],
+        "sources": [
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "FlatnessUp15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_effective_range",
+        "resolution_chain": [
+          "FlatnessUp15Effect"
+        ],
+        "sources": [
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "IdleSwayXPos15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_aimAccuracy",
+        "resolution_chain": [
+          "IdleSwayXPos15Effect",
+          "IdleSwayXTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "IdleSwayXPos20Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_aimAccuracy",
+        "resolution_chain": [
+          "IdleSwayXPos20Effect",
+          "IdleSwayXTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "IdleSwayYPos15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": false,
+        "localization_sid": "weapon_aimAccuracy",
+        "resolution_chain": [
+          "IdleSwayYPos15Effect",
+          "IdleSwayYTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "IdleSwayYPos20Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": false,
+        "localization_sid": "weapon_aimAccuracy",
+        "resolution_chain": [
+          "IdleSwayYPos20Effect",
+          "IdleSwayYTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "MaxDispersionPos15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_reductionSpread",
+        "resolution_chain": [
+          "MaxDispersionPos15Effect",
+          "MaxDispersionTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "ProjectileSpeedPos10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_velocity",
+        "resolution_chain": [
+          "ProjectileSpeedPos10Effect",
+          "ProjectileSpeedTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "ProjectileSpeedPos20Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_velocity",
+        "resolution_chain": [
+          "ProjectileSpeedPos20Effect",
+          "ProjectileSpeedTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "ProjectileSpeedPos25Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_velocity",
+        "resolution_chain": [
+          "ProjectileSpeedPos25Effect",
+          "ProjectileSpeedTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "RecoilDown10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_recoil",
+        "resolution_chain": [
+          "RecoilDown10Effect"
+        ],
+        "sources": [
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "RecoilDown15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_recoil",
+        "resolution_chain": [
+          "RecoilDown15Effect"
+        ],
+        "sources": [
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "RecoilNeg15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_reductionImpact",
+        "resolution_chain": [
+          "RecoilNeg15Effect",
+          "RecoilTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "RecoilPos10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_reductionImpact",
+        "resolution_chain": [
+          "RecoilPos10Effect",
+          "RecoilTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "RecoilPos15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_reductionImpact",
+        "resolution_chain": [
+          "RecoilPos15Effect",
+          "RecoilTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "RecoilPos20Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_reductionImpact",
+        "resolution_chain": [
+          "RecoilPos20Effect",
+          "RecoilTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "RecoilPos5Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_reductionImpact",
+        "resolution_chain": [
+          "RecoilPos5Effect",
+          "RecoilTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "ShotRecoveryPos10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_aimReturn",
+        "resolution_chain": [
+          "ShotRecoveryPos10Effect",
+          "ShotRecoveryTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "ShotRecoveryPos20Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_aimReturn",
+        "resolution_chain": [
+          "ShotRecoveryPos20Effect",
+          "ShotRecoveryTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "WeightDown15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_weight",
+        "resolution_chain": [
+          "WeightDown15Effect"
+        ],
+        "sources": [
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "WeightPos15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_reductionWeight",
+        "resolution_chain": [
+          "WeightPos15Effect",
+          "WeightTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      }
+    ]
   },
   "unique_missing_upgrade_sid_count": 0,
   "missing_upgrade_sids": {},
