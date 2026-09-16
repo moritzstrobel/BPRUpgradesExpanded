@@ -62,33 +62,32 @@ def _parse_effects(path: Path, source: str) -> dict[str, dict]:
     if not path.exists(): return {}
     result = {}
     for sid, header, body in PROTOTYPE_RE.findall(path.read_text(encoding="utf-8")):
-        ref = REFKEY_RE.search(header)
-        show = SHOW_RE.search(body)
-        loc = EFFECT_SID_RE.search(body)
+        ref = REFKEY_RE.search(header); show = SHOW_RE.search(body); loc = EFFECT_SID_RE.search(body)
         result[sid] = {"sid": sid, "source": source, "refkey": ref.group(1) if ref else None, "show": show.group(1).lower() == "true" if show else None, "localization_sid": loc.group(1) if loc else None}
     return result
 
 
 def _effect_catalog() -> dict[str, dict]:
-    # Later layers override earlier metadata, matching the effective runtime view.
     catalog = _parse_effects(VANILLA_EFFECTS, "BaseGame")
-    for path in sorted(BPRUE_EFFECT_DIR.glob("*.cfg")):
-        catalog.update(_parse_effects(path, path.name))
+    for path in sorted(BPRUE_EFFECT_DIR.glob("*.cfg")): catalog.update(_parse_effects(path, path.name))
     catalog.update(_parse_effects(VANILLA_UI_PATCH, VANILLA_UI_PATCH.name))
     return catalog
 
 
 def _effective_effect(sid: str, catalog: dict[str, dict]) -> dict:
-    current = sid; seen = set(); show = None; localization_sid = None; chain = []
+    current = sid; seen = set(); show = None; localization_sid = None; chain = []; sources = []
     while current and current not in seen:
         seen.add(current); entry = catalog.get(current)
         if not entry: break
-        chain.append(current)
+        chain.append(current); sources.append(entry["source"])
         if show is None and entry["show"] is not None: show = entry["show"]
         if localization_sid is None and entry["localization_sid"]: localization_sid = entry["localization_sid"]
-        ref = entry["refkey"]
-        current = ref if ref and ref != "[0]" else None
-    return {"resolved": bool(chain), "chain": chain, "visible": show is not False, "localization_sid": localization_sid}
+        ref = entry["refkey"]; current = ref if ref and ref != "[0]" else None
+    return {"resolved": bool(chain), "chain": chain, "sources": sources, "visible": show is not False, "localization_sid": localization_sid}
+
+
+def _is_bprue_localization(localization_sid: str) -> bool:
+    return localization_sid.lower().startswith("bprue_")
 
 
 def audit_referenced_effects(models: dict[str, object], localization_sids: set[str]) -> dict:
@@ -106,10 +105,15 @@ def audit_referenced_effects(models: dict[str, object], localization_sids: set[s
             loc = effective["localization_sid"]
             if not loc:
                 status = "visible_without_localization"; errors.append(f"{sid}: visible effect referenced by {', '.join(scopes)} has no effective LocalizationSID")
-            elif effect_asset_sid(loc) not in localization_sids:
-                status = "missing_localization_asset"; errors.append(f"{sid}: visible effect references missing localization {effect_asset_sid(loc)} ({', '.join(scopes)})")
-        rows.append({"sid": sid, "scopes": scopes, "visible": effective["visible"], "localization_sid": effective["localization_sid"], "resolution_chain": effective["chain"], "status": status})
-    return {"referenced_effect_count": len(rows), "visible_effect_count": sum(row["visible"] for row in rows if row["status"] != "unresolved"), "error_count": len(errors), "errors": errors, "effects": rows}
+            elif _is_bprue_localization(loc) and effect_asset_sid(loc) not in localization_sids:
+                # Our JSON files only contain BPRUE-owned localization. Vanilla
+                # LocalizationSIDs (weapon_*) are supplied by the game and are not
+                # expected to exist in this repository.
+                status = "missing_bprue_localization_asset"; errors.append(f"{sid}: visible BPRUE effect references missing localization {effect_asset_sid(loc)} ({', '.join(scopes)})")
+            elif not _is_bprue_localization(loc):
+                status = "vanilla_localization"
+        rows.append({"sid": sid, "scopes": scopes, "visible": effective["visible"], "localization_sid": effective["localization_sid"], "resolution_chain": effective["chain"], "sources": effective["sources"], "status": status})
+    return {"referenced_effect_count": len(rows), "visible_effect_count": sum(row["visible"] for row in rows if row["status"] != "unresolved"), "vanilla_localization_count": sum(row["status"] == "vanilla_localization" for row in rows), "error_count": len(errors), "errors": errors, "effects": rows}
 
 
 def main() -> None:
@@ -125,9 +129,9 @@ def main() -> None:
     report = {"localization_sid_count": len(localization_sids), "scopes": scopes, "effects": effects, "unique_missing_upgrade_sid_count": len(missing_by_sid), "missing_upgrade_sids": {sid: affected for sid, affected in sorted(missing_by_sid.items())}, "error_count": len(missing_by_sid) + effects["error_count"]}
     REPORT_DIR.mkdir(parents=True, exist_ok=True); report_path = REPORT_DIR / "localization_audit.json"; report_path.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
-    print("Localization audit"); print(f"Indexed localization SIDs: {len(localization_sids)}")
+    print("Localization audit"); print(f"Indexed BPRUE localization SIDs: {len(localization_sids)}")
     for scope, audit in scopes.items(): print(f"  {scope:<10} upgrades={audit['upgrade_count']} | TextSIDs={audit['text_sid_count']} | HintSIDs={audit['hint_sid_count']} | missing={audit['missing_count']}")
-    print(f"  Effects    referenced={effects['referenced_effect_count']} | visible={effects['visible_effect_count']} | errors={effects['error_count']}")
+    print(f"  Effects    referenced={effects['referenced_effect_count']} | visible={effects['visible_effect_count']} | vanilla-localized={effects['vanilla_localization_count']} | errors={effects['error_count']}")
     print(f"Unique missing upgrade SIDs: {len(missing_by_sid)}"); print(f"Wrote {report_path}")
 
     errors = [f"missing upgrade localization: {sid} ({', '.join(affected)})" for sid, affected in sorted(missing_by_sid.items())] + effects["errors"]
