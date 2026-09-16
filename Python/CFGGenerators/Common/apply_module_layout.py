@@ -11,12 +11,34 @@ from vanilla_upgrade_layout import (
     vanilla_general_setup_upgrades,
 )
 
+# Every non-standalone group listed here is layout-managed.  In particular the
+# shared Module* groups must be present: otherwise they fall through unchanged
+# and retain their preset H/V positions, causing several logical groups to pile
+# up in the same visible column.
 GROUP_ORDER = {
-    "AR": {"Body": ["Caliber", "FireControl", "Reload"], "Barrel": ["FireRate"], "Stock": ["Stock"]},
-    "SMG": {"Body": ["Readiness", "Reload"], "Barrel": ["Action"], "Stock": ["Stock"]},
-    "SG": {"Body": ["Action", "Handling"], "Barrel": ["Pattern"]},
-    "Pistol": {"Body": ["Handling"], "Barrel": ["Action", "Signature"]},
-    "Sniper": {"Body": ["Marksman"], "Barrel": ["Ballistics", "Action", "Signature"], "Stock": ["Stock"]},
+    "AR": {
+        "Body": ["Caliber", "FireControl", "Reload", "ModuleReliability"],
+        "Barrel": ["FireRate", "ModulePrecision", "ModuleAction", "ModuleBallistics"],
+        "Stock": ["Stock"],
+    },
+    "SMG": {
+        "Body": ["Readiness", "Reload", "ModuleHandling"],
+        "Barrel": ["Action", "ModuleAction", "ModuleBallistics", "ModuleRangeProfile"],
+        "Stock": ["Stock"],
+    },
+    "SG": {
+        "Body": ["Action", "Handling", "ModuleHandling", "ModuleReliability"],
+        "Barrel": ["Pattern", "ModuleRangeProfile"],
+    },
+    "Pistol": {
+        "Body": ["Handling", "ModuleHandling"],
+        "Barrel": ["Action", "Signature", "ModulePrecision", "ModuleBallistics"],
+    },
+    "Sniper": {
+        "Body": ["Marksman", "ModuleReliability"],
+        "Barrel": ["Ballistics", "Action", "Signature", "ModulePrecision", "ModuleBallistics", "ModuleRangeProfile"],
+        "Stock": ["Stock"],
+    },
 }
 CLASS_ORDER = ("AR", "SMG", "SG", "Pistol", "Sniper")
 VERTICALS = ("Top", "Down", None)
