@@ -26,7 +26,7 @@ HANDLING = {
     "stabilized": (2200, ["RecoilPos15Effect", "ShotRecoveryPos20Effect", "AimingTimeNeg10Effect"]),
 }
 SIGNATURES = {
-    "quick_response": (2600, ["AimingTimePos20Effect", "BPRUE_ReloadingTimeNeg20Effect", "WeightPos15Effect", "BPRUE_Pistol_RecoilPenalty15Effect", "BPRUE_DurabilityPerShotNeg10Effect"]),
+    "quick_response": (2600, ["BPRUE_Pistol_AimingTimePos20Effect", "BPRUE_ReloadingTimeNeg20Effect", "WeightPos15Effect", "BPRUE_Pistol_RecoilPenalty15Effect", "BPRUE_DurabilityPerShotNeg10Effect"]),
     "match_barrel": (3200, ["DispersionPos30Effect", "DistanceDropOffLengthPos20Effect", "ProjectileSpeedPos20Effect", "AimingTimeNeg10Effect"]),
     "automatic_sear": (3800, ["ChangeFireTypeEffectBurstAuto", "BPRUE_Pistol_RecoilPenalty15Effect", "BPRUE_DurabilityPerShotNeg20Effect"]),
     "hunting_cylinder": (4500, ["ArmorPiercingPos20Effect", "ProjectileSpeedPos20Effect", "BPRUE_Pistol_FireIntervalPos10Effect"]),
@@ -109,6 +109,18 @@ BPRUE_Pistol_RecoilPenalty15Effect : struct.begin {refkey=BPRUE_Pistol_RecoilPen
    SID = BPRUE_Pistol_RecoilPenalty15Effect
    ValueMin = 15%
    ValueMax = 15%
+struct.end
+
+BPRUE_Pistol_AimingTimePos20Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Pistol_AimingTimePos20Effect
+   Type = EEffectType::AimingTime
+   LocalizationSID = bprue_aiming_speed
+   ValueMin = -20%
+   ValueMax = -20%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
 struct.end
 
 BPRUE_Pistol_FireIntervalPos10Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
