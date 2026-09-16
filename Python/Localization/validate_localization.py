@@ -12,6 +12,7 @@ CFG_GENERATORS = PYTHON_ROOT / "CFGGenerators"
 LOCALIZATION_FILES = (
     LOCALIZATION_DIR / "Blueprint_Localization.json",
     LOCALIZATION_DIR / "Weapon_Module_Localization.json",
+    LOCALIZATION_DIR / "Shared_Specialization_Localization.json",
     LOCALIZATION_DIR / "Stock_Localization.json",
     LOCALIZATION_DIR / "Effect_Localization.json",
 )
