@@ -1,0 +1,49 @@
+{
+  "localization_sid_count": 184,
+  "scopes": {
+    "BaseGame": {
+      "upgrade_count": 1241,
+      "text_sid_count": 84,
+      "hint_sid_count": 84,
+      "missing_count": 0,
+      "missing_sids": []
+    },
+    "DLC1": {
+      "upgrade_count": 217,
+      "text_sid_count": 46,
+      "hint_sid_count": 46,
+      "missing_count": 0,
+      "missing_sids": []
+    },
+    "Deluxe": {
+      "upgrade_count": 102,
+      "text_sid_count": 61,
+      "hint_sid_count": 61,
+      "missing_count": 0,
+      "missing_sids": []
+    },
+    "PreOrder": {
+      "upgrade_count": 17,
+      "text_sid_count": 17,
+      "hint_sid_count": 17,
+      "missing_count": 0,
+      "missing_sids": []
+    },
+    "Ultimate": {
+      "upgrade_count": 63,
+      "text_sid_count": 47,
+      "hint_sid_count": 47,
+      "missing_count": 0,
+      "missing_sids": []
+    }
+  },
+  "effects": {
+    "visible_effect_count": 69,
+    "localized_effect_count": 69,
+    "error_count": 0,
+    "errors": []
+  },
+  "unique_missing_upgrade_sid_count": 0,
+  "missing_upgrade_sids": {},
+  "error_count": 0
+}
