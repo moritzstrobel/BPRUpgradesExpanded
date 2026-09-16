@@ -8,7 +8,7 @@ from vanilla_upgrade_layout import (
     MAX_VISIBLE_HORIZONTAL_POSITION,
     available_target_parts,
     dlc_general_setup_upgrades,
-    effective_vanilla_modifications,
+    effective_modifications_for_scope,
     vanilla_general_setup_upgrades,
 )
 
@@ -43,7 +43,7 @@ def _setup_upgrades(content_pack: str | None) -> dict[str, list[str]]:
 
 
 def _vanilla_occupancy(setup_sid: str, content_pack: str | None) -> dict[tuple[str, int], int]:
-    mods = effective_vanilla_modifications(); result = defaultdict(int)
+    mods = effective_modifications_for_scope(content_pack); result = defaultdict(int)
     for sid in _setup_upgrades(content_pack).get(setup_sid, []):
         mod = mods.get(sid)
         if mod:
