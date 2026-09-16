@@ -7,6 +7,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 LOCALIZATION_FILES = (
     os.path.join(SCRIPT_DIR, "Blueprint_Localization.json"),
     os.path.join(SCRIPT_DIR, "Weapon_Module_Localization.json"),
+    os.path.join(SCRIPT_DIR, "MachineGun_Localization.json"),
     os.path.join(SCRIPT_DIR, "Shared_Specialization_Localization.json"),
     os.path.join(SCRIPT_DIR, "Stock_Localization.json"),
     os.path.join(SCRIPT_DIR, "Effect_Localization.json"),
