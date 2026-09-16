@@ -87,7 +87,7 @@ def direct_array_values(block: list[str], name: str) -> list[str]:
 
 def refkey(block: list[str] | None) -> str | None:
     if not block: return None
-    match = re.search(r"(?:^|;)refkey=([^;}]+)", block[0])
+    match = re.search(r"(?:\{|;)refkey=([^;}]+)", block[0])
     return match.group(1).strip() if match else None
 
 
