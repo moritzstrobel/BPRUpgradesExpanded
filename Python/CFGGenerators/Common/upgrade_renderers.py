@@ -11,6 +11,7 @@ TECHNICIAN_SIDS = (
 )
 
 ICON_ROOT = "/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons"
+BPRUE_MODULE_IMAGE = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/T_Module_Base.T_Module_Base'"
 
 
 def _vanilla_icon(name: str) -> str:
@@ -84,7 +85,7 @@ def _render_upgrade(upgrade: UpgradeDefinition, fallback_template: str | None = 
     lines = [
         f"{upgrade.sid} : struct.begin {{refkey={template}}}",
         f"   SID = {upgrade.sid}", f"   Text = {upgrade.text_sid}", f"   Hint = {upgrade.hint_sid}",
-        f"   Image = {upgrade.image}", f"   Icon = {icon}", f"   BaseCost = {upgrade.cost}",
+        f"   Image = {BPRUE_MODULE_IMAGE}", f"   Icon = {icon}", f"   BaseCost = {upgrade.cost}",
     ]
     if upgrade.horizontal_position is not None:
         lines.append(f"   HorizontalPosition = {upgrade.horizontal_position}")
