@@ -64,9 +64,7 @@ def direct_scalar(block: list[str], name: str) -> str | None:
 
 
 def direct_array_values(block: list[str], name: str) -> list[str]:
-    values = []
-    in_array = False
-    depth = 0
+    values = []; in_array = False; depth = 0
     start = re.compile(rf"\s*{re.escape(name)}\s*:\s*struct\.begin")
     value = re.compile(r"\s*\[\d+\]\s*=\s*(.+?)\s*$")
     for line in block[1:-1]:
@@ -201,8 +199,7 @@ def candidate_evidence(setup_sid, weapon_blocks, setup_blocks, setup_users) -> d
 
 
 def classify_candidate(setup_sid: str, evidence: dict) -> tuple[str, list[str]]:
-    reasons = []
-    lower_sid = setup_sid.lower()
+    reasons = []; lower_sid = setup_sid.lower()
     for marker in UNIQUE_NAME_MARKERS:
         if marker in lower_sid: reasons.append(f"sid_marker:{marker}")
     if evidence["same_sid_weapon_concrete_gun_parent"]:
@@ -232,39 +229,93 @@ def resolve_setup_base(sid: str, local_blocks: dict[str, list[str]], vanilla_blo
     return None
 
 
-def discover_dlc(configured: dict[str, dict], vanilla_setup_blocks: dict[str, list[str]]) -> dict:
+def resolve_dlc_item_base(setup_sid: str, dlc_item_blocks: dict[str, list[str]], vanilla_weapon_blocks: dict[str, list[str]], bases: dict[str, dict]) -> dict | None:
+    """Resolve a DLC GeneralSetup through the DLC ItemPrototype that uses it.
+
+    DLC weapons may introduce a new GeneralSetup that does not inherit a vanilla
+    GeneralSetup. Their ItemPrototype can still inherit a vanilla WeaponPrototype,
+    which gives us the authoritative BPRUE family mapping.
+    """
+    combined_blocks = {**vanilla_weapon_blocks, **dlc_item_blocks}
+    for weapon_sid, block in dlc_item_blocks.items():
+        if direct_scalar(block, "GeneralWeaponSetup") != setup_sid:
+            continue
+        chain = inheritance_chain(weapon_sid, combined_blocks)
+        base_weapon_sid = next((parent for parent in chain if parent in bases), None)
+        if not base_weapon_sid:
+            continue
+        base = bases[base_weapon_sid]
+        return {
+            "weapon_sid": weapon_sid,
+            "base_weapon_sid": base_weapon_sid,
+            "family": base["family"],
+            "class": base["class"],
+            "inheritance_chain": chain,
+        }
+    return None
+
+
+def discover_dlc(configured: dict[str, dict], vanilla_setup_blocks: dict[str, list[str]], vanilla_weapon_blocks: dict[str, list[str]]) -> dict:
     vanilla_upgrade_sids = set(top_level_blocks(VANILLA_UPGRADES.read_text(encoding="utf-8"))) if VANILLA_UPGRADES.exists() else set()
-    packs = {}
-    all_entries = []
+    bases = base_weapon_index(configured)
+    packs = {}; all_entries = []
     setup_files = sorted(DLC_ROOT.glob("*/WeaponData/WeaponGeneralSetupPrototypes.cfg")) if DLC_ROOT.exists() else []
     for path in setup_files:
         pack = path.relative_to(DLC_ROOT).parts[0]
         blocks = top_level_blocks(path.read_text(encoding="utf-8"))
+        item_path = DLC_ROOT / pack / "ItemPrototypes.cfg"
+        item_blocks = top_level_blocks(item_path.read_text(encoding="utf-8")) if item_path.exists() else {}
         entries = []
         for sid, block in sorted(blocks.items()):
             if not sid.startswith("Gun"): continue
-            base = resolve_setup_base(sid, blocks, vanilla_setup_blocks, configured)
+            setup_base = resolve_setup_base(sid, blocks, vanilla_setup_blocks, configured)
+            item_base = None if setup_base else resolve_dlc_item_base(sid, item_blocks, vanilla_weapon_blocks, bases)
             upgrade_sids = direct_array_values(block, "UpgradePrototypeSIDs")
             unknown_upgrades = sorted(set(upgrade_sids) - vanilla_upgrade_sids)
+            if setup_base:
+                weapon_class = setup_base["class"]; base_family = setup_base["family"]
+                base_setup_sid = setup_base["general_setup_sid"]; base_weapon_sid = None
+                setup_chain = setup_base["inheritance_chain"]; weapon_sid = None; weapon_chain = []
+                resolution = "general_setup_inheritance"
+            elif item_base:
+                weapon_class = item_base["class"]; base_family = item_base["family"]
+                base_setup_sid = configured.get(next((key for key, value in configured.items() if value["family"] == base_family and value["class"] == weapon_class), ""), {}).get("general_setup_sid")
+                base_weapon_sid = item_base["base_weapon_sid"]
+                setup_chain = inheritance_chain(sid, {**vanilla_setup_blocks, **blocks})
+                weapon_sid = item_base["weapon_sid"]; weapon_chain = item_base["inheritance_chain"]
+                resolution = "item_prototype_inheritance"
+            else:
+                weapon_class = class_from_sid(sid); base_family = None; base_setup_sid = None; base_weapon_sid = None
+                setup_chain = inheritance_chain(sid, {**vanilla_setup_blocks, **blocks})
+                weapon_sid = None; weapon_chain = []; resolution = None
             entry = {
                 "content_pack": pack,
+                "output_scope": f"DLCGameData/{pack}",
                 "general_setup_sid": sid,
+                "weapon_sid": weapon_sid,
                 "refkey": refkey(block),
                 "refurl": refurl(block),
-                "class": base["class"] if base else class_from_sid(sid),
-                "base_family": base["family"] if base else None,
-                "base_general_setup_sid": base["general_setup_sid"] if base else None,
-                "inheritance_chain": base["inheritance_chain"] if base else inheritance_chain(sid, {**vanilla_setup_blocks, **blocks}),
+                "class": weapon_class,
+                "base_family": base_family,
+                "base_general_setup_sid": base_setup_sid,
+                "base_weapon_sid": base_weapon_sid,
+                "inheritance_chain": setup_chain,
+                "weapon_inheritance_chain": weapon_chain,
+                "resolution": resolution,
                 "upgrade_prototype_count": len(upgrade_sids),
                 "unknown_upgrade_prototype_sids": unknown_upgrades,
-                "status": "resolved_base" if base else "unknown_base",
+                "status": "resolved_base" if base_family else "unknown_base",
                 "source": str(path.relative_to(PYTHON_ROOT)),
+                "item_source": str(item_path.relative_to(PYTHON_ROOT)) if item_path.exists() else None,
             }
             entries.append(entry); all_entries.append(entry)
         packs[pack] = {
             "source": str(path.relative_to(PYTHON_ROOT)),
+            "item_source": str(item_path.relative_to(PYTHON_ROOT)) if item_path.exists() else None,
+            "output_scope": f"DLCGameData/{pack}",
             "candidate_general_setups": len(entries),
             "resolved_bases": sum(e["status"] == "resolved_base" for e in entries),
+            "resolved_via_items": sum(e["resolution"] == "item_prototype_inheritance" for e in entries),
             "unknown_bases": sum(e["status"] == "unknown_base" for e in entries),
             "setups_with_unknown_upgrades": sum(bool(e["unknown_upgrade_prototype_sids"]) for e in entries),
             "weapons": entries,
@@ -274,6 +325,7 @@ def discover_dlc(configured: dict[str, dict], vanilla_setup_blocks: dict[str, li
             "content_packs": len(packs),
             "candidate_general_setups": len(all_entries),
             "resolved_bases": sum(e["status"] == "resolved_base" for e in all_entries),
+            "resolved_via_items": sum(e["resolution"] == "item_prototype_inheritance" for e in all_entries),
             "unknown_bases": sum(e["status"] == "unknown_base" for e in all_entries),
             "setups_with_unknown_upgrades": sum(bool(e["unknown_upgrade_prototype_sids"]) for e in all_entries),
             "unknown_upgrade_references": sum(len(e["unknown_upgrade_prototype_sids"]) for e in all_entries),
@@ -289,8 +341,7 @@ def build_report() -> dict:
     setup_users = weapons_by_general_setup(weapon_blocks); bases = base_weapon_index(configured)
     variants = discovered_variant_setups(weapon_blocks, bases)
     base_covered_setups = set(configured); unique_covered_setups = set(unique_covered); out_of_scope_setups = set(out_of_scope)
-    vanilla_setups = ({sid for sid in setup_blocks if sid.startswith("Gun") and class_from_sid(sid) is not None}
-                      | set(variants) | out_of_scope_setups)
+    vanilla_setups = ({sid for sid in setup_blocks if sid.startswith("Gun") and class_from_sid(sid) is not None} | set(variants) | out_of_scope_setups)
     buckets = {"suspected_missing_base_weapons": [], "suspected_unique_or_special": [], "needs_manual_review": []}
     covered_unique_entries = []; out_of_scope_entries = []
 
@@ -327,7 +378,7 @@ def build_report() -> dict:
     variant_counts = Counter(x["class"] or "Unknown" for x in buckets["suspected_unique_or_special"])
     review_counts = Counter(x["class"] or "Unknown" for x in buckets["needs_manual_review"])
     unique_counts = Counter(x["class"] or "Unknown" for x in covered_unique_entries)
-    dlc = discover_dlc(configured, setup_blocks)
+    dlc = discover_dlc(configured, setup_blocks, weapon_blocks)
     return {
         "sources": {"weapon_prototypes": str(VANILLA_WEAPONS.relative_to(PYTHON_ROOT)),
                     "general_setups": str(VANILLA_GENERAL_SETUPS.relative_to(PYTHON_ROOT)),
@@ -338,7 +389,8 @@ def build_report() -> dict:
         "rules": {
             "candidate_scope": "Supported-class base-game GeneralSetups plus inherited variants and explicit out-of-scope entries; DLC GeneralSetups are audited separately.",
             "variant_discovery": "WeaponPrototype inheritance is authoritative for assigning unusual base-game Unique GeneralSetup names to a BPRUE base family/class.",
-            "dlc_discovery": "Every DLCGameData/*/WeaponData/WeaponGeneralSetupPrototypes.cfg is scanned independently and its GeneralSetup refkey chain is resolved back into a configured BPRUE base family.",
+            "dlc_discovery": "DLC GeneralSetup inheritance is resolved first. If it does not reach a configured BPRUE family, the matching DLC ItemPrototype is resolved through its WeaponPrototype inheritance chain.",
+            "dlc_output_scope": "DLC discoveries retain their DLCGameData/<pack> output scope so future generated patches are not mixed into base-game GameData output.",
             "dlc_upgrade_audit": "DLC UpgradePrototypeSIDs are checked against base-game UpgradePrototypes.cfg; unknown references are reported for follow-up.",
             "base_covered": "GeneralSetup SID is present in a BPRUE base-family generator config.",
             "unique_covered": "GeneralSetup SID is present in Common/unique_weapons.json under uniques.",
@@ -373,9 +425,9 @@ def print_entries(title, entries, show_reasons=False):
 
 def print_dlc_report(dlc: dict, show_variants: bool):
     s = dlc["summary"]
-    print(f"\nDLC candidates={s['candidate_general_setups']} | packs={s['content_packs']} | resolved bases={s['resolved_bases']} | unknown bases={s['unknown_bases']} | setups with unknown upgrades={s['setups_with_unknown_upgrades']} | unknown upgrade refs={s['unknown_upgrade_references']}")
+    print(f"\nDLC candidates={s['candidate_general_setups']} | packs={s['content_packs']} | resolved bases={s['resolved_bases']} | via items={s['resolved_via_items']} | unknown bases={s['unknown_bases']} | setups with unknown upgrades={s['setups_with_unknown_upgrades']} | unknown upgrade refs={s['unknown_upgrade_references']}")
     for pack, data in dlc["packs"].items():
-        print(f"  {pack:<10} candidates={data['candidate_general_setups']} | resolved={data['resolved_bases']} | unknown bases={data['unknown_bases']} | unknown upgrades={data['setups_with_unknown_upgrades']}")
+        print(f"  {pack:<10} candidates={data['candidate_general_setups']} | resolved={data['resolved_bases']} | via items={data['resolved_via_items']} | unknown bases={data['unknown_bases']} | unknown upgrades={data['setups_with_unknown_upgrades']}")
     unknown_bases = [e for p in dlc["packs"].values() for e in p["weapons"] if e["status"] == "unknown_base"]
     unknown_upgrades = [e for p in dlc["packs"].values() for e in p["weapons"] if e["unknown_upgrade_prototype_sids"]]
     print_entries("DLC GeneralSetups with unknown base", unknown_bases)
@@ -389,7 +441,10 @@ def print_dlc_report(dlc: dict, show_variants: bool):
         print("\nResolved DLC variants:")
         for pack in dlc["packs"].values():
             for entry in pack["weapons"]:
-                if entry["status"] == "resolved_base":
+                if entry["status"] != "resolved_base": continue
+                if entry["resolution"] == "item_prototype_inheritance":
+                    print(f"  [{entry['content_pack']:<10}] {entry['general_setup_sid']} -> {entry['weapon_sid']} -> {entry['base_weapon_sid']} -> {entry['base_family']} [item inheritance]")
+                else:
                     print(f"  [{entry['content_pack']:<10}] {entry['general_setup_sid']} -> {entry['base_general_setup_sid']} -> {entry['base_family']}")
 
 
