@@ -53,7 +53,7 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
     result: list[UpgradeDefinition] = []
     for family in config["families"].values():
         family_upgrades: list[UpgradeDefinition] = []
-        power = POWER_CALIBER.get(family["base_caliber"])
+        power = POWER_CALIBER.get(family["base_caliber"]) if family.get("bprue_caliber_conversion", True) else None
         if power:
             caliber, suffix, text, hint, cost = power
             change, removes, add = CALIBER_EFFECTS[caliber]
