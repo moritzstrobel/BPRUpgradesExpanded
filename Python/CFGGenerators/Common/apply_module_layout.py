@@ -18,8 +18,13 @@ GROUP_ORDER = {
     "SG": {"Body": ["Action", "Handling", "ModuleHandling", "ModuleReliability"], "Barrel": ["Pattern", "ModuleRangeProfile"]},
     "Pistol": {"Body": ["Handling", "ModuleHandling"], "Barrel": ["Action", "Signature", "ModulePrecision", "ModuleBallistics"]},
     "Sniper": {"Body": ["Marksman", "ModuleReliability"], "Barrel": ["Ballistics", "Action", "Signature", "ModulePrecision", "ModuleBallistics", "ModuleRangeProfile"], "Stock": ["Stock"]},
+    "MG": {
+        "Body": ["SustainedFire", "FeedSystem", "ModuleReliability"],
+        "Barrel": ["BarrelConfiguration", "ModuleBallistics"],
+        "Stock": ["SupportConfiguration"],
+    },
 }
-CLASS_ORDER = ("AR", "SMG", "SG", "Pistol", "Sniper")
+CLASS_ORDER = ("AR", "SMG", "SG", "Pistol", "Sniper", "MG")
 VERTICALS = ("Top", "Down", None)
 FALLBACK_PARTS = {
     "Barrel": ("Body", "Stock", "Handguard", "PistolGrip"), "Body": ("Stock", "Handguard", "PistolGrip", "Barrel"),
