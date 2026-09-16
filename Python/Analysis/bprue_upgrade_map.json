@@ -1,7 +1,7 @@
 {
   "source": "unified UpgradeBuildModel after apply_layout_to_model()",
-  "weapon_count": 32,
-  "upgrade_count": 563,
+  "weapon_count": 33,
+  "upgrade_count": 584,
   "weapons": {
     "GunAK74_ST": {
       "upgrade_count": 18,
@@ -2602,6 +2602,322 @@
                 "blocking_sids": [
                   "GunG37_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction"
                 ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    "GunGP3A_DMR_GS": {
+      "upgrade_count": 21,
+      "slots": {
+        "Barrel": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunGP3A_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
+                "class": "Sniper",
+                "group": "Ballistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity",
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunGP3A_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity",
+                "class": "Sniper",
+                "group": "Ballistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunGP3A_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel",
+                "class": "Sniper",
+                "group": "Ballistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity",
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunGP3A_Upgrade_BPRUE_Sniper_Action_Precision",
+                "class": "Sniper",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Action_Rapid",
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Action_Reinforced"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunGP3A_Upgrade_BPRUE_Sniper_Action_Rapid",
+                "class": "Sniper",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Action_Precision",
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Action_Reinforced"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunGP3A_Upgrade_BPRUE_Sniper_Action_Reinforced",
+                "class": "Sniper",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Action_Rapid",
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Action_Precision"
+                ]
+              }
+            ]
+          }
+        },
+        "Body": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunGP3A_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
+                "class": "Sniper",
+                "group": "Marksman",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Marksman_Benchrest"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunGP3A_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
+                "class": "Sniper",
+                "group": "Marksman",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Marksman_Benchrest"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunGP3A_Upgrade_BPRUE_Sniper_Marksman_Benchrest",
+                "class": "Sniper",
+                "group": "Marksman",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunGP3A_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents",
+                "class": "Sniper",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGP3A_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunGP3A_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+                "class": "Sniper",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGP3A_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents"
+                ]
+              }
+            ]
+          }
+        },
+        "Handguard": {
+          "2": {
+            "Down": [
+              {
+                "sid": "GunGP3A_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+                "class": "Sniper",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGP3A_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunGP3A_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+                "class": "Sniper",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGP3A_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning"
+                ]
+              }
+            ]
+          }
+        },
+        "PistolGrip": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunGP3A_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+                "class": "Sniper",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGP3A_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunGP3A_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+                "class": "Sniper",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGP3A_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunGP3A_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration",
+                "class": "Sniper",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGP3A_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunGP3A_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+                "class": "Sniper",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGP3A_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration"
+                ]
+              }
+            ]
+          }
+        },
+        "Stock": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunGP3A_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+                "class": "Sniper",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunGP3A_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                "class": "Sniper",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunGP3A_Upgrade_BPRUE_Sniper_Stock_PrecisionStock",
+                "class": "Sniper",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                  "GunGP3A_Upgrade_BPRUE_Sniper_Stock_AdjustableStock"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Top": [
+              {
+                "sid": "GunGP3A_Upgrade_BPRUE_Sniper_Signature_BattleRifle",
+                "class": "Sniper",
+                "group": "Signature",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": []
               }
             ]
           }
