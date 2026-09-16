@@ -3,6 +3,7 @@
   "description": "Shotgun specialization system: three mutually exclusive modules per group for pattern, action and handling/furniture. Capacity changes are intentionally excluded.",
   "families": {
     "TOZ": {"weapon_sid":"GunTOZ_SG","general_setup_sid":"GunTOZ_SG","prototype_prefix":"GunTOZ","action_label":"break","cost_scale":0.8},
+    "Boomstick": {"weapon_sid":"GunObrez_SG","general_setup_sid":"GunObrez_SG","prototype_prefix":"GunObrez","action_label":"break","cost_scale":0.7},
     "M860": {"weapon_sid":"GunM860_SG","general_setup_sid":"GunM860_SG","prototype_prefix":"GunM860","action_label":"pump","cost_scale":1.0},
     "SPSA": {"weapon_sid":"GunSPSA_SG","general_setup_sid":"GunSPSA_SG","prototype_prefix":"GunSPSA","action_label":"gas","cost_scale":1.3},
     "D12": {"weapon_sid":"GunD12_SG","general_setup_sid":"GunD12_SG","prototype_prefix":"GunD12","action_label":"gas","cost_scale":1.5},
