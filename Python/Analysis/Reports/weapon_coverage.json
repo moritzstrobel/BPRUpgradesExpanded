@@ -2,6 +2,8 @@
   "sources": {
     "weapon_prototypes": "VanillaReference\\WeaponPrototypes.cfg",
     "general_setups": "VanillaReference\\WeaponGeneralSetupPrototypes.cfg",
+    "upgrade_prototypes": "VanillaReference\\UpgradePrototypes.cfg",
+    "dlc_root": "VanillaReference\\DLCGameData",
     "bprue_configs": [
       "CFGGenerators\\AssaultRifles\\assault_rifles_upgrades.json",
       "CFGGenerators\\SMGs\\smg_upgrades.json",
@@ -13,14 +15,13 @@
     "unique_registry": "CFGGenerators\\Common\\unique_weapons.json"
   },
   "rules": {
-    "candidate_scope": "Supported-class GeneralSetups plus every WeaponPrototype whose inheritance chain reaches a configured BPRUE base weapon, plus explicit out-of-scope registry entries.",
-    "variant_discovery": "WeaponPrototype inheritance is authoritative for assigning unusual Unique GeneralSetup names to a BPRUE base family/class.",
+    "candidate_scope": "Supported-class base-game GeneralSetups plus inherited variants and explicit out-of-scope entries; DLC GeneralSetups are audited separately.",
+    "variant_discovery": "WeaponPrototype inheritance is authoritative for assigning unusual base-game Unique GeneralSetup names to a BPRUE base family/class.",
+    "dlc_discovery": "Every DLCGameData/*/WeaponData/WeaponGeneralSetupPrototypes.cfg is scanned independently and its GeneralSetup refkey chain is resolved back into a configured BPRUE base family.",
+    "dlc_upgrade_audit": "DLC UpgradePrototypeSIDs are checked against base-game UpgradePrototypes.cfg; unknown references are reported for follow-up.",
     "base_covered": "GeneralSetup SID is present in a BPRUE base-family generator config.",
     "unique_covered": "GeneralSetup SID is present in Common/unique_weapons.json under uniques.",
-    "out_of_scope": "GeneralSetup SID is explicitly excluded in Common/unique_weapons.json under out_of_scope.",
-    "suspected_missing_base_weapon": "Uncovered standalone supported-class setup without concrete Gun* inheritance evidence.",
-    "suspected_unique_or_special": "Uncovered setup with variant inheritance evidence.",
-    "needs_manual_review": "Uncovered setup that cannot be classified confidently from Vanilla structure alone."
+    "out_of_scope": "GeneralSetup SID is explicitly excluded in Common/unique_weapons.json under out_of_scope."
   },
   "summary": {
     "vanilla_candidate_general_setups": 75,
@@ -610,6 +611,423 @@
       "reason": "special_weapon"
     }
   ],
+  "dlc": {
+    "summary": {
+      "content_packs": 4,
+      "candidate_general_setups": 23,
+      "resolved_bases": 22,
+      "unknown_bases": 1,
+      "setups_with_unknown_upgrades": 0,
+      "unknown_upgrade_references": 0
+    },
+    "packs": {
+      "Deluxe": {
+        "source": "VanillaReference\\DLCGameData\\Deluxe\\WeaponData\\WeaponGeneralSetupPrototypes.cfg",
+        "candidate_general_setups": 6,
+        "resolved_bases": 6,
+        "unknown_bases": 0,
+        "setups_with_unknown_upgrades": 0,
+        "weapons": [
+          {
+            "content_pack": "Deluxe",
+            "general_setup_sid": "Gun_Gabion_AR_GS",
+            "refkey": "GunLavina_ST",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "AssaultRifles",
+            "base_family": "Lavina",
+            "base_general_setup_sid": "GunLavina_ST",
+            "inheritance_chain": [
+              "GunLavina_ST"
+            ],
+            "upgrade_prototype_count": 20,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "resolved_base",
+            "source": "VanillaReference\\DLCGameData\\Deluxe\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          },
+          {
+            "content_pack": "Deluxe",
+            "general_setup_sid": "Gun_Logarithm_SMG_GS",
+            "refkey": "GunIntegral_PP",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "SMGs",
+            "base_family": "Integral",
+            "base_general_setup_sid": "GunIntegral_PP",
+            "inheritance_chain": [
+              "GunIntegral_PP"
+            ],
+            "upgrade_prototype_count": 16,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "resolved_base",
+            "source": "VanillaReference\\DLCGameData\\Deluxe\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          },
+          {
+            "content_pack": "Deluxe",
+            "general_setup_sid": "Gun_Monolit_AR_GS",
+            "refkey": "GunM16_ST",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "AssaultRifles",
+            "base_family": "M16",
+            "base_general_setup_sid": "GunM16_ST",
+            "inheritance_chain": [
+              "GunM16_ST"
+            ],
+            "upgrade_prototype_count": 10,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "resolved_base",
+            "source": "VanillaReference\\DLCGameData\\Deluxe\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          },
+          {
+            "content_pack": "Deluxe",
+            "general_setup_sid": "Gun_Monolit_HG_GS",
+            "refkey": "GunPM_HG",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "Pistols",
+            "base_family": "PTM",
+            "base_general_setup_sid": "GunPM_HG",
+            "inheritance_chain": [
+              "GunPM_HG"
+            ],
+            "upgrade_prototype_count": 3,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "resolved_base",
+            "source": "VanillaReference\\DLCGameData\\Deluxe\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          },
+          {
+            "content_pack": "Deluxe",
+            "general_setup_sid": "Gun_Monolit_SG_GS",
+            "refkey": "GunM860_SG",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "Shotguns",
+            "base_family": "M860",
+            "base_general_setup_sid": "GunM860_SG",
+            "inheritance_chain": [
+              "GunM860_SG"
+            ],
+            "upgrade_prototype_count": 12,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "resolved_base",
+            "source": "VanillaReference\\DLCGameData\\Deluxe\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          },
+          {
+            "content_pack": "Deluxe",
+            "general_setup_sid": "Gun_Zvirolov_SR_GS",
+            "refkey": "GunM701_SP",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "Snipers",
+            "base_family": "M701",
+            "base_general_setup_sid": "GunM701_SP",
+            "inheritance_chain": [
+              "GunM701_SP"
+            ],
+            "upgrade_prototype_count": 16,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "resolved_base",
+            "source": "VanillaReference\\DLCGameData\\Deluxe\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          }
+        ]
+      },
+      "DLC1": {
+        "source": "VanillaReference\\DLCGameData\\DLC1\\WeaponData\\WeaponGeneralSetupPrototypes.cfg",
+        "candidate_general_setups": 12,
+        "resolved_bases": 11,
+        "unknown_bases": 1,
+        "setups_with_unknown_upgrades": 0,
+        "weapons": [
+          {
+            "content_pack": "DLC1",
+            "general_setup_sid": "GunAK9_ST_GS",
+            "refkey": "TemplateRifle",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "AssaultRifles",
+            "base_family": null,
+            "base_general_setup_sid": null,
+            "inheritance_chain": [
+              "TemplateRifle",
+              "TemplateWeapon"
+            ],
+            "upgrade_prototype_count": 8,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "unknown_base",
+            "source": "VanillaReference\\DLCGameData\\DLC1\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          },
+          {
+            "content_pack": "DLC1",
+            "general_setup_sid": "GunArevLight_AR_GS",
+            "refkey": "GunArev_ST_GS",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "AssaultRifles",
+            "base_family": "Arev",
+            "base_general_setup_sid": "GunArev_ST_GS",
+            "inheritance_chain": [
+              "GunArev_ST_GS"
+            ],
+            "upgrade_prototype_count": 26,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "resolved_base",
+            "source": "VanillaReference\\DLCGameData\\DLC1\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          },
+          {
+            "content_pack": "DLC1",
+            "general_setup_sid": "GunClapper_SG_GS",
+            "refkey": "GunM860_SG",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "Shotguns",
+            "base_family": "M860",
+            "base_general_setup_sid": "GunM860_SG",
+            "inheritance_chain": [
+              "GunM860_SG"
+            ],
+            "upgrade_prototype_count": 10,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "resolved_base",
+            "source": "VanillaReference\\DLCGameData\\DLC1\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          },
+          {
+            "content_pack": "DLC1",
+            "general_setup_sid": "GunDefender_SG",
+            "refkey": "GunD12_SG",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "Shotguns",
+            "base_family": "D12",
+            "base_general_setup_sid": "GunD12_SG",
+            "inheritance_chain": [
+              "GunD12_SG"
+            ],
+            "upgrade_prototype_count": 23,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "resolved_base",
+            "source": "VanillaReference\\DLCGameData\\DLC1\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          },
+          {
+            "content_pack": "DLC1",
+            "general_setup_sid": "GunDniproDuty_ST",
+            "refkey": "GunDnipro_ST",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "AssaultRifles",
+            "base_family": "Dnipro",
+            "base_general_setup_sid": "GunDnipro_ST",
+            "inheritance_chain": [
+              "GunDnipro_ST"
+            ],
+            "upgrade_prototype_count": 19,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "resolved_base",
+            "source": "VanillaReference\\DLCGameData\\DLC1\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          },
+          {
+            "content_pack": "DLC1",
+            "general_setup_sid": "GunFallschirmjager_DMR_GS",
+            "refkey": "GunGP3A_DMR_GS",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "Snipers",
+            "base_family": "GP3A",
+            "base_general_setup_sid": "GunGP3A_DMR_GS",
+            "inheritance_chain": [
+              "GunGP3A_DMR_GS"
+            ],
+            "upgrade_prototype_count": 26,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "resolved_base",
+            "source": "VanillaReference\\DLCGameData\\DLC1\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          },
+          {
+            "content_pack": "DLC1",
+            "general_setup_sid": "GunHSG72_DMR_GS",
+            "refkey": "GunGP3A_DMR_GS",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "Snipers",
+            "base_family": "GP3A",
+            "base_general_setup_sid": "GunGP3A_DMR_GS",
+            "inheritance_chain": [
+              "GunGP3A_DMR_GS"
+            ],
+            "upgrade_prototype_count": 23,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "resolved_base",
+            "source": "VanillaReference\\DLCGameData\\DLC1\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          },
+          {
+            "content_pack": "DLC1",
+            "general_setup_sid": "GunKharodFreedom_ST",
+            "refkey": "GunKharod_ST",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "AssaultRifles",
+            "base_family": "Kharod",
+            "base_general_setup_sid": "GunKharod_ST",
+            "inheritance_chain": [
+              "GunKharod_ST"
+            ],
+            "upgrade_prototype_count": 20,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "resolved_base",
+            "source": "VanillaReference\\DLCGameData\\DLC1\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          },
+          {
+            "content_pack": "DLC1",
+            "general_setup_sid": "GunSPSA_Sniper_SG",
+            "refkey": "GunSPSA_SG",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "Shotguns",
+            "base_family": "SPSA",
+            "base_general_setup_sid": "GunSPSA_SG",
+            "inheritance_chain": [
+              "GunSPSA_SG"
+            ],
+            "upgrade_prototype_count": 19,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "resolved_base",
+            "source": "VanillaReference\\DLCGameData\\DLC1\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          },
+          {
+            "content_pack": "DLC1",
+            "general_setup_sid": "GunSVU_CQB_SP",
+            "refkey": "GunSVU_SP",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "Snipers",
+            "base_family": "SVU",
+            "base_general_setup_sid": "GunSVU_SP",
+            "inheritance_chain": [
+              "GunSVU_SP"
+            ],
+            "upgrade_prototype_count": 23,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "resolved_base",
+            "source": "VanillaReference\\DLCGameData\\DLC1\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          },
+          {
+            "content_pack": "DLC1",
+            "general_setup_sid": "GunTundra_DMR_GS",
+            "refkey": "GunSKP_DMR_GS",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "Snipers",
+            "base_family": "SIC",
+            "base_general_setup_sid": "GunSKP_DMR_GS",
+            "inheritance_chain": [
+              "GunSKP_DMR_GS"
+            ],
+            "upgrade_prototype_count": 19,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "resolved_base",
+            "source": "VanillaReference\\DLCGameData\\DLC1\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          },
+          {
+            "content_pack": "DLC1",
+            "general_setup_sid": "GunWarszawa_AR_GS",
+            "refkey": "GunArev_ST_GS",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "AssaultRifles",
+            "base_family": "Arev",
+            "base_general_setup_sid": "GunArev_ST_GS",
+            "inheritance_chain": [
+              "GunArev_ST_GS"
+            ],
+            "upgrade_prototype_count": 20,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "resolved_base",
+            "source": "VanillaReference\\DLCGameData\\DLC1\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          }
+        ]
+      },
+      "PreOrder": {
+        "source": "VanillaReference\\DLCGameData\\PreOrder\\WeaponData\\WeaponGeneralSetupPrototypes.cfg",
+        "candidate_general_setups": 1,
+        "resolved_bases": 1,
+        "unknown_bases": 0,
+        "setups_with_unknown_upgrades": 0,
+        "weapons": [
+          {
+            "content_pack": "PreOrder",
+            "general_setup_sid": "Gun_Veteran_AR_GS",
+            "refkey": "GunGvintar_ST",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "AssaultRifles",
+            "base_family": "Gvintar",
+            "base_general_setup_sid": "GunGvintar_ST",
+            "inheritance_chain": [
+              "GunGvintar_ST"
+            ],
+            "upgrade_prototype_count": 13,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "resolved_base",
+            "source": "VanillaReference\\DLCGameData\\PreOrder\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          }
+        ]
+      },
+      "Ultimate": {
+        "source": "VanillaReference\\DLCGameData\\Ultimate\\WeaponData\\WeaponGeneralSetupPrototypes.cfg",
+        "candidate_general_setups": 4,
+        "resolved_bases": 4,
+        "unknown_bases": 0,
+        "setups_with_unknown_upgrades": 0,
+        "weapons": [
+          {
+            "content_pack": "Ultimate",
+            "general_setup_sid": "Gun_Margach_SG_GS",
+            "refkey": "GunD12_SG",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "Shotguns",
+            "base_family": "D12",
+            "base_general_setup_sid": "GunD12_SG",
+            "inheritance_chain": [
+              "GunD12_SG"
+            ],
+            "upgrade_prototype_count": 24,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "resolved_base",
+            "source": "VanillaReference\\DLCGameData\\Ultimate\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          },
+          {
+            "content_pack": "Ultimate",
+            "general_setup_sid": "Gun_ModelSpecial_HG_GS",
+            "refkey": "GunRhino_HG",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "Pistols",
+            "base_family": "Rhino",
+            "base_general_setup_sid": "GunRhino_HG",
+            "inheritance_chain": [
+              "GunRhino_HG"
+            ],
+            "upgrade_prototype_count": 11,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "resolved_base",
+            "source": "VanillaReference\\DLCGameData\\Ultimate\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          },
+          {
+            "content_pack": "Ultimate",
+            "general_setup_sid": "Gun_Novator_AR_GS",
+            "refkey": "GunFora_ST",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "AssaultRifles",
+            "base_family": "Fora",
+            "base_general_setup_sid": "GunFora_ST",
+            "inheritance_chain": [
+              "GunFora_ST"
+            ],
+            "upgrade_prototype_count": 15,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "resolved_base",
+            "source": "VanillaReference\\DLCGameData\\Ultimate\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          },
+          {
+            "content_pack": "Ultimate",
+            "general_setup_sid": "Gun_SMGMonolith_SMG_GS",
+            "refkey": "GunViper_PP",
+            "refurl": "../../../GameData/WeaponData/WeaponGeneralSetupPrototypes.cfg",
+            "class": "SMGs",
+            "base_family": "Viper",
+            "base_general_setup_sid": "GunViper_PP",
+            "inheritance_chain": [
+              "GunViper_PP"
+            ],
+            "upgrade_prototype_count": 13,
+            "unknown_upgrade_prototype_sids": [],
+            "status": "resolved_base",
+            "source": "VanillaReference\\DLCGameData\\Ultimate\\WeaponData\\WeaponGeneralSetupPrototypes.cfg"
+          }
+        ]
+      }
+    }
+  },
   "suspected_missing_base_weapons": [],
   "suspected_unique_or_special": [],
   "needs_manual_review": []
