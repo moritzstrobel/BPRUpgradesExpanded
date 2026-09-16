@@ -1,0 +1,29 @@
+{
+  "_comment": "Shared specialization module names and descriptions.",
+  "entries": [
+    {"sid":"sid_bprue_shared_lightweight_assembly_name","languages":{"English":"Lightweight Assembly"}},
+    {"sid":"sid_bprue_shared_lightweight_assembly_description","languages":{"English":"Reduces weapon weight and improves aiming speed, at the cost of increased recoil."}},
+    {"sid":"sid_bprue_shared_reinforced_assembly_name","languages":{"English":"Reinforced Assembly"}},
+    {"sid":"sid_bprue_shared_reinforced_assembly_description","languages":{"English":"Improves recoil control and durability at the cost of additional weight."}},
+    {"sid":"sid_bprue_shared_recoil_control_name","languages":{"English":"Recoil Control"}},
+    {"sid":"sid_bprue_shared_recoil_control_description","languages":{"English":"Prioritizes recoil control during repeated fire while slightly reducing intrinsic precision."}},
+    {"sid":"sid_bprue_shared_precision_tuning_name","languages":{"English":"Precision Tuning"}},
+    {"sid":"sid_bprue_shared_precision_tuning_description","languages":{"English":"Tightens shot dispersion for precision fire at the cost of stronger recoil."}},
+    {"sid":"sid_bprue_shared_high_cyclic_system_name","languages":{"English":"High-Cyclic System"}},
+    {"sid":"sid_bprue_shared_high_cyclic_system_description","languages":{"English":"Increases cyclic rate for aggressive fire at the cost of recoil control and weapon wear."}},
+    {"sid":"sid_bprue_shared_controlled_action_name","languages":{"English":"Controlled Action"}},
+    {"sid":"sid_bprue_shared_controlled_action_description","languages":{"English":"Slows the firing cycle in exchange for improved recoil control and precision."}},
+    {"sid":"sid_bprue_shared_soft_target_name","languages":{"English":"Soft-Target Module"}},
+    {"sid":"sid_bprue_shared_soft_target_description","languages":{"English":"Increases damage and improves projectile velocity and flatness against lightly protected targets, sacrificing armor penetration."}},
+    {"sid":"sid_bprue_shared_armor_piercing_name","languages":{"English":"Armor-Piercing Module"}},
+    {"sid":"sid_bprue_shared_armor_piercing_description","languages":{"English":"Improves armor and cover penetration at the cost of raw weapon damage."}},
+    {"sid":"sid_bprue_shared_hardened_components_name","languages":{"English":"Hardened Components"}},
+    {"sid":"sid_bprue_shared_hardened_components_description","languages":{"English":"Improves weapon durability at the cost of a small weight increase."}},
+    {"sid":"sid_bprue_shared_lightweight_components_name","languages":{"English":"Lightweight Components"}},
+    {"sid":"sid_bprue_shared_lightweight_components_description","languages":{"English":"Reduces weight and improves aiming speed at the cost of weapon durability."}},
+    {"sid":"sid_bprue_shared_cqb_configuration_name","languages":{"English":"CQB Configuration"}},
+    {"sid":"sid_bprue_shared_cqb_configuration_description","languages":{"English":"Optimizes fast close-range handling and practical accuracy while reducing long-range ballistic performance."}},
+    {"sid":"sid_bprue_shared_range_configuration_name","languages":{"English":"Range Configuration"}},
+    {"sid":"sid_bprue_shared_range_configuration_description","languages":{"English":"Improves flatness and precision for longer-range fire at the cost of slower aiming."}}
+  ]
+}

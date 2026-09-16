@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "description": "SMG specialization modules emphasize readiness, reload speed and aggressive close-range handling with explicit trade-offs. Pistol-caliber SMGs also expose permanent caliber-conversion choices.",
+  "description": "SMG specialization modules emphasize readiness, reload speed, stock configuration and aggressive close-range handling with explicit trade-offs. Pistol-caliber SMGs also expose permanent caliber-conversion choices.",
   "families": {
     "Viper": {"weapon_sid": "GunViper_PP", "general_setup_sid": "GunViper_PP", "prototype_prefix": "GunViper"},
     "AKU": {"weapon_sid": "GunAKU_PP", "general_setup_sid": "GunAKU_PP", "prototype_prefix": "GunAKU"},
@@ -20,6 +20,7 @@
   "module_groups": {
     "readiness": ["quick_draw", "stabilized"],
     "reload": ["competition_reload", "tactical_reload"],
-    "action": ["high_speed_action", "controlled_action"]
+    "action": ["high_speed_action", "controlled_action"],
+    "stock": ["stock_lightweight", "stock_tactical", "stock_stabilized"]
   }
 }

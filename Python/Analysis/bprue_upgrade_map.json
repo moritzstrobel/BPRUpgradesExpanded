@@ -1,10 +1,10 @@
 {
   "source": "unified UpgradeBuildModel after apply_layout_to_model()",
   "weapon_count": 32,
-  "upgrade_count": 291,
+  "upgrade_count": 563,
   "weapons": {
     "GunAK74_ST": {
-      "upgrade_count": 10,
+      "upgrade_count": 18,
       "slots": {
         "Barrel": {
           "1": {
@@ -31,6 +31,34 @@
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunAK74_Upgrade_BPRUE_FireRate_Balanced"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunAK74_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
+                "class": "AR",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAK74_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunAK74_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
+                "class": "AR",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAK74_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning"
                 ]
               }
             ]
@@ -81,27 +109,85 @@
           "2": {
             "Down": [
               {
-                "sid": "GunAK74_Upgrade_BPRUE_Reload_Reinforced",
+                "sid": "GunAK74_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
                 "class": "AR",
-                "group": "Reload",
+                "group": "ModuleAction",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "GunAK74_Upgrade_BPRUE_Reload_Competition"
+                  "GunAK74_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem"
                 ]
               }
             ],
             "Top": [
               {
-                "sid": "GunAK74_Upgrade_BPRUE_Reload_Competition",
+                "sid": "GunAK74_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
                 "class": "AR",
-                "group": "Reload",
+                "group": "ModuleAction",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "GunAK74_Upgrade_BPRUE_Reload_Reinforced"
+                  "GunAK74_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction"
+                ]
+              }
+            ]
+          }
+        },
+        "Handguard": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunAK74_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing",
+                "class": "AR",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAK74_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunAK74_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
+                "class": "AR",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAK74_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunAK74_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
+                "class": "AR",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAK74_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunAK74_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
+                "class": "AR",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAK74_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents"
                 ]
               }
             ]
@@ -151,12 +237,40 @@
                 ]
               }
             ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunAK74_Upgrade_BPRUE_Reload_Reinforced",
+                "class": "AR",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAK74_Upgrade_BPRUE_Reload_Competition"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunAK74_Upgrade_BPRUE_Reload_Competition",
+                "class": "AR",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAK74_Upgrade_BPRUE_Reload_Reinforced"
+                ]
+              }
+            ]
           }
         }
       }
     },
     "GunAKU_PP": {
-      "upgrade_count": 7,
+      "upgrade_count": 18,
       "slots": {
         "Barrel": {
           "1": {
@@ -183,6 +297,34 @@
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunAKU_Upgrade_BPRUE_Action_Controlled"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunAKU_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction",
+                "class": "SMG",
+                "group": "ModuleAction",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAKU_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunAKU_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
+                "class": "SMG",
+                "group": "ModuleAction",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAKU_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction"
                 ]
               }
             ]
@@ -256,11 +398,143 @@
               }
             ]
           }
+        },
+        "Handguard": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunAKU_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
+                "class": "SMG",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAKU_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunAKU_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
+                "class": "SMG",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAKU_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunAKU_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration",
+                "class": "SMG",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAKU_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunAKU_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration",
+                "class": "SMG",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAKU_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration"
+                ]
+              }
+            ]
+          }
+        },
+        "Stock": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunAKU_Upgrade_BPRUE_Stock_Tactical",
+                "class": "SMG",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAKU_Upgrade_BPRUE_Stock_Lightweight",
+                  "GunAKU_Upgrade_BPRUE_Stock_Stabilized"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunAKU_Upgrade_BPRUE_Stock_Lightweight",
+                "class": "SMG",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAKU_Upgrade_BPRUE_Stock_Tactical",
+                  "GunAKU_Upgrade_BPRUE_Stock_Stabilized"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunAKU_Upgrade_BPRUE_Stock_Stabilized",
+                "class": "SMG",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunAKU_Upgrade_BPRUE_Stock_Lightweight",
+                  "GunAKU_Upgrade_BPRUE_Stock_Tactical"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunAKU_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing",
+                "class": "SMG",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAKU_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunAKU_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget",
+                "class": "SMG",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAKU_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ]
+          }
         }
       }
     },
     "GunAPB_HG": {
-      "upgrade_count": 7,
+      "upgrade_count": 13,
       "slots": {
         "Barrel": {
           "1": {
@@ -365,12 +639,98 @@
                 ]
               }
             ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunAPB_Upgrade_BPRUE_PistolShared_ModuleHandling_ReinforcedAssembly",
+                "class": "Pistol",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAPB_Upgrade_BPRUE_PistolShared_ModuleHandling_LightweightAssembly"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunAPB_Upgrade_BPRUE_PistolShared_ModuleHandling_LightweightAssembly",
+                "class": "Pistol",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAPB_Upgrade_BPRUE_PistolShared_ModuleHandling_ReinforcedAssembly"
+                ]
+              }
+            ]
+          }
+        },
+        "Stock": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunAPB_Upgrade_BPRUE_PistolShared_ModulePrecision_PrecisionTuning",
+                "class": "Pistol",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAPB_Upgrade_BPRUE_PistolShared_ModulePrecision_RecoilControl"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunAPB_Upgrade_BPRUE_PistolShared_ModulePrecision_RecoilControl",
+                "class": "Pistol",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAPB_Upgrade_BPRUE_PistolShared_ModulePrecision_PrecisionTuning"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunAPB_Upgrade_BPRUE_PistolShared_ModuleBallistics_ArmorPiercing",
+                "class": "Pistol",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAPB_Upgrade_BPRUE_PistolShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunAPB_Upgrade_BPRUE_PistolShared_ModuleBallistics_SoftTarget",
+                "class": "Pistol",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunAPB_Upgrade_BPRUE_PistolShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ]
           }
         }
       }
     },
     "GunArev_ST_GS": {
-      "upgrade_count": 10,
+      "upgrade_count": 18,
       "slots": {
         "Barrel": {
           "1": {
@@ -397,6 +757,34 @@
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunArev_Upgrade_BPRUE_FireRate_Balanced"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunArev_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
+                "class": "AR",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunArev_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunArev_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
+                "class": "AR",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunArev_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning"
                 ]
               }
             ]
@@ -447,27 +835,87 @@
           "2": {
             "Down": [
               {
-                "sid": "GunArev_Upgrade_BPRUE_Reload_Reinforced",
+                "sid": "GunArev_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
                 "class": "AR",
-                "group": "Reload",
+                "group": "ModuleAction",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "GunArev_Upgrade_BPRUE_Reload_Competition"
+                  "GunArev_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem"
                 ]
               }
             ],
             "Top": [
               {
-                "sid": "GunArev_Upgrade_BPRUE_Reload_Competition",
+                "sid": "GunArev_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
                 "class": "AR",
-                "group": "Reload",
+                "group": "ModuleAction",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "GunArev_Upgrade_BPRUE_Reload_Reinforced"
+                  "GunArev_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction"
+                ]
+              }
+            ]
+          }
+        },
+        "Handguard": {
+          "2": {
+            "Down": [
+              {
+                "sid": "GunArev_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing",
+                "class": "AR",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunArev_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunArev_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
+                "class": "AR",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunArev_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ]
+          }
+        },
+        "PistolGrip": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunArev_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
+                "class": "AR",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunArev_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunArev_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
+                "class": "AR",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunArev_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents"
                 ]
               }
             ]
@@ -517,12 +965,40 @@
                 ]
               }
             ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunArev_Upgrade_BPRUE_Reload_Reinforced",
+                "class": "AR",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunArev_Upgrade_BPRUE_Reload_Competition"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunArev_Upgrade_BPRUE_Reload_Competition",
+                "class": "AR",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunArev_Upgrade_BPRUE_Reload_Reinforced"
+                ]
+              }
+            ]
           }
         }
       }
     },
     "GunBucket_PP": {
-      "upgrade_count": 9,
+      "upgrade_count": 20,
       "slots": {
         "Barrel": {
           "1": {
@@ -551,16 +1027,33 @@
                   "GunBucket_Upgrade_BPRUE_Action_Controlled"
                 ]
               }
-            ],
-            "Unspecified": [
+            ]
+          },
+          "2": {
+            "Down": [
               {
-                "sid": "GunBucket_Upgrade_BPRUE_PistolConversion",
+                "sid": "GunBucket_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction",
                 "class": "SMG",
-                "group": "Conversion",
+                "group": "ModuleAction",
                 "is_modification": true,
                 "horizontal_explicit": true,
-                "vertical_explicit": false,
-                "blocking_sids": []
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunBucket_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunBucket_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
+                "class": "SMG",
+                "group": "ModuleAction",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunBucket_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction"
+                ]
               }
             ]
           }
@@ -608,8 +1101,149 @@
             ]
           }
         },
+        "Handguard": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunBucket_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing",
+                "class": "SMG",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunBucket_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunBucket_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget",
+                "class": "SMG",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunBucket_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunBucket_Upgrade_BPRUE_PistolConversion",
+                "class": "SMG",
+                "group": "Conversion",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": false,
+                "blocking_sids": []
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunBucket_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
+                "class": "SMG",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunBucket_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunBucket_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
+                "class": "SMG",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunBucket_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunBucket_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration",
+                "class": "SMG",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunBucket_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunBucket_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration",
+                "class": "SMG",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunBucket_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration"
+                ]
+              }
+            ]
+          }
+        },
         "Stock": {
           "1": {
+            "Down": [
+              {
+                "sid": "GunBucket_Upgrade_BPRUE_Stock_Tactical",
+                "class": "SMG",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunBucket_Upgrade_BPRUE_Stock_Lightweight",
+                  "GunBucket_Upgrade_BPRUE_Stock_Stabilized"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunBucket_Upgrade_BPRUE_Stock_Lightweight",
+                "class": "SMG",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunBucket_Upgrade_BPRUE_Stock_Tactical",
+                  "GunBucket_Upgrade_BPRUE_Stock_Stabilized"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunBucket_Upgrade_BPRUE_Stock_Stabilized",
+                "class": "SMG",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunBucket_Upgrade_BPRUE_Stock_Lightweight",
+                  "GunBucket_Upgrade_BPRUE_Stock_Tactical"
+                ]
+              }
+            ]
+          },
+          "2": {
             "Down": [
               {
                 "sid": "GunBucket_Upgrade_BPRUE_Reload_Tactical",
@@ -654,7 +1288,7 @@
       }
     },
     "GunD12_SG": {
-      "upgrade_count": 9,
+      "upgrade_count": 15,
       "slots": {
         "Barrel": {
           "1": {
@@ -697,6 +1331,34 @@
                 "blocking_sids": [
                   "GunD12_Upgrade_BPRUE_SG_Pattern_Breacher",
                   "GunD12_Upgrade_BPRUE_SG_Pattern_FieldChoke"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunD12_Upgrade_BPRUE_SGShared_ModuleRangeProfile_RangeConfiguration",
+                "class": "SG",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunD12_Upgrade_BPRUE_SGShared_ModuleRangeProfile_CqbConfiguration"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunD12_Upgrade_BPRUE_SGShared_ModuleRangeProfile_CqbConfiguration",
+                "class": "SG",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunD12_Upgrade_BPRUE_SGShared_ModuleRangeProfile_RangeConfiguration"
                 ]
               }
             ]
@@ -791,11 +1453,69 @@
               }
             ]
           }
+        },
+        "Stock": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunD12_Upgrade_BPRUE_SGShared_ModuleHandling_ReinforcedAssembly",
+                "class": "SG",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunD12_Upgrade_BPRUE_SGShared_ModuleHandling_LightweightAssembly"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunD12_Upgrade_BPRUE_SGShared_ModuleHandling_LightweightAssembly",
+                "class": "SG",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunD12_Upgrade_BPRUE_SGShared_ModuleHandling_ReinforcedAssembly"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunD12_Upgrade_BPRUE_SGShared_ModuleReliability_LightweightComponents",
+                "class": "SG",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunD12_Upgrade_BPRUE_SGShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunD12_Upgrade_BPRUE_SGShared_ModuleReliability_HardenedComponents",
+                "class": "SG",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunD12_Upgrade_BPRUE_SGShared_ModuleReliability_LightweightComponents"
+                ]
+              }
+            ]
+          }
         }
       }
     },
     "GunDnipro_ST": {
-      "upgrade_count": 10,
+      "upgrade_count": 18,
       "slots": {
         "Barrel": {
           "1": {
@@ -822,6 +1542,34 @@
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunDnipro_Upgrade_BPRUE_FireRate_Balanced"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunDnipro_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
+                "class": "AR",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunDnipro_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunDnipro_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
+                "class": "AR",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunDnipro_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning"
                 ]
               }
             ]
@@ -872,27 +1620,87 @@
           "2": {
             "Down": [
               {
-                "sid": "GunDnipro_Upgrade_BPRUE_Reload_Reinforced",
+                "sid": "GunDnipro_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
                 "class": "AR",
-                "group": "Reload",
+                "group": "ModuleAction",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "GunDnipro_Upgrade_BPRUE_Reload_Competition"
+                  "GunDnipro_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem"
                 ]
               }
             ],
             "Top": [
               {
-                "sid": "GunDnipro_Upgrade_BPRUE_Reload_Competition",
+                "sid": "GunDnipro_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
                 "class": "AR",
-                "group": "Reload",
+                "group": "ModuleAction",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "GunDnipro_Upgrade_BPRUE_Reload_Reinforced"
+                  "GunDnipro_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction"
+                ]
+              }
+            ]
+          }
+        },
+        "Handguard": {
+          "2": {
+            "Down": [
+              {
+                "sid": "GunDnipro_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing",
+                "class": "AR",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunDnipro_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunDnipro_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
+                "class": "AR",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunDnipro_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ]
+          }
+        },
+        "PistolGrip": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunDnipro_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
+                "class": "AR",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunDnipro_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunDnipro_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
+                "class": "AR",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunDnipro_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents"
                 ]
               }
             ]
@@ -942,12 +1750,40 @@
                 ]
               }
             ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunDnipro_Upgrade_BPRUE_Reload_Reinforced",
+                "class": "AR",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunDnipro_Upgrade_BPRUE_Reload_Competition"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunDnipro_Upgrade_BPRUE_Reload_Competition",
+                "class": "AR",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunDnipro_Upgrade_BPRUE_Reload_Reinforced"
+                ]
+              }
+            ]
           }
         }
       }
     },
     "GunFora230_PP_GS": {
-      "upgrade_count": 9,
+      "upgrade_count": 20,
       "slots": {
         "Barrel": {
           "1": {
@@ -976,16 +1812,33 @@
                   "GunFora230_Upgrade_BPRUE_Action_Controlled"
                 ]
               }
-            ],
-            "Unspecified": [
+            ]
+          },
+          "2": {
+            "Down": [
               {
-                "sid": "GunFora230_Upgrade_BPRUE_PistolConversion",
+                "sid": "GunFora230_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction",
                 "class": "SMG",
-                "group": "Conversion",
+                "group": "ModuleAction",
                 "is_modification": true,
                 "horizontal_explicit": true,
-                "vertical_explicit": false,
-                "blocking_sids": []
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora230_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunFora230_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
+                "class": "SMG",
+                "group": "ModuleAction",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora230_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction"
+                ]
               }
             ]
           }
@@ -1073,11 +1926,154 @@
               }
             ]
           }
+        },
+        "Handguard": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunFora230_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
+                "class": "SMG",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora230_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunFora230_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
+                "class": "SMG",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora230_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunFora230_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration",
+                "class": "SMG",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora230_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunFora230_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration",
+                "class": "SMG",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora230_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration"
+                ]
+              }
+            ]
+          }
+        },
+        "Stock": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunFora230_Upgrade_BPRUE_Stock_Tactical",
+                "class": "SMG",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora230_Upgrade_BPRUE_Stock_Lightweight",
+                  "GunFora230_Upgrade_BPRUE_Stock_Stabilized"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunFora230_Upgrade_BPRUE_Stock_Lightweight",
+                "class": "SMG",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora230_Upgrade_BPRUE_Stock_Tactical",
+                  "GunFora230_Upgrade_BPRUE_Stock_Stabilized"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunFora230_Upgrade_BPRUE_Stock_Stabilized",
+                "class": "SMG",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunFora230_Upgrade_BPRUE_Stock_Lightweight",
+                  "GunFora230_Upgrade_BPRUE_Stock_Tactical"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunFora230_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing",
+                "class": "SMG",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora230_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunFora230_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget",
+                "class": "SMG",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora230_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunFora230_Upgrade_BPRUE_PistolConversion",
+                "class": "SMG",
+                "group": "Conversion",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": []
+              }
+            ]
+          }
         }
       }
     },
     "GunFora_ST": {
-      "upgrade_count": 10,
+      "upgrade_count": 18,
       "slots": {
         "Barrel": {
           "1": {
@@ -1104,6 +2100,34 @@
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunFora_Upgrade_BPRUE_FireRate_Balanced"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunFora_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
+                "class": "AR",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunFora_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
+                "class": "AR",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning"
                 ]
               }
             ]
@@ -1154,27 +2178,87 @@
           "2": {
             "Down": [
               {
-                "sid": "GunFora_Upgrade_BPRUE_Reload_Reinforced",
+                "sid": "GunFora_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
                 "class": "AR",
-                "group": "Reload",
+                "group": "ModuleAction",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "GunFora_Upgrade_BPRUE_Reload_Competition"
+                  "GunFora_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem"
                 ]
               }
             ],
             "Top": [
               {
-                "sid": "GunFora_Upgrade_BPRUE_Reload_Competition",
+                "sid": "GunFora_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
                 "class": "AR",
-                "group": "Reload",
+                "group": "ModuleAction",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "GunFora_Upgrade_BPRUE_Reload_Reinforced"
+                  "GunFora_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction"
+                ]
+              }
+            ]
+          }
+        },
+        "Handguard": {
+          "2": {
+            "Down": [
+              {
+                "sid": "GunFora_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing",
+                "class": "AR",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunFora_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
+                "class": "AR",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ]
+          }
+        },
+        "PistolGrip": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunFora_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
+                "class": "AR",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunFora_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
+                "class": "AR",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents"
                 ]
               }
             ]
@@ -1224,12 +2308,40 @@
                 ]
               }
             ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunFora_Upgrade_BPRUE_Reload_Reinforced",
+                "class": "AR",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora_Upgrade_BPRUE_Reload_Competition"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunFora_Upgrade_BPRUE_Reload_Competition",
+                "class": "AR",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunFora_Upgrade_BPRUE_Reload_Reinforced"
+                ]
+              }
+            ]
           }
         }
       }
     },
     "GunG37_ST": {
-      "upgrade_count": 10,
+      "upgrade_count": 18,
       "slots": {
         "Barrel": {
           "1": {
@@ -1256,6 +2368,34 @@
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunG37_Upgrade_BPRUE_FireRate_Balanced"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunG37_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
+                "class": "AR",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunG37_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunG37_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
+                "class": "AR",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunG37_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning"
                 ]
               }
             ]
@@ -1299,6 +2439,94 @@
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunG37_Upgrade_BPRUE_FireControl_Precision"
+                ]
+              }
+            ]
+          }
+        },
+        "Handguard": {
+          "2": {
+            "Down": [
+              {
+                "sid": "GunG37_Upgrade_BPRUE_Reload_Reinforced",
+                "class": "AR",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunG37_Upgrade_BPRUE_Reload_Competition"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunG37_Upgrade_BPRUE_Reload_Competition",
+                "class": "AR",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunG37_Upgrade_BPRUE_Reload_Reinforced"
+                ]
+              }
+            ]
+          }
+        },
+        "PistolGrip": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunG37_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing",
+                "class": "AR",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunG37_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunG37_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
+                "class": "AR",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunG37_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunG37_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
+                "class": "AR",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunG37_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunG37_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
+                "class": "AR",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunG37_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents"
                 ]
               }
             ]
@@ -1352,27 +2580,27 @@
           "2": {
             "Down": [
               {
-                "sid": "GunG37_Upgrade_BPRUE_Reload_Reinforced",
+                "sid": "GunG37_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
                 "class": "AR",
-                "group": "Reload",
+                "group": "ModuleAction",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "GunG37_Upgrade_BPRUE_Reload_Competition"
+                  "GunG37_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem"
                 ]
               }
             ],
             "Top": [
               {
-                "sid": "GunG37_Upgrade_BPRUE_Reload_Competition",
+                "sid": "GunG37_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
                 "class": "AR",
-                "group": "Reload",
+                "group": "ModuleAction",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "GunG37_Upgrade_BPRUE_Reload_Reinforced"
+                  "GunG37_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction"
                 ]
               }
             ]
@@ -1381,7 +2609,7 @@
       }
     },
     "GunGrim_ST": {
-      "upgrade_count": 9,
+      "upgrade_count": 17,
       "slots": {
         "Barrel": {
           "1": {
@@ -1408,6 +2636,34 @@
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunGrim_Upgrade_BPRUE_FireRate_Balanced"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunGrim_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
+                "class": "AR",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGrim_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunGrim_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
+                "class": "AR",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGrim_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning"
                 ]
               }
             ]
@@ -1438,6 +2694,92 @@
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunGrim_Upgrade_BPRUE_FireControl_Precision"
+                ]
+              }
+            ]
+          }
+        },
+        "Handguard": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunGrim_Upgrade_BPRUE_Reload_Reinforced",
+                "class": "AR",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGrim_Upgrade_BPRUE_Reload_Competition"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunGrim_Upgrade_BPRUE_Reload_Competition",
+                "class": "AR",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGrim_Upgrade_BPRUE_Reload_Reinforced"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunGrim_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing",
+                "class": "AR",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGrim_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunGrim_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
+                "class": "AR",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGrim_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunGrim_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
+                "class": "AR",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGrim_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunGrim_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
+                "class": "AR",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGrim_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents"
                 ]
               }
             ]
@@ -1491,27 +2833,27 @@
           "2": {
             "Down": [
               {
-                "sid": "GunGrim_Upgrade_BPRUE_Reload_Reinforced",
+                "sid": "GunGrim_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
                 "class": "AR",
-                "group": "Reload",
+                "group": "ModuleAction",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "GunGrim_Upgrade_BPRUE_Reload_Competition"
+                  "GunGrim_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem"
                 ]
               }
             ],
             "Top": [
               {
-                "sid": "GunGrim_Upgrade_BPRUE_Reload_Competition",
+                "sid": "GunGrim_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
                 "class": "AR",
-                "group": "Reload",
+                "group": "ModuleAction",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "GunGrim_Upgrade_BPRUE_Reload_Reinforced"
+                  "GunGrim_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction"
                 ]
               }
             ]
@@ -1520,7 +2862,7 @@
       }
     },
     "GunGvintar_ST": {
-      "upgrade_count": 9,
+      "upgrade_count": 17,
       "slots": {
         "Barrel": {
           "0": {
@@ -1547,6 +2889,62 @@
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunGvintar_Upgrade_BPRUE_FireRate_Balanced"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunGvintar_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
+                "class": "AR",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGvintar_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunGvintar_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
+                "class": "AR",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGvintar_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunGvintar_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
+                "class": "AR",
+                "group": "ModuleAction",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGvintar_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunGvintar_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
+                "class": "AR",
+                "group": "ModuleAction",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGvintar_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction"
                 ]
               }
             ]
@@ -1610,6 +3008,36 @@
             ]
           }
         },
+        "Handguard": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunGvintar_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
+                "class": "AR",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGvintar_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunGvintar_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
+                "class": "AR",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGvintar_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents"
+                ]
+              }
+            ]
+          }
+        },
         "Stock": {
           "1": {
             "Down": [
@@ -1654,12 +3082,40 @@
                 ]
               }
             ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunGvintar_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing",
+                "class": "AR",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGvintar_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunGvintar_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
+                "class": "AR",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGvintar_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ]
           }
         }
       }
     },
     "GunIntegral_PP": {
-      "upgrade_count": 9,
+      "upgrade_count": 20,
       "slots": {
         "Barrel": {
           "1": {
@@ -1688,6 +3144,105 @@
                   "GunIntegral_Upgrade_BPRUE_Action_Controlled"
                 ]
               }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction",
+                "class": "SMG",
+                "group": "ModuleAction",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
+                "class": "SMG",
+                "group": "ModuleAction",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction"
+                ]
+              }
+            ]
+          }
+        },
+        "Handguard": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunIntegral_Upgrade_BPRUE_Reload_Tactical",
+                "class": "SMG",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunIntegral_Upgrade_BPRUE_Reload_Competition"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunIntegral_Upgrade_BPRUE_Reload_Competition",
+                "class": "SMG",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunIntegral_Upgrade_BPRUE_Reload_Tactical"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunIntegral_Upgrade_BPRUE_Caliber_A045",
+                "class": "SMG",
+                "group": "Caliber",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunIntegral_Upgrade_BPRUE_Caliber_A918"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing",
+                "class": "SMG",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget",
+                "class": "SMG",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
             ],
             "Unspecified": [
               {
@@ -1698,6 +3253,64 @@
                 "horizontal_explicit": true,
                 "vertical_explicit": false,
                 "blocking_sids": []
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
+                "class": "SMG",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
+                "class": "SMG",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly"
+                ]
+              }
+            ]
+          }
+        },
+        "PistolGrip": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration",
+                "class": "SMG",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration",
+                "class": "SMG",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunIntegral_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration"
+                ]
               }
             ]
           }
@@ -1747,40 +3360,43 @@
           "2": {
             "Down": [
               {
-                "sid": "GunIntegral_Upgrade_BPRUE_Reload_Tactical",
+                "sid": "GunIntegral_Upgrade_BPRUE_Stock_Tactical",
                 "class": "SMG",
-                "group": "Reload",
+                "group": "Stock",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "GunIntegral_Upgrade_BPRUE_Reload_Competition"
+                  "GunIntegral_Upgrade_BPRUE_Stock_Lightweight",
+                  "GunIntegral_Upgrade_BPRUE_Stock_Stabilized"
                 ]
               }
             ],
             "Top": [
               {
-                "sid": "GunIntegral_Upgrade_BPRUE_Reload_Competition",
+                "sid": "GunIntegral_Upgrade_BPRUE_Stock_Lightweight",
                 "class": "SMG",
-                "group": "Reload",
+                "group": "Stock",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "GunIntegral_Upgrade_BPRUE_Reload_Tactical"
+                  "GunIntegral_Upgrade_BPRUE_Stock_Tactical",
+                  "GunIntegral_Upgrade_BPRUE_Stock_Stabilized"
                 ]
               }
             ],
             "Unspecified": [
               {
-                "sid": "GunIntegral_Upgrade_BPRUE_Caliber_A045",
+                "sid": "GunIntegral_Upgrade_BPRUE_Stock_Stabilized",
                 "class": "SMG",
-                "group": "Caliber",
+                "group": "Stock",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": false,
                 "blocking_sids": [
-                  "GunIntegral_Upgrade_BPRUE_Caliber_A918"
+                  "GunIntegral_Upgrade_BPRUE_Stock_Lightweight",
+                  "GunIntegral_Upgrade_BPRUE_Stock_Tactical"
                 ]
               }
             ]
@@ -1789,7 +3405,7 @@
       }
     },
     "GunKharod_ST": {
-      "upgrade_count": 10,
+      "upgrade_count": 18,
       "slots": {
         "Barrel": {
           "1": {
@@ -1816,6 +3432,34 @@
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunKharod_Upgrade_BPRUE_FireRate_Balanced"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunKharod_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
+                "class": "AR",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunKharod_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunKharod_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
+                "class": "AR",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunKharod_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning"
                 ]
               }
             ]
@@ -1866,27 +3510,87 @@
           "2": {
             "Down": [
               {
-                "sid": "GunKharod_Upgrade_BPRUE_Reload_Reinforced",
+                "sid": "GunKharod_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
                 "class": "AR",
-                "group": "Reload",
+                "group": "ModuleAction",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "GunKharod_Upgrade_BPRUE_Reload_Competition"
+                  "GunKharod_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem"
                 ]
               }
             ],
             "Top": [
               {
-                "sid": "GunKharod_Upgrade_BPRUE_Reload_Competition",
+                "sid": "GunKharod_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
                 "class": "AR",
-                "group": "Reload",
+                "group": "ModuleAction",
                 "is_modification": true,
                 "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "GunKharod_Upgrade_BPRUE_Reload_Reinforced"
+                  "GunKharod_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction"
+                ]
+              }
+            ]
+          }
+        },
+        "Handguard": {
+          "2": {
+            "Down": [
+              {
+                "sid": "GunKharod_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing",
+                "class": "AR",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunKharod_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunKharod_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
+                "class": "AR",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunKharod_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ]
+          }
+        },
+        "PistolGrip": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunKharod_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
+                "class": "AR",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunKharod_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunKharod_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
+                "class": "AR",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunKharod_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents"
                 ]
               }
             ]
@@ -1936,12 +3640,40 @@
                 ]
               }
             ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunKharod_Upgrade_BPRUE_Reload_Reinforced",
+                "class": "AR",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunKharod_Upgrade_BPRUE_Reload_Competition"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunKharod_Upgrade_BPRUE_Reload_Competition",
+                "class": "AR",
+                "group": "Reload",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunKharod_Upgrade_BPRUE_Reload_Reinforced"
+                ]
+              }
+            ]
           }
         }
       }
     },
     "GunLavina_ST": {
-      "upgrade_count": 9,
+      "upgrade_count": 17,
       "slots": {
         "Barrel": {
           "0": {
@@ -1968,6 +3700,62 @@
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunLavina_Upgrade_BPRUE_FireRate_Balanced"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunLavina_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
+                "class": "AR",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunLavina_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunLavina_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
+                "class": "AR",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunLavina_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunLavina_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
+                "class": "AR",
+                "group": "ModuleAction",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunLavina_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunLavina_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
+                "class": "AR",
+                "group": "ModuleAction",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunLavina_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction"
                 ]
               }
             ]
@@ -2031,6 +3819,36 @@
             ]
           }
         },
+        "Handguard": {
+          "2": {
+            "Down": [
+              {
+                "sid": "GunLavina_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
+                "class": "AR",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunLavina_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunLavina_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
+                "class": "AR",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunLavina_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents"
+                ]
+              }
+            ]
+          }
+        },
         "Stock": {
           "1": {
             "Down": [
@@ -2075,12 +3893,40 @@
                 ]
               }
             ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunLavina_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing",
+                "class": "AR",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunLavina_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunLavina_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
+                "class": "AR",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunLavina_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ]
           }
         }
       }
     },
     "GunM10_HG": {
-      "upgrade_count": 9,
+      "upgrade_count": 15,
       "slots": {
         "Barrel": {
           "0": {
@@ -2128,19 +3974,6 @@
             ]
           },
           "1": {
-            "Down": [
-              {
-                "sid": "GunM10_Upgrade_BPRUE_Caliber_A919",
-                "class": "SMG",
-                "group": "Caliber",
-                "is_modification": true,
-                "horizontal_explicit": true,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "GunM10_Upgrade_BPRUE_Caliber_A918"
-                ]
-              }
-            ],
             "Top": [
               {
                 "sid": "GunM10_Upgrade_BPRUE_Pistol_Signature_SelectableFireControl",
@@ -2151,17 +3984,32 @@
                 "vertical_explicit": true,
                 "blocking_sids": []
               }
-            ],
-            "Unspecified": [
+            ]
+          },
+          "2": {
+            "Down": [
               {
-                "sid": "GunM10_Upgrade_BPRUE_Caliber_A918",
-                "class": "SMG",
-                "group": "Caliber",
+                "sid": "GunM10_Upgrade_BPRUE_PistolShared_ModulePrecision_PrecisionTuning",
+                "class": "Pistol",
+                "group": "ModulePrecision",
                 "is_modification": true,
                 "horizontal_explicit": true,
-                "vertical_explicit": false,
+                "vertical_explicit": true,
                 "blocking_sids": [
-                  "GunM10_Upgrade_BPRUE_Caliber_A919"
+                  "GunM10_Upgrade_BPRUE_PistolShared_ModulePrecision_RecoilControl"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunM10_Upgrade_BPRUE_PistolShared_ModulePrecision_RecoilControl",
+                "class": "Pistol",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM10_Upgrade_BPRUE_PistolShared_ModulePrecision_PrecisionTuning"
                 ]
               }
             ]
@@ -2211,12 +4059,96 @@
                 ]
               }
             ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunM10_Upgrade_BPRUE_PistolShared_ModuleHandling_ReinforcedAssembly",
+                "class": "Pistol",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM10_Upgrade_BPRUE_PistolShared_ModuleHandling_LightweightAssembly"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunM10_Upgrade_BPRUE_PistolShared_ModuleHandling_LightweightAssembly",
+                "class": "Pistol",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM10_Upgrade_BPRUE_PistolShared_ModuleHandling_ReinforcedAssembly"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunM10_Upgrade_BPRUE_Caliber_A919",
+                "class": "SMG",
+                "group": "Caliber",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunM10_Upgrade_BPRUE_Caliber_A918"
+                ]
+              }
+            ]
+          }
+        },
+        "Stock": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunM10_Upgrade_BPRUE_PistolShared_ModuleBallistics_ArmorPiercing",
+                "class": "Pistol",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM10_Upgrade_BPRUE_PistolShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunM10_Upgrade_BPRUE_PistolShared_ModuleBallistics_SoftTarget",
+                "class": "Pistol",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM10_Upgrade_BPRUE_PistolShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunM10_Upgrade_BPRUE_Caliber_A918",
+                "class": "SMG",
+                "group": "Caliber",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunM10_Upgrade_BPRUE_Caliber_A919"
+                ]
+              }
+            ]
           }
         }
       }
     },
     "GunM16_ST": {
-      "upgrade_count": 10,
+      "upgrade_count": 18,
       "slots": {
         "Barrel": {
           "0": {
@@ -2243,6 +4175,62 @@
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunM16_Upgrade_BPRUE_FireRate_Balanced"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunM16_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
+                "class": "AR",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM16_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunM16_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
+                "class": "AR",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM16_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunM16_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
+                "class": "AR",
+                "group": "ModuleAction",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM16_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunM16_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
+                "class": "AR",
+                "group": "ModuleAction",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM16_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction"
                 ]
               }
             ]
@@ -2286,6 +4274,64 @@
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunM16_Upgrade_BPRUE_FireControl_Precision"
+                ]
+              }
+            ]
+          }
+        },
+        "Handguard": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunM16_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing",
+                "class": "AR",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM16_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunM16_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
+                "class": "AR",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM16_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunM16_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
+                "class": "AR",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM16_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunM16_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
+                "class": "AR",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM16_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents"
                 ]
               }
             ]
@@ -2368,7 +4414,7 @@
       }
     },
     "GunM701_SP": {
-      "upgrade_count": 10,
+      "upgrade_count": 21,
       "slots": {
         "Barrel": {
           "1": {
@@ -2506,6 +4552,166 @@
             ]
           },
           "2": {
+            "Down": [
+              {
+                "sid": "GunM701_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents",
+                "class": "Sniper",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM701_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunM701_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+                "class": "Sniper",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM701_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents"
+                ]
+              }
+            ]
+          }
+        },
+        "Handguard": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunM701_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+                "class": "Sniper",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM701_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunM701_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+                "class": "Sniper",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM701_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunM701_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+                "class": "Sniper",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM701_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunM701_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+                "class": "Sniper",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM701_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunM701_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration",
+                "class": "Sniper",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM701_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunM701_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+                "class": "Sniper",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM701_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration"
+                ]
+              }
+            ]
+          }
+        },
+        "Stock": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunM701_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+                "class": "Sniper",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM701_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                  "GunM701_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunM701_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                "class": "Sniper",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM701_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+                  "GunM701_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunM701_Upgrade_BPRUE_Sniper_Stock_PrecisionStock",
+                "class": "Sniper",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunM701_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                  "GunM701_Upgrade_BPRUE_Sniper_Stock_AdjustableStock"
+                ]
+              }
+            ]
+          },
+          "2": {
             "Top": [
               {
                 "sid": "GunM701_Upgrade_BPRUE_Sniper_Signature_AntiMateriel",
@@ -2522,7 +4728,7 @@
       }
     },
     "GunM860_SG": {
-      "upgrade_count": 9,
+      "upgrade_count": 15,
       "slots": {
         "Barrel": {
           "1": {
@@ -2565,6 +4771,34 @@
                 "blocking_sids": [
                   "GunM860_Upgrade_BPRUE_SG_Pattern_Breacher",
                   "GunM860_Upgrade_BPRUE_SG_Pattern_FieldChoke"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunM860_Upgrade_BPRUE_SGShared_ModuleRangeProfile_RangeConfiguration",
+                "class": "SG",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM860_Upgrade_BPRUE_SGShared_ModuleRangeProfile_CqbConfiguration"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunM860_Upgrade_BPRUE_SGShared_ModuleRangeProfile_CqbConfiguration",
+                "class": "SG",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM860_Upgrade_BPRUE_SGShared_ModuleRangeProfile_RangeConfiguration"
                 ]
               }
             ]
@@ -2659,11 +4893,69 @@
               }
             ]
           }
+        },
+        "Stock": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunM860_Upgrade_BPRUE_SGShared_ModuleHandling_ReinforcedAssembly",
+                "class": "SG",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM860_Upgrade_BPRUE_SGShared_ModuleHandling_LightweightAssembly"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunM860_Upgrade_BPRUE_SGShared_ModuleHandling_LightweightAssembly",
+                "class": "SG",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM860_Upgrade_BPRUE_SGShared_ModuleHandling_ReinforcedAssembly"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunM860_Upgrade_BPRUE_SGShared_ModuleReliability_LightweightComponents",
+                "class": "SG",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM860_Upgrade_BPRUE_SGShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunM860_Upgrade_BPRUE_SGShared_ModuleReliability_HardenedComponents",
+                "class": "SG",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunM860_Upgrade_BPRUE_SGShared_ModuleReliability_LightweightComponents"
+                ]
+              }
+            ]
+          }
         }
       }
     },
     "GunMark_SP": {
-      "upgrade_count": 10,
+      "upgrade_count": 21,
       "slots": {
         "Barrel": {
           "1": {
@@ -2801,6 +5093,168 @@
             ]
           },
           "2": {
+            "Down": [
+              {
+                "sid": "GunMark_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents",
+                "class": "Sniper",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunMark_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunMark_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+                "class": "Sniper",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunMark_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents"
+                ]
+              }
+            ]
+          }
+        },
+        "Handguard": {
+          "2": {
+            "Down": [
+              {
+                "sid": "GunMark_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+                "class": "Sniper",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunMark_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunMark_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+                "class": "Sniper",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunMark_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning"
+                ]
+              }
+            ]
+          }
+        },
+        "PistolGrip": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunMark_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+                "class": "Sniper",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunMark_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunMark_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+                "class": "Sniper",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunMark_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunMark_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration",
+                "class": "Sniper",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunMark_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunMark_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+                "class": "Sniper",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunMark_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration"
+                ]
+              }
+            ]
+          }
+        },
+        "Stock": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunMark_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+                "class": "Sniper",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunMark_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                  "GunMark_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunMark_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                "class": "Sniper",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunMark_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+                  "GunMark_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunMark_Upgrade_BPRUE_Sniper_Stock_PrecisionStock",
+                "class": "Sniper",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunMark_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                  "GunMark_Upgrade_BPRUE_Sniper_Stock_AdjustableStock"
+                ]
+              }
+            ]
+          },
+          "2": {
             "Top": [
               {
                 "sid": "GunMark_Upgrade_BPRUE_Sniper_Signature_MatchTrigger",
@@ -2817,7 +5271,7 @@
       }
     },
     "GunPM_HG": {
-      "upgrade_count": 7,
+      "upgrade_count": 13,
       "slots": {
         "Barrel": {
           "0": {
@@ -2876,6 +5330,34 @@
                 "blocking_sids": []
               }
             ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunPM_Upgrade_BPRUE_PistolShared_ModulePrecision_PrecisionTuning",
+                "class": "Pistol",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunPM_Upgrade_BPRUE_PistolShared_ModulePrecision_RecoilControl"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunPM_Upgrade_BPRUE_PistolShared_ModulePrecision_RecoilControl",
+                "class": "Pistol",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunPM_Upgrade_BPRUE_PistolShared_ModulePrecision_PrecisionTuning"
+                ]
+              }
+            ]
           }
         },
         "Body": {
@@ -2922,12 +5404,68 @@
                 ]
               }
             ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunPM_Upgrade_BPRUE_PistolShared_ModuleHandling_ReinforcedAssembly",
+                "class": "Pistol",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunPM_Upgrade_BPRUE_PistolShared_ModuleHandling_LightweightAssembly"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunPM_Upgrade_BPRUE_PistolShared_ModuleHandling_LightweightAssembly",
+                "class": "Pistol",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunPM_Upgrade_BPRUE_PistolShared_ModuleHandling_ReinforcedAssembly"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunPM_Upgrade_BPRUE_PistolShared_ModuleBallistics_ArmorPiercing",
+                "class": "Pistol",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunPM_Upgrade_BPRUE_PistolShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunPM_Upgrade_BPRUE_PistolShared_ModuleBallistics_SoftTarget",
+                "class": "Pistol",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunPM_Upgrade_BPRUE_PistolShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ]
           }
         }
       }
     },
     "GunRam2_SG": {
-      "upgrade_count": 9,
+      "upgrade_count": 15,
       "slots": {
         "Barrel": {
           "1": {
@@ -2970,6 +5508,34 @@
                 "blocking_sids": [
                   "GunRam2_Upgrade_BPRUE_SG_Pattern_Breacher",
                   "GunRam2_Upgrade_BPRUE_SG_Pattern_FieldChoke"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunRam2_Upgrade_BPRUE_SGShared_ModuleRangeProfile_RangeConfiguration",
+                "class": "SG",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunRam2_Upgrade_BPRUE_SGShared_ModuleRangeProfile_CqbConfiguration"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunRam2_Upgrade_BPRUE_SGShared_ModuleRangeProfile_CqbConfiguration",
+                "class": "SG",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunRam2_Upgrade_BPRUE_SGShared_ModuleRangeProfile_RangeConfiguration"
                 ]
               }
             ]
@@ -3063,12 +5629,70 @@
                 ]
               }
             ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunRam2_Upgrade_BPRUE_SGShared_ModuleHandling_ReinforcedAssembly",
+                "class": "SG",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunRam2_Upgrade_BPRUE_SGShared_ModuleHandling_LightweightAssembly"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunRam2_Upgrade_BPRUE_SGShared_ModuleHandling_LightweightAssembly",
+                "class": "SG",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunRam2_Upgrade_BPRUE_SGShared_ModuleHandling_ReinforcedAssembly"
+                ]
+              }
+            ]
+          }
+        },
+        "Stock": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunRam2_Upgrade_BPRUE_SGShared_ModuleReliability_LightweightComponents",
+                "class": "SG",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunRam2_Upgrade_BPRUE_SGShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunRam2_Upgrade_BPRUE_SGShared_ModuleReliability_HardenedComponents",
+                "class": "SG",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunRam2_Upgrade_BPRUE_SGShared_ModuleReliability_LightweightComponents"
+                ]
+              }
+            ]
           }
         }
       }
     },
     "GunRhino_HG": {
-      "upgrade_count": 7,
+      "upgrade_count": 13,
       "slots": {
         "Barrel": {
           "1": {
@@ -3173,12 +5797,98 @@
                 ]
               }
             ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunRhino_Upgrade_BPRUE_PistolShared_ModuleHandling_ReinforcedAssembly",
+                "class": "Pistol",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunRhino_Upgrade_BPRUE_PistolShared_ModuleHandling_LightweightAssembly"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunRhino_Upgrade_BPRUE_PistolShared_ModuleHandling_LightweightAssembly",
+                "class": "Pistol",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunRhino_Upgrade_BPRUE_PistolShared_ModuleHandling_ReinforcedAssembly"
+                ]
+              }
+            ]
+          }
+        },
+        "Stock": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunRhino_Upgrade_BPRUE_PistolShared_ModulePrecision_PrecisionTuning",
+                "class": "Pistol",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunRhino_Upgrade_BPRUE_PistolShared_ModulePrecision_RecoilControl"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunRhino_Upgrade_BPRUE_PistolShared_ModulePrecision_RecoilControl",
+                "class": "Pistol",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunRhino_Upgrade_BPRUE_PistolShared_ModulePrecision_PrecisionTuning"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunRhino_Upgrade_BPRUE_PistolShared_ModuleBallistics_ArmorPiercing",
+                "class": "Pistol",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunRhino_Upgrade_BPRUE_PistolShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunRhino_Upgrade_BPRUE_PistolShared_ModuleBallistics_SoftTarget",
+                "class": "Pistol",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunRhino_Upgrade_BPRUE_PistolShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ]
           }
         }
       }
     },
     "GunSKP_DMR_GS": {
-      "upgrade_count": 10,
+      "upgrade_count": 21,
       "slots": {
         "Barrel": {
           "1": {
@@ -3316,6 +6026,168 @@
             ]
           },
           "2": {
+            "Down": [
+              {
+                "sid": "GunSKP_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents",
+                "class": "Sniper",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSKP_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunSKP_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+                "class": "Sniper",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSKP_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents"
+                ]
+              }
+            ]
+          }
+        },
+        "Handguard": {
+          "2": {
+            "Down": [
+              {
+                "sid": "GunSKP_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+                "class": "Sniper",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSKP_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunSKP_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+                "class": "Sniper",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSKP_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning"
+                ]
+              }
+            ]
+          }
+        },
+        "PistolGrip": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunSKP_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+                "class": "Sniper",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSKP_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunSKP_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+                "class": "Sniper",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSKP_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunSKP_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration",
+                "class": "Sniper",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSKP_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunSKP_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+                "class": "Sniper",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSKP_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration"
+                ]
+              }
+            ]
+          }
+        },
+        "Stock": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunSKP_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+                "class": "Sniper",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSKP_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                  "GunSKP_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunSKP_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                "class": "Sniper",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSKP_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+                  "GunSKP_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunSKP_Upgrade_BPRUE_Sniper_Stock_PrecisionStock",
+                "class": "Sniper",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunSKP_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                  "GunSKP_Upgrade_BPRUE_Sniper_Stock_AdjustableStock"
+                ]
+              }
+            ]
+          },
+          "2": {
             "Top": [
               {
                 "sid": "GunSKP_Upgrade_BPRUE_Sniper_Signature_BattleRifle",
@@ -3332,7 +6204,7 @@
       }
     },
     "GunSPSA_SG": {
-      "upgrade_count": 9,
+      "upgrade_count": 15,
       "slots": {
         "Barrel": {
           "2": {
@@ -3469,11 +6341,99 @@
               }
             ]
           }
+        },
+        "Handguard": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunSPSA_Upgrade_BPRUE_SGShared_ModuleReliability_LightweightComponents",
+                "class": "SG",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSPSA_Upgrade_BPRUE_SGShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunSPSA_Upgrade_BPRUE_SGShared_ModuleReliability_HardenedComponents",
+                "class": "SG",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSPSA_Upgrade_BPRUE_SGShared_ModuleReliability_LightweightComponents"
+                ]
+              }
+            ]
+          }
+        },
+        "Stock": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunSPSA_Upgrade_BPRUE_SGShared_ModuleRangeProfile_RangeConfiguration",
+                "class": "SG",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSPSA_Upgrade_BPRUE_SGShared_ModuleRangeProfile_CqbConfiguration"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunSPSA_Upgrade_BPRUE_SGShared_ModuleRangeProfile_CqbConfiguration",
+                "class": "SG",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSPSA_Upgrade_BPRUE_SGShared_ModuleRangeProfile_RangeConfiguration"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunSPSA_Upgrade_BPRUE_SGShared_ModuleHandling_ReinforcedAssembly",
+                "class": "SG",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSPSA_Upgrade_BPRUE_SGShared_ModuleHandling_LightweightAssembly"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunSPSA_Upgrade_BPRUE_SGShared_ModuleHandling_LightweightAssembly",
+                "class": "SG",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSPSA_Upgrade_BPRUE_SGShared_ModuleHandling_ReinforcedAssembly"
+                ]
+              }
+            ]
+          }
         }
       }
     },
     "GunSVDM_SP": {
-      "upgrade_count": 10,
+      "upgrade_count": 21,
       "slots": {
         "Barrel": {
           "1": {
@@ -3611,6 +6571,166 @@
             ]
           },
           "2": {
+            "Down": [
+              {
+                "sid": "GunSVDM_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents",
+                "class": "Sniper",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSVDM_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunSVDM_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+                "class": "Sniper",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSVDM_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents"
+                ]
+              }
+            ]
+          }
+        },
+        "Handguard": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunSVDM_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+                "class": "Sniper",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSVDM_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunSVDM_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+                "class": "Sniper",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSVDM_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunSVDM_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+                "class": "Sniper",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSVDM_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunSVDM_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+                "class": "Sniper",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSVDM_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunSVDM_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration",
+                "class": "Sniper",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSVDM_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunSVDM_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+                "class": "Sniper",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSVDM_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration"
+                ]
+              }
+            ]
+          }
+        },
+        "Stock": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunSVDM_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+                "class": "Sniper",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSVDM_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                  "GunSVDM_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunSVDM_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                "class": "Sniper",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSVDM_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+                  "GunSVDM_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunSVDM_Upgrade_BPRUE_Sniper_Stock_PrecisionStock",
+                "class": "Sniper",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunSVDM_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                  "GunSVDM_Upgrade_BPRUE_Sniper_Stock_AdjustableStock"
+                ]
+              }
+            ]
+          },
+          "2": {
             "Top": [
               {
                 "sid": "GunSVDM_Upgrade_BPRUE_Sniper_Signature_RapidMarksman",
@@ -3627,7 +6747,7 @@
       }
     },
     "GunSVU_SP": {
-      "upgrade_count": 10,
+      "upgrade_count": 21,
       "slots": {
         "Barrel": {
           "1": {
@@ -3765,6 +6885,34 @@
             ]
           },
           "1": {
+            "Down": [
+              {
+                "sid": "GunSVU_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents",
+                "class": "Sniper",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSVU_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunSVU_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+                "class": "Sniper",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSVU_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents"
+                ]
+              }
+            ]
+          },
+          "2": {
             "Top": [
               {
                 "sid": "GunSVU_Upgrade_BPRUE_Sniper_Signature_ReconMarksman",
@@ -3777,11 +6925,145 @@
               }
             ]
           }
+        },
+        "Handguard": {
+          "2": {
+            "Down": [
+              {
+                "sid": "GunSVU_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+                "class": "Sniper",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSVU_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunSVU_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+                "class": "Sniper",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSVU_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ]
+          }
+        },
+        "PistolGrip": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunSVU_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration",
+                "class": "Sniper",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSVU_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunSVU_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+                "class": "Sniper",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSVU_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration"
+                ]
+              }
+            ]
+          }
+        },
+        "Stock": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunSVU_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+                "class": "Sniper",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSVU_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                  "GunSVU_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunSVU_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                "class": "Sniper",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSVU_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+                  "GunSVU_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunSVU_Upgrade_BPRUE_Sniper_Stock_PrecisionStock",
+                "class": "Sniper",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunSVU_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                  "GunSVU_Upgrade_BPRUE_Sniper_Stock_AdjustableStock"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunSVU_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+                "class": "Sniper",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSVU_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunSVU_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+                "class": "Sniper",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSVU_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning"
+                ]
+              }
+            ]
+          }
         }
       }
     },
     "GunTOZ_SG": {
-      "upgrade_count": 9,
+      "upgrade_count": 15,
       "slots": {
         "Barrel": {
           "0": {
@@ -3824,6 +7106,34 @@
                 "blocking_sids": [
                   "GunTOZ_Upgrade_BPRUE_SG_Pattern_Breacher",
                   "GunTOZ_Upgrade_BPRUE_SG_Pattern_FieldChoke"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunTOZ_Upgrade_BPRUE_SGShared_ModuleRangeProfile_RangeConfiguration",
+                "class": "SG",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunTOZ_Upgrade_BPRUE_SGShared_ModuleRangeProfile_CqbConfiguration"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunTOZ_Upgrade_BPRUE_SGShared_ModuleRangeProfile_CqbConfiguration",
+                "class": "SG",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunTOZ_Upgrade_BPRUE_SGShared_ModuleRangeProfile_RangeConfiguration"
                 ]
               }
             ]
@@ -3917,12 +7227,70 @@
                 ]
               }
             ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunTOZ_Upgrade_BPRUE_SGShared_ModuleHandling_ReinforcedAssembly",
+                "class": "SG",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunTOZ_Upgrade_BPRUE_SGShared_ModuleHandling_LightweightAssembly"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunTOZ_Upgrade_BPRUE_SGShared_ModuleHandling_LightweightAssembly",
+                "class": "SG",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunTOZ_Upgrade_BPRUE_SGShared_ModuleHandling_ReinforcedAssembly"
+                ]
+              }
+            ]
+          }
+        },
+        "Stock": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunTOZ_Upgrade_BPRUE_SGShared_ModuleReliability_LightweightComponents",
+                "class": "SG",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunTOZ_Upgrade_BPRUE_SGShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunTOZ_Upgrade_BPRUE_SGShared_ModuleReliability_HardenedComponents",
+                "class": "SG",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunTOZ_Upgrade_BPRUE_SGShared_ModuleReliability_LightweightComponents"
+                ]
+              }
+            ]
           }
         }
       }
     },
     "GunThreeLine_SP_GS": {
-      "upgrade_count": 10,
+      "upgrade_count": 21,
       "slots": {
         "Barrel": {
           "2": {
@@ -4060,6 +7428,166 @@
             ]
           },
           "2": {
+            "Down": [
+              {
+                "sid": "GunThreeLine_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents",
+                "class": "Sniper",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunThreeLine_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunThreeLine_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+                "class": "Sniper",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunThreeLine_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents"
+                ]
+              }
+            ]
+          }
+        },
+        "Handguard": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunThreeLine_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+                "class": "Sniper",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunThreeLine_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunThreeLine_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+                "class": "Sniper",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunThreeLine_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunThreeLine_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+                "class": "Sniper",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunThreeLine_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunThreeLine_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+                "class": "Sniper",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunThreeLine_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunThreeLine_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration",
+                "class": "Sniper",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunThreeLine_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunThreeLine_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+                "class": "Sniper",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunThreeLine_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration"
+                ]
+              }
+            ]
+          }
+        },
+        "Stock": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunThreeLine_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+                "class": "Sniper",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunThreeLine_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                  "GunThreeLine_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunThreeLine_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                "class": "Sniper",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunThreeLine_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+                  "GunThreeLine_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunThreeLine_Upgrade_BPRUE_Sniper_Stock_PrecisionStock",
+                "class": "Sniper",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunThreeLine_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+                  "GunThreeLine_Upgrade_BPRUE_Sniper_Stock_AdjustableStock"
+                ]
+              }
+            ]
+          },
+          "2": {
             "Top": [
               {
                 "sid": "GunThreeLine_Upgrade_BPRUE_Sniper_Signature_MadMinute",
@@ -4076,7 +7604,7 @@
       }
     },
     "GunUDP_HG": {
-      "upgrade_count": 7,
+      "upgrade_count": 13,
       "slots": {
         "Barrel": {
           "1": {
@@ -4181,12 +7709,98 @@
                 ]
               }
             ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunUDP_Upgrade_BPRUE_PistolShared_ModuleHandling_ReinforcedAssembly",
+                "class": "Pistol",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunUDP_Upgrade_BPRUE_PistolShared_ModuleHandling_LightweightAssembly"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunUDP_Upgrade_BPRUE_PistolShared_ModuleHandling_LightweightAssembly",
+                "class": "Pistol",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunUDP_Upgrade_BPRUE_PistolShared_ModuleHandling_ReinforcedAssembly"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunUDP_Upgrade_BPRUE_PistolShared_ModulePrecision_PrecisionTuning",
+                "class": "Pistol",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunUDP_Upgrade_BPRUE_PistolShared_ModulePrecision_RecoilControl"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunUDP_Upgrade_BPRUE_PistolShared_ModulePrecision_RecoilControl",
+                "class": "Pistol",
+                "group": "ModulePrecision",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunUDP_Upgrade_BPRUE_PistolShared_ModulePrecision_PrecisionTuning"
+                ]
+              }
+            ]
+          }
+        },
+        "Stock": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunUDP_Upgrade_BPRUE_PistolShared_ModuleBallistics_ArmorPiercing",
+                "class": "Pistol",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunUDP_Upgrade_BPRUE_PistolShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunUDP_Upgrade_BPRUE_PistolShared_ModuleBallistics_SoftTarget",
+                "class": "Pistol",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunUDP_Upgrade_BPRUE_PistolShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ]
           }
         }
       }
     },
     "GunViper_PP": {
-      "upgrade_count": 9,
+      "upgrade_count": 20,
       "slots": {
         "Barrel": {
           "1": {
@@ -4215,16 +7829,33 @@
                   "GunViper_Upgrade_BPRUE_Action_Controlled"
                 ]
               }
-            ],
-            "Unspecified": [
+            ]
+          },
+          "2": {
+            "Down": [
               {
-                "sid": "GunViper_Upgrade_BPRUE_PistolConversion",
+                "sid": "GunViper_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction",
                 "class": "SMG",
-                "group": "Conversion",
+                "group": "ModuleAction",
                 "is_modification": true,
                 "horizontal_explicit": true,
-                "vertical_explicit": false,
-                "blocking_sids": []
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunViper_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunViper_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
+                "class": "SMG",
+                "group": "ModuleAction",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunViper_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction"
+                ]
               }
             ]
           }
@@ -4312,11 +7943,154 @@
               }
             ]
           }
+        },
+        "Handguard": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunViper_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
+                "class": "SMG",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunViper_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunViper_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
+                "class": "SMG",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunViper_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunViper_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration",
+                "class": "SMG",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunViper_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunViper_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration",
+                "class": "SMG",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunViper_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration"
+                ]
+              }
+            ]
+          }
+        },
+        "Stock": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunViper_Upgrade_BPRUE_Stock_Tactical",
+                "class": "SMG",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunViper_Upgrade_BPRUE_Stock_Lightweight",
+                  "GunViper_Upgrade_BPRUE_Stock_Stabilized"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunViper_Upgrade_BPRUE_Stock_Lightweight",
+                "class": "SMG",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunViper_Upgrade_BPRUE_Stock_Tactical",
+                  "GunViper_Upgrade_BPRUE_Stock_Stabilized"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunViper_Upgrade_BPRUE_Stock_Stabilized",
+                "class": "SMG",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunViper_Upgrade_BPRUE_Stock_Lightweight",
+                  "GunViper_Upgrade_BPRUE_Stock_Tactical"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunViper_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing",
+                "class": "SMG",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunViper_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunViper_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget",
+                "class": "SMG",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunViper_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunViper_Upgrade_BPRUE_PistolConversion",
+                "class": "SMG",
+                "group": "Conversion",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": []
+              }
+            ]
+          }
         }
       }
     },
     "GunZubr_PP": {
-      "upgrade_count": 9,
+      "upgrade_count": 20,
       "slots": {
         "Barrel": {
           "1": {
@@ -4345,16 +8119,33 @@
                   "GunZubr_Upgrade_BPRUE_Action_Controlled"
                 ]
               }
-            ],
-            "Unspecified": [
+            ]
+          },
+          "2": {
+            "Down": [
               {
-                "sid": "GunZubr_Upgrade_BPRUE_PistolConversion",
+                "sid": "GunZubr_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction",
                 "class": "SMG",
-                "group": "Conversion",
+                "group": "ModuleAction",
                 "is_modification": true,
                 "horizontal_explicit": true,
-                "vertical_explicit": false,
-                "blocking_sids": []
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunZubr_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunZubr_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
+                "class": "SMG",
+                "group": "ModuleAction",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunZubr_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction"
+                ]
               }
             ]
           }
@@ -4439,6 +8230,149 @@
                 "blocking_sids": [
                   "GunZubr_Upgrade_BPRUE_Caliber_A918"
                 ]
+              }
+            ]
+          }
+        },
+        "Handguard": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunZubr_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
+                "class": "SMG",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunZubr_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunZubr_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
+                "class": "SMG",
+                "group": "ModuleHandling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunZubr_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunZubr_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration",
+                "class": "SMG",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunZubr_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunZubr_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration",
+                "class": "SMG",
+                "group": "ModuleRangeProfile",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunZubr_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration"
+                ]
+              }
+            ]
+          }
+        },
+        "Stock": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunZubr_Upgrade_BPRUE_Stock_Tactical",
+                "class": "SMG",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunZubr_Upgrade_BPRUE_Stock_Lightweight",
+                  "GunZubr_Upgrade_BPRUE_Stock_Stabilized"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunZubr_Upgrade_BPRUE_Stock_Lightweight",
+                "class": "SMG",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunZubr_Upgrade_BPRUE_Stock_Tactical",
+                  "GunZubr_Upgrade_BPRUE_Stock_Stabilized"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunZubr_Upgrade_BPRUE_Stock_Stabilized",
+                "class": "SMG",
+                "group": "Stock",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunZubr_Upgrade_BPRUE_Stock_Lightweight",
+                  "GunZubr_Upgrade_BPRUE_Stock_Tactical"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunZubr_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing",
+                "class": "SMG",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunZubr_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunZubr_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget",
+                "class": "SMG",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunZubr_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunZubr_Upgrade_BPRUE_PistolConversion",
+                "class": "SMG",
+                "group": "Conversion",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": []
               }
             ]
           }
