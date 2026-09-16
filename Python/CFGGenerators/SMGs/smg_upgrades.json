@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "description": "SMG specialization modules emphasize readiness, reload speed, stock configuration and aggressive close-range handling with explicit trade-offs. Pistol-caliber SMGs also expose permanent caliber-conversion choices.",
+  "description": "SMG specialization modules emphasize readiness, reload speed, stock configuration and aggressive close-range handling with explicit trade-offs. Pistol-caliber SMGs expose BPRUE caliber conversions only when Vanilla does not already provide a caliber conversion.",
   "families": {
     "Viper": {"weapon_sid": "GunViper_PP", "general_setup_sid": "GunViper_PP", "prototype_prefix": "GunViper"},
     "AKU": {"weapon_sid": "GunAKU_PP", "general_setup_sid": "GunAKU_PP", "prototype_prefix": "GunAKU"},
@@ -10,11 +10,11 @@
     "Fora230": {"weapon_sid": "GunFora230_PP", "general_setup_sid": "GunFora230_PP_GS", "prototype_prefix": "GunFora230"}
   },
   "caliber_families": {
-    "Viper": {"general_setup_sid": "GunViper_PP", "prototype_prefix": "GunViper", "base_caliber": "A919", "conversions": ["A918", "A045"]},
+    "Viper": {"general_setup_sid": "GunViper_PP", "prototype_prefix": "GunViper", "base_caliber": "A919", "conversions": ["A918", "A045"], "bprue_caliber_conversion": false},
     "Bucket": {"general_setup_sid": "GunBucket_PP", "prototype_prefix": "GunBucket", "base_caliber": "A918", "conversions": ["A919", "A045"]},
-    "Integral": {"general_setup_sid": "GunIntegral_PP", "prototype_prefix": "GunIntegral", "base_caliber": "A919", "conversions": ["A918", "A045"]},
+    "Integral": {"general_setup_sid": "GunIntegral_PP", "prototype_prefix": "GunIntegral", "base_caliber": "A919", "conversions": ["A918", "A045"], "bprue_caliber_conversion": false},
     "Zubr": {"general_setup_sid": "GunZubr_PP", "prototype_prefix": "GunZubr", "base_caliber": "A919", "conversions": ["A918", "A045"]},
-    "Fora230": {"general_setup_sid": "GunFora230_PP_GS", "prototype_prefix": "GunFora230", "base_caliber": "A919", "conversions": ["A918", "A045"]},
+    "Fora230": {"general_setup_sid": "GunFora230_PP_GS", "prototype_prefix": "GunFora230", "base_caliber": "A919", "conversions": ["A918", "A045"], "bprue_caliber_conversion": false},
     "M10": {"general_setup_sid": "GunM10_HG", "prototype_prefix": "GunM10", "base_caliber": "A045", "conversions": ["A919", "A918"]}
   },
   "module_groups": {
