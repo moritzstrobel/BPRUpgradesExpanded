@@ -4,8 +4,8 @@
     "generated_setups": 23,
     "generated_upgrades": 399,
     "duplicate_generated_sids": 0,
-    "known_effect_sids": 2496,
-    "errors": 1
+    "known_effect_sids": 2497,
+    "errors": 0
   },
   "packs": {
     "DLC1": {
@@ -42,7 +42,7 @@
       "registration_errors": 0,
       "retention_errors": 0,
       "blocking_reference_errors": 0,
-      "effect_reference_errors": 1,
+      "effect_reference_errors": 0,
       "section_errors": 0,
       "output_files": {
         "upgrades": {
@@ -58,9 +58,7 @@
           "exists": true
         }
       },
-      "errors": [
-        "BPRUEDLCDeluxeMonolitHG_Upgrade_BPRUE_Pistol_Signature_QuickResponse: unknown effect refs: AimingTimePos20Effect"
-      ]
+      "errors": []
     },
     "PreOrder": {
       "expected_weapons": 1,
@@ -116,7 +114,5 @@
     }
   },
   "duplicate_sids": [],
-  "errors": [
-    "Deluxe: BPRUEDLCDeluxeMonolitHG_Upgrade_BPRUE_Pistol_Signature_QuickResponse: unknown effect refs: AimingTimePos20Effect"
-  ]
+  "errors": []
 }
