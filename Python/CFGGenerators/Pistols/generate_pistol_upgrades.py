@@ -31,6 +31,7 @@ SIGNATURES = {
     "automatic_sear": (3800, ["ChangeFireTypeEffectBurstAuto", "BPRUE_Pistol_RecoilPenalty15Effect", "BPRUE_DurabilityPerShotNeg20Effect"]),
     "hunting_cylinder": (4500, ["ArmorPiercingPos20Effect", "ProjectileSpeedPos20Effect", "BPRUE_Pistol_FireIntervalPos10Effect"]),
     "selectable_fire_control": (3200, ["ChangeFireTypeEffectSemiAuto", "RecoilPos10Effect"]),
+    "heavy_slide": (3400, ["RecoilPos20Effect", "ShotRecoveryPos20Effect", "DurabilityPos10Effect", "AimingTimeNeg10Effect"]),
 }
 IMAGE = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Handgun/APB/Barrel/Upgrade/T_APBU_a_1.T_APBU_a_1'"
 ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_Recoil.T_PDA_Upgrades_Icon_Recoil'"
