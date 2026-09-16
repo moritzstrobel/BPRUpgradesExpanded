@@ -47,6 +47,8 @@ CALIBER_STAT_EFFECTS = {
     ("A918", "A919"): ("BPRUE_SMG_DamagePos10Effect", "BPRUE_SMG_EffectiveRangePos10Effect", "BPRUE_SMG_RecoilPenalty10Effect", "BPRUE_DurabilityPerShotNeg10Effect"),
     ("A045", "A919"): ("BPRUE_SMG_RecoilPos10Effect", "BPRUE_SMG_EffectiveRangePos10Effect", "BPRUE_SMG_DamagePenalty10Effect"),
     ("A919", "A918"): ("BPRUE_SMG_RecoilPos15Effect", "BPRUE_SMG_DurabilityPerShotPos10Effect", "BPRUE_SMG_DamagePenalty10Effect", "BPRUE_SMG_EffectiveRangePenalty10Effect"),
+    ("A918", "A045"): ("BPRUE_SMG_DamagePos15Effect", "BPRUE_SMG_RecoilPenalty25Effect", "BPRUE_SMG_EffectiveRangePenalty15Effect"),
+    ("A045", "A918"): ("BPRUE_SMG_RecoilPos15Effect", "BPRUE_SMG_EffectiveRangePos15Effect", "BPRUE_SMG_DamagePenalty15Effect"),
 }
 
 IMAGE = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/AK74/Barrel/Upgrade/T_AK47_Upg_a_1.T_AK47_Upg_a_1'"
@@ -82,12 +84,16 @@ def render_effects() -> str:
         ("BPRUE_SMG_DamagePos15Effect", "WeaponDamage", "15%", "Positive", "bprue_damage"),
         ("BPRUE_SMG_DamagePos10Effect", "WeaponDamage", "10%", "Positive", "bprue_damage"),
         ("BPRUE_SMG_DamagePenalty10Effect", "WeaponDamage", "-10%", "Negative", "bprue_damage"),
+        ("BPRUE_SMG_DamagePenalty15Effect", "WeaponDamage", "-15%", "Negative", "bprue_damage"),
+        ("BPRUE_SMG_RecoilPenalty25Effect", "Recoil", "-25%", "Negative", "bprue_recoil"),
         ("BPRUE_SMG_RecoilPenalty20Effect", "Recoil", "-20%", "Negative", "bprue_recoil"),
         ("BPRUE_SMG_RecoilPenalty10Effect", "Recoil", "-10%", "Negative", "bprue_recoil"),
         ("BPRUE_SMG_RecoilPos10Effect", "Recoil", "10%", "Positive", "bprue_recoil"),
         ("BPRUE_SMG_RecoilPos15Effect", "Recoil", "15%", "Positive", "bprue_recoil"),
         ("BPRUE_SMG_EffectiveRangePos10Effect", "EffectiveFireDistance", "10%", "Positive", "bprue_effective_range"),
+        ("BPRUE_SMG_EffectiveRangePos15Effect", "EffectiveFireDistance", "15%", "Positive", "bprue_effective_range"),
         ("BPRUE_SMG_EffectiveRangePenalty10Effect", "EffectiveFireDistance", "-10%", "Negative", "bprue_effective_range"),
+        ("BPRUE_SMG_EffectiveRangePenalty15Effect", "EffectiveFireDistance", "-15%", "Negative", "bprue_effective_range"),
         ("BPRUE_SMG_DurabilityPerShotPos10Effect", "DurabilityPerShot", "-10%", "Positive", "bprue_weapon_wear"),
     ]
     lines=["// AUTO-GENERATED - Source: smg_upgrades.json", "", "BPRUE_SMG_ReloadingTimePos10Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}", "   SID = BPRUE_SMG_ReloadingTimePos10Effect", "   Text = Increase Reloading Time", "   Type = EEffectType::ReloadingTime", "   LocalizationSID = bprue_reload_speed", "   ValueMin = 10%", "   ValueMax = 10%", "   bIsPermanent = true", "   Positive = EBeneficial::Negative", "   ShowUpgradeEffectValue = true", "   ShowUpgradeEffect = true", "struct.end", ""]
