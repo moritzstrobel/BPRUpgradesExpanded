@@ -19,14 +19,14 @@
   },
   "summary": {
     "vanilla_candidate_general_setups": 54,
-    "bprue_configured_general_setups": 34,
-    "bprue_configured_weapon_sids": 34,
-    "suspected_missing": 15,
+    "bprue_configured_general_setups": 36,
+    "bprue_configured_weapon_sids": 36,
+    "suspected_missing": 13,
     "excluded_unique_or_variant_candidates": 5,
     "suspected_missing_by_class": {
       "MachineGuns": 2,
-      "Pistols": 7,
-      "Shotguns": 4,
+      "Pistols": 6,
+      "Shotguns": 3,
       "Snipers": 2
     },
     "excluded_by_class": {
@@ -142,6 +142,13 @@
       "source": "CFGGenerators\\AssaultRifles\\assault_rifles_upgrades.json"
     },
     {
+      "family": "Kora",
+      "class": "Pistols",
+      "weapon_sid": "GunKora_HG",
+      "general_setup_sid": "GunKora_HG",
+      "source": "CFGGenerators\\Pistols\\pistol_upgrades.json"
+    },
+    {
       "family": "Lavina",
       "class": "AssaultRifles",
       "weapon_sid": "GunLavina_ST",
@@ -182,6 +189,13 @@
       "weapon_sid": "GunMark_SP",
       "general_setup_sid": "GunMark_SP",
       "source": "CFGGenerators\\Snipers\\sniper_upgrades.json"
+    },
+    {
+      "family": "Boomstick",
+      "class": "Shotguns",
+      "weapon_sid": "GunObrez_SG",
+      "general_setup_sid": "GunObrez_SG",
+      "source": "CFGGenerators\\Shotguns\\shotgun_upgrades.json"
     },
     {
       "family": "PKP",
@@ -293,26 +307,6 @@
       "status": "suspected_missing",
       "review_reasons": [
         "no_same_sid_weapon_prototype"
-      ]
-    },
-    {
-      "general_setup_sid": "GunKora_HG",
-      "weapon_sid": "GunKora_HG",
-      "class": "Pistols",
-      "parent_weapon_sid": "TemplatePistol",
-      "status": "suspected_missing",
-      "review_reasons": [
-        "vanilla_weapon_and_setup_not_covered_by_bprue"
-      ]
-    },
-    {
-      "general_setup_sid": "GunObrez_SG",
-      "weapon_sid": "GunObrez_SG",
-      "class": "Shotguns",
-      "parent_weapon_sid": "TemplateShotgun",
-      "status": "suspected_missing",
-      "review_reasons": [
-        "vanilla_weapon_and_setup_not_covered_by_bprue"
       ]
     },
     {
