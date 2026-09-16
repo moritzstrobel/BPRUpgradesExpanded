@@ -24,7 +24,7 @@ from specialization_modules import build_shared_specializations, render_shared_e
 from unique_weapon_modules import add_unique_modules
 from upgrade_build_model import UpgradeBuildModel
 from upgrade_renderers import render_consolidated_upgrade_prototypes, render_dlc_general_setup_patch, render_final_general_setup_patch, render_technician_patch
-from vanilla_upgrade_layout import VANILLA_WEAPONS, _direct_child, _direct_scalar, _indexed_children, _sid, _top_level_blocks
+from vanilla_upgrade_layout import DLC_ROOT, VANILLA_WEAPONS, _direct_child, _direct_scalar, _indexed_children, _refkey, _sid, _top_level_blocks
 
 CONTENT_ROOT = SCRIPT_DIR.parent
 UPGRADES_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/UpgradePrototypes/BPRUE_UpgradePrototypes.cfg"
@@ -64,8 +64,7 @@ def build_model() -> tuple[UpgradeBuildModel, dict]:
 def build_dlc_outputs(source_model: UpgradeBuildModel, configs: dict) -> dict[str, UpgradeBuildModel]:
     models = build_dlc_models(source_model, configs)
     for pack, model in models.items():
-        apply_layout_to_model(model, content_pack=pack); model.validate()
-        print(f"Built DLC {pack}: {model.summary()}")
+        apply_layout_to_model(model, content_pack=pack); model.validate(); print(f"Built DLC {pack}: {model.summary()}")
     return models
 
 
@@ -107,30 +106,73 @@ def _resolve_section_position(origin, occupied):
     raise ValueError(f"Could not separate weapon section hotspot at {origin}")
 
 
-def render_weapon_sections_patch(model):
-    wanted_setups = set(model.by_general_setup()); patches = []; enabled_count = moved_count = 0
-    for weapon in _top_level_blocks(VANILLA_WEAPONS.read_text(encoding="utf-8")):
-        if _direct_scalar(weapon, "GeneralWeaponSetup") not in wanted_setups: continue
-        settings = _direct_child(weapon, "SectionSettings")
+def _blocks_by_sid(path: Path) -> dict[str, list[str]]:
+    if not path.exists(): return {}
+    return {_sid(block): block for block in _top_level_blocks(path.read_text(encoding="utf-8"))}
+
+
+def _effective_scalar(sid: str, name: str, primary: dict[str, list[str]], fallback: dict[str, list[str]]) -> str | None:
+    seen = set(); current = sid
+    while current and current not in seen:
+        seen.add(current); block = primary.get(current) or fallback.get(current)
+        if not block: return None
+        value = _direct_scalar(block, name)
+        if value is not None: return value
+        current = _refkey(block)
+    return None
+
+
+def _effective_section_settings(sid: str, primary: dict[str, list[str]], fallback: dict[str, list[str]]) -> list[str] | None:
+    seen = set(); current = sid
+    while current and current not in seen:
+        seen.add(current); block = primary.get(current) or fallback.get(current)
+        if not block: return None
+        settings = _direct_child(block, "SectionSettings")
+        if settings: return settings
+        current = _refkey(block)
+    return None
+
+
+def render_weapon_sections_patch(model: UpgradeBuildModel, *, content_pack: str | None = None) -> str:
+    """Enable inherited disabled upgrade sections for every weapon targeted by the model.
+
+    Base/Unique weapons are resolved through Vanilla inheritance. DLC weapons are
+    resolved through their pack-local ItemPrototypes first and then through the
+    Vanilla WeaponPrototypes fallback. The patch is emitted against the actual
+    child weapon SID, so inherited SectionSettings can be enabled without
+    modifying the parent weapon globally.
+    """
+    wanted_setups = set(model.by_general_setup()); vanilla = _blocks_by_sid(VANILLA_WEAPONS)
+    source_path = DLC_ROOT / content_pack / "ItemPrototypes.cfg" if content_pack else VANILLA_WEAPONS
+    primary = _blocks_by_sid(source_path); fallback = vanilla if content_pack else {}
+    patches = []; enabled_count = moved_count = weapon_count = 0
+
+    for weapon_sid, weapon in primary.items():
+        setup_sid = _effective_scalar(weapon_sid, "GeneralWeaponSetup", primary, fallback)
+        if setup_sid not in wanted_setups: continue
+        settings = _effective_section_settings(weapon_sid, primary, fallback)
         if not settings: continue
         sections = []
         for section in _indexed_children(settings):
             target = _direct_scalar(section, "UpgradeTargetPartType"); left = _float_scalar(section, "LeftPosition"); top = _float_scalar(section, "TopPosition")
             if target is None or left is None or top is None: continue
             sections.append({"index": _section_index(section), "enabled": (_direct_scalar(section, "SectionIsEnabled") or "").lower() == "true", "origin": (left, top)})
-        occupied = [x["origin"] for x in sections if x["enabled"]]; changed = []
+        occupied = [entry["origin"] for entry in sections if entry["enabled"]]; changed = []
         for entry in sections:
             if entry["enabled"]: continue
             position = _resolve_section_position(entry["origin"], occupied); occupied.append(position); moved = position != entry["origin"]
             changed.append((entry, position, moved)); enabled_count += 1; moved_count += int(moved)
         if not changed: continue
-        lines = [f"{_sid(weapon)} : struct.begin {{bpatch}}", "   SectionSettings : struct.begin {bpatch}"]
+        weapon_count += 1
+        lines = [f"{weapon_sid} : struct.begin {{bpatch}}", "   SectionSettings : struct.begin {bpatch}"]
         for entry, position, moved in changed:
             lines += [f"      [{entry['index']}] : struct.begin {{bpatch}}", "         SectionIsEnabled = true"]
             if moved: lines += [f"         LeftPosition = {position[0]:.6f}", f"         TopPosition = {position[1]:.6f}"]
             lines.append("      struct.end")
         lines += ["   struct.end", "struct.end", ""]; patches.extend(lines)
-    header = ["// -----------------------------------------------------------------------------", "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND", "// Enables predefined Vanilla weapon upgrade sections for BPRUE.", f"// Minimum hotspot distance: {MIN_SECTION_DISTANCE:.1f}", f"// Enabled disabled sections: {enabled_count}; repositioned collisions: {moved_count}", "// -----------------------------------------------------------------------------", ""]
+
+    scope = f"DLCGameData/{content_pack}" if content_pack else "BaseGame"
+    header = ["// -----------------------------------------------------------------------------", "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND", f"// Scope: {scope}", "// Enables inherited predefined weapon upgrade sections for BPRUE.", f"// Minimum hotspot distance: {MIN_SECTION_DISTANCE:.1f}", f"// Patched weapons: {weapon_count}; enabled disabled sections: {enabled_count}; repositioned collisions: {moved_count}", "// -----------------------------------------------------------------------------", ""]
     return "\n".join(header + patches).rstrip() + "\n"
 
 
@@ -147,11 +189,12 @@ def main():
     write(UPGRADES_PATH, upgrade_text); write(GENERAL_SETUP_PATH, setup_text); write(WEAPON_PATH, weapon_text); write(NPC_PATH, npc_text)
 
     for pack, dlc_model in sorted(dlc_models.items()):
-        dlc_upgrade_text = render_consolidated_upgrade_prototypes(dlc_model); dlc_setup_text = render_dlc_general_setup_patch(dlc_model, pack)
+        dlc_upgrade_text = render_consolidated_upgrade_prototypes(dlc_model); dlc_setup_text = render_dlc_general_setup_patch(dlc_model, pack); dlc_weapon_text = render_weapon_sections_patch(dlc_model, content_pack=pack)
         validate_rendered_outputs(dlc_model, dlc_upgrade_text, dlc_setup_text)
         pack_root = DLC_OUTPUT_ROOT / pack
         write(pack_root / "UpgradePrototypes/UpgradePrototypes_patch_BPRUE.cfg", dlc_upgrade_text)
         write(pack_root / "WeaponData/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg", dlc_setup_text)
+        write(pack_root / "ItemPrototypes_patch_BPRUE.cfg", dlc_weapon_text)
 
     write(ar.EFFECT_OUTPUT_PATH, ar.render_effect_patch(configs["ar"])); write(smg.EFFECT_OUTPUT_PATH, smg.render_effects()); write(shotgun.EFFECT_OUTPUT, shotgun.render_effects()); write(pistol.EFFECT_OUTPUT, pistol.render_effects()); write(sniper.EFFECT_OUTPUT, sniper.render_effects()); write(MACHINE_GUN_EFFECT_PATH, machine_gun.render_effects()); write(SHARED_EFFECT_PATH, render_shared_effects())
     print(f"Validated and rendered {len(model.upgrades)} base/Unique upgrades plus {sum(len(m.upgrades) for m in dlc_models.values())} DLC upgrades.")
