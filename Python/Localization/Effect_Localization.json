@@ -10,6 +10,8 @@
     {"sid":"sid_effects_bprue_weapon_wear_name","languages":{"English":"Weapon wear","Russian":"Износ оружия"}},
     {"sid":"sid_effects_bprue_pellet_count_name","languages":{"English":"Pellet count","Russian":"Количество дробин"}},
     {"sid":"sid_effects_bprue_effective_range_name","languages":{"English":"Effective range","Russian":"Эффективная дальность"}},
-    {"sid":"sid_effects_bprue_damage_name","languages":{"English":"Damage","Russian":"Урон"}}
+    {"sid":"sid_effects_bprue_damage_name","languages":{"English":"Damage","Russian":"Урон"}},
+    {"sid":"sid_effects_bprue_armor_piercing_name","languages":{"English":"Armor penetration","Russian":"Бронепробиваемость"}},
+    {"sid":"sid_effects_bprue_durability_name","languages":{"English":"Durability","Russian":"Прочность"}}
   ]
 }
