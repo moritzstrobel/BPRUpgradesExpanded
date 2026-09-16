@@ -217,6 +217,16 @@ def effective_vanilla_modifications() -> dict[str, tuple[str, int]]:
     return result
 
 
+def effective_modifications_for_scope(content_pack: str | None = None) -> dict[str, tuple[str, int]]:
+    """Return modification layout as it is effective in the requested content scope.
+
+    BaseGame uses BPRUE's safe compaction patch. DLC packs do not currently receive
+    that base-game UpgradePrototype patch in their own scope, so their inherited
+    Vanilla modification positions must stay at the original columns.
+    """
+    return vanilla_modifications() if content_pack else effective_vanilla_modifications()
+
+
 def render_vanilla_compaction_patch() -> str:
     moves = vanilla_compaction(); lines = ["// -----------------------------------------------------------------------------", "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND", "// Compacts safe Vanilla IsModification=true upgrade columns for BPRUE.", "// -----------------------------------------------------------------------------", ""]
     for sid in sorted(moves):
@@ -225,7 +235,7 @@ def render_vanilla_compaction_patch() -> str:
 
 
 def modification_max_columns_for_general_setups(general_setup_sids: list[str], *, content_pack: str | None = None) -> dict[str, int]:
-    modifications = effective_vanilla_modifications(); setups = dlc_general_setup_upgrades(content_pack) if content_pack else vanilla_general_setup_upgrades(); maxima = {}
+    modifications = effective_modifications_for_scope(content_pack); setups = dlc_general_setup_upgrades(content_pack) if content_pack else vanilla_general_setup_upgrades(); maxima = {}
     for setup_sid in general_setup_sids:
         for upgrade_sid in setups.get(setup_sid, []):
             mod = modifications.get(upgrade_sid)
