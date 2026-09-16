@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "description": "Machine-gun specialization system for the PKP. Vanilla already covers direct weight, durability, armor penetration, recoil and handling upgrades, so BPRUE adds mutually-exclusive LMG-specific trade-offs around sustained fire, barrel configuration, feed handling and support configuration.",
+  "families": {
+    "PKP": {
+      "weapon_sid": "GunPKP_MG",
+      "general_setup_sid": "GunPKP_MG",
+      "prototype_prefix": "GunPKP",
+      "cost_scale": 1.0
+    }
+  },
+  "module_groups": {
+    "sustained_fire": ["high_output", "controlled_fire"],
+    "barrel_configuration": ["reinforced_barrel", "stabilized_barrel"],
+    "feed_system": ["quick_change_feed", "reinforced_feed"],
+    "support_configuration": ["mobile_gunner", "supported_fire"]
+  }
+}
