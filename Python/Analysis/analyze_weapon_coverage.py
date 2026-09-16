@@ -3,16 +3,17 @@ from __future__ import annotations
 import argparse
 import json
 import re
-from collections import Counter
+from collections import Counter, defaultdict
 from pathlib import Path
+
+from analysis_paths import WEAPON_COVERAGE
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PYTHON_ROOT = SCRIPT_DIR.parent
 CFG_ROOT = PYTHON_ROOT / "CFGGenerators"
 VANILLA_WEAPONS = PYTHON_ROOT / "VanillaReference" / "WeaponPrototypes.cfg"
 VANILLA_GENERAL_SETUPS = PYTHON_ROOT / "VanillaReference" / "WeaponGeneralSetupPrototypes.cfg"
-REPORTS_DIR = SCRIPT_DIR / "Reports"
-OUTPUT_PATH = REPORTS_DIR / "weapon_coverage.json"
+OUTPUT_PATH = WEAPON_COVERAGE
 
 CONFIGS = (
     CFG_ROOT / "AssaultRifles" / "assault_rifles_upgrades.json",
@@ -23,9 +24,7 @@ CONFIGS = (
     CFG_ROOT / "MachineGuns" / "machine_gun_upgrades.json",
 )
 
-# These are candidate signals, not a final truth table. The report deliberately
-# keeps exclusions separate from suspected missing weapons so every excluded SID
-# can be audited instead of silently disappearing from the diff.
+# Weak naming signals only. Structural inheritance/link evidence is preferred.
 UNIQUE_NAME_MARKERS = (
     "unique",
     "quest",
@@ -89,9 +88,29 @@ def direct_scalar(block: list[str], name: str) -> str | None:
     return None
 
 
-def refkey(block: list[str]) -> str | None:
+def refkey(block: list[str] | None) -> str | None:
+    if not block:
+        return None
     match = re.search(r"\{refkey=([^}]+)\}", block[0])
     return match.group(1).strip() if match else None
+
+
+def inheritance_chain(sid: str, blocks: dict[str, list[str]]) -> list[str]:
+    chain: list[str] = []
+    seen = {sid}
+    current = sid
+    while current in blocks:
+        parent = refkey(blocks[current])
+        if not parent or parent in seen or parent.startswith("["):
+            break
+        chain.append(parent)
+        seen.add(parent)
+        current = parent
+    return chain
+
+
+def concrete_gun_parent(chain: list[str]) -> str | None:
+    return next((parent for parent in chain if parent.startswith("Gun")), None)
 
 
 def configured_weapons() -> dict[str, dict]:
@@ -115,9 +134,6 @@ def configured_weapons() -> dict[str, dict]:
                 "source": str(path.relative_to(PYTHON_ROOT)),
             }
 
-        # Some older SMG caliber-only entries do not repeat weapon_sid. Keep
-        # those visible as covered GeneralSetups without pretending they are a
-        # separate Vanilla weapon prototype.
         if weapon_class == "SMGs":
             for family_name, family in config.get("caliber_families", {}).items():
                 setup_sid = family.get("general_setup_sid")
@@ -141,30 +157,88 @@ def class_from_sid(sid: str) -> str | None:
     return None
 
 
-def looks_like_unique_or_internal(sid: str, block: list[str]) -> list[str]:
-    reasons: list[str] = []
-    lower_sid = sid.lower()
-    for marker in UNIQUE_NAME_MARKERS:
-        if marker in lower_sid:
-            reasons.append(f"sid_marker:{marker}")
-
-    # Unique/quest variants frequently inherit from another concrete Gun* SID.
-    # This is intentionally a suspicion signal only; the report preserves the
-    # candidate for review instead of automatically treating inheritance as
-    # proof that it is unique.
-    parent = refkey(block)
-    if parent and parent.startswith("Gun") and parent != sid:
-        reasons.append(f"inherits_weapon:{parent}")
-
-    return reasons
-
-
 def setup_candidates(setup_blocks: dict[str, list[str]]) -> set[str]:
     return {
         sid
         for sid in setup_blocks
         if sid.startswith("Gun") and class_from_sid(sid) is not None
     }
+
+
+def weapons_by_general_setup(weapon_blocks: dict[str, list[str]]) -> dict[str, list[str]]:
+    result: defaultdict[str, list[str]] = defaultdict(list)
+    for weapon_sid, block in weapon_blocks.items():
+        setup_sid = direct_scalar(block, "GeneralWeaponSetup")
+        if setup_sid:
+            result[setup_sid].append(weapon_sid)
+    return {setup: sorted(sids) for setup, sids in result.items()}
+
+
+def candidate_evidence(
+    setup_sid: str,
+    weapon_blocks: dict[str, list[str]],
+    setup_blocks: dict[str, list[str]],
+    setup_users: dict[str, list[str]],
+) -> dict:
+    same_weapon = weapon_blocks.get(setup_sid)
+    linked_weapons = setup_users.get(setup_sid, [])
+    setup_chain = inheritance_chain(setup_sid, setup_blocks)
+    same_weapon_chain = inheritance_chain(setup_sid, weapon_blocks) if same_weapon else []
+
+    linked = []
+    for weapon_sid in linked_weapons:
+        chain = inheritance_chain(weapon_sid, weapon_blocks)
+        linked.append({
+            "weapon_sid": weapon_sid,
+            "inheritance_chain": chain,
+            "concrete_gun_parent": concrete_gun_parent(chain),
+            "localization_sid": direct_scalar(weapon_blocks[weapon_sid], "LocalizationSID"),
+        })
+
+    return {
+        "same_sid_weapon_prototype": same_weapon is not None,
+        "same_sid_weapon_inheritance_chain": same_weapon_chain,
+        "same_sid_weapon_concrete_gun_parent": concrete_gun_parent(same_weapon_chain),
+        "general_setup_inheritance_chain": setup_chain,
+        "general_setup_concrete_gun_parent": concrete_gun_parent(setup_chain),
+        "linked_weapon_prototypes": linked,
+    }
+
+
+def classify_candidate(setup_sid: str, evidence: dict) -> tuple[str, list[str]]:
+    reasons: list[str] = []
+
+    lower_sid = setup_sid.lower()
+    for marker in UNIQUE_NAME_MARKERS:
+        if marker in lower_sid:
+            reasons.append(f"sid_marker:{marker}")
+
+    weapon_parent = evidence["same_sid_weapon_concrete_gun_parent"]
+    if weapon_parent:
+        reasons.append(f"weapon_inherits_concrete_weapon:{weapon_parent}")
+
+    setup_parent = evidence["general_setup_concrete_gun_parent"]
+    if setup_parent:
+        reasons.append(f"setup_inherits_concrete_setup:{setup_parent}")
+
+    for linked in evidence["linked_weapon_prototypes"]:
+        parent = linked["concrete_gun_parent"]
+        if parent:
+            reasons.append(f"linked_weapon:{linked['weapon_sid']}:inherits:{parent}")
+
+    # Structural evidence means this setup is a derived weapon/variant candidate,
+    # but we deliberately do not claim it is a confirmed unique without external
+    # game metadata. Keeping this as its own bucket avoids hiding it completely.
+    if reasons:
+        return "suspected_unique_or_special", reasons
+
+    if evidence["same_sid_weapon_prototype"]:
+        return "suspected_missing_base_weapon", ["standalone_weapon_and_setup_not_covered_by_bprue"]
+
+    if evidence["linked_weapon_prototypes"]:
+        return "needs_manual_review", ["setup_has_linked_weapon_but_no_structural_variant_signal"]
+
+    return "needs_manual_review", ["no_same_sid_or_linked_weapon_prototype"]
 
 
 def build_report() -> dict:
@@ -177,47 +251,43 @@ def build_report() -> dict:
     setup_blocks = top_level_blocks(VANILLA_GENERAL_SETUPS.read_text(encoding="utf-8"))
     configured = configured_weapons()
     vanilla_setups = setup_candidates(setup_blocks)
+    setup_users = weapons_by_general_setup(weapon_blocks)
 
     covered_setups = set(configured)
     covered_weapon_sids = {
         entry["weapon_sid"] for entry in configured.values() if entry.get("weapon_sid")
     }
 
-    candidates = []
-    excluded = []
+    buckets: dict[str, list[dict]] = {
+        "suspected_missing_base_weapons": [],
+        "suspected_unique_or_special": [],
+        "needs_manual_review": [],
+    }
+
     for setup_sid in sorted(vanilla_setups):
         if setup_sid in covered_setups:
             continue
 
-        weapon_block = weapon_blocks.get(setup_sid)
-        if weapon_block is None:
-            candidates.append({
-                "general_setup_sid": setup_sid,
-                "weapon_sid": None,
-                "class": class_from_sid(setup_sid),
-                "status": "suspected_missing",
-                "review_reasons": ["no_same_sid_weapon_prototype"],
-            })
-            continue
-
-        exclusion_reasons = looks_like_unique_or_internal(setup_sid, weapon_block)
+        evidence = candidate_evidence(setup_sid, weapon_blocks, setup_blocks, setup_users)
+        status, reasons = classify_candidate(setup_sid, evidence)
         entry = {
             "general_setup_sid": setup_sid,
-            "weapon_sid": setup_sid,
             "class": class_from_sid(setup_sid),
-            "parent_weapon_sid": refkey(weapon_block),
+            "status": status,
+            "reasons": reasons,
+            "evidence": evidence,
         }
-        if exclusion_reasons:
-            entry["status"] = "excluded_unique_or_variant_candidate"
-            entry["exclusion_reasons"] = exclusion_reasons
-            excluded.append(entry)
-        else:
-            entry["status"] = "suspected_missing"
-            entry["review_reasons"] = ["vanilla_weapon_and_setup_not_covered_by_bprue"]
-            candidates.append(entry)
 
-    class_counts = Counter(entry["class"] or "Unknown" for entry in candidates)
-    excluded_counts = Counter(entry["class"] or "Unknown" for entry in excluded)
+        if status == "suspected_missing_base_weapon":
+            buckets["suspected_missing_base_weapons"].append(entry)
+        elif status == "suspected_unique_or_special":
+            buckets["suspected_unique_or_special"].append(entry)
+        else:
+            buckets["needs_manual_review"].append(entry)
+
+    missing_counts = Counter(entry["class"] or "Unknown" for entry in buckets["suspected_missing_base_weapons"])
+    variant_counts = Counter(entry["class"] or "Unknown" for entry in buckets["suspected_unique_or_special"])
+    review_counts = Counter(entry["class"] or "Unknown" for entry in buckets["needs_manual_review"])
 
     return {
         "sources": {
@@ -228,60 +298,73 @@ def build_report() -> dict:
         "rules": {
             "candidate_scope": "Vanilla Gun* GeneralSetups whose SID identifies a supported weapon class.",
             "covered": "GeneralSetup SID is present in a BPRUE generator config.",
-            "unique_filter": "Name markers and inheritance from another concrete Gun* prototype are exclusion signals; exclusions remain in the report for manual verification.",
-            "suspected_missing": "Not covered by BPRUE and no current unique/internal exclusion signal. This is intentionally not equivalent to confirmed missing.",
+            "suspected_missing_base_weapon": "Uncovered setup with a same-SID standalone WeaponPrototype and no concrete Gun* inheritance signal.",
+            "suspected_unique_or_special": "Uncovered setup with structural variant evidence: concrete Gun* inheritance in the weapon/setup chain or a weak unique/internal SID marker.",
+            "needs_manual_review": "Uncovered setup that cannot be classified confidently from Vanilla structure alone.",
+            "important": "All classifications are evidence-based candidates, not authoritative unique/base labels.",
         },
         "summary": {
             "vanilla_candidate_general_setups": len(vanilla_setups),
             "bprue_configured_general_setups": len(covered_setups),
             "bprue_configured_weapon_sids": len(covered_weapon_sids),
-            "suspected_missing": len(candidates),
-            "excluded_unique_or_variant_candidates": len(excluded),
-            "suspected_missing_by_class": dict(sorted(class_counts.items())),
-            "excluded_by_class": dict(sorted(excluded_counts.items())),
+            "suspected_missing_base_weapons": len(buckets["suspected_missing_base_weapons"]),
+            "suspected_unique_or_special": len(buckets["suspected_unique_or_special"]),
+            "needs_manual_review": len(buckets["needs_manual_review"]),
+            "suspected_missing_by_class": dict(sorted(missing_counts.items())),
+            "suspected_unique_or_special_by_class": dict(sorted(variant_counts.items())),
+            "manual_review_by_class": dict(sorted(review_counts.items())),
         },
         "bprue_covered": [configured[sid] for sid in sorted(configured)],
-        "suspected_missing": candidates,
-        "excluded_unique_or_variant_candidates": excluded,
+        **buckets,
     }
 
 
-def print_report(report: dict, show_excluded: bool = False) -> None:
+def print_entries(title: str, entries: list[dict], show_reasons: bool = False) -> None:
+    print(f"\n{title}:")
+    if not entries:
+        print("  <none>")
+        return
+    for entry in entries:
+        suffix = ""
+        if show_reasons:
+            suffix = " <- " + ", ".join(entry["reasons"])
+        print(f"  [{entry['class'] or 'Unknown':<13}] {entry['general_setup_sid']}{suffix}")
+
+
+def print_report(report: dict, show_variants: bool = False) -> None:
     summary = report["summary"]
     print(
         f"Vanilla candidates={summary['vanilla_candidate_general_setups']} | "
         f"BPRUE setups={summary['bprue_configured_general_setups']} | "
-        f"suspected missing={summary['suspected_missing']} | "
-        f"excluded/review={summary['excluded_unique_or_variant_candidates']}"
+        f"missing base?={summary['suspected_missing_base_weapons']} | "
+        f"unique/special?={summary['suspected_unique_or_special']} | "
+        f"manual review={summary['needs_manual_review']}"
     )
 
-    print("\nSuspected missing weapons:")
-    if not report["suspected_missing"]:
-        print("  <none>")
-    for entry in report["suspected_missing"]:
-        print(f"  [{entry['class'] or 'Unknown':<13}] {entry['general_setup_sid']}")
+    print_entries("Suspected missing base weapons", report["suspected_missing_base_weapons"])
+    print_entries("Needs manual review", report["needs_manual_review"], show_reasons=True)
 
-    if show_excluded:
-        print("\nExcluded unique/variant candidates:")
-        if not report["excluded_unique_or_variant_candidates"]:
-            print("  <none>")
-        for entry in report["excluded_unique_or_variant_candidates"]:
-            reasons = ", ".join(entry["exclusion_reasons"])
-            print(f"  [{entry['class'] or 'Unknown':<13}] {entry['general_setup_sid']} <- {reasons}")
+    if show_variants:
+        print_entries("Suspected unique/special variants", report["suspected_unique_or_special"], show_reasons=True)
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Compare Vanilla weapon coverage with BPRUE while separating likely unique/special variants."
+        description="Compare Vanilla weapon coverage with BPRUE and classify uncovered setups using Vanilla structural evidence."
     )
-    parser.add_argument("--show-excluded", action="store_true", help="Also print unique/variant exclusion candidates")
+    parser.add_argument(
+        "--show-variants", "--show-excluded",
+        dest="show_variants",
+        action="store_true",
+        help="Also print suspected unique/special variants and their evidence (legacy --show-excluded alias supported)",
+    )
     parser.add_argument("--output", type=Path, default=OUTPUT_PATH, help="JSON report path")
     args = parser.parse_args()
 
     report = build_report()
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, indent=2), encoding="utf-8")
-    print_report(report, args.show_excluded)
+    print_report(report, args.show_variants)
     print(f"\nWrote {args.output}")
 
 
