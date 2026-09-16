@@ -1,14 +1,13 @@
 from __future__ import annotations
 
+import re
 from functools import lru_cache
-from pathlib import Path
 
 from upgrade_build_model import UpgradeBuildModel, UpgradeDefinition
 from vanilla_upgrade_layout import (
     VANILLA_ROOT,
     _direct_child,
     _direct_scalar,
-    _indexed_children,
     _read_blocks,
     _refkey,
     vanilla_general_setup_upgrades,
@@ -18,10 +17,35 @@ VANILLA_NPCS = VANILLA_ROOT / "NPCPrototypes.cfg"
 TECHNICIAN_TEMPLATE_SIDS = {"TechnicianNPC", "AllTechnicianNPC"}
 
 
+def _upgrade_children(upgrades: list[str] | None) -> list[list[str]]:
+    """Read numeric and [*] entries from an NPC Upgrades struct."""
+    if not upgrades:
+        return []
+    result: list[list[str]] = []
+    index = 1
+    while index < len(upgrades) - 1:
+        if not re.match(r"\s*\[(?:\d+|\*)\]\s*:\s*struct\.begin", upgrades[index]):
+            index += 1
+            continue
+        child = [upgrades[index]]
+        depth = 1
+        index += 1
+        while index < len(upgrades) and depth:
+            child.append(upgrades[index])
+            stripped = upgrades[index].strip()
+            if "struct.begin" in stripped:
+                depth += 1
+            if stripped == "struct.end":
+                depth -= 1
+            index += 1
+        result.append(child)
+    return result
+
+
 def _upgrade_entries(block: list[str]) -> list[tuple[str, bool]]:
     """Read one NPC's direct Upgrades array."""
     result: list[tuple[str, bool]] = []
-    for child in _indexed_children(_direct_child(block, "Upgrades")):
+    for child in _upgrade_children(_direct_child(block, "Upgrades")):
         sid = _direct_scalar(child, "UpgradePrototypeSID")
         if not sid or sid == "empty":
             continue
