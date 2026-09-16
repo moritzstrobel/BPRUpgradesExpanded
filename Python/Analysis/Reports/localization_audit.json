@@ -17,8 +17,8 @@
     }
   },
   "effects": {
-    "referenced_effect_count": 142,
-    "visible_effect_count": 115,
+    "referenced_effect_count": 146,
+    "visible_effect_count": 119,
     "vanilla_localization_count": 38,
     "error_count": 0,
     "errors": [],
@@ -815,6 +815,21 @@
         "status": "ok"
       },
       {
+        "sid": "BPRUE_SMG_DamagePenalty15Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_damage",
+        "resolution_chain": [
+          "BPRUE_SMG_DamagePenalty15Effect"
+        ],
+        "sources": [
+          "BPRUE_SMGEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
         "sid": "BPRUE_SMG_DamagePos10Effect",
         "scopes": [
           "BaseGame"
@@ -875,6 +890,21 @@
         "status": "ok"
       },
       {
+        "sid": "BPRUE_SMG_EffectiveRangePenalty15Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_effective_range",
+        "resolution_chain": [
+          "BPRUE_SMG_EffectiveRangePenalty15Effect"
+        ],
+        "sources": [
+          "BPRUE_SMGEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
         "sid": "BPRUE_SMG_EffectiveRangePos10Effect",
         "scopes": [
           "BaseGame"
@@ -883,6 +913,21 @@
         "localization_sid": "bprue_effective_range",
         "resolution_chain": [
           "BPRUE_SMG_EffectiveRangePos10Effect"
+        ],
+        "sources": [
+          "BPRUE_SMGEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SMG_EffectiveRangePos15Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_effective_range",
+        "resolution_chain": [
+          "BPRUE_SMG_EffectiveRangePos15Effect"
         ],
         "sources": [
           "BPRUE_SMGEffectPrototypes.cfg"
@@ -913,6 +958,21 @@
         "localization_sid": "bprue_recoil",
         "resolution_chain": [
           "BPRUE_SMG_RecoilPenalty20Effect"
+        ],
+        "sources": [
+          "BPRUE_SMGEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_SMG_RecoilPenalty25Effect",
+        "scopes": [
+          "BaseGame"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_recoil",
+        "resolution_chain": [
+          "BPRUE_SMG_RecoilPenalty25Effect"
         ],
         "sources": [
           "BPRUE_SMGEffectPrototypes.cfg"
