@@ -40,12 +40,25 @@ GENERAL_SETUP_PATH = CONTENT_ROOT / "GameLite/GameData/WeaponData/WeaponGeneralS
 WEAPON_PATH = CONTENT_ROOT / "GameLite/GameData/ItemPrototypes/WeaponPrototypes/WeaponPrototypes_patch_BPRUE.cfg"
 NPC_PATH = CONTENT_ROOT / "GameLite/GameData/NPCPrototypes/NPCPrototypes_patch_BPRUE.cfg"
 VANILLA_COMPACTION_PATH = CONTENT_ROOT / "GameLite/GameData/UpgradePrototypes/UpgradePrototypes_patch_BPRUE.cfg"
+VANILLA_EFFECT_UI_PATH = CONTENT_ROOT / "GameLite/GameData/EffectPrototypes/EffectPrototypes_patch_BPRUE_UI.cfg"
+BPRUE_EFFECT_UI_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_EffectUIOverrides.cfg"
 MACHINE_GUN_EFFECT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_MachineGunEffectPrototypes.cfg"
 SHARED_EFFECT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_SharedEffectPrototypes.cfg"
 MIN_SECTION_DISTANCE = 80.0
 SECTION_NUDGE_STEP = 20.0
 SECTION_NUDGE_RINGS = 12
 SECTION_SEARCH_DIRECTIONS = 16
+
+VANILLA_EFFECT_LOCALIZATION_OVERRIDES = {
+    "RecoilDown10Effect": "bprue_recoil",
+    "RecoilDown15Effect": "bprue_recoil",
+    "WeightDown15Effect": "bprue_weight",
+}
+TECHNICAL_EFFECTS_HIDDEN_FROM_UI = (
+    "BPRUE_AddBurstFireModeEffect",
+    "BPRUE_SemiAutoOnlyEffect",
+    "BPRUE_ChangeCaliber762NATOEffect",
+)
 
 
 def _shared_upgrades(configs):
@@ -78,6 +91,46 @@ def validate_rendered_outputs(model, upgrade_text, setup_text, npc_text=None):
             if setup_sid not in setup_text or upgrade.sid not in setup_text: errors.append(f"{upgrade.sid}: missing GeneralSetup registration for {setup_sid}")
         if npc_text is not None and upgrade.technician and upgrade.sid not in npc_text: errors.append(f"{upgrade.sid}: missing technician registration")
     if errors: raise ValueError("Generated upgrade output validation failed:\n  - " + "\n  - ".join(errors))
+
+
+def render_vanilla_effect_ui_patch() -> str:
+    lines = [
+        "// -----------------------------------------------------------------------------",
+        "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND",
+        "// BPRUE UI compatibility patch for reused BaseGame upgrade effects.",
+        "// Adds only missing UI metadata; gameplay values remain untouched.",
+        "// -----------------------------------------------------------------------------",
+        "",
+    ]
+    for sid, localization_sid in VANILLA_EFFECT_LOCALIZATION_OVERRIDES.items():
+        lines += [
+            f"{sid} : struct.begin {{bpatch}}",
+            f"   LocalizationSID = {localization_sid}",
+            "   ShowUpgradeEffectValue = true",
+            "   ShowUpgradeEffect = true",
+            "struct.end",
+            "",
+        ]
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def render_bprue_effect_ui_patch() -> str:
+    lines = [
+        "// -----------------------------------------------------------------------------",
+        "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND",
+        "// Technical BPRUE effects are mechanics, not player-facing stat rows.",
+        "// -----------------------------------------------------------------------------",
+        "",
+    ]
+    for sid in TECHNICAL_EFFECTS_HIDDEN_FROM_UI:
+        lines += [
+            f"{sid} : struct.begin {{bpatch}}",
+            "   ShowUpgradeEffectValue = false",
+            "   ShowUpgradeEffect = false",
+            "struct.end",
+            "",
+        ]
+    return "\n".join(lines).rstrip() + "\n"
 
 
 def _float_scalar(block, name):
@@ -200,6 +253,7 @@ def main():
     upgrade_text = render_consolidated_upgrade_prototypes(model); setup_text = render_final_general_setup_patch(model, attachments); npc_text = render_technician_patch(model); weapon_text = render_weapon_sections_patch(model)
     validate_rendered_outputs(model, upgrade_text, setup_text, npc_text)
     write(UPGRADES_PATH, upgrade_text); write(GENERAL_SETUP_PATH, setup_text); write(WEAPON_PATH, weapon_text); write(NPC_PATH, npc_text); write(VANILLA_COMPACTION_PATH, render_vanilla_compaction_patch())
+    write(VANILLA_EFFECT_UI_PATH, render_vanilla_effect_ui_patch()); write(BPRUE_EFFECT_UI_PATH, render_bprue_effect_ui_patch())
     _remove_independent_dlc_output()
     for pack, dlc_model in sorted(dlc_models.items()):
         dlc_upgrade_text = render_consolidated_upgrade_prototypes(dlc_model); dlc_setup_text = render_dlc_general_setup_patch(dlc_model, pack); dlc_weapon_text = render_weapon_sections_patch(dlc_model, content_pack=pack)
