@@ -3,9 +3,223 @@
     "upgrade_prototypes": "VanillaReference\\UpgradePrototypes.cfg",
     "general_setups": "VanillaReference\\WeaponGeneralSetupPrototypes.cfg"
   },
-  "weapon_count": 72,
+  "weapon_count": 92,
   "weapons": {
+    "Default": {
+      "upgrade_count": 1,
+      "slots": {}
+    },
+    "EN_BuckLaunch_Data": {
+      "upgrade_count": 1,
+      "slots": {}
+    },
+    "GunAK74_Phantom_ST": {
+      "upgrade_count": 10,
+      "slots": {
+        "Barrel": {
+          "0": {
+            "Top": [
+              {
+                "sid": "GunAK74_Upgrade_Attachment_SinMuz",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true
+              },
+              {
+                "sid": "GunAK74_Upgrade_Barrel_1",
+                "is_modification": false,
+                "horizontal_explicit": false,
+                "vertical_explicit": true
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunAK74_Upgrade_Barrel_2_2",
+                "is_modification": false,
+                "horizontal_explicit": true,
+                "vertical_explicit": true
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunAK74_Upgrade_Barrel_2_1",
+                "is_modification": false,
+                "horizontal_explicit": true,
+                "vertical_explicit": true
+              }
+            ]
+          }
+        },
+        "Body": {
+          "0": {
+            "Top": [
+              {
+                "sid": "GunAK74_Upgrade_Body_1",
+                "is_modification": false,
+                "horizontal_explicit": false,
+                "vertical_explicit": true
+              }
+            ]
+          },
+          "1": {
+            "Top": [
+              {
+                "sid": "GunAK74_Upgrade_Body_2",
+                "is_modification": false,
+                "horizontal_explicit": true,
+                "vertical_explicit": true
+              }
+            ]
+          }
+        },
+        "Stock": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunAK74_Upgrade_Attachment_Offset_Stock",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunAK74_Upgrade_Stock_1",
+                "is_modification": false,
+                "horizontal_explicit": false,
+                "vertical_explicit": true
+              }
+            ]
+          },
+          "1": {
+            "Top": [
+              {
+                "sid": "GunAK74_Upgrade_Stock_2",
+                "is_modification": false,
+                "horizontal_explicit": true,
+                "vertical_explicit": true
+              }
+            ]
+          },
+          "2": {
+            "Top": [
+              {
+                "sid": "GunAK74_Upgrade_Stock_3",
+                "is_modification": false,
+                "horizontal_explicit": true,
+                "vertical_explicit": true
+              }
+            ]
+          }
+        }
+      }
+    },
     "GunAK74_ST": {
+      "upgrade_count": 10,
+      "slots": {
+        "Barrel": {
+          "0": {
+            "Top": [
+              {
+                "sid": "GunAK74_Upgrade_Attachment_SinMuz",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true
+              },
+              {
+                "sid": "GunAK74_Upgrade_Barrel_1",
+                "is_modification": false,
+                "horizontal_explicit": false,
+                "vertical_explicit": true
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunAK74_Upgrade_Barrel_2_2",
+                "is_modification": false,
+                "horizontal_explicit": true,
+                "vertical_explicit": true
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunAK74_Upgrade_Barrel_2_1",
+                "is_modification": false,
+                "horizontal_explicit": true,
+                "vertical_explicit": true
+              }
+            ]
+          }
+        },
+        "Body": {
+          "0": {
+            "Top": [
+              {
+                "sid": "GunAK74_Upgrade_Body_1",
+                "is_modification": false,
+                "horizontal_explicit": false,
+                "vertical_explicit": true
+              }
+            ]
+          },
+          "1": {
+            "Top": [
+              {
+                "sid": "GunAK74_Upgrade_Body_2",
+                "is_modification": false,
+                "horizontal_explicit": true,
+                "vertical_explicit": true
+              }
+            ]
+          }
+        },
+        "Stock": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunAK74_Upgrade_Attachment_Offset_Stock",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunAK74_Upgrade_Stock_1",
+                "is_modification": false,
+                "horizontal_explicit": false,
+                "vertical_explicit": true
+              }
+            ]
+          },
+          "1": {
+            "Top": [
+              {
+                "sid": "GunAK74_Upgrade_Stock_2",
+                "is_modification": false,
+                "horizontal_explicit": true,
+                "vertical_explicit": true
+              }
+            ]
+          },
+          "2": {
+            "Top": [
+              {
+                "sid": "GunAK74_Upgrade_Stock_3",
+                "is_modification": false,
+                "horizontal_explicit": true,
+                "vertical_explicit": true
+              }
+            ]
+          }
+        }
+      }
+    },
+    "GunAK74_Strelok_ST": {
       "upgrade_count": 10,
       "slots": {
         "Barrel": {
@@ -2273,6 +2487,14 @@
           }
         }
       }
+    },
+    "GunGauss_SP": {
+      "upgrade_count": 1,
+      "slots": {}
+    },
+    "GunGauss_Scar_SP": {
+      "upgrade_count": 1,
+      "slots": {}
     },
     "GunGonta_SP_GS": {
       "upgrade_count": 10,
@@ -4766,6 +4988,10 @@
           }
         }
       }
+    },
+    "GunRpg7_GL": {
+      "upgrade_count": 1,
+      "slots": {}
     },
     "GunSKP_DMR_GS": {
       "upgrade_count": 23,
@@ -9864,14 +10090,81 @@
         }
       }
     },
+    "MeleeStub": {
+      "upgrade_count": 1,
+      "slots": {}
+    },
+    "TemplateDMR": {
+      "upgrade_count": 1,
+      "slots": {}
+    },
+    "TemplateGLaunch": {
+      "upgrade_count": 1,
+      "slots": {}
+    },
+    "TemplateMAC": {
+      "upgrade_count": 1,
+      "slots": {}
+    },
+    "TemplateMG": {
+      "upgrade_count": 1,
+      "slots": {}
+    },
+    "TemplatePistol": {
+      "upgrade_count": 1,
+      "slots": {}
+    },
+    "TemplateRifle": {
+      "upgrade_count": 1,
+      "slots": {}
+    },
+    "TemplateRifleSingleFire": {
+      "upgrade_count": 1,
+      "slots": {}
+    },
+    "TemplateSMG": {
+      "upgrade_count": 1,
+      "slots": {}
+    },
+    "TemplateShotgun": {
+      "upgrade_count": 1,
+      "slots": {}
+    },
+    "TemplateSniper": {
+      "upgrade_count": 1,
+      "slots": {}
+    },
     "TemplateWeapon": {
+      "upgrade_count": 1,
+      "slots": {}
+    },
+    "UA_GLaunch_Weapon_Data_En": {
+      "upgrade_count": 1,
+      "slots": {}
+    },
+    "UA_GLaunch_Weapon_Data_Ru": {
       "upgrade_count": 1,
       "slots": {}
     }
   },
   "unresolved_upgrade_sids": {
+    "Default": [
+      "empty"
+    ],
+    "EN_BuckLaunch_Data": [
+      "empty"
+    ],
+    "GunGauss_SP": [
+      "empty"
+    ],
+    "GunGauss_Scar_SP": [
+      "empty"
+    ],
     "GunPM_HG": [
       "GunPM_Upgrade_Attachment_Screw"
+    ],
+    "GunRpg7_GL": [
+      "empty"
     ],
     "Gun_Kaimanov_HG_GS": [
       "GunPM_Upgrade_Attachment_Screw"
@@ -9879,7 +10172,46 @@
     "Gun_Star_HG_GS": [
       "GunPM_Upgrade_Attachment_Screw"
     ],
+    "MeleeStub": [
+      "empty"
+    ],
+    "TemplateDMR": [
+      "empty"
+    ],
+    "TemplateGLaunch": [
+      "empty"
+    ],
+    "TemplateMAC": [
+      "empty"
+    ],
+    "TemplateMG": [
+      "empty"
+    ],
+    "TemplatePistol": [
+      "empty"
+    ],
+    "TemplateRifle": [
+      "empty"
+    ],
+    "TemplateRifleSingleFire": [
+      "empty"
+    ],
+    "TemplateSMG": [
+      "empty"
+    ],
+    "TemplateShotgun": [
+      "empty"
+    ],
+    "TemplateSniper": [
+      "empty"
+    ],
     "TemplateWeapon": [
+      "empty"
+    ],
+    "UA_GLaunch_Weapon_Data_En": [
+      "empty"
+    ],
+    "UA_GLaunch_Weapon_Data_Ru": [
       "empty"
     ]
   }

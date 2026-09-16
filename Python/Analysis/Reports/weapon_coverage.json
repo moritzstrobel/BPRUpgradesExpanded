@@ -14,26 +14,29 @@
   "rules": {
     "candidate_scope": "Vanilla Gun* GeneralSetups whose SID identifies a supported weapon class.",
     "covered": "GeneralSetup SID is present in a BPRUE generator config.",
-    "unique_filter": "Name markers and inheritance from another concrete Gun* prototype are exclusion signals; exclusions remain in the report for manual verification.",
-    "suspected_missing": "Not covered by BPRUE and no current unique/internal exclusion signal. This is intentionally not equivalent to confirmed missing."
+    "suspected_missing_base_weapon": "Uncovered setup with a same-SID standalone WeaponPrototype and no concrete Gun* inheritance signal.",
+    "suspected_unique_or_special": "Uncovered setup with structural variant evidence: concrete Gun* inheritance in the weapon/setup chain or a weak unique/internal SID marker.",
+    "needs_manual_review": "Uncovered setup that cannot be classified confidently from Vanilla structure alone.",
+    "important": "All classifications are evidence-based candidates, not authoritative unique/base labels."
   },
   "summary": {
     "vanilla_candidate_general_setups": 54,
     "bprue_configured_general_setups": 36,
     "bprue_configured_weapon_sids": 36,
-    "suspected_missing": 13,
-    "excluded_unique_or_variant_candidates": 5,
+    "suspected_missing_base_weapons": 1,
+    "suspected_unique_or_special": 17,
+    "needs_manual_review": 0,
     "suspected_missing_by_class": {
+      "Snipers": 1
+    },
+    "suspected_unique_or_special_by_class": {
+      "AssaultRifles": 3,
       "MachineGuns": 2,
-      "Pistols": 6,
+      "Pistols": 7,
       "Shotguns": 3,
       "Snipers": 2
     },
-    "excluded_by_class": {
-      "AssaultRifles": 3,
-      "Pistols": 1,
-      "Snipers": 1
-    }
+    "manual_review_by_class": {}
   },
   "bprue_covered": [
     {
@@ -289,176 +292,606 @@
       "source": "CFGGenerators\\SMGs\\smg_upgrades.json"
     }
   ],
-  "suspected_missing": [
+  "suspected_missing_base_weapons": [
     {
       "general_setup_sid": "GunGauss_SP",
-      "weapon_sid": "GunGauss_SP",
       "class": "Snipers",
-      "parent_weapon_sid": "TemplateSniper",
-      "status": "suspected_missing",
-      "review_reasons": [
-        "vanilla_weapon_and_setup_not_covered_by_bprue"
-      ]
-    },
-    {
-      "general_setup_sid": "GunGonta_SP_GS",
-      "weapon_sid": null,
-      "class": "Snipers",
-      "status": "suspected_missing",
-      "review_reasons": [
-        "no_same_sid_weapon_prototype"
-      ]
-    },
-    {
-      "general_setup_sid": "GunPKP_Korshunov_MG_GS",
-      "weapon_sid": null,
-      "class": "MachineGuns",
-      "status": "suspected_missing",
-      "review_reasons": [
-        "no_same_sid_weapon_prototype"
-      ]
-    },
-    {
-      "general_setup_sid": "GunUDP_Deadeye_HG",
-      "weapon_sid": null,
-      "class": "Pistols",
-      "status": "suspected_missing",
-      "review_reasons": [
-        "no_same_sid_weapon_prototype"
-      ]
-    },
-    {
-      "general_setup_sid": "Gun_Encourage_HG_GS",
-      "weapon_sid": null,
-      "class": "Pistols",
-      "status": "suspected_missing",
-      "review_reasons": [
-        "no_same_sid_weapon_prototype"
-      ]
-    },
-    {
-      "general_setup_sid": "Gun_GStreet_HG_GS",
-      "weapon_sid": null,
-      "class": "Pistols",
-      "status": "suspected_missing",
-      "review_reasons": [
-        "no_same_sid_weapon_prototype"
-      ]
-    },
-    {
-      "general_setup_sid": "Gun_Kaimanov_HG_GS",
-      "weapon_sid": null,
-      "class": "Pistols",
-      "status": "suspected_missing",
-      "review_reasons": [
-        "no_same_sid_weapon_prototype"
-      ]
-    },
-    {
-      "general_setup_sid": "Gun_Krivenko_HG_GS",
-      "weapon_sid": null,
-      "class": "Pistols",
-      "status": "suspected_missing",
-      "review_reasons": [
-        "no_same_sid_weapon_prototype"
-      ]
-    },
-    {
-      "general_setup_sid": "Gun_Predator_SG_GS",
-      "weapon_sid": null,
-      "class": "Shotguns",
-      "status": "suspected_missing",
-      "review_reasons": [
-        "no_same_sid_weapon_prototype"
-      ]
-    },
-    {
-      "general_setup_sid": "Gun_Sledgehammer_SG_GS",
-      "weapon_sid": null,
-      "class": "Shotguns",
-      "status": "suspected_missing",
-      "review_reasons": [
-        "no_same_sid_weapon_prototype"
-      ]
-    },
-    {
-      "general_setup_sid": "Gun_Star_HG_GS",
-      "weapon_sid": null,
-      "class": "Pistols",
-      "status": "suspected_missing",
-      "review_reasons": [
-        "no_same_sid_weapon_prototype"
-      ]
-    },
-    {
-      "general_setup_sid": "Gun_Tank_MG_GS",
-      "weapon_sid": null,
-      "class": "MachineGuns",
-      "status": "suspected_missing",
-      "review_reasons": [
-        "no_same_sid_weapon_prototype"
-      ]
-    },
-    {
-      "general_setup_sid": "Gun_Texas_SG_GS",
-      "weapon_sid": null,
-      "class": "Shotguns",
-      "status": "suspected_missing",
-      "review_reasons": [
-        "no_same_sid_weapon_prototype"
-      ]
+      "status": "suspected_missing_base_weapon",
+      "reasons": [
+        "standalone_weapon_and_setup_not_covered_by_bprue"
+      ],
+      "evidence": {
+        "same_sid_weapon_prototype": true,
+        "same_sid_weapon_inheritance_chain": [
+          "TemplateSniper",
+          "TemplateWeapon"
+        ],
+        "same_sid_weapon_concrete_gun_parent": null,
+        "general_setup_inheritance_chain": [
+          "TemplateSniper",
+          "TemplateWeapon"
+        ],
+        "general_setup_concrete_gun_parent": null,
+        "linked_weapon_prototypes": [
+          {
+            "weapon_sid": "GunGauss_SP",
+            "inheritance_chain": [
+              "TemplateSniper",
+              "TemplateWeapon"
+            ],
+            "concrete_gun_parent": null,
+            "localization_sid": null
+          }
+        ]
+      }
     }
   ],
-  "excluded_unique_or_variant_candidates": [
+  "suspected_unique_or_special": [
     {
       "general_setup_sid": "GunAK74_Phantom_ST",
-      "weapon_sid": "GunAK74_Phantom_ST",
       "class": "AssaultRifles",
-      "parent_weapon_sid": "GunAK74_ST",
-      "status": "excluded_unique_or_variant_candidate",
-      "exclusion_reasons": [
-        "inherits_weapon:GunAK74_ST"
-      ]
+      "status": "suspected_unique_or_special",
+      "reasons": [
+        "weapon_inherits_concrete_weapon:GunAK74_ST",
+        "setup_inherits_concrete_setup:GunAK74_ST",
+        "linked_weapon:GunAK74_Phantom_ST:inherits:GunAK74_ST"
+      ],
+      "evidence": {
+        "same_sid_weapon_prototype": true,
+        "same_sid_weapon_inheritance_chain": [
+          "GunAK74_ST",
+          "TemplateRifle",
+          "TemplateWeapon"
+        ],
+        "same_sid_weapon_concrete_gun_parent": "GunAK74_ST",
+        "general_setup_inheritance_chain": [
+          "GunAK74_ST",
+          "TemplateRifle",
+          "TemplateWeapon"
+        ],
+        "general_setup_concrete_gun_parent": "GunAK74_ST",
+        "linked_weapon_prototypes": [
+          {
+            "weapon_sid": "GunAK74_Phantom_ST",
+            "inheritance_chain": [
+              "GunAK74_ST",
+              "TemplateRifle",
+              "TemplateWeapon"
+            ],
+            "concrete_gun_parent": "GunAK74_ST",
+            "localization_sid": null
+          }
+        ]
+      }
     },
     {
       "general_setup_sid": "GunAK74_Strelok_ST",
-      "weapon_sid": "GunAK74_Strelok_ST",
       "class": "AssaultRifles",
-      "parent_weapon_sid": "GunAK74_ST",
-      "status": "excluded_unique_or_variant_candidate",
-      "exclusion_reasons": [
-        "inherits_weapon:GunAK74_ST"
-      ]
+      "status": "suspected_unique_or_special",
+      "reasons": [
+        "weapon_inherits_concrete_weapon:GunAK74_ST",
+        "setup_inherits_concrete_setup:GunAK74_ST",
+        "linked_weapon:GunAK74_Strelok_ST:inherits:GunAK74_ST"
+      ],
+      "evidence": {
+        "same_sid_weapon_prototype": true,
+        "same_sid_weapon_inheritance_chain": [
+          "GunAK74_ST",
+          "TemplateRifle",
+          "TemplateWeapon"
+        ],
+        "same_sid_weapon_concrete_gun_parent": "GunAK74_ST",
+        "general_setup_inheritance_chain": [
+          "GunAK74_ST",
+          "TemplateRifle",
+          "TemplateWeapon"
+        ],
+        "general_setup_concrete_gun_parent": "GunAK74_ST",
+        "linked_weapon_prototypes": [
+          {
+            "weapon_sid": "GunAK74_Strelok_ST",
+            "inheritance_chain": [
+              "GunAK74_ST",
+              "TemplateRifle",
+              "TemplateWeapon"
+            ],
+            "concrete_gun_parent": "GunAK74_ST",
+            "localization_sid": null
+          }
+        ]
+      }
     },
     {
       "general_setup_sid": "GunG37V2_ST",
-      "weapon_sid": "GunG37V2_ST",
       "class": "AssaultRifles",
-      "parent_weapon_sid": "GunG37_ST",
-      "status": "excluded_unique_or_variant_candidate",
-      "exclusion_reasons": [
-        "inherits_weapon:GunG37_ST"
-      ]
+      "status": "suspected_unique_or_special",
+      "reasons": [
+        "weapon_inherits_concrete_weapon:GunG37_ST",
+        "setup_inherits_concrete_setup:GunG37_ST",
+        "linked_weapon:GunG37V2_ST:inherits:GunG37_ST"
+      ],
+      "evidence": {
+        "same_sid_weapon_prototype": true,
+        "same_sid_weapon_inheritance_chain": [
+          "GunG37_ST",
+          "TemplateRifle",
+          "TemplateWeapon"
+        ],
+        "same_sid_weapon_concrete_gun_parent": "GunG37_ST",
+        "general_setup_inheritance_chain": [
+          "GunG37_ST",
+          "TemplateRifle",
+          "TemplateWeapon"
+        ],
+        "general_setup_concrete_gun_parent": "GunG37_ST",
+        "linked_weapon_prototypes": [
+          {
+            "weapon_sid": "GunG37V2_ST",
+            "inheritance_chain": [
+              "GunG37_ST",
+              "TemplateRifle",
+              "TemplateWeapon"
+            ],
+            "concrete_gun_parent": "GunG37_ST",
+            "localization_sid": "supack_Gun_GP37V2_AR"
+          }
+        ]
+      }
     },
     {
       "general_setup_sid": "GunGauss_Scar_SP",
-      "weapon_sid": "GunGauss_Scar_SP",
       "class": "Snipers",
-      "parent_weapon_sid": "GunGauss_SP",
-      "status": "excluded_unique_or_variant_candidate",
-      "exclusion_reasons": [
-        "inherits_weapon:GunGauss_SP"
-      ]
+      "status": "suspected_unique_or_special",
+      "reasons": [
+        "weapon_inherits_concrete_weapon:GunGauss_SP",
+        "setup_inherits_concrete_setup:GunGauss_SP",
+        "linked_weapon:GunGauss_Scar_SP:inherits:GunGauss_SP"
+      ],
+      "evidence": {
+        "same_sid_weapon_prototype": true,
+        "same_sid_weapon_inheritance_chain": [
+          "GunGauss_SP",
+          "TemplateSniper",
+          "TemplateWeapon"
+        ],
+        "same_sid_weapon_concrete_gun_parent": "GunGauss_SP",
+        "general_setup_inheritance_chain": [
+          "GunGauss_SP",
+          "TemplateSniper",
+          "TemplateWeapon"
+        ],
+        "general_setup_concrete_gun_parent": "GunGauss_SP",
+        "linked_weapon_prototypes": [
+          {
+            "weapon_sid": "GunGauss_Scar_SP",
+            "inheritance_chain": [
+              "GunGauss_SP",
+              "TemplateSniper",
+              "TemplateWeapon"
+            ],
+            "concrete_gun_parent": "GunGauss_SP",
+            "localization_sid": null
+          }
+        ]
+      }
+    },
+    {
+      "general_setup_sid": "GunGonta_SP_GS",
+      "class": "Snipers",
+      "status": "suspected_unique_or_special",
+      "reasons": [
+        "setup_inherits_concrete_setup:GunThreeLine_SP_GS",
+        "linked_weapon:GunGonta_SP:inherits:GunThreeLine_SP"
+      ],
+      "evidence": {
+        "same_sid_weapon_prototype": false,
+        "same_sid_weapon_inheritance_chain": [],
+        "same_sid_weapon_concrete_gun_parent": null,
+        "general_setup_inheritance_chain": [
+          "GunThreeLine_SP_GS",
+          "TemplateSniper",
+          "TemplateWeapon"
+        ],
+        "general_setup_concrete_gun_parent": "GunThreeLine_SP_GS",
+        "linked_weapon_prototypes": [
+          {
+            "weapon_sid": "GunGonta_SP",
+            "inheritance_chain": [
+              "GunThreeLine_SP",
+              "TemplateSniper",
+              "TemplateWeapon"
+            ],
+            "concrete_gun_parent": "GunThreeLine_SP",
+            "localization_sid": "nvgpack_Gun_Dragunka_SR"
+          }
+        ]
+      }
     },
     {
       "general_setup_sid": "GunNightStalker_HG",
-      "weapon_sid": "GunNightStalker_HG",
       "class": "Pistols",
-      "parent_weapon_sid": "GunKora_HG",
-      "status": "excluded_unique_or_variant_candidate",
-      "exclusion_reasons": [
-        "inherits_weapon:GunKora_HG"
-      ]
+      "status": "suspected_unique_or_special",
+      "reasons": [
+        "weapon_inherits_concrete_weapon:GunKora_HG",
+        "setup_inherits_concrete_setup:GunKora_HG",
+        "linked_weapon:GunNightStalker_HG:inherits:GunKora_HG"
+      ],
+      "evidence": {
+        "same_sid_weapon_prototype": true,
+        "same_sid_weapon_inheritance_chain": [
+          "GunKora_HG",
+          "TemplatePistol",
+          "TemplateWeapon"
+        ],
+        "same_sid_weapon_concrete_gun_parent": "GunKora_HG",
+        "general_setup_inheritance_chain": [
+          "GunKora_HG",
+          "TemplatePistol",
+          "TemplateWeapon"
+        ],
+        "general_setup_concrete_gun_parent": "GunKora_HG",
+        "linked_weapon_prototypes": [
+          {
+            "weapon_sid": "GunNightStalker_HG",
+            "inheritance_chain": [
+              "GunKora_HG",
+              "TemplatePistol",
+              "TemplateWeapon"
+            ],
+            "concrete_gun_parent": "GunKora_HG",
+            "localization_sid": "myriflepack_Gun_NightStalker_HG"
+          }
+        ]
+      }
+    },
+    {
+      "general_setup_sid": "GunPKP_Korshunov_MG_GS",
+      "class": "MachineGuns",
+      "status": "suspected_unique_or_special",
+      "reasons": [
+        "linked_weapon:GunPKP_Korshunov_MG:inherits:GunPKP_MG"
+      ],
+      "evidence": {
+        "same_sid_weapon_prototype": false,
+        "same_sid_weapon_inheritance_chain": [],
+        "same_sid_weapon_concrete_gun_parent": null,
+        "general_setup_inheritance_chain": [
+          "TemplateMG",
+          "TemplateWeapon"
+        ],
+        "general_setup_concrete_gun_parent": null,
+        "linked_weapon_prototypes": [
+          {
+            "weapon_sid": "GunPKP_Korshunov_MG",
+            "inheritance_chain": [
+              "GunPKP_MG",
+              "TemplateMG",
+              "TemplateWeapon"
+            ],
+            "concrete_gun_parent": "GunPKP_MG",
+            "localization_sid": null
+          }
+        ]
+      }
+    },
+    {
+      "general_setup_sid": "GunUDP_Deadeye_HG",
+      "class": "Pistols",
+      "status": "suspected_unique_or_special",
+      "reasons": [
+        "setup_inherits_concrete_setup:GunUDP_HG",
+        "linked_weapon:Gun_Deadeye_HG:inherits:GunUDP_HG"
+      ],
+      "evidence": {
+        "same_sid_weapon_prototype": false,
+        "same_sid_weapon_inheritance_chain": [],
+        "same_sid_weapon_concrete_gun_parent": null,
+        "general_setup_inheritance_chain": [
+          "GunUDP_HG",
+          "TemplatePistol",
+          "TemplateWeapon"
+        ],
+        "general_setup_concrete_gun_parent": "GunUDP_HG",
+        "linked_weapon_prototypes": [
+          {
+            "weapon_sid": "Gun_Deadeye_HG",
+            "inheritance_chain": [
+              "GunUDP_HG",
+              "TemplatePistol",
+              "TemplateWeapon"
+            ],
+            "concrete_gun_parent": "GunUDP_HG",
+            "localization_sid": null
+          }
+        ]
+      }
+    },
+    {
+      "general_setup_sid": "Gun_Encourage_HG_GS",
+      "class": "Pistols",
+      "status": "suspected_unique_or_special",
+      "reasons": [
+        "setup_inherits_concrete_setup:GunAPB_HG",
+        "linked_weapon:Gun_Encourage_HG:inherits:GunAPB_HG"
+      ],
+      "evidence": {
+        "same_sid_weapon_prototype": false,
+        "same_sid_weapon_inheritance_chain": [],
+        "same_sid_weapon_concrete_gun_parent": null,
+        "general_setup_inheritance_chain": [
+          "GunAPB_HG",
+          "TemplatePistol",
+          "TemplateWeapon"
+        ],
+        "general_setup_concrete_gun_parent": "GunAPB_HG",
+        "linked_weapon_prototypes": [
+          {
+            "weapon_sid": "Gun_Encourage_HG",
+            "inheritance_chain": [
+              "GunAPB_HG",
+              "TemplatePistol",
+              "TemplateWeapon"
+            ],
+            "concrete_gun_parent": "GunAPB_HG",
+            "localization_sid": null
+          }
+        ]
+      }
+    },
+    {
+      "general_setup_sid": "Gun_GStreet_HG_GS",
+      "class": "Pistols",
+      "status": "suspected_unique_or_special",
+      "reasons": [
+        "setup_inherits_concrete_setup:GunM10_HG",
+        "linked_weapon:Gun_GStreet_HG:inherits:GunM10_HG"
+      ],
+      "evidence": {
+        "same_sid_weapon_prototype": false,
+        "same_sid_weapon_inheritance_chain": [],
+        "same_sid_weapon_concrete_gun_parent": null,
+        "general_setup_inheritance_chain": [
+          "GunM10_HG",
+          "TemplateMAC",
+          "TemplateWeapon"
+        ],
+        "general_setup_concrete_gun_parent": "GunM10_HG",
+        "linked_weapon_prototypes": [
+          {
+            "weapon_sid": "Gun_GStreet_HG",
+            "inheritance_chain": [
+              "GunM10_HG",
+              "TemplatePistol",
+              "TemplateWeapon"
+            ],
+            "concrete_gun_parent": "GunM10_HG",
+            "localization_sid": null
+          }
+        ]
+      }
+    },
+    {
+      "general_setup_sid": "Gun_Kaimanov_HG_GS",
+      "class": "Pistols",
+      "status": "suspected_unique_or_special",
+      "reasons": [
+        "setup_inherits_concrete_setup:GunPM_HG",
+        "linked_weapon:Gun_ProjectY_HG:inherits:GunPM_HG"
+      ],
+      "evidence": {
+        "same_sid_weapon_prototype": false,
+        "same_sid_weapon_inheritance_chain": [],
+        "same_sid_weapon_concrete_gun_parent": null,
+        "general_setup_inheritance_chain": [
+          "GunPM_HG",
+          "TemplatePistol",
+          "TemplateWeapon"
+        ],
+        "general_setup_concrete_gun_parent": "GunPM_HG",
+        "linked_weapon_prototypes": [
+          {
+            "weapon_sid": "Gun_ProjectY_HG",
+            "inheritance_chain": [
+              "GunPM_HG",
+              "TemplatePistol",
+              "TemplateWeapon"
+            ],
+            "concrete_gun_parent": "GunPM_HG",
+            "localization_sid": null
+          }
+        ]
+      }
+    },
+    {
+      "general_setup_sid": "Gun_Krivenko_HG_GS",
+      "class": "Pistols",
+      "status": "suspected_unique_or_special",
+      "reasons": [
+        "linked_weapon:Gun_Krivenko_HG:inherits:GunUDP_HG"
+      ],
+      "evidence": {
+        "same_sid_weapon_prototype": false,
+        "same_sid_weapon_inheritance_chain": [],
+        "same_sid_weapon_concrete_gun_parent": null,
+        "general_setup_inheritance_chain": [
+          "TemplatePistol",
+          "TemplateWeapon"
+        ],
+        "general_setup_concrete_gun_parent": null,
+        "linked_weapon_prototypes": [
+          {
+            "weapon_sid": "Gun_Krivenko_HG",
+            "inheritance_chain": [
+              "GunUDP_HG",
+              "TemplatePistol",
+              "TemplateWeapon"
+            ],
+            "concrete_gun_parent": "GunUDP_HG",
+            "localization_sid": null
+          }
+        ]
+      }
+    },
+    {
+      "general_setup_sid": "Gun_Predator_SG_GS",
+      "class": "Shotguns",
+      "status": "suspected_unique_or_special",
+      "reasons": [
+        "setup_inherits_concrete_setup:GunM860_SG",
+        "linked_weapon:Gun_Predator_SG:inherits:GunM860_SG"
+      ],
+      "evidence": {
+        "same_sid_weapon_prototype": false,
+        "same_sid_weapon_inheritance_chain": [],
+        "same_sid_weapon_concrete_gun_parent": null,
+        "general_setup_inheritance_chain": [
+          "GunM860_SG",
+          "TemplateShotgun",
+          "TemplateWeapon"
+        ],
+        "general_setup_concrete_gun_parent": "GunM860_SG",
+        "linked_weapon_prototypes": [
+          {
+            "weapon_sid": "Gun_Predator_SG",
+            "inheritance_chain": [
+              "GunM860_SG",
+              "TemplateShotgun",
+              "TemplateWeapon"
+            ],
+            "concrete_gun_parent": "GunM860_SG",
+            "localization_sid": null
+          }
+        ]
+      }
+    },
+    {
+      "general_setup_sid": "Gun_Sledgehammer_SG_GS",
+      "class": "Shotguns",
+      "status": "suspected_unique_or_special",
+      "reasons": [
+        "setup_inherits_concrete_setup:GunSPSA_SG",
+        "linked_weapon:Gun_Sledgehammer_SG:inherits:GunSPSA_SG"
+      ],
+      "evidence": {
+        "same_sid_weapon_prototype": false,
+        "same_sid_weapon_inheritance_chain": [],
+        "same_sid_weapon_concrete_gun_parent": null,
+        "general_setup_inheritance_chain": [
+          "GunSPSA_SG",
+          "TemplateShotgun",
+          "TemplateWeapon"
+        ],
+        "general_setup_concrete_gun_parent": "GunSPSA_SG",
+        "linked_weapon_prototypes": [
+          {
+            "weapon_sid": "Gun_Sledgehammer_SG",
+            "inheritance_chain": [
+              "GunSPSA_SG",
+              "TemplateShotgun",
+              "TemplateWeapon"
+            ],
+            "concrete_gun_parent": "GunSPSA_SG",
+            "localization_sid": null
+          }
+        ]
+      }
+    },
+    {
+      "general_setup_sid": "Gun_Star_HG_GS",
+      "class": "Pistols",
+      "status": "suspected_unique_or_special",
+      "reasons": [
+        "setup_inherits_concrete_setup:GunPM_HG",
+        "linked_weapon:Gun_Star_HG:inherits:GunPM_HG"
+      ],
+      "evidence": {
+        "same_sid_weapon_prototype": false,
+        "same_sid_weapon_inheritance_chain": [],
+        "same_sid_weapon_concrete_gun_parent": null,
+        "general_setup_inheritance_chain": [
+          "GunPM_HG",
+          "TemplatePistol",
+          "TemplateWeapon"
+        ],
+        "general_setup_concrete_gun_parent": "GunPM_HG",
+        "linked_weapon_prototypes": [
+          {
+            "weapon_sid": "Gun_Star_HG",
+            "inheritance_chain": [
+              "GunPM_HG",
+              "TemplatePistol",
+              "TemplateWeapon"
+            ],
+            "concrete_gun_parent": "GunPM_HG",
+            "localization_sid": null
+          }
+        ]
+      }
+    },
+    {
+      "general_setup_sid": "Gun_Tank_MG_GS",
+      "class": "MachineGuns",
+      "status": "suspected_unique_or_special",
+      "reasons": [
+        "setup_inherits_concrete_setup:GunPKP_MG",
+        "linked_weapon:Gun_Tank_MG:inherits:GunPKP_MG"
+      ],
+      "evidence": {
+        "same_sid_weapon_prototype": false,
+        "same_sid_weapon_inheritance_chain": [],
+        "same_sid_weapon_concrete_gun_parent": null,
+        "general_setup_inheritance_chain": [
+          "GunPKP_MG",
+          "TemplateMG",
+          "TemplateWeapon"
+        ],
+        "general_setup_concrete_gun_parent": "GunPKP_MG",
+        "linked_weapon_prototypes": [
+          {
+            "weapon_sid": "Gun_Tank_MG",
+            "inheritance_chain": [
+              "GunPKP_MG",
+              "TemplateMG",
+              "TemplateWeapon"
+            ],
+            "concrete_gun_parent": "GunPKP_MG",
+            "localization_sid": null
+          }
+        ]
+      }
+    },
+    {
+      "general_setup_sid": "Gun_Texas_SG_GS",
+      "class": "Shotguns",
+      "status": "suspected_unique_or_special",
+      "reasons": [
+        "setup_inherits_concrete_setup:GunRam2_SG",
+        "linked_weapon:Gun_Texas_SG:inherits:GunRam2_SG"
+      ],
+      "evidence": {
+        "same_sid_weapon_prototype": false,
+        "same_sid_weapon_inheritance_chain": [],
+        "same_sid_weapon_concrete_gun_parent": null,
+        "general_setup_inheritance_chain": [
+          "GunRam2_SG",
+          "TemplateShotgun",
+          "TemplateWeapon"
+        ],
+        "general_setup_concrete_gun_parent": "GunRam2_SG",
+        "linked_weapon_prototypes": [
+          {
+            "weapon_sid": "Gun_Texas_SG",
+            "inheritance_chain": [
+              "GunRam2_SG",
+              "TemplateShotgun",
+              "TemplateWeapon"
+            ],
+            "concrete_gun_parent": "GunRam2_SG",
+            "localization_sid": null
+          }
+        ]
+      }
     }
-  ]
+  ],
+  "needs_manual_review": []
 }

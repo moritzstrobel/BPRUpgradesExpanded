@@ -1,7 +1,7 @@
 {
   "source": "unified UpgradeBuildModel after apply_layout_to_model()",
-  "weapon_count": 35,
-  "upgrade_count": 603,
+  "weapon_count": 45,
+  "upgrade_count": 679,
   "weapons": {
     "GunAK74_ST": {
       "upgrade_count": 18,
@@ -5685,6 +5685,116 @@
         }
       }
     },
+    "GunNightStalker_HG": {
+      "upgrade_count": 7,
+      "slots": {
+        "Barrel": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunNightStalker_Upgrade_BPRUE_Pistol_Action_Balanced",
+                "class": "Pistol",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunNightStalker_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                  "GunNightStalker_Upgrade_BPRUE_Pistol_Action_Controlled"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunNightStalker_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                "class": "Pistol",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunNightStalker_Upgrade_BPRUE_Pistol_Action_Balanced",
+                  "GunNightStalker_Upgrade_BPRUE_Pistol_Action_Controlled"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunNightStalker_Upgrade_BPRUE_Pistol_Action_Controlled",
+                "class": "Pistol",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunNightStalker_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                  "GunNightStalker_Upgrade_BPRUE_Pistol_Action_Balanced"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Top": [
+              {
+                "sid": "GunNightStalker_Upgrade_BPRUE_Pistol_Signature_HeavySlide",
+                "class": "Pistol",
+                "group": "Signature",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": []
+              }
+            ]
+          }
+        },
+        "Body": {
+          "2": {
+            "Down": [
+              {
+                "sid": "GunNightStalker_Upgrade_BPRUE_Pistol_Handling_Tactical",
+                "class": "Pistol",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunNightStalker_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                  "GunNightStalker_Upgrade_BPRUE_Pistol_Handling_Stabilized"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunNightStalker_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                "class": "Pistol",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunNightStalker_Upgrade_BPRUE_Pistol_Handling_Tactical",
+                  "GunNightStalker_Upgrade_BPRUE_Pistol_Handling_Stabilized"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunNightStalker_Upgrade_BPRUE_Pistol_Handling_Stabilized",
+                "class": "Pistol",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunNightStalker_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                  "GunNightStalker_Upgrade_BPRUE_Pistol_Handling_Tactical"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
     "GunObrez_SG": {
       "upgrade_count": 15,
       "slots": {
@@ -8245,6 +8355,116 @@
         }
       }
     },
+    "GunUDP_Deadeye_HG": {
+      "upgrade_count": 7,
+      "slots": {
+        "Barrel": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunDeadeye_Upgrade_BPRUE_Pistol_Action_Balanced",
+                "class": "Pistol",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunDeadeye_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                  "GunDeadeye_Upgrade_BPRUE_Pistol_Action_Controlled"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunDeadeye_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                "class": "Pistol",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunDeadeye_Upgrade_BPRUE_Pistol_Action_Balanced",
+                  "GunDeadeye_Upgrade_BPRUE_Pistol_Action_Controlled"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunDeadeye_Upgrade_BPRUE_Pistol_Action_Controlled",
+                "class": "Pistol",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunDeadeye_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                  "GunDeadeye_Upgrade_BPRUE_Pistol_Action_Balanced"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Top": [
+              {
+                "sid": "GunDeadeye_Upgrade_BPRUE_Pistol_Signature_MatchBarrel",
+                "class": "Pistol",
+                "group": "Signature",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": []
+              }
+            ]
+          }
+        },
+        "Body": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunDeadeye_Upgrade_BPRUE_Pistol_Handling_Tactical",
+                "class": "Pistol",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunDeadeye_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                  "GunDeadeye_Upgrade_BPRUE_Pistol_Handling_Stabilized"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunDeadeye_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                "class": "Pistol",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunDeadeye_Upgrade_BPRUE_Pistol_Handling_Tactical",
+                  "GunDeadeye_Upgrade_BPRUE_Pistol_Handling_Stabilized"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunDeadeye_Upgrade_BPRUE_Pistol_Handling_Stabilized",
+                "class": "Pistol",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunDeadeye_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                  "GunDeadeye_Upgrade_BPRUE_Pistol_Handling_Tactical"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
     "GunUDP_HG": {
       "upgrade_count": 13,
       "slots": {
@@ -8989,6 +9209,979 @@
                 "horizontal_explicit": true,
                 "vertical_explicit": false,
                 "blocking_sids": []
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Gun_Encourage_HG_GS": {
+      "upgrade_count": 7,
+      "slots": {
+        "Barrel": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunEncourage_Upgrade_BPRUE_Pistol_Action_Balanced",
+                "class": "Pistol",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunEncourage_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                  "GunEncourage_Upgrade_BPRUE_Pistol_Action_Controlled"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunEncourage_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                "class": "Pistol",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunEncourage_Upgrade_BPRUE_Pistol_Action_Balanced",
+                  "GunEncourage_Upgrade_BPRUE_Pistol_Action_Controlled"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunEncourage_Upgrade_BPRUE_Pistol_Action_Controlled",
+                "class": "Pistol",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunEncourage_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                  "GunEncourage_Upgrade_BPRUE_Pistol_Action_Balanced"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Top": [
+              {
+                "sid": "GunEncourage_Upgrade_BPRUE_Pistol_Signature_AutomaticSear",
+                "class": "Pistol",
+                "group": "Signature",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": []
+              }
+            ]
+          }
+        },
+        "Body": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunEncourage_Upgrade_BPRUE_Pistol_Handling_Tactical",
+                "class": "Pistol",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunEncourage_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                  "GunEncourage_Upgrade_BPRUE_Pistol_Handling_Stabilized"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunEncourage_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                "class": "Pistol",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunEncourage_Upgrade_BPRUE_Pistol_Handling_Tactical",
+                  "GunEncourage_Upgrade_BPRUE_Pistol_Handling_Stabilized"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunEncourage_Upgrade_BPRUE_Pistol_Handling_Stabilized",
+                "class": "Pistol",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunEncourage_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                  "GunEncourage_Upgrade_BPRUE_Pistol_Handling_Tactical"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Gun_GStreet_HG_GS": {
+      "upgrade_count": 7,
+      "slots": {
+        "Barrel": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunGStreet_Upgrade_BPRUE_Pistol_Action_Balanced",
+                "class": "Pistol",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGStreet_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                  "GunGStreet_Upgrade_BPRUE_Pistol_Action_Controlled"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunGStreet_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                "class": "Pistol",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGStreet_Upgrade_BPRUE_Pistol_Action_Balanced",
+                  "GunGStreet_Upgrade_BPRUE_Pistol_Action_Controlled"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunGStreet_Upgrade_BPRUE_Pistol_Action_Controlled",
+                "class": "Pistol",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunGStreet_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                  "GunGStreet_Upgrade_BPRUE_Pistol_Action_Balanced"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Top": [
+              {
+                "sid": "GunGStreet_Upgrade_BPRUE_Pistol_Signature_SelectableFireControl",
+                "class": "Pistol",
+                "group": "Signature",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": []
+              }
+            ]
+          }
+        },
+        "Body": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunGStreet_Upgrade_BPRUE_Pistol_Handling_Tactical",
+                "class": "Pistol",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGStreet_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                  "GunGStreet_Upgrade_BPRUE_Pistol_Handling_Stabilized"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunGStreet_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                "class": "Pistol",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunGStreet_Upgrade_BPRUE_Pistol_Handling_Tactical",
+                  "GunGStreet_Upgrade_BPRUE_Pistol_Handling_Stabilized"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunGStreet_Upgrade_BPRUE_Pistol_Handling_Stabilized",
+                "class": "Pistol",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunGStreet_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                  "GunGStreet_Upgrade_BPRUE_Pistol_Handling_Tactical"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Gun_Kaimanov_HG_GS": {
+      "upgrade_count": 7,
+      "slots": {
+        "Barrel": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunKaimanov_Upgrade_BPRUE_Pistol_Action_Balanced",
+                "class": "Pistol",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunKaimanov_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                  "GunKaimanov_Upgrade_BPRUE_Pistol_Action_Controlled"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunKaimanov_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                "class": "Pistol",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunKaimanov_Upgrade_BPRUE_Pistol_Action_Balanced",
+                  "GunKaimanov_Upgrade_BPRUE_Pistol_Action_Controlled"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunKaimanov_Upgrade_BPRUE_Pistol_Action_Controlled",
+                "class": "Pistol",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunKaimanov_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                  "GunKaimanov_Upgrade_BPRUE_Pistol_Action_Balanced"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Top": [
+              {
+                "sid": "GunKaimanov_Upgrade_BPRUE_Pistol_Signature_QuickResponse",
+                "class": "Pistol",
+                "group": "Signature",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": []
+              }
+            ]
+          }
+        },
+        "Body": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunKaimanov_Upgrade_BPRUE_Pistol_Handling_Tactical",
+                "class": "Pistol",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunKaimanov_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                  "GunKaimanov_Upgrade_BPRUE_Pistol_Handling_Stabilized"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunKaimanov_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                "class": "Pistol",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunKaimanov_Upgrade_BPRUE_Pistol_Handling_Tactical",
+                  "GunKaimanov_Upgrade_BPRUE_Pistol_Handling_Stabilized"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunKaimanov_Upgrade_BPRUE_Pistol_Handling_Stabilized",
+                "class": "Pistol",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunKaimanov_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                  "GunKaimanov_Upgrade_BPRUE_Pistol_Handling_Tactical"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Gun_Krivenko_HG_GS": {
+      "upgrade_count": 7,
+      "slots": {
+        "Barrel": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunKrivenko_Upgrade_BPRUE_Pistol_Action_Balanced",
+                "class": "Pistol",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunKrivenko_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                  "GunKrivenko_Upgrade_BPRUE_Pistol_Action_Controlled"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunKrivenko_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                "class": "Pistol",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunKrivenko_Upgrade_BPRUE_Pistol_Action_Balanced",
+                  "GunKrivenko_Upgrade_BPRUE_Pistol_Action_Controlled"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunKrivenko_Upgrade_BPRUE_Pistol_Action_Controlled",
+                "class": "Pistol",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunKrivenko_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                  "GunKrivenko_Upgrade_BPRUE_Pistol_Action_Balanced"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Top": [
+              {
+                "sid": "GunKrivenko_Upgrade_BPRUE_Pistol_Signature_MatchBarrel",
+                "class": "Pistol",
+                "group": "Signature",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": []
+              }
+            ]
+          }
+        },
+        "Body": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunKrivenko_Upgrade_BPRUE_Pistol_Handling_Tactical",
+                "class": "Pistol",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunKrivenko_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                  "GunKrivenko_Upgrade_BPRUE_Pistol_Handling_Stabilized"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunKrivenko_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                "class": "Pistol",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunKrivenko_Upgrade_BPRUE_Pistol_Handling_Tactical",
+                  "GunKrivenko_Upgrade_BPRUE_Pistol_Handling_Stabilized"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunKrivenko_Upgrade_BPRUE_Pistol_Handling_Stabilized",
+                "class": "Pistol",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunKrivenko_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                  "GunKrivenko_Upgrade_BPRUE_Pistol_Handling_Tactical"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Gun_Predator_SG_GS": {
+      "upgrade_count": 9,
+      "slots": {
+        "Barrel": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunPredator_Upgrade_BPRUE_SG_Pattern_FieldChoke",
+                "class": "SG",
+                "group": "Pattern",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunPredator_Upgrade_BPRUE_SG_Pattern_Breacher",
+                  "GunPredator_Upgrade_BPRUE_SG_Pattern_FullChoke"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunPredator_Upgrade_BPRUE_SG_Pattern_Breacher",
+                "class": "SG",
+                "group": "Pattern",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunPredator_Upgrade_BPRUE_SG_Pattern_FieldChoke",
+                  "GunPredator_Upgrade_BPRUE_SG_Pattern_FullChoke"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunPredator_Upgrade_BPRUE_SG_Pattern_FullChoke",
+                "class": "SG",
+                "group": "Pattern",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunPredator_Upgrade_BPRUE_SG_Pattern_Breacher",
+                  "GunPredator_Upgrade_BPRUE_SG_Pattern_FieldChoke"
+                ]
+              }
+            ]
+          }
+        },
+        "Body": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunPredator_Upgrade_BPRUE_SG_Action_Tuned",
+                "class": "SG",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunPredator_Upgrade_BPRUE_SG_Action_HighSpeed",
+                  "GunPredator_Upgrade_BPRUE_SG_Action_Reinforced"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunPredator_Upgrade_BPRUE_SG_Action_HighSpeed",
+                "class": "SG",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunPredator_Upgrade_BPRUE_SG_Action_Tuned",
+                  "GunPredator_Upgrade_BPRUE_SG_Action_Reinforced"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunPredator_Upgrade_BPRUE_SG_Action_Reinforced",
+                "class": "SG",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunPredator_Upgrade_BPRUE_SG_Action_HighSpeed",
+                  "GunPredator_Upgrade_BPRUE_SG_Action_Tuned"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunPredator_Upgrade_BPRUE_SG_Handling_Combat",
+                "class": "SG",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunPredator_Upgrade_BPRUE_SG_Handling_Lightweight",
+                  "GunPredator_Upgrade_BPRUE_SG_Handling_Stabilized"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunPredator_Upgrade_BPRUE_SG_Handling_Lightweight",
+                "class": "SG",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunPredator_Upgrade_BPRUE_SG_Handling_Combat",
+                  "GunPredator_Upgrade_BPRUE_SG_Handling_Stabilized"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunPredator_Upgrade_BPRUE_SG_Handling_Stabilized",
+                "class": "SG",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunPredator_Upgrade_BPRUE_SG_Handling_Lightweight",
+                  "GunPredator_Upgrade_BPRUE_SG_Handling_Combat"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Gun_Sledgehammer_SG_GS": {
+      "upgrade_count": 9,
+      "slots": {
+        "Barrel": {
+          "2": {
+            "Down": [
+              {
+                "sid": "GunSledgehammer_Upgrade_BPRUE_SG_Pattern_FieldChoke",
+                "class": "SG",
+                "group": "Pattern",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSledgehammer_Upgrade_BPRUE_SG_Pattern_Breacher",
+                  "GunSledgehammer_Upgrade_BPRUE_SG_Pattern_FullChoke"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunSledgehammer_Upgrade_BPRUE_SG_Pattern_Breacher",
+                "class": "SG",
+                "group": "Pattern",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSledgehammer_Upgrade_BPRUE_SG_Pattern_FieldChoke",
+                  "GunSledgehammer_Upgrade_BPRUE_SG_Pattern_FullChoke"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunSledgehammer_Upgrade_BPRUE_SG_Pattern_FullChoke",
+                "class": "SG",
+                "group": "Pattern",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunSledgehammer_Upgrade_BPRUE_SG_Pattern_Breacher",
+                  "GunSledgehammer_Upgrade_BPRUE_SG_Pattern_FieldChoke"
+                ]
+              }
+            ]
+          }
+        },
+        "Body": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunSledgehammer_Upgrade_BPRUE_SG_Action_Tuned",
+                "class": "SG",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSledgehammer_Upgrade_BPRUE_SG_Action_HighSpeed",
+                  "GunSledgehammer_Upgrade_BPRUE_SG_Action_Reinforced"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunSledgehammer_Upgrade_BPRUE_SG_Action_HighSpeed",
+                "class": "SG",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSledgehammer_Upgrade_BPRUE_SG_Action_Tuned",
+                  "GunSledgehammer_Upgrade_BPRUE_SG_Action_Reinforced"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunSledgehammer_Upgrade_BPRUE_SG_Action_Reinforced",
+                "class": "SG",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunSledgehammer_Upgrade_BPRUE_SG_Action_HighSpeed",
+                  "GunSledgehammer_Upgrade_BPRUE_SG_Action_Tuned"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "GunSledgehammer_Upgrade_BPRUE_SG_Handling_Combat",
+                "class": "SG",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSledgehammer_Upgrade_BPRUE_SG_Handling_Lightweight",
+                  "GunSledgehammer_Upgrade_BPRUE_SG_Handling_Stabilized"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunSledgehammer_Upgrade_BPRUE_SG_Handling_Lightweight",
+                "class": "SG",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunSledgehammer_Upgrade_BPRUE_SG_Handling_Combat",
+                  "GunSledgehammer_Upgrade_BPRUE_SG_Handling_Stabilized"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunSledgehammer_Upgrade_BPRUE_SG_Handling_Stabilized",
+                "class": "SG",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunSledgehammer_Upgrade_BPRUE_SG_Handling_Lightweight",
+                  "GunSledgehammer_Upgrade_BPRUE_SG_Handling_Combat"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Gun_Star_HG_GS": {
+      "upgrade_count": 7,
+      "slots": {
+        "Barrel": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunStar_Upgrade_BPRUE_Pistol_Action_Balanced",
+                "class": "Pistol",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunStar_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                  "GunStar_Upgrade_BPRUE_Pistol_Action_Controlled"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunStar_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                "class": "Pistol",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunStar_Upgrade_BPRUE_Pistol_Action_Balanced",
+                  "GunStar_Upgrade_BPRUE_Pistol_Action_Controlled"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunStar_Upgrade_BPRUE_Pistol_Action_Controlled",
+                "class": "Pistol",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunStar_Upgrade_BPRUE_Pistol_Action_HighSpeed",
+                  "GunStar_Upgrade_BPRUE_Pistol_Action_Balanced"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Top": [
+              {
+                "sid": "GunStar_Upgrade_BPRUE_Pistol_Signature_QuickResponse",
+                "class": "Pistol",
+                "group": "Signature",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": []
+              }
+            ]
+          }
+        },
+        "Body": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunStar_Upgrade_BPRUE_Pistol_Handling_Tactical",
+                "class": "Pistol",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunStar_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                  "GunStar_Upgrade_BPRUE_Pistol_Handling_Stabilized"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunStar_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                "class": "Pistol",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunStar_Upgrade_BPRUE_Pistol_Handling_Tactical",
+                  "GunStar_Upgrade_BPRUE_Pistol_Handling_Stabilized"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunStar_Upgrade_BPRUE_Pistol_Handling_Stabilized",
+                "class": "Pistol",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunStar_Upgrade_BPRUE_Pistol_Handling_QuickDraw",
+                  "GunStar_Upgrade_BPRUE_Pistol_Handling_Tactical"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Gun_Texas_SG_GS": {
+      "upgrade_count": 9,
+      "slots": {
+        "Barrel": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunTexas_Upgrade_BPRUE_SG_Pattern_FieldChoke",
+                "class": "SG",
+                "group": "Pattern",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunTexas_Upgrade_BPRUE_SG_Pattern_Breacher",
+                  "GunTexas_Upgrade_BPRUE_SG_Pattern_FullChoke"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunTexas_Upgrade_BPRUE_SG_Pattern_Breacher",
+                "class": "SG",
+                "group": "Pattern",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunTexas_Upgrade_BPRUE_SG_Pattern_FieldChoke",
+                  "GunTexas_Upgrade_BPRUE_SG_Pattern_FullChoke"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunTexas_Upgrade_BPRUE_SG_Pattern_FullChoke",
+                "class": "SG",
+                "group": "Pattern",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunTexas_Upgrade_BPRUE_SG_Pattern_Breacher",
+                  "GunTexas_Upgrade_BPRUE_SG_Pattern_FieldChoke"
+                ]
+              }
+            ]
+          }
+        },
+        "Body": {
+          "0": {
+            "Down": [
+              {
+                "sid": "GunTexas_Upgrade_BPRUE_SG_Action_Tuned",
+                "class": "SG",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunTexas_Upgrade_BPRUE_SG_Action_HighSpeed",
+                  "GunTexas_Upgrade_BPRUE_SG_Action_Reinforced"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunTexas_Upgrade_BPRUE_SG_Action_HighSpeed",
+                "class": "SG",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunTexas_Upgrade_BPRUE_SG_Action_Tuned",
+                  "GunTexas_Upgrade_BPRUE_SG_Action_Reinforced"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunTexas_Upgrade_BPRUE_SG_Action_Reinforced",
+                "class": "SG",
+                "group": "Action",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunTexas_Upgrade_BPRUE_SG_Action_HighSpeed",
+                  "GunTexas_Upgrade_BPRUE_SG_Action_Tuned"
+                ]
+              }
+            ]
+          },
+          "1": {
+            "Down": [
+              {
+                "sid": "GunTexas_Upgrade_BPRUE_SG_Handling_Combat",
+                "class": "SG",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunTexas_Upgrade_BPRUE_SG_Handling_Lightweight",
+                  "GunTexas_Upgrade_BPRUE_SG_Handling_Stabilized"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunTexas_Upgrade_BPRUE_SG_Handling_Lightweight",
+                "class": "SG",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunTexas_Upgrade_BPRUE_SG_Handling_Combat",
+                  "GunTexas_Upgrade_BPRUE_SG_Handling_Stabilized"
+                ]
+              }
+            ],
+            "Unspecified": [
+              {
+                "sid": "GunTexas_Upgrade_BPRUE_SG_Handling_Stabilized",
+                "class": "SG",
+                "group": "Handling",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": false,
+                "blocking_sids": [
+                  "GunTexas_Upgrade_BPRUE_SG_Handling_Lightweight",
+                  "GunTexas_Upgrade_BPRUE_SG_Handling_Combat"
+                ]
               }
             ]
           }
