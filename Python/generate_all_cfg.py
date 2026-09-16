@@ -34,9 +34,7 @@ from CFGGenerators.Common.shared_upgrades import build_shared_upgrades
 CONTENT_ROOT = ROOT.parent
 VANILLA_ROOT = ROOT / "VanillaReference"
 VANILLA_WEAPONS = VANILLA_ROOT / "WeaponPrototypes.cfg"
-# DLC extensions are their own DLCGameData parser root. They reference the
-# official DLC1 data instead of writing patch files into GSC's DLC1 directory.
-DLC_OUTPUT_ROOT = CONTENT_ROOT / "GameLite/DLCGameData/BPRUpgradesExpanded"
+DLC_OUTPUT_ROOT = CONTENT_ROOT / "GameLite/DLCGameData"
 UPGRADES_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/UpgradePrototypes/UpgradePrototypes.cfg"
 GENERAL_SETUP_PATH = CONTENT_ROOT / "GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg"
 WEAPON_PATH = CONTENT_ROOT / "GameLite/GameData/ItemPrototypes/WeaponPrototypes/WeaponPrototypes_patch_BPRUE.cfg"
@@ -165,21 +163,14 @@ def render_weapon_sections_patch(model: UpgradeBuildModel, *, content_pack: str 
             changed.append((entry, position, moved)); enabled_count += 1; moved_count += int(moved)
         if not changed: continue
         weapon_count += 1
-        if content_pack:
-            # This file is emitted under DLCGameData/BPRUpgradesExpanded/ItemPrototypes/.
-            # Reference the official DLC weapon and override only the inherited entries.
-            refurl = f"../../{content_pack}/ItemPrototypes.cfg"
-            lines = [f"{weapon_sid} : struct.begin {{refurl={refurl};refkey={weapon_sid}}}", "   SectionSettings : struct.begin"]
-        else:
-            lines = [f"{weapon_sid} : struct.begin {{bpatch}}", "   SectionSettings : struct.begin {bpatch}"]
+        lines = [f"{weapon_sid} : struct.begin {{bpatch}}", "   SectionSettings : struct.begin {bpatch}"]
         for entry, position, moved in changed:
-            marker = "" if content_pack else " {bpatch}"
-            lines += [f"      [{entry['index']}] : struct.begin{marker}", "         SectionIsEnabled = true"]
+            lines += [f"      [{entry['index']}] : struct.begin {{bpatch}}", "         SectionIsEnabled = true"]
             if moved:
                 lines += [f"         // BPRUE hotspot moved from ({entry['origin'][0]:.6f}, {entry['origin'][1]:.6f}) for UI spacing", f"         LeftPosition = {position[0]:.6f}", f"         TopPosition = {position[1]:.6f}"]
             lines.append("      struct.end")
         lines += ["   struct.end", "struct.end", ""]; patches.extend(lines)
-    scope = f"BPRUpgradesExpanded -> DLCGameData/{content_pack}" if content_pack else "BaseGame"
+    scope = f"DLCGameData/{content_pack}" if content_pack else "BaseGame"
     header = ["// -----------------------------------------------------------------------------", "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND", f"// Scope: {scope}", "// Enables inherited predefined weapon upgrade sections for BPRUE.", f"// Minimum hotspot center distance: {MIN_SECTION_DISTANCE:.1f}", f"// Search ring step: {SECTION_NUDGE_STEP:.1f}; directions per ring: {SECTION_SEARCH_DIRECTIONS}; rings: {SECTION_NUDGE_RINGS}", f"// Patched weapons: {weapon_count}; enabled disabled sections: {enabled_count}; repositioned collisions: {moved_count}", "// -----------------------------------------------------------------------------", ""]
     return "\n".join(header + patches).rstrip() + "\n"
 
@@ -187,17 +178,17 @@ def render_weapon_sections_patch(model: UpgradeBuildModel, *, content_pack: str 
 def write(path, content): path.parent.mkdir(parents=True, exist_ok=True); path.write_text(content, encoding="utf-8"); print(f"Generated {path}")
 
 
-def _remove_legacy_dlc_outputs():
-    """Remove files produced by the old strategy that wrote into DLCGameData/DLC1."""
-    legacy_root = CONTENT_ROOT / "GameLite/DLCGameData/DLC1"
+def _remove_independent_dlc_output():
+    """Remove files produced by the abandoned independent DLC parser-root experiment."""
+    root = CONTENT_ROOT / "GameLite/DLCGameData/BPRUpgradesExpanded"
     for relative in (
-        "UpgradePrototypes/UpgradePrototypes_patch_BPRUE.cfg",
-        "WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
-        "ItemPrototypes/ItemPrototypes_patch_BPRUE.cfg",
+        "UpgradePrototypes/UpgradePrototypes.cfg",
+        "WeaponData/WeaponGeneralSetupPrototypes.cfg",
+        "ItemPrototypes/ItemPrototypes.cfg",
     ):
-        path = legacy_root / relative
+        path = root / relative
         if path.exists():
-            path.unlink(); print(f"Removed legacy DLC output {path}")
+            path.unlink(); print(f"Removed experimental DLC output {path}")
 
 
 def main():
@@ -209,16 +200,16 @@ def main():
     upgrade_text = render_consolidated_upgrade_prototypes(model); setup_text = render_final_general_setup_patch(model, attachments); npc_text = render_technician_patch(model); weapon_text = render_weapon_sections_patch(model)
     validate_rendered_outputs(model, upgrade_text, setup_text, npc_text)
     write(UPGRADES_PATH, upgrade_text); write(GENERAL_SETUP_PATH, setup_text); write(WEAPON_PATH, weapon_text); write(NPC_PATH, npc_text); write(VANILLA_COMPACTION_PATH, render_vanilla_compaction_patch())
-    _remove_legacy_dlc_outputs()
+    _remove_independent_dlc_output()
     for pack, dlc_model in sorted(dlc_models.items()):
         dlc_upgrade_text = render_consolidated_upgrade_prototypes(dlc_model); dlc_setup_text = render_dlc_general_setup_patch(dlc_model, pack); dlc_weapon_text = render_weapon_sections_patch(dlc_model, content_pack=pack)
         validate_rendered_outputs(dlc_model, dlc_upgrade_text, dlc_setup_text)
-        # One independent parser root, matching the established Mod-as-DLC layout.
-        write(DLC_OUTPUT_ROOT / "UpgradePrototypes/UpgradePrototypes.cfg", dlc_upgrade_text)
-        write(DLC_OUTPUT_ROOT / "WeaponData/WeaponGeneralSetupPrototypes.cfg", dlc_setup_text)
-        write(DLC_OUTPUT_ROOT / "ItemPrototypes/ItemPrototypes.cfg", dlc_weapon_text)
+        pack_root = DLC_OUTPUT_ROOT / pack
+        write(pack_root / "UpgradePrototypes/UpgradePrototypes_patch_BPRUE.cfg", dlc_upgrade_text)
+        write(pack_root / "WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg", dlc_setup_text)
+        write(pack_root / "ItemPrototypes/ItemPrototypes_patch_BPRUE.cfg", dlc_weapon_text)
     write(ar.EFFECT_OUTPUT_PATH, ar.render_effect_patch(configs["ar"])); write(smg.EFFECT_OUTPUT_PATH, smg.render_effects()); write(shotgun.EFFECT_OUTPUT, shotgun.render_effects()); write(pistol.EFFECT_OUTPUT, pistol.render_effects()); write(sniper.EFFECT_OUTPUT, sniper.render_effects()); write(MACHINE_GUN_EFFECT_PATH, machine_gun.render_effects()); write(SHARED_EFFECT_PATH, render_shared_effects())
-    print(f"Validated and rendered {len(model.upgrades)} base/Unique upgrades plus {sum(len(m.upgrades) for m in dlc_models.values())} DLC upgrades into DLCGameData/BPRUpgradesExpanded.")
+    print(f"Validated and rendered {len(model.upgrades)} base/Unique upgrades plus {sum(len(m.upgrades) for m in dlc_models.values())} DLC upgrades.")
 
 
 if __name__ == "__main__": main()
