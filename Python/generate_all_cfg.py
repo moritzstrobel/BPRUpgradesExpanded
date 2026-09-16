@@ -42,9 +42,12 @@ NPC_PATH = CONTENT_ROOT / "GameLite/GameData/NPCPrototypes/NPCPrototypes_patch_B
 VANILLA_COMPACTION_PATH = CONTENT_ROOT / "GameLite/GameData/UpgradePrototypes/UpgradePrototypes_patch_BPRUE.cfg"
 MACHINE_GUN_EFFECT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_MachineGunEffectPrototypes.cfg"
 SHARED_EFFECT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_SharedEffectPrototypes.cfg"
-MIN_SECTION_DISTANCE = 8.0
-SECTION_NUDGE_STEP = 10.0
-SECTION_NUDGE_RINGS = 8
+# SectionSettings coordinates are weapon-image UI coordinates, not node radii. A 24-unit
+# center distance is still visually almost on top of another hotspot in-game.
+MIN_SECTION_DISTANCE = 80.0
+SECTION_NUDGE_STEP = 20.0
+SECTION_NUDGE_RINGS = 12
+SECTION_SEARCH_DIRECTIONS = 16
 
 
 def _shared_upgrades(configs):
@@ -99,19 +102,32 @@ def _section_index(section):
     return int(match.group(1))
 
 
-def _far_enough(point, occupied): return all(math.dist(point, other) >= MIN_SECTION_DISTANCE for other in occupied)
+def _far_enough(point, occupied):
+    return all(math.dist(point, other) >= MIN_SECTION_DISTANCE for other in occupied)
+
+
+def _section_search_directions():
+    return tuple(
+        (math.cos(2.0 * math.pi * index / SECTION_SEARCH_DIRECTIONS), math.sin(2.0 * math.pi * index / SECTION_SEARCH_DIRECTIONS))
+        for index in range(SECTION_SEARCH_DIRECTIONS)
+    )
+
 
 def _resolve_section_position(origin, occupied):
-    if _far_enough(origin, occupied): return origin
-    directions = ((1,0),(-1,0),(0,1),(0,-1),(1,1),(1,-1),(-1,1),(-1,-1))
+    if _far_enough(origin, occupied):
+        return origin
+    directions = _section_search_directions()
     for ring in range(1, SECTION_NUDGE_RINGS + 1):
-        offset = ring * SECTION_NUDGE_STEP; candidates = []
-        for dx, dy in directions:
-            point = (origin[0] + dx * offset, origin[1] + dy * offset)
-            if _far_enough(point, occupied): candidates.append((math.dist(origin, point), *point))
+        radius = ring * SECTION_NUDGE_STEP
+        candidates = []
+        for direction_index, (dx, dy) in enumerate(directions):
+            point = (origin[0] + dx * radius, origin[1] + dy * radius)
+            if _far_enough(point, occupied):
+                candidates.append((math.dist(origin, point), direction_index, point[0], point[1]))
         if candidates:
-            _, x, y = min(candidates); return x, y
-    raise ValueError(f"Could not separate weapon section hotspot at {origin}")
+            _, _, x, y = min(candidates)
+            return x, y
+    raise ValueError(f"Could not separate weapon section hotspot at {origin} after {SECTION_NUDGE_RINGS} rings ({SECTION_NUDGE_RINGS * SECTION_NUDGE_STEP:.1f} units)")
 
 
 def _blocks_by_sid(path: Path) -> dict[str, list[str]]:
@@ -155,7 +171,7 @@ def render_weapon_sections_patch(model: UpgradeBuildModel, *, content_pack: str 
         for section in _indexed_children(settings):
             target = _direct_scalar(section, "UpgradeTargetPartType"); left = _float_scalar(section, "LeftPosition"); top = _float_scalar(section, "TopPosition")
             if target is None or left is None or top is None: continue
-            sections.append({"index": _section_index(section), "enabled": (_direct_scalar(section, "SectionIsEnabled") or "").lower() == "true", "origin": (left, top)})
+            sections.append({"index": _section_index(section), "target": target, "enabled": (_direct_scalar(section, "SectionIsEnabled") or "").lower() == "true", "origin": (left, top)})
         occupied = [entry["origin"] for entry in sections if entry["enabled"]]; changed = []
         for entry in sections:
             if entry["enabled"]: continue
@@ -166,11 +182,12 @@ def render_weapon_sections_patch(model: UpgradeBuildModel, *, content_pack: str 
         lines = [f"{weapon_sid} : struct.begin {{bpatch}}", "   SectionSettings : struct.begin {bpatch}"]
         for entry, position, moved in changed:
             lines += [f"      [{entry['index']}] : struct.begin {{bpatch}}", "         SectionIsEnabled = true"]
-            if moved: lines += [f"         LeftPosition = {position[0]:.6f}", f"         TopPosition = {position[1]:.6f}"]
+            if moved:
+                lines += [f"         // BPRUE hotspot moved from ({entry['origin'][0]:.6f}, {entry['origin'][1]:.6f}) for UI spacing", f"         LeftPosition = {position[0]:.6f}", f"         TopPosition = {position[1]:.6f}"]
             lines.append("      struct.end")
         lines += ["   struct.end", "struct.end", ""]; patches.extend(lines)
     scope = f"DLCGameData/{content_pack}" if content_pack else "BaseGame"
-    header = ["// -----------------------------------------------------------------------------", "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND", f"// Scope: {scope}", "// Enables inherited predefined weapon upgrade sections for BPRUE.", f"// Minimum hotspot distance: {MIN_SECTION_DISTANCE:.1f}", f"// Patched weapons: {weapon_count}; enabled disabled sections: {enabled_count}; repositioned collisions: {moved_count}", "// -----------------------------------------------------------------------------", ""]
+    header = ["// -----------------------------------------------------------------------------", "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND", f"// Scope: {scope}", "// Enables inherited predefined weapon upgrade sections for BPRUE.", f"// Minimum hotspot center distance: {MIN_SECTION_DISTANCE:.1f}", f"// Search ring step: {SECTION_NUDGE_STEP:.1f}; directions per ring: {SECTION_SEARCH_DIRECTIONS}; rings: {SECTION_NUDGE_RINGS}", f"// Patched weapons: {weapon_count}; enabled disabled sections: {enabled_count}; repositioned collisions: {moved_count}", "// -----------------------------------------------------------------------------", ""]
     return "\n".join(header + patches).rstrip() + "\n"
 
 
