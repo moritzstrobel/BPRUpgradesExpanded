@@ -36,13 +36,33 @@ SECTION_NUDGE_STEP = 20.0
 SECTION_NUDGE_RINGS = 12
 
 
+def _families_with_uniques(config: dict) -> dict:
+    """Return normal families plus Unique variants projected onto their base family.
+
+    Shared specialization modules used to iterate only config['families']. That meant
+    Uniques received their class-specific BPRUE modules but silently missed all shared
+    modules. Build an effective family entry for each Unique so it receives the exact
+    same shared module groups, effects and cost scaling as its base family while using
+    its own prototype prefix and GeneralSetup.
+    """
+    result = dict(config["families"])
+    for unique_name, unique in config.get("uniques", {}).items():
+        base_name = unique["base_family"]
+        if base_name not in config["families"]:
+            raise ValueError(f"{unique_name}: unknown base_family {base_name}")
+        effective = dict(config["families"][base_name])
+        effective.update(unique)
+        result[f"Unique:{unique_name}"] = effective
+    return result
+
+
 def _shared_upgrades(configs: dict):
     specs = (
-        (configs["pistol"]["families"], "pistol", "Pistol", pistol.TEMPLATE_SID, lambda _: pistol.IMAGE, pistol.ICON, "PistolShared"),
-        (configs["smg"]["families"], "smg", "SMG", smg.TEMPLATE_SID, lambda _: smg.IMAGE, smg.ICON, "SMGShared"),
-        (configs["ar"]["families"], "assault_rifle", "AR", ar.MODULE_TEMPLATE_SID, lambda family: family["image"], ar.DEFAULT_ICON, "ARShared"),
-        (configs["shotgun"]["families"], "shotgun", "SG", shotgun.TEMPLATE_SID, lambda _: shotgun.IMAGE, shotgun.ICON, "SGShared"),
-        (configs["sniper"]["families"], "sniper", "Sniper", sniper.TEMPLATE_SID, lambda _: sniper.IMAGE, sniper.ICON, "SniperShared"),
+        (_families_with_uniques(configs["pistol"]), "pistol", "Pistol", pistol.TEMPLATE_SID, lambda _: pistol.IMAGE, pistol.ICON, "PistolShared"),
+        (_families_with_uniques(configs["smg"]), "smg", "SMG", smg.TEMPLATE_SID, lambda _: smg.IMAGE, smg.ICON, "SMGShared"),
+        (_families_with_uniques(configs["ar"]), "assault_rifle", "AR", ar.MODULE_TEMPLATE_SID, lambda family: family["image"], ar.DEFAULT_ICON, "ARShared"),
+        (_families_with_uniques(configs["shotgun"]), "shotgun", "SG", shotgun.TEMPLATE_SID, lambda _: shotgun.IMAGE, shotgun.ICON, "SGShared"),
+        (_families_with_uniques(configs["sniper"]), "sniper", "Sniper", sniper.TEMPLATE_SID, lambda _: sniper.IMAGE, sniper.ICON, "SniperShared"),
     )
     result = []
     for families, class_key, weapon_class, template, image_fn, icon, namespace in specs:
