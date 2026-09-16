@@ -1,0 +1,470 @@
+{
+  "sources": {
+    "weapon_prototypes": "VanillaReference\\WeaponPrototypes.cfg",
+    "general_setups": "VanillaReference\\WeaponGeneralSetupPrototypes.cfg",
+    "bprue_configs": [
+      "CFGGenerators\\AssaultRifles\\assault_rifles_upgrades.json",
+      "CFGGenerators\\SMGs\\smg_upgrades.json",
+      "CFGGenerators\\Shotguns\\shotgun_upgrades.json",
+      "CFGGenerators\\Pistols\\pistol_upgrades.json",
+      "CFGGenerators\\Snipers\\sniper_upgrades.json",
+      "CFGGenerators\\MachineGuns\\machine_gun_upgrades.json"
+    ]
+  },
+  "rules": {
+    "candidate_scope": "Vanilla Gun* GeneralSetups whose SID identifies a supported weapon class.",
+    "covered": "GeneralSetup SID is present in a BPRUE generator config.",
+    "unique_filter": "Name markers and inheritance from another concrete Gun* prototype are exclusion signals; exclusions remain in the report for manual verification.",
+    "suspected_missing": "Not covered by BPRUE and no current unique/internal exclusion signal. This is intentionally not equivalent to confirmed missing."
+  },
+  "summary": {
+    "vanilla_candidate_general_setups": 54,
+    "bprue_configured_general_setups": 34,
+    "bprue_configured_weapon_sids": 34,
+    "suspected_missing": 15,
+    "excluded_unique_or_variant_candidates": 5,
+    "suspected_missing_by_class": {
+      "MachineGuns": 2,
+      "Pistols": 7,
+      "Shotguns": 4,
+      "Snipers": 2
+    },
+    "excluded_by_class": {
+      "AssaultRifles": 3,
+      "Pistols": 1,
+      "Snipers": 1
+    }
+  },
+  "bprue_covered": [
+    {
+      "family": "AK74",
+      "class": "AssaultRifles",
+      "weapon_sid": "GunAK74_ST",
+      "general_setup_sid": "GunAK74_ST",
+      "source": "CFGGenerators\\AssaultRifles\\assault_rifles_upgrades.json"
+    },
+    {
+      "family": "AKU",
+      "class": "SMGs",
+      "weapon_sid": "GunAKU_PP",
+      "general_setup_sid": "GunAKU_PP",
+      "source": "CFGGenerators\\SMGs\\smg_upgrades.json"
+    },
+    {
+      "family": "APSB",
+      "class": "Pistols",
+      "weapon_sid": "GunAPB_HG",
+      "general_setup_sid": "GunAPB_HG",
+      "source": "CFGGenerators\\Pistols\\pistol_upgrades.json"
+    },
+    {
+      "family": "Arev",
+      "class": "AssaultRifles",
+      "weapon_sid": "GunArev_ST",
+      "general_setup_sid": "GunArev_ST_GS",
+      "source": "CFGGenerators\\AssaultRifles\\assault_rifles_upgrades.json"
+    },
+    {
+      "family": "Bucket",
+      "class": "SMGs",
+      "weapon_sid": "GunBucket_PP",
+      "general_setup_sid": "GunBucket_PP",
+      "source": "CFGGenerators\\SMGs\\smg_upgrades.json"
+    },
+    {
+      "family": "D12",
+      "class": "Shotguns",
+      "weapon_sid": "GunD12_SG",
+      "general_setup_sid": "GunD12_SG",
+      "source": "CFGGenerators\\Shotguns\\shotgun_upgrades.json"
+    },
+    {
+      "family": "Dnipro",
+      "class": "AssaultRifles",
+      "weapon_sid": "GunDnipro_ST",
+      "general_setup_sid": "GunDnipro_ST",
+      "source": "CFGGenerators\\AssaultRifles\\assault_rifles_upgrades.json"
+    },
+    {
+      "family": "Fora230",
+      "class": "SMGs",
+      "weapon_sid": "GunFora230_PP",
+      "general_setup_sid": "GunFora230_PP_GS",
+      "source": "CFGGenerators\\SMGs\\smg_upgrades.json"
+    },
+    {
+      "family": "Fora",
+      "class": "AssaultRifles",
+      "weapon_sid": "GunFora_ST",
+      "general_setup_sid": "GunFora_ST",
+      "source": "CFGGenerators\\AssaultRifles\\assault_rifles_upgrades.json"
+    },
+    {
+      "family": "G37",
+      "class": "AssaultRifles",
+      "weapon_sid": "GunG37_ST",
+      "general_setup_sid": "GunG37_ST",
+      "source": "CFGGenerators\\AssaultRifles\\assault_rifles_upgrades.json"
+    },
+    {
+      "family": "GP3A",
+      "class": "Snipers",
+      "weapon_sid": "GunGP3A_DMR",
+      "general_setup_sid": "GunGP3A_DMR_GS",
+      "source": "CFGGenerators\\Snipers\\sniper_upgrades.json"
+    },
+    {
+      "family": "Grim",
+      "class": "AssaultRifles",
+      "weapon_sid": "GunGrim_ST",
+      "general_setup_sid": "GunGrim_ST",
+      "source": "CFGGenerators\\AssaultRifles\\assault_rifles_upgrades.json"
+    },
+    {
+      "family": "Gvintar",
+      "class": "AssaultRifles",
+      "weapon_sid": "GunGvintar_ST",
+      "general_setup_sid": "GunGvintar_ST",
+      "source": "CFGGenerators\\AssaultRifles\\assault_rifles_upgrades.json"
+    },
+    {
+      "family": "Integral",
+      "class": "SMGs",
+      "weapon_sid": "GunIntegral_PP",
+      "general_setup_sid": "GunIntegral_PP",
+      "source": "CFGGenerators\\SMGs\\smg_upgrades.json"
+    },
+    {
+      "family": "Kharod",
+      "class": "AssaultRifles",
+      "weapon_sid": "GunKharod_ST",
+      "general_setup_sid": "GunKharod_ST",
+      "source": "CFGGenerators\\AssaultRifles\\assault_rifles_upgrades.json"
+    },
+    {
+      "family": "Lavina",
+      "class": "AssaultRifles",
+      "weapon_sid": "GunLavina_ST",
+      "general_setup_sid": "GunLavina_ST",
+      "source": "CFGGenerators\\AssaultRifles\\assault_rifles_upgrades.json"
+    },
+    {
+      "family": "M10",
+      "class": "Pistols",
+      "weapon_sid": "GunM10_HG",
+      "general_setup_sid": "GunM10_HG",
+      "source": "CFGGenerators\\Pistols\\pistol_upgrades.json"
+    },
+    {
+      "family": "M16",
+      "class": "AssaultRifles",
+      "weapon_sid": "GunM16_ST",
+      "general_setup_sid": "GunM16_ST",
+      "source": "CFGGenerators\\AssaultRifles\\assault_rifles_upgrades.json"
+    },
+    {
+      "family": "M701",
+      "class": "Snipers",
+      "weapon_sid": "GunM701_SP",
+      "general_setup_sid": "GunM701_SP",
+      "source": "CFGGenerators\\Snipers\\sniper_upgrades.json"
+    },
+    {
+      "family": "M860",
+      "class": "Shotguns",
+      "weapon_sid": "GunM860_SG",
+      "general_setup_sid": "GunM860_SG",
+      "source": "CFGGenerators\\Shotguns\\shotgun_upgrades.json"
+    },
+    {
+      "family": "Mark",
+      "class": "Snipers",
+      "weapon_sid": "GunMark_SP",
+      "general_setup_sid": "GunMark_SP",
+      "source": "CFGGenerators\\Snipers\\sniper_upgrades.json"
+    },
+    {
+      "family": "PKP",
+      "class": "MachineGuns",
+      "weapon_sid": "GunPKP_MG",
+      "general_setup_sid": "GunPKP_MG",
+      "source": "CFGGenerators\\MachineGuns\\machine_gun_upgrades.json"
+    },
+    {
+      "family": "PTM",
+      "class": "Pistols",
+      "weapon_sid": "GunPM_HG",
+      "general_setup_sid": "GunPM_HG",
+      "source": "CFGGenerators\\Pistols\\pistol_upgrades.json"
+    },
+    {
+      "family": "Ram2",
+      "class": "Shotguns",
+      "weapon_sid": "GunRam2_SG",
+      "general_setup_sid": "GunRam2_SG",
+      "source": "CFGGenerators\\Shotguns\\shotgun_upgrades.json"
+    },
+    {
+      "family": "Rhino",
+      "class": "Pistols",
+      "weapon_sid": "GunRhino_HG",
+      "general_setup_sid": "GunRhino_HG",
+      "source": "CFGGenerators\\Pistols\\pistol_upgrades.json"
+    },
+    {
+      "family": "SIC",
+      "class": "Snipers",
+      "weapon_sid": "GunSKP_DMR",
+      "general_setup_sid": "GunSKP_DMR_GS",
+      "source": "CFGGenerators\\Snipers\\sniper_upgrades.json"
+    },
+    {
+      "family": "SPSA",
+      "class": "Shotguns",
+      "weapon_sid": "GunSPSA_SG",
+      "general_setup_sid": "GunSPSA_SG",
+      "source": "CFGGenerators\\Shotguns\\shotgun_upgrades.json"
+    },
+    {
+      "family": "SVDM",
+      "class": "Snipers",
+      "weapon_sid": "GunSVDM_SP",
+      "general_setup_sid": "GunSVDM_SP",
+      "source": "CFGGenerators\\Snipers\\sniper_upgrades.json"
+    },
+    {
+      "family": "SVU",
+      "class": "Snipers",
+      "weapon_sid": "GunSVU_SP",
+      "general_setup_sid": "GunSVU_SP",
+      "source": "CFGGenerators\\Snipers\\sniper_upgrades.json"
+    },
+    {
+      "family": "TOZ",
+      "class": "Shotguns",
+      "weapon_sid": "GunTOZ_SG",
+      "general_setup_sid": "GunTOZ_SG",
+      "source": "CFGGenerators\\Shotguns\\shotgun_upgrades.json"
+    },
+    {
+      "family": "ThreeLine",
+      "class": "Snipers",
+      "weapon_sid": "GunThreeLine_SP",
+      "general_setup_sid": "GunThreeLine_SP_GS",
+      "source": "CFGGenerators\\Snipers\\sniper_upgrades.json"
+    },
+    {
+      "family": "UDP",
+      "class": "Pistols",
+      "weapon_sid": "GunUDP_HG",
+      "general_setup_sid": "GunUDP_HG",
+      "source": "CFGGenerators\\Pistols\\pistol_upgrades.json"
+    },
+    {
+      "family": "Viper",
+      "class": "SMGs",
+      "weapon_sid": "GunViper_PP",
+      "general_setup_sid": "GunViper_PP",
+      "source": "CFGGenerators\\SMGs\\smg_upgrades.json"
+    },
+    {
+      "family": "Zubr",
+      "class": "SMGs",
+      "weapon_sid": "GunZubr_PP",
+      "general_setup_sid": "GunZubr_PP",
+      "source": "CFGGenerators\\SMGs\\smg_upgrades.json"
+    }
+  ],
+  "suspected_missing": [
+    {
+      "general_setup_sid": "GunGauss_SP",
+      "weapon_sid": "GunGauss_SP",
+      "class": "Snipers",
+      "parent_weapon_sid": "TemplateSniper",
+      "status": "suspected_missing",
+      "review_reasons": [
+        "vanilla_weapon_and_setup_not_covered_by_bprue"
+      ]
+    },
+    {
+      "general_setup_sid": "GunGonta_SP_GS",
+      "weapon_sid": null,
+      "class": "Snipers",
+      "status": "suspected_missing",
+      "review_reasons": [
+        "no_same_sid_weapon_prototype"
+      ]
+    },
+    {
+      "general_setup_sid": "GunKora_HG",
+      "weapon_sid": "GunKora_HG",
+      "class": "Pistols",
+      "parent_weapon_sid": "TemplatePistol",
+      "status": "suspected_missing",
+      "review_reasons": [
+        "vanilla_weapon_and_setup_not_covered_by_bprue"
+      ]
+    },
+    {
+      "general_setup_sid": "GunObrez_SG",
+      "weapon_sid": "GunObrez_SG",
+      "class": "Shotguns",
+      "parent_weapon_sid": "TemplateShotgun",
+      "status": "suspected_missing",
+      "review_reasons": [
+        "vanilla_weapon_and_setup_not_covered_by_bprue"
+      ]
+    },
+    {
+      "general_setup_sid": "GunPKP_Korshunov_MG_GS",
+      "weapon_sid": null,
+      "class": "MachineGuns",
+      "status": "suspected_missing",
+      "review_reasons": [
+        "no_same_sid_weapon_prototype"
+      ]
+    },
+    {
+      "general_setup_sid": "GunUDP_Deadeye_HG",
+      "weapon_sid": null,
+      "class": "Pistols",
+      "status": "suspected_missing",
+      "review_reasons": [
+        "no_same_sid_weapon_prototype"
+      ]
+    },
+    {
+      "general_setup_sid": "Gun_Encourage_HG_GS",
+      "weapon_sid": null,
+      "class": "Pistols",
+      "status": "suspected_missing",
+      "review_reasons": [
+        "no_same_sid_weapon_prototype"
+      ]
+    },
+    {
+      "general_setup_sid": "Gun_GStreet_HG_GS",
+      "weapon_sid": null,
+      "class": "Pistols",
+      "status": "suspected_missing",
+      "review_reasons": [
+        "no_same_sid_weapon_prototype"
+      ]
+    },
+    {
+      "general_setup_sid": "Gun_Kaimanov_HG_GS",
+      "weapon_sid": null,
+      "class": "Pistols",
+      "status": "suspected_missing",
+      "review_reasons": [
+        "no_same_sid_weapon_prototype"
+      ]
+    },
+    {
+      "general_setup_sid": "Gun_Krivenko_HG_GS",
+      "weapon_sid": null,
+      "class": "Pistols",
+      "status": "suspected_missing",
+      "review_reasons": [
+        "no_same_sid_weapon_prototype"
+      ]
+    },
+    {
+      "general_setup_sid": "Gun_Predator_SG_GS",
+      "weapon_sid": null,
+      "class": "Shotguns",
+      "status": "suspected_missing",
+      "review_reasons": [
+        "no_same_sid_weapon_prototype"
+      ]
+    },
+    {
+      "general_setup_sid": "Gun_Sledgehammer_SG_GS",
+      "weapon_sid": null,
+      "class": "Shotguns",
+      "status": "suspected_missing",
+      "review_reasons": [
+        "no_same_sid_weapon_prototype"
+      ]
+    },
+    {
+      "general_setup_sid": "Gun_Star_HG_GS",
+      "weapon_sid": null,
+      "class": "Pistols",
+      "status": "suspected_missing",
+      "review_reasons": [
+        "no_same_sid_weapon_prototype"
+      ]
+    },
+    {
+      "general_setup_sid": "Gun_Tank_MG_GS",
+      "weapon_sid": null,
+      "class": "MachineGuns",
+      "status": "suspected_missing",
+      "review_reasons": [
+        "no_same_sid_weapon_prototype"
+      ]
+    },
+    {
+      "general_setup_sid": "Gun_Texas_SG_GS",
+      "weapon_sid": null,
+      "class": "Shotguns",
+      "status": "suspected_missing",
+      "review_reasons": [
+        "no_same_sid_weapon_prototype"
+      ]
+    }
+  ],
+  "excluded_unique_or_variant_candidates": [
+    {
+      "general_setup_sid": "GunAK74_Phantom_ST",
+      "weapon_sid": "GunAK74_Phantom_ST",
+      "class": "AssaultRifles",
+      "parent_weapon_sid": "GunAK74_ST",
+      "status": "excluded_unique_or_variant_candidate",
+      "exclusion_reasons": [
+        "inherits_weapon:GunAK74_ST"
+      ]
+    },
+    {
+      "general_setup_sid": "GunAK74_Strelok_ST",
+      "weapon_sid": "GunAK74_Strelok_ST",
+      "class": "AssaultRifles",
+      "parent_weapon_sid": "GunAK74_ST",
+      "status": "excluded_unique_or_variant_candidate",
+      "exclusion_reasons": [
+        "inherits_weapon:GunAK74_ST"
+      ]
+    },
+    {
+      "general_setup_sid": "GunG37V2_ST",
+      "weapon_sid": "GunG37V2_ST",
+      "class": "AssaultRifles",
+      "parent_weapon_sid": "GunG37_ST",
+      "status": "excluded_unique_or_variant_candidate",
+      "exclusion_reasons": [
+        "inherits_weapon:GunG37_ST"
+      ]
+    },
+    {
+      "general_setup_sid": "GunGauss_Scar_SP",
+      "weapon_sid": "GunGauss_Scar_SP",
+      "class": "Snipers",
+      "parent_weapon_sid": "GunGauss_SP",
+      "status": "excluded_unique_or_variant_candidate",
+      "exclusion_reasons": [
+        "inherits_weapon:GunGauss_SP"
+      ]
+    },
+    {
+      "general_setup_sid": "GunNightStalker_HG",
+      "weapon_sid": "GunNightStalker_HG",
+      "class": "Pistols",
+      "parent_weapon_sid": "GunKora_HG",
+      "status": "excluded_unique_or_variant_candidate",
+      "exclusion_reasons": [
+        "inherits_weapon:GunKora_HG"
+      ]
+    }
+  ]
+}
