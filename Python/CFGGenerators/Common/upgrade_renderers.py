@@ -11,7 +11,7 @@ TECHNICIAN_SIDS = (
 )
 
 ICON_ROOT = "/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons"
-BPRUE_MODULE_IMAGE = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/T_Module_Base.T_Module_Base'"
+BPRUE_MODULE_IMAGE = "Texture2D'/BPRUpgradesExpanded/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/T_Module_Base.T_Module_Base'"
 
 
 def _vanilla_icon(name: str) -> str:
