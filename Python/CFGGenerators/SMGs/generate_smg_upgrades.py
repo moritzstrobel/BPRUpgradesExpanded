@@ -61,6 +61,8 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
                 _,text,hint,cost,vertical,target,effects=MODULES[key]; current=sid(family,key)
                 upgrades.append(UpgradeDefinition(sid=current,general_setup_sid=setup,weapon_class="SMG",group=group.title(),target_part=target,text_sid=text,hint_sid=hint,image=IMAGE,icon=ICON,cost=cost,effects=tuple(effects),blocking_sids=tuple(x for x in group_sids if x!=current),vertical_position=vertical,template_sid=TEMPLATE_SID))
     for family in config.get("caliber_families", {}).values():
+        if not family.get("bprue_caliber_conversion", True):
+            continue
         conversion_sids=[caliber_sid(family,c) for c in family["conversions"]]; source_remove=CALIBER_DATA[family["base_caliber"]]["remove_ammo_effect"]
         for caliber in family["conversions"]:
             data=CALIBER_DATA[caliber]; current=caliber_sid(family,caliber)

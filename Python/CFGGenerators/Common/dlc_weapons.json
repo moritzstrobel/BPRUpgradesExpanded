@@ -1,0 +1,30 @@
+{
+  "weapons": {
+    "Gabion": {"content_pack":"Deluxe","general_setup_sid":"Gun_Gabion_AR_GS","class":"AssaultRifles","base_family":"Lavina"},
+    "Logarithm": {"content_pack":"Deluxe","general_setup_sid":"Gun_Logarithm_SMG_GS","class":"SMGs","base_family":"Integral"},
+    "MonolitAR": {"content_pack":"Deluxe","general_setup_sid":"Gun_Monolit_AR_GS","class":"AssaultRifles","base_family":"M16"},
+    "MonolitHG": {"content_pack":"Deluxe","general_setup_sid":"Gun_Monolit_HG_GS","class":"Pistols","base_family":"PTM"},
+    "MonolitSG": {"content_pack":"Deluxe","general_setup_sid":"Gun_Monolit_SG_GS","class":"Shotguns","base_family":"M860"},
+    "Zvirolov": {"content_pack":"Deluxe","general_setup_sid":"Gun_Zvirolov_SR_GS","class":"Snipers","base_family":"M701"},
+
+    "AK9": {"content_pack":"DLC1","general_setup_sid":"GunAK9_ST_GS","weapon_sid":"GunAK9_ST","class":"AssaultRifles","base_family":"AK74","discovery":"item_inheritance"},
+    "ArevLight": {"content_pack":"DLC1","general_setup_sid":"GunArevLight_AR_GS","class":"AssaultRifles","base_family":"Arev"},
+    "Clapper": {"content_pack":"DLC1","general_setup_sid":"GunClapper_SG_GS","class":"Shotguns","base_family":"M860"},
+    "Defender": {"content_pack":"DLC1","general_setup_sid":"GunDefender_SG","class":"Shotguns","base_family":"D12"},
+    "DniproDuty": {"content_pack":"DLC1","general_setup_sid":"GunDniproDuty_ST","class":"AssaultRifles","base_family":"Dnipro"},
+    "Fallschirmjager": {"content_pack":"DLC1","general_setup_sid":"GunFallschirmjager_DMR_GS","class":"Snipers","base_family":"GP3A"},
+    "HSG72": {"content_pack":"DLC1","general_setup_sid":"GunHSG72_DMR_GS","class":"Snipers","base_family":"GP3A"},
+    "KharodFreedom": {"content_pack":"DLC1","general_setup_sid":"GunKharodFreedom_ST","class":"AssaultRifles","base_family":"Kharod"},
+    "SPSASniper": {"content_pack":"DLC1","general_setup_sid":"GunSPSA_Sniper_SG","class":"Shotguns","base_family":"SPSA"},
+    "SVUCQB": {"content_pack":"DLC1","general_setup_sid":"GunSVU_CQB_SP","class":"Snipers","base_family":"SVU"},
+    "Tundra": {"content_pack":"DLC1","general_setup_sid":"GunTundra_DMR_GS","class":"Snipers","base_family":"SIC"},
+    "Warszawa": {"content_pack":"DLC1","general_setup_sid":"GunWarszawa_AR_GS","class":"AssaultRifles","base_family":"Arev"},
+
+    "Veteran": {"content_pack":"PreOrder","general_setup_sid":"Gun_Veteran_AR_GS","class":"AssaultRifles","base_family":"Gvintar"},
+
+    "Margach": {"content_pack":"Ultimate","general_setup_sid":"Gun_Margach_SG_GS","class":"Shotguns","base_family":"D12"},
+    "ModelSpecial": {"content_pack":"Ultimate","general_setup_sid":"Gun_ModelSpecial_HG_GS","class":"Pistols","base_family":"Rhino"},
+    "Novator": {"content_pack":"Ultimate","general_setup_sid":"Gun_Novator_AR_GS","class":"AssaultRifles","base_family":"Fora"},
+    "SMGMonolith": {"content_pack":"Ultimate","general_setup_sid":"Gun_SMGMonolith_SMG_GS","class":"SMGs","base_family":"Viper"}
+  }
+}
