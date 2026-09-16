@@ -35,9 +35,21 @@ GROUPS = [('Pattern', PATTERN, 'Barrel'), ('Action', ACTION, 'Body'), ('Handling
 def cfg() -> dict: return json.loads(CONFIG_PATH.read_text(encoding='utf-8'))
 def sid(prefix: str, group: str, key: str) -> str: return f'{prefix}_Upgrade_BPRUE_SG_{group}_{key.title().replace("_", "")}'
 
+def expanded_families(config: dict):
+    """Yield normal families plus unique variants expanded from a base family."""
+    for name, family in config['families'].items():
+        yield name, family, False
+    for name, unique in config.get('uniques', {}).items():
+        base_name = unique['base_family']
+        if base_name not in config['families']:
+            raise ValueError(f'Unique shotgun {name} references unknown base_family {base_name}')
+        family = dict(config['families'][base_name])
+        family.update(unique)
+        yield name, family, True
+
 def build_upgrades(config: dict) -> list[UpgradeDefinition]:
     upgrades=[]
-    for fam in config['families'].values():
+    for _, fam, _ in expanded_families(config):
         scale=fam.get('cost_scale',1)
         for group,definitions,target_part in GROUPS:
             group_sids=[sid(fam['prototype_prefix'],group,key) for key in definitions]
@@ -118,7 +130,7 @@ struct.end
 
 def main() -> None:
     config=cfg(); model=UpgradeBuildModel(); model.extend(build_upgrades(config)); model.validate()
-    outputs={UPGRADE_OUTPUT:render_upgrade_prototypes(model,source='shotgun_upgrades.json',template_sid=TEMPLATE_SID),EFFECT_OUTPUT:render_effects(),WEAPON_OUTPUT:render_general_setup_patch(model)}
+    outputs={UPGRADE_OUTPUT:render_upgrade_prototypes(model,source='shotgun_upgrades.json',template_sid=TEMPLATE_SID,header_comments=('Normal families and configured unique variants receive the same base-family specialization groups with distinct prototype SIDs.',)),EFFECT_OUTPUT:render_effects(),WEAPON_OUTPUT:render_general_setup_patch(model,header_comments=('Registers BPRUE specialization groups for normal shotgun families and configured unique variants.',))}
     for path,content in outputs.items(): path.parent.mkdir(parents=True,exist_ok=True); path.write_text(content,encoding='utf8')
     print(f'Generated shotgun specialization CFGs from {model.summary()}')
 
