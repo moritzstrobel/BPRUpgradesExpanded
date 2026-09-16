@@ -39,6 +39,11 @@ def _sid(block: list[str]) -> str:
     return block[0].split(" :", 1)[0].strip()
 
 
+def _refkey(block: list[str]) -> str | None:
+    match = re.search(r"\{[^}]*\brefkey=([^;}]+)", block[0])
+    return match.group(1).strip() if match else None
+
+
 def _direct_scalar(block: list[str], name: str) -> str | None:
     prefix = name + " ="
     depth = 0
@@ -54,12 +59,7 @@ def _direct_scalar(block: list[str], name: str) -> str | None:
 
 
 def _direct_child(block: list[str], name: str) -> list[str] | None:
-    """Find a named child struct without assuming a particular indentation width.
-
-    Vanilla WeaponPrototypes is not indentation-consistent across all weapon blocks.
-    The previous parser required exactly three leading spaces, while the proven
-    analysis parser correctly treats whitespace as formatting only.
-    """
+    """Find a named child struct without assuming a particular indentation width."""
     for index, line in enumerate(block[1:-1], start=1):
         stripped = line.strip()
         if not stripped.startswith(name + " : struct.begin"):
@@ -131,33 +131,94 @@ def vanilla_modifications() -> dict[str, tuple[str, int]]:
 
 
 @lru_cache(maxsize=1)
-def vanilla_general_setup_upgrades() -> dict[str, list[str]]:
+def _general_setup_blocks() -> dict[str, list[str]]:
     if not VANILLA_GENERAL_SETUPS.exists():
         raise FileNotFoundError(VANILLA_GENERAL_SETUPS)
-    result: dict[str, list[str]] = {}
-    for block in _top_level_blocks(VANILLA_GENERAL_SETUPS.read_text(encoding="utf-8")):
-        values = _array_values(_direct_child(block, "UpgradePrototypeSIDs"))
+    return {_sid(block): block for block in _top_level_blocks(VANILLA_GENERAL_SETUPS.read_text(encoding="utf-8"))}
+
+
+def _inherited_array_values(blocks: dict[str, list[str]], sid: str, child_name: str) -> list[str]:
+    """Resolve a direct array through the Vanilla refkey chain.
+
+    Unique GeneralSetups commonly inherit the base weapon's upgrade array instead
+    of declaring their own. BPRUE must account for that inherited Vanilla occupancy
+    when allocating new columns for the Unique.
+    """
+    seen: set[str] = set()
+    current = sid
+    while current and current not in seen:
+        seen.add(current)
+        block = blocks.get(current)
+        if not block:
+            return []
+        values = _array_values(_direct_child(block, child_name))
         if values:
-            result[_sid(block)] = values
+            return values
+        current = _refkey(block)
+    return []
+
+
+@lru_cache(maxsize=1)
+def vanilla_general_setup_upgrades() -> dict[str, list[str]]:
+    blocks = _general_setup_blocks()
+    result: dict[str, list[str]] = {}
+    for sid in blocks:
+        values = _inherited_array_values(blocks, sid, "UpgradePrototypeSIDs")
+        if values:
+            result[sid] = values
     return result
 
 
 @lru_cache(maxsize=1)
-def weapon_sections_by_general_setup() -> dict[str, dict[str, bool]]:
+def _weapon_blocks() -> dict[str, list[str]]:
     if not VANILLA_WEAPONS.exists():
         raise FileNotFoundError(VANILLA_WEAPONS)
+    return {_sid(block): block for block in _top_level_blocks(VANILLA_WEAPONS.read_text(encoding="utf-8"))}
+
+
+def _sections_from_block(block: list[str]) -> dict[str, bool]:
+    settings = _direct_child(block, "SectionSettings")
+    if not settings:
+        return {}
+    sections: dict[str, bool] = {}
+    for section in _indexed_children(settings):
+        target = _direct_scalar(section, "UpgradeTargetPartType")
+        enabled = _direct_scalar(section, "SectionIsEnabled")
+        if target:
+            sections[target.rsplit("::", 1)[-1]] = (enabled or "").lower() == "true"
+    return sections
+
+
+def _inherited_weapon_sections(blocks: dict[str, list[str]], weapon_sid: str) -> dict[str, bool]:
+    seen: set[str] = set()
+    current = weapon_sid
+    while current and current not in seen:
+        seen.add(current)
+        block = blocks.get(current)
+        if not block:
+            return {}
+        sections = _sections_from_block(block)
+        if sections:
+            return sections
+        current = _refkey(block)
+    return {}
+
+
+@lru_cache(maxsize=1)
+def weapon_sections_by_general_setup() -> dict[str, dict[str, bool]]:
+    """Map GeneralSetup SIDs to effective WeaponPrototype SectionSettings.
+
+    A Unique may point at its own GeneralSetup while inheriting SectionSettings
+    from a base WeaponPrototype. Resolve the weapon refkey chain so the layout
+    allocator sees the same target parts that the Unique effectively has in game.
+    """
+    blocks = _weapon_blocks()
     result: dict[str, dict[str, bool]] = {}
-    for block in _top_level_blocks(VANILLA_WEAPONS.read_text(encoding="utf-8")):
+    for weapon_sid, block in blocks.items():
         general_setup = _direct_scalar(block, "GeneralWeaponSetup")
-        settings = _direct_child(block, "SectionSettings")
-        if not general_setup or not settings:
+        if not general_setup:
             continue
-        sections: dict[str, bool] = {}
-        for section in _indexed_children(settings):
-            target = _direct_scalar(section, "UpgradeTargetPartType")
-            enabled = _direct_scalar(section, "SectionIsEnabled")
-            if target:
-                sections[target.rsplit("::", 1)[-1]] = (enabled or "").lower() == "true"
+        sections = _inherited_weapon_sections(blocks, weapon_sid)
         if sections:
             result[general_setup] = sections
     return result
