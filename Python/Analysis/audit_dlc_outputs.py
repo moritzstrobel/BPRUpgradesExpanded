@@ -20,16 +20,12 @@ from generate_all_cfg import (
     render_weapon_sections_patch,
 )
 from upgrade_renderers import render_consolidated_upgrade_prototypes, render_dlc_general_setup_patch
-from vanilla_upgrade_layout import (
-    available_target_parts,
-    dlc_general_setup_upgrades,
-)
+from vanilla_upgrade_layout import available_target_parts, dlc_general_setup_upgrades
 from dlc_weapon_modules import load_dlc_config
 
 REPORT_PATH = REPORTS_DIR / "dlc_output_audit.json"
 BASE_EFFECT_DIR = PYTHON_ROOT.parent / "GameLite" / "ModGameData" / "BPRUpgradesExpanded" / "EffectPrototypes"
 SID_DEF_RE = re.compile(r"(?m)^([A-Za-z0-9_]+)\s*:\s*struct\.begin")
-EFFECT_REF_RE = re.compile(r"^\s*\[\d+\]\s*=\s*([A-Za-z0-9_]+)\s*$", re.MULTILINE)
 SETUP_BLOCK_RE = re.compile(r"(?ms)^([A-Za-z0-9_]+)\s*:\s*struct\.begin\s*\{bpatch\}\s*\n(.*?)(?=^[A-Za-z0-9_]+\s*:\s*struct\.begin\s*\{bpatch\}|\Z)")
 UPGRADE_ARRAY_RE = re.compile(r"(?ms)^\s*UpgradePrototypeSIDs\s*:\s*struct\.begin\s*\n(.*?)^\s*struct\.end")
 ARRAY_VALUE_RE = re.compile(r"^\s*\[\d+\]\s*=\s*([A-Za-z0-9_]+)\s*$", re.MULTILINE)
@@ -65,9 +61,17 @@ def _output_paths(pack: str) -> dict[str, Path]:
     root = DLC_OUTPUT_ROOT / pack
     return {
         "upgrades": root / "UpgradePrototypes" / "UpgradePrototypes_patch_BPRUE.cfg",
-        "general_setup": root / "WeaponData" / "WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
-        "sections": root / "ItemPrototypes_patch_BPRUE.cfg",
+        "general_setup": root / "WeaponData" / "WeaponGeneralSetupPrototypes" / "WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
+        "sections": root / "ItemPrototypes" / "ItemPrototypes_patch_BPRUE.cfg",
     }
+
+
+def _validate_phase2_path(path: Path, prototype_name: str) -> str | None:
+    if path.parent.name != prototype_name:
+        return f"{path}: patch must be inside a '{prototype_name}' folder"
+    if not path.name.startswith(f"{prototype_name}_patch_"):
+        return f"{path}: patch filename must start with '{prototype_name}_patch_'"
+    return None
 
 
 def main() -> None:
@@ -156,9 +160,12 @@ def main() -> None:
                 pack_errors.append(f"{setup_sid}: duplicate GeneralSetup upgrade refs: {', '.join(duplicates)}")
 
         paths = _output_paths(pack)
+        prototype_names = {"upgrades": "UpgradePrototypes", "general_setup": "WeaponGeneralSetupPrototypes", "sections": "ItemPrototypes"}
+        for name, path in paths.items():
+            phase2_error = _validate_phase2_path(path, prototype_names[name])
+            if phase2_error:
+                pack_errors.append(phase2_error)
         path_state = {name: {"path": str(path.relative_to(PYTHON_ROOT.parent)), "exists": path.exists()} for name, path in paths.items()}
-        # Compare generated files when they exist. This catches stale output after generator changes
-        # without requiring the audit itself to mutate GameLite.
         expected_texts = {"upgrades": upgrade_text, "general_setup": setup_text, "sections": section_text}
         for name, path in paths.items():
             if not path.exists():
