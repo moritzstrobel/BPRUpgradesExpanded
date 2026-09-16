@@ -13,6 +13,7 @@ PYTHON_ROOT = SCRIPT_DIR.parent
 CFG_ROOT = PYTHON_ROOT / "CFGGenerators"
 VANILLA_WEAPONS = PYTHON_ROOT / "VanillaReference" / "WeaponPrototypes.cfg"
 VANILLA_GENERAL_SETUPS = PYTHON_ROOT / "VanillaReference" / "WeaponGeneralSetupPrototypes.cfg"
+UNIQUE_REGISTRY = CFG_ROOT / "Common" / "unique_weapons.json"
 OUTPUT_PATH = WEAPON_COVERAGE
 
 CONFIGS = (
@@ -99,6 +100,22 @@ def configured_weapons() -> dict[str, dict]:
     return result
 
 
+def load_unique_registry() -> tuple[dict[str, dict], dict[str, dict]]:
+    if not UNIQUE_REGISTRY.exists(): return {}, {}
+    config = json.loads(UNIQUE_REGISTRY.read_text(encoding="utf-8"))
+    uniques = {}
+    for name, entry in config.get("uniques", {}).items():
+        setup_sid = entry.get("general_setup_sid")
+        if not setup_sid: continue
+        uniques[setup_sid] = {"name": name, **entry, "source": str(UNIQUE_REGISTRY.relative_to(PYTHON_ROOT))}
+    out_of_scope = {}
+    for name, entry in config.get("out_of_scope", {}).items():
+        setup_sid = entry.get("general_setup_sid")
+        if not setup_sid: continue
+        out_of_scope[setup_sid] = {"name": name, **entry, "source": str(UNIQUE_REGISTRY.relative_to(PYTHON_ROOT))}
+    return uniques, out_of_scope
+
+
 def class_from_sid(sid: str) -> str | None:
     for part in reversed(sid.split("_")):
         if part in WEAPON_CLASS_SUFFIXES: return WEAPON_CLASS_SUFFIXES[part]
@@ -122,7 +139,6 @@ def inherited_base_weapon(weapon_sid: str, weapon_blocks: dict[str, list[str]], 
 
 
 def discovered_variant_setups(weapon_blocks: dict[str, list[str]], bases: dict[str, dict]) -> dict[str, dict]:
-    """Find variants from WeaponPrototype inheritance, independent of GeneralSetup naming."""
     result = {}
     for weapon_sid, block in weapon_blocks.items():
         if weapon_sid in bases: continue
@@ -131,15 +147,10 @@ def discovered_variant_setups(weapon_blocks: dict[str, list[str]], bases: dict[s
         setup_sid = direct_scalar(block, "GeneralWeaponSetup")
         if not setup_sid: continue
         base = bases[base_sid]
-        result[setup_sid] = {
-            "weapon_sid": weapon_sid,
-            "general_setup_sid": setup_sid,
-            "class": base["class"],
-            "base_weapon_sid": base_sid,
-            "base_family": base["family"],
-            "inheritance_chain": inheritance_chain(weapon_sid, weapon_blocks),
-            "discovery": "weapon_inherits_bprue_base_weapon",
-        }
+        result[setup_sid] = {"weapon_sid": weapon_sid, "general_setup_sid": setup_sid, "class": base["class"],
+                             "base_weapon_sid": base_sid, "base_family": base["family"],
+                             "inheritance_chain": inheritance_chain(weapon_sid, weapon_blocks),
+                             "discovery": "weapon_inherits_bprue_base_weapon"}
     return result
 
 
@@ -180,20 +191,36 @@ def classify_candidate(setup_sid: str, evidence: dict) -> tuple[str, list[str]]:
 def build_report() -> dict:
     weapon_blocks = top_level_blocks(VANILLA_WEAPONS.read_text(encoding="utf-8"))
     setup_blocks = top_level_blocks(VANILLA_GENERAL_SETUPS.read_text(encoding="utf-8"))
-    configured = configured_weapons(); setup_users = weapons_by_general_setup(weapon_blocks)
-    bases = base_weapon_index(configured); variants = discovered_variant_setups(weapon_blocks, bases)
-    covered_setups = set(configured); covered_weapon_sids = set(bases)
+    configured = configured_weapons(); unique_covered, out_of_scope = load_unique_registry()
+    setup_users = weapons_by_general_setup(weapon_blocks); bases = base_weapon_index(configured)
+    variants = discovered_variant_setups(weapon_blocks, bases)
+    base_covered_setups = set(configured); unique_covered_setups = set(unique_covered); out_of_scope_setups = set(out_of_scope)
+    all_covered_setups = base_covered_setups | unique_covered_setups
 
-    # Keep the old GeneralSetup-based discovery for standalone bases/specials, but
-    # union it with inheritance-discovered variants so unusual SIDs such as
-    # Gun_Drowned_AR_GS and Gun_Trophy_AR_GS cannot fall out of candidate scope.
-    vanilla_setups = {sid for sid in setup_blocks if sid.startswith("Gun") and class_from_sid(sid) is not None} | set(variants)
+    vanilla_setups = ({sid for sid in setup_blocks if sid.startswith("Gun") and class_from_sid(sid) is not None}
+                      | set(variants) | out_of_scope_setups)
     buckets = {"suspected_missing_base_weapons": [], "suspected_unique_or_special": [], "needs_manual_review": []}
+    covered_unique_entries = []
+    out_of_scope_entries = []
 
     for setup_sid in sorted(vanilla_setups):
-        if setup_sid in covered_setups: continue
-        evidence = candidate_evidence(setup_sid, weapon_blocks, setup_blocks, setup_users)
-        variant = variants.get(setup_sid)
+        if setup_sid in out_of_scope_setups:
+            registry = out_of_scope[setup_sid]
+            variant = variants.get(setup_sid)
+            out_of_scope_entries.append({"general_setup_sid": setup_sid,
+                                         "class": variant["class"] if variant else class_from_sid(setup_sid),
+                                         "name": registry["name"], "reason": registry.get("reason", "out_of_scope")})
+            continue
+        if setup_sid in unique_covered_setups:
+            registry = unique_covered[setup_sid]; variant = variants.get(setup_sid)
+            covered_unique_entries.append({"general_setup_sid": setup_sid, "name": registry["name"],
+                                           "class": registry.get("class") or (variant["class"] if variant else class_from_sid(setup_sid)),
+                                           "base_family": registry.get("base_family"),
+                                           "base_weapon_sid": variant.get("base_weapon_sid") if variant else None,
+                                           "status": "covered_unique"})
+            continue
+        if setup_sid in base_covered_setups: continue
+        evidence = candidate_evidence(setup_sid, weapon_blocks, setup_blocks, setup_users); variant = variants.get(setup_sid)
         if variant:
             status = "suspected_unique_or_special"
             reasons = [f"weapon_inherits_bprue_base:{variant['base_weapon_sid']}", f"base_family:{variant['base_family']}"]
@@ -209,52 +236,63 @@ def build_report() -> dict:
     missing_counts = Counter(x["class"] or "Unknown" for x in buckets["suspected_missing_base_weapons"])
     variant_counts = Counter(x["class"] or "Unknown" for x in buckets["suspected_unique_or_special"])
     review_counts = Counter(x["class"] or "Unknown" for x in buckets["needs_manual_review"])
+    unique_counts = Counter(x["class"] or "Unknown" for x in covered_unique_entries)
     return {
         "sources": {"weapon_prototypes": str(VANILLA_WEAPONS.relative_to(PYTHON_ROOT)),
                     "general_setups": str(VANILLA_GENERAL_SETUPS.relative_to(PYTHON_ROOT)),
-                    "bprue_configs": [str(p.relative_to(PYTHON_ROOT)) for p in CONFIGS if p.exists()]},
+                    "bprue_configs": [str(p.relative_to(PYTHON_ROOT)) for p in CONFIGS if p.exists()],
+                    "unique_registry": str(UNIQUE_REGISTRY.relative_to(PYTHON_ROOT))},
         "rules": {
-            "candidate_scope": "Supported-class GeneralSetups plus every WeaponPrototype whose inheritance chain reaches a configured BPRUE base weapon.",
+            "candidate_scope": "Supported-class GeneralSetups plus every WeaponPrototype whose inheritance chain reaches a configured BPRUE base weapon, plus explicit out-of-scope registry entries.",
             "variant_discovery": "WeaponPrototype inheritance is authoritative for assigning unusual Unique GeneralSetup names to a BPRUE base family/class.",
-            "covered": "GeneralSetup SID is present in a BPRUE generator config.",
+            "base_covered": "GeneralSetup SID is present in a BPRUE base-family generator config.",
+            "unique_covered": "GeneralSetup SID is present in Common/unique_weapons.json under uniques.",
+            "out_of_scope": "GeneralSetup SID is explicitly excluded in Common/unique_weapons.json under out_of_scope.",
             "suspected_missing_base_weapon": "Uncovered standalone supported-class setup without concrete Gun* inheritance evidence.",
-            "suspected_unique_or_special": "Uncovered setup with variant inheritance evidence, including inheritance from a configured BPRUE base weapon.",
-            "needs_manual_review": "Uncovered setup that cannot be classified confidently from Vanilla structure alone.",
-            "important": "Class/base-family assignment for inherited variants is structural; the Unique/special label remains a candidate classification."
-        },
+            "suspected_unique_or_special": "Uncovered setup with variant inheritance evidence.",
+            "needs_manual_review": "Uncovered setup that cannot be classified confidently from Vanilla structure alone."},
         "summary": {"vanilla_candidate_general_setups": len(vanilla_setups),
                     "inheritance_discovered_variant_setups": len(variants),
-                    "bprue_configured_general_setups": len(covered_setups),
-                    "bprue_configured_weapon_sids": len(covered_weapon_sids),
+                    "bprue_base_general_setups": len(base_covered_setups),
+                    "bprue_unique_general_setups": len(covered_unique_entries),
+                    "bprue_total_covered_general_setups": len((base_covered_setups | {x['general_setup_sid'] for x in covered_unique_entries}) & vanilla_setups),
+                    "out_of_scope": len(out_of_scope_entries),
                     "suspected_missing_base_weapons": len(buckets["suspected_missing_base_weapons"]),
                     "suspected_unique_or_special": len(buckets["suspected_unique_or_special"]),
                     "needs_manual_review": len(buckets["needs_manual_review"]),
+                    "covered_uniques_by_class": dict(sorted(unique_counts.items())),
                     "suspected_missing_by_class": dict(sorted(missing_counts.items())),
                     "suspected_unique_or_special_by_class": dict(sorted(variant_counts.items())),
                     "manual_review_by_class": dict(sorted(review_counts.items()))},
-        "bprue_covered": [configured[sid] for sid in sorted(configured)], **buckets}
+        "bprue_base_covered": [configured[sid] for sid in sorted(configured)],
+        "bprue_unique_covered": covered_unique_entries,
+        "out_of_scope": out_of_scope_entries,
+        **buckets}
 
 
 def print_entries(title, entries, show_reasons=False):
     print(f"\n{title}:")
     if not entries: print("  <none>"); return
     for entry in entries:
-        suffix = " <- " + ", ".join(entry["reasons"]) if show_reasons else ""
-        print(f"  [{entry['class'] or 'Unknown':<13}] {entry['general_setup_sid']}{suffix}")
+        suffix = " <- " + ", ".join(entry["reasons"]) if show_reasons and entry.get("reasons") else ""
+        print(f"  [{entry.get('class') or 'Unknown':<13}] {entry['general_setup_sid']}{suffix}")
 
 
 def print_report(report, show_variants=False):
     s = report["summary"]
-    print(f"Vanilla candidates={s['vanilla_candidate_general_setups']} | inherited variants={s['inheritance_discovered_variant_setups']} | BPRUE setups={s['bprue_configured_general_setups']} | missing base?={s['suspected_missing_base_weapons']} | unique/special?={s['suspected_unique_or_special']} | manual review={s['needs_manual_review']}")
+    print(f"Vanilla candidates={s['vanilla_candidate_general_setups']} | inherited variants={s['inheritance_discovered_variant_setups']} | BPRUE base={s['bprue_base_general_setups']} | BPRUE uniques={s['bprue_unique_general_setups']} | out of scope={s['out_of_scope']} | missing base?={s['suspected_missing_base_weapons']} | uncovered variants?={s['suspected_unique_or_special']} | manual review={s['needs_manual_review']}")
     print_entries("Suspected missing base weapons", report["suspected_missing_base_weapons"])
     print_entries("Needs manual review", report["needs_manual_review"], True)
-    if show_variants: print_entries("Suspected unique/special variants", report["suspected_unique_or_special"], True)
+    if show_variants:
+        print_entries("BPRUE-covered Unique variants", report["bprue_unique_covered"])
+        print_entries("Out of scope", report["out_of_scope"])
+        print_entries("Uncovered unique/special variants", report["suspected_unique_or_special"], True)
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Compare Vanilla weapon coverage with BPRUE and discover variants through WeaponPrototype inheritance.")
+    parser = argparse.ArgumentParser(description="Compare Vanilla weapon coverage with BPRUE, including the central Unique registry and explicit out-of-scope weapons.")
     parser.add_argument("--show-variants", "--show-excluded", dest="show_variants", action="store_true",
-                        help="Also print suspected unique/special variants and their base-family evidence")
+                        help="Also print covered Uniques, out-of-scope weapons and uncovered variant candidates")
     parser.add_argument("--output", type=Path, default=OUTPUT_PATH, help="JSON report path")
     args = parser.parse_args(); report = build_report(); args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, indent=2), encoding="utf-8"); print_report(report, args.show_variants); print(f"\nWrote {args.output}")
