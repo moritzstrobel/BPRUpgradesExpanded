@@ -135,8 +135,12 @@ def _float_scalar(block, name):
 
 
 def _section_index(block):
-    match = re.search(r"\[(\d+)\]\s*:\s*struct\.begin", block)
-    if not match: raise ValueError("SectionSettings child has no numeric index")
+    if not block:
+        raise ValueError("SectionSettings child is empty")
+    header = block[0] if isinstance(block, list) else block
+    match = re.search(r"\[(\d+)\]\s*:\s*struct\.begin", header)
+    if not match:
+        raise ValueError("SectionSettings child has no numeric index")
     return int(match.group(1))
 
 
