@@ -8,11 +8,12 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).resolve().parent
 CFG_ROOT = SCRIPT_DIR / "CFGGenerators"
 COMMON_DIR = CFG_ROOT / "Common"
-CLASS_DIRS = (CFG_ROOT / "AssaultRifles", CFG_ROOT / "SMGs", CFG_ROOT / "Shotguns", CFG_ROOT / "Pistols", CFG_ROOT / "Snipers")
+CLASS_DIRS = (CFG_ROOT / "AssaultRifles", CFG_ROOT / "SMGs", CFG_ROOT / "Shotguns", CFG_ROOT / "Pistols", CFG_ROOT / "Snipers", CFG_ROOT / "MachineGuns")
 for module_dir in (COMMON_DIR, *CLASS_DIRS):
     sys.path.insert(0, str(module_dir))
 
 import generate_assault_rifle_upgrades as ar
+import generate_machine_gun_upgrades as machine_gun
 import generate_pistol_upgrades as pistol
 import generate_shotgun_upgrades as shotgun
 import generate_smg_upgrades as smg
@@ -20,6 +21,7 @@ import generate_sniper_upgrades as sniper
 from apply_module_layout import apply_layout_to_model
 from smg_conversion_attachments import CONVERSION_ATTACHMENTS, attachment_block
 from specialization_modules import build_shared_specializations, render_shared_effects
+from unique_weapon_modules import add_unique_modules
 from upgrade_build_model import UpgradeBuildModel
 from upgrade_renderers import render_consolidated_upgrade_prototypes, render_final_general_setup_patch, render_technician_patch
 from vanilla_upgrade_layout import VANILLA_WEAPONS, _direct_child, _direct_scalar, _indexed_children, _sid, _top_level_blocks
@@ -30,39 +32,21 @@ GENERAL_SETUP_PATH = CONTENT_ROOT / "GameLite/GameData/WeaponData/WeaponGeneralS
 WEAPON_PATH = CONTENT_ROOT / "GameLite/GameData/ItemPrototypes/WeaponPrototypes/WeaponPrototypes_patch_BPRUE.cfg"
 NPC_PATH = CONTENT_ROOT / "GameLite/GameData/NPCPrototypes/NPCPrototypes_patch_BPRUE.cfg"
 SHARED_EFFECT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_SharedSpecializationEffectPrototypes.cfg"
+MACHINE_GUN_EFFECT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_MachineGunEffectPrototypes.cfg"
 
 MIN_SECTION_DISTANCE = 100.0
 SECTION_NUDGE_STEP = 20.0
 SECTION_NUDGE_RINGS = 12
 
 
-def _families_with_uniques(config: dict) -> dict:
-    """Return normal families plus Unique variants projected onto their base family.
-
-    Shared specialization modules used to iterate only config['families']. That meant
-    Uniques received their class-specific BPRUE modules but silently missed all shared
-    modules. Build an effective family entry for each Unique so it receives the exact
-    same shared module groups, effects and cost scaling as its base family while using
-    its own prototype prefix and GeneralSetup.
-    """
-    result = dict(config["families"])
-    for unique_name, unique in config.get("uniques", {}).items():
-        base_name = unique["base_family"]
-        if base_name not in config["families"]:
-            raise ValueError(f"{unique_name}: unknown base_family {base_name}")
-        effective = dict(config["families"][base_name])
-        effective.update(unique)
-        result[f"Unique:{unique_name}"] = effective
-    return result
-
-
 def _shared_upgrades(configs: dict):
     specs = (
-        (_families_with_uniques(configs["pistol"]), "pistol", "Pistol", pistol.TEMPLATE_SID, lambda _: pistol.IMAGE, pistol.ICON, "PistolShared"),
-        (_families_with_uniques(configs["smg"]), "smg", "SMG", smg.TEMPLATE_SID, lambda _: smg.IMAGE, smg.ICON, "SMGShared"),
-        (_families_with_uniques(configs["ar"]), "assault_rifle", "AR", ar.MODULE_TEMPLATE_SID, lambda family: family["image"], ar.DEFAULT_ICON, "ARShared"),
-        (_families_with_uniques(configs["shotgun"]), "shotgun", "SG", shotgun.TEMPLATE_SID, lambda _: shotgun.IMAGE, shotgun.ICON, "SGShared"),
-        (_families_with_uniques(configs["sniper"]), "sniper", "Sniper", sniper.TEMPLATE_SID, lambda _: sniper.IMAGE, sniper.ICON, "SniperShared"),
+        (configs["pistol"]["families"], "pistol", "Pistol", pistol.TEMPLATE_SID, lambda _: pistol.IMAGE, pistol.ICON, "PistolShared"),
+        (configs["smg"]["families"], "smg", "SMG", smg.TEMPLATE_SID, lambda _: smg.IMAGE, smg.ICON, "SMGShared"),
+        (configs["ar"]["families"], "assault_rifle", "AR", ar.MODULE_TEMPLATE_SID, lambda family: family["image"], ar.DEFAULT_ICON, "ARShared"),
+        (configs["shotgun"]["families"], "shotgun", "SG", shotgun.TEMPLATE_SID, lambda _: shotgun.IMAGE, shotgun.ICON, "SGShared"),
+        (configs["sniper"]["families"], "sniper", "Sniper", sniper.TEMPLATE_SID, lambda _: sniper.IMAGE, sniper.ICON, "SniperShared"),
+        (configs["machine_gun"]["families"], "machine_gun", "MG", machine_gun.TEMPLATE_SID, lambda _: machine_gun.IMAGE, machine_gun.ICON, "MGShared"),
     )
     result = []
     for families, class_key, weapon_class, template, image_fn, icon, namespace in specs:
@@ -72,14 +56,20 @@ def _shared_upgrades(configs: dict):
 
 
 def build_model() -> tuple[UpgradeBuildModel, dict]:
-    configs = {"ar": ar.load_config(), "smg": smg.load_config(), "shotgun": shotgun.cfg(), "pistol": pistol.load_config(), "sniper": sniper.load_config()}
+    configs = {
+        "ar": ar.load_config(), "smg": smg.load_config(), "shotgun": shotgun.cfg(),
+        "pistol": pistol.load_config(), "sniper": sniper.load_config(), "machine_gun": machine_gun.load_config(),
+    }
     model = UpgradeBuildModel()
     model.extend(ar.build_upgrades(configs["ar"]))
     model.extend(smg.build_upgrades(configs["smg"]))
     model.extend(shotgun.build_upgrades(configs["shotgun"]))
     model.extend(pistol.build_upgrades(configs["pistol"]))
     model.extend(sniper.build_upgrades(configs["sniper"]))
+    model.extend(machine_gun.build_upgrades(configs["machine_gun"]))
     model.extend(_shared_upgrades(configs))
+    unique_count = add_unique_modules(model, configs)
+    print(f"Added {unique_count} Unique weapon module instances from central registry")
     ar.configure_general_setups(configs["ar"], model)
     model.validate()
     apply_layout_to_model(model)
@@ -174,7 +164,7 @@ def main() -> None:
     write(UPGRADES_PATH, upgrade_text); write(GENERAL_SETUP_PATH, setup_text); write(WEAPON_PATH, weapon_text); write(NPC_PATH, npc_text)
     write(ar.EFFECT_OUTPUT_PATH, ar.render_effect_patch(configs["ar"])); write(smg.EFFECT_OUTPUT_PATH, smg.render_effects())
     write(shotgun.EFFECT_OUTPUT, shotgun.render_effects()); write(pistol.EFFECT_OUTPUT, pistol.render_effects()); write(sniper.EFFECT_OUTPUT, sniper.render_effects())
-    write(SHARED_EFFECT_PATH, render_shared_effects())
+    write(MACHINE_GUN_EFFECT_PATH, machine_gun.render_effects()); write(SHARED_EFFECT_PATH, render_shared_effects())
     print(f"Validated and rendered {len(model.upgrades)} upgrades in one build pass.")
 
 
