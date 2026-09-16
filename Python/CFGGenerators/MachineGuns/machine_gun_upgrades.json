@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "description": "Machine-gun specialization system for the PKP. LMG upgrades focus on sustained fire, barrel behavior, feed handling and support configuration.",
+  "families": {
+    "PKP": {
+      "weapon_sid": "GunPKP_MG",
+      "general_setup_sid": "GunPKP_MG",
+      "prototype_prefix": "GunPKP",
+      "cost_scale": 1.0
+    }
+  },
+  "module_groups": {
+    "sustained_fire": ["high_output", "controlled_fire"],
+    "heavy_barrel": ["heat_resistant", "stabilized_barrel"],
+    "feed_system": ["fast_feed", "reinforced_feed"],
+    "support": ["mobile_support", "stable_support"]
+  }
+}
