@@ -138,7 +138,8 @@
     "smg": ["handling", "action", "ballistics", "range_profile"],
     "assault_rifle": ["recoil_precision", "action", "ballistics", "reliability"],
     "shotgun": ["handling", "reliability", "range_profile"],
-    "sniper": ["recoil_precision", "ballistics", "reliability", "range_profile"]
+    "sniper": ["recoil_precision", "ballistics", "reliability", "range_profile"],
+    "machine_gun": ["ballistics", "reliability"]
   },
   "notes": [
     "Flatness is backed by vanilla EEffectType::EffectiveFireDistance effects (FlatnessUp5Effect through FlatnessUp30Effect).",
