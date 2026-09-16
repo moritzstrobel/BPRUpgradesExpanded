@@ -33,7 +33,7 @@ GROUP_ICON_FALLBACKS = {
 
 # Caliber conversion descriptions must follow the actual effect profile, not only
 # the target caliber. This matters especially for 9x19, whose trade-offs differ
-# depending on whether the source weapon started as 9x18 or .45 ACP.
+# depending on the source weapon's original caliber.
 CALIBER_HINT_EFFECT_MARKERS = (
     (("BPRUE_DamagePos15Effect", "BPRUE_ArmorPiercingPos15Effect", "BPRUE_RecoilPenalty25Effect"), "sid_bprue_caliber_762_eastern_tradeoff_description"),
     (("BPRUE_DamagePos10Effect", "BPRUE_ArmorPiercingPos15Effect", "BPRUE_RecoilPenalty20Effect", "BPRUE_DurabilityPerShotNeg15Effect"), "sid_bprue_caliber_762_nato_tradeoff_description"),
@@ -41,6 +41,8 @@ CALIBER_HINT_EFFECT_MARKERS = (
     (("BPRUE_SMG_RecoilPos15Effect", "BPRUE_SMG_DurabilityPerShotPos10Effect", "BPRUE_SMG_DamagePenalty10Effect"), "sid_bprue_smg_caliber_919_to_918_description"),
     (("BPRUE_SMG_DamagePos15Effect", "BPRUE_SMG_RecoilPenalty20Effect", "BPRUE_SMG_EffectiveRangePenalty10Effect"), "sid_bprue_smg_caliber_919_to_045_description"),
     (("BPRUE_SMG_RecoilPos10Effect", "BPRUE_SMG_EffectiveRangePos10Effect", "BPRUE_SMG_DamagePenalty10Effect"), "sid_bprue_smg_caliber_045_to_919_description"),
+    (("BPRUE_SMG_DamagePos15Effect", "BPRUE_SMG_RecoilPenalty25Effect", "BPRUE_SMG_EffectiveRangePenalty15Effect"), "sid_bprue_smg_caliber_918_to_045_description"),
+    (("BPRUE_SMG_RecoilPos15Effect", "BPRUE_SMG_EffectiveRangePos15Effect", "BPRUE_SMG_DamagePenalty15Effect"), "sid_bprue_smg_caliber_045_to_918_description"),
 )
 
 
