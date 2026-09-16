@@ -7490,50 +7490,58 @@
       "upgrade_count": 12,
       "slots": {
         "Barrel": {
-          "0": {
+          "1": {
+            "Down": [
+              {
+                "sid": "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_BarrelConfiguration_StabilizedBarrel",
+                "class": "MG",
+                "group": "BarrelConfiguration",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_BarrelConfiguration_ReinforcedBarrel"
+                ]
+              }
+            ],
             "Top": [
               {
                 "sid": "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_BarrelConfiguration_ReinforcedBarrel",
                 "class": "MG",
                 "group": "BarrelConfiguration",
                 "is_modification": true,
-                "horizontal_explicit": false,
+                "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_BarrelConfiguration_StabilizedBarrel"
                 ]
-              },
-              {
-                "sid": "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_BarrelConfiguration_StabilizedBarrel",
-                "class": "MG",
-                "group": "BarrelConfiguration",
-                "is_modification": true,
-                "horizontal_explicit": false,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_BarrelConfiguration_ReinforcedBarrel"
-                ]
-              },
-              {
-                "sid": "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MGShared_ModuleBallistics_SoftTarget",
-                "class": "MG",
-                "group": "ModuleBallistics",
-                "is_modification": true,
-                "horizontal_explicit": false,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MGShared_ModuleBallistics_ArmorPiercing"
-                ]
-              },
+              }
+            ]
+          },
+          "2": {
+            "Down": [
               {
                 "sid": "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MGShared_ModuleBallistics_ArmorPiercing",
                 "class": "MG",
                 "group": "ModuleBallistics",
                 "is_modification": true,
-                "horizontal_explicit": false,
+                "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MGShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MGShared_ModuleBallistics_SoftTarget",
+                "class": "MG",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MGShared_ModuleBallistics_ArmorPiercing"
                 ]
               }
             ]
@@ -7543,25 +7551,14 @@
           "0": {
             "Down": [
               {
-                "sid": "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MGShared_ModuleReliability_HardenedComponents",
+                "sid": "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_SustainedFire_ControlledFire",
                 "class": "MG",
-                "group": "ModuleReliability",
+                "group": "SustainedFire",
                 "is_modification": true,
                 "horizontal_explicit": false,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MGShared_ModuleReliability_LightweightComponents"
-                ]
-              },
-              {
-                "sid": "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MGShared_ModuleReliability_LightweightComponents",
-                "class": "MG",
-                "group": "ModuleReliability",
-                "is_modification": true,
-                "horizontal_explicit": false,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MGShared_ModuleReliability_HardenedComponents"
+                  "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_SustainedFire_HighOutput"
                 ]
               }
             ],
@@ -7576,38 +7573,61 @@
                 "blocking_sids": [
                   "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_SustainedFire_ControlledFire"
                 ]
-              },
-              {
-                "sid": "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_SustainedFire_ControlledFire",
-                "class": "MG",
-                "group": "SustainedFire",
-                "is_modification": true,
-                "horizontal_explicit": false,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_SustainedFire_HighOutput"
-                ]
-              },
-              {
-                "sid": "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_FeedSystem_QuickChangeFeed",
-                "class": "MG",
-                "group": "FeedSystem",
-                "is_modification": true,
-                "horizontal_explicit": false,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_FeedSystem_ReinforcedFeed"
-                ]
-              },
+              }
+            ]
+          },
+          "1": {
+            "Down": [
               {
                 "sid": "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_FeedSystem_ReinforcedFeed",
                 "class": "MG",
                 "group": "FeedSystem",
                 "is_modification": true,
-                "horizontal_explicit": false,
+                "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_FeedSystem_QuickChangeFeed"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_FeedSystem_QuickChangeFeed",
+                "class": "MG",
+                "group": "FeedSystem",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_FeedSystem_ReinforcedFeed"
+                ]
+              }
+            ]
+          },
+          "2": {
+            "Down": [
+              {
+                "sid": "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MGShared_ModuleReliability_LightweightComponents",
+                "class": "MG",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MGShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MGShared_ModuleReliability_HardenedComponents",
+                "class": "MG",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MGShared_ModuleReliability_LightweightComponents"
                 ]
               }
             ]
@@ -7615,18 +7635,7 @@
         },
         "Stock": {
           "0": {
-            "Top": [
-              {
-                "sid": "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_SupportConfiguration_MobileGunner",
-                "class": "MG",
-                "group": "SupportConfiguration",
-                "is_modification": true,
-                "horizontal_explicit": false,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_SupportConfiguration_SupportedFire"
-                ]
-              },
+            "Down": [
               {
                 "sid": "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_SupportConfiguration_SupportedFire",
                 "class": "MG",
@@ -7638,6 +7647,19 @@
                   "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_SupportConfiguration_MobileGunner"
                 ]
               }
+            ],
+            "Top": [
+              {
+                "sid": "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_SupportConfiguration_MobileGunner",
+                "class": "MG",
+                "group": "SupportConfiguration",
+                "is_modification": true,
+                "horizontal_explicit": false,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "BPRUEUniquePKPKorshunov_Upgrade_BPRUE_MG_SupportConfiguration_SupportedFire"
+                ]
+              }
             ]
           }
         }
@@ -7647,78 +7669,75 @@
       "upgrade_count": 12,
       "slots": {
         "Barrel": {
-          "0": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunPKP_Upgrade_BPRUE_MG_BarrelConfiguration_StabilizedBarrel",
+                "class": "MG",
+                "group": "BarrelConfiguration",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunPKP_Upgrade_BPRUE_MG_BarrelConfiguration_ReinforcedBarrel"
+                ]
+              }
+            ],
             "Top": [
               {
                 "sid": "GunPKP_Upgrade_BPRUE_MG_BarrelConfiguration_ReinforcedBarrel",
                 "class": "MG",
                 "group": "BarrelConfiguration",
                 "is_modification": true,
-                "horizontal_explicit": false,
+                "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunPKP_Upgrade_BPRUE_MG_BarrelConfiguration_StabilizedBarrel"
                 ]
-              },
-              {
-                "sid": "GunPKP_Upgrade_BPRUE_MG_BarrelConfiguration_StabilizedBarrel",
-                "class": "MG",
-                "group": "BarrelConfiguration",
-                "is_modification": true,
-                "horizontal_explicit": false,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "GunPKP_Upgrade_BPRUE_MG_BarrelConfiguration_ReinforcedBarrel"
-                ]
-              },
-              {
-                "sid": "GunPKP_Upgrade_BPRUE_MGShared_ModuleBallistics_SoftTarget",
-                "class": "MG",
-                "group": "ModuleBallistics",
-                "is_modification": true,
-                "horizontal_explicit": false,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "GunPKP_Upgrade_BPRUE_MGShared_ModuleBallistics_ArmorPiercing"
-                ]
-              },
+              }
+            ]
+          },
+          "2": {
+            "Down": [
               {
                 "sid": "GunPKP_Upgrade_BPRUE_MGShared_ModuleBallistics_ArmorPiercing",
                 "class": "MG",
                 "group": "ModuleBallistics",
                 "is_modification": true,
-                "horizontal_explicit": false,
+                "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunPKP_Upgrade_BPRUE_MGShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunPKP_Upgrade_BPRUE_MGShared_ModuleBallistics_SoftTarget",
+                "class": "MG",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunPKP_Upgrade_BPRUE_MGShared_ModuleBallistics_ArmorPiercing"
                 ]
               }
             ]
           }
         },
         "Body": {
-          "0": {
+          "1": {
             "Down": [
               {
-                "sid": "GunPKP_Upgrade_BPRUE_MGShared_ModuleReliability_HardenedComponents",
+                "sid": "GunPKP_Upgrade_BPRUE_MG_SustainedFire_ControlledFire",
                 "class": "MG",
-                "group": "ModuleReliability",
+                "group": "SustainedFire",
                 "is_modification": true,
-                "horizontal_explicit": false,
+                "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "GunPKP_Upgrade_BPRUE_MGShared_ModuleReliability_LightweightComponents"
-                ]
-              },
-              {
-                "sid": "GunPKP_Upgrade_BPRUE_MGShared_ModuleReliability_LightweightComponents",
-                "class": "MG",
-                "group": "ModuleReliability",
-                "is_modification": true,
-                "horizontal_explicit": false,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "GunPKP_Upgrade_BPRUE_MGShared_ModuleReliability_HardenedComponents"
+                  "GunPKP_Upgrade_BPRUE_MG_SustainedFire_HighOutput"
                 ]
               }
             ],
@@ -7728,71 +7747,96 @@
                 "class": "MG",
                 "group": "SustainedFire",
                 "is_modification": true,
-                "horizontal_explicit": false,
+                "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunPKP_Upgrade_BPRUE_MG_SustainedFire_ControlledFire"
                 ]
-              },
-              {
-                "sid": "GunPKP_Upgrade_BPRUE_MG_SustainedFire_ControlledFire",
-                "class": "MG",
-                "group": "SustainedFire",
-                "is_modification": true,
-                "horizontal_explicit": false,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "GunPKP_Upgrade_BPRUE_MG_SustainedFire_HighOutput"
-                ]
-              },
-              {
-                "sid": "GunPKP_Upgrade_BPRUE_MG_FeedSystem_QuickChangeFeed",
-                "class": "MG",
-                "group": "FeedSystem",
-                "is_modification": true,
-                "horizontal_explicit": false,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "GunPKP_Upgrade_BPRUE_MG_FeedSystem_ReinforcedFeed"
-                ]
-              },
+              }
+            ]
+          },
+          "2": {
+            "Down": [
               {
                 "sid": "GunPKP_Upgrade_BPRUE_MG_FeedSystem_ReinforcedFeed",
                 "class": "MG",
                 "group": "FeedSystem",
                 "is_modification": true,
-                "horizontal_explicit": false,
+                "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunPKP_Upgrade_BPRUE_MG_FeedSystem_QuickChangeFeed"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunPKP_Upgrade_BPRUE_MG_FeedSystem_QuickChangeFeed",
+                "class": "MG",
+                "group": "FeedSystem",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunPKP_Upgrade_BPRUE_MG_FeedSystem_ReinforcedFeed"
                 ]
               }
             ]
           }
         },
         "Stock": {
-          "0": {
+          "1": {
+            "Down": [
+              {
+                "sid": "GunPKP_Upgrade_BPRUE_MG_SupportConfiguration_SupportedFire",
+                "class": "MG",
+                "group": "SupportConfiguration",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunPKP_Upgrade_BPRUE_MG_SupportConfiguration_MobileGunner"
+                ]
+              }
+            ],
             "Top": [
               {
                 "sid": "GunPKP_Upgrade_BPRUE_MG_SupportConfiguration_MobileGunner",
                 "class": "MG",
                 "group": "SupportConfiguration",
                 "is_modification": true,
-                "horizontal_explicit": false,
+                "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "GunPKP_Upgrade_BPRUE_MG_SupportConfiguration_SupportedFire"
                 ]
-              },
+              }
+            ]
+          },
+          "2": {
+            "Down": [
               {
-                "sid": "GunPKP_Upgrade_BPRUE_MG_SupportConfiguration_SupportedFire",
+                "sid": "GunPKP_Upgrade_BPRUE_MGShared_ModuleReliability_LightweightComponents",
                 "class": "MG",
-                "group": "SupportConfiguration",
+                "group": "ModuleReliability",
                 "is_modification": true,
-                "horizontal_explicit": false,
+                "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "GunPKP_Upgrade_BPRUE_MG_SupportConfiguration_MobileGunner"
+                  "GunPKP_Upgrade_BPRUE_MGShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "GunPKP_Upgrade_BPRUE_MGShared_ModuleReliability_HardenedComponents",
+                "class": "MG",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "GunPKP_Upgrade_BPRUE_MGShared_ModuleReliability_LightweightComponents"
                 ]
               }
             ]
@@ -17195,78 +17239,75 @@
       "upgrade_count": 12,
       "slots": {
         "Barrel": {
-          "0": {
+          "1": {
+            "Down": [
+              {
+                "sid": "BPRUEUniqueTank_Upgrade_BPRUE_MG_BarrelConfiguration_StabilizedBarrel",
+                "class": "MG",
+                "group": "BarrelConfiguration",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "BPRUEUniqueTank_Upgrade_BPRUE_MG_BarrelConfiguration_ReinforcedBarrel"
+                ]
+              }
+            ],
             "Top": [
               {
                 "sid": "BPRUEUniqueTank_Upgrade_BPRUE_MG_BarrelConfiguration_ReinforcedBarrel",
                 "class": "MG",
                 "group": "BarrelConfiguration",
                 "is_modification": true,
-                "horizontal_explicit": false,
+                "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "BPRUEUniqueTank_Upgrade_BPRUE_MG_BarrelConfiguration_StabilizedBarrel"
                 ]
-              },
-              {
-                "sid": "BPRUEUniqueTank_Upgrade_BPRUE_MG_BarrelConfiguration_StabilizedBarrel",
-                "class": "MG",
-                "group": "BarrelConfiguration",
-                "is_modification": true,
-                "horizontal_explicit": false,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "BPRUEUniqueTank_Upgrade_BPRUE_MG_BarrelConfiguration_ReinforcedBarrel"
-                ]
-              },
-              {
-                "sid": "BPRUEUniqueTank_Upgrade_BPRUE_MGShared_ModuleBallistics_SoftTarget",
-                "class": "MG",
-                "group": "ModuleBallistics",
-                "is_modification": true,
-                "horizontal_explicit": false,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "BPRUEUniqueTank_Upgrade_BPRUE_MGShared_ModuleBallistics_ArmorPiercing"
-                ]
-              },
+              }
+            ]
+          },
+          "2": {
+            "Down": [
               {
                 "sid": "BPRUEUniqueTank_Upgrade_BPRUE_MGShared_ModuleBallistics_ArmorPiercing",
                 "class": "MG",
                 "group": "ModuleBallistics",
                 "is_modification": true,
-                "horizontal_explicit": false,
+                "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "BPRUEUniqueTank_Upgrade_BPRUE_MGShared_ModuleBallistics_SoftTarget"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "BPRUEUniqueTank_Upgrade_BPRUE_MGShared_ModuleBallistics_SoftTarget",
+                "class": "MG",
+                "group": "ModuleBallistics",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "BPRUEUniqueTank_Upgrade_BPRUE_MGShared_ModuleBallistics_ArmorPiercing"
                 ]
               }
             ]
           }
         },
         "Body": {
-          "0": {
+          "1": {
             "Down": [
               {
-                "sid": "BPRUEUniqueTank_Upgrade_BPRUE_MGShared_ModuleReliability_HardenedComponents",
+                "sid": "BPRUEUniqueTank_Upgrade_BPRUE_MG_SustainedFire_ControlledFire",
                 "class": "MG",
-                "group": "ModuleReliability",
+                "group": "SustainedFire",
                 "is_modification": true,
-                "horizontal_explicit": false,
+                "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUEUniqueTank_Upgrade_BPRUE_MGShared_ModuleReliability_LightweightComponents"
-                ]
-              },
-              {
-                "sid": "BPRUEUniqueTank_Upgrade_BPRUE_MGShared_ModuleReliability_LightweightComponents",
-                "class": "MG",
-                "group": "ModuleReliability",
-                "is_modification": true,
-                "horizontal_explicit": false,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "BPRUEUniqueTank_Upgrade_BPRUE_MGShared_ModuleReliability_HardenedComponents"
+                  "BPRUEUniqueTank_Upgrade_BPRUE_MG_SustainedFire_HighOutput"
                 ]
               }
             ],
@@ -17276,71 +17317,96 @@
                 "class": "MG",
                 "group": "SustainedFire",
                 "is_modification": true,
-                "horizontal_explicit": false,
+                "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "BPRUEUniqueTank_Upgrade_BPRUE_MG_SustainedFire_ControlledFire"
                 ]
-              },
-              {
-                "sid": "BPRUEUniqueTank_Upgrade_BPRUE_MG_SustainedFire_ControlledFire",
-                "class": "MG",
-                "group": "SustainedFire",
-                "is_modification": true,
-                "horizontal_explicit": false,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "BPRUEUniqueTank_Upgrade_BPRUE_MG_SustainedFire_HighOutput"
-                ]
-              },
-              {
-                "sid": "BPRUEUniqueTank_Upgrade_BPRUE_MG_FeedSystem_QuickChangeFeed",
-                "class": "MG",
-                "group": "FeedSystem",
-                "is_modification": true,
-                "horizontal_explicit": false,
-                "vertical_explicit": true,
-                "blocking_sids": [
-                  "BPRUEUniqueTank_Upgrade_BPRUE_MG_FeedSystem_ReinforcedFeed"
-                ]
-              },
+              }
+            ]
+          },
+          "2": {
+            "Down": [
               {
                 "sid": "BPRUEUniqueTank_Upgrade_BPRUE_MG_FeedSystem_ReinforcedFeed",
                 "class": "MG",
                 "group": "FeedSystem",
                 "is_modification": true,
-                "horizontal_explicit": false,
+                "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "BPRUEUniqueTank_Upgrade_BPRUE_MG_FeedSystem_QuickChangeFeed"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "BPRUEUniqueTank_Upgrade_BPRUE_MG_FeedSystem_QuickChangeFeed",
+                "class": "MG",
+                "group": "FeedSystem",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "BPRUEUniqueTank_Upgrade_BPRUE_MG_FeedSystem_ReinforcedFeed"
                 ]
               }
             ]
           }
         },
         "Stock": {
-          "0": {
+          "1": {
+            "Down": [
+              {
+                "sid": "BPRUEUniqueTank_Upgrade_BPRUE_MG_SupportConfiguration_SupportedFire",
+                "class": "MG",
+                "group": "SupportConfiguration",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "BPRUEUniqueTank_Upgrade_BPRUE_MG_SupportConfiguration_MobileGunner"
+                ]
+              }
+            ],
             "Top": [
               {
                 "sid": "BPRUEUniqueTank_Upgrade_BPRUE_MG_SupportConfiguration_MobileGunner",
                 "class": "MG",
                 "group": "SupportConfiguration",
                 "is_modification": true,
-                "horizontal_explicit": false,
+                "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
                   "BPRUEUniqueTank_Upgrade_BPRUE_MG_SupportConfiguration_SupportedFire"
                 ]
-              },
+              }
+            ]
+          },
+          "2": {
+            "Down": [
               {
-                "sid": "BPRUEUniqueTank_Upgrade_BPRUE_MG_SupportConfiguration_SupportedFire",
+                "sid": "BPRUEUniqueTank_Upgrade_BPRUE_MGShared_ModuleReliability_LightweightComponents",
                 "class": "MG",
-                "group": "SupportConfiguration",
+                "group": "ModuleReliability",
                 "is_modification": true,
-                "horizontal_explicit": false,
+                "horizontal_explicit": true,
                 "vertical_explicit": true,
                 "blocking_sids": [
-                  "BPRUEUniqueTank_Upgrade_BPRUE_MG_SupportConfiguration_MobileGunner"
+                  "BPRUEUniqueTank_Upgrade_BPRUE_MGShared_ModuleReliability_HardenedComponents"
+                ]
+              }
+            ],
+            "Top": [
+              {
+                "sid": "BPRUEUniqueTank_Upgrade_BPRUE_MGShared_ModuleReliability_HardenedComponents",
+                "class": "MG",
+                "group": "ModuleReliability",
+                "is_modification": true,
+                "horizontal_explicit": true,
+                "vertical_explicit": true,
+                "blocking_sids": [
+                  "BPRUEUniqueTank_Upgrade_BPRUE_MGShared_ModuleReliability_LightweightComponents"
                 ]
               }
             ]
