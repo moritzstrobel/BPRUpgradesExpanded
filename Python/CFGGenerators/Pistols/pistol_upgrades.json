@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
-  "description": "Pistol expansion: two shared three-way specialization groups plus one standalone signature module per normal pistol family. Unique variants are intentionally excluded.",
+  "schema_version": 2,
+  "description": "Pistol expansion: two shared three-way specialization groups plus one standalone base-family signature. Unique variants reuse the BPRUE modules of their base family and can receive an additional unique signature module separately.",
   "families": {
     "PTM": {"weapon_sid":"GunPM_HG","general_setup_sid":"GunPM_HG","prototype_prefix":"GunPM","cost_scale":0.75,"signature":"quick_response"},
     "UDP": {"weapon_sid":"GunUDP_HG","general_setup_sid":"GunUDP_HG","prototype_prefix":"GunUDP","cost_scale":1.0,"signature":"match_barrel"},
@@ -8,6 +8,15 @@
     "Rhino": {"weapon_sid":"GunRhino_HG","general_setup_sid":"GunRhino_HG","prototype_prefix":"GunRhino","cost_scale":1.4,"signature":"hunting_cylinder"},
     "M10": {"weapon_sid":"GunM10_HG","general_setup_sid":"GunM10_HG","prototype_prefix":"GunM10","cost_scale":1.0,"signature":"selectable_fire_control"},
     "Kora": {"weapon_sid":"GunKora_HG","general_setup_sid":"GunKora_HG","prototype_prefix":"GunKora","cost_scale":1.1,"signature":"heavy_slide"}
+  },
+  "uniques": {
+    "NightStalker": {"weapon_sid":"GunNightStalker_HG","general_setup_sid":"GunNightStalker_HG","prototype_prefix":"GunNightStalker","base_family":"Kora"},
+    "Deadeye": {"weapon_sid":"Gun_Deadeye_HG","general_setup_sid":"GunUDP_Deadeye_HG","prototype_prefix":"GunDeadeye","base_family":"UDP"},
+    "Encourage": {"weapon_sid":"Gun_Encourage_HG","general_setup_sid":"Gun_Encourage_HG_GS","prototype_prefix":"GunEncourage","base_family":"APSB"},
+    "GStreet": {"weapon_sid":"Gun_GStreet_HG","general_setup_sid":"Gun_GStreet_HG_GS","prototype_prefix":"GunGStreet","base_family":"M10"},
+    "Kaimanov": {"weapon_sid":"Gun_ProjectY_HG","general_setup_sid":"Gun_Kaimanov_HG_GS","prototype_prefix":"GunKaimanov","base_family":"PTM"},
+    "Krivenko": {"weapon_sid":"Gun_Krivenko_HG","general_setup_sid":"Gun_Krivenko_HG_GS","prototype_prefix":"GunKrivenko","base_family":"UDP"},
+    "Star": {"weapon_sid":"Gun_Star_HG","general_setup_sid":"Gun_Star_HG_GS","prototype_prefix":"GunStar","base_family":"PTM"}
   },
   "module_groups": {
     "action": ["high_speed", "balanced", "controlled"],
