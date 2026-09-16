@@ -8,32 +8,36 @@ from upgrade_build_model import UpgradeDefinition
 SCRIPT_DIR = Path(__file__).resolve().parent
 CONFIG_PATH = SCRIPT_DIR / "machine_gun_upgrades.json"
 
-IMAGE = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/MG/PKP/Barrel/Upgrade/T_PKP_Upg_a_1.T_PKP_Upg_a_1'"
-ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_Accuracy.T_PDA_Upgrades_Icon_Accuracy'"
+IMAGE = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Machinegun/PKP/Barrel/Upgrade/T_PKPU_a_1.T_PKPU_a_1'"
+ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_Recoil.T_PDA_Upgrades_Icon_Recoil'"
 TEMPLATE_SID = "BPRUE_MachineGunModuleTemplate"
 
+# Vanilla PKP already provides strong standalone improvements to weight,
+# durability/wear, armor penetration, recoil, aiming speed and aimed movement.
+# BPRUE MG modules therefore combine those familiar stats into mutually
+# exclusive LMG-specific trade-offs rather than duplicating Vanilla upgrades.
 SUSTAINED_FIRE = {
-    "high_output": (4800, ["BPRUE_FireIntervalNeg10Effect", "BPRUE_DurabilityPerShotNeg10Effect"]),
+    "high_output": (4800, ["BPRUE_FireIntervalNeg10Effect", "BPRUE_MG_RecoilPenalty10Effect", "BPRUE_DurabilityPerShotNeg10Effect"]),
     "controlled_fire": (4700, ["RecoilPos15Effect", "DispersionPos10Effect", "BPRUE_MG_FireIntervalPenalty10Effect"]),
 }
-HEAVY_BARREL = {
-    "heat_resistant": (5000, ["DurabilityPos20Effect", "BPRUE_MG_WeightPenalty10Effect"]),
+BARREL_CONFIGURATION = {
+    "reinforced_barrel": (5000, ["DurabilityPos15Effect", "DispersionPos10Effect", "BPRUE_MG_WeightPenalty10Effect"]),
     "stabilized_barrel": (5100, ["RecoilPos20Effect", "ShotRecoveryPos20Effect", "BPRUE_MG_WeightPenalty10Effect"]),
 }
 FEED_SYSTEM = {
-    "fast_feed": (4600, ["BPRUE_ReloadingTimeNeg20Effect", "BPRUE_DurabilityPerShotNeg10Effect"]),
-    "reinforced_feed": (4700, ["DurabilityPos20Effect", "BPRUE_MG_ReloadPenalty10Effect"]),
+    "quick_change_feed": (4600, ["BPRUE_ReloadingTimeNeg20Effect", "BPRUE_DurabilityPerShotNeg10Effect"]),
+    "reinforced_feed": (4800, ["DurabilityPerShotPos20Effect", "BPRUE_MG_ReloadPenalty10Effect"]),
 }
-SUPPORT = {
-    "mobile_support": (4500, ["WeightPos15Effect", "AimingTimePos15Effect", "BPRUE_MG_RecoilPenalty10Effect"]),
-    "stable_support": (4900, ["RecoilPos20Effect", "DispersionPos15Effect", "BPRUE_MG_WeightPenalty10Effect"]),
+SUPPORT_CONFIGURATION = {
+    "mobile_gunner": (4500, ["WeightPos15Effect", "AimingTimePos15Effect", "BPRUE_MG_RecoilPenalty10Effect"]),
+    "supported_fire": (4900, ["RecoilPos20Effect", "DispersionPos15Effect", "BPRUE_MG_WeightPenalty10Effect"]),
 }
 
 GROUPS = (
     ("SustainedFire", SUSTAINED_FIRE, "Body"),
-    ("HeavyBarrel", HEAVY_BARREL, "Barrel"),
+    ("BarrelConfiguration", BARREL_CONFIGURATION, "Barrel"),
     ("FeedSystem", FEED_SYSTEM, "Body"),
-    ("Support", SUPPORT, "Stock"),
+    ("SupportConfiguration", SUPPORT_CONFIGURATION, "Stock"),
 )
 
 
