@@ -1,0 +1,122 @@
+{
+  "summary": {
+    "expected_weapons": 23,
+    "generated_setups": 23,
+    "generated_upgrades": 399,
+    "duplicate_generated_sids": 0,
+    "known_effect_sids": 2496,
+    "errors": 1
+  },
+  "packs": {
+    "DLC1": {
+      "expected_weapons": 12,
+      "generated_setups": 12,
+      "generated_upgrades": 217,
+      "prototype_errors": 0,
+      "registration_errors": 0,
+      "retention_errors": 0,
+      "blocking_reference_errors": 0,
+      "effect_reference_errors": 0,
+      "section_errors": 0,
+      "output_files": {
+        "upgrades": {
+          "path": "GameLite\\DLCGameData\\DLC1\\UpgradePrototypes\\UpgradePrototypes_patch_BPRUE.cfg",
+          "exists": true
+        },
+        "general_setup": {
+          "path": "GameLite\\DLCGameData\\DLC1\\WeaponData\\WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
+          "exists": true
+        },
+        "sections": {
+          "path": "GameLite\\DLCGameData\\DLC1\\ItemPrototypes_patch_BPRUE.cfg",
+          "exists": true
+        }
+      },
+      "errors": []
+    },
+    "Deluxe": {
+      "expected_weapons": 6,
+      "generated_setups": 6,
+      "generated_upgrades": 102,
+      "prototype_errors": 0,
+      "registration_errors": 0,
+      "retention_errors": 0,
+      "blocking_reference_errors": 0,
+      "effect_reference_errors": 1,
+      "section_errors": 0,
+      "output_files": {
+        "upgrades": {
+          "path": "GameLite\\DLCGameData\\Deluxe\\UpgradePrototypes\\UpgradePrototypes_patch_BPRUE.cfg",
+          "exists": true
+        },
+        "general_setup": {
+          "path": "GameLite\\DLCGameData\\Deluxe\\WeaponData\\WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
+          "exists": true
+        },
+        "sections": {
+          "path": "GameLite\\DLCGameData\\Deluxe\\ItemPrototypes_patch_BPRUE.cfg",
+          "exists": true
+        }
+      },
+      "errors": [
+        "BPRUEDLCDeluxeMonolitHG_Upgrade_BPRUE_Pistol_Signature_QuickResponse: unknown effect refs: AimingTimePos20Effect"
+      ]
+    },
+    "PreOrder": {
+      "expected_weapons": 1,
+      "generated_setups": 1,
+      "generated_upgrades": 17,
+      "prototype_errors": 0,
+      "registration_errors": 0,
+      "retention_errors": 0,
+      "blocking_reference_errors": 0,
+      "effect_reference_errors": 0,
+      "section_errors": 0,
+      "output_files": {
+        "upgrades": {
+          "path": "GameLite\\DLCGameData\\PreOrder\\UpgradePrototypes\\UpgradePrototypes_patch_BPRUE.cfg",
+          "exists": true
+        },
+        "general_setup": {
+          "path": "GameLite\\DLCGameData\\PreOrder\\WeaponData\\WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
+          "exists": true
+        },
+        "sections": {
+          "path": "GameLite\\DLCGameData\\PreOrder\\ItemPrototypes_patch_BPRUE.cfg",
+          "exists": true
+        }
+      },
+      "errors": []
+    },
+    "Ultimate": {
+      "expected_weapons": 4,
+      "generated_setups": 4,
+      "generated_upgrades": 63,
+      "prototype_errors": 0,
+      "registration_errors": 0,
+      "retention_errors": 0,
+      "blocking_reference_errors": 0,
+      "effect_reference_errors": 0,
+      "section_errors": 0,
+      "output_files": {
+        "upgrades": {
+          "path": "GameLite\\DLCGameData\\Ultimate\\UpgradePrototypes\\UpgradePrototypes_patch_BPRUE.cfg",
+          "exists": true
+        },
+        "general_setup": {
+          "path": "GameLite\\DLCGameData\\Ultimate\\WeaponData\\WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
+          "exists": true
+        },
+        "sections": {
+          "path": "GameLite\\DLCGameData\\Ultimate\\ItemPrototypes_patch_BPRUE.cfg",
+          "exists": true
+        }
+      },
+      "errors": []
+    }
+  },
+  "duplicate_sids": [],
+  "errors": [
+    "Deluxe: BPRUEDLCDeluxeMonolitHG_Upgrade_BPRUE_Pistol_Signature_QuickResponse: unknown effect refs: AimingTimePos20Effect"
+  ]
+}
