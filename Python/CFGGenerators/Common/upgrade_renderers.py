@@ -76,18 +76,14 @@ def render_general_setup_patch(model: UpgradeBuildModel, *, header_comments: tup
     return "\n".join(lines)
 
 
-def _render_final_setup(model: UpgradeBuildModel, vanilla: dict[str, list[str]], *, scope: str, attachment_blocks: dict[str, list[str]] | None = None, refurl: str | None = None) -> str:
+def _render_final_setup(model: UpgradeBuildModel, vanilla: dict[str, list[str]], *, scope: str, attachment_blocks: dict[str, list[str]] | None = None) -> str:
     attachments = attachment_blocks or {}; lines = ["// -----------------------------------------------------------------------------", "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND", f"// Scope: {scope}", "// UpgradePrototypeSIDs are one complete indexed Vanilla + BPRUE array.", "// -----------------------------------------------------------------------------", ""]
     for setup_sid, upgrades in model.by_general_setup().items():
         if setup_sid not in vanilla: raise ValueError(f"{scope}: no effective UpgradePrototypeSIDs found for {setup_sid}")
         combined = list(dict.fromkeys([*vanilla[setup_sid], *(u.sid for u in upgrades)]))
-        if refurl:
-            lines.append(f"{setup_sid} : struct.begin {{refurl={refurl};refkey={setup_sid}}}")
-        else:
-            lines.append(f"{setup_sid} : struct.begin {{bpatch}}")
+        lines.append(f"{setup_sid} : struct.begin {{bpatch}}")
         for name, value in model.general_setup_properties(setup_sid): lines.append(f"   {name} = {value}")
-        array_marker = " {bskipref}" if refurl else ""
-        lines += [f"   UpgradePrototypeSIDs : struct.begin{array_marker}", *(f"      [{i}] = {sid}" for i, sid in enumerate(combined)), "   struct.end"]
+        lines += ["   UpgradePrototypeSIDs : struct.begin", *(f"      [{i}] = {sid}" for i, sid in enumerate(combined)), "   struct.end"]
         lines += attachments.get(setup_sid, []); lines += ["struct.end", ""]
     return "\n".join(lines).rstrip() + "\n"
 
@@ -97,10 +93,7 @@ def render_final_general_setup_patch(model: UpgradeBuildModel, attachment_blocks
 
 
 def render_dlc_general_setup_patch(model: UpgradeBuildModel, content_pack: str) -> str:
-    # This file lives in DLCGameData/BPRUpgradesExpanded/WeaponData/, so DLC1 is
-    # reached by walking back to DLCGameData and entering the official pack.
-    refurl = f"../../{content_pack}/WeaponData/WeaponGeneralSetupPrototypes.cfg"
-    return _render_final_setup(model, dlc_general_setup_upgrades(content_pack), scope=f"BPRUpgradesExpanded -> DLCGameData/{content_pack}", refurl=refurl)
+    return _render_final_setup(model, dlc_general_setup_upgrades(content_pack), scope=f"DLCGameData/{content_pack}")
 
 
 def render_technician_patch(model: UpgradeBuildModel) -> str:
