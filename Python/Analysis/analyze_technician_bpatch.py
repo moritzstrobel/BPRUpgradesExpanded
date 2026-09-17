@@ -32,6 +32,7 @@ ROOT_RE = re.compile(
 )
 REFKEY_RE = re.compile(r"\brefkey\s*=\s*([^;}\s]+)")
 UPGRADE_SID_RE = re.compile(r"^\s*UpgradePrototypeSID\s*=\s*([^\s/]+)")
+ENABLED_RE = re.compile(r"^\s*Enabled\s*=\s*(true|false)", re.IGNORECASE)
 NPC_TYPE_RE = re.compile(r"^\s*NPCType\s*=\s*ENPCType::([^\s/]+)")
 
 
