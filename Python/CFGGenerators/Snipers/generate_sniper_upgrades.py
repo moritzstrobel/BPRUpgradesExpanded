@@ -13,12 +13,17 @@ EFFECT_OUTPUT=CONTENT_ROOT/'GameLite/ModGameData/BPRUpgradesExpanded/EffectProto
 WEAPON_OUTPUT=CONTENT_ROOT/'GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE_SniperModules.cfg'
 IMAGE="Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Sniper/M701/Barrel/Upgrade/T_M701_Upg_a_1.T_M701_Upg_a_1'"
 ICON="Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_Accuracy.T_PDA_Upgrades_Icon_Accuracy'"
+CALIBER_ICON="Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_CaliberChange.T_PDA_Upgrades_Icon_CaliberChange'"
 TEMPLATE_SID='BPRUE_SniperModuleTemplate'
 BALLISTICS={'high_velocity':(4200,['ProjectileSpeedPos20Effect','DistanceDropOffLengthPos10Effect','BPRUE_Sniper_RecoilPenalty10Effect','BPRUE_DurabilityPerShotNeg10Effect']),'match_barrel':(4400,['DispersionPos25Effect','FireDistancePos15Effect','BPRUE_Sniper_AimingTimePenalty10Effect']),'heavy_barrel':(4300,['RecoilPos20Effect','ShotRecoveryPos20Effect','BPRUE_Sniper_WeightPenalty10Effect','BPRUE_Sniper_AimingTimePenalty10Effect'])}
 ACTION={'rapid':(4500,['BPRUE_FireIntervalNeg20Effect','BPRUE_Sniper_RecoilPenalty15Effect','BPRUE_DurabilityPerShotNeg20Effect']),'precision':(4400,['BPRUE_Sniper_ShotRecoveryPos30Effect','DispersionPos10Effect','BPRUE_Sniper_FireIntervalPenalty10Effect']),'reinforced':(4300,['RecoilPos20Effect','DurabilityPos20Effect','BPRUE_Sniper_FireIntervalPenalty10Effect'])}
 MARKSMAN={'snap_shooter':(4100,['BPRUE_Sniper_AimingTimePos20Effect','AimingMovementPos10Effect','BPRUE_Sniper_RecoilPenalty10Effect']),'field_marksman':(4200,['AimingMovementPos15Effect','IdleSwayXPos15Effect','IdleSwayYPos15Effect','ShotRecoveryPos10Effect']),'benchrest':(4400,['BPRUE_Sniper_IdleSwayXPos30Effect','BPRUE_Sniper_IdleSwayYPos30Effect','RecoilPos15Effect','BPRUE_Sniper_AimingTimePenalty15Effect','BPRUE_Sniper_WeightPenalty10Effect'])}
 STOCK={'lightweight_stock':(3900,['AimingTimePos15Effect','AimingMovementPos10Effect','BPRUE_Sniper_RecoilPenalty10Effect']),'adjustable_stock':(4200,['IdleSwayXPos15Effect','IdleSwayYPos15Effect','AimingMovementPos10Effect','RecoilPos10Effect']),'precision_stock':(4500,['BPRUE_Sniper_IdleSwayXPos30Effect','BPRUE_Sniper_IdleSwayYPos30Effect','RecoilPos20Effect','ShotRecoveryPos20Effect','BPRUE_Sniper_AimingTimePenalty15Effect'])}
 GROUPS=(("Ballistics",BALLISTICS,"Barrel","Top"),("Action",ACTION,"Barrel","Down"),("Marksman",MARKSMAN,"Body","Down"),("Stock",STOCK,"Stock","Top"))
+CALIBER_CONVERSIONS={
+    "A762Sniper": ("A762NATO","762NATO","sid_bprue_caliber_762_nato_name","sid_bprue_sniper_caliber_762sniper_to_762nato_description",4800,("BPRUE_ChangeCaliber762NATOEffect","BPRUE_ChangeAmmoTypesNo762Effect","BPRUE_ChangeAmmoTypes762NATOEffect","RecoilPos10Effect","BPRUE_Shared_DamagePenalty10Effect")),
+    "A762NATO": ("A762Sniper","762Sniper","sid_bprue_caliber_762_eastern_name","sid_bprue_sniper_caliber_762nato_to_762sniper_description",5000,("ChangeCaliber762Effect","BPRUE_ChangeAmmoTypesNo762NATOEffect","ChangeAmmoTypes762Effect","BPRUE_DamagePos10Effect","BPRUE_ArmorPiercingPos15Effect","BPRUE_Sniper_RecoilPenalty15Effect","BPRUE_DurabilityPerShotNeg15Effect")),
+}
 
 def load_config(): return json.loads(CONFIG_PATH.read_text(encoding='utf-8'))
 def module_sid(prefix,group,key): return f"{prefix}_Upgrade_BPRUE_Sniper_{group}_{key.title().replace('_','')}"
@@ -27,6 +32,10 @@ def build_upgrades(config):
     upgrades=[]
     for family in config['families'].values():
         scale=family.get('cost_scale',1.0); prefix=family['prototype_prefix']; setup=family['general_setup_sid']
+        conversion=CALIBER_CONVERSIONS.get(family.get('base_caliber')) if family.get('bprue_caliber_conversion',True) else None
+        if conversion:
+            _,suffix,text,hint,cost,effects=conversion
+            upgrades.append(UpgradeDefinition(sid=f"{prefix}_Upgrade_BPRUE_Sniper_Caliber_{suffix}",general_setup_sid=setup,weapon_class='Sniper',group='Caliber',target_part='Body',text_sid=text,hint_sid=hint,image=IMAGE,icon=CALIBER_ICON,cost=round(cost*scale),effects=tuple(effects),template_sid=TEMPLATE_SID,standalone=True))
         for group,definitions,target,vertical in GROUPS:
             group_sids=[module_sid(prefix,group,key) for key in definitions]
             for key,(cost,effects) in definitions.items():
