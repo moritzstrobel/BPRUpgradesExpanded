@@ -3,6 +3,12 @@ from __future__ import annotations
 from pathlib import Path
 
 
+CONTENT_ROOT = Path(__file__).resolve().parents[3]
+OUTPUT_PATH = (
+    CONTENT_ROOT
+    / "GameLite/GameData/ItemGeneratorPrototypes/DynamicItemGenerator_patch_BPRUE.cfg"
+)
+
 # Vanilla has shared T2/T3/T4 attachment generators, but no
 # Trader_Attachments_T1_ItemGenerator. T1 therefore needs two pieces:
 #   1. patch the direct Attach category of early/T1 traders that actually have one;
@@ -20,9 +26,9 @@ T3_KITS = (
     "BPRUE_Zubr_PistolConversionKit",
 )
 
-# These Vanilla trader roots have a direct Attach category and expose T1 weapons
-# either directly or through Trader_T1_Guns_ItemGenerator. Traders without an
-# attachment category (for example bartenders) are deliberately left untouched.
+# Vanilla has no shared T1 attachment pool. These trader roots have a direct
+# Attach category and expose T1 weapons either directly or through the T1 gun pool.
+# Bartenders that sell weapons but no attachments are deliberately left untouched.
 T1_DIRECT_ATTACH_TRADERS = (
     "TraderZalesie_TradeItemGenerator",
     "TraderChemicalPlant_TradeItemGenerator",
@@ -42,27 +48,7 @@ def _item_block(item_sid: str, indent: str) -> list[str]:
     ]
 
 
-def _render_shared_attachment_pool(generator_sid: str, kits: tuple[str, ...]) -> list[str]:
-    lines = [
-        f"{generator_sid} : struct.begin {{bpatch}}",
-        "   ItemGenerator : struct.begin {bpatch}",
-        "      [*] : struct.begin {bpatch}",
-        "         Category = EItemGenerationCategory::Attach",
-        "         PossibleItems : struct.begin {bpatch}",
-    ]
-    for kit_sid in kits:
-        lines.extend(_item_block(kit_sid, "            "))
-    lines += [
-        "         struct.end",
-        "      struct.end",
-        "   struct.end",
-        "struct.end",
-        "",
-    ]
-    return lines
-
-
-def _render_direct_trader_attach_pool(generator_sid: str, kits: tuple[str, ...]) -> list[str]:
+def _render_attachment_category_patch(generator_sid: str, kits: tuple[str, ...]) -> list[str]:
     lines = [
         f"{generator_sid} : struct.begin {{bpatch}}",
         "   ItemGenerator : struct.begin {bpatch}",
@@ -83,16 +69,16 @@ def _render_direct_trader_attach_pool(generator_sid: str, kits: tuple[str, ...])
 
 
 def render_trader_conversion_kit_patch() -> str:
-    """Render the first BPRUE trader-distribution draft for pistol conversion kits.
+    """Render the first BPRUE trader-distribution draft for conversion kits.
 
-    Progression rule: a conversion kit becomes available from the same weapon tier
-    as its base weapon. Vanilla has no shared T1 attachment generator, so T1 kits
-    are added to direct early-trader Attach categories and to the shared T2 pool
-    for forward availability. T2 kits enter T2; T3 kits enter T3.
+    Progression rule: a conversion kit becomes available with its base weapon tier.
+    T1 has no shared Vanilla attachment generator, so early direct Attach categories
+    are patched and the T1 kits are carried forward in the shared T2 pool.
     """
     lines = [
         "// -----------------------------------------------------------------------------",
         "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND",
+        "// Source: Python/CFGGenerators/SMGs/trader_conversion_kits.py",
         "// BPRUE pistol-slot conversion kit trader distribution.",
         "// Progression: kit availability starts with the base weapon's trader tier.",
         "// Vanilla has no Trader_Attachments_T1_ItemGenerator; early direct Attach",
@@ -102,23 +88,33 @@ def render_trader_conversion_kit_patch() -> str:
     ]
 
     for trader_sid in T1_DIRECT_ATTACH_TRADERS:
-        lines.extend(_render_direct_trader_attach_pool(trader_sid, T1_KITS))
+        lines.extend(_render_attachment_category_patch(trader_sid, T1_KITS))
 
-    # T2 carries T1 kits forward and introduces the T2 conversion kits.
+    # T2 carries T1 forward and introduces Bucket/Fora.
     lines.extend(
-        _render_shared_attachment_pool(
+        _render_attachment_category_patch(
             "Trader_Attachments_T2_ItemGenerator",
             T1_KITS + T2_KITS,
         )
     )
 
-    # Vanilla late traders reference T2 and T3 cumulatively, so T3 only needs the
-    # newly unlocked T3 kits rather than duplicating lower-tier entries.
+    # Late Vanilla traders reference lower attachment tiers cumulatively, so T3
+    # only introduces Integral/Zubr rather than duplicating all lower-tier kits.
     lines.extend(
-        _render_shared_attachment_pool(
+        _render_attachment_category_patch(
             "Trader_Attachments_T3_ItemGenerator",
             T3_KITS,
         )
     )
 
     return "\n".join(lines).rstrip() + "\n"
+
+
+def main() -> None:
+    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    OUTPUT_PATH.write_text(render_trader_conversion_kit_patch(), encoding="utf-8")
+    print(f"Generated {OUTPUT_PATH}")
+
+
+if __name__ == "__main__":
+    main()
