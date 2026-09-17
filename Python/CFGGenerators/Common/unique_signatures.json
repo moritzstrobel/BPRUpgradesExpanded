@@ -40,6 +40,9 @@
     "Cavalier": {"key":"mobile_marksman_package","name":"Mobile Marksman Package","cost":6400,"target_part":"Stock","effects":["BPRUE_Unique_AimingMovementPos25Effect","BPRUE_Unique_AimingTimePos25Effect","WeightDown15Effect","BPRUE_Unique_RecoilPenalty15Effect"]},
     "Lynx": {"key":"match_grade_barrel","name":"Match-Grade Barrel","cost":6800,"target_part":"Barrel","effects":["BPRUE_Unique_DispersionPos30Effect","ProjectileSpeedPos20Effect","BPRUE_Unique_ArmorPiercingPos20Effect","BPRUE_Unique_RecoilPenalty15Effect"]},
     "Partner": {"key":"expedition_reinforcement","name":"Expedition Reinforcement","cost":6600,"target_part":"Body","effects":["BPRUE_Unique_DurabilityPos30Effect","BPRUE_Unique_DurabilityPerShotPos25Effect","RecoilPos15Effect","BPRUE_Unique_WeightPenalty15Effect"]},
-    "Whip": {"key":"snap_shot_system","name":"Snap-Shot System","cost":6400,"target_part":"Stock","effects":["BPRUE_Unique_AimingTimePos30Effect","AimingMovementPos20Effect","ShotRecoveryPos20Effect","BPRUE_Unique_RecoilPenalty15Effect"]}
+    "Whip": {"key":"snap_shot_system","name":"Snap-Shot System","cost":6400,"target_part":"Stock","effects":["BPRUE_Unique_AimingTimePos30Effect","AimingMovementPos20Effect","ShotRecoveryPos20Effect","BPRUE_Unique_RecoilPenalty15Effect"]},
+
+    "PKPKorshunov": {"key":"commanders_assault_package","name":"Commander's Assault Package","cost":7000,"target_part":"Body","effects":["BPRUE_Unique_AimingTimePos20Effect","AimingMovementPos20Effect","BPRUE_Unique_ReloadingTimeNeg15Effect","BPRUE_FireIntervalNeg10Effect","BPRUE_DurabilityPerShotNeg15Effect"]},
+    "Tank": {"key":"heavy_duty_fire_system","name":"Heavy-Duty Fire System","cost":7200,"target_part":"Body","effects":["BPRUE_Unique_DurabilityPerShotPos25Effect","RecoilPos20Effect","ShotRecoveryPos20Effect","BPRUE_FireIntervalNeg10Effect","BPRUE_Unique_WeightPenalty20Effect"]}
   }
 }
