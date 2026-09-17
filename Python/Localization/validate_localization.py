@@ -26,10 +26,12 @@ LOCALIZATION_FILES = (
     LOCALIZATION_DIR / "Unique_Localization.json",
     LOCALIZATION_DIR / "Unique_Sniper_Localization.json",
     LOCALIZATION_DIR / "Unique_MachineGun_Localization.json",
+    LOCALIZATION_DIR / "DLC1_Localization.json",
 )
 VANILLA_EFFECTS = PYTHON_ROOT / "VanillaReference" / "EffectPrototypes.cfg"
 VANILLA_UI_PATCH = REPO_ROOT / "GameLite/GameData/EffectPrototypes/EffectPrototypes_patch_BPRUE_UI.cfg"
 BPRUE_EFFECT_DIR = REPO_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes"
+DLC_EFFECT_ROOT = REPO_ROOT / "GameLite/DLCGameData"
 
 EFFECT_SID_RE = re.compile(r"^\s*LocalizationSID\s*=\s*([A-Za-z0-9_]+)\s*$", re.MULTILINE)
 SHOW_RE = re.compile(r"^\s*ShowUpgradeEffect\s*=\s*(true|false)\s*$", re.MULTILINE | re.IGNORECASE)
@@ -74,6 +76,8 @@ def _parse_effects(path: Path, source: str) -> dict[str, dict]:
 def _effect_catalog() -> dict[str, dict]:
     catalog = _parse_effects(VANILLA_EFFECTS, "BaseGame")
     for path in sorted(BPRUE_EFFECT_DIR.glob("*.cfg")): catalog.update(_parse_effects(path, path.name))
+    for path in sorted(DLC_EFFECT_ROOT.glob("*/EffectPrototypes/*BPRUE*.cfg")):
+        catalog.update(_parse_effects(path, str(path.relative_to(REPO_ROOT))))
     catalog.update(_parse_effects(VANILLA_UI_PATCH, VANILLA_UI_PATCH.name))
     return catalog
 
