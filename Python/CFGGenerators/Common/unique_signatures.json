@@ -34,6 +34,12 @@
 
     "Predator": {"key":"predator_choke_system","name":"Predator Choke System","cost":5600,"target_part":"Barrel","effects":["DispersionPos25Effect","BPRUE_Unique_EffectiveRangePos15Effect","ProjectileSpeedPos15Effect","BPRUE_Unique_RecoilPenalty15Effect"]},
     "Sledgehammer": {"key":"gas_system_overdrive","name":"Gas-System Overdrive","cost":5800,"target_part":"Body","effects":["BPRUE_FireIntervalNeg20Effect","RecoilPos20Effect","BPRUE_Unique_ReloadingTimeNeg15Effect","BPRUE_Unique_DurabilityPerShotNeg25Effect"]},
-    "Texas": {"key":"heavy_magnum_reinforcement","name":"Heavy Magnum Reinforcement","cost":6500,"target_part":"Barrel","effects":["BPRUE_Unique_DamagePos20Effect","BPRUE_Unique_ArmorPiercingPos20Effect","RecoilPos20Effect","BPRUE_Unique_WeightPenalty20Effect"]}
+    "Texas": {"key":"heavy_magnum_reinforcement","name":"Heavy Magnum Reinforcement","cost":6500,"target_part":"Barrel","effects":["BPRUE_Unique_DamagePos20Effect","BPRUE_Unique_ArmorPiercingPos20Effect","RecoilPos20Effect","BPRUE_Unique_WeightPenalty20Effect"]},
+
+    "Gonta": {"key":"hunters_field_tuning","name":"Hunter's Field Tuning","cost":6200,"target_part":"Barrel","effects":["DispersionPos20Effect","BPRUE_Unique_EffectiveRangePos20Effect","ProjectileSpeedPos15Effect","BPRUE_DurabilityPerShotNeg15Effect"]},
+    "Cavalier": {"key":"mobile_marksman_package","name":"Mobile Marksman Package","cost":6400,"target_part":"Stock","effects":["BPRUE_Unique_AimingMovementPos25Effect","BPRUE_Unique_AimingTimePos25Effect","WeightDown15Effect","BPRUE_Unique_RecoilPenalty15Effect"]},
+    "Lynx": {"key":"match_grade_barrel","name":"Match-Grade Barrel","cost":6800,"target_part":"Barrel","effects":["BPRUE_Unique_DispersionPos30Effect","ProjectileSpeedPos20Effect","BPRUE_Unique_ArmorPiercingPos20Effect","BPRUE_Unique_RecoilPenalty15Effect"]},
+    "Partner": {"key":"expedition_reinforcement","name":"Expedition Reinforcement","cost":6600,"target_part":"Body","effects":["BPRUE_Unique_DurabilityPos30Effect","BPRUE_Unique_DurabilityPerShotPos25Effect","RecoilPos15Effect","BPRUE_Unique_WeightPenalty15Effect"]},
+    "Whip": {"key":"snap_shot_system","name":"Snap-Shot System","cost":6400,"target_part":"Stock","effects":["BPRUE_Unique_AimingTimePos30Effect","AimingMovementPos20Effect","ShotRecoveryPos20Effect","BPRUE_Unique_RecoilPenalty15Effect"]}
   }
 }
