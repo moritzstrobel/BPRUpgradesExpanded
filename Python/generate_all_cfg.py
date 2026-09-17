@@ -18,7 +18,7 @@ from upgrade_renderers import (
     render_final_general_setup_patch,
     render_technician_patch,
 )
-from unique_weapon_modules import add_unique_modules
+from unique_weapon_modules import add_unique_modules, add_unique_signatures, render_unique_signature_effects
 from vanilla_upgrade_layout import DLC_ROOT, _direct_child, _direct_scalar, _indexed_children, _refkey, _sid, _top_level_blocks, render_vanilla_compaction_patch
 
 from CFGGenerators.AssaultRifles import generate_assault_rifle_upgrades as ar
@@ -43,6 +43,7 @@ VANILLA_COMPACTION_PATH = CONTENT_ROOT / "GameLite/GameData/UpgradePrototypes/Up
 VANILLA_EFFECT_UI_PATH = CONTENT_ROOT / "GameLite/GameData/EffectPrototypes/EffectPrototypes_patch_BPRUE_UI.cfg"
 MACHINE_GUN_EFFECT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_MachineGunEffectPrototypes.cfg"
 SHARED_EFFECT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_SharedEffectPrototypes.cfg"
+UNIQUE_SIGNATURE_EFFECT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_UniqueSignatureEffectPrototypes.cfg"
 MIN_SECTION_DISTANCE = 80.0
 SECTION_NUDGE_STEP = 20.0
 SECTION_NUDGE_RINGS = 12
@@ -75,6 +76,7 @@ def build_model(*, apply_layout: bool = True) -> tuple[UpgradeBuildModel, dict]:
     model = UpgradeBuildModel()
     for upgrades in (ar.build_upgrades(configs["ar"]), smg.build_upgrades(configs["smg"]), shotgun.build_upgrades(configs["shotgun"]), pistol.build_upgrades(configs["pistol"]), sniper.build_upgrades(configs["sniper"]), machine_gun.build_upgrades(configs["machine_gun"]), _shared_upgrades(configs)): model.extend(upgrades)
     unique_count = add_unique_modules(model, configs); print(f"Added {unique_count} Unique weapon module instances from central registry")
+    signature_count = add_unique_signatures(model); print(f"Added {signature_count} Unique signature modules")
     ar.configure_general_setups(configs["ar"], model); model.validate()
     if apply_layout:
         apply_layout_to_model(model); model.validate()
@@ -233,7 +235,7 @@ def main():
     for pack, dlc_model in sorted(dlc_models.items()):
         dlc_upgrade_text = render_consolidated_upgrade_prototypes(dlc_model); dlc_setup_text = render_dlc_general_setup_patch(dlc_model, pack); dlc_weapon_text = render_weapon_sections_patch(dlc_model, content_pack=pack); validate_rendered_outputs(dlc_model, dlc_upgrade_text, dlc_setup_text)
         pack_root = DLC_OUTPUT_ROOT / pack; write(pack_root / "UpgradePrototypes/UpgradePrototypes_patch_BPRUE.cfg", dlc_upgrade_text); write(pack_root / "WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg", dlc_setup_text); write(pack_root / "ItemPrototypes/ItemPrototypes_patch_BPRUE.cfg", dlc_weapon_text)
-    write(ar.EFFECT_OUTPUT_PATH, ar.render_effect_patch(configs["ar"])); write(smg.EFFECT_OUTPUT_PATH, smg.render_effects()); write(shotgun.EFFECT_OUTPUT, shotgun.render_effects()); write(pistol.EFFECT_OUTPUT, pistol.render_effects()); write(sniper.EFFECT_OUTPUT, sniper.render_effects()); write(MACHINE_GUN_EFFECT_PATH, machine_gun.render_effects()); write(SHARED_EFFECT_PATH, render_shared_effects())
+    write(ar.EFFECT_OUTPUT_PATH, ar.render_effect_patch(configs["ar"])); write(smg.EFFECT_OUTPUT_PATH, smg.render_effects()); write(shotgun.EFFECT_OUTPUT, shotgun.render_effects()); write(pistol.EFFECT_OUTPUT, pistol.render_effects()); write(sniper.EFFECT_OUTPUT, sniper.render_effects()); write(MACHINE_GUN_EFFECT_PATH, machine_gun.render_effects()); write(SHARED_EFFECT_PATH, render_shared_effects()); write(UNIQUE_SIGNATURE_EFFECT_PATH, render_unique_signature_effects())
     print(f"Validated and rendered {len(model.upgrades)} base/Unique upgrades plus {sum(len(m.upgrades) for m in dlc_models.values())} DLC upgrades.")
 
 
