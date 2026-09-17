@@ -43,6 +43,7 @@ class Prototype:
     npc_type: str | None
     direct_upgrades: list[str] | None
     patch_upgrades: list[str] = field(default_factory=list)
+    direct_enabled: dict[str, list[bool | None]] | None = None
 
 
 def extract_struct(lines: list[str], start: int) -> tuple[list[str], int]:
@@ -75,6 +76,35 @@ def direct_child(block: list[str], name: str) -> list[str] | None:
         depth += line.count("struct.begin")
         depth -= line.count("struct.end")
     return None
+
+
+def parse_upgrade_entries(upgrades: list[str] | None) -> list[tuple[str, bool | None]]:
+    if not upgrades:
+        return []
+    result: list[tuple[str, bool | None]] = []
+    current_sid: str | None = None
+    current_enabled: bool | None = None
+    for line in upgrades:
+        sid_m = UPGRADE_SID_RE.match(line)
+        if sid_m:
+            if current_sid is not None:
+                result.append((current_sid, current_enabled))
+            current_sid = sid_m.group(1)
+            current_enabled = None
+            continue
+        enabled_m = ENABLED_RE.match(line)
+        if enabled_m and current_sid is not None:
+            current_enabled = enabled_m.group(1).lower() == "true"
+    if current_sid is not None:
+        result.append((current_sid, current_enabled))
+    return result
+
+
+def enabled_map(entries: list[tuple[str, bool | None]]) -> dict[str, list[bool | None]]:
+    result: dict[str, list[bool | None]] = {}
+    for sid, enabled in entries:
+        result.setdefault(sid, []).append(enabled)
+    return result
 
 
 def parse_upgrade_sids(upgrades: list[str] | None) -> list[str]:
@@ -114,12 +144,14 @@ def parse_file(path: Path) -> dict[str, Prototype]:
             depth += line.count("struct.begin")
             depth -= line.count("struct.end")
         upgrades = direct_child(block, "Upgrades")
+        entries = parse_upgrade_entries(upgrades)
         result[sid] = Prototype(
             sid=sid,
             header=lines[i],
             refkey=refkey,
             npc_type=npc_type,
-            direct_upgrades=parse_upgrade_sids(upgrades) if upgrades is not None else None,
+            direct_upgrades=[x[0] for x in entries] if upgrades is not None else None,
+            direct_enabled=enabled_map(entries) if upgrades is not None else None,
         )
         i = next_i
     return result
@@ -160,6 +192,7 @@ def apply_bprue_patch(
             refkey=p.refkey,
             npc_type=p.npc_type,
             direct_upgrades=None if p.direct_upgrades is None else list(p.direct_upgrades),
+            direct_enabled=None if p.direct_enabled is None else {k: list(v) for k, v in p.direct_enabled.items()},
         )
         for sid, p in vanilla.items()
     }
@@ -186,12 +219,18 @@ def apply_bprue_patch(
             # prototype that previously inherited it shadows the inherited child.
             inherited = effective_upgrades(merged, sid)
             target.direct_upgrades = list(inherited)
+            inherited_enabled = effective_value(merged, sid, "direct_enabled") or {}
+            target.direct_enabled = {k: list(v) for k, v in inherited_enabled.items()}
             warnings.append(
                 f"{sid}: patch materializes inherited Upgrades "
                 f"({len(inherited)} inherited entries) before appending"
             )
 
         target.direct_upgrades.extend(pp.direct_upgrades)
+        if target.direct_enabled is None:
+            target.direct_enabled = {}
+        for upgrade_sid, values in (pp.direct_enabled or {}).items():
+            target.direct_enabled.setdefault(upgrade_sid, []).extend(values)
         target.patch_upgrades.extend(pp.direct_upgrades)
 
         if inherited_before and target.refkey:
@@ -212,6 +251,8 @@ def main() -> int:
                     help="Only show detailed upgrade SIDs containing this text (e.g. Viper).")
     ap.add_argument("--show-sids", action="store_true",
                     help="Print per-technician added/duplicate/matching SID details.")
+    ap.add_argument("--summary", action="store_true",
+                    help="Print compact matching-SID diagnostics, including Enabled values.")
     args = ap.parse_args()
 
     vanilla = parse_file(args.vanilla)
@@ -278,7 +319,7 @@ def main() -> int:
             f"ownUpgrades={own_before}->{own_after}, refkey={vanilla[sid].refkey}"
         )
 
-        if args.show_sids or sid_filter:
+        if args.show_sids or sid_filter or args.summary:
             before = effective_upgrades(vanilla, sid)
             after = effective_upgrades(merged, sid)
             before_set = set(before)
@@ -293,6 +334,35 @@ def main() -> int:
             added_matches = [x for x in after if x not in before_set and matches(x)]
             duplicate_matches = [(x, n) for x, n in counts.items() if n > 1 and matches(x)]
             patch_matches = [x for x in patch_direct if matches(x)]
+
+            vanilla_enabled = effective_value(vanilla, sid, "direct_enabled") or {}
+            merged_enabled = effective_value(merged, sid, "direct_enabled") or {}
+
+            if args.summary:
+                lost_matches = [x for x in vanilla_matches if counts[x] == 0]
+                vanilla_dup_matches = [x for x in vanilla_matches if counts[x] > 1]
+                new_unique = list(dict.fromkeys(added_matches))
+                bprue_dup_matches = [x for x in new_unique if counts[x] > 1]
+                print(f"  inheritance: {sid} -> {vanilla[sid].refkey or '<none>'}")
+                print(
+                    f"  SUMMARY matching Vanilla={len(vanilla_matches)}, "
+                    f"BPRUE/new={len(new_unique)}, lostVanilla={len(lost_matches)}, "
+                    f"duplicateVanilla={len(vanilla_dup_matches)}, duplicateBPRUE={len(bprue_dup_matches)}"
+                )
+                print("  Vanilla matching SIDs:")
+                for x in vanilla_matches:
+                    print(
+                        f"    {x}: count={counts[x]}, "
+                        f"vanillaEnabled={vanilla_enabled.get(x, [])}, "
+                        f"mergedEnabled={merged_enabled.get(x, [])}"
+                    )
+                print("  BPRUE/new matching SIDs:")
+                for x in new_unique:
+                    print(
+                        f"    {x}: count={counts[x]}, "
+                        f"mergedEnabled={merged_enabled.get(x, [])}"
+                    )
+                continue
 
             print(f"  inheritance: {sid} -> {vanilla[sid].refkey or '<none>'}")
             print(f"  direct patch entries matching filter: {len(patch_matches)}")
