@@ -45,24 +45,32 @@ def make_struct_text(sid,languages):
     return f'(SID="{escape_unreal_string(sid)}",LanguagesToLocalizedStrings=({",".join(parts)}))'
 def get_sid(entry): return str(entry.get_editor_property("SID"))
 
-def main():
-    asset=unreal.load_asset(ASSET_PATH)
-    if not asset: raise RuntimeError(f"Could not load localization asset: {ASSET_PATH}")
-    desired=read_localization_files(LOCALIZATION_FILES); desired_by_sid={entry["sid"]:entry for entry in desired}
-    current=list(asset.get_editor_property("LocalizationData")); current_by_sid={get_sid(entry):entry for entry in current}
-    result=[]; added=updated=unchanged=0
-    for entry in desired:
-        sid=entry["sid"]; struct_text=make_struct_text(sid,entry["languages"])
-        parsed=unreal.LocalizationData()
-        if not parsed.import_text(struct_text): raise RuntimeError(f"Could not import localization entry: {sid}")
-        existing=current_by_sid.get(sid)
-        if existing is None: added+=1
-        elif existing.export_text()!=parsed.export_text(): updated+=1
-        else: unchanged+=1
-        result.append(parsed)
-    preserved=[entry for entry in current if get_sid(entry) not in desired_by_sid]
-    result.extend(preserved)
-    asset.set_editor_property("LocalizationData",result); unreal.EditorAssetLibrary.save_loaded_asset(asset)
-    log(f"Localization upsert complete: desired={len(desired)}, added={added}, updated={updated}, unchanged={unchanged}, preserved={len(preserved)}")
-
-if __name__ == "__main__": main()
+log("========================================"); log("Starting localization UPSERT")
+entries=read_localization_files(LOCALIZATION_FILES); asset=unreal.load_asset(ASSET_PATH)
+if asset is None: raise RuntimeError(f"Could not load localization asset: {ASSET_PATH}")
+localized_texts=asset.get_editor_property("LocalizedTexts"); existing_count=len(localized_texts)
+if existing_count==0: raise RuntimeError("LocalizedTexts is empty. Create one temporary localization entry manually before running the importer.")
+existing_by_sid={}
+for entry in localized_texts:
+    sid=get_sid(entry)
+    if sid in existing_by_sid: raise RuntimeError(f"Duplicate SID already exists in localization asset: {sid}")
+    existing_by_sid[sid]=entry
+updated=0; to_add=[]
+for entry in entries:
+    existing=existing_by_sid.get(entry["sid"])
+    if existing is None: to_add.append(entry)
+    else: existing.import_text(make_struct_text(entry["sid"],entry["languages"])); updated+=1
+added=0
+if to_add:
+    template=localized_texts[0]; backup=template.export_text()
+    try:
+        for entry in to_add: template.import_text(make_struct_text(entry["sid"],entry["languages"])); localized_texts.append(template); added+=1
+    finally: template.import_text(backup)
+final_sids=[get_sid(entry) for entry in localized_texts]
+if len(final_sids)!=len(set(final_sids)): raise RuntimeError("Duplicate SIDs detected after UPSERT.")
+missing=sorted({entry['sid'] for entry in entries}-set(final_sids))
+if missing: raise RuntimeError("SIDs missing after UPSERT:\n"+"\n".join(missing))
+if len(localized_texts)!=existing_count+added: raise RuntimeError("Entry count mismatch after UPSERT.")
+asset.modify(); asset.set_editor_property("LocalizedTexts",localized_texts)
+if not unreal.EditorAssetLibrary.save_asset(ASSET_PATH,only_if_is_dirty=False): raise RuntimeError(f"Failed to save asset: {ASSET_PATH}")
+log(f"SUCCESS - input={len(entries)}, updated={updated}, added={added}, final={len(localized_texts)}"); log("========================================")
