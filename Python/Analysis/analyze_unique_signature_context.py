@@ -47,16 +47,17 @@ def choose_source(sid, index, preferred_file=None, preferred_basename=None, pref
     candidates = index.get(sid, [])
     if preferred_file is not None:
         wanted = preferred_file.resolve()
-        for candidate in candidates:
-            if candidate[0] == wanted: return candidate
-    if preferred_basename:
-        for candidate in candidates:
-            if candidate[0].name == preferred_basename: return candidate
+        exact = [candidate for candidate in candidates if candidate[0] == wanted]
+        if exact: return exact[0]
+        return None
+    filtered = candidates
     if preferred_pack:
         marker = f"DLCGameData/{preferred_pack}/"
-        for candidate in candidates:
-            if marker in candidate[0].as_posix(): return candidate
-    return candidates[0] if candidates else None
+        filtered = [candidate for candidate in filtered if marker in candidate[0].as_posix()]
+    if preferred_basename:
+        filtered = [candidate for candidate in filtered if candidate[0].name == preferred_basename]
+    if filtered: return filtered[0]
+    return candidates[0] if candidates and not (preferred_basename or preferred_pack) else None
 
 
 def resolve_refurl_path(current_path, raw_refurl, files):
@@ -163,18 +164,18 @@ def build_dlc_context(index, files):
         base = families.get((class_name, base_name))
         if not base: unresolved.append({"weapon": name, "reason": "base_family_not_found"}); continue
         standalone = bool(weapon.get("standalone", False)); comparison_base = weapon.get("comparison_base", base_name); dlc_setup_sid = weapon["general_setup_sid"]
-        dlc_setup, dlc_setup_chain, dlc_setup_source, dlc_setup_missing = resolve_effective(dlc_setup_sid, index, files, preferred_pack=pack)
+        dlc_setup, dlc_setup_chain, dlc_setup_source, dlc_setup_missing = resolve_effective(dlc_setup_sid, index, files, preferred_basename="WeaponGeneralSetupPrototypes.cfg", preferred_pack=pack)
         if not dlc_setup: unresolved.append({"weapon": name, "reason": "general_setup_not_found"}); continue
         dlc_weapon_sid = weapon.get("weapon_sid") or find_weapon_for_setup(dlc_setup_sid, pack, index)
         dlc_weapon = {}; dlc_weapon_chain = []; dlc_weapon_source = None; dlc_weapon_missing = []
-        if isinstance(dlc_weapon_sid, str): dlc_weapon, dlc_weapon_chain, dlc_weapon_source, dlc_weapon_missing = resolve_effective(dlc_weapon_sid, index, files, preferred_pack=pack)
+        if isinstance(dlc_weapon_sid, str): dlc_weapon, dlc_weapon_chain, dlc_weapon_source, dlc_weapon_missing = resolve_effective(dlc_weapon_sid, index, files, preferred_basename="ItemPrototypes.cfg", preferred_pack=pack)
         if standalone or comparison_base is None:
             entries[name] = {"content_pack": pack, "class": class_name, "base_family": base_name, "comparison_mode": "standalone", "comparison_base": None, "dlc_general_setup_sid": dlc_setup_sid, "base_general_setup_sid": None, "dlc_weapon_sid": dlc_weapon_sid, "base_weapon_sid": None, "gameplay_identity": absolute_identity(dlc_setup, GAMEPLAY_FIELDS), "equipment_identity": absolute_identity(dlc_weapon, EQUIPMENT_FIELDS), "player_weapon_attributes": {"base_sid": None, "unique_sid": dlc_weapon.get("PlayerWeaponAttributes"), "resolved": False, "reason": "standalone_no_comparison_base"}, "general_setup": {"dlc_source": dlc_setup_source, "dlc_inheritance_chain": dlc_setup_chain, "unresolved_inheritance": dlc_setup_missing, "absolute_values": dlc_setup}, "weapon_prototype": {"dlc_source": dlc_weapon_source, "dlc_inheritance_chain": dlc_weapon_chain, "unresolved_inheritance": dlc_weapon_missing, "absolute_values": dlc_weapon}}
             continue
         comparison_family = families.get((class_name, str(comparison_base)))
         if not comparison_family: unresolved.append({"weapon": name, "reason": "comparison_base_not_found"}); continue
         base_setup_sid = comparison_family["general_setup_sid"]
-        base_setup, base_setup_chain, base_setup_source, base_setup_missing = resolve_effective(base_setup_sid, index, files)
+        base_setup, base_setup_chain, base_setup_source, base_setup_missing = resolve_effective(base_setup_sid, index, files, preferred_basename="WeaponGeneralSetupPrototypes.cfg")
         base_weapon_sid = comparison_family.get("weapon_sid"); base_weapon = {}; base_weapon_chain = []; base_weapon_source = None; base_weapon_missing = []
         if isinstance(base_weapon_sid, str): base_weapon, base_weapon_chain, base_weapon_source, base_weapon_missing = resolve_effective(base_weapon_sid, index, files, preferred_basename="WeaponPrototypes.cfg")
         setup_diffs = leaf_diff(base_setup, dlc_setup); weapon_diffs = leaf_diff(base_weapon, dlc_weapon) if base_weapon and dlc_weapon else []; all_diffs = setup_diffs + weapon_diffs
@@ -197,7 +198,7 @@ def build_report():
     dlc_weapons, dlc_unresolved = build_dlc_context(index, files)
     standalone_count = sum(1 for e in dlc_weapons.values() if e.get("comparison_mode") == "standalone")
     dlc_resolved = sum(1 for e in dlc_weapons.values() if e.get("player_weapon_attributes", {}).get("resolved"))
-    return {"summary": {"uniques": len(uniques), "dlc_weapons": len(dlc_weapons), "dlc_standalone": standalone_count, "dlc_unresolved": len(dlc_unresolved), "basegame_player_attribute_pairs_resolved": base_resolved, "dlc_player_attribute_pairs_resolved": dlc_resolved, "vanilla_cfg_files_scanned": len(scanned)}, "notes": ["DLC inheritance follows refkey/refurl across checked-in VanillaReference CFG files.", "Duplicate SIDs are source-aware; PlayerWeaponAttributes prefer WeaponAttributesPrototypes.cfg.", "DLC ItemPrototypes are discovered from GeneralWeaponSetup when weapon_sid is not explicitly registered.", "base_family controls BPRUE module inheritance; comparison_base independently controls signature analysis.", "Missing cross-file sources are reported in unresolved_inheritance instead of silently producing misleading None diffs."], "vanilla_reference_files_scanned": scanned, "uniques": uniques, "dlc_weapons": dlc_weapons, "dlc_unresolved": dlc_unresolved}
+    return {"summary": {"uniques": len(uniques), "dlc_weapons": len(dlc_weapons), "dlc_standalone": standalone_count, "dlc_unresolved": len(dlc_unresolved), "basegame_player_attribute_pairs_resolved": base_resolved, "dlc_player_attribute_pairs_resolved": dlc_resolved, "vanilla_cfg_files_scanned": len(scanned)}, "notes": ["DLC inheritance follows refkey/refurl across checked-in VanillaReference CFG files.", "Duplicate SIDs are source-aware; DLC lookups constrain both content pack and prototype file domain.", "DLC ItemPrototypes are discovered from GeneralWeaponSetup when weapon_sid is not explicitly registered.", "base_family controls BPRUE module inheritance; comparison_base independently controls signature analysis.", "Missing cross-file sources are reported in unresolved_inheritance instead of silently producing misleading None diffs."], "vanilla_reference_files_scanned": scanned, "uniques": uniques, "dlc_weapons": dlc_weapons, "dlc_unresolved": dlc_unresolved}
 
 
 def format_change(change):
