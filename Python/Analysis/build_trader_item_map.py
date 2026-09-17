@@ -9,6 +9,7 @@ from analysis_paths import TRADER_ITEM_MAP, ensure_reports_dir
 
 PYTHON_ROOT = Path(__file__).resolve().parents[1]
 DYNAMIC_ITEM_GENERATOR = PYTHON_ROOT / "VanillaReference" / "DynamicItemGenerator.cfg"
+TRADER_GENERATOR_SID = "DynamicTraderItemGenerator"
 
 STRUCT_BEGIN_RE = re.compile(r"^\s*([^:]+?)\s*:\s*struct\.begin(?:\s*\{[^}]*\})?\s*$")
 SID_RE = re.compile(r"^\s*SID\s*=\s*([^\s]+)\s*$")
@@ -30,6 +31,32 @@ def _parse_rank(value: str | None) -> list[str]:
     if not value:
         return []
     return [part.strip().removeprefix("ERank::") for part in value.split(",")]
+
+
+def _extract_top_level_struct(text: str, struct_key: str) -> str:
+    """Return exactly one named top-level struct, excluding all following generators."""
+    lines = text.splitlines()
+    start_re = re.compile(
+        rf"^\s*{re.escape(struct_key)}\s*:\s*struct\.begin(?:\s*\{{[^}}]*\}})?\s*$"
+    )
+
+    start: int | None = None
+    depth = 0
+    for index, raw_line in enumerate(lines):
+        line = _strip_comment(raw_line)
+        if start is None:
+            if not start_re.match(line):
+                continue
+            start = index
+
+        if STRUCT_BEGIN_RE.match(line):
+            depth += 1
+        elif line.strip() == "struct.end":
+            depth -= 1
+            if depth == 0:
+                return "\n".join(lines[start : index + 1]) + "\n"
+
+    raise ValueError(f"Top-level struct {struct_key!r} not found or not closed")
 
 
 def parse_generators(text: str) -> list[dict]:
@@ -122,62 +149,60 @@ def parse_generators(text: str) -> list[dict]:
 
 
 def build_report() -> dict:
-    generators = parse_generators(DYNAMIC_ITEM_GENERATOR.read_text(encoding="utf-8-sig"))
+    text = DYNAMIC_ITEM_GENERATOR.read_text(encoding="utf-8-sig")
+    trader_text = _extract_top_level_struct(text, TRADER_GENERATOR_SID)
+    generators = parse_generators(trader_text)
 
+    if len(generators) != 1 or generators[0]["sid"] != TRADER_GENERATOR_SID:
+        found = [generator["sid"] for generator in generators]
+        raise ValueError(
+            f"Expected only {TRADER_GENERATOR_SID}, parsed: {found}"
+        )
+
+    generator = generators[0]
     weapon_to_pools: dict[str, list[dict]] = defaultdict(list)
     attachment_to_pools: dict[str, list[dict]] = defaultdict(list)
-    trader_pools: dict[str, dict] = {}
+    pool_data = {"weapon_pools": [], "attachment_pools": []}
 
-    for generator in generators:
-        sid = generator["sid"]
-        relevant_categories = [
-            category
-            for category in generator["categories"]
-            if category["category"] in WEAPON_CATEGORIES or category["category"] == "Attach"
-        ]
-        if not relevant_categories:
+    for index, category in enumerate(generator["categories"]):
+        if category["category"] not in WEAPON_CATEGORIES and category["category"] != "Attach":
             continue
 
-        pool_data = {"weapon_pools": [], "attachment_pools": []}
-        for index, category in enumerate(generator["categories"]):
-            if category["category"] not in WEAPON_CATEGORIES and category["category"] != "Attach":
-                continue
+        entry = {
+            "category_index": index,
+            "category": category["category"],
+            "player_ranks": category["player_ranks"],
+            "reputation_threshold": category["reputation_threshold"],
+            "refresh_time": category["refresh_time"],
+            "items": category["items"],
+            "nested_generators": category["nested_generators"],
+        }
+        target = "attachment_pools" if category["category"] == "Attach" else "weapon_pools"
+        pool_data[target].append(entry)
 
-            entry = {
-                "category_index": index,
-                "category": category["category"],
-                "player_ranks": category["player_ranks"],
-                "reputation_threshold": category["reputation_threshold"],
-                "refresh_time": category["refresh_time"],
-                "items": category["items"],
-                "nested_generators": category["nested_generators"],
-            }
-            target = "attachment_pools" if category["category"] == "Attach" else "weapon_pools"
-            pool_data[target].append(entry)
-
-            lookup_entry = {
-                "generator_sid": sid,
-                "category_index": index,
-                "category": category["category"],
-                "player_ranks": category["player_ranks"],
-                "reputation_threshold": category["reputation_threshold"],
-            }
-            lookup = attachment_to_pools if category["category"] == "Attach" else weapon_to_pools
-            for item_sid in category["items"]:
-                lookup[item_sid].append(lookup_entry)
-
-        trader_pools[sid] = pool_data
+        lookup_entry = {
+            "generator_sid": TRADER_GENERATOR_SID,
+            "category_index": index,
+            "category": category["category"],
+            "player_ranks": category["player_ranks"],
+            "reputation_threshold": category["reputation_threshold"],
+        }
+        lookup = attachment_to_pools if category["category"] == "Attach" else weapon_to_pools
+        for item_sid in category["items"]:
+            lookup[item_sid].append(lookup_entry)
 
     return {
         "summary": {
-            "generator_count": len(generators),
-            "generator_count_with_weapons_or_attachments": len(trader_pools),
+            "generator_sid": TRADER_GENERATOR_SID,
+            "category_count": len(generator["categories"]),
+            "weapon_pool_count": len(pool_data["weapon_pools"]),
+            "attachment_pool_count": len(pool_data["attachment_pools"]),
             "weapon_sid_count": len(weapon_to_pools),
             "attachment_sid_count": len(attachment_to_pools),
         },
         "weapon_to_pools": dict(sorted(weapon_to_pools.items())),
         "attachment_to_pools": dict(sorted(attachment_to_pools.items())),
-        "trader_pools": dict(sorted(trader_pools.items())),
+        "trader_pools": {TRADER_GENERATOR_SID: pool_data},
     }
 
 
@@ -186,13 +211,15 @@ def print_summary(report: dict) -> None:
     print("Trader item generator audit")
     print("=" * 100)
     print(
-        f"Generators={summary['generator_count']} | "
-        f"weapon/attach generators={summary['generator_count_with_weapons_or_attachments']} | "
+        f"Generator={summary['generator_sid']} | "
+        f"categories={summary['category_count']} | "
+        f"weapon pools={summary['weapon_pool_count']} | "
+        f"attach pools={summary['attachment_pool_count']} | "
         f"weapons={summary['weapon_sid_count']} | "
         f"attachments={summary['attachment_sid_count']}"
     )
     print()
-    print("Weapon -> generator pools")
+    print("Weapon -> DynamicTraderItemGenerator pools")
     print("-" * 100)
     for weapon_sid, pools in report["weapon_to_pools"].items():
         pool_labels = []
@@ -200,8 +227,8 @@ def print_summary(report: dict) -> None:
             ranks = ",".join(pool["player_ranks"]) or "any-rank"
             reputation = pool["reputation_threshold"] or "any-rep"
             pool_labels.append(
-                f"{pool['generator_sid']}[{pool['category_index']}] "
-                f"{pool['category']} rank={ranks} rep={reputation}"
+                f"[{pool['category_index']}] {pool['category']} "
+                f"rank={ranks} rep={reputation}"
             )
         print(f"{weapon_sid:<40} | {'; '.join(pool_labels)}")
 
