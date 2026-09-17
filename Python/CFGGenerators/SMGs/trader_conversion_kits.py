@@ -9,7 +9,7 @@ PYTHON_ROOT = CONTENT_ROOT / "Python"
 VANILLA_DYNAMIC_ITEM_GENERATOR = PYTHON_ROOT / "VanillaReference/DynamicItemGenerator.cfg"
 OUTPUT_PATH = (
     CONTENT_ROOT
-    / "GameLite/GameData/ItemGeneratorPrototypes/DynamicItemGenerator_patch_BPRUE.cfg"
+    / "GameLite/GameData/ItemGeneratorPrototypes/DynamicItemGenerator/DynamicItemGenerator_patch_BPRUE.cfg"
 )
 
 T1_KITS = (
