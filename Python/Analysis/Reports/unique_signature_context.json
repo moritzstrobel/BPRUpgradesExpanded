@@ -6,7 +6,7 @@
     "dlc_unresolved": 0,
     "player_attribute_pairs_resolved": 0,
     "player_attribute_pairs_unresolved": 37,
-    "vanilla_cfg_files_scanned": 16
+    "vanilla_cfg_files_scanned": 18
   },
   "notes": [
     "gameplay_identity contains direct weapon/setup gameplay differences but omits the opaque PlayerWeaponAttributes SID itself for relative comparisons.",
@@ -20,6 +20,8 @@
     "DLCGameData\\Deluxe\\ItemPrototypes.cfg",
     "DLCGameData\\Deluxe\\WeaponData\\WeaponGeneralSetupPrototypes.cfg",
     "DLCGameData\\DLC1\\ItemPrototypes.cfg",
+    "DLCGameData\\DLC1\\WeaponData\\CharacterWeaponSettingsPrototypes.cfg",
+    "DLCGameData\\DLC1\\WeaponData\\WeaponAttributesPrototypes.cfg",
     "DLCGameData\\DLC1\\WeaponData\\WeaponGeneralSetupPrototypes.cfg",
     "DLCGameData\\PreOrder\\ItemPrototypes.cfg",
     "DLCGameData\\PreOrder\\WeaponData\\WeaponGeneralSetupPrototypes.cfg",
