@@ -40,7 +40,7 @@ def _clone_sid(source_sid: str, base_prefix: str, unique_prefix: str) -> str:
 
 
 def add_unique_modules(model: UpgradeBuildModel, configs: dict) -> int:
-    """Clone every BPRUE base-family module, then add approved Unique signatures."""
+    """Clone every BPRUE base-family module for every supported Unique."""
     unique_config = load_unique_config()
     source_by_setup = model.by_general_setup()
     added = 0
@@ -78,9 +78,6 @@ def add_unique_modules(model: UpgradeBuildModel, configs: dict) -> int:
             model.add(cloned)
             added += 1
 
-    # Signatures are intentionally appended only after all cloning is complete.
-    # This prevents a Unique-only module from ever becoming a clone source.
-    added += add_unique_signatures(model)
     return added
 
 
