@@ -35,6 +35,7 @@ CONTENT_ROOT = ROOT.parent
 VANILLA_ROOT = ROOT / "VanillaReference"
 VANILLA_WEAPONS = VANILLA_ROOT / "WeaponPrototypes.cfg"
 DLC_OUTPUT_ROOT = CONTENT_ROOT / "GameLite/DLCGameData"
+PACKAGING_ROOT = CONTENT_ROOT / "Packaging"
 UPGRADES_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/UpgradePrototypes/BPRUE_UpgradePrototypes.cfg"
 GENERAL_SETUP_PATH = CONTENT_ROOT / "GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg"
 WEAPON_PATH = CONTENT_ROOT / "GameLite/GameData/ItemPrototypes/WeaponPrototypes/WeaponPrototypes_patch_BPRUE.cfg"
@@ -238,7 +239,13 @@ def main():
         write(pack_root / "UpgradePrototypes/UpgradePrototypes_patch_BPRUE.cfg", dlc_upgrade_text)
         write(pack_root / "WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg", dlc_setup_text)
         write(pack_root / "ItemPrototypes/ItemPrototypes_patch_BPRUE.cfg", dlc_weapon_text)
-        write(pack_root / "NPCPrototypes/NPCPrototypes_patch_BPRUE.cfg", dlc_npc_text)
+        # DLC weapons are serviced by BaseGame technician NPCs. Keep this patch in
+        # the optional DLC PAK, but mount it into GameLite/GameData/NPCPrototypes.
+        dlc_technician_path = PACKAGING_ROOT / pack / "generated/GameLite/GameData/NPCPrototypes" / f"NPCPrototypes_patch_BPRUE_{pack}.cfg"
+        write(dlc_technician_path, dlc_npc_text)
+        obsolete_dlc_npc = pack_root / "NPCPrototypes/NPCPrototypes_patch_BPRUE.cfg"
+        if obsolete_dlc_npc.exists():
+            obsolete_dlc_npc.unlink(); print(f"Removed obsolete DLC-scoped NPC patch {obsolete_dlc_npc}")
         write(pack_root / "EffectPrototypes/EffectPrototypes_patch_BPRUE.cfg", render_dlc_signature_effects(pack))
     write(ar.EFFECT_OUTPUT_PATH, ar.render_effect_patch(configs["ar"])); write(smg.EFFECT_OUTPUT_PATH, smg.render_effects()); write(shotgun.EFFECT_OUTPUT, shotgun.render_effects()); write(pistol.EFFECT_OUTPUT, pistol.render_effects()); write(sniper.EFFECT_OUTPUT, sniper.render_effects()); write(MACHINE_GUN_EFFECT_PATH, machine_gun.render_effects()); write(SHARED_EFFECT_PATH, render_shared_effects()); write(UNIQUE_SIGNATURE_EFFECT_PATH, render_unique_signature_effects())
     print(f"Validated and rendered {len(model.upgrades)} base/Unique upgrades plus {sum(len(m.upgrades) for m in dlc_models.values())} DLC upgrades.")
