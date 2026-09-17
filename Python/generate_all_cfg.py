@@ -26,6 +26,7 @@ from CFGGenerators.MachineGuns import generate_machine_gun_upgrades as machine_g
 from CFGGenerators.Pistols import generate_pistol_upgrades as pistol
 from CFGGenerators.Shotguns import generate_shotgun_upgrades as shotgun
 from CFGGenerators.SMGs import generate_smg_upgrades as smg
+from CFGGenerators.SMGs.pistol_conversion_variants import render_pistol_conversion_variant_patches
 from CFGGenerators.SMGs.smg_conversion_attachments import CONVERSION_ATTACHMENTS, attachment_block
 from CFGGenerators.Snipers import generate_sniper_upgrades as sniper
 from CFGGenerators.Common.shared_effects import render_shared_effects
@@ -38,10 +39,10 @@ DLC_OUTPUT_ROOT = CONTENT_ROOT / "GameLite/DLCGameData"
 UPGRADES_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/UpgradePrototypes/UpgradePrototypes.cfg"
 GENERAL_SETUP_PATH = CONTENT_ROOT / "GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg"
 WEAPON_PATH = CONTENT_ROOT / "GameLite/GameData/ItemPrototypes/WeaponPrototypes/WeaponPrototypes_patch_BPRUE.cfg"
+PISTOL_VARIANT_GENERAL_SETUP_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/WeaponData/WeaponGeneralSetupPrototypes/BPRUE_PistolConversionGeneralSetups.cfg"
 NPC_PATH = CONTENT_ROOT / "GameLite/GameData/NPCPrototypes/NPCPrototypes_patch_BPRUE.cfg"
 VANILLA_COMPACTION_PATH = CONTENT_ROOT / "GameLite/GameData/UpgradePrototypes/UpgradePrototypes_patch_BPRUE.cfg"
 VANILLA_EFFECT_UI_PATH = CONTENT_ROOT / "GameLite/GameData/EffectPrototypes/EffectPrototypes_patch_BPRUE_UI.cfg"
-BPRUE_EFFECT_UI_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_EffectUIOverrides.cfg"
 MACHINE_GUN_EFFECT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_MachineGunEffectPrototypes.cfg"
 SHARED_EFFECT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_SharedEffectPrototypes.cfg"
 MIN_SECTION_DISTANCE = 80.0
@@ -64,11 +65,6 @@ VANILLA_TECHNICAL_EFFECTS_HIDDEN_FROM_UI = (
     "ChangeCaliber919Effect",
     "ChangeFireTypeEffectBurstAuto",
     "ChangeFireTypeEffectSemiAuto",
-)
-TECHNICAL_EFFECTS_HIDDEN_FROM_UI = (
-    "BPRUE_AddBurstFireModeEffect",
-    "BPRUE_SemiAutoOnlyEffect",
-    "BPRUE_ChangeCaliber762NATOEffect",
 )
 
 
@@ -116,13 +112,6 @@ def render_vanilla_effect_ui_patch() -> str:
     for sid, localization_sid in VANILLA_EFFECT_LOCALIZATION_OVERRIDES.items():
         lines += [f"{sid} : struct.begin {{bpatch}}", f"   LocalizationSID = {localization_sid}", "   ShowUpgradeEffectValue = true", "   ShowUpgradeEffect = true", "struct.end", ""]
     for sid in VANILLA_TECHNICAL_EFFECTS_HIDDEN_FROM_UI:
-        lines += [f"{sid} : struct.begin {{bpatch}}", "   ShowUpgradeEffectValue = false", "   ShowUpgradeEffect = false", "struct.end", ""]
-    return "\n".join(lines).rstrip() + "\n"
-
-
-def render_bprue_effect_ui_patch() -> str:
-    lines = ["// -----------------------------------------------------------------------------", "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND", "// Technical BPRUE effects are mechanics, not player-facing stat rows.", "// -----------------------------------------------------------------------------", ""]
-    for sid in TECHNICAL_EFFECTS_HIDDEN_FROM_UI:
         lines += [f"{sid} : struct.begin {{bpatch}}", "   ShowUpgradeEffectValue = false", "   ShowUpgradeEffect = false", "struct.end", ""]
     return "\n".join(lines).rstrip() + "\n"
 
@@ -228,14 +217,22 @@ def _remove_independent_dlc_output():
         if path.exists(): path.unlink(); print(f"Removed experimental DLC output {path}")
 
 
+def _remove_obsolete_bprue_effect_ui_patch():
+    path = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_EffectUIOverrides.cfg"
+    if path.exists():
+        path.unlink()
+        print(f"Removed obsolete mod-owned effect UI patch {path}")
+
+
 def main():
     print("Building unified weapon upgrade model")
     model, configs = build_model(apply_layout=False); dlc_models = build_dlc_outputs(model, configs); apply_layout_to_model(model); model.validate(); print(f"Built {model.summary()}")
     attachments = {sid: attachment_block(data) for sid, data in CONVERSION_ATTACHMENTS.items()}
     upgrade_text = render_consolidated_upgrade_prototypes(model); setup_text = render_final_general_setup_patch(model, attachments); npc_text = render_technician_patch(model); weapon_text = render_weapon_sections_patch(model)
+    variant_setup_text, _ = render_pistol_conversion_variant_patches(model)
     validate_rendered_outputs(model, upgrade_text, setup_text, npc_text)
-    write(UPGRADES_PATH, upgrade_text); write(GENERAL_SETUP_PATH, setup_text); write(WEAPON_PATH, weapon_text); write(NPC_PATH, npc_text); write(VANILLA_COMPACTION_PATH, render_vanilla_compaction_patch())
-    write(VANILLA_EFFECT_UI_PATH, render_vanilla_effect_ui_patch()); write(BPRUE_EFFECT_UI_PATH, render_bprue_effect_ui_patch()); _remove_independent_dlc_output()
+    write(UPGRADES_PATH, upgrade_text); write(GENERAL_SETUP_PATH, setup_text); write(WEAPON_PATH, weapon_text); write(PISTOL_VARIANT_GENERAL_SETUP_PATH, variant_setup_text); write(NPC_PATH, npc_text); write(VANILLA_COMPACTION_PATH, render_vanilla_compaction_patch())
+    write(VANILLA_EFFECT_UI_PATH, render_vanilla_effect_ui_patch()); _remove_obsolete_bprue_effect_ui_patch(); _remove_independent_dlc_output()
     for pack, dlc_model in sorted(dlc_models.items()):
         dlc_upgrade_text = render_consolidated_upgrade_prototypes(dlc_model); dlc_setup_text = render_dlc_general_setup_patch(dlc_model, pack); dlc_weapon_text = render_weapon_sections_patch(dlc_model, content_pack=pack); validate_rendered_outputs(dlc_model, dlc_upgrade_text, dlc_setup_text)
         pack_root = DLC_OUTPUT_ROOT / pack; write(pack_root / "UpgradePrototypes/UpgradePrototypes_patch_BPRUE.cfg", dlc_upgrade_text); write(pack_root / "WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg", dlc_setup_text); write(pack_root / "ItemPrototypes/ItemPrototypes_patch_BPRUE.cfg", dlc_weapon_text)

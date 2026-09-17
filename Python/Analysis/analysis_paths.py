@@ -10,6 +10,7 @@ UPGRADE_LAYOUT_ANALYSIS = REPORTS_DIR / "upgrade_layout_analysis.json"
 WEAPON_UPGRADE_SECTIONS = REPORTS_DIR / "weapon_upgrade_sections.json"
 WEAPON_COVERAGE = REPORTS_DIR / "weapon_coverage.json"
 TECHNICIAN_UPGRADE_MAP = REPORTS_DIR / "technician_upgrade_map.json"
+TRADER_ITEM_MAP = REPORTS_DIR / "trader_item_map.json"
 
 
 def ensure_reports_dir() -> Path:
