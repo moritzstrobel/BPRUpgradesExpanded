@@ -10,6 +10,7 @@ Set-StrictMode -Version Latest
 $ScriptDirectory = Split-Path -Parent $MyInvocation.MyCommand.Path
 $ContentRoot = (Resolve-Path (Join-Path $ScriptDirectory "..\..")).Path
 $DlcSourceRoot = Join-Path $ContentRoot "GameLite\DLCGameData\DLC1"
+$GeneratedSourceRoot = Join-Path $ScriptDirectory "generated"
 $StagingRoot = Join-Path $ScriptDirectory "staging"
 $PakListPath = Join-Path $StagingRoot "paklist.txt"
 
@@ -19,7 +20,8 @@ if (-not $OutputDirectory) {
 
 $PakName = "BPRUpgradesExpanded_DLC1.pak"
 $PakPath = Join-Path $OutputDirectory $PakName
-$MountRoot = "../../../Stalker2/Content/GameLite/DLCGameData/DLC1"
+$ContentMountRoot = "../../../Stalker2/Content"
+$MountRoot = "$ContentMountRoot/GameLite/DLCGameData/DLC1"
 
 function Find-UnrealPak {
     param([string]$ExplicitPath)
@@ -59,14 +61,20 @@ function To-PakPath {
 Write-Host "=== BPRUpgradesExpanded DLC1 PAK Build ==="
 Write-Host "Content root : $ContentRoot"
 Write-Host "DLC1 source  : $DlcSourceRoot"
+Write-Host "Generated    : $GeneratedSourceRoot"
 
 if (-not (Test-Path -LiteralPath $DlcSourceRoot -PathType Container)) {
     throw "DLC1 source directory does not exist: $DlcSourceRoot"
 }
 
-$sourceFiles = @(Get-ChildItem -LiteralPath $DlcSourceRoot -File -Recurse | Sort-Object FullName)
+$dlcSourceFiles = @(Get-ChildItem -LiteralPath $DlcSourceRoot -File -Recurse | Sort-Object FullName)
+$generatedSourceFiles = @()
+if (Test-Path -LiteralPath $GeneratedSourceRoot -PathType Container) {
+    $generatedSourceFiles = @(Get-ChildItem -LiteralPath $GeneratedSourceRoot -File -Recurse | Sort-Object FullName)
+}
+$sourceFiles = @($dlcSourceFiles) + @($generatedSourceFiles)
 if ($sourceFiles.Count -eq 0) {
-    throw "DLC1 source directory contains no files: $DlcSourceRoot"
+    throw "DLC1 package contains no source files."
 }
 
 $UnrealPak = Find-UnrealPak -ExplicitPath $UnrealPakPath
@@ -79,17 +87,32 @@ if (Test-Path -LiteralPath $StagingRoot) {
 New-Item -ItemType Directory -Path $StagingRoot -Force | Out-Null
 New-Item -ItemType Directory -Path $OutputDirectory -Force | Out-Null
 
-$pakEntries = foreach ($file in $sourceFiles) {
+$packageEntries = @()
+foreach ($file in $dlcSourceFiles) {
     $relativePath = $file.FullName.Substring($DlcSourceRoot.Length).TrimStart('\', '/')
-    $stagedPath = Join-Path $StagingRoot $relativePath
+    $packageEntries += [PSCustomObject]@{
+        File = $file
+        RelativePath = "GameLite/DLCGameData/DLC1/$(To-PakPath -Path $relativePath)"
+    }
+}
+foreach ($file in $generatedSourceFiles) {
+    $relativePath = $file.FullName.Substring($GeneratedSourceRoot.Length).TrimStart('\', '/')
+    $packageEntries += [PSCustomObject]@{
+        File = $file
+        RelativePath = To-PakPath -Path $relativePath
+    }
+}
+
+$pakEntries = foreach ($entry in $packageEntries) {
+    $stagedPath = Join-Path $StagingRoot $entry.RelativePath
     $stagedDirectory = Split-Path -Parent $stagedPath
     if ($stagedDirectory) {
         New-Item -ItemType Directory -Path $stagedDirectory -Force | Out-Null
     }
-    Copy-Item -LiteralPath $file.FullName -Destination $stagedPath -Force
+    Copy-Item -LiteralPath $entry.File.FullName -Destination $stagedPath -Force
 
     $source = To-PakPath -Path $stagedPath
-    $destination = "$MountRoot/$(To-PakPath -Path $relativePath)"
+    $destination = "$ContentMountRoot/$($entry.RelativePath)"
     '"{0}" "{1}"' -f $source, $destination
 }
 
@@ -121,9 +144,8 @@ if ($LASTEXITCODE -ne 0) {
 # repeating the ../../../Stalker2/Content mount prefix from the response file.
 # Validate the DLC-relative paths and file count; the response file itself is
 # responsible for the mount mapping used when the PAK is created.
-$expectedRelativePaths = foreach ($file in $sourceFiles) {
-    $relativePath = $file.FullName.Substring($DlcSourceRoot.Length).TrimStart('\', '/')
-    To-PakPath -Path $relativePath
+$expectedRelativePaths = foreach ($entry in $packageEntries) {
+    $entry.RelativePath
 }
 
 $missingPaths = @($expectedRelativePaths | Where-Object {
@@ -148,7 +170,7 @@ Write-Host "SUCCESS"
 Write-Host "PAK          : $($pakInfo.FullName)"
 Write-Host "Size         : $([math]::Round($pakInfo.Length / 1KB, 2)) KiB"
 Write-Host "Packed files : $($sourceFiles.Count)"
-Write-Host "Mount root   : $MountRoot"
+Write-Host "Mount root   : $ContentMountRoot"
 
 if (-not $KeepStaging) {
     Remove-Item -LiteralPath $StagingRoot -Recurse -Force
