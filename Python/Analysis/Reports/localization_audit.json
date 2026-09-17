@@ -1,5 +1,11 @@
 {
   "localization_sid_count": 307,
+  "required_languages": [
+    "English",
+    "Russian"
+  ],
+  "missing_language_entry_count": 0,
+  "missing_languages": [],
   "scopes": {
     "BaseGame": {
       "upgrade_count": 1253,
