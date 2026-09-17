@@ -24,6 +24,12 @@
     "GStreet": {"key":"street_sweeper","name":"Street Sweeper","cost":4500,"target_part":"Body","effects":["BPRUE_FireIntervalNeg20Effect","RecoilPos15Effect","BPRUE_ReloadingTimeNeg20Effect","BPRUE_DurabilityPerShotNeg20Effect"]},
     "Kaimanov": {"key":"balanced_action","name":"Balanced Action","cost":4200,"target_part":"Body","effects":["RecoilPos20Effect","ShotRecoveryPos20Effect","AimingTimePos15Effect","BPRUE_Shared_DamagePenalty10Effect"]},
     "Krivenko": {"key":"9mm_match_conversion","name":"9mm Match Conversion","cost":4500,"target_part":"Barrel","effects":["RecoilPos20Effect","DispersionPos20Effect","ProjectileSpeedPos15Effect","BPRUE_Shared_DamagePenalty10Effect"]},
-    "Star": {"key":"service_weapon_overhaul","name":"Service Weapon Overhaul","cost":4700,"target_part":"Barrel","effects":["BPRUE_Unique_DamagePos20Effect","BPRUE_ArmorPiercingPos15Effect","DurabilityPos15Effect","BPRUE_RecoilPenalty20Effect"]}
+    "Star": {"key":"service_weapon_overhaul","name":"Service Weapon Overhaul","cost":4700,"target_part":"Barrel","effects":["BPRUE_Unique_DamagePos20Effect","BPRUE_ArmorPiercingPos15Effect","DurabilityPos15Effect","BPRUE_RecoilPenalty20Effect"]},
+
+    "RatKiller": {"key":"close_quarters_conversion","name":"Close-Quarters Conversion","cost":4700,"target_part":"Body","effects":["RecoilPos20Effect","DispersionPos20Effect","AimingMovementPos20Effect","BPRUE_Shared_DamagePenalty10Effect"]},
+    "Shakh": {"key":"extended_assault_feed","name":"Extended Assault Feed","cost":5000,"target_part":"Body","effects":["BPRUE_FireIntervalNeg20Effect","BPRUE_ReloadingTimeNeg20Effect","RecoilPos15Effect","BPRUE_DurabilityPerShotNeg20Effect"]},
+    "Silence": {"key":"silent_entry_package","name":"Silent Entry Package","cost":4900,"target_part":"Stock","effects":["BPRUE_Unique_AimingTimePos20Effect","AimingMovementPos20Effect","WeightDown15Effect","BPRUE_Shared_DamagePenalty10Effect"]},
+    "Spitfire": {"key":"overclocked_action","name":"Overclocked Action","cost":5200,"target_part":"Body","effects":["BPRUE_Unique_FireIntervalNeg25Effect","RecoilPos15Effect","BPRUE_Unique_ReloadingTimeNeg15Effect","BPRUE_Unique_DurabilityPerShotNeg25Effect"]},
+    "Spitter": {"key":"recoil_compensation_system","name":"Recoil Compensation System","cost":5000,"target_part":"Stock","effects":["BPRUE_Unique_RecoilPos30Effect","ShotRecoveryPos20Effect","DispersionPos15Effect","BPRUE_Shared_WeightPenalty10Effect"]}
   }
 }
