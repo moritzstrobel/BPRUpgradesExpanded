@@ -14,6 +14,7 @@ LOCALIZATION_FILES = (
     os.path.join(SCRIPT_DIR, "Stock_Localization.json"),
     os.path.join(SCRIPT_DIR, "Effect_Localization.json"),
     os.path.join(SCRIPT_DIR, "Unique_Localization.json"),
+    os.path.join(SCRIPT_DIR, "Unique_Sniper_Localization.json"),
 )
 
 def log(message): unreal.log(f"[BlueprintLocalization] {message}")
