@@ -178,6 +178,18 @@ BPRUE_Unique_FireIntervalNeg15Effect : struct.begin {refurl=@BaseGame/EffectProt
    ShowUpgradeEffect = true
 struct.end
 
+BPRUE_Unique_FireIntervalNeg25Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Unique_FireIntervalNeg25Effect
+   Type = EEffectType::FireInterval
+   LocalizationSID = bprue_fire_rate
+   ValueMin = -25%
+   ValueMax = -25%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
 BPRUE_Unique_ReloadingTimeNeg15Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_Unique_ReloadingTimeNeg15Effect
    Type = EEffectType::ReloadingTime
@@ -196,6 +208,18 @@ BPRUE_Unique_DamagePos20Effect : struct.begin {refurl=@BaseGame/EffectPrototypes
    LocalizationSID = bprue_damage
    ValueMin = 20%
    ValueMax = 20%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
+BPRUE_Unique_RecoilPos30Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Unique_RecoilPos30Effect
+   Type = EEffectType::Recoil
+   LocalizationSID = bprue_recoil
+   ValueMin = -30%
+   ValueMax = -30%
    bIsPermanent = true
    Positive = EBeneficial::Positive
    ShowUpgradeEffectValue = true
