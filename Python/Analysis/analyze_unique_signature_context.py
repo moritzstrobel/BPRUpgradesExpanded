@@ -67,9 +67,11 @@ def resolve_refurl_path(current_path, raw_refurl, files):
     basename = Path(normalized).name
     matches = [path for path in files if path.name == basename]
     if len(matches) == 1: return matches[0]
-    if "GameData/" in normalized and "DLCGameData/" not in normalized:
-        base_matches = [path for path in matches if "DLCGameData/" not in path.as_posix()]
-        if len(base_matches) == 1: return base_matches[0]
+    base_matches = [path for path in matches if "DLCGameData/" not in path.as_posix()]
+    current_is_basegame = "DLCGameData/" not in current_path.as_posix()
+    explicit_basegame_ref = "GameData/" in normalized and "DLCGameData/" not in normalized
+    if (current_is_basegame or explicit_basegame_ref) and len(base_matches) == 1:
+        return base_matches[0]
     return None
 
 
@@ -205,7 +207,7 @@ def build_report():
     dlc_weapons, dlc_unresolved = build_dlc_context(index, files)
     standalone_count = sum(1 for e in dlc_weapons.values() if e.get("comparison_mode") == "standalone")
     dlc_resolved = sum(1 for e in dlc_weapons.values() if e.get("player_weapon_attributes", {}).get("resolved"))
-    return {"summary": {"uniques": len(uniques), "dlc_weapons": len(dlc_weapons), "dlc_standalone": standalone_count, "dlc_unresolved": len(dlc_unresolved), "basegame_player_attribute_pairs_resolved": base_resolved, "dlc_player_attribute_pairs_resolved": dlc_resolved, "vanilla_cfg_files_scanned": len(scanned)}, "notes": ["DLC inheritance follows refkey/refurl across checked-in VanillaReference CFG files.", "Duplicate SIDs are source-aware; DLC lookups constrain both content pack and prototype file domain.", "DLC PlayerWeaponAttributes compare BaseGame PlayerWeaponAttributesPrototypes.cfg against the content pack's WeaponAttributesPrototypes.cfg.", "DLC ItemPrototypes are discovered from GeneralWeaponSetup when weapon_sid is not explicitly registered.", "base_family controls BPRUE module inheritance; comparison_base independently controls signature analysis.", "Missing cross-file sources are reported in unresolved_inheritance instead of silently producing misleading None diffs."], "vanilla_reference_files_scanned": scanned, "uniques": uniques, "dlc_weapons": dlc_weapons, "dlc_unresolved": dlc_unresolved}
+    return {"summary": {"uniques": len(uniques), "dlc_weapons": len(dlc_weapons), "dlc_standalone": standalone_count, "dlc_unresolved": len(dlc_unresolved), "basegame_player_attribute_pairs_resolved": base_resolved, "dlc_player_attribute_pairs_resolved": dlc_resolved, "vanilla_cfg_files_scanned": len(scanned)}, "notes": ["DLC inheritance follows refkey/refurl across checked-in VanillaReference CFG files.", "Duplicate SIDs are source-aware; DLC lookups constrain both content pack and prototype file domain.", "DLC PlayerWeaponAttributes compare BaseGame PlayerWeaponAttributesPrototypes.cfg against the content pack's WeaponAttributesPrototypes.cfg.", "Flattened BaseGame VanillaReference files are used as fallback targets for BaseGame refurl inheritance when DLC files share the same basename.", "DLC ItemPrototypes are discovered from GeneralWeaponSetup when weapon_sid is not explicitly registered.", "base_family controls BPRUE module inheritance; comparison_base independently controls signature analysis.", "Missing cross-file sources are reported in unresolved_inheritance instead of silently producing misleading None diffs."], "vanilla_reference_files_scanned": scanned, "uniques": uniques, "dlc_weapons": dlc_weapons, "dlc_unresolved": dlc_unresolved}
 
 
 def format_change(change):
