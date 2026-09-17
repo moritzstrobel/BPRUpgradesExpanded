@@ -16,6 +16,7 @@ from generate_all_cfg import build_dlc_outputs, build_model
 
 LOCALIZATION_FILES = (
     LOCALIZATION_DIR / "Blueprint_Localization.json",
+    LOCALIZATION_DIR / "Conversion_Localization.json",
     LOCALIZATION_DIR / "Weapon_Module_Localization.json",
     LOCALIZATION_DIR / "Kora_Localization.json",
     LOCALIZATION_DIR / "MachineGun_Localization.json",
@@ -128,15 +129,12 @@ def main() -> None:
 
     report = {"localization_sid_count": len(localization_sids), "scopes": scopes, "effects": effects, "unique_missing_upgrade_sid_count": len(missing_by_sid), "missing_upgrade_sids": {sid: affected for sid, affected in sorted(missing_by_sid.items())}, "error_count": len(missing_by_sid) + effects["error_count"]}
     REPORT_DIR.mkdir(parents=True, exist_ok=True); report_path = REPORT_DIR / "localization_audit.json"; report_path.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-
-    print("Localization audit"); print(f"Indexed BPRUE localization SIDs: {len(localization_sids)}")
-    for scope, audit in scopes.items(): print(f"  {scope:<10} upgrades={audit['upgrade_count']} | TextSIDs={audit['text_sid_count']} | HintSIDs={audit['hint_sid_count']} | missing={audit['missing_count']}")
-    print(f"  Effects    referenced={effects['referenced_effect_count']} | visible={effects['visible_effect_count']} | vanilla-localized={effects['vanilla_localization_count']} | errors={effects['error_count']}")
-    print(f"Unique missing upgrade SIDs: {len(missing_by_sid)}"); print(f"Wrote {report_path}")
-
-    errors = [f"missing upgrade localization: {sid} ({', '.join(affected)})" for sid, affected in sorted(missing_by_sid.items())] + effects["errors"]
-    if errors: raise ValueError("Localization validation failed:\n  - " + "\n  - ".join(errors))
-    print("Localization validation successful for BaseGame, Uniques, DLC and every referenced visible effect.")
+    print(f"Localization SIDs: {len(localization_sids)}")
+    for scope, audit in scopes.items(): print(f"{scope}: upgrades={audit['upgrade_count']} text={audit['text_sid_count']} hints={audit['hint_sid_count']} missing={audit['missing_count']}")
+    print(f"Effects: referenced={effects['referenced_effect_count']} visible={effects['visible_effect_count']} vanilla-localized={effects['vanilla_localization_count']} errors={effects['error_count']}")
+    print(f"Total localization errors: {report['error_count']}")
+    print(f"Report: {report_path}")
+    if report["error_count"]: raise SystemExit(1)
 
 
 if __name__ == "__main__": main()
