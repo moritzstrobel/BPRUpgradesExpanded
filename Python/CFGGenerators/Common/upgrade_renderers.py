@@ -118,8 +118,8 @@ def render_dlc_general_setup_patch(model: UpgradeBuildModel, content_pack: str) 
     return _render_final_setup(model, dlc_general_setup_upgrades(content_pack), scope=f"DLCGameData/{content_pack}")
 
 
-def render_technician_patch(model: UpgradeBuildModel) -> str:
-    assignments = technician_upgrade_assignments(model)
+def render_technician_patch(model: UpgradeBuildModel, *, content_pack: str | None = None) -> str:
+    assignments = technician_upgrade_assignments(model, content_pack=content_pack)
     lines = [
         "// AUTO-GENERATED - BPRUE upgrades follow each technician's effective Vanilla weapon support.",
         "// Technician templates are intentionally not patched; only concrete Vanilla technician NPCs are emitted.",
