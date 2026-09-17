@@ -133,8 +133,9 @@ def _attachment_category_index(vanilla_text: str, generator_sid: str) -> int:
 
 
 def _item_block(item_sid: str, indent: str) -> list[str]:
+    """Render a named PossibleItems child, matching known working trader patches."""
     return [
-        f"{indent}[*] : struct.begin",
+        f"{indent}{item_sid} : struct.begin",
         f"{indent}   ItemPrototypeSID = {item_sid}",
         f"{indent}   Chance = 1",
         f"{indent}   MinCount = 1",
@@ -187,6 +188,7 @@ def render_trader_conversion_kit_patch() -> str:
         "// BPRUE pistol-slot conversion kit trader distribution.",
         "// Attachment category indices are resolved from Vanilla DynamicItemGenerator.cfg",
         "// so bpatch targets an existing category instead of appending an ambiguous [*].",
+        "// PossibleItems are added as named children, matching working trader patch syntax.",
         "// Progression: kit availability starts with the base weapon's trader tier.",
         "// Vanilla has no Trader_Attachments_T1_ItemGenerator; early direct Attach",
         "// categories are patched explicitly and T1 kits carry forward into T2.",
