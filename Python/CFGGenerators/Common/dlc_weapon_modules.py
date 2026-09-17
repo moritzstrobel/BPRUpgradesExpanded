@@ -167,9 +167,9 @@ def render_dlc_signature_effects(pack: str) -> str:
         ("DamagePenalty10", "WeaponDamage", "bprue_damage", "-10%", "Negative"),
     )
     durability_specs = (
-        ("DurabilityPerShotPos15", "15%", "Positive"),
-        ("DurabilityPerShotPos25", "25%", "Positive"),
-        ("DurabilityPerShotPenalty10", "-10%", "Negative"),
+        ("DurabilityPerShotPos15", "-15%", "Positive"),
+        ("DurabilityPerShotPos25", "-25%", "Positive"),
+        ("DurabilityPerShotPenalty10", "10%", "Negative"),
     )
     lines = [
         "// -----------------------------------------------------------------------------",
