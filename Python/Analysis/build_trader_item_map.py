@@ -19,9 +19,19 @@ GENERATOR_RE = re.compile(r"^\s*ItemGeneratorPrototypeSID\s*=\s*([^\s]+)\s*$")
 RANK_RE = re.compile(r"^\s*PlayerRank\s*=\s*(.+?)\s*$")
 REPUTATION_RE = re.compile(r"^\s*ReputationThreshold\s*=\s*(.+?)\s*$")
 REFRESH_RE = re.compile(r"^\s*RefreshTime\s*=\s*(.+?)\s*$")
+TRADER_GUN_TIER_RE = re.compile(r"^Trader_T(\d+)_Guns_ItemGenerator$")
+TRADER_ATTACHMENT_TIER_RE = re.compile(r"^Trader_Attachments_T(\d+)_ItemGenerator$")
 
 WEAPON_CATEGORIES = {"WeaponPrimary", "WeaponSecondary", "WeaponPistol"}
 TRADER_POOL_PREFIX = "Trader_"
+CONVERSION_WEAPONS = (
+    "GunViper_PP",
+    "GunAKU_PP",
+    "GunBucket_PP",
+    "GunIntegral_PP",
+    "GunZubr_PP",
+    "GunFora230_PP",
+)
 
 
 def _strip_comment(line: str) -> str:
@@ -167,6 +177,75 @@ def _walk_generator(
     return resolved
 
 
+def _tier_from_paths(details: list[dict], pattern: re.Pattern[str]) -> list[dict]:
+    """Return all tiered generators found in resolved paths, sorted by tier."""
+    found: dict[tuple[int, str], dict] = {}
+    for detail in details:
+        for generator_sid in detail["path"]:
+            match = pattern.match(generator_sid)
+            if match:
+                tier = int(match.group(1))
+                found[(tier, generator_sid)] = {
+                    "tier": tier,
+                    "generator_sid": generator_sid,
+                }
+    return [found[key] for key in sorted(found)]
+
+
+def _build_conversion_weapon_analysis(
+    weapon_to_traders: dict[str, list[dict]],
+    traders: dict[str, dict],
+) -> dict[str, dict]:
+    analysis: dict[str, dict] = {}
+
+    for weapon_sid in CONVERSION_WEAPONS:
+        trader_entries = weapon_to_traders.get(weapon_sid, [])
+        gun_pools: dict[tuple[int, str], dict] = {}
+        trader_details: list[dict] = []
+
+        for trader_entry in trader_entries:
+            trader_sid = trader_entry["trader_sid"]
+            source_details = trader_entry["sources"]
+            source_gun_pools = _tier_from_paths(source_details, TRADER_GUN_TIER_RE)
+            for pool in source_gun_pools:
+                gun_pools[(pool["tier"], pool["generator_sid"])] = pool
+
+            direct_attachment_pools = []
+            for pool_sid in traders[trader_sid]["direct_trader_pool_refs"]:
+                match = TRADER_ATTACHMENT_TIER_RE.match(pool_sid)
+                if match:
+                    direct_attachment_pools.append({
+                        "tier": int(match.group(1)),
+                        "generator_sid": pool_sid,
+                    })
+
+            trader_details.append({
+                "trader_sid": trader_sid,
+                "weapon_gun_pools": source_gun_pools,
+                "direct_attachment_pools": sorted(
+                    direct_attachment_pools,
+                    key=lambda pool: (pool["tier"], pool["generator_sid"]),
+                ),
+            })
+
+        sorted_gun_pools = [gun_pools[key] for key in sorted(gun_pools)]
+        earliest_tier = min((pool["tier"] for pool in sorted_gun_pools), default=None)
+        suggested_attachment_pool = (
+            f"Trader_Attachments_T{earliest_tier}_ItemGenerator"
+            if earliest_tier is not None
+            else None
+        )
+
+        analysis[weapon_sid] = {
+            "earliest_gun_tier": earliest_tier,
+            "gun_pools": sorted_gun_pools,
+            "suggested_attachment_pool": suggested_attachment_pool,
+            "traders": trader_details,
+        }
+
+    return analysis
+
+
 def build_report() -> dict:
     dynamic_generators = parse_generators(
         DYNAMIC_ITEM_GENERATOR.read_text(encoding="utf-8-sig"),
@@ -181,8 +260,7 @@ def build_report() -> dict:
     definitions = {generator["sid"]: generator for generator in prototype_generators}
     definitions.update({generator["sid"]: generator for generator in dynamic_generators})
 
-    # A concrete trader root is discovered structurally: it references at least one shared Trader_* pool.
-    # No assumptions are made about the root's own name (IkarTrader, AsylumTrader, etc.).
+    # Discover trader roots structurally. Their own names are deliberately irrelevant.
     trader_roots: list[dict] = []
     for generator in dynamic_generators:
         direct_refs = {
@@ -257,6 +335,11 @@ def build_report() -> dict:
                 "sources": details,
             })
 
+    conversion_weapon_analysis = _build_conversion_weapon_analysis(
+        weapon_to_traders,
+        traders,
+    )
+
     return {
         "summary": {
             "dynamic_generator_count": len(dynamic_generators),
@@ -270,6 +353,7 @@ def build_report() -> dict:
         "trader_roots": [root["sid"] for root in trader_roots],
         "weapon_to_traders": dict(sorted(weapon_to_traders.items())),
         "attachment_to_traders": dict(sorted(attachment_to_traders.items())),
+        "conversion_weapon_analysis": conversion_weapon_analysis,
         "traders": dict(sorted(traders.items())),
         "unresolved_generators": sorted(unresolved),
     }
@@ -301,21 +385,19 @@ def print_summary(report: dict) -> None:
         )
 
     print()
-    print("Conversion weapons -> traders")
+    print("Conversion kit tier analysis")
     print("-" * 100)
-    conversion_weapons = (
-        "GunViper_PP",
-        "GunAKU_PP",
-        "GunBucket_PP",
-        "GunIntegral_PP",
-        "GunZubr_PP",
-        "GunFora230_PP",
-        "GunFora230_PP_GS",
-    )
-    for weapon_sid in conversion_weapons:
-        traders = report["weapon_to_traders"].get(weapon_sid, [])
-        labels = [entry["trader_sid"] for entry in traders]
-        print(f"{weapon_sid:<30} | {', '.join(labels) if labels else '(not found)'}")
+    print(f"{'Weapon':<30} | {'Earliest gun pool':<34} | Suggested attachment pool")
+    print("-" * 100)
+    for weapon_sid in CONVERSION_WEAPONS:
+        entry = report["conversion_weapon_analysis"][weapon_sid]
+        earliest_pool = (
+            f"Trader_T{entry['earliest_gun_tier']}_Guns_ItemGenerator"
+            if entry["earliest_gun_tier"] is not None
+            else "(not found)"
+        )
+        suggested = entry["suggested_attachment_pool"] or "(not found)"
+        print(f"{weapon_sid:<30} | {earliest_pool:<34} | {suggested}")
 
     if report["unresolved_generators"]:
         print()
