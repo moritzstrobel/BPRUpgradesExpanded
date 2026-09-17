@@ -144,8 +144,16 @@ if ($LASTEXITCODE -ne 0) {
 # repeating the ../../../Stalker2/Content mount prefix from the response file.
 # Validate the DLC-relative paths and file count; the response file itself is
 # responsible for the mount mapping used when the PAK is created.
+# UnrealPak strips the common part of the destination path into the PAK mount
+# point. With mixed DLCGameData + GameData content, that common mount is
+# ../../../Stalker2/Content/GameLite/, so -List reports paths relative to GameLite.
 $expectedRelativePaths = foreach ($entry in $packageEntries) {
-    $entry.RelativePath
+    $relativePath = $entry.RelativePath
+    if ($relativePath.StartsWith("GameLite/")) {
+        $relativePath.Substring("GameLite/".Length)
+    } else {
+        $relativePath
+    }
 }
 
 $missingPaths = @($expectedRelativePaths | Where-Object {
