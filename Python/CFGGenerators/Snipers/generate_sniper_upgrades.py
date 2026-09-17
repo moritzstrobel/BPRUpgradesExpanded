@@ -18,12 +18,10 @@ BALLISTICS={'high_velocity':(4200,['ProjectileSpeedPos20Effect','DistanceDropOff
 ACTION={'rapid':(4500,['BPRUE_FireIntervalNeg20Effect','BPRUE_Sniper_RecoilPenalty15Effect','BPRUE_DurabilityPerShotNeg20Effect']),'precision':(4400,['BPRUE_Sniper_ShotRecoveryPos30Effect','DispersionPos10Effect','BPRUE_Sniper_FireIntervalPenalty10Effect']),'reinforced':(4300,['RecoilPos20Effect','DurabilityPos20Effect','BPRUE_Sniper_FireIntervalPenalty10Effect'])}
 MARKSMAN={'snap_shooter':(4100,['BPRUE_Sniper_AimingTimePos20Effect','AimingMovementPos10Effect','BPRUE_Sniper_RecoilPenalty10Effect']),'field_marksman':(4200,['AimingMovementPos15Effect','IdleSwayXPos15Effect','IdleSwayYPos15Effect','ShotRecoveryPos10Effect']),'benchrest':(4400,['BPRUE_Sniper_IdleSwayXPos30Effect','BPRUE_Sniper_IdleSwayYPos30Effect','RecoilPos15Effect','BPRUE_Sniper_AimingTimePenalty15Effect','BPRUE_Sniper_WeightPenalty10Effect'])}
 STOCK={'lightweight_stock':(3900,['AimingTimePos15Effect','AimingMovementPos10Effect','BPRUE_Sniper_RecoilPenalty10Effect']),'adjustable_stock':(4200,['IdleSwayXPos15Effect','IdleSwayYPos15Effect','AimingMovementPos10Effect','RecoilPos10Effect']),'precision_stock':(4500,['BPRUE_Sniper_IdleSwayXPos30Effect','BPRUE_Sniper_IdleSwayYPos30Effect','RecoilPos20Effect','ShotRecoveryPos20Effect','BPRUE_Sniper_AimingTimePenalty15Effect'])}
-SIGNATURES={'rapid_marksman':(6000,['BPRUE_Sniper_FireIntervalNeg25Effect','ShotRecoveryPos20Effect','AimingTimePos15Effect','BPRUE_Sniper_RecoilPenalty15Effect','BPRUE_DurabilityPerShotNeg20Effect']),'recon_marksman':(6200,['BPRUE_Sniper_AimingTimePos20Effect','AimingMovementPos20Effect','WeightPos15Effect','BPRUE_Sniper_DispersionPenalty15Effect']),'match_trigger':(6500,['DispersionPos20Effect','BPRUE_Sniper_ShotRecoveryPos30Effect','BPRUE_FireIntervalNeg10Effect','RecoilPos10Effect']),'anti_materiel':(8500,['DamagePos30Effect','ArmorPiercingPos30Effect','CoverPiercingPos30Effect','ProjectileSpeedPos25Effect','BPRUE_Sniper_FireIntervalPenalty25Effect','BPRUE_DurabilityPerShotNeg20Effect','BPRUE_Sniper_WeightPenalty10Effect']),'battle_rifle':(6800,['BPRUE_Sniper_FireIntervalNeg15Effect','RecoilPos15Effect','AimingMovementPos15Effect','ShotRecoveryPos20Effect','BPRUE_DurabilityPerShotNeg15Effect']),'mad_minute':(6200,['BPRUE_Sniper_FireIntervalNeg30Effect','BPRUE_Sniper_ShotRecoveryPos25Effect','AimingTimePos10Effect','BPRUE_Sniper_RecoilPenalty20Effect','BPRUE_DurabilityPerShotNeg20Effect'])}
 GROUPS=(("Ballistics",BALLISTICS,"Barrel","Top"),("Action",ACTION,"Barrel","Down"),("Marksman",MARKSMAN,"Body","Down"),("Stock",STOCK,"Stock","Top"))
 
 def load_config(): return json.loads(CONFIG_PATH.read_text(encoding='utf-8'))
 def module_sid(prefix,group,key): return f"{prefix}_Upgrade_BPRUE_Sniper_{group}_{key.title().replace('_','')}"
-def signature_sid(prefix,key): return f"{prefix}_Upgrade_BPRUE_Sniper_Signature_{key.title().replace('_','')}"
 
 def build_upgrades(config):
     upgrades=[]
@@ -34,8 +32,6 @@ def build_upgrades(config):
             for key,(cost,effects) in definitions.items():
                 current=module_sid(prefix,group,key)
                 upgrades.append(UpgradeDefinition(sid=current,general_setup_sid=setup,weapon_class='Sniper',group=group,target_part=target,text_sid=f'sid_bprue_sniper_{key}_name',hint_sid=f'sid_bprue_sniper_{key}_description',image=IMAGE,icon=ICON,cost=round(cost*scale),effects=tuple(effects),blocking_sids=tuple(x for x in group_sids if x!=current),vertical_position=vertical,template_sid=TEMPLATE_SID))
-        key=family['signature']; cost,effects=SIGNATURES[key]
-        upgrades.append(UpgradeDefinition(sid=signature_sid(prefix,key),general_setup_sid=setup,weapon_class='Sniper',group='Signature',target_part='Barrel',text_sid=f'sid_bprue_sniper_{key}_name',hint_sid=f'sid_bprue_sniper_{key}_description',image=IMAGE,icon=ICON,cost=round(cost*scale),effects=tuple(effects),vertical_position='Top',template_sid=TEMPLATE_SID))
     return upgrades
 
 EFFECT_LOCALIZATION={'Recoil':'bprue_recoil','AimingTime':'bprue_aiming_speed','Weight':'bprue_weight','FireInterval':'bprue_fire_rate','Dispersion':'bprue_accuracy','ShotRecovery':'bprue_recoil_recovery','IdleSwayX':'bprue_aiming_stability','IdleSwayY':'bprue_aiming_stability','DurabilityPerShot':'bprue_weapon_wear'}
