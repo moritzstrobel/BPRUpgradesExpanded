@@ -17,7 +17,7 @@ AR_SIGNATURES = {
     "AK74Strelok": ("StreloksRefinement", "Body", 5400, "streloks_refinement", ("WeightDown15Effect", "AimingTimePos15Effect", "BPRUE_ReloadingTimeNeg10Effect", "BPRUE_DurabilityPerShotNeg10Effect")),
     "ArevPrecise": ("PrecisionConversion", "Barrel", 6200, "precision_conversion", ("BPRUE_SemiAutoOnlyEffect", "DispersionPos25Effect", "RecoilPos20Effect", "ProjectileSpeedPos20Effect")),
     "G37V2": ("BurstOptimizer", "Body", 6000, "burst_optimizer", ("BPRUE_Unique_SemiBurstFireTypesEffect", "RecoilPos20Effect", "DispersionPos15Effect", "BPRUE_ReloadingTimeNeg10Effect")),
-    "Combatant": ("CombatHandlingPackage", "Body", 5600, "combat_handling_package", ("AimingMovementPos15Effect", "AimingTimePos20Effect", "RecoilPos15Effect", "BPRUE_DurabilityPerShotNeg10Effect")),
+    "Combatant": ("CombatHandlingPackage", "Body", 5600, "combat_handling_package", ("AimingMovementPos15Effect", "BPRUE_Unique_AimingTimePos20Effect", "RecoilPos15Effect", "BPRUE_DurabilityPerShotNeg10Effect")),
     "Decider": ("OverpressureSystem", "Barrel", 6400, "overpressure_system", ("DamagePos15Effect", "ArmorPiercingPos15Effect", "ProjectileSpeedPos10Effect", "BPRUE_RecoilPenalty20Effect", "BPRUE_DurabilityPerShotNeg15Effect")),
     "Drowned": ("FieldRiggedFeed", "Body", 5200, "field_rigged_feed", ("BPRUE_ReloadingTimeNeg20Effect", "BPRUE_Shared_WeightPenalty10Effect")),
     "Lummox": ("JuryRiggedAction", "Body", 5000, "jury_rigged_action", ("BPRUE_FireIntervalNeg20Effect", "RecoilPos15Effect", "BPRUE_ReloadingTimeNeg10Effect", "BPRUE_Unique_DurabilityPerShotPenalty25Effect")),
@@ -90,6 +90,18 @@ BPRUE_Unique_DurabilityPerShotPenalty25Effect : struct.begin {refurl=@BaseGame/E
    ValueMin = 25%
    ValueMax = 25%
    Positive = EBeneficial::Negative
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
+BPRUE_Unique_AimingTimePos20Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Unique_AimingTimePos20Effect
+   Type = EEffectType::AimingTime
+   LocalizationSID = bprue_aiming_speed
+   ValueMin = -20%
+   ValueMax = -20%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
    ShowUpgradeEffectValue = true
    ShowUpgradeEffect = true
 struct.end
