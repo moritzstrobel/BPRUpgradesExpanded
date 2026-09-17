@@ -18,6 +18,14 @@ CLASS_CONFIG_KEYS = {
     "Snipers": "sniper",
     "MachineGuns": "machine_gun",
 }
+WEAPON_CLASS_CODES = {
+    "AssaultRifles": "AR",
+    "SMGs": "SMG",
+    "Shotguns": "Shotgun",
+    "Pistols": "Pistol",
+    "Snipers": "Sniper",
+    "MachineGuns": "MachineGun",
+}
 
 
 def load_unique_config() -> dict:
@@ -93,16 +101,16 @@ def add_unique_signatures(model: UpgradeBuildModel) -> int:
 
     for unique_name, signature in signatures.items():
         unique = uniques[unique_name]
-        if unique["class"] != "AssaultRifles":
-            # First implementation batch is intentionally AR-only. Other classes
-            # can be added to the same registry as their designs are approved.
-            continue
+        class_name = unique["class"]
+        weapon_class = WEAPON_CLASS_CODES.get(class_name)
+        if not weapon_class:
+            raise ValueError(f"{unique_name}: unsupported Unique signature class {class_name}")
         token = re.sub(r"[^A-Za-z0-9]", "", unique_name)
         key_token = "".join(part.capitalize() for part in signature["key"].split("_"))
         model.add(UpgradeDefinition(
             sid=f"BPRUEUnique{token}_Upgrade_BPRUE_Signature_{key_token}",
             general_setup_sid=unique["general_setup_sid"],
-            weapon_class="AR",
+            weapon_class=weapon_class,
             group="Signature",
             target_part=signature["target_part"],
             text_sid=f"sid_bprue_unique_{signature['key']}_name",
@@ -146,6 +154,18 @@ BPRUE_Unique_AimingTimePos20Effect : struct.begin {refurl=@BaseGame/EffectProtot
    ShowUpgradeEffect = true
 struct.end
 
+BPRUE_Unique_AimingTimePos30Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Unique_AimingTimePos30Effect
+   Type = EEffectType::AimingTime
+   LocalizationSID = bprue_aiming_speed
+   ValueMin = -30%
+   ValueMax = -30%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
 BPRUE_Unique_FireIntervalNeg15Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_Unique_FireIntervalNeg15Effect
    Type = EEffectType::FireInterval
@@ -164,6 +184,18 @@ BPRUE_Unique_ReloadingTimeNeg15Effect : struct.begin {refurl=@BaseGame/EffectPro
    LocalizationSID = bprue_reload_speed
    ValueMin = -15%
    ValueMax = -15%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
+BPRUE_Unique_DamagePos20Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Unique_DamagePos20Effect
+   Type = EEffectType::WeaponDamage
+   LocalizationSID = bprue_damage
+   ValueMin = 20%
+   ValueMax = 20%
    bIsPermanent = true
    Positive = EBeneficial::Positive
    ShowUpgradeEffectValue = true
