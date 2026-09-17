@@ -285,6 +285,7 @@ BPRUE_AddBurstFireModeEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.c
    SID = BPRUE_AddBurstFireModeEffect
    Text = Change fire type
    Type = EEffectType::ChangeFireTypes
+   LocalizationSID = bprue_fire_modes_burst_auto
    bIsPermanent = true
    FireTypes : struct.begin
       [0] = EFireType::Queue
@@ -298,6 +299,7 @@ BPRUE_SemiAutoOnlyEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;r
    SID = BPRUE_SemiAutoOnlyEffect
    Text = Change fire type
    Type = EEffectType::ChangeFireTypes
+   LocalizationSID = bprue_fire_modes_semi_auto
    bIsPermanent = true
    FireTypes : struct.begin
       [0] = EFireType::SemiAutomatic
