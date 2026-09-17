@@ -283,17 +283,26 @@ struct.end
 
 BPRUE_AddBurstFireModeEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_AddBurstFireModeEffect
-   Type = EEffectType::AddFireMode
-   FireMode = EFireMode::Burst
+   Text = Change fire type
+   Type = EEffectType::ChangeFireTypes
+   bIsPermanent = true
+   FireTypes : struct.begin
+      [0] = EFireType::Queue
+      [1] = EFireType::Automatic
+   struct.end
    ShowUpgradeEffectValue = false
-   ShowUpgradeEffect = false
+   ShowUpgradeEffect = true
 struct.end
 
 BPRUE_SemiAutoOnlyEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_SemiAutoOnlyEffect
-   Type = EEffectType::RemoveFireMode
-   FireMode = EFireMode::Auto
+   Text = Change fire type
+   Type = EEffectType::ChangeFireTypes
+   bIsPermanent = true
+   FireTypes : struct.begin
+      [0] = EFireType::SemiAutomatic
+   struct.end
    ShowUpgradeEffectValue = false
-   ShowUpgradeEffect = false
+   ShowUpgradeEffect = true
 struct.end
 '''
