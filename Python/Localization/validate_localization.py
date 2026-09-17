@@ -24,6 +24,7 @@ LOCALIZATION_FILES = (
     LOCALIZATION_DIR / "Stock_Localization.json",
     LOCALIZATION_DIR / "Effect_Localization.json",
     LOCALIZATION_DIR / "Unique_Localization.json",
+    LOCALIZATION_DIR / "Unique_Sniper_Localization.json",
 )
 VANILLA_EFFECTS = PYTHON_ROOT / "VanillaReference" / "EffectPrototypes.cfg"
 VANILLA_UI_PATCH = REPO_ROOT / "GameLite/GameData/EffectPrototypes/EffectPrototypes_patch_BPRUE_UI.cfg"
