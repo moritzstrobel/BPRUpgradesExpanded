@@ -28,6 +28,7 @@ LOCALIZATION_FILES = (
     LOCALIZATION_DIR / "Unique_MachineGun_Localization.json",
     LOCALIZATION_DIR / "DLC1_Localization.json",
 )
+REQUIRED_LANGUAGES = ("English", "Russian")
 VANILLA_EFFECTS = PYTHON_ROOT / "VanillaReference" / "EffectPrototypes.cfg"
 VANILLA_UI_PATCH = REPO_ROOT / "GameLite/GameData/EffectPrototypes/EffectPrototypes_patch_BPRUE_UI.cfg"
 BPRUE_EFFECT_DIR = REPO_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes"
@@ -39,16 +40,25 @@ REFKEY_RE = re.compile(r"\brefkey=([^}\s]+)")
 PROTOTYPE_RE = re.compile(r"(?ms)^([A-Za-z0-9_]+)\s*:\s*struct\.begin([^\n]*)\n(.*?)^struct\.end")
 
 
-def load_localization_sids() -> set[str]:
-    result: set[str] = set(); duplicates: set[str] = set()
+def load_localization() -> tuple[set[str], list[dict]]:
+    result: set[str] = set(); duplicates: set[str] = set(); missing_languages: list[dict] = []
     for path in LOCALIZATION_FILES:
         data = json.loads(path.read_text(encoding="utf-8"))
         for entry in data.get("entries", []):
             sid = entry["sid"]
             if sid in result: duplicates.add(sid)
             result.add(sid)
+
+            languages = entry.get("languages", {})
+            missing = [language for language in REQUIRED_LANGUAGES if not str(languages.get(language, "")).strip()]
+            if missing:
+                missing_languages.append({
+                    "sid": sid,
+                    "file": path.name,
+                    "missing_languages": missing,
+                })
     if duplicates: raise ValueError("Duplicate localization SIDs: " + ", ".join(sorted(duplicates)))
-    return result
+    return result, missing_languages
 
 
 def effect_asset_sid(cfg_sid: str) -> str: return f"sid_effects_{cfg_sid}_name"
@@ -122,7 +132,7 @@ def audit_referenced_effects(models: dict[str, object], localization_sids: set[s
 
 
 def main() -> None:
-    localization_sids = load_localization_sids()
+    localization_sids, missing_languages = load_localization()
     base_model, configs = build_model(apply_layout=False); dlc_models = build_dlc_outputs(base_model, configs)
     models = {"BaseGame": base_model, **dlc_models}
     scopes = {scope: audit_upgrade_model(model, localization_sids) for scope, model in models.items()}
@@ -131,9 +141,22 @@ def main() -> None:
     for scope, audit in scopes.items():
         for sid in audit["missing_sids"]: missing_by_sid[sid].append(scope)
 
-    report = {"localization_sid_count": len(localization_sids), "scopes": scopes, "effects": effects, "unique_missing_upgrade_sid_count": len(missing_by_sid), "missing_upgrade_sids": {sid: affected for sid, affected in sorted(missing_by_sid.items())}, "error_count": len(missing_by_sid) + effects["error_count"]}
+    report = {
+        "localization_sid_count": len(localization_sids),
+        "required_languages": list(REQUIRED_LANGUAGES),
+        "missing_language_entry_count": len(missing_languages),
+        "missing_languages": missing_languages,
+        "scopes": scopes,
+        "effects": effects,
+        "unique_missing_upgrade_sid_count": len(missing_by_sid),
+        "missing_upgrade_sids": {sid: affected for sid, affected in sorted(missing_by_sid.items())},
+        "error_count": len(missing_languages) + len(missing_by_sid) + effects["error_count"],
+    }
     REPORT_DIR.mkdir(parents=True, exist_ok=True); report_path = REPORT_DIR / "localization_audit.json"; report_path.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Localization SIDs: {len(localization_sids)}")
+    print(f"Required languages: {', '.join(REQUIRED_LANGUAGES)} | entries missing a required language: {len(missing_languages)}")
+    for item in missing_languages:
+        print(f"  MISSING {', '.join(item['missing_languages'])}: {item['sid']} ({item['file']})")
     for scope, audit in scopes.items(): print(f"{scope}: upgrades={audit['upgrade_count']} text={audit['text_sid_count']} hints={audit['hint_sid_count']} missing={audit['missing_count']}")
     print(f"Effects: referenced={effects['referenced_effect_count']} visible={effects['visible_effect_count']} vanilla-localized={effects['vanilla_localization_count']} errors={effects['error_count']}")
     print(f"Total localization errors: {report['error_count']}")
