@@ -1,6 +1,6 @@
 {
   "weapons": {
-    "AK9": {"content_pack":"DLC1","general_setup_sid":"GunAK9_ST_GS","weapon_sid":"GunAK9_ST","class":"AssaultRifles","base_family":"AK74","discovery":"item_inheritance"},
+    "AK9": {"content_pack":"DLC1","general_setup_sid":"GunAK9_ST_GS","weapon_sid":"GunAK9_ST","class":"AssaultRifles","base_family":"AK74","comparison_base":null,"standalone":true,"discovery":"item_inheritance"},
     "ArevLight": {"content_pack":"DLC1","general_setup_sid":"GunArevLight_AR_GS","class":"AssaultRifles","base_family":"Arev"},
     "Clapper": {"content_pack":"DLC1","general_setup_sid":"GunClapper_SG_GS","class":"Shotguns","base_family":"M860"},
     "Defender": {"content_pack":"DLC1","general_setup_sid":"GunDefender_SG","class":"Shotguns","base_family":"D12"},

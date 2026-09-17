@@ -3,8 +3,10 @@
   "entries": [
     {"sid":"sid_effects_bprue_recoil_name","languages":{"English":"Recoil","Russian":"Отдача"}},
     {"sid":"sid_effects_bprue_aiming_speed_name","languages":{"English":"Aiming speed","Russian":"Скорость прицеливания"}},
+    {"sid":"sid_effects_bprue_aiming_movement_name","languages":{"English":"Aiming movement speed","Russian":"Скорость движения в прицеле"}},
     {"sid":"sid_effects_bprue_weight_name","languages":{"English":"Weapon weight","Russian":"Вес оружия"}},
     {"sid":"sid_effects_bprue_accuracy_name","languages":{"English":"Accuracy","Russian":"Точность"}},
+    {"sid":"sid_effects_bprue_dispersion_name","languages":{"English":"Dispersion","Russian":"Разброс"}},
     {"sid":"sid_effects_bprue_recoil_recovery_name","languages":{"English":"Recoil recovery","Russian":"Восстановление после отдачи"}},
     {"sid":"sid_effects_bprue_aiming_stability_name","languages":{"English":"Aiming stability","Russian":"Стабильность прицеливания"}},
     {"sid":"sid_effects_bprue_weapon_wear_name","languages":{"English":"Weapon wear","Russian":"Износ оружия"}},

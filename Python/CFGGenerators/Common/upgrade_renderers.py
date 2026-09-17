@@ -6,6 +6,7 @@ from vanilla_upgrade_layout import dlc_general_setup_upgrades, vanilla_general_s
 
 ICON_ROOT = "/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons"
 BPRUE_MODULE_IMAGE = "Texture2D'/BPRUpgradesExpanded/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/T_Module_Base.T_Module_Base'"
+BPRUE_UNIQUE_MODULE_IMAGE = "Texture2D'/BPRUpgradesExpanded/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/T_Module_Base_Unique.T_Module_Base_Unique'"
 
 
 def _vanilla_icon(name: str) -> str:
@@ -56,10 +57,14 @@ def semantic_upgrade_hint(upgrade: UpgradeDefinition) -> str:
     return upgrade.hint_sid
 
 
+def upgrade_module_image(upgrade: UpgradeDefinition) -> str:
+    return BPRUE_UNIQUE_MODULE_IMAGE if upgrade.group == "Signature" else BPRUE_MODULE_IMAGE
+
+
 def _render_upgrade(upgrade: UpgradeDefinition, fallback_template: str | None = None) -> list[str]:
     template = upgrade.template_sid or fallback_template
     if not template: raise ValueError(f"{upgrade.sid}: no template SID configured")
-    lines = [f"{upgrade.sid} : struct.begin {{refkey={template}}}", f"   SID = {upgrade.sid}", f"   Text = {upgrade.text_sid}", f"   Hint = {semantic_upgrade_hint(upgrade)}", f"   Image = {BPRUE_MODULE_IMAGE}", f"   Icon = {semantic_upgrade_icon(upgrade)}", f"   BaseCost = {upgrade.cost}"]
+    lines = [f"{upgrade.sid} : struct.begin {{refkey={template}}}", f"   SID = {upgrade.sid}", f"   Text = {upgrade.text_sid}", f"   Hint = {semantic_upgrade_hint(upgrade)}", f"   Image = {upgrade_module_image(upgrade)}", f"   Icon = {semantic_upgrade_icon(upgrade)}", f"   BaseCost = {upgrade.cost}"]
     if upgrade.horizontal_position is not None: lines.append(f"   HorizontalPosition = {upgrade.horizontal_position}")
     if upgrade.vertical_position is not None: lines.append(f"   VerticalPosition = EUpgradeVerticalPosition::{upgrade.vertical_position}")
     lines.append(f"   UpgradeTargetPart = EUpgradeTargetPartType::{upgrade.target_part}")

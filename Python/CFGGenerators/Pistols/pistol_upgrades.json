@@ -1,24 +1,16 @@
 {
   "schema_version": 3,
-  "description": "Pistol expansion: two shared three-way specialization groups plus one standalone base-family signature. Unique variants are mapped centrally in Common/unique_weapons.json.",
+  "description": "Pistol expansion: two shared three-way specialization groups. Unique variants are mapped centrally in Common/unique_weapons.json and receive signatures exclusively through the dedicated unique weapon system.",
   "families": {
-    "PTM": {"weapon_sid":"GunPM_HG","general_setup_sid":"GunPM_HG","prototype_prefix":"GunPM","cost_scale":0.75,"signature":"quick_response"},
-    "UDP": {"weapon_sid":"GunUDP_HG","general_setup_sid":"GunUDP_HG","prototype_prefix":"GunUDP","cost_scale":1.0,"signature":"match_barrel"},
-    "APSB": {"weapon_sid":"GunAPB_HG","general_setup_sid":"GunAPB_HG","prototype_prefix":"GunAPB","cost_scale":1.15,"signature":"automatic_sear"},
-    "Rhino": {"weapon_sid":"GunRhino_HG","general_setup_sid":"GunRhino_HG","prototype_prefix":"GunRhino","cost_scale":1.4,"signature":"hunting_cylinder"},
-    "M10": {"weapon_sid":"GunM10_HG","general_setup_sid":"GunM10_HG","prototype_prefix":"GunM10","cost_scale":1.0,"signature":"selectable_fire_control"},
-    "Kora": {"weapon_sid":"GunKora_HG","general_setup_sid":"GunKora_HG","prototype_prefix":"GunKora","cost_scale":1.1,"signature":"heavy_slide"}
+    "PTM": {"weapon_sid":"GunPM_HG","general_setup_sid":"GunPM_HG","prototype_prefix":"GunPM","cost_scale":0.75},
+    "UDP": {"weapon_sid":"GunUDP_HG","general_setup_sid":"GunUDP_HG","prototype_prefix":"GunUDP","cost_scale":1.0},
+    "APSB": {"weapon_sid":"GunAPB_HG","general_setup_sid":"GunAPB_HG","prototype_prefix":"GunAPB","cost_scale":1.15},
+    "Rhino": {"weapon_sid":"GunRhino_HG","general_setup_sid":"GunRhino_HG","prototype_prefix":"GunRhino","cost_scale":1.4},
+    "M10": {"weapon_sid":"GunM10_HG","general_setup_sid":"GunM10_HG","prototype_prefix":"GunM10","cost_scale":1.0},
+    "Kora": {"weapon_sid":"GunKora_HG","general_setup_sid":"GunKora_HG","prototype_prefix":"GunKora","cost_scale":1.1}
   },
   "module_groups": {
     "action": ["high_speed", "balanced", "controlled"],
     "handling": ["quick_draw", "tactical", "stabilized"]
-  },
-  "signature_modules": {
-    "quick_response": {"name":"Quick-Response Package","concept":"PTM emergency-sidearm package: faster aiming, reload and lower weight in exchange for recoil and wear."},
-    "match_barrel": {"name":"Match Barrel Assembly","concept":"UDP precision package: tighter dispersion, longer effective falloff and higher projectile speed in exchange for slower handling."},
-    "automatic_sear": {"name":"Automatic Sear","concept":"APB/APSB fire-control conversion: retains its native three-round burst and adds automatic fire via ChangeFireTypeEffectBurstAuto."},
-    "hunting_cylinder": {"name":"Hunting Cylinder","concept":"Rhino heavy-hunter package: improved armor penetration and projectile velocity in exchange for a slower firing cycle."},
-    "selectable_fire_control": {"name":"Selectable Fire Control","concept":"M10 fire-control package: retains native automatic fire and adds semi-automatic fire via ChangeFireTypeEffectSemiAuto."},
-    "heavy_slide": {"name":"Heavy Slide Assembly","concept":"Kora heavy-slide package: improved recoil control, recovery and durability in exchange for slower aiming."}
   }
 }

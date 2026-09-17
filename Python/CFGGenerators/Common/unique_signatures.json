@@ -16,6 +16,33 @@
     "Sharpshooter": {"key":"match_fire_control","name":"Match Fire-Control Group","cost":6500,"target_part":"Body","effects":["BPRUE_Unique_SemiBurstOnlyEffect","DispersionPos25Effect","RecoilPos20Effect","ProjectileSpeedPos10Effect"]},
     "Sotnyk": {"key":"master_gunsmith_tuning","name":"Master Gunsmith Tuning","cost":7200,"target_part":"Body","effects":["RecoilPos15Effect","DispersionPos15Effect","BPRUE_ReloadingTimeNeg10Effect","AimingTimePos10Effect","BPRUE_DurabilityPerShotNeg15Effect"]},
     "Trophy": {"key":"zone_hardened_internals","name":"Zone-Hardened Internals","cost":5600,"target_part":"Body","effects":["BPRUE_Unique_DurabilityPos30Effect","DurabilityPerShotPos20Effect","BPRUE_Shared_WeightPenalty10Effect"]},
-    "Unknown": {"key":"experimental_gas_system","name":"Experimental Gas System","cost":6200,"target_part":"Body","effects":["BPRUE_Unique_FireIntervalNeg15Effect","RecoilPos20Effect","ProjectileSpeedPos10Effect","BPRUE_DurabilityPerShotNeg20Effect"]}
+    "Unknown": {"key":"experimental_gas_system","name":"Experimental Gas System","cost":6200,"target_part":"Body","effects":["BPRUE_Unique_FireIntervalNeg15Effect","RecoilPos20Effect","ProjectileSpeedPos10Effect","BPRUE_DurabilityPerShotNeg20Effect"]},
+
+    "NightStalker": {"key":"high_capacity_conversion","name":"High-Capacity Conversion","cost":4300,"target_part":"Body","effects":["BPRUE_ReloadingTimeNeg20Effect","RecoilPos15Effect","AimingMovementPos10Effect","BPRUE_Shared_DamagePenalty10Effect"]},
+    "Deadeye": {"key":"hair_trigger","name":"Hair Trigger","cost":4400,"target_part":"Body","effects":["BPRUE_Unique_AimingTimePos30Effect","DispersionPos20Effect","BPRUE_Unique_ReloadingTimeNeg15Effect","BPRUE_Pistol_RecoilPenalty15Effect"]},
+    "Encourage": {"key":"competition_fire_control","name":"Competition Fire Control","cost":4600,"target_part":"Body","effects":["DispersionPos20Effect","RecoilPos15Effect","BPRUE_Unique_FireIntervalNeg15Effect","BPRUE_DurabilityPerShotNeg15Effect"]},
+    "GStreet": {"key":"street_sweeper","name":"Street Sweeper","cost":4500,"target_part":"Body","effects":["BPRUE_FireIntervalNeg20Effect","RecoilPos15Effect","BPRUE_ReloadingTimeNeg20Effect","BPRUE_DurabilityPerShotNeg20Effect"]},
+    "Kaimanov": {"key":"balanced_action","name":"Balanced Action","cost":4200,"target_part":"Body","effects":["RecoilPos20Effect","ShotRecoveryPos20Effect","AimingTimePos15Effect","BPRUE_Shared_DamagePenalty10Effect"]},
+    "Krivenko": {"key":"9mm_match_conversion","name":"9mm Match Conversion","cost":4500,"target_part":"Barrel","effects":["RecoilPos20Effect","DispersionPos20Effect","ProjectileSpeedPos15Effect","BPRUE_Shared_DamagePenalty10Effect"]},
+    "Star": {"key":"service_weapon_overhaul","name":"Service Weapon Overhaul","cost":4700,"target_part":"Barrel","effects":["BPRUE_Unique_DamagePos20Effect","BPRUE_ArmorPiercingPos15Effect","DurabilityPos15Effect","BPRUE_RecoilPenalty20Effect"]},
+
+    "RatKiller": {"key":"close_quarters_conversion","name":"Close-Quarters Conversion","cost":4700,"target_part":"Body","effects":["RecoilPos20Effect","DispersionPos20Effect","AimingMovementPos20Effect","BPRUE_Shared_DamagePenalty10Effect"]},
+    "Shakh": {"key":"extended_assault_feed","name":"Extended Assault Feed","cost":5000,"target_part":"Body","effects":["BPRUE_FireIntervalNeg20Effect","BPRUE_ReloadingTimeNeg20Effect","RecoilPos15Effect","BPRUE_DurabilityPerShotNeg20Effect"]},
+    "Silence": {"key":"silent_entry_package","name":"Silent Entry Package","cost":4900,"target_part":"Stock","effects":["BPRUE_Unique_AimingTimePos20Effect","AimingMovementPos20Effect","WeightDown15Effect","BPRUE_Shared_DamagePenalty10Effect"]},
+    "Spitfire": {"key":"overclocked_action","name":"Overclocked Action","cost":5200,"target_part":"Body","effects":["BPRUE_Unique_FireIntervalNeg25Effect","RecoilPos15Effect","BPRUE_Unique_ReloadingTimeNeg15Effect","BPRUE_Unique_DurabilityPerShotNeg25Effect"]},
+    "Spitter": {"key":"recoil_compensation_system","name":"Recoil Compensation System","cost":5000,"target_part":"Stock","effects":["BPRUE_Unique_RecoilPos30Effect","ShotRecoveryPos20Effect","DispersionPos15Effect","BPRUE_Shared_WeightPenalty10Effect"]},
+
+    "Predator": {"key":"predator_choke_system","name":"Predator Choke System","cost":5600,"target_part":"Barrel","effects":["DispersionPos25Effect","BPRUE_Unique_EffectiveRangePos15Effect","ProjectileSpeedPos15Effect","BPRUE_Unique_RecoilPenalty15Effect"]},
+    "Sledgehammer": {"key":"gas_system_overdrive","name":"Gas-System Overdrive","cost":5800,"target_part":"Body","effects":["BPRUE_FireIntervalNeg20Effect","RecoilPos20Effect","BPRUE_Unique_ReloadingTimeNeg15Effect","BPRUE_Unique_DurabilityPerShotNeg25Effect"]},
+    "Texas": {"key":"heavy_magnum_reinforcement","name":"Heavy Magnum Reinforcement","cost":6500,"target_part":"Barrel","effects":["BPRUE_Unique_DamagePos20Effect","BPRUE_Unique_ArmorPiercingPos20Effect","RecoilPos20Effect","BPRUE_Unique_WeightPenalty20Effect"]},
+
+    "Gonta": {"key":"hunters_field_tuning","name":"Hunter's Field Tuning","cost":6200,"target_part":"Barrel","effects":["DispersionPos20Effect","BPRUE_Unique_EffectiveRangePos20Effect","ProjectileSpeedPos15Effect","BPRUE_DurabilityPerShotNeg15Effect"]},
+    "Cavalier": {"key":"mobile_marksman_package","name":"Mobile Marksman Package","cost":6400,"target_part":"Stock","effects":["BPRUE_Unique_AimingMovementPos25Effect","BPRUE_Unique_AimingTimePos25Effect","WeightDown15Effect","BPRUE_Unique_RecoilPenalty15Effect"]},
+    "Lynx": {"key":"match_grade_barrel","name":"Match-Grade Barrel","cost":6800,"target_part":"Barrel","effects":["BPRUE_Unique_DispersionPos30Effect","ProjectileSpeedPos20Effect","BPRUE_Unique_ArmorPiercingPos20Effect","BPRUE_Unique_RecoilPenalty15Effect"]},
+    "Partner": {"key":"expedition_reinforcement","name":"Expedition Reinforcement","cost":6600,"target_part":"Body","effects":["BPRUE_Unique_DurabilityPos30Effect","BPRUE_Unique_DurabilityPerShotPos25Effect","RecoilPos15Effect","BPRUE_Unique_WeightPenalty15Effect"]},
+    "Whip": {"key":"snap_shot_system","name":"Snap-Shot System","cost":6400,"target_part":"Stock","effects":["BPRUE_Unique_AimingTimePos30Effect","AimingMovementPos20Effect","ShotRecoveryPos20Effect","BPRUE_Unique_RecoilPenalty15Effect"]},
+
+    "PKPKorshunov": {"key":"commanders_assault_package","name":"Commander's Assault Package","cost":7000,"target_part":"Body","effects":["BPRUE_Unique_AimingTimePos20Effect","AimingMovementPos20Effect","BPRUE_Unique_ReloadingTimeNeg15Effect","BPRUE_FireIntervalNeg10Effect","BPRUE_DurabilityPerShotNeg15Effect"]},
+    "Tank": {"key":"heavy_duty_fire_system","name":"Heavy-Duty Fire System","cost":7200,"target_part":"Body","effects":["BPRUE_Unique_DurabilityPerShotPos25Effect","RecoilPos20Effect","ShotRecoveryPos20Effect","BPRUE_FireIntervalNeg10Effect","BPRUE_Unique_WeightPenalty20Effect"]}
   }
 }

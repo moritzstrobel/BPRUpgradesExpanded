@@ -1,0 +1,9 @@
+{
+  "_comment": "Localization for BPRUE Machine Gun Unique signature modules.",
+  "entries": [
+    {"sid":"sid_bprue_unique_commanders_assault_package_name","languages":{"English":"Commander's Assault Package","Russian":"Штурмовой комплект командира"}},
+    {"sid":"sid_bprue_unique_commanders_assault_package_description","languages":{"English":"Reworks Korshunov's PKP for aggressive mobile assaults with faster aiming, better movement while aiming, quicker reloads and a higher rate of fire, at the cost of increased weapon wear.","Russian":"Перерабатывает ПКП Коршунова для агрессивного мобильного штурма: ускоряет прицеливание, улучшает движение в прицеле, перезарядку и темп стрельбы ценой повышенного износа оружия."}},
+    {"sid":"sid_bprue_unique_heavy_duty_fire_system_name","languages":{"English":"Heavy-Duty Fire System","Russian":"Усиленная система непрерывного огня"}},
+    {"sid":"sid_bprue_unique_heavy_duty_fire_system_description","languages":{"English":"Reinforces Tank for sustained heavy fire with reduced weapon wear, lower recoil, quicker shot recovery and a higher rate of fire, at the cost of substantially increased weight.","Russian":"Усиливает Tank для продолжительного интенсивного огня: снижает износ и отдачу, ускоряет возврат после выстрела и повышает темп стрельбы ценой значительно увеличенной массы."}}
+  ]
+}

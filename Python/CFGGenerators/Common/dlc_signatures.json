@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "description": "BPRUE signature modules for DLC weapons. These are rendered only into the matching DLCGameData content pack.",
+  "signatures": {
+    "AK9": {"key":"subsonic_specialist","name":"Subsonic Specialist","cost":6200,"target_part":"Barrel","effects":["BPRUE_DLC1_ArmorPiercingPos20Effect","BPRUE_DLC1_RecoilPos15Effect","BPRUE_DLC1_EffectiveRangePenalty10Effect"]},
+    "ArevLight": {"key":"featherweight_assembly","name":"Featherweight Assembly","cost":6000,"target_part":"Stock","effects":["BPRUE_DLC1_WeightDown15Effect","BPRUE_DLC1_AimingTimePos20Effect","BPRUE_DLC1_RecoilPenalty10Effect"]},
+    "Clapper": {"key":"breaching_configuration","name":"Breaching Configuration","cost":5600,"target_part":"Barrel","effects":["BPRUE_DLC1_DispersionPos20Effect","BPRUE_DLC1_RecoilPos15Effect","BPRUE_DLC1_WeightPenalty10Effect"]},
+    "Defender": {"key":"indestructible","name":"Indestructible","cost":6800,"target_part":"Body","effects":["BPRUE_DLC1_DurabilityPos30Effect","BPRUE_DLC1_DurabilityPerShotPos25Effect","BPRUE_DLC1_WeightPenalty15Effect"]},
+    "DniproDuty": {"key":"duty_service_package","name":"Duty Service Package","cost":6200,"target_part":"Body","effects":["BPRUE_DLC1_RecoilPos15Effect","BPRUE_DLC1_DurabilityPerShotPos15Effect","BPRUE_DLC1_WeightPenalty5Effect"]},
+    "Fallschirmjager": {"key":"airborne_marksman","name":"Airborne Marksman","cost":6600,"target_part":"Stock","effects":["BPRUE_DLC1_DispersionPos25Effect","BPRUE_DLC1_AimingTimePos15Effect","BPRUE_DLC1_WeightDown10Effect","BPRUE_DLC1_RecoilPenalty10Effect"]},
+    "HSG72": {"key":"match_fire_control","name":"Match Fire-Control Group","cost":6800,"target_part":"Body","effects":["BPRUE_DLC1_DispersionPos20Effect","BPRUE_DLC1_RecoilPos20Effect","BPRUE_DLC1_ArmorPiercingPos15Effect"]},
+    "KharodFreedom": {"key":"freedom_overclock","name":"Freedom Overclock","cost":6600,"target_part":"Body","effects":["BPRUE_DLC1_FireIntervalNeg15Effect","BPRUE_DLC1_RecoilPenalty10Effect","BPRUE_DLC1_DurabilityPerShotPenalty10Effect"]},
+    "SPSASniper": {"key":"flechette_specialist","name":"Flechette Specialist","cost":6500,"target_part":"Barrel","effects":["BPRUE_DLC1_ArmorPiercingPos25Effect","BPRUE_DLC1_DispersionPos20Effect","BPRUE_DLC1_DamagePenalty10Effect"]},
+    "SVUCQB": {"key":"cqb_conversion","name":"CQB Conversion","cost":6800,"target_part":"Stock","effects":["BPRUE_DLC1_AimingTimePos25Effect","BPRUE_DLC1_RecoilPos20Effect","BPRUE_DLC1_EffectiveRangePenalty15Effect"]},
+    "Tundra": {"key":"lightweight_marksman_kit","name":"Lightweight Marksman Kit","cost":6400,"target_part":"Stock","effects":["BPRUE_DLC1_WeightDown15Effect","BPRUE_DLC1_AimingTimePos15Effect","BPRUE_DLC1_RecoilPenalty10Effect"]},
+    "Warszawa": {"key":"warsaw_pact_tuning","name":"Warsaw Pact Tuning","cost":6400,"target_part":"Body","effects":["BPRUE_DLC1_RecoilPos15Effect","BPRUE_DLC1_FireIntervalNeg10Effect","BPRUE_DLC1_WeightPenalty5Effect"]}
+  }
+}
