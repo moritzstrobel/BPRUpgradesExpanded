@@ -1,0 +1,3801 @@
+{
+  "summary": {
+    "uniques": 37,
+    "player_attribute_pairs_resolved": 0,
+    "player_attribute_pairs_unresolved": 37,
+    "vanilla_cfg_files_scanned": 16
+  },
+  "notes": [
+    "gameplay_identity contains direct weapon/setup gameplay differences but omits the opaque PlayerWeaponAttributes SID itself.",
+    "equipment_identity keeps attachment/preinstalled-upgrade differences separately because they can be the primary Vanilla identity of a Unique.",
+    "player_weapon_attributes is resolved only when both referenced prototype definitions exist in the checked-in VanillaReference CFGs; missing source data is reported, never guessed."
+  ],
+  "vanilla_reference_files_scanned": [
+    "AmmoPrototypes.cfg",
+    "DLCGameData\\Deluxe\\ItemPrototypes.cfg",
+    "DLCGameData\\Deluxe\\WeaponData\\WeaponGeneralSetupPrototypes.cfg",
+    "DLCGameData\\DLC1\\ItemPrototypes.cfg",
+    "DLCGameData\\DLC1\\WeaponData\\WeaponGeneralSetupPrototypes.cfg",
+    "DLCGameData\\PreOrder\\ItemPrototypes.cfg",
+    "DLCGameData\\PreOrder\\WeaponData\\WeaponGeneralSetupPrototypes.cfg",
+    "DLCGameData\\Ultimate\\ItemPrototypes.cfg",
+    "DLCGameData\\Ultimate\\WeaponData\\WeaponGeneralSetupPrototypes.cfg",
+    "DynamicItemGenerator.cfg",
+    "EffectPrototypes.cfg",
+    "ItemGeneratorPrototypes.cfg",
+    "NPCPrototypes.cfg",
+    "UpgradePrototypes.cfg",
+    "WeaponGeneralSetupPrototypes.cfg",
+    "WeaponPrototypes.cfg"
+  ],
+  "uniques": {
+    "AK74Phantom": {
+      "class": "AssaultRifles",
+      "base_family": "AK74",
+      "unique_weapon_sid": "GunAK74_Phantom_ST",
+      "base_weapon_sid": "GunAK74_ST",
+      "gameplay_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "equipment_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "player_weapon_attributes": {
+        "base_sid": null,
+        "unique_sid": null,
+        "resolved": false,
+        "reason": "missing_reference_sid"
+      }
+    },
+    "AK74Strelok": {
+      "class": "AssaultRifles",
+      "base_family": "AK74",
+      "unique_weapon_sid": "GunAK74_Strelok_ST",
+      "base_weapon_sid": "GunAK74_ST",
+      "gameplay_identity": {
+        "fields": [
+          "Weight"
+        ],
+        "groups": [
+          {
+            "field": "Weight",
+            "changes": [
+              {
+                "path": "Weight",
+                "base": "3.3",
+                "unique": "3.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -0.2999999999999998,
+                  "percent": -9.090909090909086
+                }
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "Weight",
+            "base": "3.3",
+            "unique": "3.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -0.2999999999999998,
+              "percent": -9.090909090909086
+            }
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "player_weapon_attributes": {
+        "base_sid": null,
+        "unique_sid": null,
+        "resolved": false,
+        "reason": "missing_reference_sid"
+      }
+    },
+    "ArevPrecise": {
+      "class": "AssaultRifles",
+      "base_family": "Arev",
+      "unique_weapon_sid": "GunArevPrecise_AR",
+      "base_weapon_sid": "GunArev_ST",
+      "gameplay_identity": {
+        "fields": [
+          "CrosshairType",
+          "DefaultFireType",
+          "DispersionParams",
+          "Weight"
+        ],
+        "groups": [
+          {
+            "field": "CrosshairType",
+            "changes": [
+              {
+                "path": "CrosshairType",
+                "base": "ECrosshairType::Cross",
+                "unique": "ECrosshairType::Point",
+                "change": "changed"
+              }
+            ]
+          },
+          {
+            "field": "DefaultFireType",
+            "changes": [
+              {
+                "path": "DefaultFireType",
+                "base": "EFireType::Automatic",
+                "unique": "EFireType::SemiAutomatic",
+                "change": "changed"
+              }
+            ]
+          },
+          {
+            "field": "DispersionParams",
+            "changes": [
+              {
+                "path": "DispersionParams.FirstShotDispersionRadius",
+                "base": "129.0",
+                "unique": "154.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 25.0,
+                  "percent": 19.379844961240313
+                }
+              }
+            ]
+          },
+          {
+            "field": "Weight",
+            "changes": [
+              {
+                "path": "Weight",
+                "base": "3.25",
+                "unique": "3.9",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 0.6499999999999999,
+                  "percent": 20.0
+                }
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "CrosshairType",
+            "base": "ECrosshairType::Cross",
+            "unique": "ECrosshairType::Point",
+            "change": "changed"
+          },
+          {
+            "path": "DefaultFireType",
+            "base": "EFireType::Automatic",
+            "unique": "EFireType::SemiAutomatic",
+            "change": "changed"
+          },
+          {
+            "path": "DispersionParams.FirstShotDispersionRadius",
+            "base": "129.0",
+            "unique": "154.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 25.0,
+              "percent": 19.379844961240313
+            }
+          },
+          {
+            "path": "Weight",
+            "base": "3.25",
+            "unique": "3.9",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 0.6499999999999999,
+              "percent": 20.0
+            }
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [
+          "PreinstalledUpgrades"
+        ],
+        "groups": [
+          {
+            "field": "PreinstalledUpgrades",
+            "changes": [
+              {
+                "path": "PreinstalledUpgrades.[0]",
+                "base": "empty {bskipref}",
+                "unique": "GunArev_Upgrade_Attachment_Offset_Stock",
+                "change": "changed"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "PreinstalledUpgrades.[0]",
+            "base": "empty {bskipref}",
+            "unique": "GunArev_Upgrade_Attachment_Offset_Stock",
+            "change": "changed"
+          }
+        ]
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunArev_ST_Player",
+        "unique_sid": "GunArevPrecise_AR_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "G37V2": {
+      "class": "AssaultRifles",
+      "base_family": "G37",
+      "unique_weapon_sid": "GunG37V2_ST",
+      "base_weapon_sid": "GunG37_ST",
+      "gameplay_identity": {
+        "fields": [
+          "DefaultFireType",
+          "RecoilParams",
+          "WeaponReloadTimePerAttachment",
+          "Weight"
+        ],
+        "groups": [
+          {
+            "field": "DefaultFireType",
+            "changes": [
+              {
+                "path": "DefaultFireType",
+                "base": "EFireType::Automatic",
+                "unique": "EFireType::Queue",
+                "change": "changed"
+              }
+            ]
+          },
+          {
+            "field": "RecoilParams",
+            "changes": [
+              {
+                "path": "RecoilParams.RecoilRadius",
+                "base": "180.0",
+                "unique": "140.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -40.0,
+                  "percent": -22.22222222222222
+                }
+              }
+            ]
+          },
+          {
+            "field": "WeaponReloadTimePerAttachment",
+            "changes": [
+              {
+                "path": "WeaponReloadTimePerAttachment.[3]",
+                "base": null,
+                "unique": {
+                  "AttachPrototypeSID": "GunG37V2_MagPaired",
+                  "TwinReloadTimeMultiplier": "1.0",
+                  "TwinTacticalReloadTimeMultiplier": "1.0",
+                  "TwinAuxReloadTimeMultiplier": "1.0",
+                  "TwinTacticalAuxReloadTimeMultiplier": "1.0"
+                },
+                "change": "added"
+              }
+            ]
+          },
+          {
+            "field": "Weight",
+            "changes": [
+              {
+                "path": "Weight",
+                "base": "3.6",
+                "unique": "3.8",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 0.19999999999999973,
+                  "percent": 5.555555555555548
+                }
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "DefaultFireType",
+            "base": "EFireType::Automatic",
+            "unique": "EFireType::Queue",
+            "change": "changed"
+          },
+          {
+            "path": "RecoilParams.RecoilRadius",
+            "base": "180.0",
+            "unique": "140.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -40.0,
+              "percent": -22.22222222222222
+            }
+          },
+          {
+            "path": "WeaponReloadTimePerAttachment.[3]",
+            "base": null,
+            "unique": {
+              "AttachPrototypeSID": "GunG37V2_MagPaired",
+              "TwinReloadTimeMultiplier": "1.0",
+              "TwinTacticalReloadTimeMultiplier": "1.0",
+              "TwinAuxReloadTimeMultiplier": "1.0",
+              "TwinTacticalAuxReloadTimeMultiplier": "1.0"
+            },
+            "change": "added"
+          },
+          {
+            "path": "Weight",
+            "base": "3.6",
+            "unique": "3.8",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 0.19999999999999973,
+              "percent": 5.555555555555548
+            }
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [
+          "PreinstalledUpgrades"
+        ],
+        "groups": [
+          {
+            "field": "PreinstalledUpgrades",
+            "changes": [
+              {
+                "path": "PreinstalledUpgrades.[0]",
+                "base": "empty {bskipref}",
+                "unique": "GunG37_Upgrade_Attachment_Grip",
+                "change": "changed"
+              },
+              {
+                "path": "PreinstalledUpgrades.[1]",
+                "base": null,
+                "unique": "GunG37_Upgrade_Attachment_Laser_HP",
+                "change": "added"
+              },
+              {
+                "path": "PreinstalledUpgrades.[2]",
+                "base": null,
+                "unique": "GunG37_Upgrade_Attachment_Offset_Stock",
+                "change": "added"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "PreinstalledUpgrades.[0]",
+            "base": "empty {bskipref}",
+            "unique": "GunG37_Upgrade_Attachment_Grip",
+            "change": "changed"
+          },
+          {
+            "path": "PreinstalledUpgrades.[1]",
+            "base": null,
+            "unique": "GunG37_Upgrade_Attachment_Laser_HP",
+            "change": "added"
+          },
+          {
+            "path": "PreinstalledUpgrades.[2]",
+            "base": null,
+            "unique": "GunG37_Upgrade_Attachment_Offset_Stock",
+            "change": "added"
+          }
+        ]
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunG37_ST_Player",
+        "unique_sid": "GunG37V2_ST_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "Gonta": {
+      "class": "Snipers",
+      "base_family": "ThreeLine",
+      "unique_weapon_sid": "GunGonta_SP",
+      "base_weapon_sid": "GunThreeLine_SP",
+      "gameplay_identity": {
+        "fields": [
+          "BaseDurability"
+        ],
+        "groups": [
+          {
+            "field": "BaseDurability",
+            "changes": [
+              {
+                "path": "BaseDurability",
+                "base": "2500.0",
+                "unique": "3000.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 500.0,
+                  "percent": 20.0
+                }
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "BaseDurability",
+            "base": "2500.0",
+            "unique": "3000.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 500.0,
+              "percent": 20.0
+            }
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [
+          "PreinstalledUpgrades"
+        ],
+        "groups": [
+          {
+            "field": "PreinstalledUpgrades",
+            "changes": [
+              {
+                "path": "PreinstalledUpgrades.[0]",
+                "base": "empty {bskipref}",
+                "unique": "GunThreeLine_Upgrade_Barrel_1",
+                "change": "changed"
+              },
+              {
+                "path": "PreinstalledUpgrades.[1]",
+                "base": null,
+                "unique": "GunThreeLine_Upgrade_Barrel_2_1",
+                "change": "added"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "PreinstalledUpgrades.[0]",
+            "base": "empty {bskipref}",
+            "unique": "GunThreeLine_Upgrade_Barrel_1",
+            "change": "changed"
+          },
+          {
+            "path": "PreinstalledUpgrades.[1]",
+            "base": null,
+            "unique": "GunThreeLine_Upgrade_Barrel_2_1",
+            "change": "added"
+          }
+        ]
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunThreeLine_SP_Player",
+        "unique_sid": "GunGonta_SP_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "NightStalker": {
+      "class": "Pistols",
+      "base_family": "Kora",
+      "unique_weapon_sid": "GunNightStalker_HG",
+      "base_weapon_sid": "GunKora_HG",
+      "gameplay_identity": {
+        "fields": [
+          "AmmoCaliber",
+          "AmmoTypeProjectiles",
+          "MaxAmmo"
+        ],
+        "groups": [
+          {
+            "field": "AmmoCaliber",
+            "changes": [
+              {
+                "path": "AmmoCaliber",
+                "base": "EAmmoCaliber::A045",
+                "unique": "EAmmoCaliber::A919",
+                "change": "changed"
+              }
+            ]
+          },
+          {
+            "field": "AmmoTypeProjectiles",
+            "changes": [
+              {
+                "path": "AmmoTypeProjectiles.[0].ProjectilePrototypeSID",
+                "base": "P045",
+                "unique": "P919",
+                "change": "changed"
+              },
+              {
+                "path": "AmmoTypeProjectiles.[1].ProjectilePrototypeSID",
+                "base": "P045",
+                "unique": "P919",
+                "change": "changed"
+              }
+            ]
+          },
+          {
+            "field": "MaxAmmo",
+            "changes": [
+              {
+                "path": "MaxAmmo",
+                "base": "7",
+                "unique": "12",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 5.0,
+                  "percent": 71.42857142857143
+                }
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "AmmoCaliber",
+            "base": "EAmmoCaliber::A045",
+            "unique": "EAmmoCaliber::A919",
+            "change": "changed"
+          },
+          {
+            "path": "AmmoTypeProjectiles.[0].ProjectilePrototypeSID",
+            "base": "P045",
+            "unique": "P919",
+            "change": "changed"
+          },
+          {
+            "path": "AmmoTypeProjectiles.[1].ProjectilePrototypeSID",
+            "base": "P045",
+            "unique": "P919",
+            "change": "changed"
+          },
+          {
+            "path": "MaxAmmo",
+            "base": "7",
+            "unique": "12",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 5.0,
+              "percent": 71.42857142857143
+            }
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [
+          "PreinstalledUpgrades"
+        ],
+        "groups": [
+          {
+            "field": "PreinstalledUpgrades",
+            "changes": [
+              {
+                "path": "PreinstalledUpgrades.[0]",
+                "base": "empty {bskipref}",
+                "unique": "GunKora_Upgrade_Attachment_Laser",
+                "change": "changed"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "PreinstalledUpgrades.[0]",
+            "base": "empty {bskipref}",
+            "unique": "GunKora_Upgrade_Attachment_Laser",
+            "change": "changed"
+          }
+        ]
+      },
+      "player_weapon_attributes": {
+        "base_sid": null,
+        "unique_sid": null,
+        "resolved": false,
+        "reason": "missing_reference_sid"
+      }
+    },
+    "PKPKorshunov": {
+      "class": "MachineGuns",
+      "base_family": "PKP",
+      "unique_weapon_sid": "GunPKP_Korshunov_MG",
+      "base_weapon_sid": "GunPKP_MG",
+      "gameplay_identity": {
+        "fields": [
+          "AmmoCaliber",
+          "AmmoTypeProjectiles",
+          "DispersionParams",
+          "MaxAmmo",
+          "RecoilParams"
+        ],
+        "groups": [
+          {
+            "field": "AmmoCaliber",
+            "changes": [
+              {
+                "path": "AmmoCaliber",
+                "base": "EAmmoCaliber::A762Sniper",
+                "unique": "EAmmoCaliber::A545",
+                "change": "changed"
+              }
+            ]
+          },
+          {
+            "field": "AmmoTypeProjectiles",
+            "changes": [
+              {
+                "path": "AmmoTypeProjectiles.[0].ProjectilePrototypeSID",
+                "base": "P762Sniper",
+                "unique": "P545",
+                "change": "changed"
+              },
+              {
+                "path": "AmmoTypeProjectiles.[1].ProjectilePrototypeSID",
+                "base": "P762Sniper",
+                "unique": "P545",
+                "change": "changed"
+              },
+              {
+                "path": "AmmoTypeProjectiles.[2].AmmoType",
+                "base": "EAmmoType::Supersonic",
+                "unique": "EAmmoType::Expanding",
+                "change": "changed"
+              },
+              {
+                "path": "AmmoTypeProjectiles.[2].ProjectilePrototypeSID",
+                "base": "P762Sniper",
+                "unique": "P545",
+                "change": "changed"
+              }
+            ]
+          },
+          {
+            "field": "DispersionParams",
+            "changes": [
+              {
+                "path": "DispersionParams.FirstShotDispersionRadius",
+                "base": "200.0",
+                "unique": "150.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -50.0,
+                  "percent": -25.0
+                }
+              }
+            ]
+          },
+          {
+            "field": "MaxAmmo",
+            "changes": [
+              {
+                "path": "MaxAmmo",
+                "base": "150",
+                "unique": "300",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 150.0,
+                  "percent": 100.0
+                }
+              }
+            ]
+          },
+          {
+            "field": "RecoilParams",
+            "changes": [
+              {
+                "path": "RecoilParams.RecoilRadius",
+                "base": "400.0",
+                "unique": "350.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -50.0,
+                  "percent": -12.5
+                }
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "AmmoCaliber",
+            "base": "EAmmoCaliber::A762Sniper",
+            "unique": "EAmmoCaliber::A545",
+            "change": "changed"
+          },
+          {
+            "path": "AmmoTypeProjectiles.[0].ProjectilePrototypeSID",
+            "base": "P762Sniper",
+            "unique": "P545",
+            "change": "changed"
+          },
+          {
+            "path": "AmmoTypeProjectiles.[1].ProjectilePrototypeSID",
+            "base": "P762Sniper",
+            "unique": "P545",
+            "change": "changed"
+          },
+          {
+            "path": "AmmoTypeProjectiles.[2].AmmoType",
+            "base": "EAmmoType::Supersonic",
+            "unique": "EAmmoType::Expanding",
+            "change": "changed"
+          },
+          {
+            "path": "AmmoTypeProjectiles.[2].ProjectilePrototypeSID",
+            "base": "P762Sniper",
+            "unique": "P545",
+            "change": "changed"
+          },
+          {
+            "path": "DispersionParams.FirstShotDispersionRadius",
+            "base": "200.0",
+            "unique": "150.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -50.0,
+              "percent": -25.0
+            }
+          },
+          {
+            "path": "MaxAmmo",
+            "base": "150",
+            "unique": "300",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 150.0,
+              "percent": 100.0
+            }
+          },
+          {
+            "path": "RecoilParams.RecoilRadius",
+            "base": "400.0",
+            "unique": "350.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -50.0,
+              "percent": -12.5
+            }
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [
+          "PreinstalledUpgrades"
+        ],
+        "groups": [
+          {
+            "field": "PreinstalledUpgrades",
+            "changes": [
+              {
+                "path": "PreinstalledUpgrades.[0]",
+                "base": "empty {bskipref}",
+                "unique": "GunPKP_Upgrade_Attachment_AutMuz",
+                "change": "changed"
+              },
+              {
+                "path": "PreinstalledUpgrades.[1]",
+                "base": null,
+                "unique": "GunPKP_Upgrade_Attachment_Grip",
+                "change": "added"
+              },
+              {
+                "path": "PreinstalledUpgrades.[2]",
+                "base": null,
+                "unique": "GunPKP_Upgrade_Attachment_Offset_Stock",
+                "change": "added"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "PreinstalledUpgrades.[0]",
+            "base": "empty {bskipref}",
+            "unique": "GunPKP_Upgrade_Attachment_AutMuz",
+            "change": "changed"
+          },
+          {
+            "path": "PreinstalledUpgrades.[1]",
+            "base": null,
+            "unique": "GunPKP_Upgrade_Attachment_Grip",
+            "change": "added"
+          },
+          {
+            "path": "PreinstalledUpgrades.[2]",
+            "base": null,
+            "unique": "GunPKP_Upgrade_Attachment_Offset_Stock",
+            "change": "added"
+          }
+        ]
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunPKP_MG_Player",
+        "unique_sid": "GunPKP_Korshunov_MG_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "Deadeye": {
+      "class": "Pistols",
+      "base_family": "UDP",
+      "unique_weapon_sid": "Gun_Deadeye_HG",
+      "base_weapon_sid": "GunUDP_HG",
+      "gameplay_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "equipment_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunUDP_HG_Player",
+        "unique_sid": "GunUDP_Deadeye_HG_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "Cavalier": {
+      "class": "Snipers",
+      "base_family": "M701",
+      "unique_weapon_sid": "Gun_Cavalier_SR",
+      "base_weapon_sid": "GunM701_SP",
+      "gameplay_identity": {
+        "fields": [
+          "AimingCurve",
+          "AimingMovementSpeedModifier"
+        ],
+        "groups": [
+          {
+            "field": "AimingCurve",
+            "changes": [
+              {
+                "path": "AimingCurve",
+                "base": "CurveFloat'/Game/_STALKER2/Animations/Player/Curves/Aiming/WeaponAiming_curve_M701.WeaponAiming_curve_M701'",
+                "unique": "CurveFloat'/Game/_STALKER2/Animations/Player/Curves/Aiming/WeaponAiming_curve_base.WeaponAiming_curve_base'",
+                "change": "changed"
+              }
+            ]
+          },
+          {
+            "field": "AimingMovementSpeedModifier",
+            "changes": [
+              {
+                "path": "AimingMovementSpeedModifier",
+                "base": "0.925",
+                "unique": "1.15",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 0.22499999999999987,
+                  "percent": 24.32432432432431
+                }
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "AimingCurve",
+            "base": "CurveFloat'/Game/_STALKER2/Animations/Player/Curves/Aiming/WeaponAiming_curve_M701.WeaponAiming_curve_M701'",
+            "unique": "CurveFloat'/Game/_STALKER2/Animations/Player/Curves/Aiming/WeaponAiming_curve_base.WeaponAiming_curve_base'",
+            "change": "changed"
+          },
+          {
+            "path": "AimingMovementSpeedModifier",
+            "base": "0.925",
+            "unique": "1.15",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 0.22499999999999987,
+              "percent": 24.32432432432431
+            }
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [
+          "PreinstalledUpgrades"
+        ],
+        "groups": [
+          {
+            "field": "PreinstalledUpgrades",
+            "changes": [
+              {
+                "path": "PreinstalledUpgrades.[0]",
+                "base": "empty {bskipref}",
+                "unique": "GunM701_Upgrade_Attachment_Offset_Stock",
+                "change": "changed"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "PreinstalledUpgrades.[0]",
+            "base": "empty {bskipref}",
+            "unique": "GunM701_Upgrade_Attachment_Offset_Stock",
+            "change": "changed"
+          }
+        ]
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunM701_SP_Player",
+        "unique_sid": "Gun_Cavalier_SR_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "Combatant": {
+      "class": "AssaultRifles",
+      "base_family": "AK74",
+      "unique_weapon_sid": "Gun_Combatant_AR",
+      "base_weapon_sid": "GunAK74_ST",
+      "gameplay_identity": {
+        "fields": [
+          "AimingMovementSpeedModifier",
+          "AimingTime",
+          "BaseDurability",
+          "LeanAimingRestoreTime",
+          "LeanAimingTime",
+          "OffsetAimingTime"
+        ],
+        "groups": [
+          {
+            "field": "AimingMovementSpeedModifier",
+            "changes": [
+              {
+                "path": "AimingMovementSpeedModifier",
+                "base": "0.85",
+                "unique": "1.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 0.15000000000000002,
+                  "percent": 17.647058823529417
+                }
+              }
+            ]
+          },
+          {
+            "field": "AimingTime",
+            "changes": [
+              {
+                "path": "AimingTime",
+                "base": "0.5",
+                "unique": "0.43",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -0.07,
+                  "percent": -14.000000000000002
+                }
+              }
+            ]
+          },
+          {
+            "field": "BaseDurability",
+            "changes": [
+              {
+                "path": "BaseDurability",
+                "base": "1950.0",
+                "unique": "2250.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 300.0,
+                  "percent": 15.384615384615385
+                }
+              }
+            ]
+          },
+          {
+            "field": "LeanAimingRestoreTime",
+            "changes": [
+              {
+                "path": "LeanAimingRestoreTime",
+                "base": "1.0",
+                "unique": "0.86",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -0.14,
+                  "percent": -14.000000000000002
+                }
+              }
+            ]
+          },
+          {
+            "field": "LeanAimingTime",
+            "changes": [
+              {
+                "path": "LeanAimingTime",
+                "base": "0.5",
+                "unique": "0.43",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -0.07,
+                  "percent": -14.000000000000002
+                }
+              }
+            ]
+          },
+          {
+            "field": "OffsetAimingTime",
+            "changes": [
+              {
+                "path": "OffsetAimingTime",
+                "base": "0.6",
+                "unique": "0.52",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -0.07999999999999996,
+                  "percent": -13.333333333333327
+                }
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "AimingMovementSpeedModifier",
+            "base": "0.85",
+            "unique": "1.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 0.15000000000000002,
+              "percent": 17.647058823529417
+            }
+          },
+          {
+            "path": "AimingTime",
+            "base": "0.5",
+            "unique": "0.43",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -0.07,
+              "percent": -14.000000000000002
+            }
+          },
+          {
+            "path": "LeanAimingRestoreTime",
+            "base": "1.0",
+            "unique": "0.86",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -0.14,
+              "percent": -14.000000000000002
+            }
+          },
+          {
+            "path": "LeanAimingTime",
+            "base": "0.5",
+            "unique": "0.43",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -0.07,
+              "percent": -14.000000000000002
+            }
+          },
+          {
+            "path": "OffsetAimingTime",
+            "base": "0.6",
+            "unique": "0.52",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -0.07999999999999996,
+              "percent": -13.333333333333327
+            }
+          },
+          {
+            "path": "BaseDurability",
+            "base": "1950.0",
+            "unique": "2250.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 300.0,
+              "percent": 15.384615384615385
+            }
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunAK74_ST_Player",
+        "unique_sid": "Gun_Combatant_AR_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "Decider": {
+      "class": "AssaultRifles",
+      "base_family": "Fora",
+      "unique_weapon_sid": "Gun_Decider_AR",
+      "base_weapon_sid": "GunFora_ST",
+      "gameplay_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "equipment_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunFora_ST_Player",
+        "unique_sid": "Gun_Decider_AR_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "Drowned": {
+      "class": "AssaultRifles",
+      "base_family": "AK74",
+      "unique_weapon_sid": "Gun_Drowned_AR",
+      "base_weapon_sid": "GunAK74_ST",
+      "gameplay_identity": {
+        "fields": [
+          "WeaponReloadTimePerAttachment"
+        ],
+        "groups": [
+          {
+            "field": "WeaponReloadTimePerAttachment",
+            "changes": [
+              {
+                "path": "WeaponReloadTimePerAttachment.[0].AttachPrototypeSID",
+                "base": "GunAK74_MagDefault",
+                "unique": "GunDrowned_MagPaired",
+                "change": "changed"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "WeaponReloadTimePerAttachment.[0].AttachPrototypeSID",
+            "base": "GunAK74_MagDefault",
+            "unique": "GunDrowned_MagPaired",
+            "change": "changed"
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "player_weapon_attributes": {
+        "base_sid": null,
+        "unique_sid": null,
+        "resolved": false,
+        "reason": "missing_reference_sid"
+      }
+    },
+    "Encourage": {
+      "class": "Pistols",
+      "base_family": "APSB",
+      "unique_weapon_sid": "Gun_Encourage_HG",
+      "base_weapon_sid": "GunAPB_HG",
+      "gameplay_identity": {
+        "fields": [
+          "BaseDurability",
+          "DispersionParams"
+        ],
+        "groups": [
+          {
+            "field": "BaseDurability",
+            "changes": [
+              {
+                "path": "BaseDurability",
+                "base": "3000.0",
+                "unique": "3300.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 300.0,
+                  "percent": 10.0
+                }
+              }
+            ]
+          },
+          {
+            "field": "DispersionParams",
+            "changes": [
+              {
+                "path": "DispersionParams.ShootingStateParams.RadiusExtensionModifiers.MaxRadiusExtensionModifier",
+                "base": "0.3",
+                "unique": "0.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -0.3,
+                  "percent": -100.0
+                }
+              },
+              {
+                "path": "DispersionParams.ShootingStateParams.RadiusExtensionModifiers.PerIterationRadiusExtensionModifier",
+                "base": "0.1",
+                "unique": "0.083",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -0.017,
+                  "percent": -17.0
+                }
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "DispersionParams.ShootingStateParams.RadiusExtensionModifiers.MaxRadiusExtensionModifier",
+            "base": "0.3",
+            "unique": "0.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -0.3,
+              "percent": -100.0
+            }
+          },
+          {
+            "path": "DispersionParams.ShootingStateParams.RadiusExtensionModifiers.PerIterationRadiusExtensionModifier",
+            "base": "0.1",
+            "unique": "0.083",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -0.017,
+              "percent": -17.0
+            }
+          },
+          {
+            "path": "BaseDurability",
+            "base": "3000.0",
+            "unique": "3300.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 300.0,
+              "percent": 10.0
+            }
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunAPB_HG_Player",
+        "unique_sid": "Gun_Encourage_HG_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "GStreet": {
+      "class": "Pistols",
+      "base_family": "M10",
+      "unique_weapon_sid": "Gun_GStreet_HG",
+      "base_weapon_sid": "GunM10_HG",
+      "gameplay_identity": {
+        "fields": [
+          "DispersionParams",
+          "MaxAmmo",
+          "WeaponReloadTimePerAttachment"
+        ],
+        "groups": [
+          {
+            "field": "DispersionParams",
+            "changes": [
+              {
+                "path": "DispersionParams.FirstShotDispersionRadius",
+                "base": "229.0",
+                "unique": "186.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -43.0,
+                  "percent": -18.777292576419214
+                }
+              }
+            ]
+          },
+          {
+            "field": "MaxAmmo",
+            "changes": [
+              {
+                "path": "MaxAmmo",
+                "base": "30",
+                "unique": "40",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 10.0,
+                  "percent": 33.33333333333333
+                }
+              }
+            ]
+          },
+          {
+            "field": "WeaponReloadTimePerAttachment",
+            "changes": [
+              {
+                "path": "WeaponReloadTimePerAttachment.[0].AttachPrototypeSID",
+                "base": "GunM10_MagDefault",
+                "unique": "Gun_GStreet_MagIncreased",
+                "change": "changed"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "DispersionParams.FirstShotDispersionRadius",
+            "base": "229.0",
+            "unique": "186.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -43.0,
+              "percent": -18.777292576419214
+            }
+          },
+          {
+            "path": "MaxAmmo",
+            "base": "30",
+            "unique": "40",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 10.0,
+              "percent": 33.33333333333333
+            }
+          },
+          {
+            "path": "WeaponReloadTimePerAttachment.[0].AttachPrototypeSID",
+            "base": "GunM10_MagDefault",
+            "unique": "Gun_GStreet_MagIncreased",
+            "change": "changed"
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunM10_HG_Player",
+        "unique_sid": "Gun_GStreet_HG_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "Kaimanov": {
+      "class": "Pistols",
+      "base_family": "PTM",
+      "unique_weapon_sid": "Gun_ProjectY_HG",
+      "base_weapon_sid": "GunPM_HG",
+      "gameplay_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "equipment_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunPM_HG_Player",
+        "unique_sid": "Gun_Kaimanov_HG_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "Krivenko": {
+      "class": "Pistols",
+      "base_family": "UDP",
+      "unique_weapon_sid": "Gun_Krivenko_HG",
+      "base_weapon_sid": "GunUDP_HG",
+      "gameplay_identity": {
+        "fields": [
+          "AmmoCaliber",
+          "AmmoTypeProjectiles",
+          "DispersionParams",
+          "RecoilParams"
+        ],
+        "groups": [
+          {
+            "field": "AmmoCaliber",
+            "changes": [
+              {
+                "path": "AmmoCaliber",
+                "base": "EAmmoCaliber::A045",
+                "unique": "EAmmoCaliber::A919",
+                "change": "changed"
+              }
+            ]
+          },
+          {
+            "field": "AmmoTypeProjectiles",
+            "changes": [
+              {
+                "path": "AmmoTypeProjectiles.[0].ProjectilePrototypeSID",
+                "base": "P045",
+                "unique": "P919",
+                "change": "changed"
+              },
+              {
+                "path": "AmmoTypeProjectiles.[1].ProjectilePrototypeSID",
+                "base": "P045",
+                "unique": "P919",
+                "change": "changed"
+              },
+              {
+                "path": "AmmoTypeProjectiles.[2]",
+                "base": {
+                  "AmmoType": "EAmmoType::Expanding",
+                  "ProjectilePrototypeSID": "P045"
+                },
+                "unique": null,
+                "change": "removed"
+              }
+            ]
+          },
+          {
+            "field": "DispersionParams",
+            "changes": [
+              {
+                "path": "DispersionParams.FirstShotDispersionRadius",
+                "base": "152.0",
+                "unique": "130.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -22.0,
+                  "percent": -14.473684210526317
+                }
+              }
+            ]
+          },
+          {
+            "field": "RecoilParams",
+            "changes": [
+              {
+                "path": "RecoilParams.RecoilRadius",
+                "base": "250.0",
+                "unique": "200.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -50.0,
+                  "percent": -20.0
+                }
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "AmmoCaliber",
+            "base": "EAmmoCaliber::A045",
+            "unique": "EAmmoCaliber::A919",
+            "change": "changed"
+          },
+          {
+            "path": "AmmoTypeProjectiles.[0].ProjectilePrototypeSID",
+            "base": "P045",
+            "unique": "P919",
+            "change": "changed"
+          },
+          {
+            "path": "AmmoTypeProjectiles.[1].ProjectilePrototypeSID",
+            "base": "P045",
+            "unique": "P919",
+            "change": "changed"
+          },
+          {
+            "path": "AmmoTypeProjectiles.[2]",
+            "base": {
+              "AmmoType": "EAmmoType::Expanding",
+              "ProjectilePrototypeSID": "P045"
+            },
+            "unique": null,
+            "change": "removed"
+          },
+          {
+            "path": "DispersionParams.FirstShotDispersionRadius",
+            "base": "152.0",
+            "unique": "130.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -22.0,
+              "percent": -14.473684210526317
+            }
+          },
+          {
+            "path": "RecoilParams.RecoilRadius",
+            "base": "250.0",
+            "unique": "200.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -50.0,
+              "percent": -20.0
+            }
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunUDP_HG_Player",
+        "unique_sid": "Gun_Krivenko_HG_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "Lummox": {
+      "class": "AssaultRifles",
+      "base_family": "AK74",
+      "unique_weapon_sid": "Gun_Lummox_AR",
+      "base_weapon_sid": "GunAK74_ST",
+      "gameplay_identity": {
+        "fields": [
+          "BaseDurability",
+          "MaxJamChance",
+          "MinJamChance",
+          "MinJamDurabilityThreshold"
+        ],
+        "groups": [
+          {
+            "field": "BaseDurability",
+            "changes": [
+              {
+                "path": "BaseDurability",
+                "base": "1950.0",
+                "unique": "1275.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -675.0,
+                  "percent": -34.61538461538461
+                }
+              }
+            ]
+          },
+          {
+            "field": "MaxJamChance",
+            "changes": [
+              {
+                "path": "MaxJamChance",
+                "base": "4.0",
+                "unique": "4.5",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 0.5,
+                  "percent": 12.5
+                }
+              }
+            ]
+          },
+          {
+            "field": "MinJamChance",
+            "changes": [
+              {
+                "path": "MinJamChance",
+                "base": "0.0",
+                "unique": "0.2",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 0.2
+                }
+              }
+            ]
+          },
+          {
+            "field": "MinJamDurabilityThreshold",
+            "changes": [
+              {
+                "path": "MinJamDurabilityThreshold",
+                "base": "0.7",
+                "unique": "0.8",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 0.10000000000000009,
+                  "percent": 14.285714285714299
+                }
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "MaxJamChance",
+            "base": "4.0",
+            "unique": "4.5",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 0.5,
+              "percent": 12.5
+            }
+          },
+          {
+            "path": "MinJamChance",
+            "base": "0.0",
+            "unique": "0.2",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 0.2
+            }
+          },
+          {
+            "path": "MinJamDurabilityThreshold",
+            "base": "0.7",
+            "unique": "0.8",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 0.10000000000000009,
+              "percent": 14.285714285714299
+            }
+          },
+          {
+            "path": "BaseDurability",
+            "base": "1950.0",
+            "unique": "1275.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -675.0,
+              "percent": -34.61538461538461
+            }
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunAK74_ST_Player",
+        "unique_sid": "Gun_Lummox_AR_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "Lynx": {
+      "class": "Snipers",
+      "base_family": "SVDM",
+      "unique_weapon_sid": "Gun_Lynx_SR",
+      "base_weapon_sid": "GunSVDM_SP",
+      "gameplay_identity": {
+        "fields": [
+          "DispersionParams"
+        ],
+        "groups": [
+          {
+            "field": "DispersionParams",
+            "changes": [
+              {
+                "path": "DispersionParams.FirstShotDispersionRadius",
+                "base": "500.0",
+                "unique": "375.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -125.0,
+                  "percent": -25.0
+                }
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "DispersionParams.FirstShotDispersionRadius",
+            "base": "500.0",
+            "unique": "375.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -125.0,
+              "percent": -25.0
+            }
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunSVDM_SP_Player",
+        "unique_sid": "Gun_Lynx_SR_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "Merc": {
+      "class": "AssaultRifles",
+      "base_family": "Gvintar",
+      "unique_weapon_sid": "Gun_Merc_AR",
+      "base_weapon_sid": "GunGvintar_ST",
+      "gameplay_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "equipment_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunGvintar_ST_Player",
+        "unique_sid": "Gun_Merc_AR_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "Partner": {
+      "class": "Snipers",
+      "base_family": "Mark",
+      "unique_weapon_sid": "Gun_Partner_SR",
+      "base_weapon_sid": "GunMark_SP",
+      "gameplay_identity": {
+        "fields": [
+          "BaseDurability"
+        ],
+        "groups": [
+          {
+            "field": "BaseDurability",
+            "changes": [
+              {
+                "path": "BaseDurability",
+                "base": "1500.0",
+                "unique": "1950.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 450.0,
+                  "percent": 30.0
+                }
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "BaseDurability",
+            "base": "1500.0",
+            "unique": "1950.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 450.0,
+              "percent": 30.0
+            }
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [
+          "PreinstalledUpgrades"
+        ],
+        "groups": [
+          {
+            "field": "PreinstalledUpgrades",
+            "changes": [
+              {
+                "path": "PreinstalledUpgrades.[0]",
+                "base": "empty {bskipref}",
+                "unique": "GunMark_Upgrade_Body_1_2",
+                "change": "changed"
+              },
+              {
+                "path": "PreinstalledUpgrades.[1]",
+                "base": null,
+                "unique": "GunMark_Upgrade_Attachment_Rail",
+                "change": "added"
+              },
+              {
+                "path": "PreinstalledUpgrades.[3]",
+                "base": null,
+                "unique": "GunMark_Upgrade_Attachment_Offset_Stock",
+                "change": "added"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "PreinstalledUpgrades.[0]",
+            "base": "empty {bskipref}",
+            "unique": "GunMark_Upgrade_Body_1_2",
+            "change": "changed"
+          },
+          {
+            "path": "PreinstalledUpgrades.[1]",
+            "base": null,
+            "unique": "GunMark_Upgrade_Attachment_Rail",
+            "change": "added"
+          },
+          {
+            "path": "PreinstalledUpgrades.[3]",
+            "base": null,
+            "unique": "GunMark_Upgrade_Attachment_Offset_Stock",
+            "change": "added"
+          }
+        ]
+      },
+      "player_weapon_attributes": {
+        "base_sid": null,
+        "unique_sid": null,
+        "resolved": false,
+        "reason": "missing_reference_sid"
+      }
+    },
+    "Predator": {
+      "class": "Shotguns",
+      "base_family": "M860",
+      "unique_weapon_sid": "Gun_Predator_SG",
+      "base_weapon_sid": "GunM860_SG",
+      "gameplay_identity": {
+        "fields": [
+          "DispersionParams",
+          "MaxAmmo"
+        ],
+        "groups": [
+          {
+            "field": "DispersionParams",
+            "changes": [
+              {
+                "path": "DispersionParams.FirstShotDispersionRadius",
+                "base": "614.0",
+                "unique": "560.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -54.0,
+                  "percent": -8.794788273615636
+                }
+              }
+            ]
+          },
+          {
+            "field": "MaxAmmo",
+            "changes": [
+              {
+                "path": "MaxAmmo",
+                "base": "6",
+                "unique": "8",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 2.0,
+                  "percent": 33.33333333333333
+                }
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "DispersionParams.FirstShotDispersionRadius",
+            "base": "614.0",
+            "unique": "560.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -54.0,
+              "percent": -8.794788273615636
+            }
+          },
+          {
+            "path": "MaxAmmo",
+            "base": "6",
+            "unique": "8",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 2.0,
+              "percent": 33.33333333333333
+            }
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunM860_SG_Player",
+        "unique_sid": "Gun_Predator_SG_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "RatKiller": {
+      "class": "SMGs",
+      "base_family": "Zubr",
+      "unique_weapon_sid": "Gun_RatKiller_SMG",
+      "base_weapon_sid": "GunZubr_PP",
+      "gameplay_identity": {
+        "fields": [
+          "AmmoCaliber",
+          "AmmoTypeProjectiles",
+          "DispersionParams",
+          "WeaponReloadTimePerAttachment"
+        ],
+        "groups": [
+          {
+            "field": "AmmoCaliber",
+            "changes": [
+              {
+                "path": "AmmoCaliber",
+                "base": "EAmmoCaliber::A919",
+                "unique": "EAmmoCaliber::A918",
+                "change": "changed"
+              }
+            ]
+          },
+          {
+            "field": "AmmoTypeProjectiles",
+            "changes": [
+              {
+                "path": "AmmoTypeProjectiles.[0].ProjectilePrototypeSID",
+                "base": "P919",
+                "unique": "P918",
+                "change": "changed"
+              },
+              {
+                "path": "AmmoTypeProjectiles.[1].ProjectilePrototypeSID",
+                "base": "P919",
+                "unique": "P918",
+                "change": "changed"
+              }
+            ]
+          },
+          {
+            "field": "DispersionParams",
+            "changes": [
+              {
+                "path": "DispersionParams.FirstShotDispersionRadius",
+                "base": "116.0",
+                "unique": "92.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -24.0,
+                  "percent": -20.689655172413794
+                }
+              }
+            ]
+          },
+          {
+            "field": "WeaponReloadTimePerAttachment",
+            "changes": [
+              {
+                "path": "WeaponReloadTimePerAttachment.[0].AttachPrototypeSID",
+                "base": "GunZubr_MagDefault",
+                "unique": "Gun_RatKiller_MagDefault",
+                "change": "changed"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "AmmoCaliber",
+            "base": "EAmmoCaliber::A919",
+            "unique": "EAmmoCaliber::A918",
+            "change": "changed"
+          },
+          {
+            "path": "AmmoTypeProjectiles.[0].ProjectilePrototypeSID",
+            "base": "P919",
+            "unique": "P918",
+            "change": "changed"
+          },
+          {
+            "path": "AmmoTypeProjectiles.[1].ProjectilePrototypeSID",
+            "base": "P919",
+            "unique": "P918",
+            "change": "changed"
+          },
+          {
+            "path": "DispersionParams.FirstShotDispersionRadius",
+            "base": "116.0",
+            "unique": "92.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -24.0,
+              "percent": -20.689655172413794
+            }
+          },
+          {
+            "path": "WeaponReloadTimePerAttachment.[0].AttachPrototypeSID",
+            "base": "GunZubr_MagDefault",
+            "unique": "Gun_RatKiller_MagDefault",
+            "change": "changed"
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [
+          "PreinstalledUpgrades"
+        ],
+        "groups": [
+          {
+            "field": "PreinstalledUpgrades",
+            "changes": [
+              {
+                "path": "PreinstalledUpgrades.[0]",
+                "base": "empty {bskipref}",
+                "unique": "GunZubr_Upgrade_Attachment_SinMuz",
+                "change": "changed"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "PreinstalledUpgrades.[0]",
+            "base": "empty {bskipref}",
+            "unique": "GunZubr_Upgrade_Attachment_SinMuz",
+            "change": "changed"
+          }
+        ]
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunZubr_PP_Player",
+        "unique_sid": "Gun_RatKiller_SMG_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "S15": {
+      "class": "AssaultRifles",
+      "base_family": "Grim",
+      "unique_weapon_sid": "Gun_S15_AR",
+      "base_weapon_sid": "GunGrim_ST",
+      "gameplay_identity": {
+        "fields": [
+          "AmmoCaliber",
+          "AmmoTypeProjectiles"
+        ],
+        "groups": [
+          {
+            "field": "AmmoCaliber",
+            "changes": [
+              {
+                "path": "AmmoCaliber",
+                "base": "EAmmoCaliber::A939",
+                "unique": "EAmmoCaliber::A545",
+                "change": "changed"
+              }
+            ]
+          },
+          {
+            "field": "AmmoTypeProjectiles",
+            "changes": [
+              {
+                "path": "AmmoTypeProjectiles.[0].ProjectilePrototypeSID",
+                "base": "P939",
+                "unique": "P545",
+                "change": "changed"
+              },
+              {
+                "path": "AmmoTypeProjectiles.[1].ProjectilePrototypeSID",
+                "base": "P939",
+                "unique": "P545",
+                "change": "changed"
+              },
+              {
+                "path": "AmmoTypeProjectiles.[2].AmmoType",
+                "base": "EAmmoType::Supersonic",
+                "unique": "EAmmoType::Expanding",
+                "change": "changed"
+              },
+              {
+                "path": "AmmoTypeProjectiles.[2].ProjectilePrototypeSID",
+                "base": "P939",
+                "unique": "P545",
+                "change": "changed"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "AmmoCaliber",
+            "base": "EAmmoCaliber::A939",
+            "unique": "EAmmoCaliber::A545",
+            "change": "changed"
+          },
+          {
+            "path": "AmmoTypeProjectiles.[0].ProjectilePrototypeSID",
+            "base": "P939",
+            "unique": "P545",
+            "change": "changed"
+          },
+          {
+            "path": "AmmoTypeProjectiles.[1].ProjectilePrototypeSID",
+            "base": "P939",
+            "unique": "P545",
+            "change": "changed"
+          },
+          {
+            "path": "AmmoTypeProjectiles.[2].AmmoType",
+            "base": "EAmmoType::Supersonic",
+            "unique": "EAmmoType::Expanding",
+            "change": "changed"
+          },
+          {
+            "path": "AmmoTypeProjectiles.[2].ProjectilePrototypeSID",
+            "base": "P939",
+            "unique": "P545",
+            "change": "changed"
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [
+          "PreinstalledUpgrades"
+        ],
+        "groups": [
+          {
+            "field": "PreinstalledUpgrades",
+            "changes": [
+              {
+                "path": "PreinstalledUpgrades.[0]",
+                "base": "empty {bskipref}",
+                "unique": "GunGrim_Upgrade_Attachment_AutMuz",
+                "change": "changed"
+              },
+              {
+                "path": "PreinstalledUpgrades.[1]",
+                "base": null,
+                "unique": "GunGrim_Upgrade_Attachment_Rail",
+                "change": "added"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "PreinstalledUpgrades.[0]",
+            "base": "empty {bskipref}",
+            "unique": "GunGrim_Upgrade_Attachment_AutMuz",
+            "change": "changed"
+          },
+          {
+            "path": "PreinstalledUpgrades.[1]",
+            "base": null,
+            "unique": "GunGrim_Upgrade_Attachment_Rail",
+            "change": "added"
+          }
+        ]
+      },
+      "player_weapon_attributes": {
+        "base_sid": null,
+        "unique_sid": null,
+        "resolved": false,
+        "reason": "missing_reference_sid"
+      }
+    },
+    "SOFMOD": {
+      "class": "AssaultRifles",
+      "base_family": "M16",
+      "unique_weapon_sid": "Gun_SOFMOD_AR",
+      "base_weapon_sid": "GunM16_ST",
+      "gameplay_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "equipment_identity": {
+        "fields": [
+          "PreinstalledUpgrades"
+        ],
+        "groups": [
+          {
+            "field": "PreinstalledUpgrades",
+            "changes": [
+              {
+                "path": "PreinstalledUpgrades.[0]",
+                "base": "empty {bskipref}",
+                "unique": "GunM16_Upgrade_Attachment_Grip",
+                "change": "changed"
+              },
+              {
+                "path": "PreinstalledUpgrades.[1]",
+                "base": null,
+                "unique": "GunM16_Upgrade_Attachment_Offset_Stock",
+                "change": "added"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "PreinstalledUpgrades.[0]",
+            "base": "empty {bskipref}",
+            "unique": "GunM16_Upgrade_Attachment_Grip",
+            "change": "changed"
+          },
+          {
+            "path": "PreinstalledUpgrades.[1]",
+            "base": null,
+            "unique": "GunM16_Upgrade_Attachment_Offset_Stock",
+            "change": "added"
+          }
+        ]
+      },
+      "player_weapon_attributes": {
+        "base_sid": null,
+        "unique_sid": null,
+        "resolved": false,
+        "reason": "missing_reference_sid"
+      }
+    },
+    "Shakh": {
+      "class": "SMGs",
+      "base_family": "Viper",
+      "unique_weapon_sid": "Gun_Shakh_SMG",
+      "base_weapon_sid": "GunViper_PP",
+      "gameplay_identity": {
+        "fields": [
+          "DispersionParams",
+          "MaxAmmo",
+          "WeaponReloadTimePerAttachment"
+        ],
+        "groups": [
+          {
+            "field": "DispersionParams",
+            "changes": [
+              {
+                "path": "DispersionParams.FirstShotDispersionRadius",
+                "base": "136.0",
+                "unique": "115.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -21.0,
+                  "percent": -15.441176470588236
+                }
+              }
+            ]
+          },
+          {
+            "field": "MaxAmmo",
+            "changes": [
+              {
+                "path": "MaxAmmo",
+                "base": "30",
+                "unique": "40",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 10.0,
+                  "percent": 33.33333333333333
+                }
+              }
+            ]
+          },
+          {
+            "field": "WeaponReloadTimePerAttachment",
+            "changes": [
+              {
+                "path": "WeaponReloadTimePerAttachment.[0].AttachPrototypeSID",
+                "base": "GunViper_MagDefault",
+                "unique": "Gun_Shakh_MagIncreased",
+                "change": "changed"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "DispersionParams.FirstShotDispersionRadius",
+            "base": "136.0",
+            "unique": "115.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -21.0,
+              "percent": -15.441176470588236
+            }
+          },
+          {
+            "path": "MaxAmmo",
+            "base": "30",
+            "unique": "40",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 10.0,
+              "percent": 33.33333333333333
+            }
+          },
+          {
+            "path": "WeaponReloadTimePerAttachment.[0].AttachPrototypeSID",
+            "base": "GunViper_MagDefault",
+            "unique": "Gun_Shakh_MagIncreased",
+            "change": "changed"
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunViper_PP_Player",
+        "unique_sid": "Gun_Shakh_SMG_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "Sharpshooter": {
+      "class": "AssaultRifles",
+      "base_family": "M16",
+      "unique_weapon_sid": "Gun_Sharpshooter_AR",
+      "base_weapon_sid": "GunM16_ST",
+      "gameplay_identity": {
+        "fields": [
+          "AimingCurve",
+          "CrosshairType",
+          "DefaultFireType",
+          "DispersionParams",
+          "FireTypes",
+          "WeaponJamParams"
+        ],
+        "groups": [
+          {
+            "field": "AimingCurve",
+            "changes": [
+              {
+                "path": "AimingCurve",
+                "base": "CurveFloat'/Game/_STALKER2/Animations/Player/Curves/Aiming/WeaponAiming_curve_base.WeaponAiming_curve_base'",
+                "unique": "CurveFloat'/Game/_STALKER2/Animations/Player/Curves/Aiming/WeaponAiming_curve_sr.WeaponAiming_curve_sr'",
+                "change": "changed"
+              }
+            ]
+          },
+          {
+            "field": "CrosshairType",
+            "changes": [
+              {
+                "path": "CrosshairType",
+                "base": "ECrosshairType::Cross",
+                "unique": "ECrosshairType::Point",
+                "change": "changed"
+              }
+            ]
+          },
+          {
+            "field": "DefaultFireType",
+            "changes": [
+              {
+                "path": "DefaultFireType",
+                "base": "EFireType::Automatic",
+                "unique": "EFireType::SemiAutomatic",
+                "change": "changed"
+              }
+            ]
+          },
+          {
+            "field": "DispersionParams",
+            "changes": [
+              {
+                "path": "DispersionParams.FirstShotDispersionRadius",
+                "base": "133.0",
+                "unique": "167.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 34.0,
+                  "percent": 25.563909774436087
+                }
+              },
+              {
+                "path": "DispersionParams.ShootingStateParams.MovementSpeedModifiers.MovementSpeedModifier",
+                "base": "0.5",
+                "unique": "1.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 0.5,
+                  "percent": 100.0
+                }
+              },
+              {
+                "path": "DispersionParams.ShootingStateParams.RadiusExtensionModifiers.MaxRadiusExtensionModifier",
+                "base": "1.5",
+                "unique": "0.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -1.5,
+                  "percent": -100.0
+                }
+              }
+            ]
+          },
+          {
+            "field": "FireTypes",
+            "changes": [
+              {
+                "path": "FireTypes.[1]",
+                "base": "EFireType::Automatic",
+                "unique": "EFireType::Queue{bskipref}",
+                "change": "changed"
+              }
+            ]
+          },
+          {
+            "field": "WeaponJamParams",
+            "changes": [
+              {
+                "path": "WeaponJamParams.[0].JamChanceCoef",
+                "base": "1.7",
+                "unique": "1.6",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -0.09999999999999987,
+                  "percent": -5.882352941176463
+                }
+              },
+              {
+                "path": "WeaponJamParams.[1].JamChanceCoef",
+                "base": "1.7",
+                "unique": "1.6",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -0.09999999999999987,
+                  "percent": -5.882352941176463
+                }
+              },
+              {
+                "path": "WeaponJamParams.[2].JamChanceCoef",
+                "base": "1.7",
+                "unique": "1.6",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -0.09999999999999987,
+                  "percent": -5.882352941176463
+                }
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "AimingCurve",
+            "base": "CurveFloat'/Game/_STALKER2/Animations/Player/Curves/Aiming/WeaponAiming_curve_base.WeaponAiming_curve_base'",
+            "unique": "CurveFloat'/Game/_STALKER2/Animations/Player/Curves/Aiming/WeaponAiming_curve_sr.WeaponAiming_curve_sr'",
+            "change": "changed"
+          },
+          {
+            "path": "CrosshairType",
+            "base": "ECrosshairType::Cross",
+            "unique": "ECrosshairType::Point",
+            "change": "changed"
+          },
+          {
+            "path": "DefaultFireType",
+            "base": "EFireType::Automatic",
+            "unique": "EFireType::SemiAutomatic",
+            "change": "changed"
+          },
+          {
+            "path": "DispersionParams.FirstShotDispersionRadius",
+            "base": "133.0",
+            "unique": "167.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 34.0,
+              "percent": 25.563909774436087
+            }
+          },
+          {
+            "path": "DispersionParams.ShootingStateParams.MovementSpeedModifiers.MovementSpeedModifier",
+            "base": "0.5",
+            "unique": "1.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 0.5,
+              "percent": 100.0
+            }
+          },
+          {
+            "path": "DispersionParams.ShootingStateParams.RadiusExtensionModifiers.MaxRadiusExtensionModifier",
+            "base": "1.5",
+            "unique": "0.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -1.5,
+              "percent": -100.0
+            }
+          },
+          {
+            "path": "FireTypes.[1]",
+            "base": "EFireType::Automatic",
+            "unique": "EFireType::Queue{bskipref}",
+            "change": "changed"
+          },
+          {
+            "path": "WeaponJamParams.[0].JamChanceCoef",
+            "base": "1.7",
+            "unique": "1.6",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -0.09999999999999987,
+              "percent": -5.882352941176463
+            }
+          },
+          {
+            "path": "WeaponJamParams.[1].JamChanceCoef",
+            "base": "1.7",
+            "unique": "1.6",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -0.09999999999999987,
+              "percent": -5.882352941176463
+            }
+          },
+          {
+            "path": "WeaponJamParams.[2].JamChanceCoef",
+            "base": "1.7",
+            "unique": "1.6",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -0.09999999999999987,
+              "percent": -5.882352941176463
+            }
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [
+          "PreinstalledUpgrades"
+        ],
+        "groups": [
+          {
+            "field": "PreinstalledUpgrades",
+            "changes": [
+              {
+                "path": "PreinstalledUpgrades.[0]",
+                "base": "empty {bskipref}",
+                "unique": "GunM16_Upgrade_Attachment_Offset_Stock",
+                "change": "changed"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "PreinstalledUpgrades.[0]",
+            "base": "empty {bskipref}",
+            "unique": "GunM16_Upgrade_Attachment_Offset_Stock",
+            "change": "changed"
+          }
+        ]
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunM16_ST_Player",
+        "unique_sid": "Gun_Sharpshooter_AR_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "Silence": {
+      "class": "SMGs",
+      "base_family": "AKU",
+      "unique_weapon_sid": "Gun_Silence_SMG",
+      "base_weapon_sid": "GunAKU_PP",
+      "gameplay_identity": {
+        "fields": [
+          "AimingMovementSpeedModifier",
+          "WeaponReloadTimePerAttachment",
+          "Weight"
+        ],
+        "groups": [
+          {
+            "field": "AimingMovementSpeedModifier",
+            "changes": [
+              {
+                "path": "AimingMovementSpeedModifier",
+                "base": "1.0",
+                "unique": "1.17",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 0.16999999999999993,
+                  "percent": 16.999999999999993
+                }
+              }
+            ]
+          },
+          {
+            "field": "WeaponReloadTimePerAttachment",
+            "changes": [
+              {
+                "path": "WeaponReloadTimePerAttachment.[0].AttachPrototypeSID",
+                "base": "GunAKU_MagDefault",
+                "unique": "GunAKU_Silence_MagDefault",
+                "change": "changed"
+              }
+            ]
+          },
+          {
+            "field": "Weight",
+            "changes": [
+              {
+                "path": "Weight",
+                "base": "2.7",
+                "unique": "2.5",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -0.20000000000000018,
+                  "percent": -7.407407407407414
+                }
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "AimingMovementSpeedModifier",
+            "base": "1.0",
+            "unique": "1.17",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 0.16999999999999993,
+              "percent": 16.999999999999993
+            }
+          },
+          {
+            "path": "WeaponReloadTimePerAttachment.[0].AttachPrototypeSID",
+            "base": "GunAKU_MagDefault",
+            "unique": "GunAKU_Silence_MagDefault",
+            "change": "changed"
+          },
+          {
+            "path": "Weight",
+            "base": "2.7",
+            "unique": "2.5",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -0.20000000000000018,
+              "percent": -7.407407407407414
+            }
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [
+          "PreinstalledUpgrades"
+        ],
+        "groups": [
+          {
+            "field": "PreinstalledUpgrades",
+            "changes": [
+              {
+                "path": "PreinstalledUpgrades.[0]",
+                "base": "empty {bskipref}",
+                "unique": "GunAKU_Upgrade_Attachment_Rail",
+                "change": "changed"
+              },
+              {
+                "path": "PreinstalledUpgrades.[1]",
+                "base": null,
+                "unique": "GunAKU_Upgrade_Attachment_Offset_Stock",
+                "change": "added"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "PreinstalledUpgrades.[0]",
+            "base": "empty {bskipref}",
+            "unique": "GunAKU_Upgrade_Attachment_Rail",
+            "change": "changed"
+          },
+          {
+            "path": "PreinstalledUpgrades.[1]",
+            "base": null,
+            "unique": "GunAKU_Upgrade_Attachment_Offset_Stock",
+            "change": "added"
+          }
+        ]
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunAKU_PP_Player",
+        "unique_sid": "Gun_Silence_SMG_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "Sledgehammer": {
+      "class": "Shotguns",
+      "base_family": "SPSA",
+      "unique_weapon_sid": "Gun_Sledgehammer_SG",
+      "base_weapon_sid": "GunSPSA_SG",
+      "gameplay_identity": {
+        "fields": [
+          "RecoilParams"
+        ],
+        "groups": [
+          {
+            "field": "RecoilParams",
+            "changes": [
+              {
+                "path": "RecoilParams.RecoilRadius",
+                "base": "2200.0",
+                "unique": "2000.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -200.0,
+                  "percent": -9.090909090909092
+                }
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "RecoilParams.RecoilRadius",
+            "base": "2200.0",
+            "unique": "2000.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -200.0,
+              "percent": -9.090909090909092
+            }
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [
+          "PreinstalledUpgrades"
+        ],
+        "groups": [
+          {
+            "field": "PreinstalledUpgrades",
+            "changes": [
+              {
+                "path": "PreinstalledUpgrades.[0]",
+                "base": "empty {bskipref}",
+                "unique": "GunSPSA_Upgrade_Attachment_SinMuz",
+                "change": "changed"
+              },
+              {
+                "path": "PreinstalledUpgrades.[1]",
+                "base": null,
+                "unique": "GunSPSA_Upgrade_Attachment_Offset_Stock",
+                "change": "added"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "PreinstalledUpgrades.[0]",
+            "base": "empty {bskipref}",
+            "unique": "GunSPSA_Upgrade_Attachment_SinMuz",
+            "change": "changed"
+          },
+          {
+            "path": "PreinstalledUpgrades.[1]",
+            "base": null,
+            "unique": "GunSPSA_Upgrade_Attachment_Offset_Stock",
+            "change": "added"
+          }
+        ]
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunSPSA_SG_Player",
+        "unique_sid": "Gun_Sledgehammer_SG_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "Sotnyk": {
+      "class": "AssaultRifles",
+      "base_family": "Dnipro",
+      "unique_weapon_sid": "Gun_Sotnyk_AR",
+      "base_weapon_sid": "GunDnipro_ST",
+      "gameplay_identity": {
+        "fields": [
+          "WeaponReloadTimePerAttachment"
+        ],
+        "groups": [
+          {
+            "field": "WeaponReloadTimePerAttachment",
+            "changes": [
+              {
+                "path": "WeaponReloadTimePerAttachment.[0].AttachPrototypeSID",
+                "base": "GunDnipro_MagDefault",
+                "unique": "GunSotnyk_MagDefault",
+                "change": "changed"
+              },
+              {
+                "path": "WeaponReloadTimePerAttachment.[1].AttachPrototypeSID",
+                "base": "GunAK74_MagIncreased",
+                "unique": "GunVulkan_MagIncreased",
+                "change": "changed"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "WeaponReloadTimePerAttachment.[0].AttachPrototypeSID",
+            "base": "GunDnipro_MagDefault",
+            "unique": "GunSotnyk_MagDefault",
+            "change": "changed"
+          },
+          {
+            "path": "WeaponReloadTimePerAttachment.[1].AttachPrototypeSID",
+            "base": "GunAK74_MagIncreased",
+            "unique": "GunVulkan_MagIncreased",
+            "change": "changed"
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [
+          "PreinstalledUpgrades"
+        ],
+        "groups": [
+          {
+            "field": "PreinstalledUpgrades",
+            "changes": [
+              {
+                "path": "PreinstalledUpgrades.[0]",
+                "base": "empty {bskipref}",
+                "unique": "GunDnipro_Upgrade_Attachment_Grip",
+                "change": "changed"
+              },
+              {
+                "path": "PreinstalledUpgrades.[10]",
+                "base": null,
+                "unique": "GunDnipro_Upgrade_Stock_2_1",
+                "change": "added"
+              },
+              {
+                "path": "PreinstalledUpgrades.[11]",
+                "base": null,
+                "unique": "GunDnipro_Upgrade_Attachment_Offset_Stock",
+                "change": "added"
+              },
+              {
+                "path": "PreinstalledUpgrades.[1]",
+                "base": null,
+                "unique": "GunDnipro_Upgrade_Attachment_Laser_HP",
+                "change": "added"
+              },
+              {
+                "path": "PreinstalledUpgrades.[2]",
+                "base": null,
+                "unique": "GunDnipro_Upgrade_Barrel_1_2",
+                "change": "added"
+              },
+              {
+                "path": "PreinstalledUpgrades.[3]",
+                "base": null,
+                "unique": "GunDnipro_Upgrade_Barrel_2_1",
+                "change": "added"
+              },
+              {
+                "path": "PreinstalledUpgrades.[4]",
+                "base": null,
+                "unique": "GunDnipro_Upgrade_Barrel_3",
+                "change": "added"
+              },
+              {
+                "path": "PreinstalledUpgrades.[5]",
+                "base": null,
+                "unique": "GunDnipro_Upgrade_Handguard_1_1",
+                "change": "added"
+              },
+              {
+                "path": "PreinstalledUpgrades.[6]",
+                "base": null,
+                "unique": "GunDnipro_Upgrade_Handguard_2_2",
+                "change": "added"
+              },
+              {
+                "path": "PreinstalledUpgrades.[7]",
+                "base": null,
+                "unique": "GunDnipro_Upgrade_Handguard_3",
+                "change": "added"
+              },
+              {
+                "path": "PreinstalledUpgrades.[8]",
+                "base": null,
+                "unique": "GunDnipro_Upgrade_Body_1",
+                "change": "added"
+              },
+              {
+                "path": "PreinstalledUpgrades.[9]",
+                "base": null,
+                "unique": "GunDnipro_Upgrade_Stock_1_1",
+                "change": "added"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "PreinstalledUpgrades.[0]",
+            "base": "empty {bskipref}",
+            "unique": "GunDnipro_Upgrade_Attachment_Grip",
+            "change": "changed"
+          },
+          {
+            "path": "PreinstalledUpgrades.[10]",
+            "base": null,
+            "unique": "GunDnipro_Upgrade_Stock_2_1",
+            "change": "added"
+          },
+          {
+            "path": "PreinstalledUpgrades.[11]",
+            "base": null,
+            "unique": "GunDnipro_Upgrade_Attachment_Offset_Stock",
+            "change": "added"
+          },
+          {
+            "path": "PreinstalledUpgrades.[1]",
+            "base": null,
+            "unique": "GunDnipro_Upgrade_Attachment_Laser_HP",
+            "change": "added"
+          },
+          {
+            "path": "PreinstalledUpgrades.[2]",
+            "base": null,
+            "unique": "GunDnipro_Upgrade_Barrel_1_2",
+            "change": "added"
+          },
+          {
+            "path": "PreinstalledUpgrades.[3]",
+            "base": null,
+            "unique": "GunDnipro_Upgrade_Barrel_2_1",
+            "change": "added"
+          },
+          {
+            "path": "PreinstalledUpgrades.[4]",
+            "base": null,
+            "unique": "GunDnipro_Upgrade_Barrel_3",
+            "change": "added"
+          },
+          {
+            "path": "PreinstalledUpgrades.[5]",
+            "base": null,
+            "unique": "GunDnipro_Upgrade_Handguard_1_1",
+            "change": "added"
+          },
+          {
+            "path": "PreinstalledUpgrades.[6]",
+            "base": null,
+            "unique": "GunDnipro_Upgrade_Handguard_2_2",
+            "change": "added"
+          },
+          {
+            "path": "PreinstalledUpgrades.[7]",
+            "base": null,
+            "unique": "GunDnipro_Upgrade_Handguard_3",
+            "change": "added"
+          },
+          {
+            "path": "PreinstalledUpgrades.[8]",
+            "base": null,
+            "unique": "GunDnipro_Upgrade_Body_1",
+            "change": "added"
+          },
+          {
+            "path": "PreinstalledUpgrades.[9]",
+            "base": null,
+            "unique": "GunDnipro_Upgrade_Stock_1_1",
+            "change": "added"
+          }
+        ]
+      },
+      "player_weapon_attributes": {
+        "base_sid": null,
+        "unique_sid": null,
+        "resolved": false,
+        "reason": "missing_reference_sid"
+      }
+    },
+    "Spitfire": {
+      "class": "SMGs",
+      "base_family": "AKU",
+      "unique_weapon_sid": "Gun_Spitfire_SMG",
+      "base_weapon_sid": "GunAKU_PP",
+      "gameplay_identity": {
+        "fields": [
+          "FireInterval",
+          "MaxAmmo",
+          "RecoilInterval",
+          "RecoilParams"
+        ],
+        "groups": [
+          {
+            "field": "FireInterval",
+            "changes": [
+              {
+                "path": "FireInterval",
+                "base": "0.09",
+                "unique": "0.082",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -0.007999999999999993,
+                  "percent": -8.888888888888882
+                }
+              }
+            ]
+          },
+          {
+            "field": "MaxAmmo",
+            "changes": [
+              {
+                "path": "MaxAmmo",
+                "base": "30",
+                "unique": "40",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 10.0,
+                  "percent": 33.33333333333333
+                }
+              }
+            ]
+          },
+          {
+            "field": "RecoilInterval",
+            "changes": [
+              {
+                "path": "RecoilInterval",
+                "base": "0.09",
+                "unique": "0.082",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -0.007999999999999993,
+                  "percent": -8.888888888888882
+                }
+              }
+            ]
+          },
+          {
+            "field": "RecoilParams",
+            "changes": [
+              {
+                "path": "RecoilParams.RecoilRadius",
+                "base": "203.0",
+                "unique": "190.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -13.0,
+                  "percent": -6.403940886699508
+                }
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "FireInterval",
+            "base": "0.09",
+            "unique": "0.082",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -0.007999999999999993,
+              "percent": -8.888888888888882
+            }
+          },
+          {
+            "path": "MaxAmmo",
+            "base": "30",
+            "unique": "40",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 10.0,
+              "percent": 33.33333333333333
+            }
+          },
+          {
+            "path": "RecoilInterval",
+            "base": "0.09",
+            "unique": "0.082",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -0.007999999999999993,
+              "percent": -8.888888888888882
+            }
+          },
+          {
+            "path": "RecoilParams.RecoilRadius",
+            "base": "203.0",
+            "unique": "190.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -13.0,
+              "percent": -6.403940886699508
+            }
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunAKU_PP_Player",
+        "unique_sid": "Gun_Spitfire_SMG_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "Spitter": {
+      "class": "SMGs",
+      "base_family": "Bucket",
+      "unique_weapon_sid": "Gun_Spitter_SMG",
+      "base_weapon_sid": "GunBucket_PP",
+      "gameplay_identity": {
+        "fields": [
+          "RecoilParams"
+        ],
+        "groups": [
+          {
+            "field": "RecoilParams",
+            "changes": [
+              {
+                "path": "RecoilParams.RecoilRadius",
+                "base": "200.0",
+                "unique": "140.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -60.0,
+                  "percent": -30.0
+                }
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "RecoilParams.RecoilRadius",
+            "base": "200.0",
+            "unique": "140.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -60.0,
+              "percent": -30.0
+            }
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [
+          "PreinstalledUpgrades"
+        ],
+        "groups": [
+          {
+            "field": "PreinstalledUpgrades",
+            "changes": [
+              {
+                "path": "PreinstalledUpgrades.[0]",
+                "base": "empty {bskipref}",
+                "unique": "GunBucket_Upgrade_Attachment_AutMuz",
+                "change": "changed"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "PreinstalledUpgrades.[0]",
+            "base": "empty {bskipref}",
+            "unique": "GunBucket_Upgrade_Attachment_AutMuz",
+            "change": "changed"
+          }
+        ]
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunBucket_PP_Player",
+        "unique_sid": "Gun_Spitter_SMG_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "Star": {
+      "class": "Pistols",
+      "base_family": "PTM",
+      "unique_weapon_sid": "Gun_Star_HG",
+      "base_weapon_sid": "GunPM_HG",
+      "gameplay_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "equipment_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "player_weapon_attributes": {
+        "base_sid": null,
+        "unique_sid": null,
+        "resolved": false,
+        "reason": "missing_reference_sid"
+      }
+    },
+    "Tank": {
+      "class": "MachineGuns",
+      "base_family": "PKP",
+      "unique_weapon_sid": "Gun_Tank_MG",
+      "base_weapon_sid": "GunPKP_MG",
+      "gameplay_identity": {
+        "fields": [
+          "MaxAmmo",
+          "WeaponReloadTimePerAttachment"
+        ],
+        "groups": [
+          {
+            "field": "MaxAmmo",
+            "changes": [
+              {
+                "path": "MaxAmmo",
+                "base": "150",
+                "unique": "500",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 350.0,
+                  "percent": 233.33333333333334
+                }
+              }
+            ]
+          },
+          {
+            "field": "WeaponReloadTimePerAttachment",
+            "changes": [
+              {
+                "path": "WeaponReloadTimePerAttachment.[0].AttachPrototypeSID",
+                "base": "GunPKP_MagDefault",
+                "unique": "GunTank_MagLarge",
+                "change": "changed"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "MaxAmmo",
+            "base": "150",
+            "unique": "500",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 350.0,
+              "percent": 233.33333333333334
+            }
+          },
+          {
+            "path": "WeaponReloadTimePerAttachment.[0].AttachPrototypeSID",
+            "base": "GunPKP_MagDefault",
+            "unique": "GunTank_MagLarge",
+            "change": "changed"
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [
+          "PreinstalledUpgrades"
+        ],
+        "groups": [
+          {
+            "field": "PreinstalledUpgrades",
+            "changes": [
+              {
+                "path": "PreinstalledUpgrades.[0]",
+                "base": "empty {bskipref}",
+                "unique": "GunPKP_Upgrade_Attachment_Rail",
+                "change": "changed"
+              },
+              {
+                "path": "PreinstalledUpgrades.[1]",
+                "base": null,
+                "unique": "GunPKP_Upgrade_Attachment_Offset_Stock",
+                "change": "added"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "PreinstalledUpgrades.[0]",
+            "base": "empty {bskipref}",
+            "unique": "GunPKP_Upgrade_Attachment_Rail",
+            "change": "changed"
+          },
+          {
+            "path": "PreinstalledUpgrades.[1]",
+            "base": null,
+            "unique": "GunPKP_Upgrade_Attachment_Offset_Stock",
+            "change": "added"
+          }
+        ]
+      },
+      "player_weapon_attributes": {
+        "base_sid": null,
+        "unique_sid": null,
+        "resolved": false,
+        "reason": "missing_reference_sid"
+      }
+    },
+    "Texas": {
+      "class": "Shotguns",
+      "base_family": "Ram2",
+      "unique_weapon_sid": "Gun_Texas_SG",
+      "base_weapon_sid": "GunRam2_SG",
+      "gameplay_identity": {
+        "fields": [
+          "DispersionParams",
+          "Weight"
+        ],
+        "groups": [
+          {
+            "field": "DispersionParams",
+            "changes": [
+              {
+                "path": "DispersionParams.FirstShotDispersionRadius",
+                "base": "568.0",
+                "unique": "570.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 2.0,
+                  "percent": 0.35211267605633806
+                }
+              }
+            ]
+          },
+          {
+            "field": "Weight",
+            "changes": [
+              {
+                "path": "Weight",
+                "base": "3.0",
+                "unique": "4.5",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 1.5,
+                  "percent": 50.0
+                }
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "DispersionParams.FirstShotDispersionRadius",
+            "base": "568.0",
+            "unique": "570.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 2.0,
+              "percent": 0.35211267605633806
+            }
+          },
+          {
+            "path": "Weight",
+            "base": "3.0",
+            "unique": "4.5",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 1.5,
+              "percent": 50.0
+            }
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [
+          "PreinstalledUpgrades"
+        ],
+        "groups": [
+          {
+            "field": "PreinstalledUpgrades",
+            "changes": [
+              {
+                "path": "PreinstalledUpgrades.[0]",
+                "base": "empty {bskipref}",
+                "unique": "GunRam2_Upgrade_Attachment_SinMuz",
+                "change": "changed"
+              },
+              {
+                "path": "PreinstalledUpgrades.[1]",
+                "base": null,
+                "unique": "GunRam2_Upgrade_Attachment_Grip",
+                "change": "added"
+              },
+              {
+                "path": "PreinstalledUpgrades.[2]",
+                "base": null,
+                "unique": "GunRam2_Upgrade_Attachment_Laser",
+                "change": "added"
+              },
+              {
+                "path": "PreinstalledUpgrades.[3]",
+                "base": null,
+                "unique": "GunRam2_Upgrade_Attachment_Offset_Stock",
+                "change": "added"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "PreinstalledUpgrades.[0]",
+            "base": "empty {bskipref}",
+            "unique": "GunRam2_Upgrade_Attachment_SinMuz",
+            "change": "changed"
+          },
+          {
+            "path": "PreinstalledUpgrades.[1]",
+            "base": null,
+            "unique": "GunRam2_Upgrade_Attachment_Grip",
+            "change": "added"
+          },
+          {
+            "path": "PreinstalledUpgrades.[2]",
+            "base": null,
+            "unique": "GunRam2_Upgrade_Attachment_Laser",
+            "change": "added"
+          },
+          {
+            "path": "PreinstalledUpgrades.[3]",
+            "base": null,
+            "unique": "GunRam2_Upgrade_Attachment_Offset_Stock",
+            "change": "added"
+          }
+        ]
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunRam2_SG_Player",
+        "unique_sid": "Gun_Texas_SG_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    },
+    "Trophy": {
+      "class": "AssaultRifles",
+      "base_family": "Lavina",
+      "unique_weapon_sid": "Gun_Trophy_AR",
+      "base_weapon_sid": "GunLavina_ST",
+      "gameplay_identity": {
+        "fields": [
+          "BaseDurability"
+        ],
+        "groups": [
+          {
+            "field": "BaseDurability",
+            "changes": [
+              {
+                "path": "BaseDurability",
+                "base": "2250.0",
+                "unique": "2700.0",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 450.0,
+                  "percent": 20.0
+                }
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "BaseDurability",
+            "base": "2250.0",
+            "unique": "2700.0",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 450.0,
+              "percent": 20.0
+            }
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [
+          "PreinstalledUpgrades"
+        ],
+        "groups": [
+          {
+            "field": "PreinstalledUpgrades",
+            "changes": [
+              {
+                "path": "PreinstalledUpgrades.[0]",
+                "base": "empty {bskipref}",
+                "unique": "GunLavina_Upgrade_Attachment_Rail",
+                "change": "changed"
+              },
+              {
+                "path": "PreinstalledUpgrades.[1]",
+                "base": null,
+                "unique": "GunLavina_Upgrade_Attachment_Offset_Stock",
+                "change": "added"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "PreinstalledUpgrades.[0]",
+            "base": "empty {bskipref}",
+            "unique": "GunLavina_Upgrade_Attachment_Rail",
+            "change": "changed"
+          },
+          {
+            "path": "PreinstalledUpgrades.[1]",
+            "base": null,
+            "unique": "GunLavina_Upgrade_Attachment_Offset_Stock",
+            "change": "added"
+          }
+        ]
+      },
+      "player_weapon_attributes": {
+        "base_sid": null,
+        "unique_sid": null,
+        "resolved": false,
+        "reason": "missing_reference_sid"
+      }
+    },
+    "Unknown": {
+      "class": "AssaultRifles",
+      "base_family": "M16",
+      "unique_weapon_sid": "Gun_Unknown_AR",
+      "base_weapon_sid": "GunM16_ST",
+      "gameplay_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "equipment_identity": {
+        "fields": [
+          "PreinstalledUpgrades"
+        ],
+        "groups": [
+          {
+            "field": "PreinstalledUpgrades",
+            "changes": [
+              {
+                "path": "PreinstalledUpgrades.[0]",
+                "base": "empty {bskipref}",
+                "unique": "GunM16_Upgrade_Attachment_Grip",
+                "change": "changed"
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "PreinstalledUpgrades.[0]",
+            "base": "empty {bskipref}",
+            "unique": "GunM16_Upgrade_Attachment_Grip",
+            "change": "changed"
+          }
+        ]
+      },
+      "player_weapon_attributes": {
+        "base_sid": null,
+        "unique_sid": null,
+        "resolved": false,
+        "reason": "missing_reference_sid"
+      }
+    },
+    "Whip": {
+      "class": "Snipers",
+      "base_family": "SVU",
+      "unique_weapon_sid": "Gun_Whip_SR",
+      "base_weapon_sid": "GunSVU_SP",
+      "gameplay_identity": {
+        "fields": [
+          "AimingMovementSpeedModifier",
+          "AimingTime",
+          "LeanAimingRestoreTime",
+          "LeanAimingTime",
+          "OffsetAimingTime"
+        ],
+        "groups": [
+          {
+            "field": "AimingMovementSpeedModifier",
+            "changes": [
+              {
+                "path": "AimingMovementSpeedModifier",
+                "base": "0.8",
+                "unique": "0.9",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": 0.09999999999999998,
+                  "percent": 12.499999999999996
+                }
+              }
+            ]
+          },
+          {
+            "field": "AimingTime",
+            "changes": [
+              {
+                "path": "AimingTime",
+                "base": "0.55",
+                "unique": "0.47",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -0.08000000000000007,
+                  "percent": -14.545454545454556
+                }
+              }
+            ]
+          },
+          {
+            "field": "LeanAimingRestoreTime",
+            "changes": [
+              {
+                "path": "LeanAimingRestoreTime",
+                "base": "1.1",
+                "unique": "0.94",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -0.16000000000000014,
+                  "percent": -14.545454545454556
+                }
+              }
+            ]
+          },
+          {
+            "field": "LeanAimingTime",
+            "changes": [
+              {
+                "path": "LeanAimingTime",
+                "base": "0.55",
+                "unique": "0.47",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -0.08000000000000007,
+                  "percent": -14.545454545454556
+                }
+              }
+            ]
+          },
+          {
+            "field": "OffsetAimingTime",
+            "changes": [
+              {
+                "path": "OffsetAimingTime",
+                "base": "0.66",
+                "unique": "0.57",
+                "change": "changed",
+                "numeric_delta": {
+                  "absolute": -0.09000000000000008,
+                  "percent": -13.636363636363647
+                }
+              }
+            ]
+          }
+        ],
+        "leaf_diffs": [
+          {
+            "path": "AimingMovementSpeedModifier",
+            "base": "0.8",
+            "unique": "0.9",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": 0.09999999999999998,
+              "percent": 12.499999999999996
+            }
+          },
+          {
+            "path": "AimingTime",
+            "base": "0.55",
+            "unique": "0.47",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -0.08000000000000007,
+              "percent": -14.545454545454556
+            }
+          },
+          {
+            "path": "LeanAimingRestoreTime",
+            "base": "1.1",
+            "unique": "0.94",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -0.16000000000000014,
+              "percent": -14.545454545454556
+            }
+          },
+          {
+            "path": "LeanAimingTime",
+            "base": "0.55",
+            "unique": "0.47",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -0.08000000000000007,
+              "percent": -14.545454545454556
+            }
+          },
+          {
+            "path": "OffsetAimingTime",
+            "base": "0.66",
+            "unique": "0.57",
+            "change": "changed",
+            "numeric_delta": {
+              "absolute": -0.09000000000000008,
+              "percent": -13.636363636363647
+            }
+          }
+        ]
+      },
+      "equipment_identity": {
+        "fields": [],
+        "groups": [],
+        "leaf_diffs": []
+      },
+      "player_weapon_attributes": {
+        "base_sid": "GunSVU_SP_Player",
+        "unique_sid": "Gun_Whip_SR_Player",
+        "resolved": false,
+        "reason": "reference_definition_not_present_in_vanilla_reference",
+        "base_definition_found": false,
+        "unique_definition_found": false
+      }
+    }
+  }
+}
