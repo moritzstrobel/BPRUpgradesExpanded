@@ -25,9 +25,26 @@ CLASS_CONFIGS = {
     "MachineGuns": CFG_ROOT / "MachineGuns" / "machine_gun_upgrades.json",
 }
 
+# Fields that describe identity/assets/economy rather than weapon behaviour.
 NOISE_FIELDS = {
     "SID", "LocalizationSID", "GeneralWeaponSetup", "UpgradePrototypeSIDs",
-    "WeaponMesh", "ItemPrototypeSID", "Icon", "Icon1x1",
+    "WeaponMesh", "ItemPrototypeSID", "Icon", "Icon1x1", "Cost",
+    "MeshInWorldPrototypeSID", "StatisticIconImagePath", "WeaponStaticMeshParts",
+    "CompatibleAttachments", "PreinstalledAttachmentsItemPrototypeSIDs", "PreinstalledUpgrades",
+    "NPCWeaponAttributes", "MaxDeadNPCLoadedAmmoCount", "MinDeadNPCLoadedAmmoCount",
+    "OffsetAimingOffSound", "OffsetAimingOnSound",
+}
+
+# Top-level gameplay fields useful when designing a signature module. Nested
+# leaves below these fields are retained automatically.
+GAMEPLAY_FIELDS = {
+    "AimingCurve", "AimingMovementSpeedModifier", "AimingTime", "AmmoCaliber",
+    "AmmoTypeProjectiles", "BaseDurability", "CrosshairType", "DefaultFireType",
+    "DispersionParams", "FireInterval", "FireTypes", "LeanAimingRestoreTime",
+    "LeanAimingTime", "MaxAmmo", "MaxJamChance", "MinJamChance",
+    "MinJamDurabilityThreshold", "OffsetAimingTime", "PlayerWeaponAttributes",
+    "RecoilInterval", "RecoilParams", "WeaponJamParams", "WeaponReloadTimePerAttachment",
+    "Weight",
 }
 
 SCALAR_RE = re.compile(r"\s*([A-Za-z_][A-Za-z0-9_]*|\[\d+\])\s*=\s*(.+?)\s*$")
@@ -36,10 +53,7 @@ NUMBER_RE = re.compile(r"^([+-]?(?:\d+(?:\.\d*)?|\.\d+))(%?)$")
 
 
 def top_level_blocks(text: str) -> dict[str, list[str]]:
-    blocks: dict[str, list[str]] = {}
-    current: list[str] | None = None
-    sid = ""
-    depth = 0
+    blocks: dict[str, list[str]] = {}; current: list[str] | None = None; sid = ""; depth = 0
     for line in text.splitlines():
         stripped = line.strip()
         if current is None:
@@ -50,8 +64,7 @@ def top_level_blocks(text: str) -> dict[str, list[str]]:
         if "struct.begin" in stripped: depth += 1
         if stripped == "struct.end":
             depth -= 1
-            if depth == 0:
-                blocks[sid] = current; current = None
+            if depth == 0: blocks[sid] = current; current = None
     return blocks
 
 
@@ -62,33 +75,21 @@ def refkey(block: list[str] | None) -> str | None:
 
 
 def parse_struct_lines(lines: list[str], start: int = 0, stop_at_end: bool = False) -> tuple[dict[str, object], int]:
-    """Parse GameData scalar/struct properties into nested dictionaries.
-
-    This is intentionally structural rather than schema-aware. Numeric array keys
-    such as [0] are retained so FireTypes, recoil structures and similar nested
-    values can be compared leaf-by-leaf without guessing their meaning.
-    """
-    result: dict[str, object] = {}
-    i = start
+    result: dict[str, object] = {}; i = start
     while i < len(lines):
         stripped = lines[i].strip()
-        if stripped == "struct.end" and stop_at_end:
-            return result, i + 1
+        if stripped == "struct.end" and stop_at_end: return result, i + 1
         struct_match = STRUCT_RE.match(lines[i])
         if struct_match:
-            child, i = parse_struct_lines(lines, i + 1, True)
-            result[struct_match.group(1)] = child
-            continue
+            child, i = parse_struct_lines(lines, i + 1, True); result[struct_match.group(1)] = child; continue
         scalar_match = SCALAR_RE.match(lines[i])
-        if scalar_match:
-            result[scalar_match.group(1)] = scalar_match.group(2).strip()
+        if scalar_match: result[scalar_match.group(1)] = scalar_match.group(2).strip()
         i += 1
     return result, i
 
 
 def direct_properties(block: list[str]) -> dict[str, object]:
-    result, _ = parse_struct_lines(block[1:-1])
-    return result
+    result, _ = parse_struct_lines(block[1:-1]); return result
 
 
 def inheritance_chain(sid: str, blocks: dict[str, list[str]]) -> list[str]:
@@ -103,16 +104,13 @@ def inheritance_chain(sid: str, blocks: dict[str, list[str]]) -> list[str]:
 def deep_merge(base: dict[str, object], override: dict[str, object]) -> dict[str, object]:
     result = dict(base)
     for key, value in override.items():
-        if isinstance(value, dict) and isinstance(result.get(key), dict):
-            result[key] = deep_merge(result[key], value)  # type: ignore[arg-type]
-        else:
-            result[key] = value
+        if isinstance(value, dict) and isinstance(result.get(key), dict): result[key] = deep_merge(result[key], value)  # type: ignore[arg-type]
+        else: result[key] = value
     return result
 
 
 def effective_properties(sid: str, blocks: dict[str, list[str]]) -> tuple[dict[str, object], list[str]]:
-    chain = inheritance_chain(sid, blocks)
-    result: dict[str, object] = {}
+    chain = inheritance_chain(sid, blocks); result: dict[str, object] = {}
     for current in reversed(chain):
         block = blocks.get(current)
         if block: result = deep_merge(result, direct_properties(block))
@@ -123,8 +121,7 @@ def numeric_delta(before: object, after: object) -> dict[str, float] | None:
     if not isinstance(before, str) or not isinstance(after, str): return None
     left = NUMBER_RE.match(before); right = NUMBER_RE.match(after)
     if not left or not right or left.group(2) != right.group(2): return None
-    base = float(left.group(1)); unique = float(right.group(1))
-    result = {"absolute": unique - base}
+    base = float(left.group(1)); unique = float(right.group(1)); result = {"absolute": unique - base}
     if base != 0: result["percent"] = ((unique - base) / abs(base)) * 100.0
     return result
 
@@ -134,12 +131,9 @@ def leaf_diff(base: object, unique: object, path: str = "") -> list[dict[str, ob
         result: list[dict[str, object]] = []
         for key in sorted(set(base) | set(unique)):
             child_path = f"{path}.{key}" if path else key
-            if key not in base:
-                result.append({"path": child_path, "base": None, "unique": unique[key], "change": "added"})
-            elif key not in unique:
-                result.append({"path": child_path, "base": base[key], "unique": None, "change": "removed"})
-            else:
-                result.extend(leaf_diff(base[key], unique[key], child_path))
+            if key not in base: result.append({"path": child_path, "base": None, "unique": unique[key], "change": "added"})
+            elif key not in unique: result.append({"path": child_path, "base": base[key], "unique": None, "change": "removed"})
+            else: result.extend(leaf_diff(base[key], unique[key], child_path))
         return result
     if base == unique: return []
     entry: dict[str, object] = {"path": path, "base": base, "unique": unique, "change": "changed"}
@@ -149,11 +143,7 @@ def leaf_diff(base: object, unique: object, path: str = "") -> list[dict[str, ob
 
 
 def top_level_diff(base: dict[str, object], unique: dict[str, object]) -> dict[str, dict[str, object | None]]:
-    result = {}
-    for key in sorted(set(base) | set(unique)):
-        before = base.get(key); after = unique.get(key)
-        if before != after: result[key] = {"base": before, "unique": after}
-    return result
+    return {key: {"base": base.get(key), "unique": unique.get(key)} for key in sorted(set(base) | set(unique)) if base.get(key) != unique.get(key)}
 
 
 def load_base_families() -> dict[tuple[str, str], dict]:
@@ -173,94 +163,89 @@ def weapon_users(blocks: dict[str, list[str]]) -> dict[str, list[str]]:
 
 
 def choose_unique_weapon(setup_sid: str, users: dict[str, list[str]]) -> str | None:
-    candidates = users.get(setup_sid, [])
-    return candidates[0] if len(candidates) == 1 else None
+    candidates = users.get(setup_sid, []); return candidates[0] if len(candidates) == 1 else None
+
+
+def top_field(entry: dict[str, object]) -> str:
+    return str(entry["path"]).split(".", 1)[0]
 
 
 def filtered_leaf_diffs(diffs: list[dict[str, object]]) -> list[dict[str, object]]:
-    return [entry for entry in diffs if str(entry["path"]).split(".", 1)[0] not in NOISE_FIELDS]
+    return [entry for entry in diffs if top_field(entry) not in NOISE_FIELDS]
+
+
+def gameplay_leaf_diffs(diffs: list[dict[str, object]]) -> list[dict[str, object]]:
+    """Return only changes with plausible gameplay/signature-design relevance."""
+    return [entry for entry in diffs if top_field(entry) in GAMEPLAY_FIELDS]
+
+
+def group_gameplay_diffs(diffs: list[dict[str, object]]) -> list[dict[str, object]]:
+    groups: dict[str, list[dict[str, object]]] = defaultdict(list)
+    for entry in diffs: groups[top_field(entry)].append(entry)
+    return [{"field": field, "changes": changes} for field, changes in sorted(groups.items())]
 
 
 def analyze() -> dict:
-    registry = json.loads(UNIQUE_PATH.read_text(encoding="utf-8"))
-    base_families = load_base_families()
-    weapon_blocks = top_level_blocks(WEAPON_PATH.read_text(encoding="utf-8"))
-    setup_blocks = top_level_blocks(SETUP_PATH.read_text(encoding="utf-8"))
-    users = weapon_users(weapon_blocks)
-    entries = {}; unresolved = []; class_counts = Counter()
+    registry = json.loads(UNIQUE_PATH.read_text(encoding="utf-8")); base_families = load_base_families()
+    weapon_blocks = top_level_blocks(WEAPON_PATH.read_text(encoding="utf-8")); setup_blocks = top_level_blocks(SETUP_PATH.read_text(encoding="utf-8")); users = weapon_users(weapon_blocks)
+    entries = {}; unresolved = []; class_counts = Counter(); gameplay_counts = Counter()
 
     for unique_name, unique in registry.get("uniques", {}).items():
-        class_name = unique["class"]; base_name = unique["base_family"]; class_counts[class_name] += 1
-        base = base_families.get((class_name, base_name))
+        class_name = unique["class"]; base_name = unique["base_family"]; class_counts[class_name] += 1; base = base_families.get((class_name, base_name))
         if not base:
             unresolved.append({"unique": unique_name, "reason": "base_family_not_found", "class": class_name, "base_family": base_name}); continue
-
-        unique_setup = unique["general_setup_sid"]; base_setup = base.get("general_setup_sid"); base_weapon = base.get("weapon_sid")
-        unique_weapon = choose_unique_weapon(unique_setup, users)
-        unique_setup_effective, unique_setup_chain = effective_properties(unique_setup, setup_blocks)
-        base_setup_effective, base_setup_chain = effective_properties(base_setup, setup_blocks)
-        setup_diff = top_level_diff(base_setup_effective, unique_setup_effective)
-        setup_leaf = leaf_diff(base_setup_effective, unique_setup_effective)
-        setup_direct = direct_properties(setup_blocks[unique_setup]) if unique_setup in setup_blocks else {}
-
+        unique_setup = unique["general_setup_sid"]; base_setup = base.get("general_setup_sid"); base_weapon = base.get("weapon_sid"); unique_weapon = choose_unique_weapon(unique_setup, users)
+        unique_setup_effective, unique_setup_chain = effective_properties(unique_setup, setup_blocks); base_setup_effective, base_setup_chain = effective_properties(base_setup, setup_blocks)
+        setup_diff = top_level_diff(base_setup_effective, unique_setup_effective); setup_leaf = leaf_diff(base_setup_effective, unique_setup_effective); setup_direct = direct_properties(setup_blocks[unique_setup]) if unique_setup in setup_blocks else {}
         weapon_diff = {}; weapon_leaf: list[dict[str, object]] = []; weapon_direct = {}; unique_weapon_chain: list[str] = []; base_weapon_chain: list[str] = []
         if unique_weapon and base_weapon and unique_weapon in weapon_blocks and base_weapon in weapon_blocks:
-            unique_weapon_effective, unique_weapon_chain = effective_properties(unique_weapon, weapon_blocks)
-            base_weapon_effective, base_weapon_chain = effective_properties(base_weapon, weapon_blocks)
-            weapon_diff = top_level_diff(base_weapon_effective, unique_weapon_effective)
-            weapon_leaf = leaf_diff(base_weapon_effective, unique_weapon_effective)
-            weapon_direct = direct_properties(weapon_blocks[unique_weapon])
-
-        candidate_leaf = filtered_leaf_diffs(setup_leaf + weapon_leaf)
-        candidate_fields = sorted({str(entry["path"]).split(".", 1)[0] for entry in candidate_leaf})
+            unique_weapon_effective, unique_weapon_chain = effective_properties(unique_weapon, weapon_blocks); base_weapon_effective, base_weapon_chain = effective_properties(base_weapon, weapon_blocks)
+            weapon_diff = top_level_diff(base_weapon_effective, unique_weapon_effective); weapon_leaf = leaf_diff(base_weapon_effective, unique_weapon_effective); weapon_direct = direct_properties(weapon_blocks[unique_weapon])
+        all_leaf = setup_leaf + weapon_leaf; candidate_leaf = filtered_leaf_diffs(all_leaf); gameplay_leaf = gameplay_leaf_diffs(all_leaf)
+        gameplay_fields = sorted({top_field(entry) for entry in gameplay_leaf}); gameplay_counts.update(gameplay_fields)
         entries[unique_name] = {
-            "class": class_name, "base_family": base_name,
-            "unique_general_setup_sid": unique_setup, "base_general_setup_sid": base_setup,
-            "unique_weapon_sid": unique_weapon, "base_weapon_sid": base_weapon,
-            "linked_weapon_candidates": users.get(unique_setup, []),
-            "signature_candidate_fields": candidate_fields,
-            "signature_candidate_leaf_diffs": candidate_leaf,
+            "class": class_name, "base_family": base_name, "unique_general_setup_sid": unique_setup, "base_general_setup_sid": base_setup,
+            "unique_weapon_sid": unique_weapon, "base_weapon_sid": base_weapon, "linked_weapon_candidates": users.get(unique_setup, []),
+            "signature_candidate_fields": sorted({top_field(entry) for entry in candidate_leaf}), "signature_candidate_leaf_diffs": candidate_leaf,
+            "gameplay_signature_candidate": {"fields": gameplay_fields, "groups": group_gameplay_diffs(gameplay_leaf), "leaf_diffs": gameplay_leaf},
             "general_setup": {"inheritance_chain": unique_setup_chain, "base_inheritance_chain": base_setup_chain, "direct_overrides": setup_direct, "effective_diff_vs_base": setup_diff, "leaf_diff_vs_base": setup_leaf},
             "weapon_prototype": {"inheritance_chain": unique_weapon_chain, "base_inheritance_chain": base_weapon_chain, "direct_overrides": weapon_direct, "effective_diff_vs_base": weapon_diff, "leaf_diff_vs_base": weapon_leaf},
         }
 
     return {
-        "summary": {"registry_uniques": len(registry.get("uniques", {})), "analyzed": len(entries), "unresolved": len(unresolved), "by_class": dict(sorted(class_counts.items()))},
-        "notes": [
-            "effective values resolve refkey inheritance before comparison.",
-            "Nested structs are parsed structurally and deep-merged so inherited leaves are retained.",
-            "leaf_diff_vs_base reports changed leaf paths instead of replacing an entire nested struct in the compact view.",
-            "numeric_delta.percent is the relative Unique-vs-base change when both leaves are compatible numeric values and the base is non-zero.",
-            "signature_candidate_leaf_diffs filters identity/plumbing fields but remains analysis evidence, not an automatic balance recommendation.",
-        ],
+        "summary": {"registry_uniques": len(registry.get("uniques", {})), "analyzed": len(entries), "unresolved": len(unresolved), "by_class": dict(sorted(class_counts.items())), "gameplay_fields_seen": dict(sorted(gameplay_counts.items()))},
+        "notes": ["effective values resolve refkey inheritance before comparison.", "Nested structs are deep-merged before leaf comparison.", "gameplay_signature_candidate is a deliberately compact design input; it excludes assets, economy, attachments, NPC-only values and other plumbing.", "The gameplay shortlist describes Vanilla differences only. It does not automatically prescribe BPRUE effects or balance values."],
         "unresolved": unresolved, "uniques": entries, "out_of_scope": registry.get("out_of_scope", {}),
     }
 
 
 def format_leaf(entry: dict[str, object]) -> str:
-    base = entry.get("base"); unique = entry.get("unique"); suffix = ""
-    delta = entry.get("numeric_delta")
+    suffix = ""; delta = entry.get("numeric_delta")
     if isinstance(delta, dict):
         parts = []
         if "absolute" in delta: parts.append(f"Δ {delta['absolute']:+g}")
         if "percent" in delta: parts.append(f"{delta['percent']:+.1f}%")
         if parts: suffix = " (" + ", ".join(parts) + ")"
-    return f"    {entry['path']}: {base} -> {unique}{suffix}"
+    return f"      {entry['path']}: {entry.get('base')} -> {entry.get('unique')}{suffix}"
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Compare Vanilla Unique weapons with their BPRUE base families.")
     parser.add_argument("--output", type=Path, default=UNIQUE_WEAPON_ANALYSIS)
-    parser.add_argument("--print-details", action="store_true", help="Print leaf-level Unique-vs-base differences after the summary.")
-    args = parser.parse_args()
-    report = analyze(); ensure_reports_dir()
-    args.output.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    parser.add_argument("--print-details", action="store_true", help="Print the full non-plumbing leaf-level comparison.")
+    parser.add_argument("--print-signatures", action="store_true", help="Print only gameplay-relevant differences for signature-module design.")
+    args = parser.parse_args(); report = analyze(); ensure_reports_dir(); args.output.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     summary = report["summary"]
     print(f"Unique weapon analysis: registry={summary['registry_uniques']} | analyzed={summary['analyzed']} | unresolved={summary['unresolved']}")
-    print("By class: " + ", ".join(f"{key}={value}" for key, value in summary["by_class"].items()))
-    print(f"Report: {args.output}")
-    if args.print_details:
-        for name, entry in report["uniques"].items():
+    print("By class: " + ", ".join(f"{key}={value}" for key, value in summary["by_class"].items())); print(f"Report: {args.output}")
+    for name, entry in report["uniques"].items():
+        if args.print_signatures:
+            candidate = entry["gameplay_signature_candidate"]
+            print(f"\n{name} [{entry['class']}] <- {entry['base_family']} | gameplay: {', '.join(candidate['fields']) or '(none)'}")
+            for group in candidate["groups"]:
+                print(f"    {group['field']}:")
+                for diff in group["changes"]: print(format_leaf(diff))
+        elif args.print_details:
             print(f"\n{name} [{entry['class']}] <- {entry['base_family']}")
             diffs = entry["signature_candidate_leaf_diffs"]
             if not diffs: print("    (no non-plumbing differences)")
