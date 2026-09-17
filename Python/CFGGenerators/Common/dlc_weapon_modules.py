@@ -136,7 +136,8 @@ def render_dlc_signature_effects(pack: str) -> str:
     """Render DLC signature effects into DLCGameData only.
 
     These use only effect types already exercised by Vanilla/BPRUE; the DLC layer
-    introduces no new effect mechanics.
+    introduces no new effect mechanics. Durability-per-shot effects inherit the
+    same Vanilla DurabilityPerShotTemplate used by existing BPRUE effects.
     """
     if pack != "DLC1":
         return "// AUTO-GENERATED - no BPRUE signature effects for this DLC pack\n"
@@ -161,18 +162,20 @@ def render_dlc_signature_effects(pack: str) -> str:
         ("DispersionPos20", "Dispersion", "bprue_accuracy", "-20%", "Positive"),
         ("DispersionPos25", "Dispersion", "bprue_accuracy", "-25%", "Positive"),
         ("DurabilityPos30", "Durability", "bprue_durability", "30%", "Positive"),
-        ("DurabilityPerShotPos15", "DurabilityPerShot", "bprue_weapon_wear", "-15%", "Positive"),
-        ("DurabilityPerShotPos25", "DurabilityPerShot", "bprue_weapon_wear", "-25%", "Positive"),
-        ("DurabilityPerShotPenalty10", "DurabilityPerShot", "bprue_weapon_wear", "10%", "Negative"),
         ("FireIntervalNeg10", "FireInterval", "bprue_fire_rate", "-10%", "Positive"),
         ("FireIntervalNeg15", "FireInterval", "bprue_fire_rate", "-15%", "Positive"),
         ("DamagePenalty10", "WeaponDamage", "bprue_damage", "-10%", "Negative"),
+    )
+    durability_specs = (
+        ("DurabilityPerShotPos15", "15%", "Positive"),
+        ("DurabilityPerShotPos25", "25%", "Positive"),
+        ("DurabilityPerShotPenalty10", "-10%", "Negative"),
     )
     lines = [
         "// -----------------------------------------------------------------------------",
         "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND",
         f"// BPRUE signature effects for {pack}; intentionally scoped to DLCGameData.",
-        "// Uses only established Vanilla/BPRUE EEffectType mechanics.",
+        "// Uses only established Vanilla/BPRUE effect mechanics.",
         "// -----------------------------------------------------------------------------",
         "",
     ]
@@ -186,6 +189,20 @@ def render_dlc_signature_effects(pack: str) -> str:
             f"   ValueMin = {value}",
             f"   ValueMax = {value}",
             "   bIsPermanent = true",
+            f"   Positive = EBeneficial::{beneficial}",
+            "   ShowUpgradeEffectValue = true",
+            "   ShowUpgradeEffect = true",
+            "struct.end",
+            "",
+        ]
+    for token, value, beneficial in durability_specs:
+        sid = f"BPRUE_{pack}_{token}Effect"
+        lines += [
+            f"{sid} : struct.begin {{refurl=@BaseGame/EffectPrototypes.cfg;refkey=DurabilityPerShotTemplate}}",
+            f"   SID = {sid}",
+            "   LocalizationSID = bprue_weapon_wear",
+            f"   ValueMin = {value}",
+            f"   ValueMax = {value}",
             f"   Positive = EBeneficial::{beneficial}",
             "   ShowUpgradeEffectValue = true",
             "   ShowUpgradeEffect = true",
