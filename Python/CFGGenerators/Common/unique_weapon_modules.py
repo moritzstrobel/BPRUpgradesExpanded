@@ -8,6 +8,7 @@ from pathlib import Path
 from upgrade_build_model import UpgradeBuildModel, UpgradeDefinition
 
 CONFIG_PATH = Path(__file__).with_name("unique_weapons.json")
+SIGNATURE_CONFIG_PATH = Path(__file__).with_name("unique_signatures.json")
 
 CLASS_CONFIG_KEYS = {
     "AssaultRifles": "ar",
@@ -23,6 +24,10 @@ def load_unique_config() -> dict:
     return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
 
 
+def load_signature_config() -> dict:
+    return json.loads(SIGNATURE_CONFIG_PATH.read_text(encoding="utf-8"))
+
+
 def _unique_prefix(name: str) -> str:
     token = re.sub(r"[^A-Za-z0-9]", "", name)
     return f"BPRUEUnique{token}"
@@ -35,13 +40,7 @@ def _clone_sid(source_sid: str, base_prefix: str, unique_prefix: str) -> str:
 
 
 def add_unique_modules(model: UpgradeBuildModel, configs: dict) -> int:
-    """Clone every BPRUE module of each base family onto its Unique GeneralSetup.
-
-    This runs after class-specific and shared modules have been built, so a Unique
-    receives the complete BPRUE package of its base family (including stock/shared
-    modules and existing family signatures) with fresh prototype SIDs. A later
-    Unique-specific signature can be added without changing this mechanism.
-    """
+    """Clone every BPRUE module of each base family onto its Unique GeneralSetup."""
     unique_config = load_unique_config()
     source_by_setup = model.by_general_setup()
     added = 0
@@ -80,3 +79,135 @@ def add_unique_modules(model: UpgradeBuildModel, configs: dict) -> int:
             added += 1
 
     return added
+
+
+def add_unique_signatures(model: UpgradeBuildModel) -> int:
+    """Add the one-off BPRUE signature module defined for each supported Unique.
+
+    Signature design is intentionally separate from base-family cloning. This lets
+    a Unique keep the complete family package while receiving one extra module that
+    either extends its Vanilla identity or supplies an identity where Vanilla does not.
+    """
+    uniques = load_unique_config().get("uniques", {})
+    signatures = load_signature_config().get("signatures", {})
+    added = 0
+
+    unknown = sorted(set(signatures) - set(uniques))
+    if unknown:
+        raise ValueError("Unique signatures reference unknown weapons: " + ", ".join(unknown))
+
+    for unique_name, signature in signatures.items():
+        unique = uniques[unique_name]
+        if unique["class"] != "AssaultRifles":
+            # First implementation batch is intentionally AR-only. Other classes
+            # are added to the same registry as their designs are approved.
+            continue
+        token = re.sub(r"[^A-Za-z0-9]", "", unique_name)
+        key_token = "".join(part.capitalize() for part in signature["key"].split("_"))
+        model.add(UpgradeDefinition(
+            sid=f"BPRUEUnique{token}_Upgrade_BPRUE_Signature_{key_token}",
+            general_setup_sid=unique["general_setup_sid"],
+            weapon_class="AR",
+            group="Signature",
+            target_part=signature["target_part"],
+            text_sid=f"sid_bprue_unique_{signature['key']}_name",
+            hint_sid=f"sid_bprue_unique_{signature['key']}_description",
+            image="",
+            icon="Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_Depreciation.T_PDA_Upgrades_Icon_Depreciation'",
+            cost=int(signature["cost"]),
+            effects=tuple(signature["effects"]),
+            template_sid="BPRUE_ModuleTemplate",
+            standalone=True,
+        ))
+        added += 1
+    return added
+
+
+def render_unique_signature_effects() -> str:
+    """Render only effects that do not already exist in Vanilla/class/shared pools."""
+    return r'''// AUTO-GENERATED - BPRUE Unique signature effects
+
+BPRUE_Unique_WeightDown20Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Unique_WeightDown20Effect
+   Type = EEffectType::WeaponItemWeight
+   LocalizationSID = bprue_weight
+   ValueMin = -20%
+   ValueMax = -20%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
+BPRUE_Unique_AimingTimePos20Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Unique_AimingTimePos20Effect
+   Type = EEffectType::AimingTime
+   LocalizationSID = bprue_aiming_speed
+   ValueMin = -20%
+   ValueMax = -20%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
+BPRUE_Unique_FireIntervalNeg15Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Unique_FireIntervalNeg15Effect
+   Type = EEffectType::FireInterval
+   LocalizationSID = bprue_fire_rate
+   ValueMin = -15%
+   ValueMax = -15%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
+BPRUE_Unique_ReloadingTimeNeg15Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Unique_ReloadingTimeNeg15Effect
+   Type = EEffectType::ReloadingTime
+   LocalizationSID = bprue_reload_speed
+   ValueMin = -15%
+   ValueMax = -15%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
+BPRUE_Unique_DurabilityPerShotNeg25Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=DurabilityPerShotTemplate}
+   SID = BPRUE_Unique_DurabilityPerShotNeg25Effect
+   LocalizationSID = bprue_weapon_wear
+   ValueMin = 25%
+   ValueMax = 25%
+   Positive = EBeneficial::Negative
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
+BPRUE_Unique_DurabilityPos30Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Unique_DurabilityPos30Effect
+   Type = EEffectType::Durability
+   LocalizationSID = bprue_durability
+   ValueMin = 30%
+   ValueMax = 30%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
+BPRUE_Unique_SemiBurstOnlyEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Unique_SemiBurstOnlyEffect
+   Text = Change fire type
+   Type = EEffectType::ChangeFireTypes
+   LocalizationSID = bprue_fire_modes_semi_burst
+   bIsPermanent = true
+   FireTypes : struct.begin
+      [0] = EFireType::SemiAutomatic
+      [1] = EFireType::Queue
+   struct.end
+   ShowUpgradeEffectValue = false
+   ShowUpgradeEffect = true
+struct.end
+'''
