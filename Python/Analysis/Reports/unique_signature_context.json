@@ -4,14 +4,15 @@
     "dlc_weapons": 12,
     "dlc_standalone": 1,
     "dlc_unresolved": 0,
-    "basegame_player_attribute_pairs_resolved": 0,
-    "dlc_player_attribute_pairs_resolved": 0,
+    "basegame_player_attribute_pairs_resolved": 24,
+    "dlc_player_attribute_pairs_resolved": 10,
     "vanilla_cfg_files_scanned": 20
   },
   "notes": [
     "DLC inheritance follows refkey/refurl across checked-in VanillaReference CFG files.",
     "Duplicate SIDs are source-aware; DLC lookups constrain both content pack and prototype file domain.",
     "DLC PlayerWeaponAttributes compare BaseGame PlayerWeaponAttributesPrototypes.cfg against the content pack's WeaponAttributesPrototypes.cfg.",
+    "Flattened BaseGame VanillaReference files are used as fallback targets for BaseGame refurl inheritance when DLC files share the same basename.",
     "DLC ItemPrototypes are discovered from GeneralWeaponSetup when weapon_sid is not explicitly registered.",
     "base_family controls BPRUE module inheritance; comparison_base independently controls signature analysis.",
     "Missing cross-file sources are reported in unresolved_inheritance instead of silently producing misleading None diffs."
@@ -242,31 +243,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunArev_ST_Player",
         "unique_sid": "GunArevPrecise_AR_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunArev_ST_Player"
+          "GunArev_ST_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "GunArevPrecise_AR_Player",
-          "GunArev_ST_Player"
+          "GunArev_ST_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "DefaultWeaponSettingsSID",
@@ -449,31 +439,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunG37_ST_Player",
         "unique_sid": "GunG37V2_ST_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunG37_ST_Player"
+          "GunG37_ST_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "GunG37V2_ST_Player",
-          "GunG37_ST_Player"
+          "GunG37_ST_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "DefaultWeaponSettingsSID",
@@ -570,31 +549,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunThreeLine_SP_Player",
         "unique_sid": "GunGonta_SP_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunThreeLine_SP_Player"
+          "GunThreeLine_SP_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "GunGonta_SP_Player",
-          "GunThreeLine_SP_Player"
+          "GunThreeLine_SP_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "DefaultWeaponSettingsSID",
@@ -947,31 +915,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunPKP_MG_Player",
         "unique_sid": "GunPKP_Korshunov_MG_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunPKP_MG_Player"
+          "GunPKP_MG_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "GunPKP_Korshunov_MG_Player",
-          "GunPKP_MG_Player"
+          "GunPKP_MG_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "DefaultWeaponSettingsSID",
@@ -1006,31 +963,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunUDP_HG_Player",
         "unique_sid": "GunUDP_Deadeye_HG_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunUDP_HG_Player"
+          "GunUDP_HG_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "GunUDP_Deadeye_HG_Player",
-          "GunUDP_HG_Player"
+          "GunUDP_HG_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "AnimBlueprint",
@@ -1133,31 +1079,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunM701_SP_Player",
         "unique_sid": "Gun_Cavalier_SR_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunM701_SP_Player"
+          "GunM701_SP_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "Gun_Cavalier_SR_Player",
-          "GunM701_SP_Player"
+          "GunM701_SP_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "DefaultWeaponSettingsSID",
@@ -1351,31 +1286,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunAK74_ST_Player",
         "unique_sid": "Gun_Combatant_AR_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunAK74_ST_Player"
+          "GunAK74_ST_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "Gun_Combatant_AR_Player",
-          "GunAK74_ST_Player"
+          "GunAK74_ST_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "DefaultWeaponSettingsSID",
@@ -1410,31 +1334,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunFora_ST_Player",
         "unique_sid": "Gun_Decider_AR_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunFora_ST_Player"
+          "GunFora_ST_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "Gun_Decider_AR_Player",
-          "GunFora_ST_Player"
+          "GunFora_ST_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "DefaultWeaponSettingsSID",
@@ -1587,31 +1500,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunAPB_HG_Player",
         "unique_sid": "Gun_Encourage_HG_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunAPB_HG_Player"
+          "GunAPB_HG_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "Gun_Encourage_HG_Player",
-          "GunAPB_HG_Player"
+          "GunAPB_HG_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "DefaultWeaponSettingsSID",
@@ -1753,31 +1655,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunPM_HG_Player",
         "unique_sid": "Gun_Kaimanov_HG_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunPM_HG_Player"
+          "GunPM_HG_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "Gun_Kaimanov_HG_Player",
-          "GunPM_HG_Player"
+          "GunPM_HG_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "DefaultWeaponSettingsSID",
@@ -1933,31 +1824,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunUDP_HG_Player",
         "unique_sid": "Gun_Krivenko_HG_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunUDP_HG_Player"
+          "GunUDP_HG_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "Gun_Krivenko_HG_Player",
-          "GunUDP_HG_Player"
+          "GunUDP_HG_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "DefaultWeaponSettingsSID",
@@ -2097,31 +1977,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunAK74_ST_Player",
         "unique_sid": "Gun_Lummox_AR_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunAK74_ST_Player"
+          "GunAK74_ST_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "Gun_Lummox_AR_Player",
-          "GunAK74_ST_Player"
+          "GunAK74_ST_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "DefaultWeaponSettingsSID",
@@ -2185,31 +2054,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunSVDM_SP_Player",
         "unique_sid": "Gun_Lynx_SR_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunSVDM_SP_Player"
+          "GunSVDM_SP_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "Gun_Lynx_SR_Player",
-          "GunSVDM_SP_Player"
+          "GunSVDM_SP_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "DefaultWeaponSettingsSID",
@@ -2244,31 +2102,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunGvintar_ST_Player",
         "unique_sid": "Gun_Merc_AR_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunGvintar_ST_Player"
+          "GunGvintar_ST_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "Gun_Merc_AR_Player",
-          "GunGvintar_ST_Player"
+          "GunGvintar_ST_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "DefaultWeaponSettingsSID",
@@ -2454,31 +2301,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunM860_SG_Player",
         "unique_sid": "Gun_Predator_SG_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunM860_SG_Player"
+          "GunM860_SG_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "Gun_Predator_SG_Player",
-          "GunM860_SG_Player"
+          "GunM860_SG_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "DefaultWeaponSettingsSID",
@@ -2629,31 +2465,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunZubr_PP_Player",
         "unique_sid": "Gun_RatKiller_SMG_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunZubr_PP_Player"
+          "GunZubr_PP_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "Gun_RatKiller_SMG_Player",
-          "GunZubr_PP_Player"
+          "GunZubr_PP_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "DefaultWeaponSettingsSID",
@@ -2946,31 +2771,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunViper_PP_Player",
         "unique_sid": "Gun_Shakh_SMG_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunViper_PP_Player"
+          "GunViper_PP_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "Gun_Shakh_SMG_Player",
-          "GunViper_PP_Player"
+          "GunViper_PP_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "DefaultWeaponSettingsSID",
@@ -3233,31 +3047,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunM16_ST_Player",
         "unique_sid": "Gun_Sharpshooter_AR_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunM16_ST_Player"
+          "GunM16_ST_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "Gun_Sharpshooter_AR_Player",
-          "GunM16_ST_Player"
+          "GunM16_ST_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "AnimBlueprint",
@@ -3404,31 +3207,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunAKU_PP_Player",
         "unique_sid": "Gun_Silence_SMG_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunAKU_PP_Player"
+          "GunAKU_PP_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "Gun_Silence_SMG_Player",
-          "GunAKU_PP_Player"
+          "GunAKU_PP_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "DefaultWeaponSettingsSID",
@@ -3525,31 +3317,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunSPSA_SG_Player",
         "unique_sid": "Gun_Sledgehammer_SG_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunSPSA_SG_Player"
+          "GunSPSA_SG_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "Gun_Sledgehammer_SG_Player",
-          "GunSPSA_SG_Player"
+          "GunSPSA_SG_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "DefaultWeaponSettingsSID",
@@ -3899,31 +3680,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunAKU_PP_Player",
         "unique_sid": "Gun_Spitfire_SMG_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunAKU_PP_Player"
+          "GunAKU_PP_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "Gun_Spitfire_SMG_Player",
-          "GunAKU_PP_Player"
+          "GunAKU_PP_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "DefaultWeaponSettingsSID",
@@ -4008,31 +3778,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunBucket_PP_Player",
         "unique_sid": "Gun_Spitter_SMG_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunBucket_PP_Player"
+          "GunBucket_PP_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "Gun_Spitter_SMG_Player",
-          "GunBucket_PP_Player"
+          "GunBucket_PP_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "DefaultWeaponSettingsSID",
@@ -4303,31 +4062,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunRam2_SG_Player",
         "unique_sid": "Gun_Texas_SG_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunRam2_SG_Player"
+          "GunRam2_SG_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "Gun_Texas_SG_Player",
-          "GunRam2_SG_Player"
+          "GunRam2_SG_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "DefaultWeaponSettingsSID",
@@ -4622,31 +4370,20 @@
       "player_weapon_attributes": {
         "base_sid": "GunSVU_SP_Player",
         "unique_sid": "Gun_Whip_SR_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "PlayerWeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunSVU_SP_Player"
+          "GunSVU_SP_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "Gun_Whip_SR_Player",
-          "GunSVU_SP_Player"
+          "GunSVU_SP_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
             "path": "DefaultWeaponSettingsSID",
@@ -5645,196 +5382,80 @@
       "player_weapon_attributes": {
         "base_sid": "GunArev_ST_Player",
         "unique_sid": "GunArevLight_AR_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "DLCGameData\\DLC1\\WeaponData\\WeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunArev_ST_Player"
+          "GunArev_ST_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "GunArevLight_AR_Player",
-          "GunArev_ST_Player"
+          "GunArev_ST_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
-            "path": "AIParameters",
-            "base": null,
-            "unique": {
-              "BehaviorTypes": {
-                "Newbie": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "4",
-                    "MaxShots": "6",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Experienced": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Veteran": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Master": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Zombie": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "2.0",
-                    "MaxSecondsDelay": "2.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.8",
-                    "MaxSecondsDelay": "2.0"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.5",
-                    "MaxSecondsDelay": "1.8"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                }
-              }
-            },
-            "change": "added"
+            "path": "AIParameters.BehaviorTypes.Experienced.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
           },
           {
-            "path": "AimShellShutterSocketName",
-            "base": null,
-            "unique": "AimShellShutterFOV",
-            "change": "added"
+            "path": "AIParameters.BehaviorTypes.Experienced.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Master.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Master.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Newbie.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Newbie.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Veteran.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Veteran.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Zombie.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Zombie.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
           },
           {
             "path": "AnimBlueprint",
@@ -5849,22 +5470,10 @@
             "change": "changed"
           },
           {
-            "path": "MuzzleSocketName",
-            "base": null,
-            "unique": "MuzzleFOV",
-            "change": "added"
-          },
-          {
             "path": "SID",
             "base": "GunArev_ST_Player",
             "unique": "GunArevLight_AR_Player",
             "change": "changed"
-          },
-          {
-            "path": "ShellShutterSocketName",
-            "base": null,
-            "unique": "ShellShutterFOV",
-            "change": "added"
           }
         ]
       },
@@ -6991,196 +6600,80 @@
       "player_weapon_attributes": {
         "base_sid": "GunM860_SG_Player",
         "unique_sid": "GunClapper_SG_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "DLCGameData\\DLC1\\WeaponData\\WeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunM860_SG_Player"
+          "GunM860_SG_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "GunClapper_SG_Player",
-          "GunM860_SG_Player"
+          "GunM860_SG_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
-            "path": "AIParameters",
-            "base": null,
-            "unique": {
-              "BehaviorTypes": {
-                "Newbie": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "4",
-                    "MaxShots": "6",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Experienced": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Veteran": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Master": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Zombie": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "2.0",
-                    "MaxSecondsDelay": "2.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.8",
-                    "MaxSecondsDelay": "2.0"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.5",
-                    "MaxSecondsDelay": "1.8"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                }
-              }
-            },
-            "change": "added"
+            "path": "AIParameters.BehaviorTypes.Experienced.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
           },
           {
-            "path": "AimShellShutterSocketName",
-            "base": null,
-            "unique": "AimShellShutterFOV",
-            "change": "added"
+            "path": "AIParameters.BehaviorTypes.Experienced.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Master.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Master.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Newbie.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Newbie.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Veteran.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Veteran.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Zombie.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Zombie.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
           },
           {
             "path": "DefaultWeaponSettingsSID",
@@ -7189,22 +6682,10 @@
             "change": "changed"
           },
           {
-            "path": "MuzzleSocketName",
-            "base": null,
-            "unique": "MuzzleFOV",
-            "change": "added"
-          },
-          {
             "path": "SID",
             "base": "GunM860_SG_Player",
             "unique": "GunClapper_SG_Player",
             "change": "changed"
-          },
-          {
-            "path": "ShellShutterSocketName",
-            "base": null,
-            "unique": "ShellShutterFOV",
-            "change": "added"
           }
         ]
       },
@@ -8175,196 +7656,80 @@
       "player_weapon_attributes": {
         "base_sid": "GunD12_SG_Player",
         "unique_sid": "GunDefender_SG_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "DLCGameData\\DLC1\\WeaponData\\WeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunD12_SG_Player"
+          "GunD12_SG_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "GunDefender_SG_Player",
-          "GunD12_SG_Player"
+          "GunD12_SG_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
-            "path": "AIParameters",
-            "base": null,
-            "unique": {
-              "BehaviorTypes": {
-                "Newbie": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "4",
-                    "MaxShots": "6",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Experienced": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Veteran": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Master": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Zombie": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "2.0",
-                    "MaxSecondsDelay": "2.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.8",
-                    "MaxSecondsDelay": "2.0"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.5",
-                    "MaxSecondsDelay": "1.8"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                }
-              }
-            },
-            "change": "added"
+            "path": "AIParameters.BehaviorTypes.Experienced.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
           },
           {
-            "path": "AimShellShutterSocketName",
-            "base": null,
-            "unique": "AimShellShutterFOV",
-            "change": "added"
+            "path": "AIParameters.BehaviorTypes.Experienced.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Master.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Master.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Newbie.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Newbie.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Veteran.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Veteran.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Zombie.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Zombie.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
           },
           {
             "path": "AnimBlueprint",
@@ -8379,22 +7744,10 @@
             "change": "changed"
           },
           {
-            "path": "MuzzleSocketName",
-            "base": null,
-            "unique": "MuzzleFOV",
-            "change": "added"
-          },
-          {
             "path": "SID",
             "base": "GunD12_SG_Player",
             "unique": "GunDefender_SG_Player",
             "change": "changed"
-          },
-          {
-            "path": "ShellShutterSocketName",
-            "base": null,
-            "unique": "ShellShutterFOV",
-            "change": "added"
           }
         ]
       },
@@ -9268,196 +8621,80 @@
       "player_weapon_attributes": {
         "base_sid": "GunDnipro_ST_Player",
         "unique_sid": "GunDniproDuty_ST_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "DLCGameData\\DLC1\\WeaponData\\WeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunDnipro_ST_Player"
+          "GunDnipro_ST_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "GunDniproDuty_ST_Player",
-          "GunDnipro_ST_Player"
+          "GunDnipro_ST_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
-            "path": "AIParameters",
-            "base": null,
-            "unique": {
-              "BehaviorTypes": {
-                "Newbie": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "4",
-                    "MaxShots": "6",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Experienced": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Veteran": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Master": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Zombie": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "2.0",
-                    "MaxSecondsDelay": "2.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.8",
-                    "MaxSecondsDelay": "2.0"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.5",
-                    "MaxSecondsDelay": "1.8"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                }
-              }
-            },
-            "change": "added"
+            "path": "AIParameters.BehaviorTypes.Experienced.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
           },
           {
-            "path": "AimShellShutterSocketName",
-            "base": null,
-            "unique": "AimShellShutterFOV",
-            "change": "added"
+            "path": "AIParameters.BehaviorTypes.Experienced.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Master.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Master.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Newbie.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Newbie.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Veteran.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Veteran.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Zombie.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Zombie.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
           },
           {
             "path": "DefaultWeaponSettingsSID",
@@ -9466,22 +8703,10 @@
             "change": "changed"
           },
           {
-            "path": "MuzzleSocketName",
-            "base": null,
-            "unique": "MuzzleFOV",
-            "change": "added"
-          },
-          {
             "path": "SID",
             "base": "GunDnipro_ST_Player",
             "unique": "GunDniproDuty_ST_Player",
             "change": "changed"
-          },
-          {
-            "path": "ShellShutterSocketName",
-            "base": null,
-            "unique": "ShellShutterFOV",
-            "change": "added"
           }
         ]
       },
@@ -10368,208 +9593,86 @@
       "player_weapon_attributes": {
         "base_sid": "GunGP3A_DMR_Player",
         "unique_sid": "GunFallschirmjager_DMR_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "DLCGameData\\DLC1\\WeaponData\\WeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunGP3A_DMR_Player"
+          "GunGP3A_DMR_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "GunFallschirmjager_DMR_Player",
-          "GunGP3A_DMR_Player"
+          "GunGP3A_DMR_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
-            "path": "AIParameters",
-            "base": null,
-            "unique": {
-              "BehaviorTypes": {
-                "Newbie": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "4",
-                    "MaxShots": "6",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Experienced": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Veteran": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Master": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Zombie": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "2.0",
-                    "MaxSecondsDelay": "2.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.8",
-                    "MaxSecondsDelay": "2.0"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.5",
-                    "MaxSecondsDelay": "1.8"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                }
-              }
-            },
-            "change": "added"
+            "path": "AIParameters.BehaviorTypes.Experienced.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
           },
           {
-            "path": "AimShellShutterSocketName",
-            "base": null,
-            "unique": "AimShellShutterFOV",
-            "change": "added"
+            "path": "AIParameters.BehaviorTypes.Experienced.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Master.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Master.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Newbie.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Newbie.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Veteran.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Veteran.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Zombie.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Zombie.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
           },
           {
             "path": "DefaultWeaponSettingsSID",
             "base": "GunGP3A_DMR_Player",
             "unique": "GunFallschirmjager_DMR_Player",
             "change": "changed"
-          },
-          {
-            "path": "MuzzleSocketName",
-            "base": null,
-            "unique": "MuzzleFOV",
-            "change": "added"
           },
           {
             "path": "ParticlesBasedOnHeating.[0].PostShooting.PFXPath",
@@ -10600,12 +9703,6 @@
             "base": "GunGP3A_DMR_Player",
             "unique": "GunFallschirmjager_DMR_Player",
             "change": "changed"
-          },
-          {
-            "path": "ShellShutterSocketName",
-            "base": null,
-            "unique": "ShellShutterFOV",
-            "change": "added"
           }
         ]
       },
@@ -11692,196 +10789,80 @@
       "player_weapon_attributes": {
         "base_sid": "GunGP3A_DMR_Player",
         "unique_sid": "GunHSG72_DMR_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "DLCGameData\\DLC1\\WeaponData\\WeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunGP3A_DMR_Player"
+          "GunGP3A_DMR_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "GunHSG72_DMR_Player",
-          "GunGP3A_DMR_Player"
+          "GunGP3A_DMR_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
-            "path": "AIParameters",
-            "base": null,
-            "unique": {
-              "BehaviorTypes": {
-                "Newbie": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "4",
-                    "MaxShots": "6",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Experienced": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Veteran": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Master": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Zombie": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "2.0",
-                    "MaxSecondsDelay": "2.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.8",
-                    "MaxSecondsDelay": "2.0"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.5",
-                    "MaxSecondsDelay": "1.8"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                }
-              }
-            },
-            "change": "added"
+            "path": "AIParameters.BehaviorTypes.Experienced.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
           },
           {
-            "path": "AimShellShutterSocketName",
-            "base": null,
-            "unique": "AimShellShutterFOV",
-            "change": "added"
+            "path": "AIParameters.BehaviorTypes.Experienced.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Master.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Master.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Newbie.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Newbie.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Veteran.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Veteran.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Zombie.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Zombie.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
           },
           {
             "path": "AnimBlueprint",
@@ -11894,12 +10875,6 @@
             "base": "GunGP3A_DMR_Player",
             "unique": "GunHSG72_DMR_Player",
             "change": "changed"
-          },
-          {
-            "path": "MuzzleSocketName",
-            "base": null,
-            "unique": "MuzzleFOV",
-            "change": "added"
           },
           {
             "path": "ParticlesBasedOnHeating.[0].PostShooting.PFXPath",
@@ -11930,12 +10905,6 @@
             "base": "GunGP3A_DMR_Player",
             "unique": "GunHSG72_DMR_Player",
             "change": "changed"
-          },
-          {
-            "path": "ShellShutterSocketName",
-            "base": null,
-            "unique": "ShellShutterFOV",
-            "change": "added"
           }
         ]
       },
@@ -12790,196 +11759,80 @@
       "player_weapon_attributes": {
         "base_sid": "GunKharod_ST_Player",
         "unique_sid": "GunKharodFreedom_ST_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "DLCGameData\\DLC1\\WeaponData\\WeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunKharod_ST_Player"
+          "GunKharod_ST_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "GunKharodFreedom_ST_Player",
-          "GunKharod_ST_Player"
+          "GunKharod_ST_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
-            "path": "AIParameters",
-            "base": null,
-            "unique": {
-              "BehaviorTypes": {
-                "Newbie": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "4",
-                    "MaxShots": "6",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Experienced": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Veteran": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Master": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Zombie": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "2.0",
-                    "MaxSecondsDelay": "2.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.8",
-                    "MaxSecondsDelay": "2.0"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.5",
-                    "MaxSecondsDelay": "1.8"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                }
-              }
-            },
-            "change": "added"
+            "path": "AIParameters.BehaviorTypes.Experienced.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
           },
           {
-            "path": "AimShellShutterSocketName",
-            "base": null,
-            "unique": "AimShellShutterFOV",
-            "change": "added"
+            "path": "AIParameters.BehaviorTypes.Experienced.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Master.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Master.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Newbie.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Newbie.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Veteran.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Veteran.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Zombie.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Zombie.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
           },
           {
             "path": "DefaultWeaponSettingsSID",
@@ -12988,22 +11841,10 @@
             "change": "changed"
           },
           {
-            "path": "MuzzleSocketName",
-            "base": null,
-            "unique": "MuzzleFOV",
-            "change": "added"
-          },
-          {
             "path": "SID",
             "base": "GunKharod_ST_Player",
             "unique": "GunKharodFreedom_ST_Player",
             "change": "changed"
-          },
-          {
-            "path": "ShellShutterSocketName",
-            "base": null,
-            "unique": "ShellShutterFOV",
-            "change": "added"
           }
         ]
       },
@@ -13983,196 +12824,80 @@
       "player_weapon_attributes": {
         "base_sid": "GunSPSA_SG_Player",
         "unique_sid": "GunSPSA_Sniper_SG_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "DLCGameData\\DLC1\\WeaponData\\WeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunSPSA_SG_Player"
+          "GunSPSA_SG_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "GunSPSA_Sniper_SG_Player",
-          "GunSPSA_SG_Player"
+          "GunSPSA_SG_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
-            "path": "AIParameters",
-            "base": null,
-            "unique": {
-              "BehaviorTypes": {
-                "Newbie": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "4",
-                    "MaxShots": "6",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Experienced": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Veteran": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Master": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Zombie": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "2.0",
-                    "MaxSecondsDelay": "2.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.8",
-                    "MaxSecondsDelay": "2.0"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.5",
-                    "MaxSecondsDelay": "1.8"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                }
-              }
-            },
-            "change": "added"
+            "path": "AIParameters.BehaviorTypes.Experienced.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
           },
           {
-            "path": "AimShellShutterSocketName",
-            "base": null,
-            "unique": "AimShellShutterFOV",
-            "change": "added"
+            "path": "AIParameters.BehaviorTypes.Experienced.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Master.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Master.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Newbie.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Newbie.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Veteran.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Veteran.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Zombie.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Zombie.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
           },
           {
             "path": "AnimBlueprint",
@@ -14187,22 +12912,10 @@
             "change": "changed"
           },
           {
-            "path": "MuzzleSocketName",
-            "base": null,
-            "unique": "MuzzleFOV",
-            "change": "added"
-          },
-          {
             "path": "SID",
             "base": "GunSPSA_SG_Player",
             "unique": "GunSPSA_Sniper_SG_Player",
             "change": "changed"
-          },
-          {
-            "path": "ShellShutterSocketName",
-            "base": null,
-            "unique": "ShellShutterFOV",
-            "change": "added"
           }
         ]
       },
@@ -15033,196 +13746,80 @@
       "player_weapon_attributes": {
         "base_sid": "GunSVU_SP_Player",
         "unique_sid": "GunSVU_CQB_SP_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "DLCGameData\\DLC1\\WeaponData\\WeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunSVU_SP_Player"
+          "GunSVU_SP_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "GunSVU_CQB_SP_Player",
-          "GunSVU_SP_Player"
+          "GunSVU_SP_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
-            "path": "AIParameters",
-            "base": null,
-            "unique": {
-              "BehaviorTypes": {
-                "Newbie": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "4",
-                    "MaxShots": "6",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Experienced": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Veteran": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Master": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Zombie": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "2.0",
-                    "MaxSecondsDelay": "2.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.8",
-                    "MaxSecondsDelay": "2.0"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.5",
-                    "MaxSecondsDelay": "1.8"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                }
-              }
-            },
-            "change": "added"
+            "path": "AIParameters.BehaviorTypes.Experienced.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
           },
           {
-            "path": "AimShellShutterSocketName",
-            "base": null,
-            "unique": "AimShellShutterFOV",
-            "change": "added"
+            "path": "AIParameters.BehaviorTypes.Experienced.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Master.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Master.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Newbie.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Newbie.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Veteran.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Veteran.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Zombie.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Zombie.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
           },
           {
             "path": "AnimBlueprint",
@@ -15237,22 +13834,10 @@
             "change": "changed"
           },
           {
-            "path": "MuzzleSocketName",
-            "base": null,
-            "unique": "MuzzleFOV",
-            "change": "added"
-          },
-          {
             "path": "SID",
             "base": "GunSVU_SP_Player",
             "unique": "GunSVU_CQB_SP_Player",
             "change": "changed"
-          },
-          {
-            "path": "ShellShutterSocketName",
-            "base": null,
-            "unique": "ShellShutterFOV",
-            "change": "added"
           }
         ]
       },
@@ -16248,196 +14833,80 @@
       "player_weapon_attributes": {
         "base_sid": "GunSKP_DMR_Player",
         "unique_sid": "GunTundra_DMR_Player",
-        "resolved": false,
-        "reason": "inheritance_source_missing",
+        "resolved": true,
+        "reason": null,
         "base_source": "PlayerWeaponAttributesPrototypes.cfg",
         "unique_source": "DLCGameData\\DLC1\\WeaponData\\WeaponAttributesPrototypes.cfg",
         "base_inheritance_chain": [
-          "GunSKP_DMR_Player"
+          "GunSKP_DMR_Player",
+          "TemplateWeapon"
         ],
         "unique_inheritance_chain": [
           "GunTundra_DMR_Player",
-          "GunSKP_DMR_Player"
+          "GunSKP_DMR_Player",
+          "TemplateWeapon"
         ],
-        "unresolved_inheritance": [
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          },
-          {
-            "sid": "TemplateWeapon",
-            "reason": "refurl_target_or_parent_missing",
-            "refurl": "../WeaponAttributesPrototypes.cfg",
-            "from_source": "PlayerWeaponAttributesPrototypes.cfg"
-          }
-        ],
+        "unresolved_inheritance": [],
         "leaf_diffs": [
           {
-            "path": "AIParameters",
-            "base": null,
-            "unique": {
-              "BehaviorTypes": {
-                "Newbie": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "4",
-                    "MaxShots": "6",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Experienced": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Veteran": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Master": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.2",
-                    "MaxSecondsDelay": "1.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.0",
-                    "MaxSecondsDelay": "1.2"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "0.8",
-                    "MaxSecondsDelay": "1.0"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                },
-                "Zombie": {
-                  "CombatEffectiveFireDistanceMin": "1000.0",
-                  "CombatEffectiveFireDistanceMax": "2000.0",
-                  "Long": {
-                    "MinShots": "1",
-                    "MaxShots": "2",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "2.0",
-                    "MaxSecondsDelay": "2.5"
-                  },
-                  "Medium": {
-                    "MinShots": "2",
-                    "MaxShots": "3",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.8",
-                    "MaxSecondsDelay": "2.0"
-                  },
-                  "Short": {
-                    "MinShots": "3",
-                    "MaxShots": "4",
-                    "IgnoreDispersionMinShots": "0",
-                    "IgnoreDispersionMaxShots": "0",
-                    "MinSecondsDelay": "1.5",
-                    "MaxSecondsDelay": "1.8"
-                  },
-                  "CharacterWeaponSettingsSID": "TemplateWeapon",
-                  "NonAutomaticWeaponShotDelay": "0.2"
-                }
-              }
-            },
-            "change": "added"
+            "path": "AIParameters.BehaviorTypes.Experienced.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
           },
           {
-            "path": "AimShellShutterSocketName",
-            "base": null,
-            "unique": "AimShellShutterFOV",
-            "change": "added"
+            "path": "AIParameters.BehaviorTypes.Experienced.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Master.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Master.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Newbie.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Newbie.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Veteran.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Veteran.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Zombie.CombatEffectiveFireDistanceMax",
+            "base": "2000.0 // DC: default value for now",
+            "unique": "2000.0",
+            "change": "changed"
+          },
+          {
+            "path": "AIParameters.BehaviorTypes.Zombie.CombatEffectiveFireDistanceMin",
+            "base": "1000.0 // DC: default value for now",
+            "unique": "1000.0",
+            "change": "changed"
           },
           {
             "path": "DefaultWeaponSettingsSID",
@@ -16446,22 +14915,10 @@
             "change": "changed"
           },
           {
-            "path": "MuzzleSocketName",
-            "base": null,
-            "unique": "MuzzleFOV",
-            "change": "added"
-          },
-          {
             "path": "SID",
             "base": "GunSKP_DMR_Player",
             "unique": "GunTundra_DMR_Player",
             "change": "changed"
-          },
-          {
-            "path": "ShellShutterSocketName",
-            "base": null,
-            "unique": "ShellShutterFOV",
-            "change": "added"
           }
         ]
       },
