@@ -101,6 +101,11 @@ def load_base_families() -> dict[tuple[str, str], dict]:
     return result
 
 
+def absolute_identity(props: dict[str, object], allowed_fields: set[str]) -> dict[str, object]:
+    values = {field: props[field] for field in sorted(allowed_fields) if field in props}
+    return {"fields": list(values), "values": values}
+
+
 def build_dlc_context(reference_index: dict[str, tuple[Path, dict[str, list[str]]]]) -> tuple[dict[str, object], list[dict[str, object]]]:
     registry = json.loads(DLC_REGISTRY.read_text(encoding="utf-8")); families = load_base_families(); entries = {}; unresolved = []
     for name, weapon in registry.get("weapons", {}).items():
@@ -108,16 +113,39 @@ def build_dlc_context(reference_index: dict[str, tuple[Path, dict[str, list[str]
         base = families.get((class_name, base_name))
         if not base:
             unresolved.append({"weapon": name, "content_pack": pack, "reason": "base_family_not_found", "class": class_name, "base_family": base_name}); continue
-        dlc_setup_sid = weapon["general_setup_sid"]; base_setup_sid = base["general_setup_sid"]
-        dlc_setup, dlc_setup_chain, dlc_setup_source = resolve_effective(dlc_setup_sid, reference_index); base_setup, base_setup_chain, base_setup_source = resolve_effective(base_setup_sid, reference_index)
-        if not dlc_setup or not base_setup:
-            unresolved.append({"weapon": name, "content_pack": pack, "reason": "general_setup_not_found", "dlc_general_setup_sid": dlc_setup_sid, "base_general_setup_sid": base_setup_sid}); continue
-        setup_diffs = leaf_diff(base_setup, dlc_setup)
+        standalone = bool(weapon.get("standalone", False)); comparison_base = weapon.get("comparison_base", base_name)
+        dlc_setup_sid = weapon["general_setup_sid"]
+        dlc_setup, dlc_setup_chain, dlc_setup_source = resolve_effective(dlc_setup_sid, reference_index)
+        if not dlc_setup:
+            unresolved.append({"weapon": name, "content_pack": pack, "reason": "general_setup_not_found", "dlc_general_setup_sid": dlc_setup_sid}); continue
         dlc_weapon_sid = weapon.get("weapon_sid")
-        weapon_diffs: list[dict[str, object]] = []; dlc_weapon_chain: list[str] = []; base_weapon_chain: list[str] = []; dlc_weapon_source = None; base_weapon_source = None
-        base_weapon_sid = base.get("weapon_sid")
+        dlc_weapon = {}; dlc_weapon_chain: list[str] = []; dlc_weapon_source = None
+        if isinstance(dlc_weapon_sid, str): dlc_weapon, dlc_weapon_chain, dlc_weapon_source = resolve_effective(dlc_weapon_sid, reference_index)
+
+        if standalone or comparison_base is None:
+            entries[name] = {
+                "content_pack": pack, "class": class_name, "base_family": base_name, "comparison_mode": "standalone", "comparison_base": None,
+                "dlc_general_setup_sid": dlc_setup_sid, "base_general_setup_sid": None, "dlc_weapon_sid": dlc_weapon_sid, "base_weapon_sid": None,
+                "gameplay_identity": absolute_identity(dlc_setup, GAMEPLAY_FIELDS),
+                "equipment_identity": absolute_identity(dlc_weapon, EQUIPMENT_FIELDS),
+                "player_weapon_attributes": {"base_sid": None, "unique_sid": dlc_setup.get("PlayerWeaponAttributes"), "resolved": False, "reason": "standalone_no_comparison_base"},
+                "general_setup": {"dlc_source": dlc_setup_source, "base_source": None, "dlc_inheritance_chain": dlc_setup_chain, "base_inheritance_chain": [], "absolute_values": dlc_setup},
+                "weapon_prototype": {"dlc_source": dlc_weapon_source, "base_source": None, "dlc_inheritance_chain": dlc_weapon_chain, "base_inheritance_chain": [], "absolute_values": dlc_weapon},
+            }
+            continue
+
+        comparison_family = families.get((class_name, str(comparison_base)))
+        if not comparison_family:
+            unresolved.append({"weapon": name, "content_pack": pack, "reason": "comparison_base_not_found", "class": class_name, "comparison_base": comparison_base}); continue
+        base_setup_sid = comparison_family["general_setup_sid"]
+        base_setup, base_setup_chain, base_setup_source = resolve_effective(base_setup_sid, reference_index)
+        if not base_setup:
+            unresolved.append({"weapon": name, "content_pack": pack, "reason": "comparison_general_setup_not_found", "dlc_general_setup_sid": dlc_setup_sid, "base_general_setup_sid": base_setup_sid}); continue
+        setup_diffs = leaf_diff(base_setup, dlc_setup)
+        weapon_diffs: list[dict[str, object]] = []; base_weapon_chain: list[str] = []; base_weapon_source = None
+        base_weapon_sid = comparison_family.get("weapon_sid")
         if isinstance(dlc_weapon_sid, str) and isinstance(base_weapon_sid, str):
-            dlc_weapon, dlc_weapon_chain, dlc_weapon_source = resolve_effective(dlc_weapon_sid, reference_index); base_weapon, base_weapon_chain, base_weapon_source = resolve_effective(base_weapon_sid, reference_index)
+            base_weapon, base_weapon_chain, base_weapon_source = resolve_effective(base_weapon_sid, reference_index)
             if dlc_weapon and base_weapon: weapon_diffs = leaf_diff(base_weapon, dlc_weapon)
         all_diffs = setup_diffs + weapon_diffs
         gameplay = [diff for diff in all_diffs if top_field(diff) in GAMEPLAY_FIELDS and top_field(diff) != "PlayerWeaponAttributes"]
@@ -125,9 +153,8 @@ def build_dlc_context(reference_index: dict[str, tuple[Path, dict[str, list[str]
         base_attr = base_setup.get("PlayerWeaponAttributes"); dlc_attr = dlc_setup.get("PlayerWeaponAttributes")
         if base_attr == dlc_attr: base_attr = dlc_attr = None
         entries[name] = {
-            "content_pack": pack, "class": class_name, "base_family": base_name,
-            "dlc_general_setup_sid": dlc_setup_sid, "base_general_setup_sid": base_setup_sid,
-            "dlc_weapon_sid": dlc_weapon_sid, "base_weapon_sid": base_weapon_sid,
+            "content_pack": pack, "class": class_name, "base_family": base_name, "comparison_mode": "relative", "comparison_base": comparison_base,
+            "dlc_general_setup_sid": dlc_setup_sid, "base_general_setup_sid": base_setup_sid, "dlc_weapon_sid": dlc_weapon_sid, "base_weapon_sid": base_weapon_sid,
             "gameplay_identity": {"fields": sorted({top_field(diff) for diff in gameplay}), "groups": group_by_top_field(gameplay), "leaf_diffs": gameplay},
             "equipment_identity": equipment,
             "player_weapon_attributes": resolve_reference_pair(base_attr, dlc_attr, reference_index),
@@ -146,9 +173,10 @@ def build_report() -> dict[str, object]:
         gameplay = entry["gameplay_signature_candidate"]; gameplay_without_ref = [diff for diff in gameplay["leaf_diffs"] if top_field(diff) != "PlayerWeaponAttributes"]
         uniques[name] = {"class": entry["class"], "base_family": entry["base_family"], "unique_weapon_sid": entry["unique_weapon_sid"], "base_weapon_sid": entry["base_weapon_sid"], "gameplay_identity": {"fields": sorted({top_field(diff) for diff in gameplay_without_ref}), "groups": group_by_top_field(gameplay_without_ref), "leaf_diffs": gameplay_without_ref}, "equipment_identity": equipment_identity(entry), "player_weapon_attributes": attributes}
     dlc_weapons, dlc_unresolved = build_dlc_context(reference_index)
+    standalone_count = sum(1 for entry in dlc_weapons.values() if entry.get("comparison_mode") == "standalone")
     return {
-        "summary": {"uniques": len(uniques), "dlc_weapons": len(dlc_weapons), "dlc_unresolved": len(dlc_unresolved), "player_attribute_pairs_resolved": resolved_attributes, "player_attribute_pairs_unresolved": len(uniques) - resolved_attributes, "vanilla_cfg_files_scanned": len(scanned)},
-        "notes": ["gameplay_identity contains direct weapon/setup gameplay differences but omits the opaque PlayerWeaponAttributes SID itself.", "equipment_identity keeps attachment/preinstalled-upgrade differences separately because they can be the primary identity of a weapon variant.", "DLC weapons are compared against the BPRUE base_family from dlc_weapons.json while resolving definitions from VanillaReference/DLCGameData/<pack> and BaseGame references.", "player_weapon_attributes is resolved only when both referenced prototype definitions exist in the checked-in VanillaReference CFGs; missing source data is reported, never guessed."],
+        "summary": {"uniques": len(uniques), "dlc_weapons": len(dlc_weapons), "dlc_standalone": standalone_count, "dlc_unresolved": len(dlc_unresolved), "player_attribute_pairs_resolved": resolved_attributes, "player_attribute_pairs_unresolved": len(uniques) - resolved_attributes, "vanilla_cfg_files_scanned": len(scanned)},
+        "notes": ["gameplay_identity contains direct weapon/setup gameplay differences but omits the opaque PlayerWeaponAttributes SID itself for relative comparisons.", "equipment_identity keeps attachment/preinstalled-upgrade differences separately because they can be the primary identity of a weapon variant.", "base_family controls which BPRUE family modules a DLC weapon receives; comparison_base independently controls signature analysis and may be null for standalone weapons.", "Standalone DLC weapons are reported using their absolute gameplay/equipment values instead of a misleading diff against base_family.", "player_weapon_attributes is resolved only when both referenced prototype definitions exist in the checked-in VanillaReference CFGs; missing source data is reported, never guessed."],
         "vanilla_reference_files_scanned": scanned, "uniques": uniques, "dlc_weapons": dlc_weapons, "dlc_unresolved": dlc_unresolved,
     }
 
@@ -166,16 +194,27 @@ def print_group(title: str, identity: dict[str, object]) -> None:
         for change in group["changes"]: print(format_change(change))
 
 
+def print_absolute_group(title: str, identity: dict[str, object]) -> None:
+    fields = identity.get("fields", []); print(f"  {title} (absolute): {', '.join(fields) if fields else '(none)'}")
+    for field, value in identity.get("values", {}).items(): print(f"    {field}: {value}")
+
+
 def print_entry(name: str, entry: dict[str, object], label: str) -> None:
     pack = f"/{entry['content_pack']}" if "content_pack" in entry else ""
-    print(f"\n{name} [{entry['class']}{pack}] <- {entry['base_family']} ({label})")
-    print_group("Gameplay", entry["gameplay_identity"]); print_group("Equipment", entry["equipment_identity"])
+    mode = entry.get("comparison_mode", "relative")
+    if mode == "standalone":
+        print(f"\n{name} [{entry['class']}{pack}] (standalone DLC weapon; BPRUE modules <- {entry['base_family']})")
+        print_absolute_group("Gameplay", entry["gameplay_identity"]); print_absolute_group("Equipment", entry["equipment_identity"])
+    else:
+        base = entry.get("comparison_base", entry["base_family"])
+        print(f"\n{name} [{entry['class']}{pack}] <- {base} ({label}; BPRUE modules <- {entry['base_family']})")
+        print_group("Gameplay", entry["gameplay_identity"]); print_group("Equipment", entry["equipment_identity"])
     attrs = entry["player_weapon_attributes"]
     if attrs.get("resolved"):
         print(f"  PlayerWeaponAttributes: resolved ({len(attrs.get('leaf_diffs', []))} leaf diffs)")
         for diff in attrs.get("leaf_diffs", []): print(format_change(diff))
-    elif attrs.get("base_sid") or attrs.get("unique_sid"):
-        print(f"  PlayerWeaponAttributes: {attrs.get('base_sid')} -> {attrs.get('unique_sid')} [unresolved: {attrs.get('reason')}]")
+    elif attrs.get("unique_sid"):
+        print(f"  PlayerWeaponAttributes: {attrs.get('base_sid')} -> {attrs.get('unique_sid')} [{attrs.get('reason')}]")
     else: print("  PlayerWeaponAttributes: unchanged/not referenced by diff")
 
 
@@ -186,7 +225,7 @@ def main() -> None:
     parser.add_argument("--dlc-only", action="store_true", help="Print only DLC weapon comparisons (implies --print).")
     args = parser.parse_args(); report = build_report(); ensure_reports_dir(); args.output.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     summary = report["summary"]
-    print(f"Signature context: uniques={summary['uniques']} | DLC weapons={summary['dlc_weapons']} | DLC unresolved={summary['dlc_unresolved']} | player attributes resolved={summary['player_attribute_pairs_resolved']}")
+    print(f"Signature context: uniques={summary['uniques']} | DLC weapons={summary['dlc_weapons']} | standalone={summary['dlc_standalone']} | DLC unresolved={summary['dlc_unresolved']} | player attributes resolved={summary['player_attribute_pairs_resolved']}")
     print(f"Report: {args.output}")
     if args.print_context and not args.dlc_only:
         for name, entry in report["uniques"].items(): print_entry(name, entry, "BaseGame Unique")
