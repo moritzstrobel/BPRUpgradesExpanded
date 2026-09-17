@@ -208,6 +208,10 @@ def main() -> int:
     ap.add_argument("--patch", type=Path, default=DEFAULT_PATCH)
     ap.add_argument("--technician", action="append", default=[],
                     help="Limit detailed output to one or more technician SIDs.")
+    ap.add_argument("--filter", default=None,
+                    help="Only show detailed upgrade SIDs containing this text (e.g. Viper).")
+    ap.add_argument("--show-sids", action="store_true",
+                    help="Print per-technician added/duplicate/matching SID details.")
     args = ap.parse_args()
 
     vanilla = parse_file(args.vanilla)
@@ -262,6 +266,7 @@ def main() -> int:
 
     print("=== Patched/effected technicians ===")
     wanted = set(args.technician)
+    sid_filter = args.filter.lower() if args.filter else None
     for sid, before_n, after_n, added_n, dup_n, reordered in interesting:
         if wanted and sid not in wanted:
             continue
@@ -272,6 +277,40 @@ def main() -> int:
             f"duplicates={dup_n}, reordered={reordered}, "
             f"ownUpgrades={own_before}->{own_after}, refkey={vanilla[sid].refkey}"
         )
+
+        if args.show_sids or sid_filter:
+            before = effective_upgrades(vanilla, sid)
+            after = effective_upgrades(merged, sid)
+            before_set = set(before)
+            counts = Counter(after)
+            patch_direct = patch.get(sid).direct_upgrades if sid in patch else []
+            patch_direct = patch_direct or []
+
+            def matches(value: str) -> bool:
+                return sid_filter is None or sid_filter in value.lower()
+
+            vanilla_matches = [x for x in before if matches(x)]
+            added_matches = [x for x in after if x not in before_set and matches(x)]
+            duplicate_matches = [(x, n) for x, n in counts.items() if n > 1 and matches(x)]
+            patch_matches = [x for x in patch_direct if matches(x)]
+
+            print(f"  inheritance: {sid} -> {vanilla[sid].refkey or '<none>'}")
+            print(f"  direct patch entries matching filter: {len(patch_matches)}")
+            for x in patch_matches:
+                print(f"    PATCH + {x}")
+
+            print(f"  Vanilla effective entries matching filter: {len(vanilla_matches)}")
+            for x in vanilla_matches:
+                print(f"    VANILLA {x} -> merged_count={counts[x]}")
+
+            print(f"  New effective entries matching filter: {len(added_matches)}")
+            for x in added_matches:
+                print(f"    ADDED   {x} -> merged_count={counts[x]}")
+
+            print(f"  Duplicate effective entries matching filter: {len(duplicate_matches)}")
+            for x, n in duplicate_matches:
+                origin = "Vanilla" if x in before_set else "BPRUE/new"
+                print(f"    DUP     {x} -> count={n}, origin={origin}")
 
     if warnings:
         print()
