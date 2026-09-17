@@ -12,6 +12,8 @@
     {"sid":"sid_effects_bprue_effective_range_name","languages":{"English":"Effective range","Russian":"Эффективная дальность"}},
     {"sid":"sid_effects_bprue_damage_name","languages":{"English":"Damage","Russian":"Урон"}},
     {"sid":"sid_effects_bprue_armor_piercing_name","languages":{"English":"Armor penetration","Russian":"Бронепробиваемость"}},
-    {"sid":"sid_effects_bprue_durability_name","languages":{"English":"Durability","Russian":"Прочность"}}
+    {"sid":"sid_effects_bprue_durability_name","languages":{"English":"Durability","Russian":"Прочность"}},
+    {"sid":"sid_effects_bprue_fire_modes_burst_auto_name","languages":{"English":"Fire modes: Burst / Automatic","Russian":"Режимы огня: очередь / автоматический"}},
+    {"sid":"sid_effects_bprue_fire_modes_semi_auto_name","languages":{"English":"Fire mode: Semi-Automatic","Russian":"Режим огня: одиночный"}}
   ]
 }
