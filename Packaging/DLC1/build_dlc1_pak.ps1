@@ -111,24 +111,33 @@ if (-not (Test-Path -LiteralPath $PakPath -PathType Leaf)) {
 
 Write-Host ""
 Write-Host "Validating PAK contents ..."
-$listOutput = & $UnrealPak $PakPath -List 2>&1
+$listOutput = @(& $UnrealPak $PakPath -List 2>&1 | ForEach-Object { $_.ToString() })
 if ($LASTEXITCODE -ne 0) {
     $listOutput | ForEach-Object { Write-Host $_ }
     throw "UnrealPak failed while listing the generated PAK (exit code $LASTEXITCODE)."
 }
 
-$expectedPaths = foreach ($file in $sourceFiles) {
+# UnrealPak -List reports filenames relative to the PAK mount point rather than
+# repeating the ../../../Stalker2/Content mount prefix from the response file.
+# Validate the DLC-relative paths and file count; the response file itself is
+# responsible for the mount mapping used when the PAK is created.
+$expectedRelativePaths = foreach ($file in $sourceFiles) {
     $relativePath = $file.FullName.Substring($DlcSourceRoot.Length).TrimStart('\', '/')
-    "$MountRoot/$(To-PakPath -Path $relativePath)"
+    To-PakPath -Path $relativePath
 }
 
-$missingPaths = @($expectedPaths | Where-Object {
+$missingPaths = @($expectedRelativePaths | Where-Object {
     $expected = $_
-    -not ($listOutput | Where-Object { $_ -like "*$expected*" })
+    -not ($listOutput | Where-Object {
+        $line = $_.Replace("\", "/")
+        $line -like "*$expected*"
+    })
 })
 
 if ($missingPaths.Count -gt 0) {
-    Write-Host "Missing entries:"
+    Write-Host "UnrealPak -List output:"
+    $listOutput | ForEach-Object { Write-Host "  $_" }
+    Write-Host "Missing DLC-relative entries:"
     $missingPaths | ForEach-Object { Write-Host "  $_" }
     throw "Generated PAK is missing $($missingPaths.Count) expected file(s)."
 }
