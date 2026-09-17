@@ -47,6 +47,17 @@
     {"sid":"sid_bprue_unique_service_weapon_overhaul_name","languages":{"English":"Service Weapon Overhaul","Russian":"Глубокая модернизация табельного оружия"}},
     {"sid":"sid_bprue_unique_service_weapon_overhaul_description","languages":{"English":"Reworks Star into a hard-hitting, durable service pistol with increased damage and armor penetration, at the cost of substantially stronger recoil.","Russian":"Превращает Star в мощный и надёжный табельный пистолет с повышенным уроном и бронепробитием ценой значительно более сильной отдачи."}},
 
+    {"sid":"sid_bprue_unique_close_quarters_conversion_name","languages":{"English":"Close-Quarters Conversion","Russian":"Конверсия для ближнего боя"}},
+    {"sid":"sid_bprue_unique_close_quarters_conversion_description","languages":{"English":"Refines Rat Killer into an aggressive close-quarters weapon with lower recoil and dispersion and much better aimed mobility, at the cost of damage.","Russian":"Дорабатывает Rat Killer для агрессивного ближнего боя: снижает отдачу и разброс и значительно улучшает подвижность в прицеле ценой урона."}},
+    {"sid":"sid_bprue_unique_extended_assault_feed_name","languages":{"English":"Extended Assault Feed","Russian":"Штурмовая система подачи"}},
+    {"sid":"sid_bprue_unique_extended_assault_feed_description","languages":{"English":"Tunes Shakh's extended-feed setup for faster fire, quicker reloads and better recoil control, at the cost of substantially increased weapon wear.","Russian":"Настраивает увеличенную систему подачи Shakh для более высокого темпа огня, быстрой перезарядки и лучшего контроля отдачи ценой значительно повышенного износа."}},
+    {"sid":"sid_bprue_unique_silent_entry_package_name","languages":{"English":"Silent Entry Package","Russian":"Комплект скрытого проникновения"}},
+    {"sid":"sid_bprue_unique_silent_entry_package_description","languages":{"English":"Strips Silence down for infiltration and mobility with much faster aiming, faster aimed movement and lower weight, at the cost of damage.","Russian":"Облегчает Silence для скрытого проникновения и мобильности: значительно ускоряет прицеливание и движение в прицеле и снижает массу ценой урона."}},
+    {"sid":"sid_bprue_unique_overclocked_action_name","languages":{"English":"Overclocked Action","Russian":"Форсированная автоматика"}},
+    {"sid":"sid_bprue_unique_overclocked_action_description","languages":{"English":"Pushes Spitfire's already fast action to the limit with a dramatically higher fire rate, lower recoil and quicker reloads. Weapon wear rises sharply.","Russian":"Форсирует и без того быструю автоматику Spitfire до предела: резко повышает темп огня, снижает отдачу и ускоряет перезарядку. Износ оружия сильно возрастает."}},
+    {"sid":"sid_bprue_unique_recoil_compensation_system_name","languages":{"English":"Recoil Compensation System","Russian":"Система компенсации отдачи"}},
+    {"sid":"sid_bprue_unique_recoil_compensation_system_description","languages":{"English":"Adds an extensive stabilization system to Spitter for exceptionally low recoil, faster shot recovery and tighter dispersion, at the cost of additional weight.","Russian":"Оснащает Spitter развитой системой стабилизации для исключительно низкой отдачи, быстрого возврата на цель и меньшего разброса ценой дополнительной массы."}},
+
     {"sid":"sid_effects_bprue_fire_modes_semi_burst_name","languages":{"English":"Fire modes: Semi-Automatic / Burst","Russian":"Режимы огня: одиночный / очередь"}}
   ]
 }
