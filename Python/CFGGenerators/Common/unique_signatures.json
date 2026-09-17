@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "description": "BPRUE-only signature modules for Vanilla Unique weapons. Signatures may extend a real Vanilla identity or deliberately add one where the Unique is only lightly differentiated.",
+  "signatures": {
+    "AK74Phantom": {"key":"ghost_mechanism","name":"Ghost Mechanism","cost":5200,"target_part":"Body","effects":["BPRUE_Unique_WeightDown20Effect","AimingTimePos15Effect","AimingMovementPos10Effect","BPRUE_DurabilityPerShotNeg10Effect"]},
+    "AK74Strelok": {"key":"strelok_refinement","name":"Strelok's Refinement","cost":5400,"target_part":"Body","effects":["WeightPos15Effect","AimingTimePos15Effect","BPRUE_ReloadingTimeNeg20Effect","BPRUE_DurabilityPerShotNeg10Effect"]},
+    "ArevPrecise": {"key":"precision_conversion","name":"Precision Conversion","cost":6200,"target_part":"Barrel","effects":["BPRUE_SemiAutoOnlyEffect","DispersionPos25Effect","RecoilPos20Effect","ProjectileSpeedPos20Effect"]},
+    "G37V2": {"key":"burst_optimizer","name":"Burst Optimizer","cost":6000,"target_part":"Body","effects":["BPRUE_Unique_SemiBurstOnlyEffect","RecoilPos20Effect","DispersionPos15Effect","BPRUE_ReloadingTimeNeg10Effect"]},
+    "Combatant": {"key":"combat_handling","name":"Combat Handling Package","cost":5600,"target_part":"Stock","effects":["AimingMovementPos20Effect","AimingTimePos20Effect","RecoilPos15Effect","BPRUE_DurabilityPerShotNeg10Effect"]},
+    "Decider": {"key":"overpressure_system","name":"Overpressure System","cost":6500,"target_part":"Barrel","effects":["BPRUE_DamagePos15Effect","BPRUE_ArmorPiercingPos15Effect","ProjectileSpeedPos10Effect","BPRUE_RecoilPenalty20Effect","BPRUE_DurabilityPerShotNeg15Effect"]},
+    "Drowned": {"key":"field_rigged_feed","name":"Field-Rigged Feed","cost":5000,"target_part":"Body","effects":["BPRUE_ReloadingTimeNeg20Effect","BPRUE_Shared_WeightPenalty10Effect"]},
+    "Lummox": {"key":"jury_rigged_action","name":"Jury-Rigged Action","cost":4800,"target_part":"Body","effects":["BPRUE_Unique_FireIntervalNeg15Effect","RecoilPos15Effect","BPRUE_ReloadingTimeNeg10Effect","BPRUE_Unique_DurabilityPerShotNeg25Effect"]},
+    "Merc": {"key":"contractor_package","name":"Contractor Package","cost":5800,"target_part":"Stock","effects":["DispersionPos15Effect","RecoilPos15Effect","AimingTimePos15Effect","BPRUE_DurabilityPerShotNeg10Effect"]},
+    "S15": {"key":"high_velocity_545","name":"High-Velocity 5.45 System","cost":6400,"target_part":"Barrel","effects":["ProjectileSpeedPos20Effect","BPRUE_ArmorPiercingPos15Effect","DispersionPos10Effect","BPRUE_RecoilPenalty20Effect"]},
+    "SOFMOD": {"key":"special_operations_package","name":"Special Operations Package","cost":5800,"target_part":"Body","effects":["AimingTimePos15Effect","AimingMovementPos10Effect","RecoilPos10Effect","BPRUE_Shared_WeightPenalty10Effect"]},
+    "Sharpshooter": {"key":"match_fire_control","name":"Match Fire-Control Group","cost":6500,"target_part":"Body","effects":["BPRUE_Unique_SemiBurstOnlyEffect","DispersionPos25Effect","RecoilPos20Effect","ProjectileSpeedPos10Effect"]},
+    "Sotnyk": {"key":"master_gunsmith_tuning","name":"Master Gunsmith Tuning","cost":7200,"target_part":"Body","effects":["RecoilPos15Effect","DispersionPos15Effect","BPRUE_ReloadingTimeNeg15Effect","AimingTimePos10Effect","BPRUE_DurabilityPerShotNeg15Effect"]},
+    "Trophy": {"key":"zone_hardened_internals","name":"Zone-Hardened Internals","cost":5600,"target_part":"Body","effects":["BPRUE_Unique_DurabilityPos30Effect","DurabilityPerShotPos20Effect","BPRUE_Shared_WeightPenalty10Effect"]},
+    "Unknown": {"key":"experimental_gas_system","name":"Experimental Gas System","cost":6200,"target_part":"Body","effects":["BPRUE_Unique_FireIntervalNeg15Effect","RecoilPos20Effect","ProjectileSpeedPos10Effect","BPRUE_DurabilityPerShotNeg20Effect"]}
+  }
+}
