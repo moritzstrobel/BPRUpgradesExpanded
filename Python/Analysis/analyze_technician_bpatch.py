@@ -25,7 +25,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_VANILLA = ROOT / "Python/VanillaReference/NPCPrototypes.cfg"
-DEFAULT_PATCH = ROOT / "GameLite/GameData/NPCPrototypes/NPCPrototypes_patch_BPRUE.cfg"
+DEFAULT_PATCH = ROOT / "Content/GameLite/GameData/NPCPrototypes/NPCPrototypes_patch_BPRUE.cfg"
 
 ROOT_RE = re.compile(
     r"^\s*([A-Za-z0-9_.-]+)\s*:\s*struct\.begin(?:\s*\{([^}]*)\})?\s*$"
