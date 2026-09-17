@@ -58,6 +58,13 @@
     {"sid":"sid_bprue_unique_recoil_compensation_system_name","languages":{"English":"Recoil Compensation System","Russian":"Система компенсации отдачи"}},
     {"sid":"sid_bprue_unique_recoil_compensation_system_description","languages":{"English":"Adds an extensive stabilization system to Spitter for exceptionally low recoil, faster shot recovery and tighter dispersion, at the cost of additional weight.","Russian":"Оснащает Spitter развитой системой стабилизации для исключительно низкой отдачи, быстрого возврата на цель и меньшего разброса ценой дополнительной массы."}},
 
+    {"sid":"sid_bprue_unique_predator_choke_system_name","languages":{"English":"Predator Choke System","Russian":"Дульная система Predator"}},
+    {"sid":"sid_bprue_unique_predator_choke_system_description","languages":{"English":"Extends Predator's precision role with a tightly controlled pattern, greater effective range and higher projectile velocity, at the cost of increased recoil.","Russian":"Развивает точную специализацию Predator: сужает осыпь, увеличивает эффективную дальность и скорость снаряда ценой повышенной отдачи."}},
+    {"sid":"sid_bprue_unique_gas_system_overdrive_name","languages":{"English":"Gas-System Overdrive","Russian":"Форсированная газовая система"}},
+    {"sid":"sid_bprue_unique_gas_system_overdrive_description","languages":{"English":"Drives Sledgehammer's semi-automatic action hard for faster fire, lower recoil and quicker reloads. The overstressed system wears much faster.","Russian":"Форсирует полуавтоматическую систему Sledgehammer ради более высокого темпа огня, меньшей отдачи и быстрой перезарядки. Перегруженная система изнашивается значительно быстрее."}},
+    {"sid":"sid_bprue_unique_heavy_magnum_reinforcement_name","languages":{"English":"Heavy Magnum Reinforcement","Russian":"Усиление Magnum"}},
+    {"sid":"sid_bprue_unique_heavy_magnum_reinforcement_description","languages":{"English":"Reinforces Texas into an exceptionally heavy high-power shotgun with increased damage, armor penetration and recoil control, at the cost of even more weight.","Russian":"Усиливает Texas до исключительно тяжёлого и мощного дробовика с повышенным уроном, бронепробитием и контролем отдачи ценой ещё большей массы."}},
+
     {"sid":"sid_effects_bprue_fire_modes_semi_burst_name","languages":{"English":"Fire modes: Semi-Automatic / Burst","Russian":"Режимы огня: одиночный / очередь"}}
   ]
 }
