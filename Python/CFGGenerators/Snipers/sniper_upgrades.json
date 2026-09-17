@@ -1,19 +1,77 @@
 {
-  "schema_version": 1,
-  "description": "Sniper/DMR specialization system: mutually-exclusive modules in Ballistics, Action, Marksman and Stock groups. For 1.0, weapons are assigned to one clear class profile; GP3A is treated as Sniper/DMR. Unique/special weapons remain excluded and receive signatures through the dedicated unique weapon system.",
+  "schema_version": 2,
+  "description": "Sniper/DMR specialization system: mutually-exclusive modules in Ballistics, Action, Marksman and Stock groups, plus caliber conversions where Vanilla does not already provide one. For 1.0, weapons are assigned to one clear class profile; GP3A is treated as Sniper/DMR. Unique/special weapons remain excluded and receive signatures through the dedicated unique weapon system.",
   "families": {
-    "SVDM": {"weapon_sid":"GunSVDM_SP","general_setup_sid":"GunSVDM_SP","prototype_prefix":"GunSVDM","cost_scale":1.1},
-    "SVU": {"weapon_sid":"GunSVU_SP","general_setup_sid":"GunSVU_SP","prototype_prefix":"GunSVU","cost_scale":1.15},
-    "Mark": {"weapon_sid":"GunMark_SP","general_setup_sid":"GunMark_SP","prototype_prefix":"GunMark","cost_scale":1.2},
-    "M701": {"weapon_sid":"GunM701_SP","general_setup_sid":"GunM701_SP","prototype_prefix":"GunM701","cost_scale":1.4},
-    "SIC": {"weapon_sid":"GunSKP_DMR","general_setup_sid":"GunSKP_DMR_GS","prototype_prefix":"GunSKP","cost_scale":1.3},
-    "ThreeLine": {"weapon_sid":"GunThreeLine_SP","general_setup_sid":"GunThreeLine_SP_GS","prototype_prefix":"GunThreeLine","cost_scale":1.0},
-    "GP3A": {"weapon_sid":"GunGP3A_DMR","general_setup_sid":"GunGP3A_DMR_GS","prototype_prefix":"GunGP3A","cost_scale":1.25}
+    "SVDM": {
+      "weapon_sid": "GunSVDM_SP",
+      "general_setup_sid": "GunSVDM_SP",
+      "prototype_prefix": "GunSVDM",
+      "cost_scale": 1.1,
+      "base_caliber": "A762Sniper"
+    },
+    "SVU": {
+      "weapon_sid": "GunSVU_SP",
+      "general_setup_sid": "GunSVU_SP",
+      "prototype_prefix": "GunSVU",
+      "cost_scale": 1.15,
+      "base_caliber": "A762Sniper"
+    },
+    "Mark": {
+      "weapon_sid": "GunMark_SP",
+      "general_setup_sid": "GunMark_SP",
+      "prototype_prefix": "GunMark",
+      "cost_scale": 1.2,
+      "base_caliber": "A762NATO"
+    },
+    "M701": {
+      "weapon_sid": "GunM701_SP",
+      "general_setup_sid": "GunM701_SP",
+      "prototype_prefix": "GunM701",
+      "cost_scale": 1.4,
+      "base_caliber": "A762NATO"
+    },
+    "SIC": {
+      "weapon_sid": "GunSKP_DMR",
+      "general_setup_sid": "GunSKP_DMR_GS",
+      "prototype_prefix": "GunSKP",
+      "cost_scale": 1.3,
+      "base_caliber": "A762Sniper"
+    },
+    "ThreeLine": {
+      "weapon_sid": "GunThreeLine_SP",
+      "general_setup_sid": "GunThreeLine_SP_GS",
+      "prototype_prefix": "GunThreeLine",
+      "cost_scale": 1,
+      "base_caliber": "A762Sniper"
+    },
+    "GP3A": {
+      "weapon_sid": "GunGP3A_DMR",
+      "general_setup_sid": "GunGP3A_DMR_GS",
+      "prototype_prefix": "GunGP3A",
+      "cost_scale": 1.25,
+      "base_caliber": "A762NATO"
+    }
   },
   "module_groups": {
-    "ballistics": ["high_velocity", "match_barrel", "heavy_barrel"],
-    "action": ["rapid", "precision", "reinforced"],
-    "marksman": ["snap_shooter", "field_marksman", "benchrest"],
-    "stock": ["lightweight_stock", "adjustable_stock", "precision_stock"]
+    "ballistics": [
+      "high_velocity",
+      "match_barrel",
+      "heavy_barrel"
+    ],
+    "action": [
+      "rapid",
+      "precision",
+      "reinforced"
+    ],
+    "marksman": [
+      "snap_shooter",
+      "field_marksman",
+      "benchrest"
+    ],
+    "stock": [
+      "lightweight_stock",
+      "adjustable_stock",
+      "precision_stock"
+    ]
   }
 }
