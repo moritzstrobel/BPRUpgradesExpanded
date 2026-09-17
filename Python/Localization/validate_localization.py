@@ -23,6 +23,7 @@ LOCALIZATION_FILES = (
     LOCALIZATION_DIR / "Shared_Specialization_Localization.json",
     LOCALIZATION_DIR / "Stock_Localization.json",
     LOCALIZATION_DIR / "Effect_Localization.json",
+    LOCALIZATION_DIR / "Unique_Localization.json",
 )
 VANILLA_EFFECTS = PYTHON_ROOT / "VanillaReference" / "EffectPrototypes.cfg"
 VANILLA_UI_PATCH = REPO_ROOT / "GameLite/GameData/EffectPrototypes/EffectPrototypes_patch_BPRUE_UI.cfg"
@@ -107,9 +108,6 @@ def audit_referenced_effects(models: dict[str, object], localization_sids: set[s
             if not loc:
                 status = "visible_without_localization"; errors.append(f"{sid}: visible effect referenced by {', '.join(scopes)} has no effective LocalizationSID")
             elif _is_bprue_localization(loc) and effect_asset_sid(loc) not in localization_sids:
-                # Our JSON files only contain BPRUE-owned localization. Vanilla
-                # LocalizationSIDs (weapon_*) are supplied by the game and are not
-                # expected to exist in this repository.
                 status = "missing_bprue_localization_asset"; errors.append(f"{sid}: visible BPRUE effect references missing localization {effect_asset_sid(loc)} ({', '.join(scopes)})")
             elif not _is_bprue_localization(loc):
                 status = "vanilla_localization"
