@@ -17,7 +17,7 @@ GROUP_ORDER = {
     "SMG": {"Body": ["Readiness", "Reload", "ModuleHandling"], "Barrel": ["Action", "ModuleAction", "ModuleBallistics", "ModuleRangeProfile"], "Stock": ["Stock"]},
     "SG": {"Body": ["Action", "Handling", "ModuleHandling", "ModuleReliability"], "Barrel": ["Pattern", "ModuleRangeProfile"]},
     "Pistol": {"Body": ["Handling", "ModuleHandling"], "Barrel": ["Action", "Signature", "ModulePrecision", "ModuleBallistics"]},
-    "Sniper": {"Body": ["Marksman", "ModuleReliability"], "Barrel": ["Ballistics", "Action", "Signature", "ModulePrecision", "ModuleBallistics", "ModuleRangeProfile"], "Stock": ["Stock"]},
+    "Sniper": {"Body": ["Caliber", "Marksman", "ModuleReliability"], "Barrel": ["Ballistics", "Action", "Signature", "ModulePrecision", "ModuleBallistics", "ModuleRangeProfile"], "Stock": ["Stock"]},
     "MG": {
         "Body": ["SustainedFire", "FeedSystem", "ModuleReliability"],
         "Barrel": ["BarrelConfiguration", "ModuleBallistics"],
