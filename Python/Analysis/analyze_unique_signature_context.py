@@ -7,9 +7,8 @@ from pathlib import Path
 
 from analyze_unique_weapons import (
     CLASS_CONFIGS,
-    EQUIPMENT_FIELDS if False else GAMEPLAY_FIELDS,
+    GAMEPLAY_FIELDS,
     VANILLA_ROOT,
-    direct_properties,
     effective_properties,
     leaf_diff,
     top_field,
@@ -20,7 +19,6 @@ from analysis_paths import ensure_reports_dir
 DEFAULT_OUTPUT = Path(__file__).resolve().parent / "Reports" / "unique_signature_context.json"
 CFG_ROOT = Path(__file__).resolve().parent.parent / "CFGGenerators"
 DLC_REGISTRY = CFG_ROOT / "Common" / "dlc_weapons.json"
-DLC_ROOT = VANILLA_ROOT / "DLCGameData"
 EQUIPMENT_FIELDS = {
     "CompatibleAttachments",
     "PreinstalledAttachmentsItemPrototypeSIDs",
