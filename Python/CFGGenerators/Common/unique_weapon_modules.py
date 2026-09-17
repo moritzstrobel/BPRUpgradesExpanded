@@ -40,7 +40,7 @@ def _clone_sid(source_sid: str, base_prefix: str, unique_prefix: str) -> str:
 
 
 def add_unique_modules(model: UpgradeBuildModel, configs: dict) -> int:
-    """Clone every BPRUE module of each base family onto its Unique GeneralSetup."""
+    """Clone every BPRUE base-family module, then add approved Unique signatures."""
     unique_config = load_unique_config()
     source_by_setup = model.by_general_setup()
     added = 0
@@ -78,16 +78,14 @@ def add_unique_modules(model: UpgradeBuildModel, configs: dict) -> int:
             model.add(cloned)
             added += 1
 
+    # Signatures are intentionally appended only after all cloning is complete.
+    # This prevents a Unique-only module from ever becoming a clone source.
+    added += add_unique_signatures(model)
     return added
 
 
 def add_unique_signatures(model: UpgradeBuildModel) -> int:
-    """Add the one-off BPRUE signature module defined for each supported Unique.
-
-    Signature design is intentionally separate from base-family cloning. This lets
-    a Unique keep the complete family package while receiving one extra module that
-    either extends its Vanilla identity or supplies an identity where Vanilla does not.
-    """
+    """Add the one-off BPRUE signature module defined for each supported Unique."""
     uniques = load_unique_config().get("uniques", {})
     signatures = load_signature_config().get("signatures", {})
     added = 0
@@ -100,7 +98,7 @@ def add_unique_signatures(model: UpgradeBuildModel) -> int:
         unique = uniques[unique_name]
         if unique["class"] != "AssaultRifles":
             # First implementation batch is intentionally AR-only. Other classes
-            # are added to the same registry as their designs are approved.
+            # can be added to the same registry as their designs are approved.
             continue
         token = re.sub(r"[^A-Za-z0-9]", "", unique_name)
         key_token = "".join(part.capitalize() for part in signature["key"].split("_"))
