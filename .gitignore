@@ -17,6 +17,8 @@ Thumbs.db
 *.pak
 *.ucas
 *.utoc
+Packaging/**/staging/
+Packaging/**/output/
 
 # Python
 __pycache__/
