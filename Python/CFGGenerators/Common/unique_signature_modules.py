@@ -1,13 +1,13 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 from upgrade_build_model import UpgradeBuildModel, UpgradeDefinition
-from unique_weapon_modules import load_unique_config
 
 MODULE_TEMPLATE_SID = "BPRUE_ModuleTemplate"
 DEFAULT_ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_Recoil.T_PDA_Upgrades_Icon_Recoil'"
-EFFECT_OUTPUT_PATH = Path(__file__).resolve().parents[3] / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_UniqueSignatureEffectPrototypes.cfg"
+UNIQUE_CONFIG_PATH = Path(__file__).with_name("unique_weapons.json")
 
 # One deliberately stronger, non-blocking endgame module per Unique. Signatures
 # are added after the normal base-family modules have been cloned, so they never
@@ -36,7 +36,7 @@ def _prefix(name: str) -> str:
 
 
 def add_unique_signatures(model: UpgradeBuildModel, configs: dict) -> int:
-    registry = load_unique_config().get("uniques", {})
+    registry = json.loads(UNIQUE_CONFIG_PATH.read_text(encoding="utf-8")).get("uniques", {})
     ar_families = configs["ar"].get("families", {})
     added = 0
     for name, (suffix, target, cost, loc, effects) in AR_SIGNATURES.items():
@@ -68,7 +68,7 @@ def add_unique_signatures(model: UpgradeBuildModel, configs: dict) -> int:
 
 
 def render_unique_signature_effects() -> str:
-    return r'''// AUTO-GENERATED - BPRUE Unique signature effects
+    return r'''// BPRUE Unique signature effects
 
 BPRUE_Unique_SemiBurstFireTypesEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_Unique_SemiBurstFireTypesEffect
