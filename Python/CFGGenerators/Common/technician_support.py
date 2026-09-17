@@ -10,6 +10,7 @@ from vanilla_upgrade_layout import (
     _direct_scalar,
     _read_blocks,
     _refkey,
+    dlc_general_setup_upgrades,
     vanilla_general_setup_upgrades,
 )
 
@@ -70,12 +71,7 @@ def _effective_scalar(blocks: dict[str, list[str]], sid: str, name: str) -> str 
 
 
 def _effective_upgrade_entries(blocks: dict[str, list[str]], sid: str) -> list[tuple[str, bool]]:
-    """Resolve the first Upgrades array in the NPC refkey chain.
-
-    Vanilla child structs that do not define Upgrades inherit their parent's
-    complete array. If a child defines Upgrades, that array is the effective
-    weapon-upgrade capability list for that NPC.
-    """
+    """Resolve the first Upgrades array in the NPC refkey chain."""
     seen: set[str] = set()
     current = sid
     while current and current not in seen:
@@ -109,14 +105,18 @@ def vanilla_technician_upgrade_sids() -> dict[str, tuple[str, ...]]:
     return result
 
 
-@lru_cache(maxsize=1)
-def vanilla_upgrade_general_setups() -> dict[str, frozenset[str]]:
-    """Invert effective Vanilla GeneralSetup upgrade arrays."""
+def _upgrade_general_setups(upgrades_by_setup: dict[str, list[str]]) -> dict[str, frozenset[str]]:
     result: dict[str, set[str]] = {}
-    for setup_sid, upgrade_sids in vanilla_general_setup_upgrades().items():
+    for setup_sid, upgrade_sids in upgrades_by_setup.items():
         for upgrade_sid in upgrade_sids:
             result.setdefault(upgrade_sid, set()).add(setup_sid)
     return {sid: frozenset(setups) for sid, setups in result.items()}
+
+
+@lru_cache(maxsize=1)
+def vanilla_upgrade_general_setups() -> dict[str, frozenset[str]]:
+    """Invert effective Vanilla GeneralSetup upgrade arrays."""
+    return _upgrade_general_setups(vanilla_general_setup_upgrades())
 
 
 @lru_cache(maxsize=1)
@@ -131,9 +131,35 @@ def vanilla_technician_general_setups() -> dict[str, frozenset[str]]:
     return result
 
 
-def technician_upgrade_assignments(model: UpgradeBuildModel) -> dict[str, list[UpgradeDefinition]]:
+@lru_cache(maxsize=None)
+def dlc_technician_general_setups(content_pack: str) -> dict[str, frozenset[str]]:
+    """Resolve DLC weapon support from the Vanilla upgrades each technician can install.
+
+    DLC GeneralSetups may inherit their UpgradePrototypeSIDs from a BaseGame weapon.
+    Using the effective DLC upgrade array preserves GSC's technician progression
+    without hard-coding technician names or granting every technician every DLC weapon.
+    """
+    upgrade_to_setups = _upgrade_general_setups(dlc_general_setup_upgrades(content_pack))
+    result: dict[str, frozenset[str]] = {}
+    for technician_sid, upgrade_sids in vanilla_technician_upgrade_sids().items():
+        setups: set[str] = set()
+        for upgrade_sid in upgrade_sids:
+            setups.update(upgrade_to_setups.get(upgrade_sid, ()))
+        result[technician_sid] = frozenset(setups)
+    return result
+
+
+def technician_upgrade_assignments(
+    model: UpgradeBuildModel,
+    *,
+    content_pack: str | None = None,
+) -> dict[str, list[UpgradeDefinition]]:
     """Select BPRUE upgrades only for weapons supported by each Vanilla technician."""
-    support = vanilla_technician_general_setups()
+    support = (
+        dlc_technician_general_setups(content_pack)
+        if content_pack
+        else vanilla_technician_general_setups()
+    )
     candidates = model.technician_upgrades()
     assignments: dict[str, list[UpgradeDefinition]] = {}
     for technician_sid, supported_setups in support.items():
