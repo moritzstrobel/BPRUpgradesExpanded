@@ -24,8 +24,8 @@
     {"sid":"sid_bprue_pistol_selectable_fire_control_name","languages":{"English":"Selectable Fire Control","Russian":"Переключаемый режим огня"}},
     {"sid":"sid_bprue_pistol_selectable_fire_control_description","languages":{"English":"Adds a selectable semi-automatic mode while retaining the weapon's native automatic fire and improving recoil control.","Russian":"Добавляет выбираемый одиночный режим, сохраняя штатный автоматический огонь и улучшая контроль отдачи."}},
 
-    {"sid":"sid_bprue_sg_pattern_breacher_name","languages":{"English":"Breacher Pattern","Russian":"Штурмовая осыпь"}},
-    {"sid":"sid_bprue_sg_pattern_breacher_description","languages":{"English":"Optimizes the shotgun for close-range breaching with a wider, aggressive shot pattern.","Russian":"Оптимизирует дробовик для ближнего штурма с более широкой и агрессивной осыпью."}},
+    {"sid":"sid_bprue_sg_pattern_breacher_name","languages":{"English":"Breacher Pattern","Russian":"Штурмовой чок"}},
+    {"sid":"sid_bprue_sg_pattern_breacher_description","languages":{"English":"Optimizes the shotgun for close-range breaching with a wider, aggressive shot pattern.","Russian":"Оптимизирует дробовик для штурмового применения на ближней дистанции, обеспечивая более широкую и агрессивную осыпь дроби."}},
     {"sid":"sid_bprue_sg_pattern_field_choke_name","languages":{"English":"Field Choke","Russian":"Полевой чок"}},
     {"sid":"sid_bprue_sg_pattern_field_choke_description","languages":{"English":"Balances shot spread and practical range for versatile field use.","Russian":"Балансирует разброс дроби и практическую дальность для универсального применения."}},
     {"sid":"sid_bprue_sg_pattern_full_choke_name","languages":{"English":"Full Choke","Russian":"Полный чок"}},
@@ -39,7 +39,7 @@
     {"sid":"sid_bprue_sg_handling_lightweight_name","languages":{"English":"Lightweight Furniture","Russian":"Облегчённая фурнитура"}},
     {"sid":"sid_bprue_sg_handling_lightweight_description","languages":{"English":"Reduces weight and improves handling speed, at the cost of increased recoil.","Russian":"Снижает вес и ускоряет обращение с оружием ценой повышенной отдачи."}},
     {"sid":"sid_bprue_sg_handling_combat_name","languages":{"English":"Combat Furniture","Russian":"Боевая фурнитура"}},
-    {"sid":"sid_bprue_sg_handling_combat_description","languages":{"English":"A practical combat setup balancing aiming, movement and recoil recovery.","Russian":"Практичная боевая компоновка, балансирующая прицеливание, движение и восстановление после отдачи."}},
+    {"sid":"sid_bprue_sg_handling_combat_description","languages":{"English":"A practical combat setup balancing aiming, movement and recoil recovery.","Russian":"Практичная боевая конфигурация, обеспечивающая баланс между прицеливанием, перемещением и восстановлением после отдачи."}},
     {"sid":"sid_bprue_sg_handling_stabilized_name","languages":{"English":"Stabilized Furniture","Russian":"Стабилизированная фурнитура"}},
     {"sid":"sid_bprue_sg_handling_stabilized_description","languages":{"English":"Prioritizes stability and recoil control over fast handling.","Russian":"Отдаёт приоритет стабильности и контролю отдачи перед скоростью обращения."}},
 
@@ -50,7 +50,7 @@
     {"sid":"sid_bprue_sniper_heavy_barrel_name","languages":{"English":"Heavy Barrel","Russian":"Тяжёлый ствол"}},
     {"sid":"sid_bprue_sniper_heavy_barrel_description","languages":{"English":"A heavy-profile barrel prioritizing stability and sustained precision at the cost of handling speed.","Russian":"Тяжёлый ствол, повышающий стабильность и устойчивую точность ценой скорости обращения."}},
     {"sid":"sid_bprue_sniper_rapid_name","languages":{"English":"Rapid Action","Russian":"Скоростная автоматика"}},
-    {"sid":"sid_bprue_sniper_rapid_description","languages":{"English":"Speeds up the firing cycle for rapid follow-up shots, trading some control and durability for rate of fire.","Russian":"Ускоряет цикл стрельбы для быстрых повторных выстрелов, жертвуя частью контроля и долговечности ради темпа огня."}},
+    {"sid":"sid_bprue_sniper_rapid_description","languages":{"English":"Speeds up the firing cycle for rapid follow-up shots, trading some control and durability for rate of fire.","Russian":"Ускоряет цикл стрельбы, позволяя быстрее производить повторные выстрелы, но жертвуя частью контроля и скоростью износа ради скорострельности."}},
     {"sid":"sid_bprue_sniper_precision_name","languages":{"English":"Precision Action","Russian":"Точная автоматика"}},
     {"sid":"sid_bprue_sniper_precision_description","languages":{"English":"Tunes the action for deliberate precision and improved shot control rather than maximum firing speed.","Russian":"Настраивает механизм на выверенную точность и лучший контроль выстрела вместо максимального темпа огня."}},
     {"sid":"sid_bprue_sniper_reinforced_name","languages":{"English":"Reinforced Action","Russian":"Усиленная автоматика"}},
