@@ -14,12 +14,18 @@ def log(message):
 def get_sid(entry):
     return str(entry.get_editor_property("SID"))
 
+def language_name(language):
+    raw = str(language)
+    if "LocalizationLanguage." in raw:
+        raw = raw.split("LocalizationLanguage.", 1)[1].split(":", 1)[0].split(">", 1)[0]
+    return raw.strip().replace("_", " ").title().replace(" ", "")
+
 def export_languages(entry):
     value = entry.get_editor_property("LanguagesToLocalizedStrings")
     result = {}
     if hasattr(value, "items"):
         for language, text in value.items():
-            result[str(language)] = str(text)
+            result[language_name(language)] = str(text)
         return result
     raise RuntimeError(
         "LanguagesToLocalizedStrings is not exposed as a mapping by ZoneKit Python "
