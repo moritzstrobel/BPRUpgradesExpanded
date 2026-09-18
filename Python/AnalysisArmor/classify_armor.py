@@ -50,6 +50,7 @@ def effective_fields(name, structs, stack=None):
 
 FACTION_HINTS = (
     ("Dolg", "DUTY"),
+    ("Duty", "DUTY"),
     ("Svoboda", "FREEDOM"),
     ("Mercenaries", "MERCENARY"),
     ("Monolith", "MONOLITH"),
@@ -57,6 +58,7 @@ FACTION_HINTS = (
     ("Varta", "WARD"),
     ("Military", "MILITARY"),
     ("Neutral", "FREE_STALKER"),
+    ("Bandit", "BANDIT"),
 )
 
 
