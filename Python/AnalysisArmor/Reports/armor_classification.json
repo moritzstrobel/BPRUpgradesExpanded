@@ -26,10 +26,216 @@
       "direct_bBlockHead": null
     }
   ],
+  "excluded": [
+    {
+      "sid": "NPC_Sel_Armor",
+      "struct": "NPC_Sel_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Sel_Neutral_Armor",
+      "struct": "NPC_Sel_Neutral_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Tec_Armor",
+      "struct": "NPC_Tec_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Cloak_Heavy_Neutral_Armor",
+      "struct": "NPC_Cloak_Heavy_Neutral_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_SkinCloak_Bandit_Armor",
+      "struct": "NPC_SkinCloak_Bandit_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_HeavyExoskeleton_Mercenaries_Armor",
+      "struct": "NPC_HeavyExoskeleton_Mercenaries_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Heavy_Military_Armor",
+      "struct": "NPC_Heavy_Military_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Cloak_Heavy_Military_Armor",
+      "struct": "NPC_Cloak_Heavy_Military_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Sci_Armor",
+      "struct": "NPC_Sci_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Battle_Noon_Armor",
+      "struct": "NPC_Battle_Noon_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_HeavyAnomaly_Noon_Armor",
+      "struct": "NPC_HeavyAnomaly_Noon_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_HeavyExoskeleton_Noon_Armor",
+      "struct": "NPC_HeavyExoskeleton_Noon_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Exoskeleton_Noon_Armor",
+      "struct": "NPC_Exoskeleton_Noon_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Spark_Armor",
+      "struct": "NPC_Spark_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Anomaly_Spark_Armor",
+      "struct": "NPC_Anomaly_Spark_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_HeavyExoskeleton_Spark_Armor",
+      "struct": "NPC_HeavyExoskeleton_Spark_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Heavy_Corps_Armor",
+      "struct": "NPC_Heavy_Corps_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Heavy2_Coprs_Armor",
+      "struct": "NPC_Heavy2_Coprs_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Heavy3_Corps_Armor",
+      "struct": "NPC_Heavy3_Corps_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Heavy3Exoskeleton_Coprs_Armor",
+      "struct": "NPC_Heavy3Exoskeleton_Coprs_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Exoskeleton_Coprs_Armor",
+      "struct": "NPC_Exoskeleton_Coprs_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Richter_Armor",
+      "struct": "NPC_Richter_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Korshunov_Armor",
+      "struct": "NPC_Korshunov_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Korshunov_Armor_2",
+      "struct": "NPC_Korshunov_Armor_2",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Dalin_Armor",
+      "struct": "NPC_Dalin_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Agata_Armor",
+      "struct": "NPC_Agata_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Faust_Armor",
+      "struct": "NPC_Faust_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Kaymanov_Armor",
+      "struct": "NPC_Kaymanov_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Shram_Armor",
+      "struct": "NPC_Shram_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Dekhtyarev_Armor",
+      "struct": "NPC_Dekhtyarev_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Sidorovich_Armor",
+      "struct": "NPC_Sidorovich_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Barmen_Armor",
+      "struct": "NPC_Barmen_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Batya_Armor",
+      "struct": "NPC_Batya_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    },
+    {
+      "sid": "NPC_Tyotya_Armor",
+      "struct": "NPC_Tyotya_Armor",
+      "reason": "NPC_PREFIX",
+      "refkey": "TemplateArmor"
+    }
+  ],
   "counts": {
     "HELMET": 10,
-    "SUIT": 38,
-    "FULL_BODY_SUIT": 37,
+    "SUIT": 16,
+    "FULL_BODY_SUIT": 25,
     "AMBIGUOUS_BODY": 0,
     "UNCLASSIFIED": 0
   },
@@ -230,226 +436,6 @@
       {
         "sid": "Middle_Bandit_Armor",
         "struct": "Middle_Bandit_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null
-      },
-      {
-        "sid": "NPC_Agata_Armor",
-        "struct": "NPC_Agata_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null
-      },
-      {
-        "sid": "NPC_Barmen_Armor",
-        "struct": "NPC_Barmen_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null
-      },
-      {
-        "sid": "NPC_Battle_Noon_Armor",
-        "struct": "NPC_Battle_Noon_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null
-      },
-      {
-        "sid": "NPC_Batya_Armor",
-        "struct": "NPC_Batya_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null
-      },
-      {
-        "sid": "NPC_Cloak_Heavy_Military_Armor",
-        "struct": "NPC_Cloak_Heavy_Military_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null
-      },
-      {
-        "sid": "NPC_Cloak_Heavy_Neutral_Armor",
-        "struct": "NPC_Cloak_Heavy_Neutral_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null
-      },
-      {
-        "sid": "NPC_Dalin_Armor",
-        "struct": "NPC_Dalin_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null
-      },
-      {
-        "sid": "NPC_Dekhtyarev_Armor",
-        "struct": "NPC_Dekhtyarev_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null
-      },
-      {
-        "sid": "NPC_Faust_Armor",
-        "struct": "NPC_Faust_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null
-      },
-      {
-        "sid": "NPC_Heavy_Corps_Armor",
-        "struct": "NPC_Heavy_Corps_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null
-      },
-      {
-        "sid": "NPC_Kaymanov_Armor",
-        "struct": "NPC_Kaymanov_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null
-      },
-      {
-        "sid": "NPC_Korshunov_Armor",
-        "struct": "NPC_Korshunov_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null
-      },
-      {
-        "sid": "NPC_Richter_Armor",
-        "struct": "NPC_Richter_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null
-      },
-      {
-        "sid": "NPC_Sci_Armor",
-        "struct": "NPC_Sci_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null
-      },
-      {
-        "sid": "NPC_Sel_Armor",
-        "struct": "NPC_Sel_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null
-      },
-      {
-        "sid": "NPC_Sel_Neutral_Armor",
-        "struct": "NPC_Sel_Neutral_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null
-      },
-      {
-        "sid": "NPC_Shram_Armor",
-        "struct": "NPC_Shram_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null
-      },
-      {
-        "sid": "NPC_Sidorovich_Armor",
-        "struct": "NPC_Sidorovich_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null
-      },
-      {
-        "sid": "NPC_SkinCloak_Bandit_Armor",
-        "struct": "NPC_SkinCloak_Bandit_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null
-      },
-      {
-        "sid": "NPC_Spark_Armor",
-        "struct": "NPC_Spark_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null
-      },
-      {
-        "sid": "NPC_Tec_Armor",
-        "struct": "NPC_Tec_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null
-      },
-      {
-        "sid": "NPC_Tyotya_Armor",
-        "struct": "NPC_Tyotya_Armor",
         "category": "SUIT",
         "item_slot_type": "EInventoryEquipmentSlot::Body",
         "blocks_head": false,
@@ -712,126 +698,6 @@
       {
         "sid": "Heavy_Svoboda_Armor",
         "struct": "Heavy_Svoboda_Armor",
-        "category": "FULL_BODY_SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": true,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
-      },
-      {
-        "sid": "NPC_Anomaly_Spark_Armor",
-        "struct": "NPC_Anomaly_Spark_Armor",
-        "category": "FULL_BODY_SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": true,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
-      },
-      {
-        "sid": "NPC_Exoskeleton_Coprs_Armor",
-        "struct": "NPC_Exoskeleton_Coprs_Armor",
-        "category": "FULL_BODY_SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": true,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
-      },
-      {
-        "sid": "NPC_Exoskeleton_Noon_Armor",
-        "struct": "NPC_Exoskeleton_Noon_Armor",
-        "category": "FULL_BODY_SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": true,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
-      },
-      {
-        "sid": "NPC_Heavy2_Coprs_Armor",
-        "struct": "NPC_Heavy2_Coprs_Armor",
-        "category": "FULL_BODY_SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": true,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
-      },
-      {
-        "sid": "NPC_Heavy3Exoskeleton_Coprs_Armor",
-        "struct": "NPC_Heavy3Exoskeleton_Coprs_Armor",
-        "category": "FULL_BODY_SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": true,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
-      },
-      {
-        "sid": "NPC_Heavy3_Corps_Armor",
-        "struct": "NPC_Heavy3_Corps_Armor",
-        "category": "FULL_BODY_SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": true,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
-      },
-      {
-        "sid": "NPC_HeavyAnomaly_Noon_Armor",
-        "struct": "NPC_HeavyAnomaly_Noon_Armor",
-        "category": "FULL_BODY_SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": true,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
-      },
-      {
-        "sid": "NPC_HeavyExoskeleton_Mercenaries_Armor",
-        "struct": "NPC_HeavyExoskeleton_Mercenaries_Armor",
-        "category": "FULL_BODY_SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": true,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
-      },
-      {
-        "sid": "NPC_HeavyExoskeleton_Noon_Armor",
-        "struct": "NPC_HeavyExoskeleton_Noon_Armor",
-        "category": "FULL_BODY_SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": true,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
-      },
-      {
-        "sid": "NPC_HeavyExoskeleton_Spark_Armor",
-        "struct": "NPC_HeavyExoskeleton_Spark_Armor",
-        "category": "FULL_BODY_SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": true,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
-      },
-      {
-        "sid": "NPC_Heavy_Military_Armor",
-        "struct": "NPC_Heavy_Military_Armor",
-        "category": "FULL_BODY_SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": true,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
-      },
-      {
-        "sid": "NPC_Korshunov_Armor_2",
-        "struct": "NPC_Korshunov_Armor_2",
         "category": "FULL_BODY_SUIT",
         "item_slot_type": "EInventoryEquipmentSlot::Body",
         "blocks_head": true,
