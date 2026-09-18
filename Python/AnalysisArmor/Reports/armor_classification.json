@@ -246,7 +246,8 @@
     "Varta": "WARD",
     "Military": "MILITARY",
     "Neutral": "FREE_STALKER",
-    "Bandit": "BANDIT"
+    "Bandit": "BANDIT",
+    "Scientific": "ECOLOGIST"
   },
   "faction_counts": {
     "DUTY": 9,
@@ -258,8 +259,9 @@
     "MILITARY": 5,
     "FREE_STALKER": 7,
     "BANDIT": 4,
+    "ECOLOGIST": 4,
     "AMBIGUOUS": 0,
-    "UNRESOLVED": 4
+    "UNRESOLVED": 0
   },
   "factions": {
     "DUTY": [
@@ -1079,8 +1081,7 @@
         ]
       }
     ],
-    "AMBIGUOUS": [],
-    "UNRESOLVED": [
+    "ECOLOGIST": [
       {
         "sid": "Anomaly_Scientific_Armor",
         "struct": "Anomaly_Scientific_Armor",
@@ -1090,8 +1091,13 @@
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
         "direct_bBlockHead": "true",
-        "faction_candidate": "UNRESOLVED",
-        "faction_matches": []
+        "faction_candidate": "ECOLOGIST",
+        "faction_matches": [
+          {
+            "token": "Scientific",
+            "faction": "ECOLOGIST"
+          }
+        ]
       },
       {
         "sid": "Anomaly_Scientific_Armor_PSY_preinstalled",
@@ -1102,8 +1108,13 @@
         "refkey": "Anomaly_Scientific_Armor",
         "direct_item_slot_type": null,
         "direct_bBlockHead": null,
-        "faction_candidate": "UNRESOLVED",
-        "faction_matches": []
+        "faction_candidate": "ECOLOGIST",
+        "faction_matches": [
+          {
+            "token": "Scientific",
+            "faction": "ECOLOGIST"
+          }
+        ]
       },
       {
         "sid": "HeavyAnomaly_Scientific_Armor",
@@ -1114,8 +1125,13 @@
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
         "direct_bBlockHead": "true",
-        "faction_candidate": "UNRESOLVED",
-        "faction_matches": []
+        "faction_candidate": "ECOLOGIST",
+        "faction_matches": [
+          {
+            "token": "Scientific",
+            "faction": "ECOLOGIST"
+          }
+        ]
       },
       {
         "sid": "SciSEVA_Scientific_Armor",
@@ -1126,10 +1142,17 @@
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
         "direct_bBlockHead": "true",
-        "faction_candidate": "UNRESOLVED",
-        "faction_matches": []
+        "faction_candidate": "ECOLOGIST",
+        "faction_matches": [
+          {
+            "token": "Scientific",
+            "faction": "ECOLOGIST"
+          }
+        ]
       }
-    ]
+    ],
+    "AMBIGUOUS": [],
+    "UNRESOLVED": []
   },
   "counts": {
     "HELMET": 10,
@@ -1595,8 +1618,13 @@
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
         "direct_bBlockHead": "true",
-        "faction_candidate": "UNRESOLVED",
-        "faction_matches": []
+        "faction_candidate": "ECOLOGIST",
+        "faction_matches": [
+          {
+            "token": "Scientific",
+            "faction": "ECOLOGIST"
+          }
+        ]
       },
       {
         "sid": "Anomaly_Scientific_Armor_PSY_preinstalled",
@@ -1607,8 +1635,13 @@
         "refkey": "Anomaly_Scientific_Armor",
         "direct_item_slot_type": null,
         "direct_bBlockHead": null,
-        "faction_candidate": "UNRESOLVED",
-        "faction_matches": []
+        "faction_candidate": "ECOLOGIST",
+        "faction_matches": [
+          {
+            "token": "Scientific",
+            "faction": "ECOLOGIST"
+          }
+        ]
       },
       {
         "sid": "BattleExoskeleton_Varta_Armor",
@@ -1772,8 +1805,13 @@
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
         "direct_bBlockHead": "true",
-        "faction_candidate": "UNRESOLVED",
-        "faction_matches": []
+        "faction_candidate": "ECOLOGIST",
+        "faction_matches": [
+          {
+            "token": "Scientific",
+            "faction": "ECOLOGIST"
+          }
+        ]
       },
       {
         "sid": "HeavyAnomaly_Spark_Armor",
@@ -1988,8 +2026,13 @@
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
         "direct_bBlockHead": "true",
-        "faction_candidate": "UNRESOLVED",
-        "faction_matches": []
+        "faction_candidate": "ECOLOGIST",
+        "faction_matches": [
+          {
+            "token": "Scientific",
+            "faction": "ECOLOGIST"
+          }
+        ]
       }
     ],
     "AMBIGUOUS_BODY": [],
