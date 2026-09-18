@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from technician_support import technician_upgrade_assignments
+from technician_support import technician_upgrade_assignments, vanilla_technician_direct_upgrade_indices
 from upgrade_build_model import UpgradeBuildModel, UpgradeDefinition
 from vanilla_upgrade_layout import dlc_general_setup_upgrades, vanilla_general_setup_upgrades
 
@@ -120,16 +120,19 @@ def render_dlc_general_setup_patch(model: UpgradeBuildModel, content_pack: str) 
 
 def render_technician_patch(model: UpgradeBuildModel) -> str:
     assignments = technician_upgrade_assignments(model)
+    vanilla_last_indices = vanilla_technician_direct_upgrade_indices()
     lines = [
         "// AUTO-GENERATED - BPRUE upgrades follow each technician's effective Vanilla weapon support.",
-        "// Technician templates are intentionally not patched; only concrete Vanilla technician NPCs are emitted.",
+        "// Only technicians that directly own a Vanilla Upgrades array are patched.",
+        "// Entries continue after Vanilla's highest numeric index; [*] is intentionally avoided.",
         "",
     ]
     for technician_sid, upgrades in assignments.items():
         if not upgrades:
             continue
+        next_index = vanilla_last_indices[technician_sid] + 1
         lines += [f"{technician_sid} : struct.begin {{bpatch}}", "   Upgrades : struct.begin {bpatch}"]
-        for upgrade in upgrades:
-            lines += ["      [*] : struct.begin", f"         UpgradePrototypeSID = {upgrade.sid}", "         Enabled = true", "      struct.end"]
+        for offset, upgrade in enumerate(upgrades):
+            lines += [f"      [{next_index + offset}] : struct.begin", f"         UpgradePrototypeSID = {upgrade.sid}", "         Enabled = true", "      struct.end"]
         lines += ["   struct.end", "struct.end", ""]
     return "\n".join(lines).rstrip() + "\n"
