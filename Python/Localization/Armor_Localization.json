@@ -67,8 +67,8 @@
     {
       "sid": "sid_bprue_armor_freedom_helmet_loadbearing_description",
       "languages": {
-        "English": "A compact field rig improves carrying capacity and weight distribution by 5%, completing the helmet's mobility-focused configuration.",
-        "Russian": "Компактная полевая разгрузка улучшает грузоподъёмность и распределение веса на 5%, завершая мобильную конфигурацию шлема."
+        "English": "A compact field rig improves carrying capacity and weight distribution by 5%, but sacrifices 10% durability to keep the setup light and mobile.",
+        "Russian": "Компактная полевая разгрузка улучшает грузоподъёмность и распределение веса на 5%, но ради лёгкости и мобильности снижает прочность на 10%."
       }
     },
     {
