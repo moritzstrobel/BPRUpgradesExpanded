@@ -9,6 +9,7 @@ PYTHON_ROOT = SCRIPT_DIR.parents[1]
 CONTENT_ROOT = PYTHON_ROOT.parent
 CONFIG_PATH = SCRIPT_DIR / "armor_signatures.json"
 CLASSIFICATION_PATH = PYTHON_ROOT / "AnalysisArmor" / "Reports" / "armor_classification.json"
+UPGRADE_MAPPING_PATH = PYTHON_ROOT / "AnalysisArmor" / "Reports" / "armor_upgrade_mapping.json"
 
 ARMOR_PATCH_PATH = CONTENT_ROOT / "GameLite/GameData/ItemPrototypes/ArmorPrototypes/ArmorPrototypes_patch_BPRUE.cfg"
 EFFECT_OUTPUT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_ArmorEffectPrototypes.cfg"
@@ -122,8 +123,18 @@ def render_upgrade_fragment(upgrades: list[ArmorUpgradeDefinition]) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
+def _vanilla_upgrade_sids_by_armor() -> dict[str, list[str]]:
+    if not UPGRADE_MAPPING_PATH.exists():
+        raise FileNotFoundError(
+            f"{UPGRADE_MAPPING_PATH} missing; run Python/AnalysisArmor/analyze_armor_upgrades.py first"
+        )
+    rows = json.loads(UPGRADE_MAPPING_PATH.read_text(encoding="utf-8"))
+    return {row["sid"]: list(row["upgrades"]) for row in rows}
+
+
 def render_armor_patch(upgrades: list[ArmorUpgradeDefinition]) -> str:
     by_armor = {upgrade.armor_sid: upgrade for upgrade in upgrades}
+    vanilla_by_armor = _vanilla_upgrade_sids_by_armor()
     lines = [
         "// -----------------------------------------------------------------------------",
         "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND",
@@ -133,10 +144,14 @@ def render_armor_patch(upgrades: list[ArmorUpgradeDefinition]) -> str:
         "",
     ]
     for armor_sid, upgrade in sorted(by_armor.items()):
+        vanilla = vanilla_by_armor.get(armor_sid)
+        if vanilla is None:
+            raise ValueError(f"{armor_sid}: missing Vanilla UpgradePrototypeSIDs mapping")
+        combined = list(dict.fromkeys([*vanilla, upgrade.sid]))
         lines += [
             f"{armor_sid} : struct.begin {{bpatch}}",
-            "   UpgradePrototypeSIDs : struct.begin {bpatch}",
-            f"      [*] = {upgrade.sid}",
+            "   UpgradePrototypeSIDs : struct.begin",
+            *(f"      [{i}] = {sid}" for i, sid in enumerate(combined)),
             "   struct.end",
             "struct.end",
             "",
