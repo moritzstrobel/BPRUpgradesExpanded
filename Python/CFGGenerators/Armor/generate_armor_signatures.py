@@ -19,7 +19,31 @@ ARMOR_PATCH_PATH = CONTENT_ROOT / "GameLite/GameData/ItemPrototypes/ArmorPrototy
 EFFECT_OUTPUT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_ArmorEffectPrototypes.cfg"
 
 MODULE_TEMPLATE_SID = "BPRUE_ArmorModuleTemplate"
-MODULE_IMAGE = "Texture2D'/BPRUpgradesExpanded/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/T_Module_Base_Unique.T_Module_Base_Unique'"
+FACTION_IMAGES = {
+    "BANDIT": "Bandits",
+    "DUTY": "Duty",
+    "ECOLOGIST": "Ekolog",
+    "FREEDOM": "Freedom",
+    "FREE_STALKER": "Loners",
+    "MERCENARY": "Mercs",
+    "MILITARY": "Military",
+    "MONOLITH": "Monolith",
+    "SPARK": "Spark",
+    "WARD": "Ward",
+}
+
+
+def faction_module_image(faction: str) -> str:
+    asset_suffix = FACTION_IMAGES.get(faction)
+    if asset_suffix is None:
+        raise ValueError(f"No armor module image configured for faction {faction}")
+    asset = f"T_Module_Armor_{asset_suffix}"
+    return (
+        "Texture2D'/BPRUpgradesExpanded/GameLite/FPS_Game/UIRemaster/"
+        f"UITextures/PDA/Upgrades/Armor/{asset}.{asset}'"
+    )
+
+
 DEFAULT_ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/Armor/T_PDA_Upgrades_Icon_AttachmentSystem.T_PDA_Upgrades_Icon_AttachmentSystem'"
 
 
@@ -176,7 +200,7 @@ def render_upgrade_fragment(upgrades: list[ArmorUpgradeDefinition]) -> str:
             f"   SID = {upgrade.sid}",
             f"   Text = {upgrade.text_sid}",
             f"   Hint = {upgrade.hint_sid}",
-            f"   Image = {MODULE_IMAGE}",
+            f"   Image = {faction_module_image(upgrade.faction)}",
             f"   Icon = {DEFAULT_ICON}",
             f"   BaseCost = {upgrade.cost}",
             *([f"   HorizontalPosition = {upgrade.horizontal_position}"] if upgrade.horizontal_position is not None else []),
