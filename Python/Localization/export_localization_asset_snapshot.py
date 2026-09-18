@@ -15,10 +15,16 @@ def get_sid(entry):
     return str(entry.get_editor_property("SID"))
 
 def export_languages(entry):
-    # ExportText gives us the complete struct representation without depending
-    # on the concrete Python wrapper type of LanguagesToLocalizedStrings.
-    text = entry.export_text()
-    return text
+    value = entry.get_editor_property("LanguagesToLocalizedStrings")
+    result = {}
+    if hasattr(value, "items"):
+        for language, text in value.items():
+            result[str(language)] = str(text)
+        return result
+    raise RuntimeError(
+        "LanguagesToLocalizedStrings is not exposed as a mapping by ZoneKit Python "
+        f"(type={type(value).__name__})."
+    )
 
 asset = unreal.load_asset(ASSET_PATH)
 if asset is None:
@@ -32,7 +38,7 @@ for entry in localized_texts:
     if sid in seen:
         raise RuntimeError(f"Duplicate SID in localization asset: {sid}")
     seen.add(sid)
-    entries.append({"sid": sid, "export_text": export_languages(entry)})
+    entries.append({"sid": sid, "languages": export_languages(entry)})
 
 os.makedirs(os.path.dirname(REPORT_PATH), exist_ok=True)
 with open(REPORT_PATH, "w", encoding="utf-8") as handle:
@@ -44,4 +50,4 @@ with open(REPORT_PATH, "w", encoding="utf-8") as handle:
     )
     handle.write("\n")
 
-log(f"Exported {len(entries)} entries to {REPORT_PATH}")
+log(f"Exported {len(entries)} entries with structured languages to {REPORT_PATH}")
