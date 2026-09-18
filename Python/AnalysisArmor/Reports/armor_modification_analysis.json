@@ -36,6 +36,7 @@
       "owners": [
         "BattleExoskeleton_Varta_Armor"
       ],
+      "refkey": "[0]",
       "text": "sid_upgrades_ArmUpg_rad_01_name",
       "hint": "sid_upgrades_ArmUpg_rad_01_description",
       "base_cost": "7500",
@@ -43,12 +44,25 @@
       "vertical_position": "EUpgradeVerticalPosition::Top",
       "horizontal_position": null,
       "is_modification": true,
+      "effective_text": "sid_upgrades_ArmUpg_rad_01_name",
+      "effective_hint": "sid_upgrades_ArmUpg_rad_01_description",
+      "effective_base_cost": "7500",
+      "effective_upgrade_target_part": "EUpgradeTargetPartType::Body",
+      "effective_vertical_position": "EUpgradeVerticalPosition::Top",
+      "effective_horizontal_position": null,
+      "effective_is_modification": true,
       "EffectPrototypeSIDs": [
         "BattleExoskeleton_Varta_Armor_protectionRadiation"
       ],
+      "effective_EffectPrototypeSIDs": [
+        "BattleExoskeleton_Varta_Armor_protectionRadiation"
+      ],
       "RequiredUpgradePrototypeSIDs": [],
+      "effective_RequiredUpgradePrototypeSIDs": [],
       "BlockingUpgradePrototypeSIDs": [],
+      "effective_BlockingUpgradePrototypeSIDs": [],
       "RequiredItemPrototypeSIDs": [],
+      "effective_RequiredItemPrototypeSIDs": [],
       "owner_categories": [
         "FULL_BODY_SUIT"
       ],
@@ -61,6 +75,7 @@
       "owners": [
         "BattleExoskeleton_Varta_Armor"
       ],
+      "refkey": "[0]",
       "text": "sid_upgrades_ArmUpg_rad_02_name",
       "hint": "sid_upgrades_ArmUpg_rad_02_description",
       "base_cost": "15000",
@@ -68,14 +83,29 @@
       "vertical_position": null,
       "horizontal_position": "1",
       "is_modification": true,
+      "effective_text": "sid_upgrades_ArmUpg_rad_02_name",
+      "effective_hint": "sid_upgrades_ArmUpg_rad_02_description",
+      "effective_base_cost": "15000",
+      "effective_upgrade_target_part": "EUpgradeTargetPartType::Body",
+      "effective_vertical_position": null,
+      "effective_horizontal_position": "1",
+      "effective_is_modification": true,
       "EffectPrototypeSIDs": [
+        "BattleExoskeleton_Varta_Armor_protectionRadiation2"
+      ],
+      "effective_EffectPrototypeSIDs": [
         "BattleExoskeleton_Varta_Armor_protectionRadiation2"
       ],
       "RequiredUpgradePrototypeSIDs": [
         "BattleExoskeleton_Varta_Armor_protectionRadiation_Right_1_1"
       ],
+      "effective_RequiredUpgradePrototypeSIDs": [
+        "BattleExoskeleton_Varta_Armor_protectionRadiation_Right_1_1"
+      ],
       "BlockingUpgradePrototypeSIDs": [],
+      "effective_BlockingUpgradePrototypeSIDs": [],
       "RequiredItemPrototypeSIDs": [],
+      "effective_RequiredItemPrototypeSIDs": [],
       "owner_categories": [
         "FULL_BODY_SUIT"
       ],
@@ -88,6 +118,7 @@
       "owners": [
         "Exoskeleton_Dolg_Armor"
       ],
+      "refkey": "[0]",
       "text": "sid_upgrades_ArmUpg_pockets_02_name",
       "hint": "sid_upgrades_ArmUpg_pockets_02_description",
       "base_cost": "15000",
@@ -95,15 +126,31 @@
       "vertical_position": null,
       "horizontal_position": "1",
       "is_modification": true,
+      "effective_text": "sid_upgrades_ArmUpg_pockets_02_name",
+      "effective_hint": "sid_upgrades_ArmUpg_pockets_02_description",
+      "effective_base_cost": "15000",
+      "effective_upgrade_target_part": "EUpgradeTargetPartType::Body",
+      "effective_vertical_position": null,
+      "effective_horizontal_position": "1",
+      "effective_is_modification": true,
       "EffectPrototypeSIDs": [
+        "Exoskeleton_Dolg_Armor_carryingCapacity",
+        "Exoskeleton_Dolg_Armor_reductionWeight5"
+      ],
+      "effective_EffectPrototypeSIDs": [
         "Exoskeleton_Dolg_Armor_carryingCapacity",
         "Exoskeleton_Dolg_Armor_reductionWeight5"
       ],
       "RequiredUpgradePrototypeSIDs": [
         "Exoskeleton_Dolg_Armor_EXOregenerationStamina_Right_1_1"
       ],
+      "effective_RequiredUpgradePrototypeSIDs": [
+        "Exoskeleton_Dolg_Armor_EXOregenerationStamina_Right_1_1"
+      ],
       "BlockingUpgradePrototypeSIDs": [],
+      "effective_BlockingUpgradePrototypeSIDs": [],
       "RequiredItemPrototypeSIDs": [],
+      "effective_RequiredItemPrototypeSIDs": [],
       "owner_categories": [
         "FULL_BODY_SUIT"
       ],
@@ -116,6 +163,7 @@
       "owners": [
         "Exoskeleton_Dolg_Armor"
       ],
+      "refkey": "[0]",
       "text": "sid_upgrades_ArmUpg_exo_stamina_01_name",
       "hint": "sid_upgrades_ArmUpg_exo_stamina_01_description",
       "base_cost": "7500",
@@ -123,13 +171,27 @@
       "vertical_position": "EUpgradeVerticalPosition::Top",
       "horizontal_position": null,
       "is_modification": true,
+      "effective_text": "sid_upgrades_ArmUpg_exo_stamina_01_name",
+      "effective_hint": "sid_upgrades_ArmUpg_exo_stamina_01_description",
+      "effective_base_cost": "7500",
+      "effective_upgrade_target_part": "EUpgradeTargetPartType::Body",
+      "effective_vertical_position": "EUpgradeVerticalPosition::Top",
+      "effective_horizontal_position": null,
+      "effective_is_modification": true,
       "EffectPrototypeSIDs": [
         "Exoskeleton_Dolg_Armor_reductionWeight4",
         "Exoskeleton_Dolg_Armor_regenerationStamina"
       ],
+      "effective_EffectPrototypeSIDs": [
+        "Exoskeleton_Dolg_Armor_reductionWeight4",
+        "Exoskeleton_Dolg_Armor_regenerationStamina"
+      ],
       "RequiredUpgradePrototypeSIDs": [],
+      "effective_RequiredUpgradePrototypeSIDs": [],
       "BlockingUpgradePrototypeSIDs": [],
+      "effective_BlockingUpgradePrototypeSIDs": [],
       "RequiredItemPrototypeSIDs": [],
+      "effective_RequiredItemPrototypeSIDs": [],
       "owner_categories": [
         "FULL_BODY_SUIT"
       ],
@@ -142,6 +204,7 @@
       "owners": [
         "Exoskeleton_Mercenaries_Armor"
       ],
+      "refkey": "[0]",
       "text": "sid_upgrades_ArmUpg_exo_sprint_01_name",
       "hint": "sid_upgrades_ArmUpg_exo_sprint_01_description",
       "base_cost": "7500",
@@ -149,12 +212,27 @@
       "vertical_position": "EUpgradeVerticalPosition::Top",
       "horizontal_position": null,
       "is_modification": true,
+      "effective_text": "sid_upgrades_ArmUpg_exo_sprint_01_name",
+      "effective_hint": "sid_upgrades_ArmUpg_exo_sprint_01_description",
+      "effective_base_cost": "7500",
+      "effective_upgrade_target_part": "EUpgradeTargetPartType::Body",
+      "effective_vertical_position": "EUpgradeVerticalPosition::Top",
+      "effective_horizontal_position": null,
+      "effective_is_modification": true,
       "EffectPrototypeSIDs": [
         "AddSprintEffect"
       ],
+      "effective_EffectPrototypeSIDs": [
+        "AddSprintEffect"
+      ],
       "RequiredUpgradePrototypeSIDs": [],
+      "effective_RequiredUpgradePrototypeSIDs": [],
       "BlockingUpgradePrototypeSIDs": [],
+      "effective_BlockingUpgradePrototypeSIDs": [],
       "RequiredItemPrototypeSIDs": [
+        "Blueprint_Exoskeleton_Mercenaries_Armor_Upgrade_3"
+      ],
+      "effective_RequiredItemPrototypeSIDs": [
         "Blueprint_Exoskeleton_Mercenaries_Armor_Upgrade_3"
       ],
       "owner_categories": [
@@ -169,6 +247,7 @@
       "owners": [
         "Exoskeleton_Monolith_Armor"
       ],
+      "refkey": "[0]",
       "text": "sid_upgrades_ArmUpg_exo_sprint_01_name",
       "hint": "sid_upgrades_ArmUpg_exo_sprint_01_description",
       "base_cost": "15000",
@@ -176,14 +255,29 @@
       "vertical_position": null,
       "horizontal_position": "1",
       "is_modification": true,
+      "effective_text": "sid_upgrades_ArmUpg_exo_sprint_01_name",
+      "effective_hint": "sid_upgrades_ArmUpg_exo_sprint_01_description",
+      "effective_base_cost": "15000",
+      "effective_upgrade_target_part": "EUpgradeTargetPartType::Body",
+      "effective_vertical_position": null,
+      "effective_horizontal_position": "1",
+      "effective_is_modification": true,
       "EffectPrototypeSIDs": [
+        "AddSprintEffect"
+      ],
+      "effective_EffectPrototypeSIDs": [
         "AddSprintEffect"
       ],
       "RequiredUpgradePrototypeSIDs": [
         "Exoskeleton_Monolith_Armor_carryingCapacity_Right_1_1"
       ],
+      "effective_RequiredUpgradePrototypeSIDs": [
+        "Exoskeleton_Monolith_Armor_carryingCapacity_Right_1_1"
+      ],
       "BlockingUpgradePrototypeSIDs": [],
+      "effective_BlockingUpgradePrototypeSIDs": [],
       "RequiredItemPrototypeSIDs": [],
+      "effective_RequiredItemPrototypeSIDs": [],
       "owner_categories": [
         "FULL_BODY_SUIT"
       ],
@@ -196,6 +290,7 @@
       "owners": [
         "Exoskeleton_Monolith_Armor"
       ],
+      "refkey": "[0]",
       "text": "sid_upgrades_ArmUpg_pockets_01_name",
       "hint": "sid_upgrades_ArmUpg_pockets_01_description",
       "base_cost": "7500",
@@ -203,12 +298,25 @@
       "vertical_position": "EUpgradeVerticalPosition::Top",
       "horizontal_position": null,
       "is_modification": true,
+      "effective_text": "sid_upgrades_ArmUpg_pockets_01_name",
+      "effective_hint": "sid_upgrades_ArmUpg_pockets_01_description",
+      "effective_base_cost": "7500",
+      "effective_upgrade_target_part": "EUpgradeTargetPartType::Body",
+      "effective_vertical_position": "EUpgradeVerticalPosition::Top",
+      "effective_horizontal_position": null,
+      "effective_is_modification": true,
       "EffectPrototypeSIDs": [
         "Exoskeleton_Monolith_Armor_carryingCapacity"
       ],
+      "effective_EffectPrototypeSIDs": [
+        "Exoskeleton_Monolith_Armor_carryingCapacity"
+      ],
       "RequiredUpgradePrototypeSIDs": [],
+      "effective_RequiredUpgradePrototypeSIDs": [],
       "BlockingUpgradePrototypeSIDs": [],
+      "effective_BlockingUpgradePrototypeSIDs": [],
       "RequiredItemPrototypeSIDs": [],
+      "effective_RequiredItemPrototypeSIDs": [],
       "owner_categories": [
         "FULL_BODY_SUIT"
       ],
@@ -221,6 +329,7 @@
       "owners": [
         "Exoskeleton_Neutral_Armor"
       ],
+      "refkey": "[0]",
       "text": "sid_upgrades_ArmUpg_exo_sprint_01_name",
       "hint": "sid_upgrades_ArmUpg_exo_sprint_01_description",
       "base_cost": "15000",
@@ -228,14 +337,29 @@
       "vertical_position": null,
       "horizontal_position": "1",
       "is_modification": true,
+      "effective_text": "sid_upgrades_ArmUpg_exo_sprint_01_name",
+      "effective_hint": "sid_upgrades_ArmUpg_exo_sprint_01_description",
+      "effective_base_cost": "15000",
+      "effective_upgrade_target_part": "EUpgradeTargetPartType::Body",
+      "effective_vertical_position": null,
+      "effective_horizontal_position": "1",
+      "effective_is_modification": true,
       "EffectPrototypeSIDs": [
+        "AddSprintEffect"
+      ],
+      "effective_EffectPrototypeSIDs": [
         "AddSprintEffect"
       ],
       "RequiredUpgradePrototypeSIDs": [
         "Exoskeleton_Neutral_Armor_EXOregenerationStamina_Right_1_1"
       ],
+      "effective_RequiredUpgradePrototypeSIDs": [
+        "Exoskeleton_Neutral_Armor_EXOregenerationStamina_Right_1_1"
+      ],
       "BlockingUpgradePrototypeSIDs": [],
+      "effective_BlockingUpgradePrototypeSIDs": [],
       "RequiredItemPrototypeSIDs": [],
+      "effective_RequiredItemPrototypeSIDs": [],
       "owner_categories": [
         "FULL_BODY_SUIT"
       ],
@@ -248,6 +372,7 @@
       "owners": [
         "Exoskeleton_Neutral_Armor"
       ],
+      "refkey": "[0]",
       "text": "sid_upgrades_ArmUpg_exo_stamina_01_name",
       "hint": "sid_upgrades_ArmUpg_exo_stamina_01_description",
       "base_cost": "7500",
@@ -255,13 +380,27 @@
       "vertical_position": "EUpgradeVerticalPosition::Top",
       "horizontal_position": null,
       "is_modification": true,
+      "effective_text": "sid_upgrades_ArmUpg_exo_stamina_01_name",
+      "effective_hint": "sid_upgrades_ArmUpg_exo_stamina_01_description",
+      "effective_base_cost": "7500",
+      "effective_upgrade_target_part": "EUpgradeTargetPartType::Body",
+      "effective_vertical_position": "EUpgradeVerticalPosition::Top",
+      "effective_horizontal_position": null,
+      "effective_is_modification": true,
       "EffectPrototypeSIDs": [
         "Exoskeleton_Neutral_Armor_reductionWeight2",
         "Exoskeleton_Neutral_Armor_regenerationStamina"
       ],
+      "effective_EffectPrototypeSIDs": [
+        "Exoskeleton_Neutral_Armor_reductionWeight2",
+        "Exoskeleton_Neutral_Armor_regenerationStamina"
+      ],
       "RequiredUpgradePrototypeSIDs": [],
+      "effective_RequiredUpgradePrototypeSIDs": [],
       "BlockingUpgradePrototypeSIDs": [],
+      "effective_BlockingUpgradePrototypeSIDs": [],
       "RequiredItemPrototypeSIDs": [],
+      "effective_RequiredItemPrototypeSIDs": [],
       "owner_categories": [
         "FULL_BODY_SUIT"
       ],
@@ -274,6 +413,7 @@
       "owners": [
         "Exoskeleton_Svoboda_Armor"
       ],
+      "refkey": "[0]",
       "text": "sid_upgrades_ArmUpg_exo_sprint_01_name",
       "hint": "sid_upgrades_ArmUpg_exo_sprint_01_description",
       "base_cost": "15000",
@@ -281,14 +421,29 @@
       "vertical_position": null,
       "horizontal_position": "1",
       "is_modification": true,
+      "effective_text": "sid_upgrades_ArmUpg_exo_sprint_01_name",
+      "effective_hint": "sid_upgrades_ArmUpg_exo_sprint_01_description",
+      "effective_base_cost": "15000",
+      "effective_upgrade_target_part": "EUpgradeTargetPartType::Body",
+      "effective_vertical_position": null,
+      "effective_horizontal_position": "1",
+      "effective_is_modification": true,
       "EffectPrototypeSIDs": [
+        "AddSprintEffect"
+      ],
+      "effective_EffectPrototypeSIDs": [
         "AddSprintEffect"
       ],
       "RequiredUpgradePrototypeSIDs": [
         "Exoskeleton_Svoboda_Armor_EXOregenerationStamina_Right_1_1"
       ],
+      "effective_RequiredUpgradePrototypeSIDs": [
+        "Exoskeleton_Svoboda_Armor_EXOregenerationStamina_Right_1_1"
+      ],
       "BlockingUpgradePrototypeSIDs": [],
+      "effective_BlockingUpgradePrototypeSIDs": [],
       "RequiredItemPrototypeSIDs": [],
+      "effective_RequiredItemPrototypeSIDs": [],
       "owner_categories": [
         "FULL_BODY_SUIT"
       ],
@@ -301,6 +456,7 @@
       "owners": [
         "Exoskeleton_Svoboda_Armor"
       ],
+      "refkey": "[0]",
       "text": "sid_upgrades_ArmUpg_exo_stamina_01_name",
       "hint": "sid_upgrades_ArmUpg_exo_stamina_01_description",
       "base_cost": "7500",
@@ -308,13 +464,27 @@
       "vertical_position": "EUpgradeVerticalPosition::Top",
       "horizontal_position": null,
       "is_modification": true,
+      "effective_text": "sid_upgrades_ArmUpg_exo_stamina_01_name",
+      "effective_hint": "sid_upgrades_ArmUpg_exo_stamina_01_description",
+      "effective_base_cost": "7500",
+      "effective_upgrade_target_part": "EUpgradeTargetPartType::Body",
+      "effective_vertical_position": "EUpgradeVerticalPosition::Top",
+      "effective_horizontal_position": null,
+      "effective_is_modification": true,
       "EffectPrototypeSIDs": [
         "Exoskeleton_Svoboda_Armor_reductionWeight4",
         "Exoskeleton_Svoboda_Armor_regenerationStamina"
       ],
+      "effective_EffectPrototypeSIDs": [
+        "Exoskeleton_Svoboda_Armor_reductionWeight4",
+        "Exoskeleton_Svoboda_Armor_regenerationStamina"
+      ],
       "RequiredUpgradePrototypeSIDs": [],
+      "effective_RequiredUpgradePrototypeSIDs": [],
       "BlockingUpgradePrototypeSIDs": [],
+      "effective_BlockingUpgradePrototypeSIDs": [],
       "RequiredItemPrototypeSIDs": [],
+      "effective_RequiredItemPrototypeSIDs": [],
       "owner_categories": [
         "FULL_BODY_SUIT"
       ],
@@ -327,6 +497,7 @@
       "owners": [
         "HeavyExoskeleton_Monolith_Armor"
       ],
+      "refkey": "[0]",
       "text": "sid_upgrades_ArmUpg_exo_sprint_01_name",
       "hint": "sid_upgrades_ArmUpg_exo_sprint_01_description",
       "base_cost": "15000",
@@ -334,14 +505,29 @@
       "vertical_position": null,
       "horizontal_position": "1",
       "is_modification": true,
+      "effective_text": "sid_upgrades_ArmUpg_exo_sprint_01_name",
+      "effective_hint": "sid_upgrades_ArmUpg_exo_sprint_01_description",
+      "effective_base_cost": "15000",
+      "effective_upgrade_target_part": "EUpgradeTargetPartType::Body",
+      "effective_vertical_position": null,
+      "effective_horizontal_position": "1",
+      "effective_is_modification": true,
       "EffectPrototypeSIDs": [
+        "AddSprintEffect"
+      ],
+      "effective_EffectPrototypeSIDs": [
         "AddSprintEffect"
       ],
       "RequiredUpgradePrototypeSIDs": [
         "HeavyExoskeleton_Monolith_Armor_EXOMaxDurability_Right_1_1"
       ],
+      "effective_RequiredUpgradePrototypeSIDs": [
+        "HeavyExoskeleton_Monolith_Armor_EXOMaxDurability_Right_1_1"
+      ],
       "BlockingUpgradePrototypeSIDs": [],
+      "effective_BlockingUpgradePrototypeSIDs": [],
       "RequiredItemPrototypeSIDs": [],
+      "effective_RequiredItemPrototypeSIDs": [],
       "owner_categories": [
         "FULL_BODY_SUIT"
       ],
@@ -354,6 +540,7 @@
       "owners": [
         "HeavyExoskeleton_Monolith_Armor"
       ],
+      "refkey": "[0]",
       "text": "sid_upgrades_ArmUpg_exo_durable_02_name",
       "hint": "sid_upgrades_ArmUpg_exo_durable_02_description",
       "base_cost": "7500",
@@ -361,13 +548,27 @@
       "vertical_position": "EUpgradeVerticalPosition::Top",
       "horizontal_position": null,
       "is_modification": true,
+      "effective_text": "sid_upgrades_ArmUpg_exo_durable_02_name",
+      "effective_hint": "sid_upgrades_ArmUpg_exo_durable_02_description",
+      "effective_base_cost": "7500",
+      "effective_upgrade_target_part": "EUpgradeTargetPartType::Body",
+      "effective_vertical_position": "EUpgradeVerticalPosition::Top",
+      "effective_horizontal_position": null,
+      "effective_is_modification": true,
       "EffectPrototypeSIDs": [
         "HeavyExoskeleton_Monolith_Armor_reductionWeight2",
         "HeavyExoskeleton_Monolith_Armor_wearing3"
       ],
+      "effective_EffectPrototypeSIDs": [
+        "HeavyExoskeleton_Monolith_Armor_reductionWeight2",
+        "HeavyExoskeleton_Monolith_Armor_wearing3"
+      ],
       "RequiredUpgradePrototypeSIDs": [],
+      "effective_RequiredUpgradePrototypeSIDs": [],
       "BlockingUpgradePrototypeSIDs": [],
+      "effective_BlockingUpgradePrototypeSIDs": [],
       "RequiredItemPrototypeSIDs": [],
+      "effective_RequiredItemPrototypeSIDs": [],
       "owner_categories": [
         "FULL_BODY_SUIT"
       ],
@@ -380,6 +581,7 @@
       "owners": [
         "HeavyExoskeleton_Monolith_Armor"
       ],
+      "refkey": "[0]",
       "text": "sid_upgrades_ArmUpg_exo_hands_01_name",
       "hint": "sid_upgrades_ArmUpg_exo_hands_01_description",
       "base_cost": "30000",
@@ -387,14 +589,29 @@
       "vertical_position": null,
       "horizontal_position": "2",
       "is_modification": true,
+      "effective_text": "sid_upgrades_ArmUpg_exo_hands_01_name",
+      "effective_hint": "sid_upgrades_ArmUpg_exo_hands_01_description",
+      "effective_base_cost": "30000",
+      "effective_upgrade_target_part": "EUpgradeTargetPartType::Body",
+      "effective_vertical_position": null,
+      "effective_horizontal_position": "2",
+      "effective_is_modification": true,
       "EffectPrototypeSIDs": [
+        "HeavyExoskeleton_Monolith_Armor_accuracy"
+      ],
+      "effective_EffectPrototypeSIDs": [
         "HeavyExoskeleton_Monolith_Armor_accuracy"
       ],
       "RequiredUpgradePrototypeSIDs": [
         "HeavyExoskeleton_Monolith_Armor_AddRunEffect_Right_2_1"
       ],
+      "effective_RequiredUpgradePrototypeSIDs": [
+        "HeavyExoskeleton_Monolith_Armor_AddRunEffect_Right_2_1"
+      ],
       "BlockingUpgradePrototypeSIDs": [],
+      "effective_BlockingUpgradePrototypeSIDs": [],
       "RequiredItemPrototypeSIDs": [],
+      "effective_RequiredItemPrototypeSIDs": [],
       "owner_categories": [
         "FULL_BODY_SUIT"
       ],
@@ -407,6 +624,7 @@
       "owners": [
         "HeavyExoskeleton_Svoboda_Armor"
       ],
+      "refkey": "[0]",
       "text": "sid_upgrades_ArmUpg_exo_stamina_01_name",
       "hint": "sid_upgrades_ArmUpg_exo_stamina_01_description",
       "base_cost": "7500",
@@ -414,13 +632,27 @@
       "vertical_position": "EUpgradeVerticalPosition::Top",
       "horizontal_position": null,
       "is_modification": true,
+      "effective_text": "sid_upgrades_ArmUpg_exo_stamina_01_name",
+      "effective_hint": "sid_upgrades_ArmUpg_exo_stamina_01_description",
+      "effective_base_cost": "7500",
+      "effective_upgrade_target_part": "EUpgradeTargetPartType::Body",
+      "effective_vertical_position": "EUpgradeVerticalPosition::Top",
+      "effective_horizontal_position": null,
+      "effective_is_modification": true,
       "EffectPrototypeSIDs": [
         "HeavyExoskeleton_Svoboda_Armor_reductionWeight1",
         "HeavyExoskeleton_Svoboda_Armor_regenerationStamina"
       ],
+      "effective_EffectPrototypeSIDs": [
+        "HeavyExoskeleton_Svoboda_Armor_reductionWeight1",
+        "HeavyExoskeleton_Svoboda_Armor_regenerationStamina"
+      ],
       "RequiredUpgradePrototypeSIDs": [],
+      "effective_RequiredUpgradePrototypeSIDs": [],
       "BlockingUpgradePrototypeSIDs": [],
+      "effective_BlockingUpgradePrototypeSIDs": [],
       "RequiredItemPrototypeSIDs": [],
+      "effective_RequiredItemPrototypeSIDs": [],
       "owner_categories": [
         "FULL_BODY_SUIT"
       ],
