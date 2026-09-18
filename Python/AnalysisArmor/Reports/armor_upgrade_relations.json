@@ -1,0 +1,7574 @@
+[
+  {
+    "sid": "Anomaly_Scientific_Armor_MaxDurability_Left_1_1",
+    "armors": [
+      "Anomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Anomaly_Scientific_Armor_MaxDurability_Left_2_2",
+    "armors": [
+      "Anomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Anomaly_Scientific_Armor_container_Left_1_1",
+    "armors": [
+      "Anomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Anomaly_Scientific_Armor_container_Left_1_2",
+    "armors": [
+      "Anomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Anomaly_Scientific_Armor_container_Left_3_1",
+    "armors": [
+      "Anomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Anomaly_Scientific_Armor_protectionChemical_Left_2_1",
+    "armors": [
+      "Anomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Anomaly_Scientific_Armor_protectionChemical_protectionElectrical_Left_3_2",
+    "armors": [
+      "Anomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Anomaly_Scientific_Armor_protectionElectrical_Left_2_2",
+    "armors": [
+      "Anomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Anomaly_Scientific_Armor_protectionPsi_Left_3_1",
+    "armors": [
+      "Anomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Anomaly_Scientific_Armor_protectionRadiation_Left_1_1",
+    "armors": [
+      "Anomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Anomaly_Scientific_Armor_protectionRadiation_Left_2_1",
+    "armors": [
+      "Anomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Anomaly_Scientific_Armor_protectionThermal_Left_1_1",
+    "armors": [
+      "Anomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Anomaly_Scientific_Armor_protectionThermal_protectionChemica_Left_3_1",
+    "armors": [
+      "Anomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Anomaly_Scientific_Armor_rad_container_Left_2_1",
+    "armors": [
+      "Anomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Anomaly_Scientific_Armor_reductionWeight_Left_2_1",
+    "armors": [
+      "Anomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Anomaly_Scientific_Armor_regenerationStamina_Left_3_1",
+    "armors": [
+      "Anomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "BattleExoskeleton_Varta_Armor_AddRunEffect_Left_1_1",
+    "armors": [
+      "BattleExoskeleton_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "BattleExoskeleton_Varta_Armor_EXOMaxDurability_Left_2_1",
+    "armors": [
+      "BattleExoskeleton_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "BattleExoskeleton_Varta_Armor_EXOMaxDurability_Left_2_2",
+    "armors": [
+      "BattleExoskeleton_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "BattleExoskeleton_Varta_Armor_EXOprotectionPhysical_Left_2_2",
+    "armors": [
+      "BattleExoskeleton_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "BattleExoskeleton_Varta_Armor_EXOprotectionPhysical_Left_3_1",
+    "armors": [
+      "BattleExoskeleton_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "BattleExoskeleton_Varta_Armor_EXOregenerationStamina_Left_2_1",
+    "armors": [
+      "BattleExoskeleton_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "BattleExoskeleton_Varta_Armor_accuracy_Left_3_1",
+    "armors": [
+      "BattleExoskeleton_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "BattleExoskeleton_Varta_Armor_carryingCapacity_Left_3_2",
+    "armors": [
+      "BattleExoskeleton_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "BattleExoskeleton_Varta_Armor_container_Left_3_1",
+    "armors": [
+      "BattleExoskeleton_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "BattleExoskeleton_Varta_Armor_protectionChemical_Left_2_1",
+    "armors": [
+      "BattleExoskeleton_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "BattleExoskeleton_Varta_Armor_protectionChemical_protectionElectrical_Left_3_1",
+    "armors": [
+      "BattleExoskeleton_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "BattleExoskeleton_Varta_Armor_protectionElectrical_Left_1_1",
+    "armors": [
+      "BattleExoskeleton_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "BattleExoskeleton_Varta_Armor_protectionRadiation_Right_1_1",
+    "armors": [
+      "BattleExoskeleton_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "BattleExoskeleton_Varta_Armor_protectionRadiation_Right_2_1",
+    "armors": [
+      "BattleExoskeleton_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "BattleExoskeleton_Varta_Armor_protectionThermal_Left_2_2",
+    "armors": [
+      "BattleExoskeleton_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "BattleExoskeleton_Varta_Armor_protectionThermal_Left_3_2",
+    "armors": [
+      "BattleExoskeleton_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "BattleExoskeleton_Varta_Armor_rad_container_Left_1_1",
+    "armors": [
+      "BattleExoskeleton_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "BattleExoskeleton_Varta_Armor_rad_container_Left_1_2",
+    "armors": [
+      "BattleExoskeleton_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "BattleExoskeleton_Varta_Armor_rad_container_Left_2_1",
+    "armors": [
+      "BattleExoskeleton_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "BattleExoskeleton_Varta_Armor_rad_container_Left_2_2",
+    "armors": [
+      "BattleExoskeleton_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "BattleExoskeleton_Varta_Armor_reductionWeight_Left_1_1",
+    "armors": [
+      "BattleExoskeleton_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Dolg_Armor_MaxDurability_Left_1_1",
+    "armors": [
+      "Battle_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Dolg_Armor_container_Left_1_2",
+    "armors": [
+      "Battle_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Dolg_Armor_protectionChemical_Left_1_1",
+    "armors": [
+      "Battle_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Dolg_Armor_protectionChemical_Left_3_2",
+    "armors": [
+      "Battle_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Dolg_Armor_protectionElectrical_Left_3_1",
+    "armors": [
+      "Battle_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Dolg_Armor_protectionPhysical_Left_2_1",
+    "armors": [
+      "Battle_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Dolg_Armor_protectionPhysical_Left_2_2",
+    "armors": [
+      "Battle_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Dolg_Armor_protectionRadiation_Left_1_1",
+    "armors": [
+      "Battle_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Dolg_Armor_protectionThermal_Left_1_2",
+    "armors": [
+      "Battle_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Dolg_Armor_protectionThermal_Left_2_1",
+    "armors": [
+      "Battle_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Dolg_Armor_protectionThermal_protectionElectrical_Left_2_2",
+    "armors": [
+      "Battle_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Dolg_Armor_radiationAbsorption_Left_2_1",
+    "armors": [
+      "Battle_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Dolg_Armor_regenerationStamina_Left_3_1",
+    "armors": [
+      "Battle_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Dolg_Armor_regenerationStamina_Left_3_2",
+    "armors": [
+      "Battle_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Military_Helmet_MaxDurability_Left_2_1",
+    "armors": [
+      "Battle_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Military_Helmet_protectionChemical_Left_1_1",
+    "armors": [
+      "Battle_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Military_Helmet_protectionChemical_protectionElectrical_Left_2_2",
+    "armors": [
+      "Battle_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Military_Helmet_protectionChemical_protectionTherma_Left_2_1",
+    "armors": [
+      "Battle_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Military_Helmet_protectionElectrical_Left_1_2",
+    "armors": [
+      "Battle_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Military_Helmet_protectionPhysical_Left_1_1",
+    "armors": [
+      "Battle_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Military_Helmet_protectionPhysical_Left_2_2",
+    "armors": [
+      "Battle_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Military_Helmet_protectionPhysical_Left_3_1",
+    "armors": [
+      "Battle_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Military_Helmet_protectionThermal_Left_3_1",
+    "armors": [
+      "Battle_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Military_Helmet_reductionWeight_Left_1_2",
+    "armors": [
+      "Battle_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Monolith_Armor_Backpack_Left_3_2",
+    "armors": [
+      "Battle_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Monolith_Armor_MaxDurability_Left_2_2",
+    "armors": [
+      "Battle_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Monolith_Armor_container_Left_1_1",
+    "armors": [
+      "Battle_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Monolith_Armor_container_Left_1_2",
+    "armors": [
+      "Battle_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Monolith_Armor_protectionChemical_Left_3_1",
+    "armors": [
+      "Battle_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Monolith_Armor_protectionElectrical_Left_2_1",
+    "armors": [
+      "Battle_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Monolith_Armor_protectionPhysical_Left_1_1",
+    "armors": [
+      "Battle_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Monolith_Armor_protectionPhysical_Left_3_1",
+    "armors": [
+      "Battle_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Monolith_Armor_protectionRadiation_Left_1_1",
+    "armors": [
+      "Battle_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Monolith_Armor_protectionRadiation_Left_2_1",
+    "armors": [
+      "Battle_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Monolith_Armor_protectionThermal_Left_2_2",
+    "armors": [
+      "Battle_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Monolith_Armor_protectionThermal_protectionChemical_Left_1_1",
+    "armors": [
+      "Battle_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Monolith_Armor_protectionThermal_protectionElectrical_Left_1_2",
+    "armors": [
+      "Battle_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Monolith_Armor_rad_container_Left_3_1",
+    "armors": [
+      "Battle_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Monolith_Armor_radiationAbsorption_Left_3_2",
+    "armors": [
+      "Battle_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Monolith_Armor_reductionWeight_Left_2_1",
+    "armors": [
+      "Battle_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Monolith_Armor_reductionWeight_Left_2_2",
+    "armors": [
+      "Battle_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Monolith_Armor_regenerationStamina_Left_3_1",
+    "armors": [
+      "Battle_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Spark_Armor_MaxDurability_Left_1_1",
+    "armors": [
+      "Battle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Spark_Armor_container_Left_1_2",
+    "armors": [
+      "Battle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Spark_Armor_container_Left_2_1",
+    "armors": [
+      "Battle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Spark_Armor_protectionChemical_Left_1_1",
+    "armors": [
+      "Battle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Spark_Armor_protectionChemical_protectionElectrical_Left_3_2",
+    "armors": [
+      "Battle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Spark_Armor_protectionPhysical_Left_2_1",
+    "armors": [
+      "Battle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Spark_Armor_protectionRadiation_Left_3_1",
+    "armors": [
+      "Battle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Spark_Armor_protectionRadiation_Left_3_2",
+    "armors": [
+      "Battle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Spark_Armor_protectionThermal_Left_2_2",
+    "armors": [
+      "Battle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Spark_Armor_protectionThermal_protectionElectrical_Left_2_1",
+    "armors": [
+      "Battle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Spark_Armor_protectionThermal_protectionElectrical_Left_3_1",
+    "armors": [
+      "Battle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Spark_Armor_radiationAbsorption_Left_1_1",
+    "armors": [
+      "Battle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Spark_Armor_radiationAbsorption_Left_2_2",
+    "armors": [
+      "Battle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Spark_Armor_reductionWeight_Left_2_2",
+    "armors": [
+      "Battle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Spark_Armor_regenerationStamina_Left_3_1",
+    "armors": [
+      "Battle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Svoboda_Armor_MaxDurability_Left_1_1",
+    "armors": [
+      "Battle_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Svoboda_Armor_container_Left_1_1",
+    "armors": [
+      "Battle_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Svoboda_Armor_container_Left_1_2",
+    "armors": [
+      "Battle_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Svoboda_Armor_protectionChemical_Left_1_1",
+    "armors": [
+      "Battle_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Svoboda_Armor_protectionPhysical_Left_2_1",
+    "armors": [
+      "Battle_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Svoboda_Armor_protectionRadiation_Left_2_1",
+    "armors": [
+      "Battle_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Svoboda_Armor_protectionRadiation_Left_3_1",
+    "armors": [
+      "Battle_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Svoboda_Armor_protectionThermal_Left_2_2",
+    "armors": [
+      "Battle_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Svoboda_Armor_protectionThermal_protectionElectrical_Left_2_1",
+    "armors": [
+      "Battle_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Svoboda_Armor_protectionThermal_protectionElectrical_Left_3_1",
+    "armors": [
+      "Battle_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Svoboda_Armor_radiationAbsorption_Left_2_2",
+    "armors": [
+      "Battle_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Svoboda_Armor_radiationAbsorption_Left_3_1",
+    "armors": [
+      "Battle_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Svoboda_Armor_reductionWeight_Left_2_2",
+    "armors": [
+      "Battle_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Varta_Armor_container_Left_1_1",
+    "armors": [
+      "Battle_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Varta_Armor_protectionChemical_Left_1_2",
+    "armors": [
+      "Battle_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Varta_Armor_protectionPhysical2_Left_3_2",
+    "armors": [
+      "Battle_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Varta_Armor_protectionPhysical_Left_2_1",
+    "armors": [
+      "Battle_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Varta_Armor_protectionRadiation2_Left_3_1",
+    "armors": [
+      "Battle_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Varta_Armor_protectionRadiation_Left_2_2",
+    "armors": [
+      "Battle_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Varta_Armor_protectionThermal_Left_1_1",
+    "armors": [
+      "Battle_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Varta_Armor_protectionThermal_protectionElectrical_Left_2_1",
+    "armors": [
+      "Battle_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Varta_Armor_reductionWeight_Left_1_2",
+    "armors": [
+      "Battle_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Varta_Armor_regenerationStamina_Left_1_1",
+    "armors": [
+      "Battle_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Varta_Armor_wearing2_Left_2_2",
+    "armors": [
+      "Battle_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Varta_Armor_wearing3_Left_3_1",
+    "armors": [
+      "Battle_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Battle_Varta_Armor_wearing_Left_1_1",
+    "armors": [
+      "Battle_Varta_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Default_Military_Armor_carryingCapacity_Left_3_1",
+    "armors": [
+      "Default_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Default_Military_Armor_container_Left_1_1",
+    "armors": [
+      "Default_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Default_Military_Armor_protectionChemical_Left_1_2",
+    "armors": [
+      "Default_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Default_Military_Armor_protectionPhysical_Left_2_1",
+    "armors": [
+      "Default_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Default_Military_Armor_protectionThermal_Left_1_1",
+    "armors": [
+      "Default_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Default_Military_Armor_protectionThermal_protectionChemical_Left_2_2",
+    "armors": [
+      "Default_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Default_Military_Armor_protectionThermal_protectionElectrical_Left_2_1",
+    "armors": [
+      "Default_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Default_Military_Armor_reductionWeight_Left_1_2",
+    "armors": [
+      "Default_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Default_Military_Armor_regenerationStamina_Left_1_1",
+    "armors": [
+      "Default_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Default_Military_Armor_wearing2_Left_2_2",
+    "armors": [
+      "Default_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Default_Military_Armor_wearing_Left_1_1",
+    "armors": [
+      "Default_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "DutyArmor_4_E1_AddArtifactSlotUpgrade",
+    "armors": [
+      "NPC_Sel_Armor",
+      "NPC_Sel_Neutral_Armor",
+      "NPC_Tec_Armor",
+      "NPC_Cloak_Heavy_Neutral_Armor",
+      "NPC_SkinCloak_Bandit_Armor",
+      "NPC_HeavyExoskeleton_Mercenaries_Armor",
+      "NPC_Heavy_Military_Armor",
+      "NPC_Cloak_Heavy_Military_Armor",
+      "NPC_Sci_Armor",
+      "NPC_Battle_Noon_Armor",
+      "NPC_HeavyAnomaly_Noon_Armor",
+      "NPC_HeavyExoskeleton_Noon_Armor",
+      "NPC_Exoskeleton_Noon_Armor",
+      "NPC_Spark_Armor",
+      "NPC_Anomaly_Spark_Armor",
+      "NPC_HeavyExoskeleton_Spark_Armor",
+      "NPC_Heavy_Corps_Armor",
+      "NPC_Heavy2_Coprs_Armor",
+      "NPC_Heavy3_Corps_Armor",
+      "NPC_Heavy3Exoskeleton_Coprs_Armor",
+      "NPC_Exoskeleton_Coprs_Armor",
+      "NPC_Richter_Armor",
+      "NPC_Korshunov_Armor",
+      "NPC_Korshunov_Armor_2",
+      "NPC_Dalin_Armor",
+      "NPC_Agata_Armor",
+      "NPC_Faust_Armor",
+      "NPC_Kaymanov_Armor",
+      "NPC_Shram_Armor",
+      "NPC_Dekhtyarev_Armor",
+      "NPC_Sidorovich_Armor",
+      "NPC_Barmen_Armor",
+      "NPC_Batya_Armor",
+      "NPC_Tyotya_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "DutyArmor_4_E1_AddRunUpgrade",
+    "armors": [
+      "NPC_Sel_Armor",
+      "NPC_Sel_Neutral_Armor",
+      "NPC_Tec_Armor",
+      "NPC_Cloak_Heavy_Neutral_Armor",
+      "NPC_SkinCloak_Bandit_Armor",
+      "NPC_HeavyExoskeleton_Mercenaries_Armor",
+      "NPC_Heavy_Military_Armor",
+      "NPC_Cloak_Heavy_Military_Armor",
+      "NPC_Sci_Armor",
+      "NPC_Battle_Noon_Armor",
+      "NPC_HeavyAnomaly_Noon_Armor",
+      "NPC_HeavyExoskeleton_Noon_Armor",
+      "NPC_Exoskeleton_Noon_Armor",
+      "NPC_Spark_Armor",
+      "NPC_Anomaly_Spark_Armor",
+      "NPC_HeavyExoskeleton_Spark_Armor",
+      "NPC_Heavy_Corps_Armor",
+      "NPC_Heavy2_Coprs_Armor",
+      "NPC_Heavy3_Corps_Armor",
+      "NPC_Heavy3Exoskeleton_Coprs_Armor",
+      "NPC_Exoskeleton_Coprs_Armor",
+      "NPC_Richter_Armor",
+      "NPC_Korshunov_Armor",
+      "NPC_Korshunov_Armor_2",
+      "NPC_Dalin_Armor",
+      "NPC_Agata_Armor",
+      "NPC_Faust_Armor",
+      "NPC_Kaymanov_Armor",
+      "NPC_Shram_Armor",
+      "NPC_Dekhtyarev_Armor",
+      "NPC_Sidorovich_Armor",
+      "NPC_Barmen_Armor",
+      "NPC_Batya_Armor",
+      "NPC_Tyotya_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "DutyArmor_4_E1_BulletProof2Upgrade",
+    "armors": [
+      "NPC_Sel_Armor",
+      "NPC_Sel_Neutral_Armor",
+      "NPC_Tec_Armor",
+      "NPC_Cloak_Heavy_Neutral_Armor",
+      "NPC_SkinCloak_Bandit_Armor",
+      "NPC_HeavyExoskeleton_Mercenaries_Armor",
+      "NPC_Heavy_Military_Armor",
+      "NPC_Cloak_Heavy_Military_Armor",
+      "NPC_Sci_Armor",
+      "NPC_Battle_Noon_Armor",
+      "NPC_HeavyAnomaly_Noon_Armor",
+      "NPC_HeavyExoskeleton_Noon_Armor",
+      "NPC_Exoskeleton_Noon_Armor",
+      "NPC_Spark_Armor",
+      "NPC_Anomaly_Spark_Armor",
+      "NPC_HeavyExoskeleton_Spark_Armor",
+      "NPC_Heavy_Corps_Armor",
+      "NPC_Heavy2_Coprs_Armor",
+      "NPC_Heavy3_Corps_Armor",
+      "NPC_Heavy3Exoskeleton_Coprs_Armor",
+      "NPC_Exoskeleton_Coprs_Armor",
+      "NPC_Richter_Armor",
+      "NPC_Korshunov_Armor",
+      "NPC_Korshunov_Armor_2",
+      "NPC_Dalin_Armor",
+      "NPC_Agata_Armor",
+      "NPC_Faust_Armor",
+      "NPC_Kaymanov_Armor",
+      "NPC_Shram_Armor",
+      "NPC_Dekhtyarev_Armor",
+      "NPC_Sidorovich_Armor",
+      "NPC_Barmen_Armor",
+      "NPC_Batya_Armor",
+      "NPC_Tyotya_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "DutyArmor_4_E1_BulletProofUpgrade",
+    "armors": [
+      "NPC_Sel_Armor",
+      "NPC_Sel_Neutral_Armor",
+      "NPC_Tec_Armor",
+      "NPC_Cloak_Heavy_Neutral_Armor",
+      "NPC_SkinCloak_Bandit_Armor",
+      "NPC_HeavyExoskeleton_Mercenaries_Armor",
+      "NPC_Heavy_Military_Armor",
+      "NPC_Cloak_Heavy_Military_Armor",
+      "NPC_Sci_Armor",
+      "NPC_Battle_Noon_Armor",
+      "NPC_HeavyAnomaly_Noon_Armor",
+      "NPC_HeavyExoskeleton_Noon_Armor",
+      "NPC_Exoskeleton_Noon_Armor",
+      "NPC_Spark_Armor",
+      "NPC_Anomaly_Spark_Armor",
+      "NPC_HeavyExoskeleton_Spark_Armor",
+      "NPC_Heavy_Corps_Armor",
+      "NPC_Heavy2_Coprs_Armor",
+      "NPC_Heavy3_Corps_Armor",
+      "NPC_Heavy3Exoskeleton_Coprs_Armor",
+      "NPC_Exoskeleton_Coprs_Armor",
+      "NPC_Richter_Armor",
+      "NPC_Korshunov_Armor",
+      "NPC_Korshunov_Armor_2",
+      "NPC_Dalin_Armor",
+      "NPC_Agata_Armor",
+      "NPC_Faust_Armor",
+      "NPC_Kaymanov_Armor",
+      "NPC_Shram_Armor",
+      "NPC_Dekhtyarev_Armor",
+      "NPC_Sidorovich_Armor",
+      "NPC_Barmen_Armor",
+      "NPC_Batya_Armor",
+      "NPC_Tyotya_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "DutyArmor_4_E1_Carryweight2Upgrade",
+    "armors": [
+      "NPC_Sel_Armor",
+      "NPC_Sel_Neutral_Armor",
+      "NPC_Tec_Armor",
+      "NPC_Cloak_Heavy_Neutral_Armor",
+      "NPC_SkinCloak_Bandit_Armor",
+      "NPC_HeavyExoskeleton_Mercenaries_Armor",
+      "NPC_Heavy_Military_Armor",
+      "NPC_Cloak_Heavy_Military_Armor",
+      "NPC_Sci_Armor",
+      "NPC_Battle_Noon_Armor",
+      "NPC_HeavyAnomaly_Noon_Armor",
+      "NPC_HeavyExoskeleton_Noon_Armor",
+      "NPC_Exoskeleton_Noon_Armor",
+      "NPC_Spark_Armor",
+      "NPC_Anomaly_Spark_Armor",
+      "NPC_HeavyExoskeleton_Spark_Armor",
+      "NPC_Heavy_Corps_Armor",
+      "NPC_Heavy2_Coprs_Armor",
+      "NPC_Heavy3_Corps_Armor",
+      "NPC_Heavy3Exoskeleton_Coprs_Armor",
+      "NPC_Exoskeleton_Coprs_Armor",
+      "NPC_Richter_Armor",
+      "NPC_Korshunov_Armor",
+      "NPC_Korshunov_Armor_2",
+      "NPC_Dalin_Armor",
+      "NPC_Agata_Armor",
+      "NPC_Faust_Armor",
+      "NPC_Kaymanov_Armor",
+      "NPC_Shram_Armor",
+      "NPC_Dekhtyarev_Armor",
+      "NPC_Sidorovich_Armor",
+      "NPC_Barmen_Armor",
+      "NPC_Batya_Armor",
+      "NPC_Tyotya_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "DutyArmor_4_E1_CarryweightUpgrade",
+    "armors": [
+      "NPC_Sel_Armor",
+      "NPC_Sel_Neutral_Armor",
+      "NPC_Tec_Armor",
+      "NPC_Cloak_Heavy_Neutral_Armor",
+      "NPC_SkinCloak_Bandit_Armor",
+      "NPC_HeavyExoskeleton_Mercenaries_Armor",
+      "NPC_Heavy_Military_Armor",
+      "NPC_Cloak_Heavy_Military_Armor",
+      "NPC_Sci_Armor",
+      "NPC_Battle_Noon_Armor",
+      "NPC_HeavyAnomaly_Noon_Armor",
+      "NPC_HeavyExoskeleton_Noon_Armor",
+      "NPC_Exoskeleton_Noon_Armor",
+      "NPC_Spark_Armor",
+      "NPC_Anomaly_Spark_Armor",
+      "NPC_HeavyExoskeleton_Spark_Armor",
+      "NPC_Heavy_Corps_Armor",
+      "NPC_Heavy2_Coprs_Armor",
+      "NPC_Heavy3_Corps_Armor",
+      "NPC_Heavy3Exoskeleton_Coprs_Armor",
+      "NPC_Exoskeleton_Coprs_Armor",
+      "NPC_Richter_Armor",
+      "NPC_Korshunov_Armor",
+      "NPC_Korshunov_Armor_2",
+      "NPC_Dalin_Armor",
+      "NPC_Agata_Armor",
+      "NPC_Faust_Armor",
+      "NPC_Kaymanov_Armor",
+      "NPC_Shram_Armor",
+      "NPC_Dekhtyarev_Armor",
+      "NPC_Sidorovich_Armor",
+      "NPC_Barmen_Armor",
+      "NPC_Batya_Armor",
+      "NPC_Tyotya_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "DutyArmor_4_E1_ChemicalDef2Upgrade",
+    "armors": [
+      "NPC_Sel_Armor",
+      "NPC_Sel_Neutral_Armor",
+      "NPC_Tec_Armor",
+      "NPC_Cloak_Heavy_Neutral_Armor",
+      "NPC_SkinCloak_Bandit_Armor",
+      "NPC_HeavyExoskeleton_Mercenaries_Armor",
+      "NPC_Heavy_Military_Armor",
+      "NPC_Cloak_Heavy_Military_Armor",
+      "NPC_Sci_Armor",
+      "NPC_Battle_Noon_Armor",
+      "NPC_HeavyAnomaly_Noon_Armor",
+      "NPC_HeavyExoskeleton_Noon_Armor",
+      "NPC_Exoskeleton_Noon_Armor",
+      "NPC_Spark_Armor",
+      "NPC_Anomaly_Spark_Armor",
+      "NPC_HeavyExoskeleton_Spark_Armor",
+      "NPC_Heavy_Corps_Armor",
+      "NPC_Heavy2_Coprs_Armor",
+      "NPC_Heavy3_Corps_Armor",
+      "NPC_Heavy3Exoskeleton_Coprs_Armor",
+      "NPC_Exoskeleton_Coprs_Armor",
+      "NPC_Richter_Armor",
+      "NPC_Korshunov_Armor",
+      "NPC_Korshunov_Armor_2",
+      "NPC_Dalin_Armor",
+      "NPC_Agata_Armor",
+      "NPC_Faust_Armor",
+      "NPC_Kaymanov_Armor",
+      "NPC_Shram_Armor",
+      "NPC_Dekhtyarev_Armor",
+      "NPC_Sidorovich_Armor",
+      "NPC_Barmen_Armor",
+      "NPC_Batya_Armor",
+      "NPC_Tyotya_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "DutyArmor_4_E1_ChemicalDefUpgrade",
+    "armors": [
+      "NPC_Sel_Armor",
+      "NPC_Sel_Neutral_Armor",
+      "NPC_Tec_Armor",
+      "NPC_Cloak_Heavy_Neutral_Armor",
+      "NPC_SkinCloak_Bandit_Armor",
+      "NPC_HeavyExoskeleton_Mercenaries_Armor",
+      "NPC_Heavy_Military_Armor",
+      "NPC_Cloak_Heavy_Military_Armor",
+      "NPC_Sci_Armor",
+      "NPC_Battle_Noon_Armor",
+      "NPC_HeavyAnomaly_Noon_Armor",
+      "NPC_HeavyExoskeleton_Noon_Armor",
+      "NPC_Exoskeleton_Noon_Armor",
+      "NPC_Spark_Armor",
+      "NPC_Anomaly_Spark_Armor",
+      "NPC_HeavyExoskeleton_Spark_Armor",
+      "NPC_Heavy_Corps_Armor",
+      "NPC_Heavy2_Coprs_Armor",
+      "NPC_Heavy3_Corps_Armor",
+      "NPC_Heavy3Exoskeleton_Coprs_Armor",
+      "NPC_Exoskeleton_Coprs_Armor",
+      "NPC_Richter_Armor",
+      "NPC_Korshunov_Armor",
+      "NPC_Korshunov_Armor_2",
+      "NPC_Dalin_Armor",
+      "NPC_Agata_Armor",
+      "NPC_Faust_Armor",
+      "NPC_Kaymanov_Armor",
+      "NPC_Shram_Armor",
+      "NPC_Dekhtyarev_Armor",
+      "NPC_Sidorovich_Armor",
+      "NPC_Barmen_Armor",
+      "NPC_Batya_Armor",
+      "NPC_Tyotya_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "DutyArmor_4_E1_CloseDamageDefUpgrade",
+    "armors": [
+      "NPC_Sel_Armor",
+      "NPC_Sel_Neutral_Armor",
+      "NPC_Tec_Armor",
+      "NPC_Cloak_Heavy_Neutral_Armor",
+      "NPC_SkinCloak_Bandit_Armor",
+      "NPC_HeavyExoskeleton_Mercenaries_Armor",
+      "NPC_Heavy_Military_Armor",
+      "NPC_Cloak_Heavy_Military_Armor",
+      "NPC_Sci_Armor",
+      "NPC_Battle_Noon_Armor",
+      "NPC_HeavyAnomaly_Noon_Armor",
+      "NPC_HeavyExoskeleton_Noon_Armor",
+      "NPC_Exoskeleton_Noon_Armor",
+      "NPC_Spark_Armor",
+      "NPC_Anomaly_Spark_Armor",
+      "NPC_HeavyExoskeleton_Spark_Armor",
+      "NPC_Heavy_Corps_Armor",
+      "NPC_Heavy2_Coprs_Armor",
+      "NPC_Heavy3_Corps_Armor",
+      "NPC_Heavy3Exoskeleton_Coprs_Armor",
+      "NPC_Exoskeleton_Coprs_Armor",
+      "NPC_Richter_Armor",
+      "NPC_Korshunov_Armor",
+      "NPC_Korshunov_Armor_2",
+      "NPC_Dalin_Armor",
+      "NPC_Agata_Armor",
+      "NPC_Faust_Armor",
+      "NPC_Kaymanov_Armor",
+      "NPC_Shram_Armor",
+      "NPC_Dekhtyarev_Armor",
+      "NPC_Sidorovich_Armor",
+      "NPC_Barmen_Armor",
+      "NPC_Batya_Armor",
+      "NPC_Tyotya_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
+    "armors": [
+      "NPC_Sel_Armor",
+      "NPC_Sel_Neutral_Armor",
+      "NPC_Tec_Armor",
+      "NPC_Cloak_Heavy_Neutral_Armor",
+      "NPC_SkinCloak_Bandit_Armor",
+      "NPC_HeavyExoskeleton_Mercenaries_Armor",
+      "NPC_Heavy_Military_Armor",
+      "NPC_Cloak_Heavy_Military_Armor",
+      "NPC_Sci_Armor",
+      "NPC_Battle_Noon_Armor",
+      "NPC_HeavyAnomaly_Noon_Armor",
+      "NPC_HeavyExoskeleton_Noon_Armor",
+      "NPC_Exoskeleton_Noon_Armor",
+      "NPC_Spark_Armor",
+      "NPC_Anomaly_Spark_Armor",
+      "NPC_HeavyExoskeleton_Spark_Armor",
+      "NPC_Heavy_Corps_Armor",
+      "NPC_Heavy2_Coprs_Armor",
+      "NPC_Heavy3_Corps_Armor",
+      "NPC_Heavy3Exoskeleton_Coprs_Armor",
+      "NPC_Exoskeleton_Coprs_Armor",
+      "NPC_Richter_Armor",
+      "NPC_Korshunov_Armor",
+      "NPC_Korshunov_Armor_2",
+      "NPC_Dalin_Armor",
+      "NPC_Agata_Armor",
+      "NPC_Faust_Armor",
+      "NPC_Kaymanov_Armor",
+      "NPC_Shram_Armor",
+      "NPC_Dekhtyarev_Armor",
+      "NPC_Sidorovich_Armor",
+      "NPC_Barmen_Armor",
+      "NPC_Batya_Armor",
+      "NPC_Tyotya_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "DutyArmor_4_E1_ElectroDef2Upgrade",
+    "armors": [
+      "NPC_Sel_Armor",
+      "NPC_Sel_Neutral_Armor",
+      "NPC_Tec_Armor",
+      "NPC_Cloak_Heavy_Neutral_Armor",
+      "NPC_SkinCloak_Bandit_Armor",
+      "NPC_HeavyExoskeleton_Mercenaries_Armor",
+      "NPC_Heavy_Military_Armor",
+      "NPC_Cloak_Heavy_Military_Armor",
+      "NPC_Sci_Armor",
+      "NPC_Battle_Noon_Armor",
+      "NPC_HeavyAnomaly_Noon_Armor",
+      "NPC_HeavyExoskeleton_Noon_Armor",
+      "NPC_Exoskeleton_Noon_Armor",
+      "NPC_Spark_Armor",
+      "NPC_Anomaly_Spark_Armor",
+      "NPC_HeavyExoskeleton_Spark_Armor",
+      "NPC_Heavy_Corps_Armor",
+      "NPC_Heavy2_Coprs_Armor",
+      "NPC_Heavy3_Corps_Armor",
+      "NPC_Heavy3Exoskeleton_Coprs_Armor",
+      "NPC_Exoskeleton_Coprs_Armor",
+      "NPC_Richter_Armor",
+      "NPC_Korshunov_Armor",
+      "NPC_Korshunov_Armor_2",
+      "NPC_Dalin_Armor",
+      "NPC_Agata_Armor",
+      "NPC_Faust_Armor",
+      "NPC_Kaymanov_Armor",
+      "NPC_Shram_Armor",
+      "NPC_Dekhtyarev_Armor",
+      "NPC_Sidorovich_Armor",
+      "NPC_Barmen_Armor",
+      "NPC_Batya_Armor",
+      "NPC_Tyotya_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "DutyArmor_4_E1_ElectroDefUpgrade",
+    "armors": [
+      "NPC_Sel_Armor",
+      "NPC_Sel_Neutral_Armor",
+      "NPC_Tec_Armor",
+      "NPC_Cloak_Heavy_Neutral_Armor",
+      "NPC_SkinCloak_Bandit_Armor",
+      "NPC_HeavyExoskeleton_Mercenaries_Armor",
+      "NPC_Heavy_Military_Armor",
+      "NPC_Cloak_Heavy_Military_Armor",
+      "NPC_Sci_Armor",
+      "NPC_Battle_Noon_Armor",
+      "NPC_HeavyAnomaly_Noon_Armor",
+      "NPC_HeavyExoskeleton_Noon_Armor",
+      "NPC_Exoskeleton_Noon_Armor",
+      "NPC_Spark_Armor",
+      "NPC_Anomaly_Spark_Armor",
+      "NPC_HeavyExoskeleton_Spark_Armor",
+      "NPC_Heavy_Corps_Armor",
+      "NPC_Heavy2_Coprs_Armor",
+      "NPC_Heavy3_Corps_Armor",
+      "NPC_Heavy3Exoskeleton_Coprs_Armor",
+      "NPC_Exoskeleton_Coprs_Armor",
+      "NPC_Richter_Armor",
+      "NPC_Korshunov_Armor",
+      "NPC_Korshunov_Armor_2",
+      "NPC_Dalin_Armor",
+      "NPC_Agata_Armor",
+      "NPC_Faust_Armor",
+      "NPC_Kaymanov_Armor",
+      "NPC_Shram_Armor",
+      "NPC_Dekhtyarev_Armor",
+      "NPC_Sidorovich_Armor",
+      "NPC_Barmen_Armor",
+      "NPC_Batya_Armor",
+      "NPC_Tyotya_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "DutyArmor_4_E1_FireDef2Upgrade",
+    "armors": [
+      "NPC_Sel_Armor",
+      "NPC_Sel_Neutral_Armor",
+      "NPC_Tec_Armor",
+      "NPC_Cloak_Heavy_Neutral_Armor",
+      "NPC_SkinCloak_Bandit_Armor",
+      "NPC_HeavyExoskeleton_Mercenaries_Armor",
+      "NPC_Heavy_Military_Armor",
+      "NPC_Cloak_Heavy_Military_Armor",
+      "NPC_Sci_Armor",
+      "NPC_Battle_Noon_Armor",
+      "NPC_HeavyAnomaly_Noon_Armor",
+      "NPC_HeavyExoskeleton_Noon_Armor",
+      "NPC_Exoskeleton_Noon_Armor",
+      "NPC_Spark_Armor",
+      "NPC_Anomaly_Spark_Armor",
+      "NPC_HeavyExoskeleton_Spark_Armor",
+      "NPC_Heavy_Corps_Armor",
+      "NPC_Heavy2_Coprs_Armor",
+      "NPC_Heavy3_Corps_Armor",
+      "NPC_Heavy3Exoskeleton_Coprs_Armor",
+      "NPC_Exoskeleton_Coprs_Armor",
+      "NPC_Richter_Armor",
+      "NPC_Korshunov_Armor",
+      "NPC_Korshunov_Armor_2",
+      "NPC_Dalin_Armor",
+      "NPC_Agata_Armor",
+      "NPC_Faust_Armor",
+      "NPC_Kaymanov_Armor",
+      "NPC_Shram_Armor",
+      "NPC_Dekhtyarev_Armor",
+      "NPC_Sidorovich_Armor",
+      "NPC_Barmen_Armor",
+      "NPC_Batya_Armor",
+      "NPC_Tyotya_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "DutyArmor_4_E1_FireDefUpgrade",
+    "armors": [
+      "NPC_Sel_Armor",
+      "NPC_Sel_Neutral_Armor",
+      "NPC_Tec_Armor",
+      "NPC_Cloak_Heavy_Neutral_Armor",
+      "NPC_SkinCloak_Bandit_Armor",
+      "NPC_HeavyExoskeleton_Mercenaries_Armor",
+      "NPC_Heavy_Military_Armor",
+      "NPC_Cloak_Heavy_Military_Armor",
+      "NPC_Sci_Armor",
+      "NPC_Battle_Noon_Armor",
+      "NPC_HeavyAnomaly_Noon_Armor",
+      "NPC_HeavyExoskeleton_Noon_Armor",
+      "NPC_Exoskeleton_Noon_Armor",
+      "NPC_Spark_Armor",
+      "NPC_Anomaly_Spark_Armor",
+      "NPC_HeavyExoskeleton_Spark_Armor",
+      "NPC_Heavy_Corps_Armor",
+      "NPC_Heavy2_Coprs_Armor",
+      "NPC_Heavy3_Corps_Armor",
+      "NPC_Heavy3Exoskeleton_Coprs_Armor",
+      "NPC_Exoskeleton_Coprs_Armor",
+      "NPC_Richter_Armor",
+      "NPC_Korshunov_Armor",
+      "NPC_Korshunov_Armor_2",
+      "NPC_Dalin_Armor",
+      "NPC_Agata_Armor",
+      "NPC_Faust_Armor",
+      "NPC_Kaymanov_Armor",
+      "NPC_Shram_Armor",
+      "NPC_Dekhtyarev_Armor",
+      "NPC_Sidorovich_Armor",
+      "NPC_Barmen_Armor",
+      "NPC_Batya_Armor",
+      "NPC_Tyotya_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "DutyArmor_4_E1_GaussianArmorUpgrade",
+    "armors": [
+      "NPC_Sel_Armor",
+      "NPC_Sel_Neutral_Armor",
+      "NPC_Tec_Armor",
+      "NPC_Cloak_Heavy_Neutral_Armor",
+      "NPC_SkinCloak_Bandit_Armor",
+      "NPC_HeavyExoskeleton_Mercenaries_Armor",
+      "NPC_Heavy_Military_Armor",
+      "NPC_Cloak_Heavy_Military_Armor",
+      "NPC_Sci_Armor",
+      "NPC_Battle_Noon_Armor",
+      "NPC_HeavyAnomaly_Noon_Armor",
+      "NPC_HeavyExoskeleton_Noon_Armor",
+      "NPC_Exoskeleton_Noon_Armor",
+      "NPC_Spark_Armor",
+      "NPC_Anomaly_Spark_Armor",
+      "NPC_HeavyExoskeleton_Spark_Armor",
+      "NPC_Heavy_Corps_Armor",
+      "NPC_Heavy2_Coprs_Armor",
+      "NPC_Heavy3_Corps_Armor",
+      "NPC_Heavy3Exoskeleton_Coprs_Armor",
+      "NPC_Exoskeleton_Coprs_Armor",
+      "NPC_Richter_Armor",
+      "NPC_Korshunov_Armor",
+      "NPC_Korshunov_Armor_2",
+      "NPC_Dalin_Armor",
+      "NPC_Agata_Armor",
+      "NPC_Faust_Armor",
+      "NPC_Kaymanov_Armor",
+      "NPC_Shram_Armor",
+      "NPC_Dekhtyarev_Armor",
+      "NPC_Sidorovich_Armor",
+      "NPC_Barmen_Armor",
+      "NPC_Batya_Armor",
+      "NPC_Tyotya_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "DutyArmor_4_E1_NightVision2Upgrade",
+    "armors": [
+      "NPC_Sel_Armor",
+      "NPC_Sel_Neutral_Armor",
+      "NPC_Tec_Armor",
+      "NPC_Cloak_Heavy_Neutral_Armor",
+      "NPC_SkinCloak_Bandit_Armor",
+      "NPC_HeavyExoskeleton_Mercenaries_Armor",
+      "NPC_Heavy_Military_Armor",
+      "NPC_Cloak_Heavy_Military_Armor",
+      "NPC_Sci_Armor",
+      "NPC_Battle_Noon_Armor",
+      "NPC_HeavyAnomaly_Noon_Armor",
+      "NPC_HeavyExoskeleton_Noon_Armor",
+      "NPC_Exoskeleton_Noon_Armor",
+      "NPC_Spark_Armor",
+      "NPC_Anomaly_Spark_Armor",
+      "NPC_HeavyExoskeleton_Spark_Armor",
+      "NPC_Heavy_Corps_Armor",
+      "NPC_Heavy2_Coprs_Armor",
+      "NPC_Heavy3_Corps_Armor",
+      "NPC_Heavy3Exoskeleton_Coprs_Armor",
+      "NPC_Exoskeleton_Coprs_Armor",
+      "NPC_Richter_Armor",
+      "NPC_Korshunov_Armor",
+      "NPC_Korshunov_Armor_2",
+      "NPC_Dalin_Armor",
+      "NPC_Agata_Armor",
+      "NPC_Faust_Armor",
+      "NPC_Kaymanov_Armor",
+      "NPC_Shram_Armor",
+      "NPC_Dekhtyarev_Armor",
+      "NPC_Sidorovich_Armor",
+      "NPC_Barmen_Armor",
+      "NPC_Batya_Armor",
+      "NPC_Tyotya_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "DutyArmor_4_E1_NightVisionUpgrade",
+    "armors": [
+      "NPC_Sel_Armor",
+      "NPC_Sel_Neutral_Armor",
+      "NPC_Tec_Armor",
+      "NPC_Cloak_Heavy_Neutral_Armor",
+      "NPC_SkinCloak_Bandit_Armor",
+      "NPC_HeavyExoskeleton_Mercenaries_Armor",
+      "NPC_Heavy_Military_Armor",
+      "NPC_Cloak_Heavy_Military_Armor",
+      "NPC_Sci_Armor",
+      "NPC_Battle_Noon_Armor",
+      "NPC_HeavyAnomaly_Noon_Armor",
+      "NPC_HeavyExoskeleton_Noon_Armor",
+      "NPC_Exoskeleton_Noon_Armor",
+      "NPC_Spark_Armor",
+      "NPC_Anomaly_Spark_Armor",
+      "NPC_HeavyExoskeleton_Spark_Armor",
+      "NPC_Heavy_Corps_Armor",
+      "NPC_Heavy2_Coprs_Armor",
+      "NPC_Heavy3_Corps_Armor",
+      "NPC_Heavy3Exoskeleton_Coprs_Armor",
+      "NPC_Exoskeleton_Coprs_Armor",
+      "NPC_Richter_Armor",
+      "NPC_Korshunov_Armor",
+      "NPC_Korshunov_Armor_2",
+      "NPC_Dalin_Armor",
+      "NPC_Agata_Armor",
+      "NPC_Faust_Armor",
+      "NPC_Kaymanov_Armor",
+      "NPC_Shram_Armor",
+      "NPC_Dekhtyarev_Armor",
+      "NPC_Sidorovich_Armor",
+      "NPC_Barmen_Armor",
+      "NPC_Batya_Armor",
+      "NPC_Tyotya_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "DutyArmor_4_E1_RadiationDef2Upgrade",
+    "armors": [
+      "NPC_Sel_Armor",
+      "NPC_Sel_Neutral_Armor",
+      "NPC_Tec_Armor",
+      "NPC_Cloak_Heavy_Neutral_Armor",
+      "NPC_SkinCloak_Bandit_Armor",
+      "NPC_HeavyExoskeleton_Mercenaries_Armor",
+      "NPC_Heavy_Military_Armor",
+      "NPC_Cloak_Heavy_Military_Armor",
+      "NPC_Sci_Armor",
+      "NPC_Battle_Noon_Armor",
+      "NPC_HeavyAnomaly_Noon_Armor",
+      "NPC_HeavyExoskeleton_Noon_Armor",
+      "NPC_Exoskeleton_Noon_Armor",
+      "NPC_Spark_Armor",
+      "NPC_Anomaly_Spark_Armor",
+      "NPC_HeavyExoskeleton_Spark_Armor",
+      "NPC_Heavy_Corps_Armor",
+      "NPC_Heavy2_Coprs_Armor",
+      "NPC_Heavy3_Corps_Armor",
+      "NPC_Heavy3Exoskeleton_Coprs_Armor",
+      "NPC_Exoskeleton_Coprs_Armor",
+      "NPC_Richter_Armor",
+      "NPC_Korshunov_Armor",
+      "NPC_Korshunov_Armor_2",
+      "NPC_Dalin_Armor",
+      "NPC_Agata_Armor",
+      "NPC_Faust_Armor",
+      "NPC_Kaymanov_Armor",
+      "NPC_Shram_Armor",
+      "NPC_Dekhtyarev_Armor",
+      "NPC_Sidorovich_Armor",
+      "NPC_Barmen_Armor",
+      "NPC_Batya_Armor",
+      "NPC_Tyotya_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "DutyArmor_4_E1_RadiationDefUpgrade",
+    "armors": [
+      "NPC_Sel_Armor",
+      "NPC_Sel_Neutral_Armor",
+      "NPC_Tec_Armor",
+      "NPC_Cloak_Heavy_Neutral_Armor",
+      "NPC_SkinCloak_Bandit_Armor",
+      "NPC_HeavyExoskeleton_Mercenaries_Armor",
+      "NPC_Heavy_Military_Armor",
+      "NPC_Cloak_Heavy_Military_Armor",
+      "NPC_Sci_Armor",
+      "NPC_Battle_Noon_Armor",
+      "NPC_HeavyAnomaly_Noon_Armor",
+      "NPC_HeavyExoskeleton_Noon_Armor",
+      "NPC_Exoskeleton_Noon_Armor",
+      "NPC_Spark_Armor",
+      "NPC_Anomaly_Spark_Armor",
+      "NPC_HeavyExoskeleton_Spark_Armor",
+      "NPC_Heavy_Corps_Armor",
+      "NPC_Heavy2_Coprs_Armor",
+      "NPC_Heavy3_Corps_Armor",
+      "NPC_Heavy3Exoskeleton_Coprs_Armor",
+      "NPC_Exoskeleton_Coprs_Armor",
+      "NPC_Richter_Armor",
+      "NPC_Korshunov_Armor",
+      "NPC_Korshunov_Armor_2",
+      "NPC_Dalin_Armor",
+      "NPC_Agata_Armor",
+      "NPC_Faust_Armor",
+      "NPC_Kaymanov_Armor",
+      "NPC_Shram_Armor",
+      "NPC_Dekhtyarev_Armor",
+      "NPC_Sidorovich_Armor",
+      "NPC_Barmen_Armor",
+      "NPC_Batya_Armor",
+      "NPC_Tyotya_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
+    "armors": [
+      "NPC_Sel_Armor",
+      "NPC_Sel_Neutral_Armor",
+      "NPC_Tec_Armor",
+      "NPC_Cloak_Heavy_Neutral_Armor",
+      "NPC_SkinCloak_Bandit_Armor",
+      "NPC_HeavyExoskeleton_Mercenaries_Armor",
+      "NPC_Heavy_Military_Armor",
+      "NPC_Cloak_Heavy_Military_Armor",
+      "NPC_Sci_Armor",
+      "NPC_Battle_Noon_Armor",
+      "NPC_HeavyAnomaly_Noon_Armor",
+      "NPC_HeavyExoskeleton_Noon_Armor",
+      "NPC_Exoskeleton_Noon_Armor",
+      "NPC_Spark_Armor",
+      "NPC_Anomaly_Spark_Armor",
+      "NPC_HeavyExoskeleton_Spark_Armor",
+      "NPC_Heavy_Corps_Armor",
+      "NPC_Heavy2_Coprs_Armor",
+      "NPC_Heavy3_Corps_Armor",
+      "NPC_Heavy3Exoskeleton_Coprs_Armor",
+      "NPC_Exoskeleton_Coprs_Armor",
+      "NPC_Richter_Armor",
+      "NPC_Korshunov_Armor",
+      "NPC_Korshunov_Armor_2",
+      "NPC_Dalin_Armor",
+      "NPC_Agata_Armor",
+      "NPC_Faust_Armor",
+      "NPC_Kaymanov_Armor",
+      "NPC_Shram_Armor",
+      "NPC_Dekhtyarev_Armor",
+      "NPC_Sidorovich_Armor",
+      "NPC_Barmen_Armor",
+      "NPC_Batya_Armor",
+      "NPC_Tyotya_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Dolg_Armor_Backpack_Right_2_1",
+    "armors": [
+      "Exoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Dolg_Armor_EXOMaxDurability_Left_2_1",
+    "armors": [
+      "Exoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Dolg_Armor_EXOMaxDurability_Left_2_2",
+    "armors": [
+      "Exoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Dolg_Armor_EXOprotectionPhysical_Left_1_1",
+    "armors": [
+      "Exoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Dolg_Armor_EXOprotectionPhysical_Left_3_1",
+    "armors": [
+      "Exoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Dolg_Armor_EXOregenerationStamina_Right_1_1",
+    "armors": [
+      "Exoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Dolg_Armor_PSY_Left_3_2",
+    "armors": [
+      "Exoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Dolg_Armor_container_Left_1_1",
+    "armors": [
+      "Exoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Dolg_Armor_container_Left_2_1",
+    "armors": [
+      "Exoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Dolg_Armor_protectionChemical_protectionElectrical_Left_3_2",
+    "armors": [
+      "Exoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Dolg_Armor_protectionElectrical_Left_1_1",
+    "armors": [
+      "Exoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Dolg_Armor_protectionRadiation_Left_1_2",
+    "armors": [
+      "Exoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Dolg_Armor_protectionRadiation_Left_2_2",
+    "armors": [
+      "Exoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Dolg_Armor_protectionThermal_Left_1_2",
+    "armors": [
+      "Exoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Dolg_Armor_protectionThermal_protectionChemica_Left_3_1",
+    "armors": [
+      "Exoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Dolg_Armor_rad_container_Left_2_2",
+    "armors": [
+      "Exoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Dolg_Armor_rad_container_Left_3_1",
+    "armors": [
+      "Exoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Dolg_Armor_reductionWeight_Left_2_2",
+    "armors": [
+      "Exoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Mercenaries_Armor_AddRunEffect_Right_1_1",
+    "armors": [
+      "Exoskeleton_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Mercenaries_Armor_EXOMaxDurability_Left_1_1",
+    "armors": [
+      "Exoskeleton_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Mercenaries_Armor_EXOprotectionPhysical_Left_2_1",
+    "armors": [
+      "Exoskeleton_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Mercenaries_Armor_EXOprotectionPhysical_Left_3_1",
+    "armors": [
+      "Exoskeleton_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Mercenaries_Armor_PSY_Left_2_2",
+    "armors": [
+      "Exoskeleton_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Mercenaries_Armor_carryingCapacity_Left_3_2",
+    "armors": [
+      "Exoskeleton_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Mercenaries_Armor_protectionChemical_Left_1_1",
+    "armors": [
+      "Exoskeleton_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Mercenaries_Armor_protectionChemical_protectionElectrical_Left_3_2",
+    "armors": [
+      "Exoskeleton_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Mercenaries_Armor_protectionElectrical_Left_2_1",
+    "armors": [
+      "Exoskeleton_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Mercenaries_Armor_protectionRadiation_Left_1_2",
+    "armors": [
+      "Exoskeleton_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Mercenaries_Armor_protectionRadiation_Left_2_1",
+    "armors": [
+      "Exoskeleton_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Mercenaries_Armor_protectionThermal_Left_2_2",
+    "armors": [
+      "Exoskeleton_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Mercenaries_Armor_protectionThermal_protectionChemica_Left_3_1",
+    "armors": [
+      "Exoskeleton_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Mercenaries_Armor_rad_container_Left_1_1",
+    "armors": [
+      "Exoskeleton_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Mercenaries_Armor_rad_container_Left_2_1",
+    "armors": [
+      "Exoskeleton_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Mercenaries_Armor_rad_container_Left_2_2",
+    "armors": [
+      "Exoskeleton_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Mercenaries_Armor_rad_container_Left_3_1",
+    "armors": [
+      "Exoskeleton_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Mercenaries_Armor_rad_container_Left_3_2",
+    "armors": [
+      "Exoskeleton_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Mercenaries_Armor_reductionWeight_Left_2_2",
+    "armors": [
+      "Exoskeleton_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Monolith_Armor_AddRunEffect_Right_2_1",
+    "armors": [
+      "Exoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Monolith_Armor_EXOMaxDurability_Left_1_1",
+    "armors": [
+      "Exoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Monolith_Armor_EXOprotectionPhysical_Left_2_1",
+    "armors": [
+      "Exoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Monolith_Armor_EXOprotectionPhysical_Left_3_1",
+    "armors": [
+      "Exoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Monolith_Armor_EXOregenerationStamina_Left_3_2",
+    "armors": [
+      "Exoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Monolith_Armor_PSY_Left_2_2",
+    "armors": [
+      "Exoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Monolith_Armor_PSY_Left_3_1",
+    "armors": [
+      "Exoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Monolith_Armor_carryingCapacity_Right_1_1",
+    "armors": [
+      "Exoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Monolith_Armor_protectionChemical_Left_1_1",
+    "armors": [
+      "Exoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Monolith_Armor_protectionChemical_protectionElectrical_Left_3_2",
+    "armors": [
+      "Exoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Monolith_Armor_protectionElectrical_Left_2_2",
+    "armors": [
+      "Exoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Monolith_Armor_protectionRadiation_Left_1_2",
+    "armors": [
+      "Exoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Monolith_Armor_protectionRadiation_Left_2_1",
+    "armors": [
+      "Exoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Monolith_Armor_protectionThermal_Left_2_1",
+    "armors": [
+      "Exoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Monolith_Armor_protectionThermal_protectionChemica_Left_3_1",
+    "armors": [
+      "Exoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Monolith_Armor_rad_container_Left_1_1",
+    "armors": [
+      "Exoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Monolith_Armor_rad_container_Left_2_1",
+    "armors": [
+      "Exoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Monolith_Armor_rad_container_Left_3_1",
+    "armors": [
+      "Exoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Monolith_Armor_rad_container_Left_3_2",
+    "armors": [
+      "Exoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Monolith_Armor_reductionWeight_Left_2_2",
+    "armors": [
+      "Exoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Neutral_Armor_AddRunEffect_Right_2_1",
+    "armors": [
+      "Exoskeleton_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Neutral_Armor_EXOMaxDurability_Left_1_1",
+    "armors": [
+      "Exoskeleton_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Neutral_Armor_EXOMaxDurability_Left_2_1",
+    "armors": [
+      "Exoskeleton_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Neutral_Armor_EXOprotectionPhysical_Left_1_1",
+    "armors": [
+      "Exoskeleton_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Neutral_Armor_EXOprotectionPhysical_Left_3_1",
+    "armors": [
+      "Exoskeleton_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Neutral_Armor_EXOregenerationStamina_Right_1_1",
+    "armors": [
+      "Exoskeleton_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Neutral_Armor_PSY_Left_2_3",
+    "armors": [
+      "Exoskeleton_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Neutral_Armor_PSY_Left_3_1",
+    "armors": [
+      "Exoskeleton_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Neutral_Armor_carryingCapacity_Left_3_2",
+    "armors": [
+      "Exoskeleton_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Neutral_Armor_container_Left_2_2",
+    "armors": [
+      "Exoskeleton_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Neutral_Armor_protectionChemical_protectionTherma_Left_3_1",
+    "armors": [
+      "Exoskeleton_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Neutral_Armor_protectionElectrical_Left_2_2",
+    "armors": [
+      "Exoskeleton_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Neutral_Armor_protectionRadiation_Left_1_2",
+    "armors": [
+      "Exoskeleton_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Neutral_Armor_protectionRadiation_Left_2_2",
+    "armors": [
+      "Exoskeleton_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Neutral_Armor_protectionThermal_Left_2_1",
+    "armors": [
+      "Exoskeleton_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Neutral_Armor_rad_container_Left_1_1",
+    "armors": [
+      "Exoskeleton_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Neutral_Armor_rad_container_Left_2_1",
+    "armors": [
+      "Exoskeleton_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Neutral_Armor_rad_container_Left_3_1",
+    "armors": [
+      "Exoskeleton_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Neutral_Armor_rad_container_Left_3_2",
+    "armors": [
+      "Exoskeleton_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Neutral_Armor_reductionWeight_Left_2_2",
+    "armors": [
+      "Exoskeleton_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Svoboda_Armor_AddRunEffect_Right_2_1",
+    "armors": [
+      "Exoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Svoboda_Armor_Backpack_Left_3_2",
+    "armors": [
+      "Exoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Svoboda_Armor_EXOMaxDurability_Left_2_1",
+    "armors": [
+      "Exoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Svoboda_Armor_EXOprotectionPhysical_Left_1_1",
+    "armors": [
+      "Exoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Svoboda_Armor_EXOprotectionPhysical_Left_3_1",
+    "armors": [
+      "Exoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Svoboda_Armor_EXOregenerationStamina_Right_1_1",
+    "armors": [
+      "Exoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Svoboda_Armor_PSY_Left_2_3",
+    "armors": [
+      "Exoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Svoboda_Armor_PSY_Left_3_2",
+    "armors": [
+      "Exoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Svoboda_Armor_protectionChemical_Left_2_1",
+    "armors": [
+      "Exoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Svoboda_Armor_protectionChemical_protectionElectrical_Left_3_2",
+    "armors": [
+      "Exoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Svoboda_Armor_protectionElectrical_Left_1_1",
+    "armors": [
+      "Exoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Svoboda_Armor_protectionRadiation_Left_1_2",
+    "armors": [
+      "Exoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Svoboda_Armor_protectionRadiation_Left_2_2",
+    "armors": [
+      "Exoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Svoboda_Armor_protectionRadiation_Left_3_1",
+    "armors": [
+      "Exoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Svoboda_Armor_protectionThermal_Left_1_2",
+    "armors": [
+      "Exoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Svoboda_Armor_protectionThermal_protectionChemica_Left_3_1",
+    "armors": [
+      "Exoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Svoboda_Armor_rad_container_Left_1_1",
+    "armors": [
+      "Exoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Svoboda_Armor_rad_container_Left_2_1",
+    "armors": [
+      "Exoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Svoboda_Armor_rad_container_Left_2_2",
+    "armors": [
+      "Exoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Svoboda_Armor_rad_container_Left_3_1",
+    "armors": [
+      "Exoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Exoskeleton_Svoboda_Armor_reductionWeight_Left_2_2",
+    "armors": [
+      "Exoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "FaustPsyResist_Quest_1_1",
+    "armors": [
+      "SEVA_Neutral_Armor",
+      "Exoskeleton_Neutral_Armor",
+      "Exoskeleton_Mercenaries_Armor",
+      "Heavy_Mercenaries_Armor",
+      "Heavy2_Military_Armor",
+      "Anomaly_Scientific_Armor",
+      "HeavyAnomaly_Scientific_Armor",
+      "SEVA_Svoboda_Armor",
+      "Heavy_Svoboda_Armor",
+      "HeavyExoskeleton_Svoboda_Armor",
+      "Exoskeleton_Svoboda_Armor",
+      "SEVA_Dolg_Armor",
+      "Heavy_Dolg_Armor",
+      "HeavyExoskeleton_Dolg_Armor",
+      "Exoskeleton_Dolg_Armor",
+      "HeavyAnomaly_Monolith_Armor",
+      "HeavyExoskeleton_Monolith_Armor",
+      "Exoskeleton_Monolith_Armor",
+      "BattleExoskeleton_Varta_Armor",
+      "HeavyAnomaly_Spark_Armor",
+      "SEVA_Spark_Armor",
+      "HeavyBattle_Spark_Armor",
+      "Light_Duty_Helmet",
+      "Heavy_Duty_Helmet",
+      "Heavy_Svoboda_Helmet",
+      "Heavy_Varta_Helmet",
+      "Heavy_Military_Helmet",
+      "Light_Mercenaries_Helmet",
+      "Light_Military_Helmet",
+      "Battle_Military_Helmet",
+      "Light_Bandit_Helmet",
+      "Light_Neutral_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy2_Military_Armor_MaxDurability_Left_2_1",
+    "armors": [
+      "Heavy2_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy2_Military_Armor_carryingCapacity_Left_1_1",
+    "armors": [
+      "Heavy2_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy2_Military_Armor_container_Left_1_1",
+    "armors": [
+      "Heavy2_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy2_Military_Armor_container_Left_1_2",
+    "armors": [
+      "Heavy2_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy2_Military_Armor_protectionChemical_Left_2_1",
+    "armors": [
+      "Heavy2_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy2_Military_Armor_protectionElectrical_Left_1_1",
+    "armors": [
+      "Heavy2_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy2_Military_Armor_protectionPhysical_Left_2_2",
+    "armors": [
+      "Heavy2_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy2_Military_Armor_protectionPhysical_Left_3_1",
+    "armors": [
+      "Heavy2_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy2_Military_Armor_protectionRadiation_Left_1_1",
+    "armors": [
+      "Heavy2_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy2_Military_Armor_protectionThermal_Left_2_2",
+    "armors": [
+      "Heavy2_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy2_Military_Armor_rad_container_Left_2_1",
+    "armors": [
+      "Heavy2_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy2_Military_Armor_rad_container_Left_3_1",
+    "armors": [
+      "Heavy2_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy2_Military_Armor_reductionWeight_Left_3_2",
+    "armors": [
+      "Heavy2_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy2_Military_Armor_regenerationStamina_Left_2_1",
+    "armors": [
+      "Heavy2_Military_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Monolith_Armor_MaxDurability_Left_2_1",
+    "armors": [
+      "HeavyAnomaly_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Monolith_Armor_PSY_Left_3_1",
+    "armors": [
+      "HeavyAnomaly_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Monolith_Armor_carryingCapacity_Left_2_2",
+    "armors": [
+      "HeavyAnomaly_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Monolith_Armor_container_Left_1_1",
+    "armors": [
+      "HeavyAnomaly_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Monolith_Armor_container_Left_1_2",
+    "armors": [
+      "HeavyAnomaly_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Monolith_Armor_protectionPhysical_Left_1_1",
+    "armors": [
+      "HeavyAnomaly_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Monolith_Armor_protectionPhysical_Left_3_1",
+    "armors": [
+      "HeavyAnomaly_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Monolith_Armor_protectionRadiation_Left_1_1",
+    "armors": [
+      "HeavyAnomaly_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Monolith_Armor_protectionRadiation_Left_3_1",
+    "armors": [
+      "HeavyAnomaly_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Monolith_Armor_protectionThermal_Left_2_1",
+    "armors": [
+      "HeavyAnomaly_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Monolith_Armor_protectionThermal_protectionChemical_Left_1_2",
+    "armors": [
+      "HeavyAnomaly_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Monolith_Armor_protectionThermal_protectionElectrical_protectionChemical_Left_1_1",
+    "armors": [
+      "HeavyAnomaly_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Monolith_Armor_radiationAbsorption_Left_2_1",
+    "armors": [
+      "HeavyAnomaly_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Monolith_Armor_radiationAbsorption_Left_2_2",
+    "armors": [
+      "HeavyAnomaly_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Monolith_Armor_reductionWeight_Left_2_2",
+    "armors": [
+      "HeavyAnomaly_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Monolith_Armor_regenerationStamina_Left_2_1",
+    "armors": [
+      "HeavyAnomaly_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Scientific_Armor_MaxDurability_Left_1_1",
+    "armors": [
+      "HeavyAnomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Scientific_Armor_ProtectionChemical_Left_1_1",
+    "armors": [
+      "HeavyAnomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Scientific_Armor_container_Left_1_1",
+    "armors": [
+      "HeavyAnomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Scientific_Armor_container_Left_2_1",
+    "armors": [
+      "HeavyAnomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Scientific_Armor_protectionChemical_protectionTherma_Left_2_1",
+    "armors": [
+      "HeavyAnomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Scientific_Armor_protectionChemical_protectionTherma_Left_2_2",
+    "armors": [
+      "HeavyAnomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Scientific_Armor_protectionElectrical_Left_1_2",
+    "armors": [
+      "HeavyAnomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Scientific_Armor_protectionPhysical_Left_2_1",
+    "armors": [
+      "HeavyAnomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Scientific_Armor_protectionPhysical_Left_3_1",
+    "armors": [
+      "HeavyAnomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Scientific_Armor_protectionRadiation_Left_1_1",
+    "armors": [
+      "HeavyAnomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Scientific_Armor_protectionThermal_protectionElectrical_Left_3_1",
+    "armors": [
+      "HeavyAnomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Scientific_Armor_radiationAbsorption_Left_2_2",
+    "armors": [
+      "HeavyAnomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Scientific_Armor_radiationAbsorption_Left_3_1",
+    "armors": [
+      "HeavyAnomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Scientific_Armor_radiationAbsorption_Left_3_2",
+    "armors": [
+      "HeavyAnomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Scientific_Armor_reductionWeight_Left_2_2",
+    "armors": [
+      "HeavyAnomaly_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Spark_Armor_MaxDurability_Left_1_1",
+    "armors": [
+      "HeavyAnomaly_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Spark_Armor_PSY_Left_1_2",
+    "armors": [
+      "HeavyAnomaly_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Spark_Armor_ProtectionChemical_Left_1_1",
+    "armors": [
+      "HeavyAnomaly_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Spark_Armor_carryingCapacity_Left_2_1",
+    "armors": [
+      "HeavyAnomaly_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Spark_Armor_container_Left_1_1",
+    "armors": [
+      "HeavyAnomaly_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Spark_Armor_container_radconsume_Left_2_1",
+    "armors": [
+      "HeavyAnomaly_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Spark_Armor_container_radconsume_Left_3_1",
+    "armors": [
+      "HeavyAnomaly_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Spark_Armor_container_radconsume_Left_3_2",
+    "armors": [
+      "HeavyAnomaly_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Spark_Armor_protectionElectrical_Left_1_2",
+    "armors": [
+      "HeavyAnomaly_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Spark_Armor_protectionPhysical_Left_3_1",
+    "armors": [
+      "HeavyAnomaly_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Spark_Armor_protectionRadiation_Left_1_1",
+    "armors": [
+      "HeavyAnomaly_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Spark_Armor_protectionThermal_protectionChemical_Left_2_1",
+    "armors": [
+      "HeavyAnomaly_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Spark_Armor_protectionThermal_protectionChemical_Left_3_1",
+    "armors": [
+      "HeavyAnomaly_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Spark_Armor_protectionThermal_protectionElectrical_Left_3_1",
+    "armors": [
+      "HeavyAnomaly_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Spark_Armor_rad_PSY_Left_2_1",
+    "armors": [
+      "HeavyAnomaly_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Spark_Armor_reductionWeight_Left_2_2",
+    "armors": [
+      "HeavyAnomaly_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyAnomaly_Spark_Armor_regenerationStamina_Left_3_2",
+    "armors": [
+      "HeavyAnomaly_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyBattle_Spark_Armor_MaxDurability_Left_1_1",
+    "armors": [
+      "HeavyBattle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyBattle_Spark_Armor_MaxDurability_Left_1_2",
+    "armors": [
+      "HeavyBattle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyBattle_Spark_Armor_PSY_Left_2_2",
+    "armors": [
+      "HeavyBattle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyBattle_Spark_Armor_PSY_Left_3_1",
+    "armors": [
+      "HeavyBattle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyBattle_Spark_Armor_ProtectionChemical_Left_3_2",
+    "armors": [
+      "HeavyBattle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyBattle_Spark_Armor_carryingCapacity_Left_3_1",
+    "armors": [
+      "HeavyBattle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyBattle_Spark_Armor_container_Left_1_1",
+    "armors": [
+      "HeavyBattle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyBattle_Spark_Armor_container_Left_2_1",
+    "armors": [
+      "HeavyBattle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyBattle_Spark_Armor_protectionChemical_protectionElectrical_Left_3_1",
+    "armors": [
+      "HeavyBattle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyBattle_Spark_Armor_protectionChemical_protectionTherma_Left_2_1",
+    "armors": [
+      "HeavyBattle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyBattle_Spark_Armor_protectionPhysical_Left_1_1",
+    "armors": [
+      "HeavyBattle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyBattle_Spark_Armor_protectionPhysical_Left_2_1",
+    "armors": [
+      "HeavyBattle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyBattle_Spark_Armor_protectionRadiation_Left_1_1",
+    "armors": [
+      "HeavyBattle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyBattle_Spark_Armor_protectionRadiation_Left_2_1",
+    "armors": [
+      "HeavyBattle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyBattle_Spark_Armor_protectionThermal_Left_1_2",
+    "armors": [
+      "HeavyBattle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyBattle_Spark_Armor_protectionThermal_protectionElectrical_Left_2_2",
+    "armors": [
+      "HeavyBattle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyBattle_Spark_Armor_rad_container_Left_2_2",
+    "armors": [
+      "HeavyBattle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyBattle_Spark_Armor_radiationAbsorption_Left_3_1",
+    "armors": [
+      "HeavyBattle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyBattle_Spark_Armor_reductionWeight_Left_2_2",
+    "armors": [
+      "HeavyBattle_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Dolg_Armor_Backpack_Left_3_2",
+    "armors": [
+      "HeavyExoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Dolg_Armor_EXOMaxDurability_Left_2_1",
+    "armors": [
+      "HeavyExoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Dolg_Armor_EXOMaxDurability_Left_3_1",
+    "armors": [
+      "HeavyExoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Dolg_Armor_EXOprotectionPhysical_Left_1_1",
+    "armors": [
+      "HeavyExoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Dolg_Armor_EXOregenerationStamina_Left_1_1",
+    "armors": [
+      "HeavyExoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Dolg_Armor_PSY_Left_3_2",
+    "armors": [
+      "HeavyExoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Dolg_Armor_container_Left_1_1",
+    "armors": [
+      "HeavyExoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Dolg_Armor_container_Left_3_1",
+    "armors": [
+      "HeavyExoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Dolg_Armor_protectionChemical_Left_1_1",
+    "armors": [
+      "HeavyExoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Dolg_Armor_protectionChemical_protectionElectrical_Left_3_2",
+    "armors": [
+      "HeavyExoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Dolg_Armor_protectionElectrical_Left_2_1",
+    "armors": [
+      "HeavyExoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Dolg_Armor_protectionRadiation_Left_1_2",
+    "armors": [
+      "HeavyExoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Dolg_Armor_protectionRadiation_Left_2_2",
+    "armors": [
+      "HeavyExoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Dolg_Armor_protectionThermal_Left_1_2",
+    "armors": [
+      "HeavyExoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Dolg_Armor_protectionThermal_protectionChemica_Left_3_1",
+    "armors": [
+      "HeavyExoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Dolg_Armor_rad_container_Left_2_1",
+    "armors": [
+      "HeavyExoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Dolg_Armor_rad_container_Left_2_2",
+    "armors": [
+      "HeavyExoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Dolg_Armor_reductionWeight_Left_2_1",
+    "armors": [
+      "HeavyExoskeleton_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Monolith_Armor_AddRunEffect_Right_2_1",
+    "armors": [
+      "HeavyExoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Monolith_Armor_EXOMaxDurability_Right_1_1",
+    "armors": [
+      "HeavyExoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Monolith_Armor_EXOprotectionPhysical_Left_2_1",
+    "armors": [
+      "HeavyExoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Monolith_Armor_EXOprotectionPhysical_Left_3_1",
+    "armors": [
+      "HeavyExoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Monolith_Armor_EXOregenerationStamina_Left_3_2",
+    "armors": [
+      "HeavyExoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Monolith_Armor_PSY_Left_2_2",
+    "armors": [
+      "HeavyExoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Monolith_Armor_PSY_Left_3_1",
+    "armors": [
+      "HeavyExoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Monolith_Armor_accuracy_Right_3_1",
+    "armors": [
+      "HeavyExoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Monolith_Armor_pockets_Left_1_1",
+    "armors": [
+      "HeavyExoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Monolith_Armor_protectionChemical_Left_1_1",
+    "armors": [
+      "HeavyExoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Monolith_Armor_protectionChemical_protectionElectrical_Left_3_2",
+    "armors": [
+      "HeavyExoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Monolith_Armor_protectionChemical_protectionTherma_Left_3_1",
+    "armors": [
+      "HeavyExoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Monolith_Armor_protectionElectrical_Left_2_2",
+    "armors": [
+      "HeavyExoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Monolith_Armor_protectionRadiation_Left_1_2",
+    "armors": [
+      "HeavyExoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Monolith_Armor_protectionRadiation_Left_2_1",
+    "armors": [
+      "HeavyExoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Monolith_Armor_protectionThermal_Left_2_1",
+    "armors": [
+      "HeavyExoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Monolith_Armor_rad_container_Left_1_1",
+    "armors": [
+      "HeavyExoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Monolith_Armor_rad_container_Left_2_1",
+    "armors": [
+      "HeavyExoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Monolith_Armor_rad_container_Left_3_1",
+    "armors": [
+      "HeavyExoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Monolith_Armor_rad_container_Left_3_2",
+    "armors": [
+      "HeavyExoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Monolith_Armor_reductionWeight_Left_2_2",
+    "armors": [
+      "HeavyExoskeleton_Monolith_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Svoboda_Armor_EXOMaxDurability_Left_1_2",
+    "armors": [
+      "HeavyExoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Svoboda_Armor_EXOprotectionPhysical_Left_1_1",
+    "armors": [
+      "HeavyExoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Svoboda_Armor_EXOprotectionPhysical_Left_3_1",
+    "armors": [
+      "HeavyExoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Svoboda_Armor_EXOregenerationStamina_Right_1_1",
+    "armors": [
+      "HeavyExoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Svoboda_Armor_PSY_Left_2_2",
+    "armors": [
+      "HeavyExoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Svoboda_Armor_PSY_Left_3_1",
+    "armors": [
+      "HeavyExoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Svoboda_Armor_carryingCapacity_Left_3_2",
+    "armors": [
+      "HeavyExoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Svoboda_Armor_container_Left_1_1",
+    "armors": [
+      "HeavyExoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Svoboda_Armor_container_Left_2_1",
+    "armors": [
+      "HeavyExoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Svoboda_Armor_protectionChemical_protectionElectrical_Left_3_1",
+    "armors": [
+      "HeavyExoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Svoboda_Armor_protectionElectrical_Left_1_1",
+    "armors": [
+      "HeavyExoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Svoboda_Armor_protectionRadiation_Left_2_1",
+    "armors": [
+      "HeavyExoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Svoboda_Armor_protectionRadiation_Left_3_2",
+    "armors": [
+      "HeavyExoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Svoboda_Armor_protectionThermal_Left_1_2",
+    "armors": [
+      "HeavyExoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Svoboda_Armor_protectionThermal_protectionChemica_Left_2_1",
+    "armors": [
+      "HeavyExoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Svoboda_Armor_rad_container_Left_2_2",
+    "armors": [
+      "HeavyExoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Svoboda_Armor_rad_container_Left_3_1",
+    "armors": [
+      "HeavyExoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "HeavyExoskeleton_Svoboda_Armor_reductionWeight_Left_2_1",
+    "armors": [
+      "HeavyExoskeleton_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Dolg_Armor_MaxDurability_Left_1_1",
+    "armors": [
+      "Heavy_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Dolg_Armor_MaxDurability_Left_1_2",
+    "armors": [
+      "Heavy_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Dolg_Armor_ProtectionChemical_Left_1_1",
+    "armors": [
+      "Heavy_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Dolg_Armor_backpack_Left_3_2",
+    "armors": [
+      "Heavy_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Dolg_Armor_container_Left_1_1",
+    "armors": [
+      "Heavy_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Dolg_Armor_container_Left_3_1",
+    "armors": [
+      "Heavy_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Dolg_Armor_protectionChemical_protectionElectrical_Left_3_1",
+    "armors": [
+      "Heavy_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Dolg_Armor_protectionElectrical_Left_2_2",
+    "armors": [
+      "Heavy_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Dolg_Armor_protectionPhysical_Left_2_1",
+    "armors": [
+      "Heavy_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Dolg_Armor_protectionPhysical_Left_3_1",
+    "armors": [
+      "Heavy_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Dolg_Armor_protectionRadiation_Left_1_1",
+    "armors": [
+      "Heavy_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Dolg_Armor_protectionRadiation_Left_2_1",
+    "armors": [
+      "Heavy_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Dolg_Armor_protectionThermal_Left_2_1",
+    "armors": [
+      "Heavy_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Dolg_Armor_radiationAbsorption_Left_2_1",
+    "armors": [
+      "Heavy_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Dolg_Armor_reductionWeight_Left_2_2",
+    "armors": [
+      "Heavy_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Dolg_Armor_regenerationStamina_Left_3_1",
+    "armors": [
+      "Heavy_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Duty_Helmet_MaxDurability_Left_2_1",
+    "armors": [
+      "Heavy_Duty_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Duty_Helmet_MaxDurability_Left_3_1",
+    "armors": [
+      "Heavy_Duty_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Duty_Helmet_protectionChemical_protectionElectrical_Left_2_1",
+    "armors": [
+      "Heavy_Duty_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Duty_Helmet_protectionPhysical_Left_1_1",
+    "armors": [
+      "Heavy_Duty_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Duty_Helmet_protectionPhysical_Left_2_2",
+    "armors": [
+      "Heavy_Duty_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Duty_Helmet_protectionPhysical_Left_3_1",
+    "armors": [
+      "Heavy_Duty_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Duty_Helmet_protectionRadiation_Left_1_1",
+    "armors": [
+      "Heavy_Duty_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Duty_Helmet_protectionRadiation_Left_1_2",
+    "armors": [
+      "Heavy_Duty_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Duty_Helmet_protectionThermal_Left_1_1",
+    "armors": [
+      "Heavy_Duty_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Duty_Helmet_reductionWeight_Left_1_2",
+    "armors": [
+      "Heavy_Duty_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Mercenaries_Armor_Backpack_Left_3_1",
+    "armors": [
+      "Heavy_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Mercenaries_Armor_MaxDurability_Left_1_2",
+    "armors": [
+      "Heavy_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Mercenaries_Armor_MaxDurability_Left_2_1",
+    "armors": [
+      "Heavy_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Mercenaries_Armor_container_Left_1_1",
+    "armors": [
+      "Heavy_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Mercenaries_Armor_protectionChemical_Left_1_1",
+    "armors": [
+      "Heavy_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Mercenaries_Armor_protectionChemical_protectionElectrical_Left_3_2",
+    "armors": [
+      "Heavy_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Mercenaries_Armor_protectionElectrical_Left_2_2",
+    "armors": [
+      "Heavy_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Mercenaries_Armor_protectionPhysical_Left_1_1",
+    "armors": [
+      "Heavy_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Mercenaries_Armor_protectionPhysical_Left_2_1",
+    "armors": [
+      "Heavy_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Mercenaries_Armor_protectionRadiation_Left_1_1",
+    "armors": [
+      "Heavy_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Mercenaries_Armor_protectionRadiation_Left_3_1",
+    "armors": [
+      "Heavy_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Mercenaries_Armor_protectionThermal_Left_2_1",
+    "armors": [
+      "Heavy_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Mercenaries_Armor_protectionThermal_protectionElectrical_Left_3_1",
+    "armors": [
+      "Heavy_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Mercenaries_Armor_rad_container_Left_3_1",
+    "armors": [
+      "Heavy_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Mercenaries_Armor_radiationAbsorption_Left_2_1",
+    "armors": [
+      "Heavy_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Military_Helmet_MaxDurability_Left_2_1",
+    "armors": [
+      "Heavy_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Military_Helmet_MaxDurability_Left_3_1",
+    "armors": [
+      "Heavy_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Military_Helmet_PSY_Left_1_2",
+    "armors": [
+      "Heavy_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Military_Helmet_PSY_Left_2_1",
+    "armors": [
+      "Heavy_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Military_Helmet_protectionChemical_Left_1_1",
+    "armors": [
+      "Heavy_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Military_Helmet_protectionChemical_protectionTherma_Left_2_1",
+    "armors": [
+      "Heavy_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Military_Helmet_protectionElectrical_Left_3_1",
+    "armors": [
+      "Heavy_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Military_Helmet_protectionPhysical_Left_1_1",
+    "armors": [
+      "Heavy_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Military_Helmet_protectionPhysical_Left_2_2",
+    "armors": [
+      "Heavy_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Military_Helmet_protectionRadiation_Left_1_1",
+    "armors": [
+      "Heavy_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Military_Helmet_protectionRadiation_Left_2_2",
+    "armors": [
+      "Heavy_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Military_Helmet_protectionThermal_Left_1_2",
+    "armors": [
+      "Heavy_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Military_Helmet_rad_PSY_Left_3_1",
+    "armors": [
+      "Heavy_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Military_Helmet_reductionWeight_Left_1_2",
+    "armors": [
+      "Heavy_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Armor_MaxDurability_Left_1_1",
+    "armors": [
+      "Heavy_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Armor_MaxDurability_Left_1_2",
+    "armors": [
+      "Heavy_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Armor_carryingCapacity_Left_3_1",
+    "armors": [
+      "Heavy_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Armor_container_Left_1_1",
+    "armors": [
+      "Heavy_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Armor_container_radiationAbsorption_Left_1_2",
+    "armors": [
+      "Heavy_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Armor_container_radiationAbsorption_Left_2_1",
+    "armors": [
+      "Heavy_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Armor_protectionChemical_protectionElectrical_Left_3_1",
+    "armors": [
+      "Heavy_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Armor_protectionPhysical_Left_1_1",
+    "armors": [
+      "Heavy_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Armor_protectionPhysical_Left_2_1",
+    "armors": [
+      "Heavy_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Armor_protectionRadiation_Left_1_1",
+    "armors": [
+      "Heavy_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Armor_protectionRadiation_Left_2_1",
+    "armors": [
+      "Heavy_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Armor_protectionThermal_protectionChemical_Left_2_1",
+    "armors": [
+      "Heavy_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Armor_protectionThermal_protectionElectrical_Left_2_2",
+    "armors": [
+      "Heavy_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Armor_reductionWeight_Left_2_2",
+    "armors": [
+      "Heavy_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Armor_regenerationStamina_Left_3_1",
+    "armors": [
+      "Heavy_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Helmet_MaxDurability_Left_2_1",
+    "armors": [
+      "Heavy_Svoboda_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Helmet_PSY_Left_2_2",
+    "armors": [
+      "Heavy_Svoboda_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Helmet_protectionChemical_Left_2_1",
+    "armors": [
+      "Heavy_Svoboda_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Helmet_protectionChemical_protectionElectrical_Left_3_1",
+    "armors": [
+      "Heavy_Svoboda_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Helmet_protectionChemical_protectionTherma_Left_3_1",
+    "armors": [
+      "Heavy_Svoboda_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Helmet_protectionElectrical_Left_1_1",
+    "armors": [
+      "Heavy_Svoboda_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Helmet_protectionPhysical_Left_1_1",
+    "armors": [
+      "Heavy_Svoboda_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Helmet_protectionPhysical_Left_2_2",
+    "armors": [
+      "Heavy_Svoboda_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Helmet_protectionPhysical_Left_3_1",
+    "armors": [
+      "Heavy_Svoboda_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Helmet_protectionRadiation_Left_1_1",
+    "armors": [
+      "Heavy_Svoboda_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Helmet_protectionRadiation_Left_2_1",
+    "armors": [
+      "Heavy_Svoboda_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Helmet_protectionThermal_Left_2_2",
+    "armors": [
+      "Heavy_Svoboda_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Svoboda_Helmet_reductionWeight_Left_1_2",
+    "armors": [
+      "Heavy_Svoboda_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Varta_Helmet_MaxDurability_Left_2_1",
+    "armors": [
+      "Heavy_Varta_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Varta_Helmet_PSY_Left_1_2",
+    "armors": [
+      "Heavy_Varta_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Varta_Helmet_protectionChemical_Left_1_1",
+    "armors": [
+      "Heavy_Varta_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Varta_Helmet_protectionElectrical_Left_2_2",
+    "armors": [
+      "Heavy_Varta_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Varta_Helmet_protectionPhysical_Left_1_1",
+    "armors": [
+      "Heavy_Varta_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Varta_Helmet_protectionRadiation_Left_1_1",
+    "armors": [
+      "Heavy_Varta_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Varta_Helmet_protectionThermal_Left_2_1",
+    "armors": [
+      "Heavy_Varta_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Varta_Helmet_rad_PSY_Left_2_1",
+    "armors": [
+      "Heavy_Varta_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Heavy_Varta_Helmet_reductionWeight_Left_1_2",
+    "armors": [
+      "Heavy_Varta_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Jacket_Bandit_Armor_MaxDurability_Left_1_2",
+    "armors": [
+      "Jacket_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Jacket_Bandit_Armor_ProtectionStrike2_Left_2_1",
+    "armors": [
+      "Jacket_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Jacket_Bandit_Armor_ProtectionStrike_Left_1_1",
+    "armors": [
+      "Jacket_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Jacket_Bandit_Armor_container_Left_1_1",
+    "armors": [
+      "Jacket_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Jacket_Bandit_Armor_protectionChemical_Left_1_2",
+    "armors": [
+      "Jacket_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Jacket_Bandit_Armor_protectionRadiation_Left_1_1",
+    "armors": [
+      "Jacket_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Jacket_Bandit_Armor_protectionThermal_Left_1_1",
+    "armors": [
+      "Jacket_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Jacket_Bandit_Armor_reductionWeight_Left_2_2",
+    "armors": [
+      "Jacket_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Jemmy_Neutral_Armor_ArtifactSlots_Left_1_1",
+    "armors": [
+      "Jemmy_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Jemmy_Neutral_Armor_MaxDurability2_Left_2_2",
+    "armors": [
+      "Jemmy_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Jemmy_Neutral_Armor_MaxDurability_Left_1_2",
+    "armors": [
+      "Jemmy_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Jemmy_Neutral_Armor_ProtectionBurn_Left_1_1",
+    "armors": [
+      "Jemmy_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Jemmy_Neutral_Armor_ProtectionChemical_Left_1_2",
+    "armors": [
+      "Jemmy_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Jemmy_Neutral_Armor_ProtectionStrike2_Left_2_1",
+    "armors": [
+      "Jemmy_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Jemmy_Neutral_Armor_ProtectionStrike_Left_1_1",
+    "armors": [
+      "Jemmy_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Jemmy_Neutral_Armor_protectionElectrical_Left_2_1",
+    "armors": [
+      "Jemmy_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Jemmy_Neutral_Armor_protectionElectrical_protectionThermal_Left_2_2",
+    "armors": [
+      "Jemmy_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Bandit_Helmet_Armor_protectionRadiation_Left_1_1",
+    "armors": [
+      "Light_Bandit_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Bandit_Helmet_Armor_protectionThermal_Left_1_2",
+    "armors": [
+      "Light_Bandit_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Bandit_Helmet_Armor_wearing_Left_1_2",
+    "armors": [
+      "Light_Bandit_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Duty_Helmet_Armor_protectionPhysical_Left_1_2",
+    "armors": [
+      "Light_Duty_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Duty_Helmet_Armor_protectionRadiation2_Left_1_1",
+    "armors": [
+      "Light_Duty_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Duty_Helmet_Armor_protectionRadiation_Left_1_1",
+    "armors": [
+      "Light_Duty_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Duty_Helmet_Armor_wearing_Left_1_2",
+    "armors": [
+      "Light_Duty_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Mercenaries_Armor_MaxDurability_Left_1_1",
+    "armors": [
+      "Light_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Mercenaries_Armor_backpack_Left_3_1",
+    "armors": [
+      "Light_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Mercenaries_Armor_container_Left_1_1",
+    "armors": [
+      "Light_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Mercenaries_Armor_container_Left_2_1",
+    "armors": [
+      "Light_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Mercenaries_Armor_protectionChemical_protectionTherma_Left_3_1",
+    "armors": [
+      "Light_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Mercenaries_Armor_protectionPhysical_Left_2_1",
+    "armors": [
+      "Light_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Mercenaries_Armor_protectionPhysical_Left_2_2",
+    "armors": [
+      "Light_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Mercenaries_Armor_protectionRadiation_Left_1_2",
+    "armors": [
+      "Light_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Mercenaries_Armor_protectionThermal_protectionElectrical_Left_1_1",
+    "armors": [
+      "Light_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Mercenaries_Armor_reductionWeight_Left_1_2",
+    "armors": [
+      "Light_Mercenaries_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Mercenaries_Helmet_Armor_protectionChemical_Left_1_1",
+    "armors": [
+      "Light_Mercenaries_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Mercenaries_Helmet_Armor_protectionRadiation2_Left_1_1",
+    "armors": [
+      "Light_Mercenaries_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Mercenaries_Helmet_Armor_protectionRadiation_Left_1_1",
+    "armors": [
+      "Light_Mercenaries_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Mercenaries_Helmet_Armor_protectionThermal_Left_1_1",
+    "armors": [
+      "Light_Mercenaries_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Mercenaries_Helmet_Armor_wearing_Left_1_2",
+    "armors": [
+      "Light_Mercenaries_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Military_Helmet_Armor_protectionPhysical_Left_1_2",
+    "armors": [
+      "Light_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Military_Helmet_Armor_protectionRadiation2_Left_1_1",
+    "armors": [
+      "Light_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Military_Helmet_Armor_protectionRadiation_Left_1_1",
+    "armors": [
+      "Light_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Military_Helmet_Armor_wearing_Left_1_2",
+    "armors": [
+      "Light_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Military_Helmet_armor_protectionPsi_Right_1_1",
+    "armors": [
+      "Light_Military_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Neutral_Helmet_Armor_protectionElectrical_Left_2_2",
+    "armors": [
+      "Light_Neutral_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Neutral_Helmet_Armor_protectionRadiation_Left_1_1",
+    "armors": [
+      "Light_Neutral_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Neutral_Helmet_Armor_protectionThermal_Left_2_1",
+    "armors": [
+      "Light_Neutral_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Light_Neutral_Helmet_Armor_wearing_Left_3_1",
+    "armors": [
+      "Light_Neutral_Helmet"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Middle_Bandit_Armor_MaxDurability_Left_1_1",
+    "armors": [
+      "Middle_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Middle_Bandit_Armor_MaxDurability_Left_1_2",
+    "armors": [
+      "Middle_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Middle_Bandit_Armor_carryingCapacity_Left_2_2",
+    "armors": [
+      "Middle_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Middle_Bandit_Armor_container_Left_1_1",
+    "armors": [
+      "Middle_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Middle_Bandit_Armor_protectionChemical_protectionElectrical_Left_2_1",
+    "armors": [
+      "Middle_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Middle_Bandit_Armor_protectionPhysical_Left_1_2",
+    "armors": [
+      "Middle_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Middle_Bandit_Armor_protectionPhysical_Left_3_1",
+    "armors": [
+      "Middle_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Middle_Bandit_Armor_protectionRadiation_Left_2_2",
+    "armors": [
+      "Middle_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Middle_Bandit_Armor_protectionThermal_protectionElectrical_Left_1_1",
+    "armors": [
+      "Middle_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Middle_Bandit_Armor_rad_container_Left_2_1",
+    "armors": [
+      "Middle_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Middle_Bandit_Armor_reductionWeight_Left_2_1",
+    "armors": [
+      "Middle_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Nasos_Neutral_Armor_MaxDurability2_Left_2_2",
+    "armors": [
+      "Nasos_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Nasos_Neutral_Armor_MaxDurability_Left_1_1",
+    "armors": [
+      "Nasos_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Nasos_Neutral_Armor_backpack_Left_3_1",
+    "armors": [
+      "Nasos_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Nasos_Neutral_Armor_container2_Left_2_1",
+    "armors": [
+      "Nasos_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Nasos_Neutral_Armor_container_Left_1_1",
+    "armors": [
+      "Nasos_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Nasos_Neutral_Armor_protectionChemical_Left_1_2",
+    "armors": [
+      "Nasos_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Nasos_Neutral_Armor_protectionChemical_protectionElectrical_Left_2_1",
+    "armors": [
+      "Nasos_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Nasos_Neutral_Armor_protectionChemical_protectionTherma_Left_2_2",
+    "armors": [
+      "Nasos_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Nasos_Neutral_Armor_protectionElectrical_Left_3_1",
+    "armors": [
+      "Nasos_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Nasos_Neutral_Armor_protectionPhysical_Left_2_1",
+    "armors": [
+      "Nasos_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Nasos_Neutral_Armor_protectionRadiation_Left_1_1",
+    "armors": [
+      "Nasos_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Nasos_Neutral_Armor_protectionRadiation_Left_2_1",
+    "armors": [
+      "Nasos_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Nasos_Neutral_Armor_protectionThermal_Left_1_1",
+    "armors": [
+      "Nasos_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Nasos_Neutral_Armor_reductionWeight_Left_1_2",
+    "armors": [
+      "Nasos_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Newbie_Neutral_Armor_ArtifactSlots_Left_1_1",
+    "armors": [
+      "Newbee_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Newbie_Neutral_Armor_ItemWeight_Left_3_1",
+    "armors": [
+      "Newbee_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Newbie_Neutral_Armor_MaxDurability_Left_1_2",
+    "armors": [
+      "Newbee_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Newbie_Neutral_Armor_ProtectionBurn_Left_1_2",
+    "armors": [
+      "Newbee_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Newbie_Neutral_Armor_ProtectionBurn_Left_2_1",
+    "armors": [
+      "Newbee_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Newbie_Neutral_Armor_ProtectionChemical_Left_1_1",
+    "armors": [
+      "Newbee_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Newbie_Neutral_Armor_ProtectionStrike_Left_1_1",
+    "armors": [
+      "Newbee_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Newbie_Neutral_Armor_ProtectionStrike_Left_2_1",
+    "armors": [
+      "Newbee_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Newbie_Neutral_Armor_ProtectionStrike_Left_2_2",
+    "armors": [
+      "Newbee_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Newbie_Neutral_Armor_protectionElectrical_Left_2_2",
+    "armors": [
+      "Newbee_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Rook_Dolg_Armor_MaxDurability_Left_2_1",
+    "armors": [
+      "Rook_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Rook_Dolg_Armor_container_Left_2_1",
+    "armors": [
+      "Rook_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Rook_Dolg_Armor_protectionChemical_Left_2_2",
+    "armors": [
+      "Rook_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Rook_Dolg_Armor_protectionElectrical_Left_2_1",
+    "armors": [
+      "Rook_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Rook_Dolg_Armor_protectionPhysical_Left_1_1",
+    "armors": [
+      "Rook_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Rook_Dolg_Armor_protectionPhysical_Left_2_2",
+    "armors": [
+      "Rook_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Rook_Dolg_Armor_protectionRadiation_Left_1_2",
+    "armors": [
+      "Rook_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Rook_Dolg_Armor_protectionThermal_Left_1_1",
+    "armors": [
+      "Rook_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Rook_Dolg_Armor_reductionWeight_Left_1_2",
+    "armors": [
+      "Rook_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Rook_Dolg_Armor_regenerationStamina_Left_1_1",
+    "armors": [
+      "Rook_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Rook_Svoboda_Armor_MaxDurability_Left_2_1",
+    "armors": [
+      "Rook_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Rook_Svoboda_Armor_container_Left_1_1",
+    "armors": [
+      "Rook_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Rook_Svoboda_Armor_protectionChemical_Left_2_2",
+    "armors": [
+      "Rook_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Rook_Svoboda_Armor_protectionElectrical_Left_2_1",
+    "armors": [
+      "Rook_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Rook_Svoboda_Armor_protectionPhysical_Left_1_1",
+    "armors": [
+      "Rook_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Rook_Svoboda_Armor_protectionPhysical_Left_2_2",
+    "armors": [
+      "Rook_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Rook_Svoboda_Armor_protectionRadiation_Left_1_2",
+    "armors": [
+      "Rook_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Rook_Svoboda_Armor_protectionThermal_Left_1_1",
+    "armors": [
+      "Rook_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Rook_Svoboda_Armor_rad_container_Left_2_1",
+    "armors": [
+      "Rook_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Rook_Svoboda_Armor_reductionWeight_Left_1_2",
+    "armors": [
+      "Rook_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Dolg_Armor_Backpack_Left_2_2",
+    "armors": [
+      "SEVA_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Dolg_Armor_MaxDurability_Left_1_2",
+    "armors": [
+      "SEVA_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Dolg_Armor_MaxDurability_Left_2_1",
+    "armors": [
+      "SEVA_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Dolg_Armor_PSY_Left_1_1",
+    "armors": [
+      "SEVA_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Dolg_Armor_container_Left_1_1",
+    "armors": [
+      "SEVA_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Dolg_Armor_container_Left_3_1",
+    "armors": [
+      "SEVA_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Dolg_Armor_protectionChemical_Left_2_1",
+    "armors": [
+      "SEVA_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Dolg_Armor_protectionElectrical_Left_2_2",
+    "armors": [
+      "SEVA_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Dolg_Armor_protectionPhysical_Left_1_1",
+    "armors": [
+      "SEVA_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Dolg_Armor_protectionPhysical_Left_3_1",
+    "armors": [
+      "SEVA_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Dolg_Armor_protectionRadiation_Left_3_1",
+    "armors": [
+      "SEVA_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Dolg_Armor_protectionRadiation_Left_3_2",
+    "armors": [
+      "SEVA_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Dolg_Armor_protectionThermal_Left_1_1",
+    "armors": [
+      "SEVA_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Dolg_Armor_radiationAbsorption_Left_2_1",
+    "armors": [
+      "SEVA_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Dolg_Armor_reductionWeight_Left_2_2",
+    "armors": [
+      "SEVA_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Dolg_Armor_regenerationStamina_Left_2_1",
+    "armors": [
+      "SEVA_Dolg_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Spark_Armor_MaxDurability_Left_2_1",
+    "armors": [
+      "SEVA_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Spark_Armor_PSY_Left_3_1",
+    "armors": [
+      "SEVA_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Spark_Armor_PSY_Left_3_2",
+    "armors": [
+      "SEVA_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Spark_Armor_carryingCapacity_Left_3_1",
+    "armors": [
+      "SEVA_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Spark_Armor_container_Left_1_1",
+    "armors": [
+      "SEVA_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Spark_Armor_container_Left_2_2",
+    "armors": [
+      "SEVA_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Spark_Armor_protectionChemical_protectionElectrical_Left_2_1",
+    "armors": [
+      "SEVA_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Spark_Armor_protectionPhysical_Left_1_1",
+    "armors": [
+      "SEVA_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Spark_Armor_protectionPhysical_Left_2_1",
+    "armors": [
+      "SEVA_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Spark_Armor_protectionRadiation_Left_1_1",
+    "armors": [
+      "SEVA_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Spark_Armor_protectionRadiation_Left_2_2",
+    "armors": [
+      "SEVA_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Spark_Armor_protectionThermal_protectionElectrical_Left_1_2",
+    "armors": [
+      "SEVA_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Spark_Armor_protectionThermal_protectionElectrical_Left_2_2",
+    "armors": [
+      "SEVA_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Spark_Armor_protectionThermal_protectionElectrical_protectionChemical_Left_1_1",
+    "armors": [
+      "SEVA_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Spark_Armor_radiationAbsorption_Left_2_1",
+    "armors": [
+      "SEVA_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Spark_Armor_radiationAbsorption_Left_3_1",
+    "armors": [
+      "SEVA_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Spark_Armor_reductionWeight_Left_2_2",
+    "armors": [
+      "SEVA_Spark_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Svoboda_Armor_MaxDurability_Left_2_1",
+    "armors": [
+      "SEVA_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Svoboda_Armor_MaxDurability_Left_2_2",
+    "armors": [
+      "SEVA_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Svoboda_Armor_PSY_Left_3_1",
+    "armors": [
+      "SEVA_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Svoboda_Armor_carryingCapacity_Left_1_1",
+    "armors": [
+      "SEVA_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Svoboda_Armor_container_Left_1_1",
+    "armors": [
+      "SEVA_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Svoboda_Armor_protectionChemical_protectionElectrical_Left_2_1",
+    "armors": [
+      "SEVA_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Svoboda_Armor_protectionPhysical_Left_3_1",
+    "armors": [
+      "SEVA_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Svoboda_Armor_protectionRadiation_Left_1_1",
+    "armors": [
+      "SEVA_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Svoboda_Armor_protectionRadiation_Left_3_1",
+    "armors": [
+      "SEVA_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Svoboda_Armor_protectionThermal_protectionElectrical_Left_1_2",
+    "armors": [
+      "SEVA_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Svoboda_Armor_protectionThermal_protectionElectrical_Left_2_2",
+    "armors": [
+      "SEVA_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Svoboda_Armor_protectionThermal_protectionElectrical_protectionChemical_Left_1_1",
+    "armors": [
+      "SEVA_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Svoboda_Armor_radiationAbsorption_Left_2_1",
+    "armors": [
+      "SEVA_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Svoboda_Armor_radiationAbsorption_Left_3_1",
+    "armors": [
+      "SEVA_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Svoboda_Armor_reductionWeight_Left_2_1",
+    "armors": [
+      "SEVA_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SEVA_Svoboda_Armor_reductionWeight_Left_2_2",
+    "armors": [
+      "SEVA_Svoboda_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SciSEVA_Scientific_Armor_MaxDurability_Left_1_1",
+    "armors": [
+      "SciSEVA_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SciSEVA_Scientific_Armor_MaxDurability_Left_2_1",
+    "armors": [
+      "SciSEVA_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SciSEVA_Scientific_Armor_PSY_Left_1_1",
+    "armors": [
+      "SciSEVA_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SciSEVA_Scientific_Armor_PSY_Left_2_2",
+    "armors": [
+      "SciSEVA_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SciSEVA_Scientific_Armor_carryingCapacity_Left_3_1",
+    "armors": [
+      "SciSEVA_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SciSEVA_Scientific_Armor_container_Left_1_1",
+    "armors": [
+      "SciSEVA_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SciSEVA_Scientific_Armor_protectionChemical_protectionElectrical_Left_3_1",
+    "armors": [
+      "SciSEVA_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SciSEVA_Scientific_Armor_protectionRadiation_Left_1_2",
+    "armors": [
+      "SciSEVA_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SciSEVA_Scientific_Armor_protectionRadiation_Left_2_1",
+    "armors": [
+      "SciSEVA_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SciSEVA_Scientific_Armor_protectionThermal_protectionElectrical_Left_2_1",
+    "armors": [
+      "SciSEVA_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SciSEVA_Scientific_Armor_protectionThermal_protectionElectrical_Left_3_2",
+    "armors": [
+      "SciSEVA_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SciSEVA_Scientific_Armor_protectionThermal_protectionElectrical_protectionChemical_Left_1_1",
+    "armors": [
+      "SciSEVA_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SciSEVA_Scientific_Armor_radiationAbsorption_Left_2_1",
+    "armors": [
+      "SciSEVA_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SciSEVA_Scientific_Armor_radiationAbsorption_Left_2_2",
+    "armors": [
+      "SciSEVA_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SciSEVA_Scientific_Armor_radiationAbsorption_Left_3_1",
+    "armors": [
+      "SciSEVA_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "SciSEVA_Scientific_Armor_reductionWeight_Left_2_2",
+    "armors": [
+      "SciSEVA_Scientific_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Seva_Neutral_Armor_MaxDurability_Left_2_1",
+    "armors": [
+      "SEVA_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Seva_Neutral_Armor_MaxDurability_Left_2_2",
+    "armors": [
+      "SEVA_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Seva_Neutral_Armor_PSY_Left_1_1",
+    "armors": [
+      "SEVA_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Seva_Neutral_Armor_PSY_Left_3_1",
+    "armors": [
+      "SEVA_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Seva_Neutral_Armor_carryingCapacity_Left_3_2",
+    "armors": [
+      "SEVA_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Seva_Neutral_Armor_container_Left_1_1",
+    "armors": [
+      "SEVA_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Seva_Neutral_Armor_container_Left_1_2",
+    "armors": [
+      "SEVA_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Seva_Neutral_Armor_container_radiationAbsorption_Left_2_1",
+    "armors": [
+      "SEVA_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Seva_Neutral_Armor_container_radiationAbsorption_Left_2_2",
+    "armors": [
+      "SEVA_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Seva_Neutral_Armor_protectionChemical_protectionElectrical_Left_2_1",
+    "armors": [
+      "SEVA_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Seva_Neutral_Armor_protectionPhysical_Left_1_1",
+    "armors": [
+      "SEVA_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Seva_Neutral_Armor_protectionPhysical_Left_3_1",
+    "armors": [
+      "SEVA_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Seva_Neutral_Armor_protectionRadiation_Left_3_1",
+    "armors": [
+      "SEVA_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Seva_Neutral_Armor_protectionRadiation_Left_3_2",
+    "armors": [
+      "SEVA_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Seva_Neutral_Armor_protectionThermal_protectionElectrical_Left_1_2",
+    "armors": [
+      "SEVA_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Seva_Neutral_Armor_protectionThermal_protectionElectrical_Left_2_2",
+    "armors": [
+      "SEVA_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Seva_Neutral_Armor_protectionThermal_protectionElectrical_protectionChemical_Left_1_1",
+    "armors": [
+      "SEVA_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Seva_Neutral_Armor_reductionWeight_Left_2_2",
+    "armors": [
+      "SEVA_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Seva_Neutral_Armor_regenerationStamina_Left_2_1",
+    "armors": [
+      "SEVA_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Skin_Jacket_Bandit_Armor_ArtifactSlots_Left_1_1",
+    "armors": [
+      "SkinJacket_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Skin_Jacket_Bandit_Armor_ItemWeight_Left_2_1",
+    "armors": [
+      "SkinJacket_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Skin_Jacket_Bandit_Armor_MaxDurability_Left_1_2",
+    "armors": [
+      "SkinJacket_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Skin_Jacket_Bandit_Armor_ProtectionBurn_Left_1_1",
+    "armors": [
+      "SkinJacket_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Skin_Jacket_Bandit_Armor_ProtectionChemical_Left_1_2",
+    "armors": [
+      "SkinJacket_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Skin_Jacket_Bandit_Armor_ProtectionStrike_Left_1_1",
+    "armors": [
+      "SkinJacket_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Skin_Jacket_Bandit_Armor_protectionElectrical_Left_2_1",
+    "armors": [
+      "SkinJacket_Bandit_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Zorya_Neutral_Armor_MaxDurability_Left_1_1",
+    "armors": [
+      "Zorya_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Zorya_Neutral_Armor_MaxDurability_Left_2_1",
+    "armors": [
+      "Zorya_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Zorya_Neutral_Armor_container_Left_1_1",
+    "armors": [
+      "Zorya_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Zorya_Neutral_Armor_container_Left_3_1",
+    "armors": [
+      "Zorya_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Zorya_Neutral_Armor_protectionChemical_Left_1_2",
+    "armors": [
+      "Zorya_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Zorya_Neutral_Armor_protectionChemical_Left_3_1",
+    "armors": [
+      "Zorya_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Zorya_Neutral_Armor_protectionElectrical_Left_3_2",
+    "armors": [
+      "Zorya_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Zorya_Neutral_Armor_protectionPhysical_Left_1_1",
+    "armors": [
+      "Zorya_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Zorya_Neutral_Armor_protectionPhysical_Left_2_2",
+    "armors": [
+      "Zorya_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Zorya_Neutral_Armor_protectionRadiation_Left_1_1",
+    "armors": [
+      "Zorya_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Zorya_Neutral_Armor_protectionRadiation_Left_2_1",
+    "armors": [
+      "Zorya_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Zorya_Neutral_Armor_protectionThermal_Left_1_1",
+    "armors": [
+      "Zorya_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Zorya_Neutral_Armor_protectionThermal_Left_2_2",
+    "armors": [
+      "Zorya_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Zorya_Neutral_Armor_protectionThermal_protectionElectrical_Left_2_1",
+    "armors": [
+      "Zorya_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin",
+      "BlockingUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Zorya_Neutral_Armor_radiationAbsorption_Left_2_1",
+    "armors": [
+      "Zorya_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Zorya_Neutral_Armor_reductionWeight_Left_1_2",
+    "armors": [
+      "Zorya_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  },
+  {
+    "sid": "Zorya_Neutral_Armor_regenerationStamina_Left_1_1",
+    "armors": [
+      "Zorya_Neutral_Armor"
+    ],
+    "lines": [
+      "EffectPrototypeSIDs : struct.begin",
+      "RequiredUpgradePrototypeSIDs : struct.begin"
+    ]
+  }
+]
