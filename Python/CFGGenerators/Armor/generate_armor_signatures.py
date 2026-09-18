@@ -59,6 +59,8 @@ class ArmorUpgradeDefinition:
     hint_sid: str
     cost: int
     effects: tuple[str, ...]
+    tier_index: int
+    required_upgrade_sid: str | None = None
     horizontal_position: int | None = None
     vertical_position: str | None = None
 
@@ -90,18 +92,25 @@ def build_upgrades(config: dict | None = None, classification: dict | None = Non
             if category_cfg is None:
                 continue
             armor_sid = armor["sid"]
-            result.append(ArmorUpgradeDefinition(
-                sid=f"{armor_sid}_Upgrade_BPRUE_{faction}_Signature",
-                armor_sid=armor_sid,
-                faction=faction,
-                category=category,
-                signature=faction_cfg["signature"],
-                target_part=category_cfg["target_part"],
-                text_sid=category_cfg["text_sid"],
-                hint_sid=category_cfg["hint_sid"],
-                cost=int(category_cfg["cost"]),
-                effects=tuple(category_cfg["effects"]),
-            ))
+            previous_sid: str | None = None
+            for tier_index, tier_cfg in enumerate(category_cfg["tiers"]):
+                tier_id = tier_cfg["id"]
+                sid = f"{armor_sid}_Upgrade_BPRUE_{faction}_{tier_id}"
+                result.append(ArmorUpgradeDefinition(
+                    sid=sid,
+                    armor_sid=armor_sid,
+                    faction=faction,
+                    category=category,
+                    signature=faction_cfg["signature"],
+                    target_part=category_cfg["target_part"],
+                    text_sid=tier_cfg["text_sid"],
+                    hint_sid=tier_cfg["hint_sid"],
+                    cost=int(tier_cfg["cost"]),
+                    effects=tuple(tier_cfg["effects"]),
+                    tier_index=tier_index,
+                    required_upgrade_sid=previous_sid,
+                ))
+                previous_sid = sid
 
     result = apply_layout(result)
     validate(result)
@@ -148,22 +157,30 @@ def _first_free_armor_column(preferred: str, occupied: set[tuple[str, int]]) -> 
 
 def apply_layout(upgrades: list[ArmorUpgradeDefinition]) -> list[ArmorUpgradeDefinition]:
     from dataclasses import replace
+    from collections import defaultdict
 
     vanilla_by_armor = _vanilla_upgrade_sids_by_armor()
     details = _upgrade_details()
-    resolved: list[ArmorUpgradeDefinition] = []
+    by_armor: dict[str, list[ArmorUpgradeDefinition]] = defaultdict(list)
     for upgrade in upgrades:
-        vanilla_sids = vanilla_by_armor.get(upgrade.armor_sid)
+        by_armor[upgrade.armor_sid].append(upgrade)
+
+    resolved: list[ArmorUpgradeDefinition] = []
+    for armor_sid, tiers in by_armor.items():
+        vanilla_sids = vanilla_by_armor.get(armor_sid)
         if vanilla_sids is None:
-            raise ValueError(f"{upgrade.armor_sid}: missing Vanilla UpgradePrototypeSIDs mapping")
-        occupied = _vanilla_module_columns(upgrade.armor_sid, vanilla_sids, details)
-        target, horizontal = _first_free_armor_column(upgrade.target_part, occupied)
-        resolved.append(replace(
-            upgrade,
-            target_part=target,
-            horizontal_position=None if horizontal == 0 else horizontal,
-            vertical_position=VERTICALS[0],
-        ))
+            raise ValueError(f"{armor_sid}: missing Vanilla UpgradePrototypeSIDs mapping")
+        occupied = _vanilla_module_columns(armor_sid, vanilla_sids, details)
+        target, horizontal = _first_free_armor_column(tiers[0].target_part, occupied)
+        for upgrade in sorted(tiers, key=lambda item: item.tier_index):
+            if upgrade.tier_index >= len(VERTICALS):
+                raise ValueError(f"{armor_sid}: armor signature exceeds {len(VERTICALS)} vertical tier slots")
+            resolved.append(replace(
+                upgrade,
+                target_part=target,
+                horizontal_position=None if horizontal == 0 else horizontal,
+                vertical_position=VERTICALS[upgrade.tier_index],
+            ))
     return resolved
 
 
@@ -176,6 +193,8 @@ def validate(upgrades: list[ArmorUpgradeDefinition]) -> None:
         seen.add(upgrade.sid)
         if not upgrade.effects:
             errors.append(f"{upgrade.sid}: no effects")
+        if upgrade.tier_index > 0 and not upgrade.required_upgrade_sid:
+            errors.append(f"{upgrade.sid}: tier {upgrade.tier_index + 1} has no prerequisite")
     if errors:
         raise ValueError("Invalid BPRUE armor signature model:\n  - " + "\n  - ".join(errors))
 
@@ -206,6 +225,11 @@ def render_upgrade_fragment(upgrades: list[ArmorUpgradeDefinition]) -> str:
             *([f"   HorizontalPosition = {upgrade.horizontal_position}"] if upgrade.horizontal_position is not None else []),
             *([f"   VerticalPosition = EUpgradeVerticalPosition::{upgrade.vertical_position}"] if upgrade.vertical_position is not None else []),
             f"   UpgradeTargetPart = EUpgradeTargetPartType::{upgrade.target_part}",
+            *([
+                "   RequiredUpgradePrototypeSIDs : struct.begin",
+                f"      [0] = {upgrade.required_upgrade_sid}",
+                "   struct.end",
+            ] if upgrade.required_upgrade_sid else []),
             "   EffectPrototypeSIDs : struct.begin",
             *(f"      [{i}] = {effect}" for i, effect in enumerate(upgrade.effects)),
             "   struct.end",
@@ -225,8 +249,7 @@ def _vanilla_upgrade_sids_by_armor() -> dict[str, list[str]]:
 
 
 def render_armor_patch(upgrades: list[ArmorUpgradeDefinition]) -> str:
-    by_armor = {upgrade.armor_sid: upgrade for upgrade in upgrades}
-    vanilla_by_armor = _vanilla_upgrade_sids_by_armor()
+    by_armor: dict[str, list[ArmorUpgradeDefinition]] = {}\n    for upgrade in upgrades:\n        by_armor.setdefault(upgrade.armor_sid, []).append(upgrade)\n    vanilla_by_armor = _vanilla_upgrade_sids_by_armor()
     lines = [
         "// -----------------------------------------------------------------------------",
         "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND",
@@ -235,11 +258,11 @@ def render_armor_patch(upgrades: list[ArmorUpgradeDefinition]) -> str:
         "// -----------------------------------------------------------------------------",
         "",
     ]
-    for armor_sid, upgrade in sorted(by_armor.items()):
+    for armor_sid, armor_upgrades in sorted(by_armor.items()):
         vanilla = vanilla_by_armor.get(armor_sid)
         if vanilla is None:
             raise ValueError(f"{armor_sid}: missing Vanilla UpgradePrototypeSIDs mapping")
-        combined = list(dict.fromkeys([*vanilla, upgrade.sid]))
+        generated = [upgrade.sid for upgrade in sorted(armor_upgrades, key=lambda item: item.tier_index)]\n        combined = list(dict.fromkeys([*vanilla, *generated]))
         lines += [
             f"{armor_sid} : struct.begin {{bpatch}}",
             "   UpgradePrototypeSIDs : struct.begin",
