@@ -5,2699 +5,2699 @@
     {
       "sid": "tmp",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "UNLOCALIZED MOD STRING"
+        "English": "UNLOCALIZED MOD STRING"
       }
     },
     {
       "sid": "sid_bprue_GunAK74_Upgrade_Barrel_2_3_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Enhanced Gas System"
+        "English": "Enhanced Gas System"
       }
     },
     {
       "sid": "sid_bprue_GunAK74_Upgrade_Barrel_2_3_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Optimizes the gas system to increase the weapon's rate of fire by 10%."
+        "English": "Optimizes the gas system to increase the weapon's rate of fire by 10%."
       }
     },
     {
       "sid": "sid_bprue_GunAK74_Upgrade_Stock_4_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Quick-Reload Mechanism"
+        "English": "Quick-Reload Mechanism"
       }
     },
     {
       "sid": "sid_bprue_GunAK74_Upgrade_Stock_4_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Refines the weapon's handling during reloads, reducing reload time by 25%."
+        "English": "Refines the weapon's handling during reloads, reducing reload time by 25%."
       }
     },
     {
       "sid": "sid_bprue_GunAK74_Upgrade_Body_3_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "5.56x45 mm Conversion"
+        "English": "5.56x45 mm Conversion"
       }
     },
     {
       "sid": "sid_bprue_GunAK74_Upgrade_Body_3_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Converts the weapon from 5.45x39 mm to 5.56x45 mm and enables compatible ammunition."
+        "English": "Converts the weapon from 5.45x39 mm to 5.56x45 mm and enables compatible ammunition."
       }
     },
     {
       "sid": "sid_effects_bprue_fire_rate_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Fire rate increase"
+        "English": "Fire rate increase"
       }
     },
     {
       "sid": "sid_effects_bprue_reload_speed_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reload speed"
+        "English": "Reload speed"
       }
     },
     {
       "sid": "sid_bprue_GunAK74_Upgrade_Body_4_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Three-Round Burst"
+        "English": "Three-Round Burst"
       }
     },
     {
       "sid": "sid_bprue_GunAK74_Upgrade_Body_4_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."
+        "English": "Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."
       }
     },
     {
       "sid": "sid_effects_bprue_fire_modes_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Three-round burst mode"
+        "English": "Three-round burst mode"
       }
     },
     {
       "sid": "sid_bprue_GunAK74_Upgrade_Caliber_545_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "5.45x39 mm Conversion"
+        "English": "5.45x39 mm Conversion"
       }
     },
     {
       "sid": "sid_bprue_GunAK74_Upgrade_Caliber_545_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Configures the weapon for 5.45x39 mm ammunition. Interchangeable with the other caliber conversions."
+        "English": "Configures the weapon for 5.45x39 mm ammunition. Interchangeable with the other caliber conversions."
       }
     },
     {
       "sid": "sid_bprue_GunAK74_Upgrade_Caliber_556_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "5.56x45 mm Conversion"
+        "English": "5.56x45 mm Conversion"
       }
     },
     {
       "sid": "sid_bprue_GunAK74_Upgrade_Caliber_556_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Configures the weapon for 5.56x45 mm ammunition. Interchangeable with the other caliber conversions."
+        "English": "Configures the weapon for 5.56x45 mm ammunition. Interchangeable with the other caliber conversions."
       }
     },
     {
       "sid": "sid_bprue_GunAK74_Upgrade_Caliber_762_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "7.62 mm Conversion (Test)"
+        "English": "7.62 mm Conversion (Test)"
       }
     },
     {
       "sid": "sid_bprue_GunAK74_Upgrade_Caliber_762_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Test conversion using the game's 7.62 sniper ammunition, intended only to verify standalone interchangeable caliber modules."
+        "English": "Test conversion using the game's 7.62 sniper ammunition, intended only to verify standalone interchangeable caliber modules."
       }
     },
     {
       "sid": "sid_bprue_GunAK74_Upgrade_FireRate_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Enhanced Gas System"
+        "English": "Enhanced Gas System"
       }
     },
     {
       "sid": "sid_bprue_GunAK74_Upgrade_FireRate_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tunes the weapon's operating system for a 10% shorter fire interval."
+        "English": "Tunes the weapon's operating system for a 10% shorter fire interval."
       }
     },
     {
       "sid": "sid_bprue_GunAK74_Upgrade_Reload_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Quick-Reload Mechanism"
+        "English": "Quick-Reload Mechanism"
       }
     },
     {
       "sid": "sid_bprue_GunAK74_Upgrade_Reload_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Refines magazine handling and feed geometry, reducing reload time by 15%."
+        "English": "Refines magazine handling and feed geometry, reducing reload time by 15%."
       }
     },
     {
       "sid": "sid_bprue_GunAK74_Upgrade_Burst_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Three-Round Burst"
+        "English": "Three-Round Burst"
       }
     },
     {
       "sid": "sid_bprue_GunAK74_Upgrade_Burst_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."
+        "English": "Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."
       }
     },
     {
       "sid": "sid_bprue_GunFora_Upgrade_FireRate_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Competition Gas Regulator"
+        "English": "Competition Gas Regulator"
       }
     },
     {
       "sid": "sid_bprue_GunFora_Upgrade_FireRate_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tunes the weapon's operating system for a 10% shorter fire interval."
+        "English": "Tunes the weapon's operating system for a 10% shorter fire interval."
       }
     },
     {
       "sid": "sid_bprue_GunFora_Upgrade_Reload_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Extended Magazine Well"
+        "English": "Extended Magazine Well"
       }
     },
     {
       "sid": "sid_bprue_GunFora_Upgrade_Reload_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Refines magazine handling and feed geometry, reducing reload time by 15%."
+        "English": "Refines magazine handling and feed geometry, reducing reload time by 15%."
       }
     },
     {
       "sid": "sid_bprue_GunFora_Upgrade_Caliber_545_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "5.45x39 mm Conversion"
+        "English": "5.45x39 mm Conversion"
       }
     },
     {
       "sid": "sid_bprue_GunFora_Upgrade_Caliber_545_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Configures the weapon for 5.45x39 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
+        "English": "Configures the weapon for 5.45x39 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
       }
     },
     {
       "sid": "sid_bprue_GunFora_Upgrade_Caliber_556_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "5.56x45 mm Conversion"
+        "English": "5.56x45 mm Conversion"
       }
     },
     {
       "sid": "sid_bprue_GunFora_Upgrade_Caliber_556_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Configures the weapon for 5.56x45 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
+        "English": "Configures the weapon for 5.56x45 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
       }
     },
     {
       "sid": "sid_bprue_GunFora_Upgrade_Burst_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Three-Round Burst"
+        "English": "Three-Round Burst"
       }
     },
     {
       "sid": "sid_bprue_GunFora_Upgrade_Burst_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."
+        "English": "Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."
       }
     },
     {
       "sid": "sid_bprue_GunG37_Upgrade_FireRate_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "High-Speed Bolt Carrier"
+        "English": "High-Speed Bolt Carrier"
       }
     },
     {
       "sid": "sid_bprue_GunG37_Upgrade_FireRate_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tunes the weapon's operating system for a 10% shorter fire interval."
+        "English": "Tunes the weapon's operating system for a 10% shorter fire interval."
       }
     },
     {
       "sid": "sid_bprue_GunG37_Upgrade_Reload_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Quick-Change Magazine Guide"
+        "English": "Quick-Change Magazine Guide"
       }
     },
     {
       "sid": "sid_bprue_GunG37_Upgrade_Reload_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Refines magazine handling and feed geometry, reducing reload time by 15%."
+        "English": "Refines magazine handling and feed geometry, reducing reload time by 15%."
       }
     },
     {
       "sid": "sid_bprue_GunG37_Upgrade_Caliber_556_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "5.56x45 mm Conversion"
+        "English": "5.56x45 mm Conversion"
       }
     },
     {
       "sid": "sid_bprue_GunG37_Upgrade_Caliber_556_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Configures the weapon for 5.56x45 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
+        "English": "Configures the weapon for 5.56x45 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
       }
     },
     {
       "sid": "sid_bprue_GunG37_Upgrade_Caliber_545_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "5.45x39 mm Conversion"
+        "English": "5.45x39 mm Conversion"
       }
     },
     {
       "sid": "sid_bprue_GunG37_Upgrade_Caliber_545_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Configures the weapon for 5.45x39 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
+        "English": "Configures the weapon for 5.45x39 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
       }
     },
     {
       "sid": "sid_bprue_GunGvintar_Upgrade_FireRate_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Refined Gas Regulator"
+        "English": "Refined Gas Regulator"
       }
     },
     {
       "sid": "sid_bprue_GunGvintar_Upgrade_FireRate_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tunes the weapon's operating system for a 10% shorter fire interval."
+        "English": "Tunes the weapon's operating system for a 10% shorter fire interval."
       }
     },
     {
       "sid": "sid_bprue_GunGvintar_Upgrade_Reload_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Polished Feed Ramp"
+        "English": "Polished Feed Ramp"
       }
     },
     {
       "sid": "sid_bprue_GunGvintar_Upgrade_Reload_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Refines magazine handling and feed geometry, reducing reload time by 15%."
+        "English": "Refines magazine handling and feed geometry, reducing reload time by 15%."
       }
     },
     {
       "sid": "sid_bprue_GunGvintar_Upgrade_Burst_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Three-Round Burst"
+        "English": "Three-Round Burst"
       }
     },
     {
       "sid": "sid_bprue_GunGvintar_Upgrade_Burst_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."
+        "English": "Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."
       }
     },
     {
       "sid": "sid_bprue_GunM16_Upgrade_FireRate_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Adjustable Gas Block"
+        "English": "Adjustable Gas Block"
       }
     },
     {
       "sid": "sid_bprue_GunM16_Upgrade_FireRate_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tunes the weapon's operating system for a 10% shorter fire interval."
+        "English": "Tunes the weapon's operating system for a 10% shorter fire interval."
       }
     },
     {
       "sid": "sid_bprue_GunM16_Upgrade_Reload_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Flared Magazine Well"
+        "English": "Flared Magazine Well"
       }
     },
     {
       "sid": "sid_bprue_GunM16_Upgrade_Reload_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Refines magazine handling and feed geometry, reducing reload time by 15%."
+        "English": "Refines magazine handling and feed geometry, reducing reload time by 15%."
       }
     },
     {
       "sid": "sid_bprue_GunM16_Upgrade_Caliber_556_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "5.56x45 mm Conversion"
+        "English": "5.56x45 mm Conversion"
       }
     },
     {
       "sid": "sid_bprue_GunM16_Upgrade_Caliber_556_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Configures the weapon for 5.56x45 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
+        "English": "Configures the weapon for 5.56x45 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
       }
     },
     {
       "sid": "sid_bprue_GunM16_Upgrade_Caliber_545_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "5.45x39 mm Conversion"
+        "English": "5.45x39 mm Conversion"
       }
     },
     {
       "sid": "sid_bprue_GunM16_Upgrade_Caliber_545_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Configures the weapon for 5.45x39 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
+        "English": "Configures the weapon for 5.45x39 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
       }
     },
     {
       "sid": "sid_bprue_GunM16_Upgrade_Burst_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Three-Round Burst"
+        "English": "Three-Round Burst"
       }
     },
     {
       "sid": "sid_bprue_GunM16_Upgrade_Burst_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."
+        "English": "Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."
       }
     },
     {
       "sid": "sid_bprue_GunGrim_Upgrade_FireRate_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reinforced Gas Piston"
+        "English": "Reinforced Gas Piston"
       }
     },
     {
       "sid": "sid_bprue_GunGrim_Upgrade_FireRate_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tunes the weapon's operating system for a 10% shorter fire interval."
+        "English": "Tunes the weapon's operating system for a 10% shorter fire interval."
       }
     },
     {
       "sid": "sid_bprue_GunGrim_Upgrade_Reload_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Enlarged Magazine Release"
+        "English": "Enlarged Magazine Release"
       }
     },
     {
       "sid": "sid_bprue_GunGrim_Upgrade_Reload_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Refines magazine handling and feed geometry, reducing reload time by 15%."
+        "English": "Refines magazine handling and feed geometry, reducing reload time by 15%."
       }
     },
     {
       "sid": "sid_bprue_GunGrim_Upgrade_Burst_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Three-Round Burst"
+        "English": "Three-Round Burst"
       }
     },
     {
       "sid": "sid_bprue_GunGrim_Upgrade_Burst_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."
+        "English": "Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."
       }
     },
     {
       "sid": "sid_bprue_GunLavina_Upgrade_FireRate_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tuned Gas System"
+        "English": "Tuned Gas System"
       }
     },
     {
       "sid": "sid_bprue_GunLavina_Upgrade_FireRate_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tunes the weapon's operating system for a 10% shorter fire interval."
+        "English": "Tunes the weapon's operating system for a 10% shorter fire interval."
       }
     },
     {
       "sid": "sid_bprue_GunLavina_Upgrade_Reload_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Improved Magazine Guide"
+        "English": "Improved Magazine Guide"
       }
     },
     {
       "sid": "sid_bprue_GunLavina_Upgrade_Reload_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Refines magazine handling and feed geometry, reducing reload time by 15%."
+        "English": "Refines magazine handling and feed geometry, reducing reload time by 15%."
       }
     },
     {
       "sid": "sid_bprue_GunLavina_Upgrade_Burst_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Three-Round Burst"
+        "English": "Three-Round Burst"
       }
     },
     {
       "sid": "sid_bprue_GunLavina_Upgrade_Burst_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."
+        "English": "Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."
       }
     },
     {
       "sid": "sid_bprue_GunDnipro_Upgrade_FireRate_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Balanced Bolt Carrier"
+        "English": "Balanced Bolt Carrier"
       }
     },
     {
       "sid": "sid_bprue_GunDnipro_Upgrade_FireRate_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tunes the weapon's operating system for a 10% shorter fire interval."
+        "English": "Tunes the weapon's operating system for a 10% shorter fire interval."
       }
     },
     {
       "sid": "sid_bprue_GunDnipro_Upgrade_Reload_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Quick-Change Magazine Housing"
+        "English": "Quick-Change Magazine Housing"
       }
     },
     {
       "sid": "sid_bprue_GunDnipro_Upgrade_Reload_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Refines magazine handling and feed geometry, reducing reload time by 15%."
+        "English": "Refines magazine handling and feed geometry, reducing reload time by 15%."
       }
     },
     {
       "sid": "sid_bprue_GunDnipro_Upgrade_Caliber_545_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "5.45x39 mm Conversion"
+        "English": "5.45x39 mm Conversion"
       }
     },
     {
       "sid": "sid_bprue_GunDnipro_Upgrade_Caliber_545_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Configures the weapon for 5.45x39 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
+        "English": "Configures the weapon for 5.45x39 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
       }
     },
     {
       "sid": "sid_bprue_GunDnipro_Upgrade_Caliber_556_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "5.56x45 mm Conversion"
+        "English": "5.56x45 mm Conversion"
       }
     },
     {
       "sid": "sid_bprue_GunDnipro_Upgrade_Caliber_556_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Configures the weapon for 5.56x45 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
+        "English": "Configures the weapon for 5.56x45 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
       }
     },
     {
       "sid": "sid_bprue_GunDnipro_Upgrade_Caliber_762_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "7.62 mm Sniper Conversion"
+        "English": "7.62 mm Sniper Conversion"
       }
     },
     {
       "sid": "sid_bprue_GunDnipro_Upgrade_Caliber_762_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Configures the weapon for 7.62 mm Sniper ammunition. Interchangeable with the other caliber conversions for this weapon. Uses the game's 7.62 sniper ammunition as the high-power conversion."
+        "English": "Configures the weapon for 7.62 mm Sniper ammunition. Interchangeable with the other caliber conversions for this weapon. Uses the game's 7.62 sniper ammunition as the high-power conversion."
       }
     },
     {
       "sid": "sid_bprue_GunDnipro_Upgrade_Burst_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Three-Round Burst"
+        "English": "Three-Round Burst"
       }
     },
     {
       "sid": "sid_bprue_GunDnipro_Upgrade_Burst_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."
+        "English": "Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."
       }
     },
     {
       "sid": "sid_bprue_GunKharod_Upgrade_FireRate_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "High-Speed Operating Group"
+        "English": "High-Speed Operating Group"
       }
     },
     {
       "sid": "sid_bprue_GunKharod_Upgrade_FireRate_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tunes the weapon's operating system for a 10% shorter fire interval."
+        "English": "Tunes the weapon's operating system for a 10% shorter fire interval."
       }
     },
     {
       "sid": "sid_bprue_GunKharod_Upgrade_Reload_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Ambidextrous Magazine Release"
+        "English": "Ambidextrous Magazine Release"
       }
     },
     {
       "sid": "sid_bprue_GunKharod_Upgrade_Reload_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Refines magazine handling and feed geometry, reducing reload time by 15%."
+        "English": "Refines magazine handling and feed geometry, reducing reload time by 15%."
       }
     },
     {
       "sid": "sid_bprue_GunKharod_Upgrade_Caliber_556_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "5.56x45 mm Conversion"
+        "English": "5.56x45 mm Conversion"
       }
     },
     {
       "sid": "sid_bprue_GunKharod_Upgrade_Caliber_556_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Configures the weapon for 5.56x45 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
+        "English": "Configures the weapon for 5.56x45 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
       }
     },
     {
       "sid": "sid_bprue_GunKharod_Upgrade_Caliber_545_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "5.45x39 mm Conversion"
+        "English": "5.45x39 mm Conversion"
       }
     },
     {
       "sid": "sid_bprue_GunKharod_Upgrade_Caliber_545_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Configures the weapon for 5.45x39 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
+        "English": "Configures the weapon for 5.45x39 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
       }
     },
     {
       "sid": "sid_bprue_GunKharod_Upgrade_Burst_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Three-Round Burst"
+        "English": "Three-Round Burst"
       }
     },
     {
       "sid": "sid_bprue_GunKharod_Upgrade_Burst_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."
+        "English": "Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."
       }
     },
     {
       "sid": "sid_bprue_GunArev_Upgrade_FireRate_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Advanced Gas Regulator"
+        "English": "Advanced Gas Regulator"
       }
     },
     {
       "sid": "sid_bprue_GunArev_Upgrade_FireRate_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tunes the weapon's operating system for a 10% shorter fire interval."
+        "English": "Tunes the weapon's operating system for a 10% shorter fire interval."
       }
     },
     {
       "sid": "sid_bprue_GunArev_Upgrade_Reload_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Competition Magazine Well"
+        "English": "Competition Magazine Well"
       }
     },
     {
       "sid": "sid_bprue_GunArev_Upgrade_Reload_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Refines magazine handling and feed geometry, reducing reload time by 15%."
+        "English": "Refines magazine handling and feed geometry, reducing reload time by 15%."
       }
     },
     {
       "sid": "sid_bprue_GunArev_Upgrade_Caliber_556_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "5.56x45 mm Conversion"
+        "English": "5.56x45 mm Conversion"
       }
     },
     {
       "sid": "sid_bprue_GunArev_Upgrade_Caliber_556_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Configures the weapon for 5.56x45 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
+        "English": "Configures the weapon for 5.56x45 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
       }
     },
     {
       "sid": "sid_bprue_GunArev_Upgrade_Caliber_545_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "5.45x39 mm Conversion"
+        "English": "5.45x39 mm Conversion"
       }
     },
     {
       "sid": "sid_bprue_GunArev_Upgrade_Caliber_545_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Configures the weapon for 5.45x39 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
+        "English": "Configures the weapon for 5.45x39 mm ammunition. Interchangeable with the other caliber conversions for this weapon."
       }
     },
     {
       "sid": "sid_bprue_GunArev_Upgrade_Burst_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Three-Round Burst"
+        "English": "Three-Round Burst"
       }
     },
     {
       "sid": "sid_bprue_GunArev_Upgrade_Burst_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."
+        "English": "Adds a three-round burst fire mode while retaining semi-automatic and automatic fire."
       }
     },
     {
       "sid": "sid_bprue_caliber_762_eastern_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "7.62 mm Power Conversion"
+        "English": "7.62 mm Power Conversion"
       }
     },
     {
       "sid": "sid_bprue_caliber_762_eastern_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Converts the weapon to the game's 7.62 mm sniper cartridge. Increases damage, recoil and weapon wear."
+        "English": "Converts the weapon to the game's 7.62 mm sniper cartridge. Increases damage, recoil and weapon wear."
       }
     },
     {
       "sid": "sid_bprue_caliber_762_nato_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "7.62x51 mm NATO Conversion"
+        "English": "7.62x51 mm NATO Conversion"
       }
     },
     {
       "sid": "sid_bprue_caliber_762_nato_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Converts the weapon to 7.62x51 mm NATO ammunition. Increases damage, recoil and weapon wear."
+        "English": "Converts the weapon to 7.62x51 mm NATO ammunition. Increases damage, recoil and weapon wear."
       }
     },
     {
       "sid": "sid_bprue_reload_competition_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Competition Reload System"
+        "English": "Competition Reload System"
       }
     },
     {
       "sid": "sid_bprue_reload_competition_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Optimizes magazine handling for 20% faster reloads, at the cost of 15% increased recoil."
+        "English": "Optimizes magazine handling for 20% faster reloads, at the cost of 15% increased recoil."
       }
     },
     {
       "sid": "sid_bprue_reload_reinforced_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reinforced Feed System"
+        "English": "Reinforced Feed System"
       }
     },
     {
       "sid": "sid_bprue_reload_reinforced_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A reinforced feed setup provides 10% faster reloads and reduces weapon wear by 20%, but slows the firing cycle by 5%."
+        "English": "A reinforced feed setup provides 10% faster reloads and reduces weapon wear by 20%, but slows the firing cycle by 5%."
       }
     },
     {
       "sid": "sid_bprue_fire_rate_high_speed_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "High-Speed Operating System",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Высокоскоростная автоматика"
+        "English": "High-Speed Operating System",
+        "Russian": "Высокоскоростная автоматика"
       }
     },
     {
       "sid": "sid_bprue_fire_rate_high_speed_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Pushes the action for 20% faster fire rate, but increases recoil by 15% and weapon wear by 20%. Choosing this fire-rate specialization is permanent.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Ускоряет работу автоматики, повышая темп стрельбы на 20%, но увеличивая отдачу на 15% и износ оружия на 20%. Выбор этой специализации темпа стрельбы является окончательным."
+        "English": "Pushes the action for 20% faster fire rate, but increases recoil by 15% and weapon wear by 20%. Choosing this fire-rate specialization is permanent.",
+        "Russian": "Ускоряет работу автоматики, повышая темп стрельбы на 20%, но увеличивая отдачу на 15% и износ оружия на 20%. Выбор этой специализации темпа стрельбы является окончательным."
       }
     },
     {
       "sid": "sid_bprue_fire_rate_balanced_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tuned Gas System",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Настроенная газовая система"
+        "English": "Tuned Gas System",
+        "Russian": "Настроенная газовая система"
       }
     },
     {
       "sid": "sid_bprue_fire_rate_balanced_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Provides 10% faster fire rate, 10% lower recoil and 20% faster recoil recovery, at the cost of 10% increased weapon wear. Choosing this fire-rate specialization is permanent.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Повышает темп стрельбы на 10%, снижает отдачу на 10% и ускоряет восстановление после отдачи на 20%, но увеличивает износ оружия на 10%. Выбор этой специализации темпа стрельбы является окончательным."
+        "English": "Provides 10% faster fire rate, 10% lower recoil and 20% faster recoil recovery, at the cost of 10% increased weapon wear. Choosing this fire-rate specialization is permanent.",
+        "Russian": "Повышает темп стрельбы на 10%, снижает отдачу на 10% и ускоряет восстановление после отдачи на 20%, но увеличивает износ оружия на 10%. Выбор этой специализации темпа стрельбы является окончательным."
       }
     },
     {
       "sid": "sid_bprue_fire_control_burst_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Burst Fire Control",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Механизм отсечки очереди"
+        "English": "Burst Fire Control",
+        "Russian": "Механизм отсечки очереди"
       }
     },
     {
       "sid": "sid_bprue_fire_control_burst_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Adds a three-round burst mode while retaining semi-automatic and automatic fire. Recoil is reduced by 5%, but weapon wear increases by 10%. Choosing this fire-control specialization is permanent.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Добавляет режим отсечки по три выстрела, сохраняя одиночный и автоматический огонь. Отдача снижается на 5%, но износ оружия увеличивается на 10%. Выбор этой специализации управления огнём является окончательным."
+        "English": "Adds a three-round burst mode while retaining semi-automatic and automatic fire. Recoil is reduced by 5%, but weapon wear increases by 10%. Choosing this fire-control specialization is permanent.",
+        "Russian": "Добавляет режим отсечки по три выстрела, сохраняя одиночный и автоматический огонь. Отдача снижается на 5%, но износ оружия увеличивается на 10%. Выбор этой специализации управления огнём является окончательным."
       }
     },
     {
       "sid": "sid_bprue_fire_control_precision_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Precision Fire Control",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Точный ударно-спусковой механизм"
+        "English": "Precision Fire Control",
+        "Russian": "Точный ударно-спусковой механизм"
       }
     },
     {
       "sid": "sid_bprue_fire_control_precision_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reconfigures the fire-control group for semi-automatic fire only, removing automatic and burst modes. In exchange, damage is increased by 10% and armor penetration by 15%, while weapon wear increases by 20%. Choosing this fire-control specialization is permanent.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Перенастраивает ударно-спусковой механизм только на одиночный огонь, отключая автоматический режим и отсечку очереди. Взамен урон увеличивается на 10%, бронепробиваемость — на 15%, а износ оружия — на 20%. Выбор этой специализации управления огнём является окончательным."
+        "English": "Reconfigures the fire-control group for semi-automatic fire only, removing automatic and burst modes. In exchange, damage is increased by 10% and armor penetration by 15%, while weapon wear increases by 20%. Choosing this fire-control specialization is permanent.",
+        "Russian": "Перенастраивает ударно-спусковой механизм только на одиночный огонь, отключая автоматический режим и отсечку очереди. Взамен урон увеличивается на 10%, бронепробиваемость — на 15%, а износ оружия — на 20%. Выбор этой специализации управления огнём является окончательным."
       }
     },
     {
       "sid": "sid_bprue_stock_lightweight_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Lightweight Stock",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Облегчённый приклад"
+        "English": "Lightweight Stock",
+        "Russian": "Облегчённый приклад"
       }
     },
     {
       "sid": "sid_bprue_stock_lightweight_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Optimizes the stock for fast handling: aiming is 15% faster and movement while aiming is 10% faster, at the cost of 15% increased recoil. Choosing this stock specialization is permanent.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Облегчает и ускоряет обращение с оружием: прицеливание ускоряется на 15%, а скорость движения при прицеливании — на 10%, но отдача увеличивается на 15%. Выбор этой специализации приклада является окончательным."
+        "English": "Optimizes the stock for fast handling: aiming is 15% faster and movement while aiming is 10% faster, at the cost of 15% increased recoil. Choosing this stock specialization is permanent.",
+        "Russian": "Облегчает и ускоряет обращение с оружием: прицеливание ускоряется на 15%, а скорость движения при прицеливании — на 10%, но отдача увеличивается на 15%. Выбор этой специализации приклада является окончательным."
       }
     },
     {
       "sid": "sid_bprue_stock_stabilized_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Stabilized Stock",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Стабилизированный приклад"
+        "English": "Stabilized Stock",
+        "Russian": "Стабилизированный приклад"
       }
     },
     {
       "sid": "sid_bprue_stock_stabilized_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Improves firing control with 15% lower recoil and 20% faster recoil recovery, but aiming is 10% slower. Choosing this stock specialization is permanent.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Улучшает контроль при стрельбе: отдача снижается на 15%, восстановление после отдачи ускоряется на 20%, но прицеливание становится на 10% медленнее. Выбор этой специализации приклада является окончательным."
+        "English": "Improves firing control with 15% lower recoil and 20% faster recoil recovery, but aiming is 10% slower. Choosing this stock specialization is permanent.",
+        "Russian": "Улучшает контроль при стрельбе: отдача снижается на 15%, восстановление после отдачи ускоряется на 20%, но прицеливание становится на 10% медленнее. Выбор этой специализации приклада является окончательным."
       }
     },
     {
       "sid": "sid_bprue_stock_marksman_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Marksman Stock",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Снайперский приклад"
+        "English": "Marksman Stock",
+        "Russian": "Снайперский приклад"
       }
     },
     {
       "sid": "sid_bprue_stock_marksman_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Provides a steadier precision stance with 20% less horizontal and vertical idle sway and 15% lower maximum dispersion, but aiming is 15% slower. Choosing this stock specialization is permanent.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Обеспечивает более устойчивое прицеливание: горизонтальное и вертикальное покачивание снижается на 20%, а максимальный разброс — на 15%, но прицеливание становится на 15% медленнее. Выбор этой специализации приклада является окончательным."
+        "English": "Provides a steadier precision stance with 20% less horizontal and vertical idle sway and 15% lower maximum dispersion, but aiming is 15% slower. Choosing this stock specialization is permanent.",
+        "Russian": "Обеспечивает более устойчивое прицеливание: горизонтальное и вертикальное покачивание снижается на 20%, а максимальный разброс — на 15%, но прицеливание становится на 15% медленнее. Выбор этой специализации приклада является окончательным."
       }
     },
     {
       "sid": "sid_bprue_viper_pistol_conversion_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Compact Weapon Conversion",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Компактная конверсия оружия"
+        "English": "Compact Weapon Conversion",
+        "Russian": "Компактная конверсия оружия"
       }
     },
     {
       "sid": "sid_bprue_viper_pistol_conversion_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "To make the Viper compact conversion possible, much of the original weapon has to go — including its installed upgrades. The conversion replaces the old gun with a new compact Viper that can be carried in the pistol slot. Say goodbye to the old one, and hello to the new.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Чтобы выполнить компактную переделку Viper, от исходного оружия придётся отказаться от многого — включая установленные улучшения. Переделка заменяет старое оружие новой компактной версией Viper, которую можно носить в слоте пистолета. Попрощайтесь со старой пушкой и познакомьтесь с новой."
+        "English": "To make the Viper compact conversion possible, much of the original weapon has to go — including its installed upgrades. The conversion replaces the old gun with a new compact Viper that can be carried in the pistol slot. Say goodbye to the old one, and hello to the new.",
+        "Russian": "Чтобы выполнить компактную переделку Viper, от исходного оружия придётся отказаться от многого — включая установленные улучшения. Переделка заменяет старое оружие новой компактной версией Viper, которую можно носить в слоте пистолета. Попрощайтесь со старой пушкой и познакомьтесь с новой."
       }
     },
     {
       "sid": "sid_bprue_smg_pistol_conversion_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Compact Weapon Conversion",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Компактная конверсия оружия"
+        "English": "Compact Weapon Conversion",
+        "Russian": "Компактная конверсия оружия"
       }
     },
     {
       "sid": "sid_bprue_smg_pistol_conversion_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "To make this compact conversion possible, much of the original weapon has to go — including its installed upgrades. The conversion replaces the old gun with a new compact version that can be carried in the pistol slot. Say goodbye to the old one, and hello to the new.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Чтобы выполнить эту компактную переделку, от исходного оружия придётся отказаться от многого — включая установленные улучшения. Переделка заменяет старое оружие новой компактной версией, которую можно носить в слоте пистолета. Попрощайтесь со старой пушкой и познакомьтесь с новой."
+        "English": "To make this compact conversion possible, much of the original weapon has to go — including its installed upgrades. The conversion replaces the old gun with a new compact version that can be carried in the pistol slot. Say goodbye to the old one, and hello to the new.",
+        "Russian": "Чтобы выполнить эту компактную переделку, от исходного оружия придётся отказаться от многого — включая установленные улучшения. Переделка заменяет старое оружие новой компактной версией, которую можно носить в слоте пистолета. Попрощайтесь со старой пушкой и познакомьтесь с новой."
       }
     },
     {
       "sid": "sid_bprue_smg_quick_draw_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Quick-Draw Setup",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Компоновка быстрого извлечения"
+        "English": "Quick-Draw Setup",
+        "Russian": "Компоновка быстрого извлечения"
       }
     },
     {
       "sid": "sid_bprue_smg_quick_draw_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Optimizes the SMG for immediate close-range readiness: aiming is 15% faster and movement while aiming improves by 10%, but reloads take 10% longer. Choosing this readiness specialization is permanent.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Оптимизирует пистолет-пулемёт для мгновенной готовности в ближнем бою: прицеливание ускоряется на 15%, скорость движения при прицеливании повышается на 10%, но перезарядка занимает на 10% больше времени. Выбор этой специализации готовности является окончательным."
+        "English": "Optimizes the SMG for immediate close-range readiness: aiming is 15% faster and movement while aiming improves by 10%, but reloads take 10% longer. Choosing this readiness specialization is permanent.",
+        "Russian": "Оптимизирует пистолет-пулемёт для мгновенной готовности в ближнем бою: прицеливание ускоряется на 15%, скорость движения при прицеливании повышается на 10%, но перезарядка занимает на 10% больше времени. Выбор этой специализации готовности является окончательным."
       }
     },
     {
       "sid": "sid_bprue_smg_stabilized_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Stabilized Setup",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Стабилизированная компоновка"
+        "English": "Stabilized Setup",
+        "Russian": "Стабилизированная компоновка"
       }
     },
     {
       "sid": "sid_bprue_smg_stabilized_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Prioritizes firing stability with 15% lower recoil and 20% faster recoil recovery, but aiming is 10% slower. Choosing this readiness specialization is permanent.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Повышает устойчивость при стрельбе: отдача снижается на 15%, восстановление после отдачи ускоряется на 20%, но прицеливание становится на 10% медленнее. Выбор этой специализации готовности является окончательным."
+        "English": "Prioritizes firing stability with 15% lower recoil and 20% faster recoil recovery, but aiming is 10% slower. Choosing this readiness specialization is permanent.",
+        "Russian": "Повышает устойчивость при стрельбе: отдача снижается на 15%, восстановление после отдачи ускоряется на 20%, но прицеливание становится на 10% медленнее. Выбор этой специализации готовности является окончательным."
       }
     },
     {
       "sid": "sid_bprue_smg_competition_reload_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Competition Reload",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Спортивная перезарядка"
+        "English": "Competition Reload",
+        "Russian": "Спортивная перезарядка"
       }
     },
     {
       "sid": "sid_bprue_smg_competition_reload_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Maximizes magazine-change speed for 20% faster reloads, but the optimized setup makes aiming 10% slower. Choosing this reload specialization is permanent.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Максимально ускоряет смену магазина: перезарядка становится на 20% быстрее, но оптимизированная компоновка замедляет прицеливание на 10%. Выбор этой специализации перезарядки является окончательным."
+        "English": "Maximizes magazine-change speed for 20% faster reloads, but the optimized setup makes aiming 10% slower. Choosing this reload specialization is permanent.",
+        "Russian": "Максимально ускоряет смену магазина: перезарядка становится на 20% быстрее, но оптимизированная компоновка замедляет прицеливание на 10%. Выбор этой специализации перезарядки является окончательным."
       }
     },
     {
       "sid": "sid_bprue_smg_tactical_reload_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tactical Reload Setup",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Тактическая система перезарядки"
+        "English": "Tactical Reload Setup",
+        "Russian": "Тактическая система перезарядки"
       }
     },
     {
       "sid": "sid_bprue_smg_tactical_reload_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Balances reload speed and weapon handling: reloads are 10% faster and aiming is 15% faster, at the cost of 10% increased weapon wear per shot. Choosing this reload specialization is permanent.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Сочетает скорость перезарядки и удобство обращения: перезарядка ускоряется на 10%, прицеливание — на 15%, но износ оружия за выстрел увеличивается на 10%. Выбор этой специализации перезарядки является окончательным."
+        "English": "Balances reload speed and weapon handling: reloads are 10% faster and aiming is 15% faster, at the cost of 10% increased weapon wear per shot. Choosing this reload specialization is permanent.",
+        "Russian": "Сочетает скорость перезарядки и удобство обращения: перезарядка ускоряется на 10%, прицеливание — на 15%, но износ оружия за выстрел увеличивается на 10%. Выбор этой специализации перезарядки является окончательным."
       }
     },
     {
       "sid": "sid_bprue_smg_high_speed_action_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "High-Speed Action",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Высокоскоростная автоматика"
+        "English": "High-Speed Action",
+        "Russian": "Высокоскоростная автоматика"
       }
     },
     {
       "sid": "sid_bprue_smg_high_speed_action_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tunes the action for a 20% shorter firing cycle. The aggressive setup increases recoil by 15%, weapon wear by 20%, and reload time by 10%. Choosing this action specialization is permanent.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Настраивает автоматику на цикл стрельбы короче на 20%. Агрессивная настройка увеличивает отдачу на 15%, износ оружия на 20% и время перезарядки на 10%. Выбор этой специализации автоматики является окончательным."
+        "English": "Tunes the action for a 20% shorter firing cycle. The aggressive setup increases recoil by 15%, weapon wear by 20%, and reload time by 10%. Choosing this action specialization is permanent.",
+        "Russian": "Настраивает автоматику на цикл стрельбы короче на 20%. Агрессивная настройка увеличивает отдачу на 15%, износ оружия на 20% и время перезарядки на 10%. Выбор этой специализации автоматики является окончательным."
       }
     },
     {
       "sid": "sid_bprue_smg_controlled_action_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Controlled Action",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Контролируемая автоматика"
+        "English": "Controlled Action",
+        "Russian": "Контролируемая автоматика"
       }
     },
     {
       "sid": "sid_bprue_smg_controlled_action_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Lengthens the firing cycle by 5% in exchange for 15% lower recoil, 20% faster recoil recovery and 10% faster reloads. Choosing this action specialization is permanent.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Удлиняет цикл стрельбы на 5%, взамен снижая отдачу на 15%, ускоряя восстановление после отдачи на 20% и перезарядку на 10%. Выбор этой специализации автоматики является окончательным."
+        "English": "Lengthens the firing cycle by 5% in exchange for 15% lower recoil, 20% faster recoil recovery and 10% faster reloads. Choosing this action specialization is permanent.",
+        "Russian": "Удлиняет цикл стрельбы на 5%, взамен снижая отдачу на 15%, ускоряя восстановление после отдачи на 20% и перезарядку на 10%. Выбор этой специализации автоматики является окончательным."
       }
     },
     {
       "sid": "sid_effects_bprue_semi_auto_only_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Semi-automatic fire only",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Только одиночный огонь"
+        "English": "Semi-automatic fire only",
+        "Russian": "Только одиночный огонь"
       }
     },
     {
       "sid": "sid_bprue_smg_caliber_a918_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "9x18 mm Conversion",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Конверсия под 9x18 мм"
+        "English": "9x18 mm Conversion",
+        "Russian": "Конверсия под 9x18 мм"
       }
     },
     {
       "sid": "sid_bprue_smg_caliber_a918_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Permanently converts the weapon to 9x18 mm ammunition and replaces its compatible ammunition set. This caliber specialization cannot be combined with another caliber conversion.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Навсегда переводит оружие на боеприпасы 9x18 мм и заменяет набор совместимых боеприпасов. Эту специализацию калибра нельзя совместить с другой конверсией калибра."
+        "English": "Permanently converts the weapon to 9x18 mm ammunition and replaces its compatible ammunition set. This caliber specialization cannot be combined with another caliber conversion.",
+        "Russian": "Навсегда переводит оружие на боеприпасы 9x18 мм и заменяет набор совместимых боеприпасов. Эту специализацию калибра нельзя совместить с другой конверсией калибра."
       }
     },
     {
       "sid": "sid_bprue_smg_caliber_a919_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "9x19 mm Conversion",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Конверсия под 9x19 мм"
+        "English": "9x19 mm Conversion",
+        "Russian": "Конверсия под 9x19 мм"
       }
     },
     {
       "sid": "sid_bprue_smg_caliber_a919_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Permanently converts the weapon to 9x19 mm ammunition and replaces its compatible ammunition set. This caliber specialization cannot be combined with another caliber conversion.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Навсегда переводит оружие на боеприпасы 9x19 мм и заменяет набор совместимых боеприпасов. Эту специализацию калибра нельзя совместить с другой конверсией калибра."
+        "English": "Permanently converts the weapon to 9x19 mm ammunition and replaces its compatible ammunition set. This caliber specialization cannot be combined with another caliber conversion.",
+        "Russian": "Навсегда переводит оружие на боеприпасы 9x19 мм и заменяет набор совместимых боеприпасов. Эту специализацию калибра нельзя совместить с другой конверсией калибра."
       }
     },
     {
       "sid": "sid_bprue_smg_caliber_a045_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": ".45 ACP Conversion",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Конверсия под .45 ACP"
+        "English": ".45 ACP Conversion",
+        "Russian": "Конверсия под .45 ACP"
       }
     },
     {
       "sid": "sid_bprue_smg_caliber_a045_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Permanently converts the weapon to .45 ACP ammunition and replaces its compatible ammunition set. This caliber specialization cannot be combined with another caliber conversion.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Навсегда переводит оружие на боеприпасы .45 ACP и заменяет набор совместимых боеприпасов. Эту специализацию калибра нельзя совместить с другой конверсией калибра."
+        "English": "Permanently converts the weapon to .45 ACP ammunition and replaces its compatible ammunition set. This caliber specialization cannot be combined with another caliber conversion.",
+        "Russian": "Навсегда переводит оружие на боеприпасы .45 ACP и заменяет набор совместимых боеприпасов. Эту специализацию калибра нельзя совместить с другой конверсией калибра."
       }
     },
     {
       "sid": "sid_effects_bprue_recoil_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Recoil",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Отдача"
+        "English": "Recoil",
+        "Russian": "Отдача"
       }
     },
     {
       "sid": "sid_effects_bprue_aiming_speed_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Aiming speed",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Скорость прицеливания"
+        "English": "Aiming speed",
+        "Russian": "Скорость прицеливания"
       }
     },
     {
       "sid": "sid_effects_bprue_weight_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Weapon weight",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Вес оружия"
+        "English": "Weapon weight",
+        "Russian": "Вес оружия"
       }
     },
     {
       "sid": "sid_effects_bprue_accuracy_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Accuracy",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Точность"
+        "English": "Accuracy",
+        "Russian": "Точность"
       }
     },
     {
       "sid": "sid_effects_bprue_recoil_recovery_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Recoil recovery",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Восстановление после отдачи"
+        "English": "Recoil recovery",
+        "Russian": "Восстановление после отдачи"
       }
     },
     {
       "sid": "sid_effects_bprue_aiming_stability_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Aiming stability",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Стабильность прицеливания"
+        "English": "Aiming stability",
+        "Russian": "Стабильность прицеливания"
       }
     },
     {
       "sid": "sid_effects_bprue_weapon_wear_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Weapon wear",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Износ оружия"
+        "English": "Weapon wear",
+        "Russian": "Износ оружия"
       }
     },
     {
       "sid": "sid_effects_bprue_pellet_count_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Pellet count",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Количество дробин"
+        "English": "Pellet count",
+        "Russian": "Количество дробин"
       }
     },
     {
       "sid": "sid_effects_bprue_effective_range_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Effective range",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Эффективная дальность"
+        "English": "Effective range",
+        "Russian": "Эффективная дальность"
       }
     },
     {
       "sid": "sid_effects_bprue_damage_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Damage",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Урон"
+        "English": "Damage",
+        "Russian": "Урон"
       }
     },
     {
       "sid": "sid_bprue_pistol_high_speed_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "High-Speed Action",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Высокоскоростная автоматика"
+        "English": "High-Speed Action",
+        "Russian": "Высокоскоростная автоматика"
       }
     },
     {
       "sid": "sid_bprue_pistol_high_speed_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Speeds up the firing cycle for rapid follow-up shots, at the cost of increased recoil and weapon wear.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Ускоряет цикл стрельбы для быстрых повторных выстрелов ценой повышенной отдачи и износа оружия."
+        "English": "Speeds up the firing cycle for rapid follow-up shots, at the cost of increased recoil and weapon wear.",
+        "Russian": "Ускоряет цикл стрельбы для быстрых повторных выстрелов ценой повышенной отдачи и износа оружия."
       }
     },
     {
       "sid": "sid_bprue_pistol_balanced_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Balanced Action",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Сбалансированная автоматика"
+        "English": "Balanced Action",
+        "Russian": "Сбалансированная автоматика"
       }
     },
     {
       "sid": "sid_bprue_pistol_balanced_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Balances a faster firing cycle with improved recoil control and recovery, while moderately increasing weapon wear.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Сочетает ускоренный цикл стрельбы с улучшенным контролем и восстановлением отдачи, умеренно повышая износ оружия."
+        "English": "Balances a faster firing cycle with improved recoil control and recovery, while moderately increasing weapon wear.",
+        "Russian": "Сочетает ускоренный цикл стрельбы с улучшенным контролем и восстановлением отдачи, умеренно повышая износ оружия."
       }
     },
     {
       "sid": "sid_bprue_pistol_controlled_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Controlled Action",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Контролируемая автоматика"
+        "English": "Controlled Action",
+        "Russian": "Контролируемая автоматика"
       }
     },
     {
       "sid": "sid_bprue_pistol_controlled_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Slows the firing cycle slightly in exchange for lower recoil and faster recoil recovery.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Немного замедляет цикл стрельбы в обмен на меньшую отдачу и более быстрое восстановление после неё."
+        "English": "Slows the firing cycle slightly in exchange for lower recoil and faster recoil recovery.",
+        "Russian": "Немного замедляет цикл стрельбы в обмен на меньшую отдачу и более быстрое восстановление после неё."
       }
     },
     {
       "sid": "sid_bprue_pistol_quick_draw_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Quick-Draw Setup",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Компоновка быстрого извлечения"
+        "English": "Quick-Draw Setup",
+        "Russian": "Компоновка быстрого извлечения"
       }
     },
     {
       "sid": "sid_bprue_pistol_quick_draw_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reduces weapon weight and speeds up aiming for faster handling, at the cost of increased recoil.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Снижает вес оружия и ускоряет прицеливание для более быстрого обращения ценой повышенной отдачи."
+        "English": "Reduces weapon weight and speeds up aiming for faster handling, at the cost of increased recoil.",
+        "Russian": "Снижает вес оружия и ускоряет прицеливание для более быстрого обращения ценой повышенной отдачи."
       }
     },
     {
       "sid": "sid_bprue_pistol_tactical_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tactical Handling",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Тактическая эргономика"
+        "English": "Tactical Handling",
+        "Russian": "Тактическая эргономика"
       }
     },
     {
       "sid": "sid_bprue_pistol_tactical_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Improves aiming speed, movement while aiming and recoil recovery for responsive combat handling.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Улучшает скорость прицеливания, движение при прицеливании и восстановление после отдачи для более отзывчивого обращения."
+        "English": "Improves aiming speed, movement while aiming and recoil recovery for responsive combat handling.",
+        "Russian": "Улучшает скорость прицеливания, движение при прицеливании и восстановление после отдачи для более отзывчивого обращения."
       }
     },
     {
       "sid": "sid_bprue_pistol_stabilized_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Stabilized Handling",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Стабилизированная эргономика"
+        "English": "Stabilized Handling",
+        "Russian": "Стабилизированная эргономика"
       }
     },
     {
       "sid": "sid_bprue_pistol_stabilized_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Improves recoil control and recovery at the cost of slower aiming.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Улучшает контроль и восстановление отдачи ценой более медленного прицеливания."
+        "English": "Improves recoil control and recovery at the cost of slower aiming.",
+        "Russian": "Улучшает контроль и восстановление отдачи ценой более медленного прицеливания."
       }
     },
     {
       "sid": "sid_bprue_pistol_quick_response_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Quick-Response Package",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Комплект быстрого реагирования"
+        "English": "Quick-Response Package",
+        "Russian": "Комплект быстрого реагирования"
       }
     },
     {
       "sid": "sid_bprue_pistol_quick_response_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A lightweight emergency-sidearm package with faster aiming and reloads, trading stability and durability for speed.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Облегчённый комплект для запасного оружия с быстрым прицеливанием и перезарядкой, жертвующий стабильностью и долговечностью ради скорости."
+        "English": "A lightweight emergency-sidearm package with faster aiming and reloads, trading stability and durability for speed.",
+        "Russian": "Облегчённый комплект для запасного оружия с быстрым прицеливанием и перезарядкой, жертвующий стабильностью и долговечностью ради скорости."
       }
     },
     {
       "sid": "sid_bprue_pistol_match_barrel_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Match Barrel Assembly",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Матчевый ствол"
+        "English": "Match Barrel Assembly",
+        "Russian": "Матчевый ствол"
       }
     },
     {
       "sid": "sid_bprue_pistol_match_barrel_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A precision barrel package with tighter dispersion, improved effective range and higher projectile velocity, at the cost of slower aiming.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Высокоточный ствол с меньшим разбросом, увеличенной эффективной дальностью и скоростью пули ценой более медленного прицеливания."
+        "English": "A precision barrel package with tighter dispersion, improved effective range and higher projectile velocity, at the cost of slower aiming.",
+        "Russian": "Высокоточный ствол с меньшим разбросом, увеличенной эффективной дальностью и скоростью пули ценой более медленного прицеливания."
       }
     },
     {
       "sid": "sid_bprue_pistol_automatic_sear_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Automatic Sear",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Автоматический шептало"
+        "English": "Automatic Sear",
+        "Russian": "Автоматический шептало"
       }
     },
     {
       "sid": "sid_bprue_pistol_automatic_sear_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Adds automatic fire to the pistol's fire-control system, at the cost of increased recoil and weapon wear.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Добавляет автоматический огонь в ударно-спусковой механизм пистолета ценой повышенной отдачи и износа оружия."
+        "English": "Adds automatic fire to the pistol's fire-control system, at the cost of increased recoil and weapon wear.",
+        "Russian": "Добавляет автоматический огонь в ударно-спусковой механизм пистолета ценой повышенной отдачи и износа оружия."
       }
     },
     {
       "sid": "sid_bprue_pistol_hunting_cylinder_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Hunting Cylinder",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Охотничий барабан"
+        "English": "Hunting Cylinder",
+        "Russian": "Охотничий барабан"
       }
     },
     {
       "sid": "sid_bprue_pistol_hunting_cylinder_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A heavy hunting setup with improved armor penetration and projectile velocity, at the cost of a slower firing cycle.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Тяжёлая охотничья конфигурация с повышенным бронепробитием и скоростью пули ценой более медленного цикла стрельбы."
+        "English": "A heavy hunting setup with improved armor penetration and projectile velocity, at the cost of a slower firing cycle.",
+        "Russian": "Тяжёлая охотничья конфигурация с повышенным бронепробитием и скоростью пули ценой более медленного цикла стрельбы."
       }
     },
     {
       "sid": "sid_bprue_pistol_selectable_fire_control_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Selectable Fire Control",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Переключаемый режим огня"
+        "English": "Selectable Fire Control",
+        "Russian": "Переключаемый режим огня"
       }
     },
     {
       "sid": "sid_bprue_pistol_selectable_fire_control_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Adds a selectable semi-automatic mode while retaining the weapon's native automatic fire and improving recoil control.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Добавляет выбираемый одиночный режим, сохраняя штатный автоматический огонь и улучшая контроль отдачи."
+        "English": "Adds a selectable semi-automatic mode while retaining the weapon's native automatic fire and improving recoil control.",
+        "Russian": "Добавляет выбираемый одиночный режим, сохраняя штатный автоматический огонь и улучшая контроль отдачи."
       }
     },
     {
       "sid": "sid_bprue_sg_pattern_breacher_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Breacher Pattern",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Штурмовая осыпь"
+        "English": "Breacher Pattern",
+        "Russian": "Штурмовая осыпь"
       }
     },
     {
       "sid": "sid_bprue_sg_pattern_breacher_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Optimizes the shotgun for close-range breaching with a wider, aggressive shot pattern.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Оптимизирует дробовик для ближнего штурма с более широкой и агрессивной осыпью."
+        "English": "Optimizes the shotgun for close-range breaching with a wider, aggressive shot pattern.",
+        "Russian": "Оптимизирует дробовик для ближнего штурма с более широкой и агрессивной осыпью."
       }
     },
     {
       "sid": "sid_bprue_sg_pattern_field_choke_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Field Choke",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Полевой чок"
+        "English": "Field Choke",
+        "Russian": "Полевой чок"
       }
     },
     {
       "sid": "sid_bprue_sg_pattern_field_choke_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Balances shot spread and practical range for versatile field use.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Балансирует разброс дроби и практическую дальность для универсального применения."
+        "English": "Balances shot spread and practical range for versatile field use.",
+        "Russian": "Балансирует разброс дроби и практическую дальность для универсального применения."
       }
     },
     {
       "sid": "sid_bprue_sg_pattern_full_choke_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Full Choke",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Полный чок"
+        "English": "Full Choke",
+        "Russian": "Полный чок"
       }
     },
     {
       "sid": "sid_bprue_sg_pattern_full_choke_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tightens the shot pattern for greater precision and effective range.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Сужает осыпь дроби для большей точности и эффективной дальности."
+        "English": "Tightens the shot pattern for greater precision and effective range.",
+        "Russian": "Сужает осыпь дроби для большей точности и эффективной дальности."
       }
     },
     {
       "sid": "sid_bprue_sg_action_high_speed_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "High-Speed Action",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Высокоскоростная автоматика"
+        "English": "High-Speed Action",
+        "Russian": "Высокоскоростная автоматика"
       }
     },
     {
       "sid": "sid_bprue_sg_action_high_speed_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tunes the action for faster follow-up shots, sacrificing recoil control and durability for speed.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Настраивает механизм для более быстрых повторных выстрелов, жертвуя контролем отдачи и долговечностью ради скорости."
+        "English": "Tunes the action for faster follow-up shots, sacrificing recoil control and durability for speed.",
+        "Russian": "Настраивает механизм для более быстрых повторных выстрелов, жертвуя контролем отдачи и долговечностью ради скорости."
       }
     },
     {
       "sid": "sid_bprue_sg_action_tuned_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tuned Action",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Настроенная автоматика"
+        "English": "Tuned Action",
+        "Russian": "Настроенная автоматика"
       }
     },
     {
       "sid": "sid_bprue_sg_action_tuned_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A balanced action tune combining faster cycling with improved control.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Сбалансированная настройка механизма, сочетающая более быстрый цикл с улучшенным контролем."
+        "English": "A balanced action tune combining faster cycling with improved control.",
+        "Russian": "Сбалансированная настройка механизма, сочетающая более быстрый цикл с улучшенным контролем."
       }
     },
     {
       "sid": "sid_bprue_sg_action_reinforced_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reinforced Action",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Усиленная автоматика"
+        "English": "Reinforced Action",
+        "Russian": "Усиленная автоматика"
       }
     },
     {
       "sid": "sid_bprue_sg_action_reinforced_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reinforces the action for reliability and control, accepting a slower firing cycle.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Усиливает механизм ради надёжности и контроля ценой более медленного цикла стрельбы."
+        "English": "Reinforces the action for reliability and control, accepting a slower firing cycle.",
+        "Russian": "Усиливает механизм ради надёжности и контроля ценой более медленного цикла стрельбы."
       }
     },
     {
       "sid": "sid_bprue_sg_handling_lightweight_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Lightweight Furniture",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Облегчённая фурнитура"
+        "English": "Lightweight Furniture",
+        "Russian": "Облегчённая фурнитура"
       }
     },
     {
       "sid": "sid_bprue_sg_handling_lightweight_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reduces weight and improves handling speed, at the cost of increased recoil.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Снижает вес и ускоряет обращение с оружием ценой повышенной отдачи."
+        "English": "Reduces weight and improves handling speed, at the cost of increased recoil.",
+        "Russian": "Снижает вес и ускоряет обращение с оружием ценой повышенной отдачи."
       }
     },
     {
       "sid": "sid_bprue_sg_handling_combat_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Combat Furniture",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Боевая фурнитура"
+        "English": "Combat Furniture",
+        "Russian": "Боевая фурнитура"
       }
     },
     {
       "sid": "sid_bprue_sg_handling_combat_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A practical combat setup balancing aiming, movement and recoil recovery.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Практичная боевая компоновка, балансирующая прицеливание, движение и восстановление после отдачи."
+        "English": "A practical combat setup balancing aiming, movement and recoil recovery.",
+        "Russian": "Практичная боевая компоновка, балансирующая прицеливание, движение и восстановление после отдачи."
       }
     },
     {
       "sid": "sid_bprue_sg_handling_stabilized_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Stabilized Furniture",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Стабилизированная фурнитура"
+        "English": "Stabilized Furniture",
+        "Russian": "Стабилизированная фурнитура"
       }
     },
     {
       "sid": "sid_bprue_sg_handling_stabilized_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Prioritizes stability and recoil control over fast handling.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Отдаёт приоритет стабильности и контролю отдачи перед скоростью обращения."
+        "English": "Prioritizes stability and recoil control over fast handling.",
+        "Russian": "Отдаёт приоритет стабильности и контролю отдачи перед скоростью обращения."
       }
     },
     {
       "sid": "sid_bprue_sniper_high_velocity_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "High-Velocity Ballistics",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Высокоскоростная баллистика"
+        "English": "High-Velocity Ballistics",
+        "Russian": "Высокоскоростная баллистика"
       }
     },
     {
       "sid": "sid_bprue_sniper_high_velocity_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Optimizes projectile velocity and long-range performance for flatter, faster shots.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Оптимизирует скорость пули и дальнобойность для более настильной и быстрой стрельбы."
+        "English": "Optimizes projectile velocity and long-range performance for flatter, faster shots.",
+        "Russian": "Оптимизирует скорость пули и дальнобойность для более настильной и быстрой стрельбы."
       }
     },
     {
       "sid": "sid_bprue_sniper_match_barrel_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Match Barrel",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Матчевый ствол"
+        "English": "Match Barrel",
+        "Russian": "Матчевый ствол"
       }
     },
     {
       "sid": "sid_bprue_sniper_match_barrel_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A precision barrel tuned for tighter dispersion and consistent long-range accuracy.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Высокоточный ствол, настроенный на меньший разброс и стабильную точность на дальней дистанции."
+        "English": "A precision barrel tuned for tighter dispersion and consistent long-range accuracy.",
+        "Russian": "Высокоточный ствол, настроенный на меньший разброс и стабильную точность на дальней дистанции."
       }
     },
     {
       "sid": "sid_bprue_sniper_heavy_barrel_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Heavy Barrel",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Тяжёлый ствол"
+        "English": "Heavy Barrel",
+        "Russian": "Тяжёлый ствол"
       }
     },
     {
       "sid": "sid_bprue_sniper_heavy_barrel_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A heavy-profile barrel prioritizing stability and sustained precision at the cost of handling speed.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Тяжёлый ствол, повышающий стабильность и устойчивую точность ценой скорости обращения."
+        "English": "A heavy-profile barrel prioritizing stability and sustained precision at the cost of handling speed.",
+        "Russian": "Тяжёлый ствол, повышающий стабильность и устойчивую точность ценой скорости обращения."
       }
     },
     {
       "sid": "sid_bprue_sniper_rapid_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Rapid Action",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Скоростная автоматика"
+        "English": "Rapid Action",
+        "Russian": "Скоростная автоматика"
       }
     },
     {
       "sid": "sid_bprue_sniper_rapid_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Speeds up the firing cycle for rapid follow-up shots, trading some control and durability for rate of fire.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Ускоряет цикл стрельбы для быстрых повторных выстрелов, жертвуя частью контроля и долговечности ради темпа огня."
+        "English": "Speeds up the firing cycle for rapid follow-up shots, trading some control and durability for rate of fire.",
+        "Russian": "Ускоряет цикл стрельбы для быстрых повторных выстрелов, жертвуя частью контроля и долговечности ради темпа огня."
       }
     },
     {
       "sid": "sid_bprue_sniper_precision_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Precision Action",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Точная автоматика"
+        "English": "Precision Action",
+        "Russian": "Точная автоматика"
       }
     },
     {
       "sid": "sid_bprue_sniper_precision_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tunes the action for deliberate precision and improved shot control rather than maximum firing speed.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Настраивает механизм на выверенную точность и лучший контроль выстрела вместо максимального темпа огня."
+        "English": "Tunes the action for deliberate precision and improved shot control rather than maximum firing speed.",
+        "Russian": "Настраивает механизм на выверенную точность и лучший контроль выстрела вместо максимального темпа огня."
       }
     },
     {
       "sid": "sid_bprue_sniper_reinforced_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reinforced Action",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Усиленная автоматика"
+        "English": "Reinforced Action",
+        "Russian": "Усиленная автоматика"
       }
     },
     {
       "sid": "sid_bprue_sniper_reinforced_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reinforces the action for durability and dependable operation under sustained use.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Усиливает механизм для большей долговечности и надёжной работы при интенсивном использовании."
+        "English": "Reinforces the action for durability and dependable operation under sustained use.",
+        "Russian": "Усиливает механизм для большей долговечности и надёжной работы при интенсивном использовании."
       }
     },
     {
       "sid": "sid_bprue_sniper_snap_shooter_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Snap Shooter",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Быстрый стрелок"
+        "English": "Snap Shooter",
+        "Russian": "Быстрый стрелок"
       }
     },
     {
       "sid": "sid_bprue_sniper_snap_shooter_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Prioritizes fast target acquisition and responsive aiming for mobile marksman work.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Отдаёт приоритет быстрому захвату цели и отзывчивому прицеливанию для мобильного стрелка."
+        "English": "Prioritizes fast target acquisition and responsive aiming for mobile marksman work.",
+        "Russian": "Отдаёт приоритет быстрому захвату цели и отзывчивому прицеливанию для мобильного стрелка."
       }
     },
     {
       "sid": "sid_bprue_sniper_field_marksman_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Field Marksman",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Полевой стрелок"
+        "English": "Field Marksman",
+        "Russian": "Полевой стрелок"
       }
     },
     {
       "sid": "sid_bprue_sniper_field_marksman_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Balances aiming speed, stability and practical accuracy for general marksman use.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Балансирует скорость прицеливания, стабильность и практическую точность для универсального стрелка."
+        "English": "Balances aiming speed, stability and practical accuracy for general marksman use.",
+        "Russian": "Балансирует скорость прицеливания, стабильность и практическую точность для универсального стрелка."
       }
     },
     {
       "sid": "sid_bprue_sniper_benchrest_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Benchrest Setup",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Стендовая настройка"
+        "English": "Benchrest Setup",
+        "Russian": "Стендовая настройка"
       }
     },
     {
       "sid": "sid_bprue_sniper_benchrest_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Maximizes aiming stability and precision for deliberate long-range fire, at the cost of responsiveness.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Максимизирует стабильность прицеливания и точность для выверенной дальней стрельбы ценой отзывчивости."
+        "English": "Maximizes aiming stability and precision for deliberate long-range fire, at the cost of responsiveness.",
+        "Russian": "Максимизирует стабильность прицеливания и точность для выверенной дальней стрельбы ценой отзывчивости."
       }
     },
     {
       "sid": "sid_bprue_sniper_rapid_marksman_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Rapid Marksman Package",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Комплект скоростного стрелка"
+        "English": "Rapid Marksman Package",
+        "Russian": "Комплект скоростного стрелка"
       }
     },
     {
       "sid": "sid_bprue_sniper_rapid_marksman_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A rapid-fire marksman package tuned for quick follow-up shots and aggressive precision shooting.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Комплект скоростного стрелка для быстрых повторных выстрелов и агрессивной точной стрельбы."
+        "English": "A rapid-fire marksman package tuned for quick follow-up shots and aggressive precision shooting.",
+        "Russian": "Комплект скоростного стрелка для быстрых повторных выстрелов и агрессивной точной стрельбы."
       }
     },
     {
       "sid": "sid_bprue_sniper_recon_marksman_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Recon Marksman Package",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Комплект разведчика-стрелка"
+        "English": "Recon Marksman Package",
+        "Russian": "Комплект разведчика-стрелка"
       }
     },
     {
       "sid": "sid_bprue_sniper_recon_marksman_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A mobile reconnaissance setup emphasizing quick handling, target acquisition and controlled precision.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Мобильная разведывательная компоновка с упором на быстрое обращение, захват цели и контролируемую точность."
+        "English": "A mobile reconnaissance setup emphasizing quick handling, target acquisition and controlled precision.",
+        "Russian": "Мобильная разведывательная компоновка с упором на быстрое обращение, захват цели и контролируемую точность."
       }
     },
     {
       "sid": "sid_bprue_sniper_match_trigger_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Match Trigger",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Матчевый спуск"
+        "English": "Match Trigger",
+        "Russian": "Матчевый спуск"
       }
     },
     {
       "sid": "sid_bprue_sniper_match_trigger_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A precision trigger package for cleaner shot release and improved control during deliberate fire.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Высокоточный спусковой механизм для более чистого срыва выстрела и лучшего контроля при выверенной стрельбе."
+        "English": "A precision trigger package for cleaner shot release and improved control during deliberate fire.",
+        "Russian": "Высокоточный спусковой механизм для более чистого срыва выстрела и лучшего контроля при выверенной стрельбе."
       }
     },
     {
       "sid": "sid_bprue_sniper_anti_materiel_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Anti-Materiel Package",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Противоматериальный комплект"
+        "English": "Anti-Materiel Package",
+        "Russian": "Противоматериальный комплект"
       }
     },
     {
       "sid": "sid_bprue_sniper_anti_materiel_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A heavy long-range package emphasizing damage, penetration and ballistic performance against hardened targets.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Тяжёлый дальнобойный комплект с упором на урон, пробитие и баллистику против защищённых целей."
+        "English": "A heavy long-range package emphasizing damage, penetration and ballistic performance against hardened targets.",
+        "Russian": "Тяжёлый дальнобойный комплект с упором на урон, пробитие и баллистику против защищённых целей."
       }
     },
     {
       "sid": "sid_bprue_sniper_battle_rifle_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Battle Rifle Package",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Комплект боевой винтовки"
+        "English": "Battle Rifle Package",
+        "Russian": "Комплект боевой винтовки"
       }
     },
     {
       "sid": "sid_bprue_sniper_battle_rifle_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Adapts the rifle for flexible combat use with a balance of handling, rate of fire and precision.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Адаптирует винтовку для универсального боя, балансируя управляемость, темп огня и точность."
+        "English": "Adapts the rifle for flexible combat use with a balance of handling, rate of fire and precision.",
+        "Russian": "Адаптирует винтовку для универсального боя, балансируя управляемость, темп огня и точность."
       }
     },
     {
       "sid": "sid_bprue_sniper_mad_minute_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Mad Minute Package",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Комплект «Бешеная минута»"
+        "English": "Mad Minute Package",
+        "Russian": "Комплект «Бешеная минута»"
       }
     },
     {
       "sid": "sid_bprue_sniper_mad_minute_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tunes the rifle for exceptionally rapid aimed follow-up shots while preserving its marksman character.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Настраивает винтовку для исключительно быстрых прицельных повторных выстрелов, сохраняя её снайперский характер."
+        "English": "Tunes the rifle for exceptionally rapid aimed follow-up shots while preserving its marksman character.",
+        "Russian": "Настраивает винтовку для исключительно быстрых прицельных повторных выстрелов, сохраняя её снайперский характер."
       }
     },
     {
       "sid": "sid_bprue_shared_lightweight_assembly_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Lightweight Assembly"
+        "English": "Lightweight Assembly"
       }
     },
     {
       "sid": "sid_bprue_shared_lightweight_assembly_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reduces weapon weight and improves aiming speed, at the cost of increased recoil."
+        "English": "Reduces weapon weight and improves aiming speed, at the cost of increased recoil."
       }
     },
     {
       "sid": "sid_bprue_shared_reinforced_assembly_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reinforced Assembly"
+        "English": "Reinforced Assembly"
       }
     },
     {
       "sid": "sid_bprue_shared_reinforced_assembly_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Improves recoil control and durability at the cost of additional weight."
+        "English": "Improves recoil control and durability at the cost of additional weight."
       }
     },
     {
       "sid": "sid_bprue_shared_recoil_control_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Recoil Control"
+        "English": "Recoil Control"
       }
     },
     {
       "sid": "sid_bprue_shared_recoil_control_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Prioritizes recoil control during repeated fire while slightly reducing intrinsic precision."
+        "English": "Prioritizes recoil control during repeated fire while slightly reducing intrinsic precision."
       }
     },
     {
       "sid": "sid_bprue_shared_precision_tuning_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Precision Tuning"
+        "English": "Precision Tuning"
       }
     },
     {
       "sid": "sid_bprue_shared_precision_tuning_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tightens shot dispersion for precision fire at the cost of stronger recoil."
+        "English": "Tightens shot dispersion for precision fire at the cost of stronger recoil."
       }
     },
     {
       "sid": "sid_bprue_shared_high_cyclic_system_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "High-Cyclic System"
+        "English": "High-Cyclic System"
       }
     },
     {
       "sid": "sid_bprue_shared_high_cyclic_system_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Increases cyclic rate for aggressive fire at the cost of recoil control and weapon wear."
+        "English": "Increases cyclic rate for aggressive fire at the cost of recoil control and weapon wear."
       }
     },
     {
       "sid": "sid_bprue_shared_controlled_action_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Controlled Action"
+        "English": "Controlled Action"
       }
     },
     {
       "sid": "sid_bprue_shared_controlled_action_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Slows the firing cycle in exchange for improved recoil control and precision."
+        "English": "Slows the firing cycle in exchange for improved recoil control and precision."
       }
     },
     {
       "sid": "sid_bprue_shared_soft_target_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Soft-Target Module"
+        "English": "Soft-Target Module"
       }
     },
     {
       "sid": "sid_bprue_shared_soft_target_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Increases damage and improves projectile velocity and flatness against lightly protected targets, sacrificing armor penetration."
+        "English": "Increases damage and improves projectile velocity and flatness against lightly protected targets, sacrificing armor penetration."
       }
     },
     {
       "sid": "sid_bprue_shared_armor_piercing_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Armor-Piercing Module"
+        "English": "Armor-Piercing Module"
       }
     },
     {
       "sid": "sid_bprue_shared_armor_piercing_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Improves armor and cover penetration at the cost of raw weapon damage."
+        "English": "Improves armor and cover penetration at the cost of raw weapon damage."
       }
     },
     {
       "sid": "sid_bprue_shared_hardened_components_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Hardened Components"
+        "English": "Hardened Components"
       }
     },
     {
       "sid": "sid_bprue_shared_hardened_components_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Improves weapon durability at the cost of a small weight increase."
+        "English": "Improves weapon durability at the cost of a small weight increase."
       }
     },
     {
       "sid": "sid_bprue_shared_lightweight_components_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Lightweight Components"
+        "English": "Lightweight Components"
       }
     },
     {
       "sid": "sid_bprue_shared_lightweight_components_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reduces weight and improves aiming speed at the cost of weapon durability."
+        "English": "Reduces weight and improves aiming speed at the cost of weapon durability."
       }
     },
     {
       "sid": "sid_bprue_shared_cqb_configuration_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "CQB Configuration"
+        "English": "CQB Configuration"
       }
     },
     {
       "sid": "sid_bprue_shared_cqb_configuration_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Optimizes fast close-range handling and practical accuracy while reducing long-range ballistic performance."
+        "English": "Optimizes fast close-range handling and practical accuracy while reducing long-range ballistic performance."
       }
     },
     {
       "sid": "sid_bprue_shared_range_configuration_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Range Configuration"
+        "English": "Range Configuration"
       }
     },
     {
       "sid": "sid_bprue_shared_range_configuration_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Improves flatness and precision for longer-range fire at the cost of slower aiming."
+        "English": "Improves flatness and precision for longer-range fire at the cost of slower aiming."
       }
     },
     {
       "sid": "sid_bprue_smg_stock_lightweight_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Lightweight Stock",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Облегчённый приклад"
+        "English": "Lightweight Stock",
+        "Russian": "Облегчённый приклад"
       }
     },
     {
       "sid": "sid_bprue_smg_stock_lightweight_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reduces the inertia of the weapon for faster aiming and better mobility, at the cost of increased recoil.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Снижает инерцию оружия для более быстрого прицеливания и лучшей подвижности ценой повышенной отдачи."
+        "English": "Reduces the inertia of the weapon for faster aiming and better mobility, at the cost of increased recoil.",
+        "Russian": "Снижает инерцию оружия для более быстрого прицеливания и лучшей подвижности ценой повышенной отдачи."
       }
     },
     {
       "sid": "sid_bprue_smg_stock_tactical_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tactical Stock",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Тактический приклад"
+        "English": "Tactical Stock",
+        "Russian": "Тактический приклад"
       }
     },
     {
       "sid": "sid_bprue_smg_stock_tactical_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Improves recoil control and recovery for close-range bursts, trading a little aiming speed for stability.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Улучшает контроль и восстановление отдачи при стрельбе очередями на ближней дистанции, немного снижая скорость прицеливания ради стабильности."
+        "English": "Improves recoil control and recovery for close-range bursts, trading a little aiming speed for stability.",
+        "Russian": "Улучшает контроль и восстановление отдачи при стрельбе очередями на ближней дистанции, немного снижая скорость прицеливания ради стабильности."
       }
     },
     {
       "sid": "sid_bprue_smg_stock_stabilized_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Stabilized Stock",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Стабилизированный приклад"
+        "English": "Stabilized Stock",
+        "Russian": "Стабилизированный приклад"
       }
     },
     {
       "sid": "sid_bprue_smg_stock_stabilized_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Prioritizes recoil control and shot consistency for extending the SMG's practical range, at the cost of slower handling.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Отдаёт приоритет контролю отдачи и стабильности стрельбы для увеличения практической дальности ПП ценой более медленного обращения."
+        "English": "Prioritizes recoil control and shot consistency for extending the SMG's practical range, at the cost of slower handling.",
+        "Russian": "Отдаёт приоритет контролю отдачи и стабильности стрельбы для увеличения практической дальности ПП ценой более медленного обращения."
       }
     },
     {
       "sid": "sid_bprue_sniper_lightweight_stock_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Lightweight Stock",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Облегчённый приклад"
+        "English": "Lightweight Stock",
+        "Russian": "Облегчённый приклад"
       }
     },
     {
       "sid": "sid_bprue_sniper_lightweight_stock_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A light stock optimized for rapid target acquisition and mobile marksman work, at the cost of recoil control.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Лёгкий приклад для быстрого захвата цели и мобильной стрелковой работы ценой контроля отдачи."
+        "English": "A light stock optimized for rapid target acquisition and mobile marksman work, at the cost of recoil control.",
+        "Russian": "Лёгкий приклад для быстрого захвата цели и мобильной стрелковой работы ценой контроля отдачи."
       }
     },
     {
       "sid": "sid_bprue_sniper_adjustable_stock_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Adjustable Stock",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Регулируемый приклад"
+        "English": "Adjustable Stock",
+        "Russian": "Регулируемый приклад"
       }
     },
     {
       "sid": "sid_bprue_sniper_adjustable_stock_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "An adjustable marksman stock that balances aiming stability, movement and recoil control for flexible field use.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Регулируемый стрелковый приклад, балансирующий стабильность прицеливания, движение и контроль отдачи для универсального применения."
+        "English": "An adjustable marksman stock that balances aiming stability, movement and recoil control for flexible field use.",
+        "Russian": "Регулируемый стрелковый приклад, балансирующий стабильность прицеливания, движение и контроль отдачи для универсального применения."
       }
     },
     {
       "sid": "sid_bprue_sniper_precision_stock_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Precision Stock",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Высокоточный приклад"
+        "English": "Precision Stock",
+        "Russian": "Высокоточный приклад"
       }
     },
     {
       "sid": "sid_bprue_sniper_precision_stock_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A rigid precision stock that maximizes aiming stability, recoil control and recovery for deliberate long-range fire, at the cost of aiming speed.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Жёсткий высокоточный приклад, максимально повышающий стабильность прицеливания, контроль и восстановление отдачи для выверенной дальней стрельбы ценой скорости прицеливания."
+        "English": "A rigid precision stock that maximizes aiming stability, recoil control and recovery for deliberate long-range fire, at the cost of aiming speed.",
+        "Russian": "Жёсткий высокоточный приклад, максимально повышающий стабильность прицеливания, контроль и восстановление отдачи для выверенной дальней стрельбы ценой скорости прицеливания."
       }
     },
     {
       "sid": "sid_effects_bprue_armor_piercing_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Armor penetration",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Бронепробиваемость"
+        "English": "Armor penetration",
+        "Russian": "Бронепробиваемость"
       }
     },
     {
       "sid": "sid_effects_bprue_durability_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Durability",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Прочность"
+        "English": "Durability",
+        "Russian": "Прочность"
       }
     },
     {
       "sid": "sid_bprue_mg_high_output_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "High-Output System",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Система высокой производительности"
+        "English": "High-Output System",
+        "Russian": "Система высокой производительности"
       }
     },
     {
       "sid": "sid_bprue_mg_high_output_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Increases cyclic rate for greater sustained fire output, at the cost of stronger recoil and increased weapon wear.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Повышает темп стрельбы для большей плотности длительного огня ценой усиленной отдачи и повышенного износа оружия."
+        "English": "Increases cyclic rate for greater sustained fire output, at the cost of stronger recoil and increased weapon wear.",
+        "Russian": "Повышает темп стрельбы для большей плотности длительного огня ценой усиленной отдачи и повышенного износа оружия."
       }
     },
     {
       "sid": "sid_bprue_mg_controlled_fire_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Controlled Fire System",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Система контролируемого огня"
+        "English": "Controlled Fire System",
+        "Russian": "Система контролируемого огня"
       }
     },
     {
       "sid": "sid_bprue_mg_controlled_fire_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Slows the firing cycle in exchange for improved recoil control and tighter dispersion during sustained fire.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Снижает темп стрельбы в обмен на лучший контроль отдачи и меньший разброс при длительном огне."
+        "English": "Slows the firing cycle in exchange for improved recoil control and tighter dispersion during sustained fire.",
+        "Russian": "Снижает темп стрельбы в обмен на лучший контроль отдачи и меньший разброс при длительном огне."
       }
     },
     {
       "sid": "sid_bprue_mg_reinforced_barrel_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reinforced Barrel",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Усиленный ствол"
+        "English": "Reinforced Barrel",
+        "Russian": "Усиленный ствол"
       }
     },
     {
       "sid": "sid_bprue_mg_reinforced_barrel_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reinforces the barrel assembly for greater durability and improved precision, at the cost of additional weight.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Усиливает конструкцию ствола, повышая долговечность и точность ценой дополнительного веса."
+        "English": "Reinforces the barrel assembly for greater durability and improved precision, at the cost of additional weight.",
+        "Russian": "Усиливает конструкцию ствола, повышая долговечность и точность ценой дополнительного веса."
       }
     },
     {
       "sid": "sid_bprue_mg_stabilized_barrel_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Stabilized Barrel",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Стабилизированный ствол"
+        "English": "Stabilized Barrel",
+        "Russian": "Стабилизированный ствол"
       }
     },
     {
       "sid": "sid_bprue_mg_stabilized_barrel_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Adds a heavier stabilized barrel assembly for improved recoil control and faster recovery between shots.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Устанавливает более тяжёлый стабилизированный ствол для лучшего контроля отдачи и более быстрого восстановления между выстрелами."
+        "English": "Adds a heavier stabilized barrel assembly for improved recoil control and faster recovery between shots.",
+        "Russian": "Устанавливает более тяжёлый стабилизированный ствол для лучшего контроля отдачи и более быстрого восстановления между выстрелами."
       }
     },
     {
       "sid": "sid_bprue_mg_quick_change_feed_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Quick-Change Feed",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Система быстрой подачи"
+        "English": "Quick-Change Feed",
+        "Russian": "Система быстрой подачи"
       }
     },
     {
       "sid": "sid_bprue_mg_quick_change_feed_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Optimizes the feed system for faster reloads, sacrificing component service life for rapid ammunition changes.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Оптимизирует систему подачи для более быстрой перезарядки, сокращая ресурс компонентов ради быстрой смены боекомплекта."
+        "English": "Optimizes the feed system for faster reloads, sacrificing component service life for rapid ammunition changes.",
+        "Russian": "Оптимизирует систему подачи для более быстрой перезарядки, сокращая ресурс компонентов ради быстрой смены боекомплекта."
       }
     },
     {
       "sid": "sid_bprue_mg_reinforced_feed_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reinforced Feed System",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Усиленная система подачи"
+        "English": "Reinforced Feed System",
+        "Russian": "Усиленная система подачи"
       }
     },
     {
       "sid": "sid_bprue_mg_reinforced_feed_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reinforces the feed mechanism to reduce wear during sustained firing, at the cost of slower reloads.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Усиливает механизм подачи, снижая износ при длительной стрельбе ценой более медленной перезарядки."
+        "English": "Reinforces the feed mechanism to reduce wear during sustained firing, at the cost of slower reloads.",
+        "Russian": "Усиливает механизм подачи, снижая износ при длительной стрельбе ценой более медленной перезарядки."
       }
     },
     {
       "sid": "sid_bprue_mg_mobile_gunner_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Mobile Gunner Configuration",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Мобильная пулемётная компоновка"
+        "English": "Mobile Gunner Configuration",
+        "Russian": "Мобильная пулемётная компоновка"
       }
     },
     {
       "sid": "sid_bprue_mg_mobile_gunner_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reduces weight and improves aiming speed for mobile operation, at the cost of increased recoil.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Снижает вес и ускоряет прицеливание для мобильного применения ценой повышенной отдачи."
+        "English": "Reduces weight and improves aiming speed for mobile operation, at the cost of increased recoil.",
+        "Russian": "Снижает вес и ускоряет прицеливание для мобильного применения ценой повышенной отдачи."
       }
     },
     {
       "sid": "sid_bprue_mg_supported_fire_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Supported Fire Configuration",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Компоновка опорного огня"
+        "English": "Supported Fire Configuration",
+        "Russian": "Компоновка опорного огня"
       }
     },
     {
       "sid": "sid_bprue_mg_supported_fire_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Prioritizes stability and precision during sustained fire with a heavier support-oriented configuration.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Отдаёт приоритет стабильности и точности при длительном огне за счёт более тяжёлой компоновки для огневой поддержки."
+        "English": "Prioritizes stability and precision during sustained fire with a heavier support-oriented configuration.",
+        "Russian": "Отдаёт приоритет стабильности и точности при длительном огне за счёт более тяжёлой компоновки для огневой поддержки."
       }
     },
     {
       "sid": "sid_bprue_pistol_heavy_slide_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Heavy Slide Assembly",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Утяжелённый затвор"
+        "English": "Heavy Slide Assembly",
+        "Russian": "Утяжелённый затвор"
       }
     },
     {
       "sid": "sid_bprue_pistol_heavy_slide_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A reinforced heavy-slide package that improves recoil control, recoil recovery and durability at the cost of slower aiming.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Усиленный утяжелённый затвор улучшает контроль отдачи, восстановление после выстрела и долговечность ценой более медленного прицеливания."
+        "English": "A reinforced heavy-slide package that improves recoil control, recoil recovery and durability at the cost of slower aiming.",
+        "Russian": "Усиленный утяжелённый затвор улучшает контроль отдачи, восстановление после выстрела и долговечность ценой более медленного прицеливания."
       }
     },
     {
       "sid": "sid_bprue_caliber_762_eastern_tradeoff_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Converts the weapon from 5.45 mm to the game's 7.62 mm sniper cartridge. Damage and armor penetration increase by 15%, at the cost of 25% more recoil and 20% increased weapon wear. This specialization is permanent.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Переводит оружие с 5,45 мм на используемый в игре снайперский патрон 7,62 мм. Урон и бронепробиваемость увеличиваются на 15%, но отдача возрастает на 25%, а износ оружия — на 20%. Эта специализация является окончательной."
+        "English": "Converts the weapon from 5.45 mm to the game's 7.62 mm sniper cartridge. Damage and armor penetration increase by 15%, at the cost of 25% more recoil and 20% increased weapon wear. This specialization is permanent.",
+        "Russian": "Переводит оружие с 5,45 мм на используемый в игре снайперский патрон 7,62 мм. Урон и бронепробиваемость увеличиваются на 15%, но отдача возрастает на 25%, а износ оружия — на 20%. Эта специализация является окончательной."
       }
     },
     {
       "sid": "sid_bprue_caliber_762_nato_tradeoff_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Converts the weapon from 5.56 mm to 7.62x51 mm NATO ammunition. Damage increases by 10% and armor penetration by 15%, at the cost of 20% more recoil and 15% increased weapon wear. This specialization is permanent.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Переводит оружие с 5,56 мм на боеприпасы 7,62x51 мм НАТО. Урон увеличивается на 10%, бронепробиваемость — на 15%, но отдача возрастает на 20%, а износ оружия — на 15%. Эта специализация является окончательной."
+        "English": "Converts the weapon from 5.56 mm to 7.62x51 mm NATO ammunition. Damage increases by 10% and armor penetration by 15%, at the cost of 20% more recoil and 15% increased weapon wear. This specialization is permanent.",
+        "Russian": "Переводит оружие с 5,56 мм на боеприпасы 7,62x51 мм НАТО. Урон увеличивается на 10%, бронепробиваемость — на 15%, но отдача возрастает на 20%, а износ оружия — на 15%. Эта специализация является окончательной."
       }
     },
     {
       "sid": "sid_bprue_smg_caliber_918_to_919_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Converts the weapon from 9x18 mm to 9x19 mm. Damage and effective range increase by 10%, at the cost of 10% more recoil and 10% increased weapon wear. This caliber specialization is permanent.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Переводит оружие с 9x18 мм на 9x19 мм. Урон и эффективная дальность увеличиваются на 10%, но отдача возрастает на 10%, а износ оружия — на 10%. Эта специализация калибра является окончательной."
+        "English": "Converts the weapon from 9x18 mm to 9x19 mm. Damage and effective range increase by 10%, at the cost of 10% more recoil and 10% increased weapon wear. This caliber specialization is permanent.",
+        "Russian": "Переводит оружие с 9x18 мм на 9x19 мм. Урон и эффективная дальность увеличиваются на 10%, но отдача возрастает на 10%, а износ оружия — на 10%. Эта специализация калибра является окончательной."
       }
     },
     {
       "sid": "sid_bprue_smg_caliber_919_to_918_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Converts the weapon from 9x19 mm to 9x18 mm. Recoil is reduced by 15% and weapon wear by 10%, at the cost of 10% lower damage and 10% shorter effective range. This caliber specialization is permanent.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Переводит оружие с 9x19 мм на 9x18 мм. Отдача снижается на 15%, а износ оружия — на 10%, но урон и эффективная дальность уменьшаются на 10%. Эта специализация калибра является окончательной."
+        "English": "Converts the weapon from 9x19 mm to 9x18 mm. Recoil is reduced by 15% and weapon wear by 10%, at the cost of 10% lower damage and 10% shorter effective range. This caliber specialization is permanent.",
+        "Russian": "Переводит оружие с 9x19 мм на 9x18 мм. Отдача снижается на 15%, а износ оружия — на 10%, но урон и эффективная дальность уменьшаются на 10%. Эта специализация калибра является окончательной."
       }
     },
     {
       "sid": "sid_bprue_smg_caliber_919_to_045_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Converts the weapon from 9x19 mm to .45 ACP. Damage increases by 15%, at the cost of 20% more recoil and 10% shorter effective range. This caliber specialization is permanent.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Переводит оружие с 9x19 мм на .45 ACP. Урон увеличивается на 15%, но отдача возрастает на 20%, а эффективная дальность уменьшается на 10%. Эта специализация калибра является окончательной."
+        "English": "Converts the weapon from 9x19 mm to .45 ACP. Damage increases by 15%, at the cost of 20% more recoil and 10% shorter effective range. This caliber specialization is permanent.",
+        "Russian": "Переводит оружие с 9x19 мм на .45 ACP. Урон увеличивается на 15%, но отдача возрастает на 20%, а эффективная дальность уменьшается на 10%. Эта специализация калибра является окончательной."
       }
     },
     {
       "sid": "sid_bprue_smg_caliber_045_to_919_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Converts the weapon from .45 ACP to 9x19 mm. Recoil is reduced by 10% and effective range increases by 10%, at the cost of 10% lower damage. This caliber specialization is permanent.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Переводит оружие с .45 ACP на 9x19 мм. Отдача снижается на 10%, эффективная дальность увеличивается на 10%, но урон уменьшается на 10%. Эта специализация калибра является окончательной."
+        "English": "Converts the weapon from .45 ACP to 9x19 mm. Recoil is reduced by 10% and effective range increases by 10%, at the cost of 10% lower damage. This caliber specialization is permanent.",
+        "Russian": "Переводит оружие с .45 ACP на 9x19 мм. Отдача снижается на 10%, эффективная дальность увеличивается на 10%, но урон уменьшается на 10%. Эта специализация калибра является окончательной."
       }
     },
     {
       "sid": "sid_bprue_smg_caliber_918_to_045_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Converts the weapon from 9x18 mm to .45 ACP. Damage increases by 15%, at the cost of 25% more recoil and 15% shorter effective range. This caliber specialization is permanent.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Переводит оружие с 9x18 мм на .45 ACP. Урон увеличивается на 15%, но отдача возрастает на 25%, а эффективная дальность уменьшается на 15%. Эта специализация калибра является окончательной."
+        "English": "Converts the weapon from 9x18 mm to .45 ACP. Damage increases by 15%, at the cost of 25% more recoil and 15% shorter effective range. This caliber specialization is permanent.",
+        "Russian": "Переводит оружие с 9x18 мм на .45 ACP. Урон увеличивается на 15%, но отдача возрастает на 25%, а эффективная дальность уменьшается на 15%. Эта специализация калибра является окончательной."
       }
     },
     {
       "sid": "sid_bprue_smg_caliber_045_to_918_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Converts the weapon from .45 ACP to 9x18 mm. Recoil is reduced by 15% and effective range increases by 15%, at the cost of 15% lower damage. This caliber specialization is permanent.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Переводит оружие с .45 ACP на 9x18 мм. Отдача снижается на 15%, эффективная дальность увеличивается на 15%, но урон уменьшается на 15%. Эта специализация калибра является окончательной."
+        "English": "Converts the weapon from .45 ACP to 9x18 mm. Recoil is reduced by 15% and effective range increases by 15%, at the cost of 15% lower damage. This caliber specialization is permanent.",
+        "Russian": "Переводит оружие с .45 ACP на 9x18 мм. Отдача снижается на 15%, эффективная дальность увеличивается на 15%, но урон уменьшается на 15%. Эта специализация калибра является окончательной."
       }
     },
     {
       "sid": "sid_items_BPRUE_Viper_PistolConversionKit_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Viper-5 Compact Conversion Kit",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Комплект компактной переделки Viper-5"
+        "English": "Viper-5 Compact Conversion Kit",
+        "Russian": "Комплект компактной переделки Viper-5"
       }
     },
     {
       "sid": "sid_items_BPRUE_Viper_PistolConversionKit_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A purpose-built set of replacement parts for turning the Viper-5 into an exceptionally compact personal-defense weapon without compromising its basic function.\nRequires the Compact Weapon Conversion upgrade before this kit can be installed.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Специализированный комплект деталей для переделки Viper-5 в предельно компактное оружие самообороны без ущерба для его основных функций.\nДля установки комплекта требуется улучшение «Компактная конверсия оружия»."
+        "English": "A purpose-built set of replacement parts for turning the Viper-5 into an exceptionally compact personal-defense weapon without compromising its basic function.\nRequires the Compact Weapon Conversion upgrade before this kit can be installed.",
+        "Russian": "Специализированный комплект деталей для переделки Viper-5 в предельно компактное оружие самообороны без ущерба для его основных функций.\nДля установки комплекта требуется улучшение «Компактная конверсия оружия»."
       }
     },
     {
       "sid": "sid_items_BPRUE_AKU_PistolConversionKit_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "AKU Compact Conversion Kit",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Комплект компактной переделки АКУ"
+        "English": "AKU Compact Conversion Kit",
+        "Russian": "Комплект компактной переделки АКУ"
       }
     },
     {
       "sid": "sid_items_BPRUE_AKU_PistolConversionKit_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A compact conversion package that strips the AKU down to the essentials, making an already short weapon even easier to carry and deploy in confined spaces.\nRequires the Compact Weapon Conversion upgrade before this kit can be installed.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Комплект компактной переделки, оставляющий от АКУ только самое необходимое и делающий и без того короткое оружие ещё удобнее для переноски и применения в тесных пространствах.\nДля установки комплекта требуется улучшение «Компактная конверсия оружия»."
+        "English": "A compact conversion package that strips the AKU down to the essentials, making an already short weapon even easier to carry and deploy in confined spaces.\nRequires the Compact Weapon Conversion upgrade before this kit can be installed.",
+        "Russian": "Комплект компактной переделки, оставляющий от АКУ только самое необходимое и делающий и без того короткое оружие ещё удобнее для переноски и применения в тесных пространствах.\nДля установки комплекта требуется улучшение «Компактная конверсия оружия»."
       }
     },
     {
       "sid": "sid_items_BPRUE_Bucket_PistolConversionKit_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Bucket S-2 Compact Conversion Kit",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Комплект компактной переделки Bucket S-2"
+        "English": "Bucket S-2 Compact Conversion Kit",
+        "Russian": "Комплект компактной переделки Bucket S-2"
       }
     },
     {
       "sid": "sid_items_BPRUE_Bucket_PistolConversionKit_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A specialized package of shortened and rearranged components designed to turn the Bucket S-2 into a compact secondary weapon for close-quarters work.\nRequires the Compact Weapon Conversion upgrade before this kit can be installed.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Специализированный набор укороченных и перекомпонованных деталей, превращающий Bucket S-2 в компактное дополнительное оружие для ближнего боя.\nДля установки комплекта требуется улучшение «Компактная конверсия оружия»."
+        "English": "A specialized package of shortened and rearranged components designed to turn the Bucket S-2 into a compact secondary weapon for close-quarters work.\nRequires the Compact Weapon Conversion upgrade before this kit can be installed.",
+        "Russian": "Специализированный набор укороченных и перекомпонованных деталей, превращающий Bucket S-2 в компактное дополнительное оружие для ближнего боя.\nДля установки комплекта требуется улучшение «Компактная конверсия оружия»."
       }
     },
     {
       "sid": "sid_items_BPRUE_Integral_PistolConversionKit_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Integral-A Compact Conversion Kit",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Комплект компактной переделки Integral-A"
+        "English": "Integral-A Compact Conversion Kit",
+        "Russian": "Комплект компактной переделки Integral-A"
       }
     },
     {
       "sid": "sid_items_BPRUE_Integral_PistolConversionKit_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A carefully fitted conversion package that reduces the Integral-A's overall footprint while preserving the qualities that make the weapon effective at close range.\nRequires the Compact Weapon Conversion upgrade before this kit can be installed.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Тщательно подогнанный комплект переделки, уменьшающий габариты Integral-A и сохраняющий качества, делающие это оружие эффективным на ближней дистанции.\nДля установки комплекта требуется улучшение «Компактная конверсия оружия»."
+        "English": "A carefully fitted conversion package that reduces the Integral-A's overall footprint while preserving the qualities that make the weapon effective at close range.\nRequires the Compact Weapon Conversion upgrade before this kit can be installed.",
+        "Russian": "Тщательно подогнанный комплект переделки, уменьшающий габариты Integral-A и сохраняющий качества, делающие это оружие эффективным на ближней дистанции.\nДля установки комплекта требуется улучшение «Компактная конверсия оружия»."
       }
     },
     {
       "sid": "sid_items_BPRUE_Zubr_PistolConversionKit_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Zubr-19 Compact Conversion Kit",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Комплект компактной переделки Zubr-19"
+        "English": "Zubr-19 Compact Conversion Kit",
+        "Russian": "Комплект компактной переделки Zubr-19"
       }
     },
     {
       "sid": "sid_items_BPRUE_Zubr_PistolConversionKit_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A compact conversion package that reworks the Zubr-19 for use as a heavy secondary weapon, trading bulk for a much more manageable form factor.\nRequires the Compact Weapon Conversion upgrade before this kit can be installed.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Комплект компактной переделки, адаптирующий Zubr-19 под роль тяжёлого дополнительного оружия и заметно уменьшающий его габариты.\nДля установки комплекта требуется улучшение «Компактная конверсия оружия»."
+        "English": "A compact conversion package that reworks the Zubr-19 for use as a heavy secondary weapon, trading bulk for a much more manageable form factor.\nRequires the Compact Weapon Conversion upgrade before this kit can be installed.",
+        "Russian": "Комплект компактной переделки, адаптирующий Zubr-19 под роль тяжёлого дополнительного оружия и заметно уменьшающий его габариты.\nДля установки комплекта требуется улучшение «Компактная конверсия оружия»."
       }
     },
     {
       "sid": "sid_items_BPRUE_Fora230_PistolConversionKit_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Fora-221 Compact Conversion Kit",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Комплект компактной переделки Fora-221"
+        "English": "Fora-221 Compact Conversion Kit",
+        "Russian": "Комплект компактной переделки Fora-221"
       }
     },
     {
       "sid": "sid_items_BPRUE_Fora230_PistolConversionKit_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A radical compact conversion package for the Fora-221, replacing and rearranging key components to create a weapon small enough to serve as a powerful secondary.\nRequires the Compact Weapon Conversion upgrade before this kit can be installed.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Радикальный комплект компактной переделки Fora-221, заменяющий и перекомпоновывающий ключевые детали, чтобы оружие могло использоваться как мощное дополнительное.\nДля установки комплекта требуется улучшение «Компактная конверсия оружия»."
+        "English": "A radical compact conversion package for the Fora-221, replacing and rearranging key components to create a weapon small enough to serve as a powerful secondary.\nRequires the Compact Weapon Conversion upgrade before this kit can be installed.",
+        "Russian": "Радикальный комплект компактной переделки Fora-221, заменяющий и перекомпоновывающий ключевые детали, чтобы оружие могло использоваться как мощное дополнительное.\nДля установки комплекта требуется улучшение «Компактная конверсия оружия»."
       }
     },
     {
       "sid": "sid_effects_bprue_fire_modes_burst_auto_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Fire modes: Burst / Automatic",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Режимы огня: очередь / автоматический"
+        "English": "Fire modes: Burst / Automatic",
+        "Russian": "Режимы огня: очередь / автоматический"
       }
     },
     {
       "sid": "sid_effects_bprue_fire_modes_semi_auto_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Fire mode: Semi-Automatic",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Режим огня: одиночный"
+        "English": "Fire mode: Semi-Automatic",
+        "Russian": "Режим огня: одиночный"
       }
     },
     {
       "sid": "sid_effects_bprue_aiming_movement_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Aiming movement speed",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Скорость движения в прицеле"
+        "English": "Aiming movement speed",
+        "Russian": "Скорость движения в прицеле"
       }
     },
     {
       "sid": "sid_effects_bprue_dispersion_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Dispersion",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Разброс"
+        "English": "Dispersion",
+        "Russian": "Разброс"
       }
     },
     {
       "sid": "sid_bprue_unique_ghost_mechanism_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Ghost Mechanism",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Призрачный механизм"
+        "English": "Ghost Mechanism",
+        "Russian": "Призрачный механизм"
       }
     },
     {
       "sid": "sid_bprue_unique_ghost_mechanism_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Strips the Phantom down for extreme mobility: lower weight, faster aiming and faster movement while aiming, at the cost of increased weapon wear.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Облегчает Phantom ради максимальной мобильности: снижает массу, ускоряет прицеливание и движение в прицеле ценой повышенного износа оружия."
+        "English": "Strips the Phantom down for extreme mobility: lower weight, faster aiming and faster movement while aiming, at the cost of increased weapon wear.",
+        "Russian": "Облегчает Phantom ради максимальной мобильности: снижает массу, ускоряет прицеливание и движение в прицеле ценой повышенного износа оружия."
       }
     },
     {
       "sid": "sid_bprue_unique_strelok_refinement_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Strelok's Refinement",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Доработка Стрелка"
+        "English": "Strelok's Refinement",
+        "Russian": "Доработка Стрелка"
       }
     },
     {
       "sid": "sid_bprue_unique_strelok_refinement_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A veteran's handling tune that improves mobility, aiming and reload speed while accepting increased weapon wear.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Ветеранская настройка, улучшающая мобильность, скорость прицеливания и перезарядки ценой повышенного износа оружия."
+        "English": "A veteran's handling tune that improves mobility, aiming and reload speed while accepting increased weapon wear.",
+        "Russian": "Ветеранская настройка, улучшающая мобильность, скорость прицеливания и перезарядки ценой повышенного износа оружия."
       }
     },
     {
       "sid": "sid_bprue_unique_precision_conversion_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Precision Conversion",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Высокоточная переделка"
+        "English": "Precision Conversion",
+        "Russian": "Высокоточная переделка"
       }
     },
     {
       "sid": "sid_bprue_unique_precision_conversion_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Turns the weapon into a dedicated semi-automatic precision rifle with tighter dispersion, lower recoil and higher projectile velocity.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Превращает оружие в специализированную самозарядную точную винтовку с меньшим разбросом и отдачей и повышенной скоростью пули."
+        "English": "Turns the weapon into a dedicated semi-automatic precision rifle with tighter dispersion, lower recoil and higher projectile velocity.",
+        "Russian": "Превращает оружие в специализированную самозарядную точную винтовку с меньшим разбросом и отдачей и повышенной скоростью пули."
       }
     },
     {
       "sid": "sid_bprue_unique_burst_optimizer_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Burst Optimizer",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Оптимизатор очереди"
+        "English": "Burst Optimizer",
+        "Russian": "Оптимизатор очереди"
       }
     },
     {
       "sid": "sid_bprue_unique_burst_optimizer_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tunes the V2 around controlled semi-automatic and burst fire with lower recoil and dispersion and faster magazine handling.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Настраивает V2 для контролируемого одиночного огня и очередей: снижает отдачу и разброс и ускоряет работу с магазином."
+        "English": "Tunes the V2 around controlled semi-automatic and burst fire with lower recoil and dispersion and faster magazine handling.",
+        "Russian": "Настраивает V2 для контролируемого одиночного огня и очередей: снижает отдачу и разброс и ускоряет работу с магазином."
       }
     },
     {
       "sid": "sid_bprue_unique_combat_handling_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Combat Handling Package",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Комплект боевой эргономики"
+        "English": "Combat Handling Package",
+        "Russian": "Комплект боевой эргономики"
       }
     },
     {
       "sid": "sid_bprue_unique_combat_handling_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Pushes the Combatant's aggressive handling further with faster aiming, better movement while aiming and lower recoil, at the cost of increased wear.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Ещё сильнее развивает агрессивную эргономику Combatant: ускоряет прицеливание и движение в прицеле, снижает отдачу ценой повышенного износа."
+        "English": "Pushes the Combatant's aggressive handling further with faster aiming, better movement while aiming and lower recoil, at the cost of increased wear.",
+        "Russian": "Ещё сильнее развивает агрессивную эргономику Combatant: ускоряет прицеливание и движение в прицеле, снижает отдачу ценой повышенного износа."
       }
     },
     {
       "sid": "sid_bprue_unique_overpressure_system_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Overpressure System",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Система повышенного давления"
+        "English": "Overpressure System",
+        "Russian": "Система повышенного давления"
       }
     },
     {
       "sid": "sid_bprue_unique_overpressure_system_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Runs the Decider hard for increased damage, armor penetration and projectile velocity, with substantially higher recoil and weapon wear.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Форсирует Decider ради большего урона, бронепробития и скорости пули ценой заметно большей отдачи и износа."
+        "English": "Runs the Decider hard for increased damage, armor penetration and projectile velocity, with substantially higher recoil and weapon wear.",
+        "Russian": "Форсирует Decider ради большего урона, бронепробития и скорости пули ценой заметно большей отдачи и износа."
       }
     },
     {
       "sid": "sid_bprue_unique_field_rigged_feed_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Field-Rigged Feed",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Полевая доработка подачи"
+        "English": "Field-Rigged Feed",
+        "Russian": "Полевая доработка подачи"
       }
     },
     {
       "sid": "sid_bprue_unique_field_rigged_feed_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Optimizes the Drowned's improvised feed setup for much faster reloads, at the cost of additional weapon weight.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Оптимизирует импровизированную систему подачи Drowned для значительно более быстрой перезарядки ценой дополнительной массы."
+        "English": "Optimizes the Drowned's improvised feed setup for much faster reloads, at the cost of additional weapon weight.",
+        "Russian": "Оптимизирует импровизированную систему подачи Drowned для значительно более быстрой перезарядки ценой дополнительной массы."
       }
     },
     {
       "sid": "sid_bprue_unique_jury_rigged_action_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Jury-Rigged Action",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Кустарно форсированная автоматика"
+        "English": "Jury-Rigged Action",
+        "Russian": "Кустарно форсированная автоматика"
       }
     },
     {
       "sid": "sid_bprue_unique_jury_rigged_action_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Pushes the already abused action beyond sensible limits for faster fire, lower recoil and quicker reloads. Weapon wear increases sharply.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Форсирует уже изношенную автоматику сверх разумных пределов ради темпа стрельбы, меньшей отдачи и быстрой перезарядки. Износ резко возрастает."
+        "English": "Pushes the already abused action beyond sensible limits for faster fire, lower recoil and quicker reloads. Weapon wear increases sharply.",
+        "Russian": "Форсирует уже изношенную автоматику сверх разумных пределов ради темпа стрельбы, меньшей отдачи и быстрой перезарядки. Износ резко возрастает."
       }
     },
     {
       "sid": "sid_bprue_unique_contractor_package_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Contractor Package",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Комплект контрактника"
+        "English": "Contractor Package",
+        "Russian": "Комплект контрактника"
       }
     },
     {
       "sid": "sid_bprue_unique_contractor_package_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A professional combat tune combining tighter dispersion, lower recoil and faster aiming at the cost of increased wear.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Профессиональная боевая настройка: меньший разброс и отдача, более быстрое прицеливание ценой повышенного износа."
+        "English": "A professional combat tune combining tighter dispersion, lower recoil and faster aiming at the cost of increased wear.",
+        "Russian": "Профессиональная боевая настройка: меньший разброс и отдача, более быстрое прицеливание ценой повышенного износа."
       }
     },
     {
       "sid": "sid_bprue_unique_high_velocity_545_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "High-Velocity 5.45 System",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Высокоскоростная система 5,45"
+        "English": "High-Velocity 5.45 System",
+        "Russian": "Высокоскоростная система 5,45"
       }
     },
     {
       "sid": "sid_bprue_unique_high_velocity_545_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Exploits the S15's unusual 5.45 conversion for higher projectile velocity, armor penetration and accuracy, at the cost of increased recoil.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Развивает необычную конверсию S15 под 5,45: повышает скорость пули, бронепробитие и точность ценой увеличенной отдачи."
+        "English": "Exploits the S15's unusual 5.45 conversion for higher projectile velocity, armor penetration and accuracy, at the cost of increased recoil.",
+        "Russian": "Развивает необычную конверсию S15 под 5,45: повышает скорость пули, бронепробитие и точность ценой увеличенной отдачи."
       }
     },
     {
       "sid": "sid_bprue_unique_special_operations_package_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Special Operations Package",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Комплект специальных операций"
+        "English": "Special Operations Package",
+        "Russian": "Комплект специальных операций"
       }
     },
     {
       "sid": "sid_bprue_unique_special_operations_package_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Integrates the SOFMOD's extensive equipment into a fast-handling tactical package with quicker aiming, better aimed movement and lower recoil, at the cost of weight.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Объединяет оснащение SOFMOD в тактический комплект с быстрым прицеливанием, лучшей подвижностью в прицеле и меньшей отдачей ценой массы."
+        "English": "Integrates the SOFMOD's extensive equipment into a fast-handling tactical package with quicker aiming, better aimed movement and lower recoil, at the cost of weight.",
+        "Russian": "Объединяет оснащение SOFMOD в тактический комплект с быстрым прицеливанием, лучшей подвижностью в прицеле и меньшей отдачей ценой массы."
       }
     },
     {
       "sid": "sid_bprue_unique_match_fire_control_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Match Fire-Control Group",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Матчевый ударно-спусковой механизм"
+        "English": "Match Fire-Control Group",
+        "Russian": "Матчевый ударно-спусковой механизм"
       }
     },
     {
       "sid": "sid_bprue_unique_match_fire_control_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Refines the Sharpshooter around semi-automatic and burst precision fire with tighter dispersion, lower recoil and higher projectile velocity.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Дорабатывает Sharpshooter для точного одиночного огня и очередей: уменьшает разброс и отдачу и повышает скорость пули."
+        "English": "Refines the Sharpshooter around semi-automatic and burst precision fire with tighter dispersion, lower recoil and higher projectile velocity.",
+        "Russian": "Дорабатывает Sharpshooter для точного одиночного огня и очередей: уменьшает разброс и отдачу и повышает скорость пули."
       }
     },
     {
       "sid": "sid_bprue_unique_master_gunsmith_tuning_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Master Gunsmith Tuning",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Настройка мастера-оружейника"
+        "English": "Master Gunsmith Tuning",
+        "Russian": "Настройка мастера-оружейника"
       }
     },
     {
       "sid": "sid_bprue_unique_master_gunsmith_tuning_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A final hand-fitted tune for the already extensively modified Sotnyk: lower recoil and dispersion, faster reloads and aiming, with increased wear.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Финальная ручная доводка уже глубоко модифицированного Sotnyk: меньше отдача и разброс, быстрее перезарядка и прицеливание ценой повышенного износа."
+        "English": "A final hand-fitted tune for the already extensively modified Sotnyk: lower recoil and dispersion, faster reloads and aiming, with increased wear.",
+        "Russian": "Финальная ручная доводка уже глубоко модифицированного Sotnyk: меньше отдача и разброс, быстрее перезарядка и прицеливание ценой повышенного износа."
       }
     },
     {
       "sid": "sid_bprue_unique_zone_hardened_internals_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Zone-Hardened Internals",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Усиленная для Зоны механика"
+        "English": "Zone-Hardened Internals",
+        "Russian": "Усиленная для Зоны механика"
       }
     },
     {
       "sid": "sid_bprue_unique_zone_hardened_internals_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reinforces the Trophy into an exceptionally durable field rifle with reduced wear per shot, at the cost of additional weight.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Усиливает Trophy до исключительно живучей полевой винтовки со сниженным износом за выстрел ценой дополнительной массы."
+        "English": "Reinforces the Trophy into an exceptionally durable field rifle with reduced wear per shot, at the cost of additional weight.",
+        "Russian": "Усиливает Trophy до исключительно живучей полевой винтовки со сниженным износом за выстрел ценой дополнительной массы."
       }
     },
     {
       "sid": "sid_bprue_unique_experimental_gas_system_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Experimental Gas System",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Экспериментальная газовая система"
+        "English": "Experimental Gas System",
+        "Russian": "Экспериментальная газовая система"
       }
     },
     {
       "sid": "sid_bprue_unique_experimental_gas_system_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "An experimental tune increases fire rate and projectile velocity while controlling recoil, but greatly accelerates weapon wear.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Экспериментальная настройка повышает темп стрельбы и скорость пули при контролируемой отдаче, но значительно ускоряет износ оружия."
+        "English": "An experimental tune increases fire rate and projectile velocity while controlling recoil, but greatly accelerates weapon wear.",
+        "Russian": "Экспериментальная настройка повышает темп стрельбы и скорость пули при контролируемой отдаче, но значительно ускоряет износ оружия."
       }
     },
     {
       "sid": "sid_bprue_unique_high_capacity_conversion_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "High-Capacity Conversion",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Конверсия повышенной ёмкости"
+        "English": "High-Capacity Conversion",
+        "Russian": "Конверсия повышенной ёмкости"
       }
     },
     {
       "sid": "sid_bprue_unique_high_capacity_conversion_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Refines the Night Stalker's 9mm high-capacity setup for faster reloads, lower recoil and better aimed mobility, at the cost of stopping power.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Дорабатывает 9-мм конфигурацию Night Stalker с увеличенной ёмкостью: ускоряет перезарядку, снижает отдачу и улучшает подвижность в прицеле ценой убойной силы."
+        "English": "Refines the Night Stalker's 9mm high-capacity setup for faster reloads, lower recoil and better aimed mobility, at the cost of stopping power.",
+        "Russian": "Дорабатывает 9-мм конфигурацию Night Stalker с увеличенной ёмкостью: ускоряет перезарядку, снижает отдачу и улучшает подвижность в прицеле ценой убойной силы."
       }
     },
     {
       "sid": "sid_bprue_unique_hair_trigger_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Hair Trigger",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Чувствительный спуск"
+        "English": "Hair Trigger",
+        "Russian": "Чувствительный спуск"
       }
     },
     {
       "sid": "sid_bprue_unique_hair_trigger_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Built for the first shot: dramatically faster aiming, tighter dispersion and quicker reloads, at the cost of increased recoil.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Настройка для первого выстрела: значительно ускоряет прицеливание, уменьшает разброс и ускоряет перезарядку ценой повышенной отдачи."
+        "English": "Built for the first shot: dramatically faster aiming, tighter dispersion and quicker reloads, at the cost of increased recoil.",
+        "Russian": "Настройка для первого выстрела: значительно ускоряет прицеливание, уменьшает разброс и ускоряет перезарядку ценой повышенной отдачи."
       }
     },
     {
       "sid": "sid_bprue_unique_competition_fire_control_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Competition Fire Control",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Спортивная автоматика"
+        "English": "Competition Fire Control",
+        "Russian": "Спортивная автоматика"
       }
     },
     {
       "sid": "sid_bprue_unique_competition_fire_control_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tunes Encourage for rapid, controlled follow-up shots with tighter dispersion, lower recoil and a higher fire rate, at the cost of increased wear.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Настраивает Encourage для быстрых контролируемых повторных выстрелов: уменьшает разброс и отдачу и повышает темп стрельбы ценой ускоренного износа."
+        "English": "Tunes Encourage for rapid, controlled follow-up shots with tighter dispersion, lower recoil and a higher fire rate, at the cost of increased wear.",
+        "Russian": "Настраивает Encourage для быстрых контролируемых повторных выстрелов: уменьшает разброс и отдачу и повышает темп стрельбы ценой ускоренного износа."
       }
     },
     {
       "sid": "sid_bprue_unique_street_sweeper_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Street Sweeper",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Уличный чистильщик"
+        "English": "Street Sweeper",
+        "Russian": "Уличный чистильщик"
       }
     },
     {
       "sid": "sid_bprue_unique_street_sweeper_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Pushes GStreet into machine-pistol territory with faster fire, lower recoil and quicker reloads. The overworked mechanism wears much faster.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Превращает GStreet почти в пистолет-пулемёт: повышает темп стрельбы, снижает отдачу и ускоряет перезарядку. Форсированная механика изнашивается значительно быстрее."
+        "English": "Pushes GStreet into machine-pistol territory with faster fire, lower recoil and quicker reloads. The overworked mechanism wears much faster.",
+        "Russian": "Превращает GStreet почти в пистолет-пулемёт: повышает темп стрельбы, снижает отдачу и ускоряет перезарядку. Форсированная механика изнашивается значительно быстрее."
       }
     },
     {
       "sid": "sid_bprue_unique_balanced_action_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Balanced Action",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Сбалансированная автоматика"
+        "English": "Balanced Action",
+        "Russian": "Сбалансированная автоматика"
       }
     },
     {
       "sid": "sid_bprue_unique_balanced_action_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Turns Kaimanov into an exceptionally smooth precision sidearm with lower recoil, faster recovery and quicker aiming, at the cost of damage.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Превращает Kaimanov в исключительно мягкий и точный пистолет: снижает отдачу, ускоряет возврат на цель и прицеливание ценой урона."
+        "English": "Turns Kaimanov into an exceptionally smooth precision sidearm with lower recoil, faster recovery and quicker aiming, at the cost of damage.",
+        "Russian": "Превращает Kaimanov в исключительно мягкий и точный пистолет: снижает отдачу, ускоряет возврат на цель и прицеливание ценой урона."
       }
     },
     {
       "sid": "sid_bprue_unique_9mm_match_conversion_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "9mm Match Conversion",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Матчевая конверсия 9 мм"
+        "English": "9mm Match Conversion",
+        "Russian": "Матчевая конверсия 9 мм"
       }
     },
     {
       "sid": "sid_bprue_unique_9mm_match_conversion_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Exploits Krivenko's 9mm conversion for match-grade control: lower recoil and dispersion with higher projectile velocity, at the cost of damage.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Развивает 9-мм конверсию Krivenko до матчевого уровня: снижает отдачу и разброс и повышает скорость пули ценой урона."
+        "English": "Exploits Krivenko's 9mm conversion for match-grade control: lower recoil and dispersion with higher projectile velocity, at the cost of damage.",
+        "Russian": "Развивает 9-мм конверсию Krivenko до матчевого уровня: снижает отдачу и разброс и повышает скорость пули ценой урона."
       }
     },
     {
       "sid": "sid_bprue_unique_service_weapon_overhaul_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Service Weapon Overhaul",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Глубокая модернизация табельного оружия"
+        "English": "Service Weapon Overhaul",
+        "Russian": "Глубокая модернизация табельного оружия"
       }
     },
     {
       "sid": "sid_bprue_unique_service_weapon_overhaul_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reworks Star into a hard-hitting, durable service pistol with increased damage and armor penetration, at the cost of substantially stronger recoil.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Превращает Star в мощный и надёжный табельный пистолет с повышенным уроном и бронепробитием ценой значительно более сильной отдачи."
+        "English": "Reworks Star into a hard-hitting, durable service pistol with increased damage and armor penetration, at the cost of substantially stronger recoil.",
+        "Russian": "Превращает Star в мощный и надёжный табельный пистолет с повышенным уроном и бронепробитием ценой значительно более сильной отдачи."
       }
     },
     {
       "sid": "sid_bprue_unique_close_quarters_conversion_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Close-Quarters Conversion",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Конверсия для ближнего боя"
+        "English": "Close-Quarters Conversion",
+        "Russian": "Конверсия для ближнего боя"
       }
     },
     {
       "sid": "sid_bprue_unique_close_quarters_conversion_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Refines Rat Killer into an aggressive close-quarters weapon with lower recoil and dispersion and much better aimed mobility, at the cost of damage.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Дорабатывает Rat Killer для агрессивного ближнего боя: снижает отдачу и разброс и значительно улучшает подвижность в прицеле ценой урона."
+        "English": "Refines Rat Killer into an aggressive close-quarters weapon with lower recoil and dispersion and much better aimed mobility, at the cost of damage.",
+        "Russian": "Дорабатывает Rat Killer для агрессивного ближнего боя: снижает отдачу и разброс и значительно улучшает подвижность в прицеле ценой урона."
       }
     },
     {
       "sid": "sid_bprue_unique_extended_assault_feed_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Extended Assault Feed",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Штурмовая система подачи"
+        "English": "Extended Assault Feed",
+        "Russian": "Штурмовая система подачи"
       }
     },
     {
       "sid": "sid_bprue_unique_extended_assault_feed_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tunes Shakh's extended-feed setup for faster fire, quicker reloads and better recoil control, at the cost of substantially increased weapon wear.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Настраивает увеличенную систему подачи Shakh для более высокого темпа огня, быстрой перезарядки и лучшего контроля отдачи ценой значительно повышенного износа."
+        "English": "Tunes Shakh's extended-feed setup for faster fire, quicker reloads and better recoil control, at the cost of substantially increased weapon wear.",
+        "Russian": "Настраивает увеличенную систему подачи Shakh для более высокого темпа огня, быстрой перезарядки и лучшего контроля отдачи ценой значительно повышенного износа."
       }
     },
     {
       "sid": "sid_bprue_unique_silent_entry_package_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Silent Entry Package",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Комплект скрытого проникновения"
+        "English": "Silent Entry Package",
+        "Russian": "Комплект скрытого проникновения"
       }
     },
     {
       "sid": "sid_bprue_unique_silent_entry_package_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Strips Silence down for infiltration and mobility with much faster aiming, faster aimed movement and lower weight, at the cost of damage.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Облегчает Silence для скрытого проникновения и мобильности: значительно ускоряет прицеливание и движение в прицеле и снижает массу ценой урона."
+        "English": "Strips Silence down for infiltration and mobility with much faster aiming, faster aimed movement and lower weight, at the cost of damage.",
+        "Russian": "Облегчает Silence для скрытого проникновения и мобильности: значительно ускоряет прицеливание и движение в прицеле и снижает массу ценой урона."
       }
     },
     {
       "sid": "sid_bprue_unique_overclocked_action_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Overclocked Action",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Форсированная автоматика"
+        "English": "Overclocked Action",
+        "Russian": "Форсированная автоматика"
       }
     },
     {
       "sid": "sid_bprue_unique_overclocked_action_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Pushes Spitfire's already fast action to the limit with a dramatically higher fire rate, lower recoil and quicker reloads. Weapon wear rises sharply.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Форсирует и без того быструю автоматику Spitfire до предела: резко повышает темп огня, снижает отдачу и ускоряет перезарядку. Износ оружия сильно возрастает."
+        "English": "Pushes Spitfire's already fast action to the limit with a dramatically higher fire rate, lower recoil and quicker reloads. Weapon wear rises sharply.",
+        "Russian": "Форсирует и без того быструю автоматику Spitfire до предела: резко повышает темп огня, снижает отдачу и ускоряет перезарядку. Износ оружия сильно возрастает."
       }
     },
     {
       "sid": "sid_bprue_unique_recoil_compensation_system_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Recoil Compensation System",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Система компенсации отдачи"
+        "English": "Recoil Compensation System",
+        "Russian": "Система компенсации отдачи"
       }
     },
     {
       "sid": "sid_bprue_unique_recoil_compensation_system_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Adds an extensive stabilization system to Spitter for exceptionally low recoil, faster shot recovery and tighter dispersion, at the cost of additional weight.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Оснащает Spitter развитой системой стабилизации для исключительно низкой отдачи, быстрого возврата на цель и меньшего разброса ценой дополнительной массы."
+        "English": "Adds an extensive stabilization system to Spitter for exceptionally low recoil, faster shot recovery and tighter dispersion, at the cost of additional weight.",
+        "Russian": "Оснащает Spitter развитой системой стабилизации для исключительно низкой отдачи, быстрого возврата на цель и меньшего разброса ценой дополнительной массы."
       }
     },
     {
       "sid": "sid_bprue_unique_predator_choke_system_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Predator Choke System",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Дульная система Predator"
+        "English": "Predator Choke System",
+        "Russian": "Дульная система Predator"
       }
     },
     {
       "sid": "sid_bprue_unique_predator_choke_system_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Extends Predator's precision role with a tightly controlled pattern, greater effective range and higher projectile velocity, at the cost of increased recoil.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Развивает точную специализацию Predator: сужает осыпь, увеличивает эффективную дальность и скорость снаряда ценой повышенной отдачи."
+        "English": "Extends Predator's precision role with a tightly controlled pattern, greater effective range and higher projectile velocity, at the cost of increased recoil.",
+        "Russian": "Развивает точную специализацию Predator: сужает осыпь, увеличивает эффективную дальность и скорость снаряда ценой повышенной отдачи."
       }
     },
     {
       "sid": "sid_bprue_unique_gas_system_overdrive_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Gas-System Overdrive",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Форсированная газовая система"
+        "English": "Gas-System Overdrive",
+        "Russian": "Форсированная газовая система"
       }
     },
     {
       "sid": "sid_bprue_unique_gas_system_overdrive_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Drives Sledgehammer's semi-automatic action hard for faster fire, lower recoil and quicker reloads. The overstressed system wears much faster.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Форсирует полуавтоматическую систему Sledgehammer ради более высокого темпа огня, меньшей отдачи и быстрой перезарядки. Перегруженная система изнашивается значительно быстрее."
+        "English": "Drives Sledgehammer's semi-automatic action hard for faster fire, lower recoil and quicker reloads. The overstressed system wears much faster.",
+        "Russian": "Форсирует полуавтоматическую систему Sledgehammer ради более высокого темпа огня, меньшей отдачи и быстрой перезарядки. Перегруженная система изнашивается значительно быстрее."
       }
     },
     {
       "sid": "sid_bprue_unique_heavy_magnum_reinforcement_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Heavy Magnum Reinforcement",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Усиление Magnum"
+        "English": "Heavy Magnum Reinforcement",
+        "Russian": "Усиление Magnum"
       }
     },
     {
       "sid": "sid_bprue_unique_heavy_magnum_reinforcement_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reinforces Texas into an exceptionally heavy high-power shotgun with increased damage, armor penetration and recoil control, at the cost of even more weight.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Усиливает Texas до исключительно тяжёлого и мощного дробовика с повышенным уроном, бронепробитием и контролем отдачи ценой ещё большей массы."
+        "English": "Reinforces Texas into an exceptionally heavy high-power shotgun with increased damage, armor penetration and recoil control, at the cost of even more weight.",
+        "Russian": "Усиливает Texas до исключительно тяжёлого и мощного дробовика с повышенным уроном, бронепробитием и контролем отдачи ценой ещё большей массы."
       }
     },
     {
       "sid": "sid_effects_bprue_fire_modes_semi_burst_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Fire modes: Semi-Automatic / Burst",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Режимы огня: одиночный / очередь"
+        "English": "Fire modes: Semi-Automatic / Burst",
+        "Russian": "Режимы огня: одиночный / очередь"
       }
     },
     {
       "sid": "sid_bprue_unique_hunters_field_tuning_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Hunter's Field Tuning",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Полевая настройка охотника"
+        "English": "Hunter's Field Tuning",
+        "Russian": "Полевая настройка охотника"
       }
     },
     {
       "sid": "sid_bprue_unique_hunters_field_tuning_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tunes Gonta for long-range field use with tighter dispersion, greater effective range and higher projectile velocity, at the cost of increased weapon wear.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Настраивает Gonta для дальней стрельбы в полевых условиях: уменьшает разброс, увеличивает эффективную дальность и скорость пули ценой повышенного износа оружия."
+        "English": "Tunes Gonta for long-range field use with tighter dispersion, greater effective range and higher projectile velocity, at the cost of increased weapon wear.",
+        "Russian": "Настраивает Gonta для дальней стрельбы в полевых условиях: уменьшает разброс, увеличивает эффективную дальность и скорость пули ценой повышенного износа оружия."
       }
     },
     {
       "sid": "sid_bprue_unique_mobile_marksman_package_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Mobile Marksman Package",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Комплект мобильного стрелка"
+        "English": "Mobile Marksman Package",
+        "Russian": "Комплект мобильного стрелка"
       }
     },
     {
       "sid": "sid_bprue_unique_mobile_marksman_package_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reworks Cavalier for mobile precision shooting with much faster aiming, better movement while aiming and lower weight, at the cost of increased recoil.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Перерабатывает Cavalier для мобильной точной стрельбы: значительно ускоряет прицеливание и движение в прицеле и снижает массу ценой повышенной отдачи."
+        "English": "Reworks Cavalier for mobile precision shooting with much faster aiming, better movement while aiming and lower weight, at the cost of increased recoil.",
+        "Russian": "Перерабатывает Cavalier для мобильной точной стрельбы: значительно ускоряет прицеливание и движение в прицеле и снижает массу ценой повышенной отдачи."
       }
     },
     {
       "sid": "sid_bprue_unique_match_grade_barrel_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Match-Grade Barrel",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Матчевый ствол"
+        "English": "Match-Grade Barrel",
+        "Russian": "Матчевый ствол"
       }
     },
     {
       "sid": "sid_bprue_unique_match_grade_barrel_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Fits Lynx with a match-grade barrel for exceptional precision, higher projectile velocity and increased armor penetration, at the cost of stronger recoil.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Оснащает Lynx матчевым стволом для исключительной точности, повышенной скорости пули и бронепробития ценой более сильной отдачи."
+        "English": "Fits Lynx with a match-grade barrel for exceptional precision, higher projectile velocity and increased armor penetration, at the cost of stronger recoil.",
+        "Russian": "Оснащает Lynx матчевым стволом для исключительной точности, повышенной скорости пули и бронепробития ценой более сильной отдачи."
       }
     },
     {
       "sid": "sid_bprue_unique_expedition_reinforcement_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Expedition Reinforcement",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Экспедиционное усиление"
+        "English": "Expedition Reinforcement",
+        "Russian": "Экспедиционное усиление"
       }
     },
     {
       "sid": "sid_bprue_unique_expedition_reinforcement_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reinforces Partner for extended expeditions with much greater durability, reduced weapon wear and lower recoil, at the cost of additional weight.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Усиливает Partner для длительных экспедиций: значительно повышает прочность, снижает износ оружия и отдачу ценой дополнительной массы."
+        "English": "Reinforces Partner for extended expeditions with much greater durability, reduced weapon wear and lower recoil, at the cost of additional weight.",
+        "Russian": "Усиливает Partner для длительных экспедиций: значительно повышает прочность, снижает износ оружия и отдачу ценой дополнительной массы."
       }
     },
     {
       "sid": "sid_bprue_unique_snap_shot_system_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Snap-Shot System",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Система быстрого выстрела"
+        "English": "Snap-Shot System",
+        "Russian": "Система быстрого выстрела"
       }
     },
     {
       "sid": "sid_bprue_unique_snap_shot_system_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tunes Whip for rapid target acquisition with dramatically faster aiming, better aimed movement and quicker shot recovery, at the cost of increased recoil.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Настраивает Whip для быстрого захвата цели: резко ускоряет прицеливание, улучшает движение в прицеле и возврат после выстрела ценой повышенной отдачи."
+        "English": "Tunes Whip for rapid target acquisition with dramatically faster aiming, better aimed movement and quicker shot recovery, at the cost of increased recoil.",
+        "Russian": "Настраивает Whip для быстрого захвата цели: резко ускоряет прицеливание, улучшает движение в прицеле и возврат после выстрела ценой повышенной отдачи."
       }
     },
     {
       "sid": "sid_bprue_unique_commanders_assault_package_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Commander's Assault Package",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Штурмовой комплект командира"
+        "English": "Commander's Assault Package",
+        "Russian": "Штурмовой комплект командира"
       }
     },
     {
       "sid": "sid_bprue_unique_commanders_assault_package_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reworks Korshunov's PKP for aggressive mobile assaults with faster aiming, better movement while aiming, quicker reloads and a higher rate of fire, at the cost of increased weapon wear.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Перерабатывает ПКП Коршунова для агрессивного мобильного штурма: ускоряет прицеливание, улучшает движение в прицеле, перезарядку и темп стрельбы ценой повышенного износа оружия."
+        "English": "Reworks Korshunov's PKP for aggressive mobile assaults with faster aiming, better movement while aiming, quicker reloads and a higher rate of fire, at the cost of increased weapon wear.",
+        "Russian": "Перерабатывает ПКП Коршунова для агрессивного мобильного штурма: ускоряет прицеливание, улучшает движение в прицеле, перезарядку и темп стрельбы ценой повышенного износа оружия."
       }
     },
     {
       "sid": "sid_bprue_unique_heavy_duty_fire_system_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Heavy-Duty Fire System",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Усиленная система непрерывного огня"
+        "English": "Heavy-Duty Fire System",
+        "Russian": "Усиленная система непрерывного огня"
       }
     },
     {
       "sid": "sid_bprue_unique_heavy_duty_fire_system_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reinforces Tank for sustained heavy fire with reduced weapon wear, lower recoil, quicker shot recovery and a higher rate of fire, at the cost of substantially increased weight.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Усиливает Tank для продолжительного интенсивного огня: снижает износ и отдачу, ускоряет возврат после выстрела и повышает темп стрельбы ценой значительно увеличенной массы."
+        "English": "Reinforces Tank for sustained heavy fire with reduced weapon wear, lower recoil, quicker shot recovery and a higher rate of fire, at the cost of substantially increased weight.",
+        "Russian": "Усиливает Tank для продолжительного интенсивного огня: снижает износ и отдачу, ускоряет возврат после выстрела и повышает темп стрельбы ценой значительно увеличенной массы."
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_subsonic_specialist_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Subsonic Specialist"
+        "English": "Subsonic Specialist"
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_subsonic_specialist_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tunes the AK9 around its heavy subsonic role with increased armor penetration and improved recoil control, at the cost of effective range."
+        "English": "Tunes the AK9 around its heavy subsonic role with increased armor penetration and improved recoil control, at the cost of effective range."
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_featherweight_assembly_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Featherweight Assembly"
+        "English": "Featherweight Assembly"
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_featherweight_assembly_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Pushes the Arev Light's lightweight identity further with lower weight and faster aiming, at the cost of increased recoil."
+        "English": "Pushes the Arev Light's lightweight identity further with lower weight and faster aiming, at the cost of increased recoil."
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_breaching_configuration_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Breaching Configuration"
+        "English": "Breaching Configuration"
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_breaching_configuration_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Builds the Clapper into a heavier, more controlled close-range shotgun with tighter dispersion and reduced recoil."
+        "English": "Builds the Clapper into a heavier, more controlled close-range shotgun with tighter dispersion and reduced recoil."
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_indestructible_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Indestructible"
+        "English": "Indestructible"
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_indestructible_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Reinforces the Defender into an exceptionally durable heavy shotgun with reduced wear per shot, at the cost of even more weight."
+        "English": "Reinforces the Defender into an exceptionally durable heavy shotgun with reduced wear per shot, at the cost of even more weight."
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_duty_service_package_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Duty Service Package"
+        "English": "Duty Service Package"
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_duty_service_package_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "A disciplined service-rifle tune for the Dnipro Duty that improves recoil control and reduces weapon wear, at the cost of additional weight."
+        "English": "A disciplined service-rifle tune for the Dnipro Duty that improves recoil control and reduces weapon wear, at the cost of additional weight."
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_airborne_marksman_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Airborne Marksman"
+        "English": "Airborne Marksman"
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_airborne_marksman_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Pushes the Fallschirmjager toward mobile precision with tighter dispersion, faster aiming and lower weight, at the cost of stronger recoil."
+        "English": "Pushes the Fallschirmjager toward mobile precision with tighter dispersion, faster aiming and lower weight, at the cost of stronger recoil."
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_match_fire_control_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Match Fire-Control Group"
+        "English": "Match Fire-Control Group"
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_match_fire_control_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Refines the HSG72's precision identity with tighter dispersion, lower recoil and increased armor penetration."
+        "English": "Refines the HSG72's precision identity with tighter dispersion, lower recoil and increased armor penetration."
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_freedom_overclock_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Freedom Overclock"
+        "English": "Freedom Overclock"
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_freedom_overclock_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Overdrives the Kharod Freedom for a higher fire rate, accepting stronger recoil and accelerated weapon wear."
+        "English": "Overdrives the Kharod Freedom for a higher fire rate, accepting stronger recoil and accelerated weapon wear."
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_flechette_specialist_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Flechette Specialist"
+        "English": "Flechette Specialist"
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_flechette_specialist_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Pushes the SPSA Sniper toward armored targets with substantially higher armor penetration and tighter dispersion, at the cost of raw damage."
+        "English": "Pushes the SPSA Sniper toward armored targets with substantially higher armor penetration and tighter dispersion, at the cost of raw damage."
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_cqb_conversion_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "CQB Conversion"
+        "English": "CQB Conversion"
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_cqb_conversion_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Commits the SVU CQB to close-range fighting with much faster aiming and lower recoil, at the cost of effective range."
+        "English": "Commits the SVU CQB to close-range fighting with much faster aiming and lower recoil, at the cost of effective range."
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_lightweight_marksman_kit_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Lightweight Marksman Kit"
+        "English": "Lightweight Marksman Kit"
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_lightweight_marksman_kit_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Further lightens the Tundra for faster handling and aiming, trading some recoil control for mobility."
+        "English": "Further lightens the Tundra for faster handling and aiming, trading some recoil control for mobility."
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_warsaw_pact_tuning_name",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Warsaw Pact Tuning"
+        "English": "Warsaw Pact Tuning"
       }
     },
     {
       "sid": "sid_bprue_dlc_dlc1_warsaw_pact_tuning_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Tunes the Warszawa's 5.45 configuration for faster, more controllable automatic fire, at the cost of additional weapon weight."
+        "English": "Tunes the Warszawa's 5.45 configuration for faster, more controllable automatic fire, at the cost of additional weapon weight."
       }
     },
     {
       "sid": "sid_bprue_sniper_caliber_762sniper_to_762nato_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Permanently converts the weapon from the game's 7.62 mm sniper cartridge to 7.62x51 mm NATO ammunition. Recoil is reduced by 10%, but damage is reduced by 10%. This specialization cannot be combined with another caliber conversion.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Навсегда переводит оружие с снайперского патрона 7,62х54 мм на боеприпасы 7,62x51 мм НАТО. Отдача снижается на 10%, но урон также снижается на 10%. Эту специализацию нельзя совместить с другой конверсией калибра."
+        "English": "Permanently converts the weapon from the game's 7.62 mm sniper cartridge to 7.62x51 mm NATO ammunition. Recoil is reduced by 10%, but damage is reduced by 10%. This specialization cannot be combined with another caliber conversion.",
+        "Russian": "Навсегда переводит оружие с снайперского патрона 7,62х54 мм на боеприпасы 7,62x51 мм НАТО. Отдача снижается на 10%, но урон также снижается на 10%. Эту специализацию нельзя совместить с другой конверсией калибра."
       }
     },
     {
       "sid": "sid_bprue_sniper_caliber_762nato_to_762sniper_description",
       "languages": {
-        "<LocalizationLanguage.ENGLISH: 1>": "Permanently converts the weapon from 7.62x51 mm NATO to the game's 7.62 mm sniper cartridge. Damage increases by 10% and armor penetration by 15%, but recoil and weapon wear increase by 15%. This specialization cannot be combined with another caliber conversion.",
-        "<LocalizationLanguage.RUSSIAN: 17>": "Навсегда переводит оружие с 7,62x51 мм НАТО на снайперский патрон 7,62х54 мм. Урон увеличивается на 10%, бронепробиваемость — на 15%, но отдача и износ оружия также увеличиваются на 15%. Эту специализацию нельзя совместить с другой конверсией калибра."
+        "English": "Permanently converts the weapon from 7.62x51 mm NATO to the game's 7.62 mm sniper cartridge. Damage increases by 10% and armor penetration by 15%, but recoil and weapon wear increase by 15%. This specialization cannot be combined with another caliber conversion.",
+        "Russian": "Навсегда переводит оружие с 7,62x51 мм НАТО на снайперский патрон 7,62х54 мм. Урон увеличивается на 10%, бронепробиваемость — на 15%, но отдача и износ оружия также увеличиваются на 15%. Эту специализацию нельзя совместить с другой конверсией калибра."
       }
     }
   ]
