@@ -31,7 +31,8 @@
               "text_sid": "sid_bprue_armor_freedom_loadbearing_name",
               "hint_sid": "sid_bprue_armor_freedom_helmet_loadbearing_description",
               "effects": [
-                "BPRUE_Armor_Freedom_Helmet_LoadBearing"
+                "BPRUE_Armor_Freedom_Helmet_LoadBearing",
+                "BPRUE_Armor_Freedom_Helmet_DurabilityTradeoff"
               ]
             }
           ]
