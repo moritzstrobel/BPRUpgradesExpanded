@@ -61,6 +61,10 @@ def main():
     templates={"TemplateArmor","TemplateHelmet"}; rows=[]\n    excluded=[]
     for name,entry in structs.items():
         direct=direct_fields(entry["block"]); fields=effective_fields(name,structs)
+        sid=fields.get("SID",name)
+        if name.startswith("NPC_") or sid.startswith("NPC_"):
+            excluded.append({"sid":sid,"struct":name,"reason":"NPC_PREFIX","refkey":entry["refkey"]})
+            continue
         rows.append({
             "sid":sid,"struct":name,
             "category":classify(fields.get("ItemSlotType"),fields.get("bBlockHead")),
@@ -79,6 +83,7 @@ def main():
             "SUIT":"effective ItemSlotType == EInventoryEquipmentSlot::Body and bBlockHead == false",
             "FULL_BODY_SUIT":"effective ItemSlotType == EInventoryEquipmentSlot::Body and bBlockHead == true"},
         "templates":[r for r in rows if r["struct"] in templates],
+        "excluded":excluded,
         "counts":{k:len(v) for k,v in categories.items()},
         "categories":categories}
     REPORT_DIR.mkdir(parents=True,exist_ok=True)
