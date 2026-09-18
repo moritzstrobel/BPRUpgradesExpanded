@@ -238,16 +238,18 @@
   ],
   "faction_hint_rules": {
     "Dolg": "DUTY",
+    "Duty": "DUTY",
     "Svoboda": "FREEDOM",
     "Mercenaries": "MERCENARY",
     "Monolith": "MONOLITH",
     "Spark": "SPARK",
     "Varta": "WARD",
     "Military": "MILITARY",
-    "Neutral": "FREE_STALKER"
+    "Neutral": "FREE_STALKER",
+    "Bandit": "BANDIT"
   },
   "faction_counts": {
-    "DUTY": 7,
+    "DUTY": 9,
     "FREEDOM": 7,
     "MERCENARY": 4,
     "MONOLITH": 4,
@@ -255,8 +257,9 @@
     "WARD": 3,
     "MILITARY": 5,
     "FREE_STALKER": 7,
+    "BANDIT": 4,
     "AMBIGUOUS": 0,
-    "UNRESOLVED": 10
+    "UNRESOLVED": 4
   },
   "factions": {
     "DUTY": [
@@ -341,6 +344,40 @@
         "faction_matches": [
           {
             "token": "Dolg",
+            "faction": "DUTY"
+          }
+        ]
+      },
+      {
+        "sid": "Heavy_Duty_Helmet",
+        "struct": "Heavy_Duty_Helmet",
+        "category": "HELMET",
+        "item_slot_type": "EInventoryEquipmentSlot::Head",
+        "blocks_head": false,
+        "refkey": "TemplateHelmet",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "DUTY",
+        "faction_matches": [
+          {
+            "token": "Duty",
+            "faction": "DUTY"
+          }
+        ]
+      },
+      {
+        "sid": "Light_Duty_Helmet",
+        "struct": "Light_Duty_Helmet",
+        "category": "HELMET",
+        "item_slot_type": "EInventoryEquipmentSlot::Head",
+        "blocks_head": false,
+        "refkey": "TemplateHelmet",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "DUTY",
+        "faction_matches": [
+          {
+            "token": "Duty",
             "faction": "DUTY"
           }
         ]
@@ -972,6 +1009,76 @@
         ]
       }
     ],
+    "BANDIT": [
+      {
+        "sid": "Light_Bandit_Helmet",
+        "struct": "Light_Bandit_Helmet",
+        "category": "HELMET",
+        "item_slot_type": "EInventoryEquipmentSlot::Head",
+        "blocks_head": false,
+        "refkey": "TemplateHelmet",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "BANDIT",
+        "faction_matches": [
+          {
+            "token": "Bandit",
+            "faction": "BANDIT"
+          }
+        ]
+      },
+      {
+        "sid": "Jacket_Bandit_Armor",
+        "struct": "Jacket_Bandit_Armor",
+        "category": "SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": false,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "BANDIT",
+        "faction_matches": [
+          {
+            "token": "Bandit",
+            "faction": "BANDIT"
+          }
+        ]
+      },
+      {
+        "sid": "Middle_Bandit_Armor",
+        "struct": "Middle_Bandit_Armor",
+        "category": "SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": false,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "BANDIT",
+        "faction_matches": [
+          {
+            "token": "Bandit",
+            "faction": "BANDIT"
+          }
+        ]
+      },
+      {
+        "sid": "SkinJacket_Bandit_Armor",
+        "struct": "SkinJacket_Bandit_Armor",
+        "category": "SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": false,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "BANDIT",
+        "faction_matches": [
+          {
+            "token": "Bandit",
+            "faction": "BANDIT"
+          }
+        ]
+      }
+    ],
     "AMBIGUOUS": [],
     "UNRESOLVED": [
       {
@@ -1021,78 +1128,6 @@
         "direct_bBlockHead": "true",
         "faction_candidate": "UNRESOLVED",
         "faction_matches": []
-      },
-      {
-        "sid": "Heavy_Duty_Helmet",
-        "struct": "Heavy_Duty_Helmet",
-        "category": "HELMET",
-        "item_slot_type": "EInventoryEquipmentSlot::Head",
-        "blocks_head": false,
-        "refkey": "TemplateHelmet",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null,
-        "faction_candidate": "UNRESOLVED",
-        "faction_matches": []
-      },
-      {
-        "sid": "Light_Bandit_Helmet",
-        "struct": "Light_Bandit_Helmet",
-        "category": "HELMET",
-        "item_slot_type": "EInventoryEquipmentSlot::Head",
-        "blocks_head": false,
-        "refkey": "TemplateHelmet",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null,
-        "faction_candidate": "UNRESOLVED",
-        "faction_matches": []
-      },
-      {
-        "sid": "Light_Duty_Helmet",
-        "struct": "Light_Duty_Helmet",
-        "category": "HELMET",
-        "item_slot_type": "EInventoryEquipmentSlot::Head",
-        "blocks_head": false,
-        "refkey": "TemplateHelmet",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null,
-        "faction_candidate": "UNRESOLVED",
-        "faction_matches": []
-      },
-      {
-        "sid": "Jacket_Bandit_Armor",
-        "struct": "Jacket_Bandit_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null,
-        "faction_candidate": "UNRESOLVED",
-        "faction_matches": []
-      },
-      {
-        "sid": "Middle_Bandit_Armor",
-        "struct": "Middle_Bandit_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null,
-        "faction_candidate": "UNRESOLVED",
-        "faction_matches": []
-      },
-      {
-        "sid": "SkinJacket_Bandit_Armor",
-        "struct": "SkinJacket_Bandit_Armor",
-        "category": "SUIT",
-        "item_slot_type": "EInventoryEquipmentSlot::Body",
-        "blocks_head": false,
-        "refkey": "TemplateArmor",
-        "direct_item_slot_type": null,
-        "direct_bBlockHead": null,
-        "faction_candidate": "UNRESOLVED",
-        "faction_matches": []
       }
     ]
   },
@@ -1131,8 +1166,13 @@
         "refkey": "TemplateHelmet",
         "direct_item_slot_type": null,
         "direct_bBlockHead": null,
-        "faction_candidate": "UNRESOLVED",
-        "faction_matches": []
+        "faction_candidate": "DUTY",
+        "faction_matches": [
+          {
+            "token": "Duty",
+            "faction": "DUTY"
+          }
+        ]
       },
       {
         "sid": "Heavy_Military_Helmet",
@@ -1194,8 +1234,13 @@
         "refkey": "TemplateHelmet",
         "direct_item_slot_type": null,
         "direct_bBlockHead": null,
-        "faction_candidate": "UNRESOLVED",
-        "faction_matches": []
+        "faction_candidate": "BANDIT",
+        "faction_matches": [
+          {
+            "token": "Bandit",
+            "faction": "BANDIT"
+          }
+        ]
       },
       {
         "sid": "Light_Duty_Helmet",
@@ -1206,8 +1251,13 @@
         "refkey": "TemplateHelmet",
         "direct_item_slot_type": null,
         "direct_bBlockHead": null,
-        "faction_candidate": "UNRESOLVED",
-        "faction_matches": []
+        "faction_candidate": "DUTY",
+        "faction_matches": [
+          {
+            "token": "Duty",
+            "faction": "DUTY"
+          }
+        ]
       },
       {
         "sid": "Light_Mercenaries_Helmet",
@@ -1373,8 +1423,13 @@
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
         "direct_bBlockHead": null,
-        "faction_candidate": "UNRESOLVED",
-        "faction_matches": []
+        "faction_candidate": "BANDIT",
+        "faction_matches": [
+          {
+            "token": "Bandit",
+            "faction": "BANDIT"
+          }
+        ]
       },
       {
         "sid": "Jemmy_Neutral_Armor",
@@ -1419,8 +1474,13 @@
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
         "direct_bBlockHead": null,
-        "faction_candidate": "UNRESOLVED",
-        "faction_matches": []
+        "faction_candidate": "BANDIT",
+        "faction_matches": [
+          {
+            "token": "Bandit",
+            "faction": "BANDIT"
+          }
+        ]
       },
       {
         "sid": "Nasos_Neutral_Armor",
@@ -1499,8 +1559,13 @@
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
         "direct_bBlockHead": null,
-        "faction_candidate": "UNRESOLVED",
-        "faction_matches": []
+        "faction_candidate": "BANDIT",
+        "faction_matches": [
+          {
+            "token": "Bandit",
+            "faction": "BANDIT"
+          }
+        ]
       },
       {
         "sid": "Zorya_Neutral_Armor",
