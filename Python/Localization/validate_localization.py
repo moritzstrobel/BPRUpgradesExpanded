@@ -42,8 +42,8 @@ REFKEY_RE = re.compile(r"\brefkey=([^}\s]+)")
 PROTOTYPE_RE = re.compile(r"(?ms)^([A-Za-z0-9_]+)\s*:\s*struct\.begin([^\n]*)\n(.*?)^struct\.end")
 
 
-def load_localization() -> tuple[set[str], list[dict]]:
-    result: set[str] = set(); duplicates: set[str] = set(); missing_languages: list[dict] = []
+def load_localization() -> tuple[set[str], dict[str, dict[str, str]], list[dict]]:
+    result: set[str] = set(); source_entries: dict[str, dict[str, str]] = {}; duplicates: set[str] = set(); missing_languages: list[dict] = []
     for path in LOCALIZATION_FILES:
         data = json.loads(path.read_text(encoding="utf-8"))
         for entry in data.get("entries", []):
@@ -52,6 +52,7 @@ def load_localization() -> tuple[set[str], list[dict]]:
             result.add(sid)
 
             languages = entry.get("languages", {})
+            source_entries[sid] = {str(language): str(text) for language, text in languages.items()}
             missing = [language for language in REQUIRED_LANGUAGES if not str(languages.get(language, "")).strip()]
             if missing:
                 missing_languages.append({
@@ -60,10 +61,10 @@ def load_localization() -> tuple[set[str], list[dict]]:
                     "missing_languages": missing,
                 })
     if duplicates: raise ValueError("Duplicate localization SIDs: " + ", ".join(sorted(duplicates)))
-    return result, missing_languages
+    return result, source_entries, missing_languages
 
 
-def audit_asset_snapshot(localization_sids: set[str]) -> dict:
+def audit_asset_snapshot(localization_sids: set[str], source_entries: dict[str, dict[str, str]]) -> dict:
     if not ASSET_SNAPSHOT.exists():
         return {"available": False, "error_count": 1, "errors": [f"Localization asset snapshot missing: {ASSET_SNAPSHOT}. Run export_localization_asset_snapshot.py in ZoneKit first."]}
     data = json.loads(ASSET_SNAPSHOT.read_text(encoding="utf-8"))
@@ -76,14 +77,28 @@ def audit_asset_snapshot(localization_sids: set[str]) -> dict:
     asset_set = set(counts)
     missing = sorted(localization_sids - asset_set)
     asset_only = sorted(asset_set - localization_sids)
+    content_mismatches = []
+    for entry in entries:
+        sid = str(entry.get("sid", "")).strip()
+        if sid not in source_entries:
+            continue
+        exported = str(entry.get("export_text", ""))
+        for language in REQUIRED_LANGUAGES:
+            expected = source_entries[sid].get(language, "")
+            escaped = expected.replace("\\", "\\\\").replace('"', '\\"').replace("\r", "").replace("\n", "\\n")
+            needle = "(" + language + ', "' + escaped + '")'
+            if needle not in exported:
+                content_mismatches.append({"sid": sid, "language": language})
     errors = []
     if duplicates: errors.append("Duplicate asset SIDs: " + ", ".join(duplicates))
     if missing: errors.append(f"{len(missing)} source localization SIDs are missing from the asset snapshot")
+    if content_mismatches: errors.append(f"{len(content_mismatches)} source language values differ from the asset snapshot")
     return {
         "available": True, "asset_entry_count": len(asset_sids), "source_entry_count": len(localization_sids),
         "missing_count": len(missing), "missing_sids": missing,
         "asset_only_count": len(asset_only), "asset_only_sids": asset_only,
         "duplicate_count": len(duplicates), "duplicate_sids": duplicates,
+        "content_mismatch_count": len(content_mismatches), "content_mismatches": content_mismatches,
         "error_count": len(errors), "errors": errors,
     }
 
@@ -204,12 +219,12 @@ def audit_referenced_effects(models: dict[str, object], localization_sids: set[s
 
 
 def main() -> None:
-    localization_sids, missing_languages = load_localization()
+    localization_sids, source_entries, missing_languages = load_localization()
     base_model, configs = build_model(apply_layout=False); dlc_models = build_dlc_outputs(base_model, configs)
     models = {"BaseGame": base_model, **dlc_models}
     scopes = {scope: audit_upgrade_model(model, localization_sids) for scope, model in models.items()}
     effects = audit_referenced_effects(models, localization_sids)
-    asset_snapshot = audit_asset_snapshot(localization_sids)
+    asset_snapshot = audit_asset_snapshot(localization_sids, source_entries)
     generated_cfg = audit_generated_cfg_localization(localization_sids)
     missing_by_sid: dict[str, list[str]] = defaultdict(list)
     for scope, audit in scopes.items():
