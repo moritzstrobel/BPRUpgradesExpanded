@@ -1,5 +1,5 @@
 {
-  "localization_sid_count": 309,
+  "localization_sid_count": 321,
   "required_languages": [
     "English",
     "Russian"
@@ -2924,8 +2924,8 @@
   },
   "asset_snapshot": {
     "available": true,
-    "asset_entry_count": 408,
-    "source_entry_count": 309,
+    "asset_entry_count": 420,
+    "source_entry_count": 321,
     "missing_count": 0,
     "missing_sids": [],
     "asset_only_count": 99,
