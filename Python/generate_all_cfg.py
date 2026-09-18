@@ -22,6 +22,7 @@ from unique_weapon_modules import add_unique_modules, add_unique_signatures, ren
 from vanilla_upgrade_layout import DLC_ROOT, _direct_child, _direct_scalar, _indexed_children, _refkey, _sid, _top_level_blocks, render_vanilla_compaction_patch
 
 from CFGGenerators.AssaultRifles import generate_assault_rifle_upgrades as ar
+from CFGGenerators.Armor import generate_armor_signatures as armor
 from CFGGenerators.MachineGuns import generate_machine_gun_upgrades as machine_gun
 from CFGGenerators.Pistols import generate_pistol_upgrades as pistol
 from CFGGenerators.Shotguns import generate_shotgun_upgrades as shotgun
@@ -42,6 +43,8 @@ NPC_PATH = CONTENT_ROOT / "GameLite/GameData/NPCPrototypes/NPCPrototypes_patch_B
 VANILLA_COMPACTION_PATH = CONTENT_ROOT / "GameLite/GameData/UpgradePrototypes/UpgradePrototypes_patch_BPRUE.cfg"
 VANILLA_EFFECT_UI_PATH = CONTENT_ROOT / "GameLite/GameData/EffectPrototypes/EffectPrototypes_patch_BPRUE_UI.cfg"
 MACHINE_GUN_EFFECT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_MachineGunEffectPrototypes.cfg"
+ARMOR_EFFECT_PATH = armor.EFFECT_OUTPUT_PATH
+ARMOR_PATCH_PATH = armor.ARMOR_PATCH_PATH
 SHARED_EFFECT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_SharedEffectPrototypes.cfg"
 UNIQUE_SIGNATURE_EFFECT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_UniqueSignatureEffectPrototypes.cfg"
 MIN_SECTION_DISTANCE = 80.0
@@ -228,10 +231,16 @@ def main():
     print("Building unified weapon upgrade model")
     model, configs = build_model(apply_layout=False); dlc_models = build_dlc_outputs(model, configs); apply_layout_to_model(model); model.validate(); print(f"Built {model.summary()}")
     attachments = {sid: attachment_block(data) for sid, data in CONVERSION_ATTACHMENTS.items()}
-    upgrade_text = render_consolidated_upgrade_prototypes(model); setup_text = render_final_general_setup_patch(model, attachments); npc_text = render_technician_patch(model, dlc_models=dlc_models); weapon_text = render_weapon_sections_patch(model)
+    armor_upgrades = armor.build_upgrades()
+    weapon_upgrade_text = render_consolidated_upgrade_prototypes(model)
+    armor_upgrade_text = armor.render_upgrade_fragment(armor_upgrades)
+    # One consolidated UpgradePrototypes file owns both domains. Armor is appended
+    # to the generated weapon graph; neither generator rewrites the other's data.
+    upgrade_text = weapon_upgrade_text.rstrip() + "\n\n" + armor_upgrade_text
+    setup_text = render_final_general_setup_patch(model, attachments); npc_text = render_technician_patch(model, dlc_models=dlc_models); weapon_text = render_weapon_sections_patch(model)
     validate_rendered_outputs(model, upgrade_text, setup_text, npc_text)
     write(UPGRADES_PATH, upgrade_text); write(GENERAL_SETUP_PATH, setup_text); write(WEAPON_PATH, weapon_text); write(NPC_PATH, npc_text); write(VANILLA_COMPACTION_PATH, render_vanilla_compaction_patch())
-    write(VANILLA_EFFECT_UI_PATH, render_vanilla_effect_ui_patch()); _remove_obsolete_bprue_effect_ui_patch(); _remove_independent_dlc_output()
+    write(VANILLA_EFFECT_UI_PATH, render_vanilla_effect_ui_patch()); write(ARMOR_PATCH_PATH, armor.render_armor_patch(armor_upgrades)); _remove_obsolete_bprue_effect_ui_patch(); _remove_independent_dlc_output()
     for pack, dlc_model in sorted(dlc_models.items()):
         dlc_upgrade_text = render_consolidated_upgrade_prototypes(dlc_model); dlc_setup_text = render_dlc_general_setup_patch(dlc_model, pack); dlc_weapon_text = render_weapon_sections_patch(dlc_model, content_pack=pack); validate_rendered_outputs(dlc_model, dlc_upgrade_text, dlc_setup_text)
         pack_root = DLC_OUTPUT_ROOT / pack
@@ -239,8 +248,8 @@ def main():
         write(pack_root / "WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg", dlc_setup_text)
         write(pack_root / "ItemPrototypes/ItemPrototypes_patch_BPRUE.cfg", dlc_weapon_text)
         write(pack_root / "EffectPrototypes/EffectPrototypes_patch_BPRUE.cfg", render_dlc_signature_effects(pack))
-    write(ar.EFFECT_OUTPUT_PATH, ar.render_effect_patch(configs["ar"])); write(smg.EFFECT_OUTPUT_PATH, smg.render_effects()); write(shotgun.EFFECT_OUTPUT, shotgun.render_effects()); write(pistol.EFFECT_OUTPUT, pistol.render_effects()); write(sniper.EFFECT_OUTPUT, sniper.render_effects()); write(MACHINE_GUN_EFFECT_PATH, machine_gun.render_effects()); write(SHARED_EFFECT_PATH, render_shared_effects()); write(UNIQUE_SIGNATURE_EFFECT_PATH, render_unique_signature_effects())
-    print(f"Validated and rendered {len(model.upgrades)} base/Unique upgrades plus {sum(len(m.upgrades) for m in dlc_models.values())} DLC upgrades.")
+    write(ar.EFFECT_OUTPUT_PATH, ar.render_effect_patch(configs["ar"])); write(smg.EFFECT_OUTPUT_PATH, smg.render_effects()); write(shotgun.EFFECT_OUTPUT, shotgun.render_effects()); write(pistol.EFFECT_OUTPUT, pistol.render_effects()); write(sniper.EFFECT_OUTPUT, sniper.render_effects()); write(MACHINE_GUN_EFFECT_PATH, machine_gun.render_effects()); write(SHARED_EFFECT_PATH, render_shared_effects()); write(UNIQUE_SIGNATURE_EFFECT_PATH, render_unique_signature_effects()); write(ARMOR_EFFECT_PATH, armor.render_effects())
+    print(f"Validated and rendered {len(model.upgrades)} weapon upgrades, {len(armor_upgrades)} armor signature upgrades, plus {sum(len(m.upgrades) for m in dlc_models.values())} DLC upgrades.")
 
 
 if __name__ == "__main__": main()
