@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from technician_support import technician_upgrade_assignments, vanilla_technician_direct_upgrade_indices
+from technician_support import (\n    dlc_technician_general_setups,\n    technician_upgrade_assignments,\n    vanilla_technician_direct_upgrade_indices,\n)
 from upgrade_build_model import UpgradeBuildModel, UpgradeDefinition
 from vanilla_upgrade_layout import dlc_general_setup_upgrades, vanilla_general_setup_upgrades
 
@@ -118,11 +118,31 @@ def render_dlc_general_setup_patch(model: UpgradeBuildModel, content_pack: str) 
     return _render_final_setup(model, dlc_general_setup_upgrades(content_pack), scope=f"DLCGameData/{content_pack}")
 
 
-def render_technician_patch(model: UpgradeBuildModel) -> str:
+def render_technician_patch(
+    model: UpgradeBuildModel,
+    *,
+    dlc_models: dict[str, UpgradeBuildModel] | None = None,
+) -> str:
     assignments = technician_upgrade_assignments(model)
-    vanilla_last_indices = vanilla_technician_direct_upgrade_indices()
+    direct_owners = vanilla_technician_direct_upgrade_indices()
+
+    # DLC upgrades live in separate models, but technician capability still lives
+    # in BaseGame NPCPrototypes. Merge them into the same indexed NPC patch.
+    for content_pack, dlc_model in sorted((dlc_models or {}).items()):
+        support = dlc_technician_general_setups(content_pack)
+        candidates = dlc_model.technician_upgrades()
+        for technician_sid, supported_setups in support.items():
+            if technician_sid not in direct_owners:
+                continue
+            additions = [
+                upgrade
+                for upgrade in candidates
+                if any(setup_sid in supported_setups for setup_sid in upgrade.general_setup_sids)
+            ]
+            assignments.setdefault(technician_sid, []).extend(additions)
+
     lines = [
-        "// AUTO-GENERATED - BPRUE upgrades follow each technician's effective Vanilla weapon support.",
+        "// AUTO-GENERATED - BPRUE upgrades follow each technician's effective Vanilla/DLC weapon support.",
         "// Only technicians that directly own a Vanilla Upgrades array are patched.",
         "// Entries continue after Vanilla numeric indices; wildcard append is intentionally avoided.",
         "",
@@ -130,9 +150,13 @@ def render_technician_patch(model: UpgradeBuildModel) -> str:
     for technician_sid, upgrades in assignments.items():
         if not upgrades:
             continue
-        next_index = vanilla_last_indices[technician_sid] + 1
+        # Keep one occurrence per SID while preserving BaseGame -> DLC order.
+        upgrades = list({upgrade.sid: upgrade for upgrade in upgrades}.values())
+        next_index = direct_owners[technician_sid] + 1
         lines += [f"{technician_sid} : struct.begin {{bpatch}}", "   Upgrades : struct.begin {bpatch}"]
         for offset, upgrade in enumerate(upgrades):
             lines += [f"      [{next_index + offset}] : struct.begin", f"         UpgradePrototypeSID = {upgrade.sid}", "         Enabled = true", "      struct.end"]
         lines += ["   struct.end", "struct.end", ""]
     return "\n".join(lines).rstrip() + "\n"
+
+
