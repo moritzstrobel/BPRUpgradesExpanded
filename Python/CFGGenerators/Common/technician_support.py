@@ -10,6 +10,7 @@ from vanilla_upgrade_layout import (
     _direct_scalar,
     _read_blocks,
     _refkey,
+    dlc_general_setup_upgrades,
     vanilla_general_setup_upgrades,
 )
 
@@ -146,19 +147,36 @@ def vanilla_technician_upgrade_sids() -> dict[str, tuple[str, ...]]:
     return result
 
 
-@lru_cache(maxsize=1)
-def vanilla_upgrade_general_setups() -> dict[str, frozenset[str]]:
-    """Invert effective Vanilla GeneralSetup upgrade arrays."""
+def _upgrade_general_setups(upgrades_by_setup: dict[str, list[str]]) -> dict[str, frozenset[str]]:
     result: dict[str, set[str]] = {}
-    for setup_sid, upgrade_sids in vanilla_general_setup_upgrades().items():
+    for setup_sid, upgrade_sids in upgrades_by_setup.items():
         for upgrade_sid in upgrade_sids:
             result.setdefault(upgrade_sid, set()).add(setup_sid)
     return {sid: frozenset(setups) for sid, setups in result.items()}
 
 
 @lru_cache(maxsize=1)
+def vanilla_upgrade_general_setups() -> dict[str, frozenset[str]]:
+    """Invert effective Vanilla GeneralSetup upgrade arrays."""
+    return _upgrade_general_setups(vanilla_general_setup_upgrades())
+
+
+@lru_cache(maxsize=1)
 def vanilla_technician_general_setups() -> dict[str, frozenset[str]]:
     upgrade_to_setups = vanilla_upgrade_general_setups()
+    result: dict[str, frozenset[str]] = {}
+    for technician_sid, upgrade_sids in vanilla_technician_upgrade_sids().items():
+        setups: set[str] = set()
+        for upgrade_sid in upgrade_sids:
+            setups.update(upgrade_to_setups.get(upgrade_sid, ()))
+        result[technician_sid] = frozenset(setups)
+    return result
+
+
+@lru_cache(maxsize=None)
+def dlc_technician_general_setups(content_pack: str) -> dict[str, frozenset[str]]:
+    """Resolve DLC weapon support from the Vanilla upgrades each technician can install."""
+    upgrade_to_setups = _upgrade_general_setups(dlc_general_setup_upgrades(content_pack))
     result: dict[str, frozenset[str]] = {}
     for technician_sid, upgrade_sids in vanilla_technician_upgrade_sids().items():
         setups: set[str] = set()
