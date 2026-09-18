@@ -123,24 +123,46 @@ for entry in localized_texts:
     sid=get_sid(entry)
     if sid in existing_by_sid: raise RuntimeError(f"Duplicate SID already exists in localization asset: {sid}")
     existing_by_sid[sid]=entry
-updated=0; to_add=[]
-for entry in entries:
-    existing=existing_by_sid.get(entry["sid"])
-    if existing is None: to_add.append(entry)
-    else: existing.import_text(make_struct_text(entry["sid"],entry["languages"])); updated+=1
-added=0
-if to_add:
-    template=localized_texts[0]; backup=template.export_text()
-    try:
-        for entry in to_add: template.import_text(make_struct_text(entry["sid"],entry["languages"])); localized_texts.append(template); added+=1
-    finally: template.import_text(backup)
-final_sids=[get_sid(entry) for entry in localized_texts]
-if len(final_sids)!=len(set(final_sids)): raise RuntimeError("Duplicate SIDs detected after UPSERT.")
-missing=sorted({entry['sid'] for entry in entries}-set(final_sids))
-if missing: raise RuntimeError("SIDs missing after UPSERT:\n"+"\n".join(missing))
-if len(localized_texts)!=existing_count+added: raise RuntimeError("Entry count mismatch after UPSERT.")
-asset.modify(); asset.set_editor_property("LocalizedTexts",localized_texts)
+
+source_sids={entry["sid"] for entry in entries}
+unmanaged_exports=[entry.export_text() for entry in localized_texts if get_sid(entry) not in source_sids]
+existing_managed_count=sum(1 for sid in source_sids if sid in existing_by_sid)
+added=len(source_sids)-existing_managed_count
+
+# Rebuild every source-managed struct from the JSON source of truth. Reusing the
+# existing structs left stale language-map members behind in ZoneKit.
+template=localized_texts[0]
+template_backup=template.export_text()
+rebuilt_exports=[]
+try:
+    for source in entries:
+        template.import_text(make_struct_text(source["sid"],source["languages"]))
+        rebuilt_exports.append(template.export_text())
+finally:
+    template.import_text(template_backup)
+
+# Reconstruct the complete array from serialized struct values. Asset-only
+# entries remain byte-for-byte equivalent at the struct export level; managed
+# entries are recreated entirely from the JSON sources.
+all_exports=unmanaged_exports+rebuilt_exports
+rebuilt_texts=[]
+template=localized_texts[0]
+template_backup=template.export_text()
+try:
+    for struct_text in all_exports:
+        template.import_text(struct_text)
+        rebuilt_texts.append(template)
+finally:
+    template.import_text(template_backup)
+
+final_sids=[get_sid(entry) for entry in rebuilt_texts]
+if len(final_sids)!=len(set(final_sids)): raise RuntimeError("Duplicate SIDs detected after rebuild.")
+missing=sorted(source_sids-set(final_sids))
+if missing: raise RuntimeError("SIDs missing after rebuild:\n"+"\n".join(missing))
+if len(rebuilt_texts)!=len(unmanaged_exports)+len(entries):
+    raise RuntimeError("Entry count mismatch after rebuild.")
+asset.modify(); asset.set_editor_property("LocalizedTexts",rebuilt_texts)
 if not unreal.EditorAssetLibrary.save_asset(ASSET_PATH,only_if_is_dirty=False): raise RuntimeError(f"Failed to save asset: {ASSET_PATH}")
-log(f"UPSERT - input={len(entries)}, updated={updated}, added={added}, final={len(localized_texts)}")
+log(f"REBUILD - input={len(entries)}, rebuilt={len(entries)}, previously_managed={existing_managed_count}, added={added}, preserved_unmanaged={len(unmanaged_exports)}, final={len(rebuilt_texts)}")
 saved_count=verify_saved_asset(entries)
 log(f"SUCCESS - verified={len(entries)}, asset_entries={saved_count}, missing=0, mismatched_values=0"); log("========================================")
