@@ -7,5 +7,9 @@
   "upgrade_field_count": 16,
   "filter": null,
   "player_armor_only": true,
-  "modification_upgrade_count": 15
+  "modification_upgrade_count": 15,
+  "referenced_effect_sids": 706,
+  "resolved_effect_sids": 705,
+  "missing_effect_sids": 1,
+  "effect_structural_groups": 9
 }
