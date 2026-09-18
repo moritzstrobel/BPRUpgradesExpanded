@@ -33,6 +33,7 @@ VANILLA_EFFECTS = PYTHON_ROOT / "VanillaReference" / "EffectPrototypes.cfg"
 VANILLA_UI_PATCH = REPO_ROOT / "GameLite/GameData/EffectPrototypes/EffectPrototypes_patch_BPRUE_UI.cfg"
 BPRUE_EFFECT_DIR = REPO_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes"
 DLC_EFFECT_ROOT = REPO_ROOT / "GameLite/DLCGameData"
+ASSET_SNAPSHOT = REPORT_DIR / "localization_asset_snapshot.json"
 
 EFFECT_SID_RE = re.compile(r"^\s*LocalizationSID\s*=\s*([A-Za-z0-9_]+)\s*$", re.MULTILINE)
 BPRUE_TEXT_SID_RE = re.compile(r"\\b(?:sid_bprue|sid_item_bprue)_[A-Za-z0-9_]+\\b", re.IGNORECASE)
@@ -60,6 +61,31 @@ def load_localization() -> tuple[set[str], list[dict]]:
                 })
     if duplicates: raise ValueError("Duplicate localization SIDs: " + ", ".join(sorted(duplicates)))
     return result, missing_languages
+
+
+def audit_asset_snapshot(localization_sids: set[str]) -> dict:
+    if not ASSET_SNAPSHOT.exists():
+        return {"available": False, "error_count": 1, "errors": [f"Localization asset snapshot missing: {ASSET_SNAPSHOT}. Run export_localization_asset_snapshot.py in ZoneKit first."]}
+    data = json.loads(ASSET_SNAPSHOT.read_text(encoding="utf-8"))
+    entries = data.get("entries", [])
+    asset_sids = [str(entry.get("sid", "")).strip() for entry in entries]
+    counts = defaultdict(int)
+    for sid in asset_sids:
+        if sid: counts[sid] += 1
+    duplicates = sorted(sid for sid, count in counts.items() if count > 1)
+    asset_set = set(counts)
+    missing = sorted(localization_sids - asset_set)
+    asset_only = sorted(asset_set - localization_sids)
+    errors = []
+    if duplicates: errors.append("Duplicate asset SIDs: " + ", ".join(duplicates))
+    if missing: errors.append(f"{len(missing)} source localization SIDs are missing from the asset snapshot")
+    return {
+        "available": True, "asset_entry_count": len(asset_sids), "source_entry_count": len(localization_sids),
+        "missing_count": len(missing), "missing_sids": missing,
+        "asset_only_count": len(asset_only), "asset_only_sids": asset_only,
+        "duplicate_count": len(duplicates), "duplicate_sids": duplicates,
+        "error_count": len(errors), "errors": errors,
+    }
 
 
 def effect_asset_sid(cfg_sid: str) -> str: return f"sid_effects_{cfg_sid}_name"
@@ -183,6 +209,7 @@ def main() -> None:
     models = {"BaseGame": base_model, **dlc_models}
     scopes = {scope: audit_upgrade_model(model, localization_sids) for scope, model in models.items()}
     effects = audit_referenced_effects(models, localization_sids)
+    asset_snapshot = audit_asset_snapshot(localization_sids)
     generated_cfg = audit_generated_cfg_localization(localization_sids)
     missing_by_sid: dict[str, list[str]] = defaultdict(list)
     for scope, audit in scopes.items():
@@ -195,6 +222,7 @@ def main() -> None:
         "missing_languages": missing_languages,
         "scopes": scopes,
         "effects": effects,
+        "asset_snapshot": asset_snapshot,
         "generated_cfg": generated_cfg,
         "unique_missing_upgrade_sid_count": len(missing_by_sid),
         "missing_upgrade_sids": {sid: affected for sid, affected in sorted(missing_by_sid.items())},
@@ -203,6 +231,7 @@ def main() -> None:
             + len(missing_by_sid)
             + sum(audit["incomplete_upgrade_count"] for audit in scopes.values())
             + effects["error_count"]
+            + asset_snapshot["error_count"]
             + generated_cfg["missing_count"]
             + generated_cfg["case_mismatch_count"]
         ),
@@ -210,6 +239,13 @@ def main() -> None:
     REPORT_DIR.mkdir(parents=True, exist_ok=True); report_path = REPORT_DIR / "localization_audit.json"; report_path.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Localization SIDs: {len(localization_sids)}")
     print(f"Required languages: {', '.join(REQUIRED_LANGUAGES)} | entries missing a required language: {len(missing_languages)}")
+    if asset_snapshot["available"]:
+        print(f"Localization asset snapshot: asset={asset_snapshot['asset_entry_count']} source={asset_snapshot['source_entry_count']} missing={asset_snapshot['missing_count']} asset-only={asset_snapshot['asset_only_count']} duplicates={asset_snapshot['duplicate_count']}")
+        for sid in asset_snapshot["missing_sids"]:
+            print(f"  MISSING FROM ASSET: {sid}")
+    else:
+        for error in asset_snapshot["errors"]:
+            print(f"  ASSET SNAPSHOT ERROR: {error}")
     for item in missing_languages:
         print(f"  MISSING {', '.join(item['missing_languages'])}: {item['sid']} ({item['file']})")
     for scope, audit in scopes.items(): print(f"{scope}: upgrades={audit['upgrade_count']} text={audit['text_sid_count']} hints={audit['hint_sid_count']} missing={audit['missing_count']}")
