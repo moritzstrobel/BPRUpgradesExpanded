@@ -48,6 +48,28 @@ def effective_fields(name, structs, stack=None):
     return result
 
 
+FACTION_HINTS = (
+    ("Dolg", "DUTY"),
+    ("Svoboda", "FREEDOM"),
+    ("Mercenaries", "MERCENARY"),
+    ("Monolith", "MONOLITH"),
+    ("Spark", "SPARK"),
+    ("Varta", "WARD"),
+    ("Military", "MILITARY"),
+    ("Neutral", "FREE_STALKER"),
+)
+
+
+def faction_candidate(sid):
+    """Return a conservative faction candidate derived from known SID tokens."""
+    matches = [{"token": token, "faction": faction} for token, faction in FACTION_HINTS if token in sid]
+    if len(matches) == 1:
+        return matches[0]["faction"], matches
+    if len(matches) > 1:
+        return "AMBIGUOUS", matches
+    return "UNRESOLVED", []
+
+
 def classify(slot, block_head):
     if slot == "EInventoryEquipmentSlot::Head": return "HELMET"
     if slot == "EInventoryEquipmentSlot::Body" and block_head == "false": return "SUIT"
@@ -73,9 +95,15 @@ def main():
             "blocks_head": {"true":True,"false":False}.get(fields.get("bBlockHead")),
             "refkey":entry["refkey"],
             "direct_item_slot_type":direct.get("ItemSlotType"),
-            "direct_bBlockHead":direct.get("bBlockHead"),
+            "direct_bBlockHead":direct.get("bBlockHead"),\n            "faction_candidate":faction,\n            "faction_matches":matches,
         })
     concrete=[r for r in rows if r["struct"] not in templates]
+    faction_groups={}
+    for faction in [x[1] for x in FACTION_HINTS]+["AMBIGUOUS","UNRESOLVED"]:
+        faction_groups[faction]=sorted(
+            [r for r in concrete if r["faction_candidate"]==faction],
+            key=lambda r:(r["category"],r["sid"])
+        )
     categories={k:sorted([r for r in concrete if r["category"]==k],key=lambda r:r["sid"])
                 for k in ("HELMET","SUIT","FULL_BODY_SUIT","AMBIGUOUS_BODY","UNCLASSIFIED")}
     payload={
@@ -95,6 +123,14 @@ def main():
     print(f"Concrete player armor prototypes: {len(concrete)}")
     print(f"Excluded NPC_* prototypes: {len(excluded)}")
     for k in categories: print(f"{k}: {counts[k]}")
+    print("\n=== Faction / Class Candidates ===")
+    for faction,items in faction_groups.items():
+        print(f"{faction}: {len(items)}")
+    if faction_groups["UNRESOLVED"] or faction_groups["AMBIGUOUS"]:
+        print("\n=== Faction candidates needing manual resolution ===")
+        for r in faction_groups["AMBIGUOUS"]+faction_groups["UNRESOLVED"]:
+            matches=", ".join(f"{m['token']}->{m['faction']}" for m in r["faction_matches"]) or "no safe SID hint"
+            print(f"{r['sid']} [{r['category']}]: {matches}")
     print("\n=== Full Body Suits ===")
     for r in categories["FULL_BODY_SUIT"]: print(r["sid"])
     if categories["AMBIGUOUS_BODY"] or categories["UNCLASSIFIED"]:
