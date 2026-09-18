@@ -59,6 +59,7 @@ FACTION_HINTS = (
     ("Military", "MILITARY"),
     ("Neutral", "FREE_STALKER"),
     ("Bandit", "BANDIT"),
+    ("Scientific", "ECOLOGIST"),
 )
 
 
