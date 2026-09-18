@@ -95,7 +95,9 @@ def main():
             "blocks_head": {"true":True,"false":False}.get(fields.get("bBlockHead")),
             "refkey":entry["refkey"],
             "direct_item_slot_type":direct.get("ItemSlotType"),
-            "direct_bBlockHead":direct.get("bBlockHead"),\n            "faction_candidate":faction,\n            "faction_matches":matches,
+            "direct_bBlockHead":direct.get("bBlockHead"),
+            "faction_candidate":faction,
+            "faction_matches":matches,
         })
     concrete=[r for r in rows if r["struct"] not in templates]
     faction_groups={}
