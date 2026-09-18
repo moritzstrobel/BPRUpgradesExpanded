@@ -279,6 +279,26 @@ def render_effects() -> str:
 // Prototype faction: FREEDOM / Mobility.
 // Values are intentionally isolated here so signature balancing does not touch weapon effects.
 
+BPRUE_Armor_Freedom_Helmet_Stamina : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Armor_Freedom_Helmet_Stamina
+   LocalizationSID = Armor_regenerationStamina
+   Text = Regen Stamina
+   Type = EEffectType::RegenStamina
+   ValueMin = 2.5%
+   ValueMax = 2.5%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+struct.end
+
+BPRUE_Armor_Freedom_Helmet_LoadBearing : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Armor_Freedom_Helmet_LoadBearing
+   Type = EEffectType::AdditionalInventoryWeight
+   ValueMin = 2
+   ValueMax = 2
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+struct.end
+
 BPRUE_Armor_Freedom_Helmet_Weight : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_Armor_Freedom_Helmet_Weight
    LocalizationSID = armor_reductionWeight
@@ -301,6 +321,15 @@ BPRUE_Armor_Freedom_Suit_Weight : struct.begin {refurl=@BaseGame/EffectPrototype
    Positive = EBeneficial::Positive
 struct.end
 
+BPRUE_Armor_Freedom_Suit_LoadBearing : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Armor_Freedom_Suit_LoadBearing
+   Type = EEffectType::AdditionalInventoryWeight
+   ValueMin = 5
+   ValueMax = 5
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+struct.end
+
 BPRUE_Armor_Freedom_Suit_Stamina : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_Armor_Freedom_Suit_Stamina
    LocalizationSID = Armor_regenerationStamina
@@ -319,6 +348,15 @@ BPRUE_Armor_Freedom_FullBody_Weight : struct.begin {refurl=@BaseGame/EffectProto
    Type = EEffectType::ArmorItemWeight
    ValueMin = -1
    ValueMax = -1
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+struct.end
+
+BPRUE_Armor_Freedom_FullBody_LoadBearing : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Armor_Freedom_FullBody_LoadBearing
+   Type = EEffectType::AdditionalInventoryWeight
+   ValueMin = 7
+   ValueMax = 7
    bIsPermanent = true
    Positive = EBeneficial::Positive
 struct.end
