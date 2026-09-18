@@ -5,42 +5,42 @@
       "sid": "sid_bprue_caliber_762_eastern_name",
       "languages": {
         "English": "7.62 mm Power Conversion",
-        "Russian": "Переход на усиленный 7,62 мм"
+        "Russian": "Перевод на калибр 7,62х54 мм"
       }
     },
     {
       "sid": "sid_bprue_caliber_762_eastern_description",
       "languages": {
         "English": "Converts the weapon to the game's 7.62 mm sniper cartridge. Increases damage, recoil and weapon wear. This specialization is permanent.",
-        "Russian": "Переводит оружие на используемый в игре снайперский патрон 7,62 мм. Увеличивает урон, отдачу и износ оружия. Эта специализация является окончательной."
+        "Russian": "Переводит оружие на боеприпасы 7,62х54 мм. Увеличивает урон, отдачу и износ оружия. Эта специализация является постоянной."
       }
     },
     {
       "sid": "sid_bprue_caliber_762_nato_name",
       "languages": {
         "English": "7.62x51 mm NATO Conversion",
-        "Russian": "Переход на 7,62x51 мм НАТО"
+        "Russian": "Перевод на калибр 7,62x51 мм НАТО"
       }
     },
     {
       "sid": "sid_bprue_caliber_762_nato_description",
       "languages": {
         "English": "Converts the weapon to 7.62x51 mm NATO ammunition. Increases damage, recoil and weapon wear. This specialization is permanent.",
-        "Russian": "Переводит оружие на боеприпасы 7,62x51 мм НАТО. Увеличивает урон, отдачу и износ оружия. Эта специализация является окончательной."
+        "Russian": "Переводит оружие на боеприпасы 7,62x51 мм НАТО. Увеличивает урон, отдачу и износ оружия. Эта специализация является постоянной."
       }
     },
     {
       "sid": "sid_bprue_sniper_caliber_762sniper_to_762nato_description",
       "languages": {
         "English": "Permanently converts the weapon from the game's 7.62 mm sniper cartridge to 7.62x51 mm NATO ammunition. Recoil is reduced by 10%, but damage is reduced by 10%. This specialization cannot be combined with another caliber conversion.",
-        "Russian": "Навсегда переводит оружие с используемого в игре снайперского патрона 7,62 мм на боеприпасы 7,62x51 мм НАТО. Отдача снижается на 10%, но урон также снижается на 10%. Эту специализацию нельзя совместить с другой конверсией калибра."
+        "Russian": "Навсегда переводит оружие с снайперского патрона 7,62х54 мм на боеприпасы 7,62x51 мм НАТО. Отдача снижается на 10%, но урон также снижается на 10%. Эту специализацию нельзя совместить с другой конверсией калибра."
       }
     },
     {
       "sid": "sid_bprue_sniper_caliber_762nato_to_762sniper_description",
       "languages": {
         "English": "Permanently converts the weapon from 7.62x51 mm NATO to the game's 7.62 mm sniper cartridge. Damage increases by 10% and armor penetration by 15%, but recoil and weapon wear increase by 15%. This specialization cannot be combined with another caliber conversion.",
-        "Russian": "Навсегда переводит оружие с 7,62x51 мм НАТО на используемый в игре снайперский патрон 7,62 мм. Урон увеличивается на 10%, бронепробиваемость — на 15%, но отдача и износ оружия также увеличиваются на 15%. Эту специализацию нельзя совместить с другой конверсией калибра."
+        "Russian": "Навсегда переводит оружие с 7,62x51 мм НАТО на снайперский патрон 7,62х54 мм. Урон увеличивается на 10%, бронепробиваемость — на 15%, но отдача и износ оружия также увеличиваются на 15%. Эту специализацию нельзя совместить с другой конверсией калибра."
       }
     },
     {
@@ -54,7 +54,7 @@
       "sid": "sid_bprue_reload_competition_description",
       "languages": {
         "English": "Optimizes magazine handling for 20% faster reloads, at the cost of 15% increased recoil. Choosing this reload specialization is permanent.",
-        "Russian": "Оптимизирует работу с магазином, ускоряя перезарядку на 20%, но увеличивая отдачу на 15%. Выбор этой специализации перезарядки является окончательным."
+        "Russian": "Оптимизирует работу с магазином, ускоряя перезарядку на 20%, но увеличивая отдачу на 15%. Выбор этой специализации перезарядки необратим."
       }
     },
     {
@@ -68,7 +68,7 @@
       "sid": "sid_bprue_reload_reinforced_description",
       "languages": {
         "English": "A reinforced feed setup provides 10% faster reloads and reduces weapon wear by 20%, but slows the firing cycle by 5%. Choosing this reload specialization is permanent.",
-        "Russian": "Усиленная система подачи ускоряет перезарядку на 10% и снижает износ оружия на 20%, но замедляет цикл стрельбы на 5%. Выбор этой специализации перезарядки является окончательным."
+        "Russian": "Усиленная система подачи ускоряет перезарядку на 10% и снижает износ оружия на 20%, но замедляет цикл стрельбы на 5%. Выбор этой специализации перезарядки необратим."
       }
     },
     {
@@ -82,35 +82,35 @@
       "sid": "sid_bprue_fire_rate_high_speed_description",
       "languages": {
         "English": "Pushes the action for 20% faster fire rate, but increases recoil by 15% and weapon wear by 20%. Choosing this fire-rate specialization is permanent.",
-        "Russian": "Ускоряет работу автоматики, повышая темп стрельбы на 20%, но увеличивая отдачу на 15% и износ оружия на 20%. Выбор этой специализации темпа стрельбы является окончательным."
+        "Russian": "Ускоряет работу автоматики, повышая темп стрельбы на 20%, но увеличивая отдачу на 15% и износ оружия на 20%. Выбор этой специализации на скорострельность необратим."
       }
     },
     {
       "sid": "sid_bprue_fire_rate_balanced_name",
       "languages": {
         "English": "Tuned Gas System",
-        "Russian": "Настроенная газовая система"
+        "Russian": "Настроенная газоотводная система"
       }
     },
     {
       "sid": "sid_bprue_fire_rate_balanced_description",
       "languages": {
         "English": "Provides 10% faster fire rate, 10% lower recoil and 20% faster recoil recovery, at the cost of 10% increased weapon wear. Choosing this fire-rate specialization is permanent.",
-        "Russian": "Повышает темп стрельбы на 10%, снижает отдачу на 10% и ускоряет восстановление после отдачи на 20%, но увеличивает износ оружия на 10%. Выбор этой специализации темпа стрельбы является окончательным."
+        "Russian": "Повышает темп стрельбы на 10%, снижает отдачу на 10% и ускоряет восстановление после отдачи на 20%, но увеличивает износ оружия на 10%. Выбор этой специализации на скорострельность необратим."
       }
     },
     {
       "sid": "sid_bprue_fire_control_burst_name",
       "languages": {
         "English": "Burst Fire Control",
-        "Russian": "Механизм отсечки очереди"
+        "Russian": "Управление стрельбой очередями"
       }
     },
     {
       "sid": "sid_bprue_fire_control_burst_description",
       "languages": {
         "English": "Adds a three-round burst mode while retaining semi-automatic and automatic fire. Recoil is reduced by 5%, but weapon wear increases by 10%. Choosing this fire-control specialization is permanent.",
-        "Russian": "Добавляет режим отсечки по три выстрела, сохраняя одиночный и автоматический огонь. Отдача снижается на 5%, но износ оружия увеличивается на 10%. Выбор этой специализации управления огнём является окончательным."
+        "Russian": "Добавляет режим отсечки по три выстрела, сохраняя одиночный и автоматический огонь. Отдача снижается на 5%, но износ оружия увеличивается на 10%. Выбор этой специализации по управлению огнем является необратимым."
       }
     },
     {
@@ -124,7 +124,7 @@
       "sid": "sid_bprue_fire_control_precision_description",
       "languages": {
         "English": "Reconfigures the fire-control group for semi-automatic fire only, removing automatic and burst modes. In exchange, damage is increased by 10% and armor penetration by 15%, while weapon wear increases by 20%. Choosing this fire-control specialization is permanent.",
-        "Russian": "Перенастраивает ударно-спусковой механизм только на одиночный огонь, отключая автоматический режим и отсечку очереди. Взамен урон увеличивается на 10%, бронепробиваемость — на 15%, а износ оружия — на 20%. Выбор этой специализации управления огнём является окончательным."
+        "Russian": "Перенастраивает ударно-спусковой механизм только на одиночный огонь, отключая автоматический режим и отсечку очереди. Взамен урон увеличивается на 10%, бронепробиваемость — на 15%, а износ оружия — на 20%. Выбор этой специализации по управлению огнем является необратимым."
       }
     },
     {
@@ -138,7 +138,7 @@
       "sid": "sid_bprue_stock_lightweight_description",
       "languages": {
         "English": "Optimizes the stock for fast handling: aiming is 15% faster and movement while aiming is 10% faster, at the cost of 15% increased recoil. Choosing this stock specialization is permanent.",
-        "Russian": "Облегчает и ускоряет обращение с оружием: прицеливание ускоряется на 15%, а скорость движения при прицеливании — на 10%, но отдача увеличивается на 15%. Выбор этой специализации приклада является окончательным."
+        "Russian": "Облегчает и ускоряет обращение с оружием: прицеливание ускоряется на 15%, а скорость движения при прицеливании — на 10%, но отдача увеличивается на 15%. Выбор этой специализации приклада является необратимым."
       }
     },
     {
@@ -152,7 +152,7 @@
       "sid": "sid_bprue_stock_stabilized_description",
       "languages": {
         "English": "Improves firing control with 15% lower recoil and 20% faster recoil recovery, but aiming is 10% slower. Choosing this stock specialization is permanent.",
-        "Russian": "Улучшает контроль при стрельбе: отдача снижается на 15%, восстановление после отдачи ускоряется на 20%, но прицеливание становится на 10% медленнее. Выбор этой специализации приклада является окончательным."
+        "Russian": "Улучшает контроль при стрельбе: отдача снижается на 15%, восстановление после отдачи ускоряется на 20%, но прицеливание становится на 10% медленнее. Выбор этой специализации приклада является необратимым."
       }
     },
     {
@@ -166,14 +166,14 @@
       "sid": "sid_bprue_stock_marksman_description",
       "languages": {
         "English": "Provides a steadier precision stance with 20% less horizontal and vertical idle sway and 15% lower maximum dispersion, but aiming is 15% slower. Choosing this stock specialization is permanent.",
-        "Russian": "Обеспечивает более устойчивое прицеливание: горизонтальное и вертикальное покачивание снижается на 20%, а максимальный разброс — на 15%, но прицеливание становится на 15% медленнее. Выбор этой специализации приклада является окончательным."
+        "Russian": "Обеспечивает более устойчивое прицеливание: горизонтальное и вертикальное покачивание снижается на 20%, а максимальный разброс — на 15%, но прицеливание становится на 15% медленнее. Выбор этой специализации приклада является необратимым."
       }
     },
     {
       "sid": "sid_bprue_viper_pistol_conversion_name",
       "languages": {
         "English": "Compact Weapon Conversion",
-        "Russian": "Компактная конверсия оружия"
+        "Russian": "Переделка оружия в компактный вариант"
       }
     },
     {
@@ -187,7 +187,7 @@
       "sid": "sid_bprue_smg_pistol_conversion_name",
       "languages": {
         "English": "Compact Weapon Conversion",
-        "Russian": "Компактная конверсия оружия"
+        "Russian": "Переделка оружия в компактный вариант"
       }
     },
     {
@@ -208,7 +208,7 @@
       "sid": "sid_bprue_smg_quick_draw_description",
       "languages": {
         "English": "Optimizes the SMG for immediate close-range readiness: aiming is 15% faster and movement while aiming improves by 10%, but reloads take 10% longer. Choosing this readiness specialization is permanent.",
-        "Russian": "Оптимизирует пистолет-пулемёт для мгновенной готовности в ближнем бою: прицеливание ускоряется на 15%, скорость движения при прицеливании повышается на 10%, но перезарядка занимает на 10% больше времени. Выбор этой специализации готовности является окончательным."
+        "Russian": "Оптимизирует пистолет-пулемёт для мгновенной готовности в ближнем бою: прицеливание ускоряется на 15%, скорость движения при прицеливании повышается на 10%, но перезарядка занимает на 10% больше времени. Выбор этой специализации готовности является необратимым."
       }
     },
     {
@@ -222,7 +222,7 @@
       "sid": "sid_bprue_smg_stabilized_description",
       "languages": {
         "English": "Prioritizes firing stability with 15% lower recoil and 20% faster recoil recovery, but aiming is 10% slower. Choosing this readiness specialization is permanent.",
-        "Russian": "Повышает устойчивость при стрельбе: отдача снижается на 15%, восстановление после отдачи ускоряется на 20%, но прицеливание становится на 10% медленнее. Выбор этой специализации готовности является окончательным."
+        "Russian": "Повышает устойчивость при стрельбе: отдача снижается на 15%, восстановление после отдачи ускоряется на 20%, но прицеливание становится на 10% медленнее. Выбор этой специализации готовности является необратимым."
       }
     },
     {
@@ -236,7 +236,7 @@
       "sid": "sid_bprue_smg_competition_reload_description",
       "languages": {
         "English": "Maximizes magazine-change speed for 20% faster reloads, but the optimized setup makes aiming 10% slower. Choosing this reload specialization is permanent.",
-        "Russian": "Максимально ускоряет смену магазина: перезарядка становится на 20% быстрее, но оптимизированная компоновка замедляет прицеливание на 10%. Выбор этой специализации перезарядки является окончательным."
+        "Russian": "Максимально ускоряет смену магазина: перезарядка становится на 20% быстрее, но оптимизированная компоновка замедляет прицеливание на 10%. Выбор этой специализации перезарядки является необратимым."
       }
     },
     {
@@ -250,7 +250,7 @@
       "sid": "sid_bprue_smg_tactical_reload_description",
       "languages": {
         "English": "Balances reload speed and weapon handling: reloads are 10% faster and aiming is 15% faster, at the cost of 10% increased weapon wear per shot. Choosing this reload specialization is permanent.",
-        "Russian": "Сочетает скорость перезарядки и удобство обращения: перезарядка ускоряется на 10%, прицеливание — на 15%, но износ оружия за выстрел увеличивается на 10%. Выбор этой специализации перезарядки является окончательным."
+        "Russian": "Сочетает скорость перезарядки и удобство обращения: перезарядка ускоряется на 10%, прицеливание — на 15%, но износ оружия за выстрел увеличивается на 10%. Выбор этой специализации перезарядки является необратимым."
       }
     },
     {
@@ -264,7 +264,7 @@
       "sid": "sid_bprue_smg_high_speed_action_description",
       "languages": {
         "English": "Tunes the action for a 20% shorter firing cycle. The aggressive setup increases recoil by 15%, weapon wear by 20%, and reload time by 10%. Choosing this action specialization is permanent.",
-        "Russian": "Настраивает автоматику на цикл стрельбы короче на 20%. Агрессивная настройка увеличивает отдачу на 15%, износ оружия на 20% и время перезарядки на 10%. Выбор этой специализации автоматики является окончательным."
+        "Russian": "Настраивает автоматику на цикл стрельбы короче на 20%. Агрессивная настройка увеличивает отдачу на 15%, износ оружия на 20% и время перезарядки на 10%. Выбор этой специализации автоматики является необратимым."
       }
     },
     {
@@ -278,14 +278,14 @@
       "sid": "sid_bprue_smg_controlled_action_description",
       "languages": {
         "English": "Lengthens the firing cycle by 5% in exchange for 15% lower recoil, 20% faster recoil recovery and 10% faster reloads. Choosing this action specialization is permanent.",
-        "Russian": "Удлиняет цикл стрельбы на 5%, взамен снижая отдачу на 15%, ускоряя восстановление после отдачи на 20% и перезарядку на 10%. Выбор этой специализации автоматики является окончательным."
+        "Russian": "Удлиняет цикл стрельбы на 5%, взамен снижая отдачу на 15%, ускоряя восстановление после отдачи на 20% и перезарядку на 10%. Выбор этой специализации автоматики является необратимым."
       }
     },
     {
       "sid": "sid_bprue_smg_caliber_a918_name",
       "languages": {
         "English": "9x18 mm Conversion",
-        "Russian": "Конверсия под 9x18 мм"
+        "Russian": "Переделка под патрон 9×18 мм"
       }
     },
     {
@@ -299,7 +299,7 @@
       "sid": "sid_bprue_smg_caliber_a919_name",
       "languages": {
         "English": "9x19 mm Conversion",
-        "Russian": "Конверсия под 9x19 мм"
+        "Russian": "Переделка под патрон 9×19 мм"
       }
     },
     {
@@ -313,7 +313,7 @@
       "sid": "sid_bprue_smg_caliber_a045_name",
       "languages": {
         "English": ".45 ACP Conversion",
-        "Russian": "Конверсия под .45 ACP"
+        "Russian": "Переделка под патрон .45 ACP"
       }
     },
     {
