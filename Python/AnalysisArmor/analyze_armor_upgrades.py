@@ -16,8 +16,8 @@ import re
 from collections import Counter
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
-VANILLA = ROOT / "VanillaReference"
+PYTHON_ROOT = Path(__file__).resolve().parents[1]
+VANILLA = PYTHON_ROOT / "VanillaReference"
 ARMOR_CFG = VANILLA / "ArmorPrototypes.cfg"
 UPGRADE_CFG = VANILLA / "UpgradePrototypes.cfg"
 
@@ -25,9 +25,6 @@ STRUCT_START = re.compile(r"^\s*([^/\s][^:]*)\s*:\s*struct\.begin(?:\s*\{([^}]*)
 UPGRADE_SID = re.compile(r"^\s*\[\d+\]\s*=\s*([^\s{]+)", re.MULTILINE)
 SID_FIELD = re.compile(r"^\s*SID\s*=\s*([^\s]+)", re.MULTILINE)
 
-# Terms worth auditing because weapons use additional indirections/mechanics
-# around their normal upgrade trees. This is discovery, not an assumption
-# that armor uses the same fields.
 ESCAPE_TERMS = (
     "module",
     "socket",
@@ -48,7 +45,6 @@ def top_level_structs(text: str) -> dict[str, str]:
         if not match:
             i += 1
             continue
-
         name = match.group(1).strip()
         depth = 1
         j = i + 1
@@ -126,7 +122,6 @@ def main() -> int:
         if counts[term]:
             print(f"{term}: {counts[term]} armor structs; examples={', '.join(examples[term])}")
 
-    # Search upgrade definitions referenced by armor for module-ish fields too.
     print("\n=== Potential module / escape-path fields in referenced UpgradePrototypes ===")
     upgrade_counts = Counter()
     upgrade_examples: dict[str, list[str]] = {term: [] for term in ESCAPE_TERMS}
