@@ -35,6 +35,7 @@ BPRUE_EFFECT_DIR = REPO_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectP
 DLC_EFFECT_ROOT = REPO_ROOT / "GameLite/DLCGameData"
 
 EFFECT_SID_RE = re.compile(r"^\s*LocalizationSID\s*=\s*([A-Za-z0-9_]+)\s*$", re.MULTILINE)
+BPRUE_TEXT_SID_RE = re.compile(r"\\b(?:sid_bprue|sid_item_bprue)_[A-Za-z0-9_]+\\b", re.IGNORECASE)
 SHOW_RE = re.compile(r"^\s*ShowUpgradeEffect\s*=\s*(true|false)\s*$", re.MULTILINE | re.IGNORECASE)
 REFKEY_RE = re.compile(r"\brefkey=([^}\s]+)")
 PROTOTYPE_RE = re.compile(r"(?ms)^([A-Za-z0-9_]+)\s*:\s*struct\.begin([^\n]*)\n(.*?)^struct\.end")
@@ -65,14 +66,59 @@ def effect_asset_sid(cfg_sid: str) -> str: return f"sid_effects_{cfg_sid}_name"
 
 
 def audit_upgrade_model(model, localization_sids: set[str]) -> dict:
-    text_sids: set[str] = set(); hint_sids: set[str] = set(); missing: set[str] = set()
+    text_sids: set[str] = set()
+    hint_sids: set[str] = set()
+    missing: set[str] = set()
+    incomplete: list[dict] = []
     for upgrade in model.upgrades:
-        for kind, sid in (("text", upgrade.text_sid), ("hint", upgrade.hint_sid)):
-            if not sid or not sid.startswith("sid_bprue_"): continue
+        fields = (("text", upgrade.text_sid), ("hint", upgrade.hint_sid))
+        if str(upgrade.sid).lower().startswith("bprue"):
+            absent = [kind for kind, sid in fields if not sid]
+            if absent:
+                incomplete.append({"upgrade_sid": upgrade.sid, "missing_fields": absent})
+        for kind, sid in fields:
+            if not sid or not sid.lower().startswith("sid_bprue_"):
+                continue
             (text_sids if kind == "text" else hint_sids).add(sid)
-            if sid not in localization_sids: missing.add(sid)
-    return {"upgrade_count": len(model.upgrades), "text_sid_count": len(text_sids), "hint_sid_count": len(hint_sids), "missing_count": len(missing), "missing_sids": sorted(missing)}
+            if sid not in localization_sids:
+                missing.add(sid)
+    return {
+        "upgrade_count": len(model.upgrades),
+        "text_sid_count": len(text_sids),
+        "hint_sid_count": len(hint_sids),
+        "missing_count": len(missing),
+        "missing_sids": sorted(missing),
+        "incomplete_upgrade_count": len(incomplete),
+        "incomplete_upgrades": incomplete,
+    }
 
+
+def audit_generated_cfg_localization(localization_sids: set[str]) -> dict:
+    references: dict[str, set[str]] = defaultdict(set)
+    for path in sorted((REPO_ROOT / "GameLite").rglob("*.cfg")):
+        text = path.read_text(encoding="utf-8", errors="replace")
+        for match in BPRUE_TEXT_SID_RE.finditer(text):
+            references[match.group(0)].add(str(path.relative_to(REPO_ROOT)))
+    missing = []
+    case_mismatches = []
+    by_lower = {sid.lower(): sid for sid in localization_sids}
+    for sid, paths in sorted(references.items()):
+        if sid in localization_sids:
+            continue
+        row = {"sid": sid, "files": sorted(paths)}
+        canonical = by_lower.get(sid.lower())
+        if canonical:
+            row["localization_sid"] = canonical
+            case_mismatches.append(row)
+        else:
+            missing.append(row)
+    return {
+        "referenced_sid_count": len(references),
+        "missing_count": len(missing),
+        "missing": missing,
+        "case_mismatch_count": len(case_mismatches),
+        "case_mismatches": case_mismatches,
+    }
 
 def _parse_effects(path: Path, source: str) -> dict[str, dict]:
     if not path.exists(): return {}
@@ -137,6 +183,7 @@ def main() -> None:
     models = {"BaseGame": base_model, **dlc_models}
     scopes = {scope: audit_upgrade_model(model, localization_sids) for scope, model in models.items()}
     effects = audit_referenced_effects(models, localization_sids)
+    generated_cfg = audit_generated_cfg_localization(localization_sids)
     missing_by_sid: dict[str, list[str]] = defaultdict(list)
     for scope, audit in scopes.items():
         for sid in audit["missing_sids"]: missing_by_sid[sid].append(scope)
@@ -148,9 +195,17 @@ def main() -> None:
         "missing_languages": missing_languages,
         "scopes": scopes,
         "effects": effects,
+        "generated_cfg": generated_cfg,
         "unique_missing_upgrade_sid_count": len(missing_by_sid),
         "missing_upgrade_sids": {sid: affected for sid, affected in sorted(missing_by_sid.items())},
-        "error_count": len(missing_languages) + len(missing_by_sid) + effects["error_count"],
+        "error_count": (
+            len(missing_languages)
+            + len(missing_by_sid)
+            + sum(audit["incomplete_upgrade_count"] for audit in scopes.values())
+            + effects["error_count"]
+            + generated_cfg["missing_count"]
+            + generated_cfg["case_mismatch_count"]
+        ),
     }
     REPORT_DIR.mkdir(parents=True, exist_ok=True); report_path = REPORT_DIR / "localization_audit.json"; report_path.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Localization SIDs: {len(localization_sids)}")
