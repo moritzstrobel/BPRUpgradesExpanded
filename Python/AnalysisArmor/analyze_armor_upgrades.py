@@ -23,6 +23,7 @@ ARRAY_VALUE = re.compile(r"^\s*\[\d+\]\s*=\s*([^\s{]+)", re.MULTILINE)
 SID_FIELD = re.compile(r"^\s*SID\s*=\s*([^\s]+)", re.MULTILINE)
 FIELD_LINE = re.compile(r"^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*?)\s*(?:\{[^}]*\})?\s*$")
 NAMED_STRUCT = re.compile(r"^\s*([A-Za-z_][A-Za-z0-9_]*)\s*:\s*struct\.begin")
+REFKEY = re.compile(r"^\s*[^:]+\s*:\s*struct\.begin\s*\{[^}]*\brefkey=([^;}]+)")
 
 ESCAPE_TERMS = ("module", "socket", "attachment", "fitting", "preinstalled")
 RELATION_TERMS = ("upgradeprototypesid", "effectprototypesid")
