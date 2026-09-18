@@ -249,7 +249,10 @@ def _vanilla_upgrade_sids_by_armor() -> dict[str, list[str]]:
 
 
 def render_armor_patch(upgrades: list[ArmorUpgradeDefinition]) -> str:
-    by_armor: dict[str, list[ArmorUpgradeDefinition]] = {}\n    for upgrade in upgrades:\n        by_armor.setdefault(upgrade.armor_sid, []).append(upgrade)\n    vanilla_by_armor = _vanilla_upgrade_sids_by_armor()
+    by_armor: dict[str, list[ArmorUpgradeDefinition]] = {}
+    for upgrade in upgrades:
+        by_armor.setdefault(upgrade.armor_sid, []).append(upgrade)
+        vanilla_by_armor = _vanilla_upgrade_sids_by_armor()
     lines = [
         "// -----------------------------------------------------------------------------",
         "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND",
@@ -262,7 +265,8 @@ def render_armor_patch(upgrades: list[ArmorUpgradeDefinition]) -> str:
         vanilla = vanilla_by_armor.get(armor_sid)
         if vanilla is None:
             raise ValueError(f"{armor_sid}: missing Vanilla UpgradePrototypeSIDs mapping")
-        generated = [upgrade.sid for upgrade in sorted(armor_upgrades, key=lambda item: item.tier_index)]\n        combined = list(dict.fromkeys([*vanilla, *generated]))
+        generated = [upgrade.sid for upgrade in sorted(armor_upgrades, key=lambda item: item.tier_index)]
+        combined = list(dict.fromkeys([*vanilla, *generated]))
         lines += [
             f"{armor_sid} : struct.begin {{bpatch}}",
             "   UpgradePrototypeSIDs : struct.begin",
