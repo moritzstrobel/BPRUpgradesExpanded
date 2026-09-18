@@ -292,6 +292,8 @@ BPRUE_Armor_Freedom_Helmet_Weight : struct.begin {refurl=@BaseGame/EffectPrototy
    ValueMax = -0.5
    bIsPermanent = true
    Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
 struct.end
 
 BPRUE_Armor_Freedom_Helmet_Stamina : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
@@ -303,11 +305,15 @@ BPRUE_Armor_Freedom_Helmet_Stamina : struct.begin {refurl=@BaseGame/EffectProtot
    ValueMax = 5.0%
    bIsPermanent = true
    Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
 struct.end
 
 BPRUE_Armor_Freedom_Helmet_LoadBearing : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_Armor_Freedom_Helmet_LoadBearing
    Type = EEffectType::Composite
+   ShowUpgradeEffectValue = false
+   ShowUpgradeEffect = false
    ApplyExtraEffectPrototypeSIDs : struct.begin
       [0] = BPRUE_Armor_Freedom_Helmet_CarryWeight
       [1] = BPRUE_Armor_Freedom_Helmet_WeightPenalty
@@ -323,6 +329,8 @@ BPRUE_Armor_Freedom_Helmet_CarryWeight : struct.begin {refurl=@BaseGame/EffectPr
    ValueMax = 5.0%
    bIsPermanent = true
    Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
 struct.end
 
 BPRUE_Armor_Freedom_Helmet_WeightPenalty : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
@@ -332,6 +340,8 @@ BPRUE_Armor_Freedom_Helmet_WeightPenalty : struct.begin {refurl=@BaseGame/Effect
    ValueMax = 5.0%
    bIsPermanent = true
    Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = false
+   ShowUpgradeEffect = false
 struct.end
 
 BPRUE_Armor_Freedom_Helmet_DurabilityTradeoff : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
@@ -343,6 +353,8 @@ BPRUE_Armor_Freedom_Helmet_DurabilityTradeoff : struct.begin {refurl=@BaseGame/E
    ValueMax = -10.0%
    bIsPermanent = true
    Positive = EBeneficial::Negative
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
 struct.end
 
 BPRUE_Armor_Freedom_Suit_Weight : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
@@ -354,6 +366,8 @@ BPRUE_Armor_Freedom_Suit_Weight : struct.begin {refurl=@BaseGame/EffectPrototype
    ValueMax = -1.5
    bIsPermanent = true
    Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
 struct.end
 
 BPRUE_Armor_Freedom_Suit_Stamina : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
@@ -365,11 +379,15 @@ BPRUE_Armor_Freedom_Suit_Stamina : struct.begin {refurl=@BaseGame/EffectPrototyp
    ValueMax = 10.0%
    bIsPermanent = true
    Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
 struct.end
 
 BPRUE_Armor_Freedom_Suit_LoadBearing : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_Armor_Freedom_Suit_LoadBearing
    Type = EEffectType::Composite
+   ShowUpgradeEffectValue = false
+   ShowUpgradeEffect = false
    ApplyExtraEffectPrototypeSIDs : struct.begin
       [0] = BPRUE_Armor_Freedom_Suit_CarryWeight
       [1] = BPRUE_Armor_Freedom_Suit_WeightPenalty
@@ -386,6 +404,8 @@ BPRUE_Armor_Freedom_Suit_CarryWeight : struct.begin {refurl=@BaseGame/EffectProt
    ValueMax = 15.0%
    bIsPermanent = true
    Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
 struct.end
 
 BPRUE_Armor_Freedom_Suit_WeightPenalty : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
@@ -395,6 +415,8 @@ BPRUE_Armor_Freedom_Suit_WeightPenalty : struct.begin {refurl=@BaseGame/EffectPr
    ValueMax = 15.0%
    bIsPermanent = true
    Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = false
+   ShowUpgradeEffect = false
 struct.end
 
 BPRUE_Armor_Freedom_Suit_StrikeTradeoff : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
@@ -406,6 +428,8 @@ BPRUE_Armor_Freedom_Suit_StrikeTradeoff : struct.begin {refurl=@BaseGame/EffectP
    ValueMax = -10.0%
    bIsPermanent = true
    Positive = EBeneficial::Negative
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
 struct.end
 
 BPRUE_Armor_Freedom_FullBody_Weight : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
@@ -417,6 +441,8 @@ BPRUE_Armor_Freedom_FullBody_Weight : struct.begin {refurl=@BaseGame/EffectProto
    ValueMax = -2
    bIsPermanent = true
    Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
 struct.end
 
 BPRUE_Armor_Freedom_FullBody_Stamina : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
@@ -428,11 +454,15 @@ BPRUE_Armor_Freedom_FullBody_Stamina : struct.begin {refurl=@BaseGame/EffectProt
    ValueMax = 10.0%
    bIsPermanent = true
    Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
 struct.end
 
 BPRUE_Armor_Freedom_FullBody_LoadBearing : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_Armor_Freedom_FullBody_LoadBearing
    Type = EEffectType::Composite
+   ShowUpgradeEffectValue = false
+   ShowUpgradeEffect = false
    ApplyExtraEffectPrototypeSIDs : struct.begin
       [0] = BPRUE_Armor_Freedom_FullBody_CarryWeight
       [1] = BPRUE_Armor_Freedom_FullBody_WeightPenalty
@@ -450,6 +480,8 @@ BPRUE_Armor_Freedom_FullBody_CarryWeight : struct.begin {refurl=@BaseGame/Effect
    ValueMax = 20.0%
    bIsPermanent = true
    Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
 struct.end
 
 BPRUE_Armor_Freedom_FullBody_WeightPenalty : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
@@ -459,6 +491,8 @@ BPRUE_Armor_Freedom_FullBody_WeightPenalty : struct.begin {refurl=@BaseGame/Effe
    ValueMax = 20.0%
    bIsPermanent = true
    Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = false
+   ShowUpgradeEffect = false
 struct.end
 
 BPRUE_Armor_Freedom_FullBody_StrikeTradeoff : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
@@ -470,6 +504,8 @@ BPRUE_Armor_Freedom_FullBody_StrikeTradeoff : struct.begin {refurl=@BaseGame/Eff
    ValueMax = -10.0%
    bIsPermanent = true
    Positive = EBeneficial::Negative
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
 struct.end
 
 BPRUE_Armor_Freedom_FullBody_DurabilityTradeoff : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
@@ -481,6 +517,8 @@ BPRUE_Armor_Freedom_FullBody_DurabilityTradeoff : struct.begin {refurl=@BaseGame
    ValueMax = -10.0%
    bIsPermanent = true
    Positive = EBeneficial::Negative
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
 struct.end
 """
 
