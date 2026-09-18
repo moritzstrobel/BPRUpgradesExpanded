@@ -1,0 +1,31 @@
+{
+  "prototype_factions": {
+    "FREEDOM": {
+      "signature": "Mobility",
+      "enabled": true,
+      "categories": {
+        "HELMET": {
+          "cost": 2500,
+          "target_part": "Body",
+          "text_sid": "sid_bprue_armor_freedom_signature_name",
+          "hint_sid": "sid_bprue_armor_freedom_helmet_signature_description",
+          "effects": ["BPRUE_Armor_Freedom_Helmet_Weight"]
+        },
+        "SUIT": {
+          "cost": 4500,
+          "target_part": "Body",
+          "text_sid": "sid_bprue_armor_freedom_signature_name",
+          "hint_sid": "sid_bprue_armor_freedom_suit_signature_description",
+          "effects": ["BPRUE_Armor_Freedom_Suit_Weight", "BPRUE_Armor_Freedom_Suit_Stamina"]
+        },
+        "FULL_BODY_SUIT": {
+          "cost": 6500,
+          "target_part": "Body",
+          "text_sid": "sid_bprue_armor_freedom_signature_name",
+          "hint_sid": "sid_bprue_armor_freedom_fullbody_signature_description",
+          "effects": ["BPRUE_Armor_Freedom_FullBody_Weight", "BPRUE_Armor_Freedom_FullBody_Stamina"]
+        }
+      }
+    }
+  }
+}
