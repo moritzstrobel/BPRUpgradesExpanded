@@ -94,6 +94,42 @@ def scalar_field(block: str, field: str) -> str | None:
     values = direct_fields(block).get(field, [])
     return values[-1] if values else None
 
+def refkey_field(block: str) -> str | None:
+    first = block.splitlines()[0] if block else ""
+    match = REFKEY.match(first)
+    return match.group(1).strip() if match else None
+
+
+def effective_scalar(structs: dict[str, str], sid: str, field: str) -> str | None:
+    seen: set[str] = set()
+    current = sid
+    while current and current not in seen:
+        seen.add(current)
+        block = structs.get(current)
+        if block is None:
+            return None
+        value = scalar_field(block, field)
+        if value is not None:
+            return value
+        current = refkey_field(block)
+    return None
+
+
+def effective_array(structs: dict[str, str], sid: str, field: str) -> list[str]:
+    seen: set[str] = set()
+    current = sid
+    while current and current not in seen:
+        seen.add(current)
+        block = structs.get(current)
+        if block is None:
+            return []
+        values = array_field_values(block, field)
+        if values:
+            return values
+        current = refkey_field(block)
+    return []
+
+
 
 def load_player_classification() -> dict[str, dict[str, object]]:
     if not CLASSIFICATION_REPORT.exists():
@@ -190,6 +226,7 @@ def main() -> int:
         detail = {
             "sid": sid,
             "owners": sorted(owners[sid]),
+            "refkey": refkey_field(block),
             "text": scalar_field(block, "Text"),
             "hint": scalar_field(block, "Hint"),
             "base_cost": scalar_field(block, "BaseCost"),
@@ -197,14 +234,22 @@ def main() -> int:
             "vertical_position": scalar_field(block, "VerticalPosition"),
             "horizontal_position": scalar_field(block, "HorizontalPosition"),
             "is_modification": scalar_field(block, "IsModification") == "true",
+            "effective_text": effective_scalar(upgrade_structs, sid, "Text"),
+            "effective_hint": effective_scalar(upgrade_structs, sid, "Hint"),
+            "effective_base_cost": effective_scalar(upgrade_structs, sid, "BaseCost"),
+            "effective_upgrade_target_part": effective_scalar(upgrade_structs, sid, "UpgradeTargetPart"),
+            "effective_vertical_position": effective_scalar(upgrade_structs, sid, "VerticalPosition"),
+            "effective_horizontal_position": effective_scalar(upgrade_structs, sid, "HorizontalPosition"),
+            "effective_is_modification": effective_scalar(upgrade_structs, sid, "IsModification") == "true",
         }
         for field in ARRAY_FIELDS:
             detail[field] = array_field_values(block, field)
+            detail[f"effective_{field}"] = effective_array(upgrade_structs, sid, field)
         owner_meta = [classification[o] for o in owners[sid] if o in classification]
         detail["owner_categories"] = sorted({m["category"] for m in owner_meta})
         detail["owner_factions"] = sorted({m["faction_candidate"] for m in owner_meta})
         upgrade_details[sid] = detail
-        if detail["is_modification"]:
+        if detail["effective_is_modification"]:
             modifications.append(detail)
 
     modification_by_category = Counter(
