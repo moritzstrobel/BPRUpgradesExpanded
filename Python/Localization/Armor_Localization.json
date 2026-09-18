@@ -1,0 +1,89 @@
+{
+  "_comment": "Faction identity armor upgrade names and descriptions.",
+  "entries": [
+    {
+      "sid": "sid_bprue_armor_freedom_lightweight_name",
+      "languages": {
+        "English": "Lightweight Frame",
+        "Russian": "Облегчённый каркас"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_helmet_lightweight_description",
+      "languages": {
+        "English": "Freedom-style weight reduction strips the helmet down to the essentials, reducing its weight by 0.5 kg.",
+        "Russian": "Облегчение в стиле «Свободы» оставляет в шлеме только необходимое, снижая его вес на 0,5 кг."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_suit_lightweight_description",
+      "languages": {
+        "English": "Lightweight components and reduced field gear cut 1.5 kg from the suit, favoring mobility over heavy construction.",
+        "Russian": "Облегчённые компоненты и сокращённое полевое снаряжение уменьшают вес костюма на 1,5 кг, отдавая приоритет мобильности."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_fullbody_lightweight_description",
+      "languages": {
+        "English": "An extensive lightweight rebuild removes 2 kg from the full-body suit, pushing the equipment toward Freedom's mobile field doctrine.",
+        "Russian": "Глубокая облегчённая переделка снижает вес цельного костюма на 2 кг, приближая его к мобильной полевой доктрине «Свободы»."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_endurance_name",
+      "languages": {
+        "English": "Field Endurance System",
+        "Russian": "Система полевой выносливости"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_helmet_endurance_description",
+      "languages": {
+        "English": "Ergonomic adjustments improve freedom of movement and stamina recovery by 5%, supporting longer movement through the Zone.",
+        "Russian": "Эргономические изменения улучшают свободу движений и восстановление выносливости на 5%, облегчая длительные переходы по Зоне."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_suit_endurance_description",
+      "languages": {
+        "English": "A mobility-focused harness and ergonomic refit improve stamina recovery by 10%, further committing the suit to Freedom's mobile field doctrine.",
+        "Russian": "Ориентированная на мобильность разгрузочная система и эргономичная переделка повышают восстановление выносливости на 10%, усиливая мобильную специализацию костюма."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_fullbody_endurance_description",
+      "languages": {
+        "English": "A full ergonomic refit improves stamina recovery by 10%, turning the heavy platform into a more mobile long-range field configuration.",
+        "Russian": "Полная эргономичная переделка повышает восстановление выносливости на 10%, превращая тяжёлую платформу в более мобильную конфигурацию для дальних вылазок."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_loadbearing_name",
+      "languages": {
+        "English": "Free Stalker Rig",
+        "Russian": "Разгрузка вольного сталкера"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_helmet_loadbearing_description",
+      "languages": {
+        "English": "A compact field rig improves carrying capacity and weight distribution by 5%, completing the helmet's mobility-focused configuration.",
+        "Russian": "Компактная полевая разгрузка улучшает грузоподъёмность и распределение веса на 5%, завершая мобильную конфигурацию шлема."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_suit_loadbearing_description",
+      "languages": {
+        "English": "A Free Stalker load-bearing rig improves carrying capacity and weight distribution by 15%, but sacrifices 10% physical protection for unrestricted mobility.",
+        "Russian": "Разгрузка вольного сталкера улучшает грузоподъёмность и распределение веса на 15%, но ради свободы движений снижает физическую защиту на 10%."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_fullbody_loadbearing_description",
+      "languages": {
+        "English": "The final Freedom field conversion improves carrying capacity and weight distribution by 20%, but sacrifices 10% physical protection and 10% durability for maximum mobility.",
+        "Russian": "Финальная полевая переделка «Свободы» улучшает грузоподъёмность и распределение веса на 20%, но ради максимальной мобильности снижает физическую защиту и прочность на 10%."
+      }
+    }
+  ]
+}

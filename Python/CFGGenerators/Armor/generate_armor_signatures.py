@@ -280,28 +280,8 @@ def render_armor_patch(upgrades: list[ArmorUpgradeDefinition]) -> str:
 
 def render_effects() -> str:
     return r"""// AUTO-GENERATED - BPRUE armor faction signature effects
-// Prototype faction: FREEDOM / Mobility.
-// Values are intentionally isolated here so signature balancing does not touch weapon effects.
-
-BPRUE_Armor_Freedom_Helmet_Stamina : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_Helmet_Stamina
-   LocalizationSID = Armor_regenerationStamina
-   Text = Regen Stamina
-   Type = EEffectType::RegenStamina
-   ValueMin = 2.5%
-   ValueMax = 2.5%
-   bIsPermanent = true
-   Positive = EBeneficial::Positive
-struct.end
-
-BPRUE_Armor_Freedom_Helmet_LoadBearing : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_Helmet_LoadBearing
-   Type = EEffectType::AdditionalInventoryWeight
-   ValueMin = 2
-   ValueMax = 2
-   bIsPermanent = true
-   Positive = EBeneficial::Positive
-struct.end
+// FREEDOM / Mobility: increasingly aggressive field adaptation.
+// Each tier is cumulative; stronger mobility comes with increasing durability/protection trade-offs.
 
 BPRUE_Armor_Freedom_Helmet_Weight : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_Armor_Freedom_Helmet_Weight
@@ -314,22 +294,64 @@ BPRUE_Armor_Freedom_Helmet_Weight : struct.begin {refurl=@BaseGame/EffectPrototy
    Positive = EBeneficial::Positive
 struct.end
 
+BPRUE_Armor_Freedom_Helmet_Stamina : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Armor_Freedom_Helmet_Stamina
+   LocalizationSID = Armor_regenerationStamina
+   Text = Regen Stamina
+   Type = EEffectType::RegenStamina
+   ValueMin = 5.0%
+   ValueMax = 5.0%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+struct.end
+
+BPRUE_Armor_Freedom_Helmet_LoadBearing : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Armor_Freedom_Helmet_LoadBearing
+   Type = EEffectType::Composite
+   ApplyExtraEffectPrototypeSIDs : struct.begin
+      [0] = BPRUE_Armor_Freedom_Helmet_CarryWeight
+      [1] = BPRUE_Armor_Freedom_Helmet_WeightPenalty
+   struct.end
+struct.end
+
+BPRUE_Armor_Freedom_Helmet_CarryWeight : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Armor_Freedom_Helmet_CarryWeight
+   LocalizationSID = increase_max_inventory_weight
+   Text = Increase max inventory weight
+   Type = EEffectType::AdditionalInventoryWeight
+   ValueMin = 5.0%
+   ValueMax = 5.0%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+struct.end
+
+BPRUE_Armor_Freedom_Helmet_WeightPenalty : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Armor_Freedom_Helmet_WeightPenalty
+   Type = EEffectType::PenaltyLessWeight
+   ValueMin = 5.0%
+   ValueMax = 5.0%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+struct.end
+
+BPRUE_Armor_Freedom_Helmet_DurabilityTradeoff : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Armor_Freedom_Helmet_DurabilityTradeoff
+   LocalizationSID = armor_wearing
+   Text = Max Durability
+   Type = EEffectType::MaxDurability
+   ValueMin = -10.0%
+   ValueMax = -10.0%
+   bIsPermanent = true
+   Positive = EBeneficial::Negative
+struct.end
+
 BPRUE_Armor_Freedom_Suit_Weight : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_Armor_Freedom_Suit_Weight
    LocalizationSID = armor_reductionWeight
    Text = Item Weight
    Type = EEffectType::ArmorItemWeight
-   ValueMin = -1
-   ValueMax = -1
-   bIsPermanent = true
-   Positive = EBeneficial::Positive
-struct.end
-
-BPRUE_Armor_Freedom_Suit_LoadBearing : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_Suit_LoadBearing
-   Type = EEffectType::AdditionalInventoryWeight
-   ValueMin = 5
-   ValueMax = 5
+   ValueMin = -1.5
+   ValueMax = -1.5
    bIsPermanent = true
    Positive = EBeneficial::Positive
 struct.end
@@ -339,10 +361,51 @@ BPRUE_Armor_Freedom_Suit_Stamina : struct.begin {refurl=@BaseGame/EffectPrototyp
    LocalizationSID = Armor_regenerationStamina
    Text = Regen Stamina
    Type = EEffectType::RegenStamina
-   ValueMin = 5.0%
-   ValueMax = 5.0%
+   ValueMin = 10.0%
+   ValueMax = 10.0%
    bIsPermanent = true
    Positive = EBeneficial::Positive
+struct.end
+
+BPRUE_Armor_Freedom_Suit_LoadBearing : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Armor_Freedom_Suit_LoadBearing
+   Type = EEffectType::Composite
+   ApplyExtraEffectPrototypeSIDs : struct.begin
+      [0] = BPRUE_Armor_Freedom_Suit_CarryWeight
+      [1] = BPRUE_Armor_Freedom_Suit_WeightPenalty
+      [2] = BPRUE_Armor_Freedom_Suit_StrikeTradeoff
+   struct.end
+struct.end
+
+BPRUE_Armor_Freedom_Suit_CarryWeight : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Armor_Freedom_Suit_CarryWeight
+   LocalizationSID = increase_max_inventory_weight
+   Text = Increase max inventory weight
+   Type = EEffectType::AdditionalInventoryWeight
+   ValueMin = 15.0%
+   ValueMax = 15.0%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+struct.end
+
+BPRUE_Armor_Freedom_Suit_WeightPenalty : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Armor_Freedom_Suit_WeightPenalty
+   Type = EEffectType::PenaltyLessWeight
+   ValueMin = 15.0%
+   ValueMax = 15.0%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+struct.end
+
+BPRUE_Armor_Freedom_Suit_StrikeTradeoff : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Armor_Freedom_Suit_StrikeTradeoff
+   LocalizationSID = armor_protectionPhysical
+   Text = Strike Protection
+   Type = EEffectType::ProtectionStrike
+   ValueMin = -10.0%
+   ValueMax = -10.0%
+   bIsPermanent = true
+   Positive = EBeneficial::Negative
 struct.end
 
 BPRUE_Armor_Freedom_FullBody_Weight : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
@@ -350,17 +413,8 @@ BPRUE_Armor_Freedom_FullBody_Weight : struct.begin {refurl=@BaseGame/EffectProto
    LocalizationSID = armor_reductionWeight
    Text = Item Weight
    Type = EEffectType::ArmorItemWeight
-   ValueMin = -1
-   ValueMax = -1
-   bIsPermanent = true
-   Positive = EBeneficial::Positive
-struct.end
-
-BPRUE_Armor_Freedom_FullBody_LoadBearing : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_FullBody_LoadBearing
-   Type = EEffectType::AdditionalInventoryWeight
-   ValueMin = 7
-   ValueMax = 7
+   ValueMin = -2
+   ValueMax = -2
    bIsPermanent = true
    Positive = EBeneficial::Positive
 struct.end
@@ -370,10 +424,63 @@ BPRUE_Armor_Freedom_FullBody_Stamina : struct.begin {refurl=@BaseGame/EffectProt
    LocalizationSID = Armor_regenerationStamina
    Text = Regen Stamina
    Type = EEffectType::RegenStamina
-   ValueMin = 5.0%
-   ValueMax = 5.0%
+   ValueMin = 10.0%
+   ValueMax = 10.0%
    bIsPermanent = true
    Positive = EBeneficial::Positive
+struct.end
+
+BPRUE_Armor_Freedom_FullBody_LoadBearing : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Armor_Freedom_FullBody_LoadBearing
+   Type = EEffectType::Composite
+   ApplyExtraEffectPrototypeSIDs : struct.begin
+      [0] = BPRUE_Armor_Freedom_FullBody_CarryWeight
+      [1] = BPRUE_Armor_Freedom_FullBody_WeightPenalty
+      [2] = BPRUE_Armor_Freedom_FullBody_StrikeTradeoff
+      [3] = BPRUE_Armor_Freedom_FullBody_DurabilityTradeoff
+   struct.end
+struct.end
+
+BPRUE_Armor_Freedom_FullBody_CarryWeight : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Armor_Freedom_FullBody_CarryWeight
+   LocalizationSID = increase_max_inventory_weight
+   Text = Increase max inventory weight
+   Type = EEffectType::AdditionalInventoryWeight
+   ValueMin = 20.0%
+   ValueMax = 20.0%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+struct.end
+
+BPRUE_Armor_Freedom_FullBody_WeightPenalty : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Armor_Freedom_FullBody_WeightPenalty
+   Type = EEffectType::PenaltyLessWeight
+   ValueMin = 20.0%
+   ValueMax = 20.0%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+struct.end
+
+BPRUE_Armor_Freedom_FullBody_StrikeTradeoff : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Armor_Freedom_FullBody_StrikeTradeoff
+   LocalizationSID = armor_protectionPhysical
+   Text = Strike Protection
+   Type = EEffectType::ProtectionStrike
+   ValueMin = -10.0%
+   ValueMax = -10.0%
+   bIsPermanent = true
+   Positive = EBeneficial::Negative
+struct.end
+
+BPRUE_Armor_Freedom_FullBody_DurabilityTradeoff : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Armor_Freedom_FullBody_DurabilityTradeoff
+   LocalizationSID = armor_wearing
+   Text = Max Durability
+   Type = EEffectType::MaxDurability
+   ValueMin = -10.0%
+   ValueMax = -10.0%
+   bIsPermanent = true
+   Positive = EBeneficial::Negative
 struct.end
 """
 
