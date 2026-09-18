@@ -23,6 +23,7 @@ LOCALIZATION_FILES = (
     LOCALIZATION_DIR / "Shared_Specialization_Localization.json",
     LOCALIZATION_DIR / "Stock_Localization.json",
     LOCALIZATION_DIR / "Effect_Localization.json",
+    LOCALIZATION_DIR / "Armor_Localization.json",
     LOCALIZATION_DIR / "Unique_Localization.json",
     LOCALIZATION_DIR / "Unique_Sniper_Localization.json",
     LOCALIZATION_DIR / "Unique_MachineGun_Localization.json",
