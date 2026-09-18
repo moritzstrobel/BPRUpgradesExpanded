@@ -13,7 +13,9 @@
       "blocks_head": false,
       "refkey": "[0]",
       "direct_item_slot_type": "EInventoryEquipmentSlot::Body",
-      "direct_bBlockHead": "false"
+      "direct_bBlockHead": "false",
+      "faction_candidate": "UNRESOLVED",
+      "faction_matches": []
     },
     {
       "sid": "TemplateHelmet",
@@ -23,7 +25,9 @@
       "blocks_head": false,
       "refkey": "TemplateArmor",
       "direct_item_slot_type": "EInventoryEquipmentSlot::Head",
-      "direct_bBlockHead": null
+      "direct_bBlockHead": null,
+      "faction_candidate": "UNRESOLVED",
+      "faction_matches": []
     }
   ],
   "excluded": [
@@ -232,6 +236,866 @@
       "refkey": "TemplateArmor"
     }
   ],
+  "faction_hint_rules": {
+    "Dolg": "DUTY",
+    "Svoboda": "FREEDOM",
+    "Mercenaries": "MERCENARY",
+    "Monolith": "MONOLITH",
+    "Spark": "SPARK",
+    "Varta": "WARD",
+    "Military": "MILITARY",
+    "Neutral": "FREE_STALKER"
+  },
+  "faction_counts": {
+    "DUTY": 7,
+    "FREEDOM": 7,
+    "MERCENARY": 4,
+    "MONOLITH": 4,
+    "SPARK": 4,
+    "WARD": 3,
+    "MILITARY": 5,
+    "FREE_STALKER": 7,
+    "AMBIGUOUS": 0,
+    "UNRESOLVED": 10
+  },
+  "factions": {
+    "DUTY": [
+      {
+        "sid": "Battle_Dolg_End_Armor",
+        "struct": "Battle_Dolg_End_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "Anomaly_Scientific_Armor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "DUTY",
+        "faction_matches": [
+          {
+            "token": "Dolg",
+            "faction": "DUTY"
+          }
+        ]
+      },
+      {
+        "sid": "Exoskeleton_Dolg_Armor",
+        "struct": "Exoskeleton_Dolg_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "DUTY",
+        "faction_matches": [
+          {
+            "token": "Dolg",
+            "faction": "DUTY"
+          }
+        ]
+      },
+      {
+        "sid": "HeavyExoskeleton_Dolg_Armor",
+        "struct": "HeavyExoskeleton_Dolg_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "DUTY",
+        "faction_matches": [
+          {
+            "token": "Dolg",
+            "faction": "DUTY"
+          }
+        ]
+      },
+      {
+        "sid": "Heavy_Dolg_Armor",
+        "struct": "Heavy_Dolg_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "DUTY",
+        "faction_matches": [
+          {
+            "token": "Dolg",
+            "faction": "DUTY"
+          }
+        ]
+      },
+      {
+        "sid": "SEVA_Dolg_Armor",
+        "struct": "SEVA_Dolg_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "DUTY",
+        "faction_matches": [
+          {
+            "token": "Dolg",
+            "faction": "DUTY"
+          }
+        ]
+      },
+      {
+        "sid": "Battle_Dolg_Armor",
+        "struct": "Battle_Dolg_Armor",
+        "category": "SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": false,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "DUTY",
+        "faction_matches": [
+          {
+            "token": "Dolg",
+            "faction": "DUTY"
+          }
+        ]
+      },
+      {
+        "sid": "Rook_Dolg_Armor",
+        "struct": "Rook_Dolg_Armor",
+        "category": "SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": false,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "DUTY",
+        "faction_matches": [
+          {
+            "token": "Dolg",
+            "faction": "DUTY"
+          }
+        ]
+      }
+    ],
+    "FREEDOM": [
+      {
+        "sid": "Exoskeleton_Svoboda_Armor",
+        "struct": "Exoskeleton_Svoboda_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "FREEDOM",
+        "faction_matches": [
+          {
+            "token": "Svoboda",
+            "faction": "FREEDOM"
+          }
+        ]
+      },
+      {
+        "sid": "HeavyExoskeleton_Svoboda_Armor",
+        "struct": "HeavyExoskeleton_Svoboda_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "FREEDOM",
+        "faction_matches": [
+          {
+            "token": "Svoboda",
+            "faction": "FREEDOM"
+          }
+        ]
+      },
+      {
+        "sid": "Heavy_Svoboda_Armor",
+        "struct": "Heavy_Svoboda_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "FREEDOM",
+        "faction_matches": [
+          {
+            "token": "Svoboda",
+            "faction": "FREEDOM"
+          }
+        ]
+      },
+      {
+        "sid": "SEVA_Svoboda_Armor",
+        "struct": "SEVA_Svoboda_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "FREEDOM",
+        "faction_matches": [
+          {
+            "token": "Svoboda",
+            "faction": "FREEDOM"
+          }
+        ]
+      },
+      {
+        "sid": "Heavy_Svoboda_Helmet",
+        "struct": "Heavy_Svoboda_Helmet",
+        "category": "HELMET",
+        "item_slot_type": "EInventoryEquipmentSlot::Head",
+        "blocks_head": false,
+        "refkey": "TemplateHelmet",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "FREEDOM",
+        "faction_matches": [
+          {
+            "token": "Svoboda",
+            "faction": "FREEDOM"
+          }
+        ]
+      },
+      {
+        "sid": "Battle_Svoboda_Armor",
+        "struct": "Battle_Svoboda_Armor",
+        "category": "SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": false,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "FREEDOM",
+        "faction_matches": [
+          {
+            "token": "Svoboda",
+            "faction": "FREEDOM"
+          }
+        ]
+      },
+      {
+        "sid": "Rook_Svoboda_Armor",
+        "struct": "Rook_Svoboda_Armor",
+        "category": "SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": false,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "FREEDOM",
+        "faction_matches": [
+          {
+            "token": "Svoboda",
+            "faction": "FREEDOM"
+          }
+        ]
+      }
+    ],
+    "MERCENARY": [
+      {
+        "sid": "Exoskeleton_Mercenaries_Armor",
+        "struct": "Exoskeleton_Mercenaries_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "MERCENARY",
+        "faction_matches": [
+          {
+            "token": "Mercenaries",
+            "faction": "MERCENARY"
+          }
+        ]
+      },
+      {
+        "sid": "Heavy_Mercenaries_Armor",
+        "struct": "Heavy_Mercenaries_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "MERCENARY",
+        "faction_matches": [
+          {
+            "token": "Mercenaries",
+            "faction": "MERCENARY"
+          }
+        ]
+      },
+      {
+        "sid": "Light_Mercenaries_Helmet",
+        "struct": "Light_Mercenaries_Helmet",
+        "category": "HELMET",
+        "item_slot_type": "EInventoryEquipmentSlot::Head",
+        "blocks_head": false,
+        "refkey": "TemplateHelmet",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "MERCENARY",
+        "faction_matches": [
+          {
+            "token": "Mercenaries",
+            "faction": "MERCENARY"
+          }
+        ]
+      },
+      {
+        "sid": "Light_Mercenaries_Armor",
+        "struct": "Light_Mercenaries_Armor",
+        "category": "SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": false,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "MERCENARY",
+        "faction_matches": [
+          {
+            "token": "Mercenaries",
+            "faction": "MERCENARY"
+          }
+        ]
+      }
+    ],
+    "MONOLITH": [
+      {
+        "sid": "Exoskeleton_Monolith_Armor",
+        "struct": "Exoskeleton_Monolith_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "MONOLITH",
+        "faction_matches": [
+          {
+            "token": "Monolith",
+            "faction": "MONOLITH"
+          }
+        ]
+      },
+      {
+        "sid": "HeavyAnomaly_Monolith_Armor",
+        "struct": "HeavyAnomaly_Monolith_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "MONOLITH",
+        "faction_matches": [
+          {
+            "token": "Monolith",
+            "faction": "MONOLITH"
+          }
+        ]
+      },
+      {
+        "sid": "HeavyExoskeleton_Monolith_Armor",
+        "struct": "HeavyExoskeleton_Monolith_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "MONOLITH",
+        "faction_matches": [
+          {
+            "token": "Monolith",
+            "faction": "MONOLITH"
+          }
+        ]
+      },
+      {
+        "sid": "Battle_Monolith_Armor",
+        "struct": "Battle_Monolith_Armor",
+        "category": "SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": false,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "MONOLITH",
+        "faction_matches": [
+          {
+            "token": "Monolith",
+            "faction": "MONOLITH"
+          }
+        ]
+      }
+    ],
+    "SPARK": [
+      {
+        "sid": "HeavyAnomaly_Spark_Armor",
+        "struct": "HeavyAnomaly_Spark_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "SPARK",
+        "faction_matches": [
+          {
+            "token": "Spark",
+            "faction": "SPARK"
+          }
+        ]
+      },
+      {
+        "sid": "HeavyBattle_Spark_Armor",
+        "struct": "HeavyBattle_Spark_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "SPARK",
+        "faction_matches": [
+          {
+            "token": "Spark",
+            "faction": "SPARK"
+          }
+        ]
+      },
+      {
+        "sid": "SEVA_Spark_Armor",
+        "struct": "SEVA_Spark_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "SPARK",
+        "faction_matches": [
+          {
+            "token": "Spark",
+            "faction": "SPARK"
+          }
+        ]
+      },
+      {
+        "sid": "Battle_Spark_Armor",
+        "struct": "Battle_Spark_Armor",
+        "category": "SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": false,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "SPARK",
+        "faction_matches": [
+          {
+            "token": "Spark",
+            "faction": "SPARK"
+          }
+        ]
+      }
+    ],
+    "WARD": [
+      {
+        "sid": "BattleExoskeleton_Varta_Armor",
+        "struct": "BattleExoskeleton_Varta_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "WARD",
+        "faction_matches": [
+          {
+            "token": "Varta",
+            "faction": "WARD"
+          }
+        ]
+      },
+      {
+        "sid": "Heavy_Varta_Helmet",
+        "struct": "Heavy_Varta_Helmet",
+        "category": "HELMET",
+        "item_slot_type": "EInventoryEquipmentSlot::Head",
+        "blocks_head": false,
+        "refkey": "TemplateHelmet",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "WARD",
+        "faction_matches": [
+          {
+            "token": "Varta",
+            "faction": "WARD"
+          }
+        ]
+      },
+      {
+        "sid": "Battle_Varta_Armor",
+        "struct": "Battle_Varta_Armor",
+        "category": "SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": false,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "WARD",
+        "faction_matches": [
+          {
+            "token": "Varta",
+            "faction": "WARD"
+          }
+        ]
+      }
+    ],
+    "MILITARY": [
+      {
+        "sid": "Heavy2_Military_Armor",
+        "struct": "Heavy2_Military_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "MILITARY",
+        "faction_matches": [
+          {
+            "token": "Military",
+            "faction": "MILITARY"
+          }
+        ]
+      },
+      {
+        "sid": "Battle_Military_Helmet",
+        "struct": "Battle_Military_Helmet",
+        "category": "HELMET",
+        "item_slot_type": "EInventoryEquipmentSlot::Head",
+        "blocks_head": false,
+        "refkey": "TemplateHelmet",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "MILITARY",
+        "faction_matches": [
+          {
+            "token": "Military",
+            "faction": "MILITARY"
+          }
+        ]
+      },
+      {
+        "sid": "Heavy_Military_Helmet",
+        "struct": "Heavy_Military_Helmet",
+        "category": "HELMET",
+        "item_slot_type": "EInventoryEquipmentSlot::Head",
+        "blocks_head": false,
+        "refkey": "TemplateHelmet",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "MILITARY",
+        "faction_matches": [
+          {
+            "token": "Military",
+            "faction": "MILITARY"
+          }
+        ]
+      },
+      {
+        "sid": "Light_Military_Helmet",
+        "struct": "Light_Military_Helmet",
+        "category": "HELMET",
+        "item_slot_type": "EInventoryEquipmentSlot::Head",
+        "blocks_head": false,
+        "refkey": "TemplateHelmet",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "MILITARY",
+        "faction_matches": [
+          {
+            "token": "Military",
+            "faction": "MILITARY"
+          }
+        ]
+      },
+      {
+        "sid": "Default_Military_Armor",
+        "struct": "Default_Military_Armor",
+        "category": "SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": false,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "MILITARY",
+        "faction_matches": [
+          {
+            "token": "Military",
+            "faction": "MILITARY"
+          }
+        ]
+      }
+    ],
+    "FREE_STALKER": [
+      {
+        "sid": "Exoskeleton_Neutral_Armor",
+        "struct": "Exoskeleton_Neutral_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "FREE_STALKER",
+        "faction_matches": [
+          {
+            "token": "Neutral",
+            "faction": "FREE_STALKER"
+          }
+        ]
+      },
+      {
+        "sid": "SEVA_Neutral_Armor",
+        "struct": "SEVA_Neutral_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "FREE_STALKER",
+        "faction_matches": [
+          {
+            "token": "Neutral",
+            "faction": "FREE_STALKER"
+          }
+        ]
+      },
+      {
+        "sid": "Light_Neutral_Helmet",
+        "struct": "Light_Neutral_Helmet",
+        "category": "HELMET",
+        "item_slot_type": "EInventoryEquipmentSlot::Head",
+        "blocks_head": false,
+        "refkey": "TemplateHelmet",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "FREE_STALKER",
+        "faction_matches": [
+          {
+            "token": "Neutral",
+            "faction": "FREE_STALKER"
+          }
+        ]
+      },
+      {
+        "sid": "Jemmy_Neutral_Armor",
+        "struct": "Jemmy_Neutral_Armor",
+        "category": "SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": false,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "FREE_STALKER",
+        "faction_matches": [
+          {
+            "token": "Neutral",
+            "faction": "FREE_STALKER"
+          }
+        ]
+      },
+      {
+        "sid": "Nasos_Neutral_Armor",
+        "struct": "Nasos_Neutral_Armor",
+        "category": "SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": false,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "FREE_STALKER",
+        "faction_matches": [
+          {
+            "token": "Neutral",
+            "faction": "FREE_STALKER"
+          }
+        ]
+      },
+      {
+        "sid": "Newbee_Neutral_Armor",
+        "struct": "Newbee_Neutral_Armor",
+        "category": "SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": false,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "FREE_STALKER",
+        "faction_matches": [
+          {
+            "token": "Neutral",
+            "faction": "FREE_STALKER"
+          }
+        ]
+      },
+      {
+        "sid": "Zorya_Neutral_Armor",
+        "struct": "Zorya_Neutral_Armor",
+        "category": "SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": false,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "FREE_STALKER",
+        "faction_matches": [
+          {
+            "token": "Neutral",
+            "faction": "FREE_STALKER"
+          }
+        ]
+      }
+    ],
+    "AMBIGUOUS": [],
+    "UNRESOLVED": [
+      {
+        "sid": "Anomaly_Scientific_Armor",
+        "struct": "Anomaly_Scientific_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "UNRESOLVED",
+        "faction_matches": []
+      },
+      {
+        "sid": "Anomaly_Scientific_Armor_PSY_preinstalled",
+        "struct": "Anomaly_Scientific_Armor_PSY_preinstalled",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "Anomaly_Scientific_Armor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "UNRESOLVED",
+        "faction_matches": []
+      },
+      {
+        "sid": "HeavyAnomaly_Scientific_Armor",
+        "struct": "HeavyAnomaly_Scientific_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "UNRESOLVED",
+        "faction_matches": []
+      },
+      {
+        "sid": "SciSEVA_Scientific_Armor",
+        "struct": "SciSEVA_Scientific_Armor",
+        "category": "FULL_BODY_SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": true,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": "true",
+        "faction_candidate": "UNRESOLVED",
+        "faction_matches": []
+      },
+      {
+        "sid": "Heavy_Duty_Helmet",
+        "struct": "Heavy_Duty_Helmet",
+        "category": "HELMET",
+        "item_slot_type": "EInventoryEquipmentSlot::Head",
+        "blocks_head": false,
+        "refkey": "TemplateHelmet",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "UNRESOLVED",
+        "faction_matches": []
+      },
+      {
+        "sid": "Light_Bandit_Helmet",
+        "struct": "Light_Bandit_Helmet",
+        "category": "HELMET",
+        "item_slot_type": "EInventoryEquipmentSlot::Head",
+        "blocks_head": false,
+        "refkey": "TemplateHelmet",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "UNRESOLVED",
+        "faction_matches": []
+      },
+      {
+        "sid": "Light_Duty_Helmet",
+        "struct": "Light_Duty_Helmet",
+        "category": "HELMET",
+        "item_slot_type": "EInventoryEquipmentSlot::Head",
+        "blocks_head": false,
+        "refkey": "TemplateHelmet",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "UNRESOLVED",
+        "faction_matches": []
+      },
+      {
+        "sid": "Jacket_Bandit_Armor",
+        "struct": "Jacket_Bandit_Armor",
+        "category": "SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": false,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "UNRESOLVED",
+        "faction_matches": []
+      },
+      {
+        "sid": "Middle_Bandit_Armor",
+        "struct": "Middle_Bandit_Armor",
+        "category": "SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": false,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "UNRESOLVED",
+        "faction_matches": []
+      },
+      {
+        "sid": "SkinJacket_Bandit_Armor",
+        "struct": "SkinJacket_Bandit_Armor",
+        "category": "SUIT",
+        "item_slot_type": "EInventoryEquipmentSlot::Body",
+        "blocks_head": false,
+        "refkey": "TemplateArmor",
+        "direct_item_slot_type": null,
+        "direct_bBlockHead": null,
+        "faction_candidate": "UNRESOLVED",
+        "faction_matches": []
+      }
+    ]
+  },
   "counts": {
     "HELMET": 10,
     "SUIT": 16,
@@ -249,7 +1113,14 @@
         "blocks_head": false,
         "refkey": "TemplateHelmet",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "MILITARY",
+        "faction_matches": [
+          {
+            "token": "Military",
+            "faction": "MILITARY"
+          }
+        ]
       },
       {
         "sid": "Heavy_Duty_Helmet",
@@ -259,7 +1130,9 @@
         "blocks_head": false,
         "refkey": "TemplateHelmet",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "UNRESOLVED",
+        "faction_matches": []
       },
       {
         "sid": "Heavy_Military_Helmet",
@@ -269,7 +1142,14 @@
         "blocks_head": false,
         "refkey": "TemplateHelmet",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "MILITARY",
+        "faction_matches": [
+          {
+            "token": "Military",
+            "faction": "MILITARY"
+          }
+        ]
       },
       {
         "sid": "Heavy_Svoboda_Helmet",
@@ -279,7 +1159,14 @@
         "blocks_head": false,
         "refkey": "TemplateHelmet",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "FREEDOM",
+        "faction_matches": [
+          {
+            "token": "Svoboda",
+            "faction": "FREEDOM"
+          }
+        ]
       },
       {
         "sid": "Heavy_Varta_Helmet",
@@ -289,7 +1176,14 @@
         "blocks_head": false,
         "refkey": "TemplateHelmet",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "WARD",
+        "faction_matches": [
+          {
+            "token": "Varta",
+            "faction": "WARD"
+          }
+        ]
       },
       {
         "sid": "Light_Bandit_Helmet",
@@ -299,7 +1193,9 @@
         "blocks_head": false,
         "refkey": "TemplateHelmet",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "UNRESOLVED",
+        "faction_matches": []
       },
       {
         "sid": "Light_Duty_Helmet",
@@ -309,7 +1205,9 @@
         "blocks_head": false,
         "refkey": "TemplateHelmet",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "UNRESOLVED",
+        "faction_matches": []
       },
       {
         "sid": "Light_Mercenaries_Helmet",
@@ -319,7 +1217,14 @@
         "blocks_head": false,
         "refkey": "TemplateHelmet",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "MERCENARY",
+        "faction_matches": [
+          {
+            "token": "Mercenaries",
+            "faction": "MERCENARY"
+          }
+        ]
       },
       {
         "sid": "Light_Military_Helmet",
@@ -329,7 +1234,14 @@
         "blocks_head": false,
         "refkey": "TemplateHelmet",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "MILITARY",
+        "faction_matches": [
+          {
+            "token": "Military",
+            "faction": "MILITARY"
+          }
+        ]
       },
       {
         "sid": "Light_Neutral_Helmet",
@@ -339,7 +1251,14 @@
         "blocks_head": false,
         "refkey": "TemplateHelmet",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "FREE_STALKER",
+        "faction_matches": [
+          {
+            "token": "Neutral",
+            "faction": "FREE_STALKER"
+          }
+        ]
       }
     ],
     "SUIT": [
@@ -351,7 +1270,14 @@
         "blocks_head": false,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "DUTY",
+        "faction_matches": [
+          {
+            "token": "Dolg",
+            "faction": "DUTY"
+          }
+        ]
       },
       {
         "sid": "Battle_Monolith_Armor",
@@ -361,7 +1287,14 @@
         "blocks_head": false,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "MONOLITH",
+        "faction_matches": [
+          {
+            "token": "Monolith",
+            "faction": "MONOLITH"
+          }
+        ]
       },
       {
         "sid": "Battle_Spark_Armor",
@@ -371,7 +1304,14 @@
         "blocks_head": false,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "SPARK",
+        "faction_matches": [
+          {
+            "token": "Spark",
+            "faction": "SPARK"
+          }
+        ]
       },
       {
         "sid": "Battle_Svoboda_Armor",
@@ -381,7 +1321,14 @@
         "blocks_head": false,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "FREEDOM",
+        "faction_matches": [
+          {
+            "token": "Svoboda",
+            "faction": "FREEDOM"
+          }
+        ]
       },
       {
         "sid": "Battle_Varta_Armor",
@@ -391,7 +1338,14 @@
         "blocks_head": false,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "WARD",
+        "faction_matches": [
+          {
+            "token": "Varta",
+            "faction": "WARD"
+          }
+        ]
       },
       {
         "sid": "Default_Military_Armor",
@@ -401,7 +1355,14 @@
         "blocks_head": false,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "MILITARY",
+        "faction_matches": [
+          {
+            "token": "Military",
+            "faction": "MILITARY"
+          }
+        ]
       },
       {
         "sid": "Jacket_Bandit_Armor",
@@ -411,7 +1372,9 @@
         "blocks_head": false,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "UNRESOLVED",
+        "faction_matches": []
       },
       {
         "sid": "Jemmy_Neutral_Armor",
@@ -421,7 +1384,14 @@
         "blocks_head": false,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "FREE_STALKER",
+        "faction_matches": [
+          {
+            "token": "Neutral",
+            "faction": "FREE_STALKER"
+          }
+        ]
       },
       {
         "sid": "Light_Mercenaries_Armor",
@@ -431,7 +1401,14 @@
         "blocks_head": false,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "MERCENARY",
+        "faction_matches": [
+          {
+            "token": "Mercenaries",
+            "faction": "MERCENARY"
+          }
+        ]
       },
       {
         "sid": "Middle_Bandit_Armor",
@@ -441,7 +1418,9 @@
         "blocks_head": false,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "UNRESOLVED",
+        "faction_matches": []
       },
       {
         "sid": "Nasos_Neutral_Armor",
@@ -451,7 +1430,14 @@
         "blocks_head": false,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "FREE_STALKER",
+        "faction_matches": [
+          {
+            "token": "Neutral",
+            "faction": "FREE_STALKER"
+          }
+        ]
       },
       {
         "sid": "Newbee_Neutral_Armor",
@@ -461,7 +1447,14 @@
         "blocks_head": false,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "FREE_STALKER",
+        "faction_matches": [
+          {
+            "token": "Neutral",
+            "faction": "FREE_STALKER"
+          }
+        ]
       },
       {
         "sid": "Rook_Dolg_Armor",
@@ -471,7 +1464,14 @@
         "blocks_head": false,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "DUTY",
+        "faction_matches": [
+          {
+            "token": "Dolg",
+            "faction": "DUTY"
+          }
+        ]
       },
       {
         "sid": "Rook_Svoboda_Armor",
@@ -481,7 +1481,14 @@
         "blocks_head": false,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "FREEDOM",
+        "faction_matches": [
+          {
+            "token": "Svoboda",
+            "faction": "FREEDOM"
+          }
+        ]
       },
       {
         "sid": "SkinJacket_Bandit_Armor",
@@ -491,7 +1498,9 @@
         "blocks_head": false,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "UNRESOLVED",
+        "faction_matches": []
       },
       {
         "sid": "Zorya_Neutral_Armor",
@@ -501,7 +1510,14 @@
         "blocks_head": false,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "FREE_STALKER",
+        "faction_matches": [
+          {
+            "token": "Neutral",
+            "faction": "FREE_STALKER"
+          }
+        ]
       }
     ],
     "FULL_BODY_SUIT": [
@@ -513,7 +1529,9 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "UNRESOLVED",
+        "faction_matches": []
       },
       {
         "sid": "Anomaly_Scientific_Armor_PSY_preinstalled",
@@ -523,7 +1541,9 @@
         "blocks_head": true,
         "refkey": "Anomaly_Scientific_Armor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "UNRESOLVED",
+        "faction_matches": []
       },
       {
         "sid": "BattleExoskeleton_Varta_Armor",
@@ -533,7 +1553,14 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "WARD",
+        "faction_matches": [
+          {
+            "token": "Varta",
+            "faction": "WARD"
+          }
+        ]
       },
       {
         "sid": "Battle_Dolg_End_Armor",
@@ -543,7 +1570,14 @@
         "blocks_head": true,
         "refkey": "Anomaly_Scientific_Armor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": null
+        "direct_bBlockHead": null,
+        "faction_candidate": "DUTY",
+        "faction_matches": [
+          {
+            "token": "Dolg",
+            "faction": "DUTY"
+          }
+        ]
       },
       {
         "sid": "Exoskeleton_Dolg_Armor",
@@ -553,7 +1587,14 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "DUTY",
+        "faction_matches": [
+          {
+            "token": "Dolg",
+            "faction": "DUTY"
+          }
+        ]
       },
       {
         "sid": "Exoskeleton_Mercenaries_Armor",
@@ -563,7 +1604,14 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "MERCENARY",
+        "faction_matches": [
+          {
+            "token": "Mercenaries",
+            "faction": "MERCENARY"
+          }
+        ]
       },
       {
         "sid": "Exoskeleton_Monolith_Armor",
@@ -573,7 +1621,14 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "MONOLITH",
+        "faction_matches": [
+          {
+            "token": "Monolith",
+            "faction": "MONOLITH"
+          }
+        ]
       },
       {
         "sid": "Exoskeleton_Neutral_Armor",
@@ -583,7 +1638,14 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "FREE_STALKER",
+        "faction_matches": [
+          {
+            "token": "Neutral",
+            "faction": "FREE_STALKER"
+          }
+        ]
       },
       {
         "sid": "Exoskeleton_Svoboda_Armor",
@@ -593,7 +1655,14 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "FREEDOM",
+        "faction_matches": [
+          {
+            "token": "Svoboda",
+            "faction": "FREEDOM"
+          }
+        ]
       },
       {
         "sid": "Heavy2_Military_Armor",
@@ -603,7 +1672,14 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "MILITARY",
+        "faction_matches": [
+          {
+            "token": "Military",
+            "faction": "MILITARY"
+          }
+        ]
       },
       {
         "sid": "HeavyAnomaly_Monolith_Armor",
@@ -613,7 +1689,14 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "MONOLITH",
+        "faction_matches": [
+          {
+            "token": "Monolith",
+            "faction": "MONOLITH"
+          }
+        ]
       },
       {
         "sid": "HeavyAnomaly_Scientific_Armor",
@@ -623,7 +1706,9 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "UNRESOLVED",
+        "faction_matches": []
       },
       {
         "sid": "HeavyAnomaly_Spark_Armor",
@@ -633,7 +1718,14 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "SPARK",
+        "faction_matches": [
+          {
+            "token": "Spark",
+            "faction": "SPARK"
+          }
+        ]
       },
       {
         "sid": "HeavyBattle_Spark_Armor",
@@ -643,7 +1735,14 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "SPARK",
+        "faction_matches": [
+          {
+            "token": "Spark",
+            "faction": "SPARK"
+          }
+        ]
       },
       {
         "sid": "HeavyExoskeleton_Dolg_Armor",
@@ -653,7 +1752,14 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "DUTY",
+        "faction_matches": [
+          {
+            "token": "Dolg",
+            "faction": "DUTY"
+          }
+        ]
       },
       {
         "sid": "HeavyExoskeleton_Monolith_Armor",
@@ -663,7 +1769,14 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "MONOLITH",
+        "faction_matches": [
+          {
+            "token": "Monolith",
+            "faction": "MONOLITH"
+          }
+        ]
       },
       {
         "sid": "HeavyExoskeleton_Svoboda_Armor",
@@ -673,7 +1786,14 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "FREEDOM",
+        "faction_matches": [
+          {
+            "token": "Svoboda",
+            "faction": "FREEDOM"
+          }
+        ]
       },
       {
         "sid": "Heavy_Dolg_Armor",
@@ -683,7 +1803,14 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "DUTY",
+        "faction_matches": [
+          {
+            "token": "Dolg",
+            "faction": "DUTY"
+          }
+        ]
       },
       {
         "sid": "Heavy_Mercenaries_Armor",
@@ -693,7 +1820,14 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "MERCENARY",
+        "faction_matches": [
+          {
+            "token": "Mercenaries",
+            "faction": "MERCENARY"
+          }
+        ]
       },
       {
         "sid": "Heavy_Svoboda_Armor",
@@ -703,7 +1837,14 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "FREEDOM",
+        "faction_matches": [
+          {
+            "token": "Svoboda",
+            "faction": "FREEDOM"
+          }
+        ]
       },
       {
         "sid": "SEVA_Dolg_Armor",
@@ -713,7 +1854,14 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "DUTY",
+        "faction_matches": [
+          {
+            "token": "Dolg",
+            "faction": "DUTY"
+          }
+        ]
       },
       {
         "sid": "SEVA_Neutral_Armor",
@@ -723,7 +1871,14 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "FREE_STALKER",
+        "faction_matches": [
+          {
+            "token": "Neutral",
+            "faction": "FREE_STALKER"
+          }
+        ]
       },
       {
         "sid": "SEVA_Spark_Armor",
@@ -733,7 +1888,14 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "SPARK",
+        "faction_matches": [
+          {
+            "token": "Spark",
+            "faction": "SPARK"
+          }
+        ]
       },
       {
         "sid": "SEVA_Svoboda_Armor",
@@ -743,7 +1905,14 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "FREEDOM",
+        "faction_matches": [
+          {
+            "token": "Svoboda",
+            "faction": "FREEDOM"
+          }
+        ]
       },
       {
         "sid": "SciSEVA_Scientific_Armor",
@@ -753,7 +1922,9 @@
         "blocks_head": true,
         "refkey": "TemplateArmor",
         "direct_item_slot_type": null,
-        "direct_bBlockHead": "true"
+        "direct_bBlockHead": "true",
+        "faction_candidate": "UNRESOLVED",
+        "faction_matches": []
       }
     ],
     "AMBIGUOUS_BODY": [],
