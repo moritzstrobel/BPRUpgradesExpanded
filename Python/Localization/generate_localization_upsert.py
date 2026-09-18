@@ -45,6 +45,73 @@ def make_struct_text(sid,languages):
     return f'(SID="{escape_unreal_string(sid)}",LanguagesToLocalizedStrings=({",".join(parts)}))'
 def get_sid(entry): return str(entry.get_editor_property("SID"))
 
+def language_name(language):
+    raw=str(language)
+    if "LocalizationLanguage." in raw:
+        raw=raw.split("LocalizationLanguage.",1)[1].split(":",1)[0].split(">",1)[0]
+    return raw.strip().replace("_"," ").title().replace(" ","")
+
+def get_languages(entry):
+    value=entry.get_editor_property("LanguagesToLocalizedStrings")
+    if not hasattr(value,"items"):
+        raise RuntimeError(
+            "LanguagesToLocalizedStrings is not exposed as a mapping by ZoneKit Python "
+            f"(type={type(value).__name__})."
+        )
+    return {language_name(language):str(text) for language,text in value.items()}
+
+def verify_saved_asset(source_entries):
+    # Reload from disk instead of trusting the in-memory structs that were just mutated.
+    unreal.EditorAssetLibrary.unload_asset(ASSET_PATH)
+    saved_asset=unreal.load_asset(ASSET_PATH)
+    if saved_asset is None:
+        raise RuntimeError(f"Could not reload saved localization asset: {ASSET_PATH}")
+    saved_texts=saved_asset.get_editor_property("LocalizedTexts")
+    saved_by_sid={}
+    duplicates=[]
+    for saved_entry in saved_texts:
+        sid=get_sid(saved_entry)
+        if sid in saved_by_sid:
+            duplicates.append(sid)
+        saved_by_sid[sid]=saved_entry
+    if duplicates:
+        raise RuntimeError("Duplicate SIDs detected after save/reload:\n"+"\n".join(sorted(set(duplicates))))
+
+    missing=[]
+    mismatches=[]
+    for source in source_entries:
+        sid=source["sid"]
+        saved_entry=saved_by_sid.get(sid)
+        if saved_entry is None:
+            missing.append(sid)
+            continue
+        actual_languages=get_languages(saved_entry)
+        for language,expected in source["languages"].items():
+            actual=actual_languages.get(language)
+            if actual != expected:
+                mismatches.append({
+                    "sid":sid,
+                    "language":language,
+                    "expected":expected,
+                    "actual":actual,
+                })
+
+    log("VERIFY AFTER SAVE")
+    log(f"verified={len(source_entries)-len(missing)}, missing={len(missing)}, mismatched_values={len(mismatches)}")
+    for sid in missing:
+        log(f"VERIFY MISSING SID: {sid}")
+    for mismatch in mismatches:
+        actual="<missing>" if mismatch["actual"] is None else mismatch["actual"]
+        log(f"VERIFY MISMATCH: {mismatch['sid']} [{mismatch['language']}]")
+        log(f"  expected: {mismatch['expected']}")
+        log(f"  actual:   {actual}")
+    if missing or mismatches:
+        raise RuntimeError(
+            f"Localization verification failed after save/reload: "
+            f"missing={len(missing)}, mismatched_values={len(mismatches)}"
+        )
+    return len(saved_texts)
+
 log("========================================"); log("Starting localization UPSERT")
 entries=read_localization_files(LOCALIZATION_FILES); asset=unreal.load_asset(ASSET_PATH)
 if asset is None: raise RuntimeError(f"Could not load localization asset: {ASSET_PATH}")
@@ -73,4 +140,6 @@ if missing: raise RuntimeError("SIDs missing after UPSERT:\n"+"\n".join(missing)
 if len(localized_texts)!=existing_count+added: raise RuntimeError("Entry count mismatch after UPSERT.")
 asset.modify(); asset.set_editor_property("LocalizedTexts",localized_texts)
 if not unreal.EditorAssetLibrary.save_asset(ASSET_PATH,only_if_is_dirty=False): raise RuntimeError(f"Failed to save asset: {ASSET_PATH}")
-log(f"SUCCESS - input={len(entries)}, updated={updated}, added={added}, final={len(localized_texts)}"); log("========================================")
+log(f"UPSERT - input={len(entries)}, updated={updated}, added={added}, final={len(localized_texts)}")
+saved_count=verify_saved_asset(entries)
+log(f"SUCCESS - verified={len(entries)}, asset_entries={saved_count}, missing=0, mismatched_values=0"); log("========================================")
