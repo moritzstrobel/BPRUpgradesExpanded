@@ -1,7 +1,7 @@
 [
   {
     "field": "SID",
-    "count": 691,
+    "count": 671,
     "examples": [
       {
         "sid": "Anomaly_Scientific_Armor_MaxDurability_Left_1_1",
@@ -55,7 +55,7 @@
   },
   {
     "field": "Text",
-    "count": 691,
+    "count": 671,
     "examples": [
       {
         "sid": "Anomaly_Scientific_Armor_MaxDurability_Left_1_1",
@@ -109,7 +109,7 @@
   },
   {
     "field": "Hint",
-    "count": 691,
+    "count": 671,
     "examples": [
       {
         "sid": "Anomaly_Scientific_Armor_MaxDurability_Left_1_1",
@@ -157,114 +157,6 @@
         "sid": "Anomaly_Scientific_Armor_protectionElectrical_Left_2_2",
         "values": [
           "sid_upgrades_ArmUpg_electr_02_description"
-        ]
-      }
-    ]
-  },
-  {
-    "field": "BaseCost",
-    "count": 691,
-    "examples": [
-      {
-        "sid": "Anomaly_Scientific_Armor_MaxDurability_Left_1_1",
-        "values": [
-          "3600"
-        ]
-      },
-      {
-        "sid": "Anomaly_Scientific_Armor_MaxDurability_Left_2_2",
-        "values": [
-          "7300"
-        ]
-      },
-      {
-        "sid": "Anomaly_Scientific_Armor_container_Left_1_1",
-        "values": [
-          "3600"
-        ]
-      },
-      {
-        "sid": "Anomaly_Scientific_Armor_container_Left_1_2",
-        "values": [
-          "3600"
-        ]
-      },
-      {
-        "sid": "Anomaly_Scientific_Armor_container_Left_3_1",
-        "values": [
-          "14600"
-        ]
-      },
-      {
-        "sid": "Anomaly_Scientific_Armor_protectionChemical_Left_2_1",
-        "values": [
-          "7300"
-        ]
-      },
-      {
-        "sid": "Anomaly_Scientific_Armor_protectionChemical_protectionElectrical_Left_3_2",
-        "values": [
-          "14600"
-        ]
-      },
-      {
-        "sid": "Anomaly_Scientific_Armor_protectionElectrical_Left_2_2",
-        "values": [
-          "7300"
-        ]
-      }
-    ]
-  },
-  {
-    "field": "EffectPrototypeSIDs",
-    "count": 691,
-    "examples": [
-      {
-        "sid": "Anomaly_Scientific_Armor_MaxDurability_Left_1_1",
-        "values": [
-          "<struct>"
-        ]
-      },
-      {
-        "sid": "Anomaly_Scientific_Armor_MaxDurability_Left_2_2",
-        "values": [
-          "<struct>"
-        ]
-      },
-      {
-        "sid": "Anomaly_Scientific_Armor_container_Left_1_1",
-        "values": [
-          "<struct>"
-        ]
-      },
-      {
-        "sid": "Anomaly_Scientific_Armor_container_Left_1_2",
-        "values": [
-          "<struct>"
-        ]
-      },
-      {
-        "sid": "Anomaly_Scientific_Armor_container_Left_3_1",
-        "values": [
-          "<struct>"
-        ]
-      },
-      {
-        "sid": "Anomaly_Scientific_Armor_protectionChemical_Left_2_1",
-        "values": [
-          "<struct>"
-        ]
-      },
-      {
-        "sid": "Anomaly_Scientific_Armor_protectionChemical_protectionElectrical_Left_3_2",
-        "values": [
-          "<struct>"
-        ]
-      },
-      {
-        "sid": "Anomaly_Scientific_Armor_protectionElectrical_Left_2_2",
-        "values": [
-          "<struct>"
         ]
       }
     ]
@@ -324,6 +216,60 @@
     ]
   },
   {
+    "field": "BaseCost",
+    "count": 671,
+    "examples": [
+      {
+        "sid": "Anomaly_Scientific_Armor_MaxDurability_Left_1_1",
+        "values": [
+          "3600"
+        ]
+      },
+      {
+        "sid": "Anomaly_Scientific_Armor_MaxDurability_Left_2_2",
+        "values": [
+          "7300"
+        ]
+      },
+      {
+        "sid": "Anomaly_Scientific_Armor_container_Left_1_1",
+        "values": [
+          "3600"
+        ]
+      },
+      {
+        "sid": "Anomaly_Scientific_Armor_container_Left_1_2",
+        "values": [
+          "3600"
+        ]
+      },
+      {
+        "sid": "Anomaly_Scientific_Armor_container_Left_3_1",
+        "values": [
+          "14600"
+        ]
+      },
+      {
+        "sid": "Anomaly_Scientific_Armor_protectionChemical_Left_2_1",
+        "values": [
+          "7300"
+        ]
+      },
+      {
+        "sid": "Anomaly_Scientific_Armor_protectionChemical_protectionElectrical_Left_3_2",
+        "values": [
+          "14600"
+        ]
+      },
+      {
+        "sid": "Anomaly_Scientific_Armor_protectionElectrical_Left_2_2",
+        "values": [
+          "7300"
+        ]
+      }
+    ]
+  },
+  {
     "field": "UpgradeTargetPart",
     "count": 671,
     "examples": [
@@ -373,6 +319,60 @@
         "sid": "Anomaly_Scientific_Armor_protectionElectrical_Left_2_2",
         "values": [
           "EUpgradeTargetPartType::Handguard"
+        ]
+      }
+    ]
+  },
+  {
+    "field": "EffectPrototypeSIDs",
+    "count": 671,
+    "examples": [
+      {
+        "sid": "Anomaly_Scientific_Armor_MaxDurability_Left_1_1",
+        "values": [
+          "<struct>"
+        ]
+      },
+      {
+        "sid": "Anomaly_Scientific_Armor_MaxDurability_Left_2_2",
+        "values": [
+          "<struct>"
+        ]
+      },
+      {
+        "sid": "Anomaly_Scientific_Armor_container_Left_1_1",
+        "values": [
+          "<struct>"
+        ]
+      },
+      {
+        "sid": "Anomaly_Scientific_Armor_container_Left_1_2",
+        "values": [
+          "<struct>"
+        ]
+      },
+      {
+        "sid": "Anomaly_Scientific_Armor_container_Left_3_1",
+        "values": [
+          "<struct>"
+        ]
+      },
+      {
+        "sid": "Anomaly_Scientific_Armor_protectionChemical_Left_2_1",
+        "values": [
+          "<struct>"
+        ]
+      },
+      {
+        "sid": "Anomaly_Scientific_Armor_protectionChemical_protectionElectrical_Left_3_2",
+        "values": [
+          "<struct>"
+        ]
+      },
+      {
+        "sid": "Anomaly_Scientific_Armor_protectionElectrical_Left_2_2",
+        "values": [
+          "<struct>"
         ]
       }
     ]
@@ -433,7 +433,7 @@
   },
   {
     "field": "VerticalPosition",
-    "count": 628,
+    "count": 618,
     "examples": [
       {
         "sid": "Anomaly_Scientific_Armor_MaxDurability_Left_1_1",
@@ -487,7 +487,7 @@
   },
   {
     "field": "HorizontalPosition",
-    "count": 442,
+    "count": 430,
     "examples": [
       {
         "sid": "Anomaly_Scientific_Armor_MaxDurability_Left_2_2",
@@ -535,67 +535,67 @@
         "sid": "Anomaly_Scientific_Armor_protectionThermal_protectionChemica_Left_3_1",
         "values": [
           "2"
-        ]
-      }
-    ]
-  },
-  {
-    "field": "ConnectionLines",
-    "count": 442,
-    "examples": [
-      {
-        "sid": "Anomaly_Scientific_Armor_MaxDurability_Left_2_2",
-        "values": [
-          "<struct>"
-        ]
-      },
-      {
-        "sid": "Anomaly_Scientific_Armor_container_Left_3_1",
-        "values": [
-          "<struct>"
-        ]
-      },
-      {
-        "sid": "Anomaly_Scientific_Armor_protectionChemical_Left_2_1",
-        "values": [
-          "<struct>"
-        ]
-      },
-      {
-        "sid": "Anomaly_Scientific_Armor_protectionChemical_protectionElectrical_Left_3_2",
-        "values": [
-          "<struct>"
-        ]
-      },
-      {
-        "sid": "Anomaly_Scientific_Armor_protectionElectrical_Left_2_2",
-        "values": [
-          "<struct>"
-        ]
-      },
-      {
-        "sid": "Anomaly_Scientific_Armor_protectionPsi_Left_3_1",
-        "values": [
-          "<struct>"
-        ]
-      },
-      {
-        "sid": "Anomaly_Scientific_Armor_protectionRadiation_Left_2_1",
-        "values": [
-          "<struct>"
-        ]
-      },
-      {
-        "sid": "Anomaly_Scientific_Armor_protectionThermal_protectionChemica_Left_3_1",
-        "values": [
-          "<struct>"
         ]
       }
     ]
   },
   {
     "field": "RequiredUpgradePrototypeSIDs",
-    "count": 437,
+    "count": 430,
+    "examples": [
+      {
+        "sid": "Anomaly_Scientific_Armor_MaxDurability_Left_2_2",
+        "values": [
+          "<struct>"
+        ]
+      },
+      {
+        "sid": "Anomaly_Scientific_Armor_container_Left_3_1",
+        "values": [
+          "<struct>"
+        ]
+      },
+      {
+        "sid": "Anomaly_Scientific_Armor_protectionChemical_Left_2_1",
+        "values": [
+          "<struct>"
+        ]
+      },
+      {
+        "sid": "Anomaly_Scientific_Armor_protectionChemical_protectionElectrical_Left_3_2",
+        "values": [
+          "<struct>"
+        ]
+      },
+      {
+        "sid": "Anomaly_Scientific_Armor_protectionElectrical_Left_2_2",
+        "values": [
+          "<struct>"
+        ]
+      },
+      {
+        "sid": "Anomaly_Scientific_Armor_protectionPsi_Left_3_1",
+        "values": [
+          "<struct>"
+        ]
+      },
+      {
+        "sid": "Anomaly_Scientific_Armor_protectionRadiation_Left_2_1",
+        "values": [
+          "<struct>"
+        ]
+      },
+      {
+        "sid": "Anomaly_Scientific_Armor_protectionThermal_protectionChemica_Left_3_1",
+        "values": [
+          "<struct>"
+        ]
+      }
+    ]
+  },
+  {
+    "field": "ConnectionLines",
+    "count": 430,
     "examples": [
       {
         "sid": "Anomaly_Scientific_Armor_MaxDurability_Left_2_2",
@@ -649,7 +649,7 @@
   },
   {
     "field": "BlockingUpgradePrototypeSIDs",
-    "count": 225,
+    "count": 211,
     "examples": [
       {
         "sid": "Anomaly_Scientific_Armor_MaxDurability_Left_2_2",
@@ -751,60 +751,6 @@
         "sid": "Exoskeleton_Dolg_Armor_PSY_Left_3_2",
         "values": [
           "<struct>"
-        ]
-      }
-    ]
-  },
-  {
-    "field": "ID",
-    "count": 20,
-    "examples": [
-      {
-        "sid": "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-        "values": [
-          "555"
-        ]
-      },
-      {
-        "sid": "DutyArmor_4_E1_AddRunUpgrade",
-        "values": [
-          "551"
-        ]
-      },
-      {
-        "sid": "DutyArmor_4_E1_BulletProof2Upgrade",
-        "values": [
-          "550"
-        ]
-      },
-      {
-        "sid": "DutyArmor_4_E1_BulletProofUpgrade",
-        "values": [
-          "548"
-        ]
-      },
-      {
-        "sid": "DutyArmor_4_E1_Carryweight2Upgrade",
-        "values": [
-          "552"
-        ]
-      },
-      {
-        "sid": "DutyArmor_4_E1_CarryweightUpgrade",
-        "values": [
-          "544"
-        ]
-      },
-      {
-        "sid": "DutyArmor_4_E1_ChemicalDef2Upgrade",
-        "values": [
-          "558"
-        ]
-      },
-      {
-        "sid": "DutyArmor_4_E1_ChemicalDefUpgrade",
-        "values": [
-          "557"
         ]
       }
     ]

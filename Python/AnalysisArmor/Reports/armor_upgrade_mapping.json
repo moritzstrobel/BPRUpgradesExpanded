@@ -1,117 +1,8 @@
 [
   {
-    "sid": "TemplateArmor",
-    "upgrades": [],
-    "fields": {
-      "SID": [
-        "TemplateArmor"
-      ],
-      "Type": [
-        "EItemType::Armor"
-      ],
-      "Icon": [
-        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/T_xleb.T_xleb'"
-      ],
-      "ItemGridWidth": [
-        "2"
-      ],
-      "ItemGridHeight": [
-        "3"
-      ],
-      "ItemSlotType": [
-        "EInventoryEquipmentSlot::Body"
-      ],
-      "MaxStackCount": [
-        "999"
-      ],
-      "ArtifactSlots": [
-        "2"
-      ],
-      "bBlockHead": [
-        "false"
-      ],
-      "bPreventFromLimping": [
-        "false"
-      ],
-      "IncreaseSpeedCoef": [
-        "0.0"
-      ],
-      "NoiseCoef": [
-        "1.0"
-      ],
-      "ArmorSoundType": [
-        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Light.ArmorType-Light'"
-      ],
-      "StaggerEffectPrototypeSID": [
-        "empty"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "EffectPrototypeSIDs": [
-        "<struct>"
-      ],
-      "MeshGenerator": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "VoiceModulatorSID": [
-        ""
-      ],
-      "ItemTypeSwitchValue": [
-        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Items/ItemType/ItemType-Armor.ItemType-Armor'"
-      ],
-      "PhysicsInteractionPrototypeSID": [
-        "Armor"
-      ],
-      "PreinstalledUpgrades": [
-        "<struct>"
-      ],
-      "SectionSettings": [
-        "<struct>"
-      ]
-    }
-  },
-  {
-    "sid": "TemplateHelmet",
-    "upgrades": [],
-    "fields": {
-      "SID": [
-        "TemplateHelmet"
-      ],
-      "ItemGridWidth": [
-        "2"
-      ],
-      "ItemGridHeight": [
-        "2"
-      ],
-      "ItemSlotType": [
-        "EInventoryEquipmentSlot::Head"
-      ],
-      "MaxStackCount": [
-        "999"
-      ],
-      "ArtifactSlots": [
-        "0"
-      ],
-      "ItemTypeSwitchValue": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Items/ItemType/ItemType-Helmet.ItemType-Helmet'"
-      ],
-      "PhysicsInteractionPrototypeSID": [
-        "Helmet"
-      ]
-    }
-  },
-  {
     "sid": "Jemmy_Neutral_Armor",
+    "category": "SUIT",
+    "faction": "FREE_STALKER",
     "upgrades": [
       "Jemmy_Neutral_Armor_ProtectionStrike_Left_1_1",
       "Jemmy_Neutral_Armor_MaxDurability_Left_1_2",
@@ -167,6 +58,8 @@
   },
   {
     "sid": "Newbee_Neutral_Armor",
+    "category": "SUIT",
+    "faction": "FREE_STALKER",
     "upgrades": [
       "Newbie_Neutral_Armor_ProtectionStrike_Left_1_1",
       "Newbie_Neutral_Armor_ProtectionStrike_Left_2_1",
@@ -223,6 +116,8 @@
   },
   {
     "sid": "Nasos_Neutral_Armor",
+    "category": "SUIT",
+    "faction": "FREE_STALKER",
     "upgrades": [
       "Nasos_Neutral_Armor_MaxDurability_Left_1_1",
       "Nasos_Neutral_Armor_reductionWeight_Left_1_2",
@@ -286,6 +181,8 @@
   },
   {
     "sid": "Zorya_Neutral_Armor",
+    "category": "SUIT",
+    "faction": "FREE_STALKER",
     "upgrades": [
       "Zorya_Neutral_Armor_MaxDurability_Left_1_1",
       "Zorya_Neutral_Armor_protectionPhysical_Left_1_1",
@@ -349,6 +246,8 @@
   },
   {
     "sid": "SEVA_Neutral_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "FREE_STALKER",
     "upgrades": [
       "Seva_Neutral_Armor_protectionPhysical_Left_1_1",
       "Seva_Neutral_Armor_MaxDurability_Left_2_1",
@@ -424,6 +323,8 @@
   },
   {
     "sid": "Exoskeleton_Neutral_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "FREE_STALKER",
     "upgrades": [
       "Exoskeleton_Neutral_Armor_EXOprotectionPhysical_Left_1_1",
       "Exoskeleton_Neutral_Armor_EXOMaxDurability_Left_2_1",
@@ -504,6 +405,8 @@
   },
   {
     "sid": "SkinJacket_Bandit_Armor",
+    "category": "SUIT",
+    "faction": "BANDIT",
     "upgrades": [
       "Skin_Jacket_Bandit_Armor_ProtectionStrike_Left_1_1",
       "Skin_Jacket_Bandit_Armor_MaxDurability_Left_1_2",
@@ -557,6 +460,8 @@
   },
   {
     "sid": "Jacket_Bandit_Armor",
+    "category": "SUIT",
+    "faction": "BANDIT",
     "upgrades": [
       "Jacket_Bandit_Armor_ProtectionStrike_Left_1_1",
       "Jacket_Bandit_Armor_MaxDurability_Left_1_2",
@@ -611,6 +516,8 @@
   },
   {
     "sid": "Middle_Bandit_Armor",
+    "category": "SUIT",
+    "faction": "BANDIT",
     "upgrades": [
       "Middle_Bandit_Armor_MaxDurability_Left_1_1",
       "Middle_Bandit_Armor_protectionPhysical_Left_1_2",
@@ -671,6 +578,8 @@
   },
   {
     "sid": "Light_Mercenaries_Armor",
+    "category": "SUIT",
+    "faction": "MERCENARY",
     "upgrades": [
       "Light_Mercenaries_Armor_MaxDurability_Left_1_1",
       "Light_Mercenaries_Armor_reductionWeight_Left_1_2",
@@ -728,6 +637,8 @@
   },
   {
     "sid": "Exoskeleton_Mercenaries_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "MERCENARY",
     "upgrades": [
       "Exoskeleton_Mercenaries_Armor_EXOMaxDurability_Left_1_1",
       "Exoskeleton_Mercenaries_Armor_reductionWeight_Left_2_2",
@@ -806,6 +717,8 @@
   },
   {
     "sid": "Heavy_Mercenaries_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "MERCENARY",
     "upgrades": [
       "Heavy_Mercenaries_Armor_protectionPhysical_Left_1_1",
       "Heavy_Mercenaries_Armor_MaxDurability_Left_1_2",
@@ -877,6 +790,8 @@
   },
   {
     "sid": "Default_Military_Armor",
+    "category": "SUIT",
+    "faction": "MILITARY",
     "upgrades": [
       "Default_Military_Armor_wearing_Left_1_1",
       "Default_Military_Armor_reductionWeight_Left_1_2",
@@ -937,6 +852,8 @@
   },
   {
     "sid": "Heavy2_Military_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "MILITARY",
     "upgrades": [
       "Heavy2_Military_Armor_carryingCapacity_Left_1_1",
       "Heavy2_Military_Armor_MaxDurability_Left_2_1",
@@ -1007,6 +924,8 @@
   },
   {
     "sid": "Anomaly_Scientific_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "ECOLOGIST",
     "upgrades": [
       "Anomaly_Scientific_Armor_MaxDurability_Left_1_1",
       "Anomaly_Scientific_Armor_MaxDurability_Left_2_2",
@@ -1076,6 +995,8 @@
   },
   {
     "sid": "HeavyAnomaly_Scientific_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "ECOLOGIST",
     "upgrades": [
       "HeavyAnomaly_Scientific_Armor_MaxDurability_Left_1_1",
       "HeavyAnomaly_Scientific_Armor_protectionPhysical_Left_2_1",
@@ -1147,6 +1068,8 @@
   },
   {
     "sid": "SciSEVA_Scientific_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "ECOLOGIST",
     "upgrades": [
       "SciSEVA_Scientific_Armor_MaxDurability_Left_1_1",
       "SciSEVA_Scientific_Armor_MaxDurability_Left_2_1",
@@ -1218,6 +1141,8 @@
   },
   {
     "sid": "Rook_Svoboda_Armor",
+    "category": "SUIT",
+    "faction": "FREEDOM",
     "upgrades": [
       "Rook_Svoboda_Armor_protectionPhysical_Left_1_1",
       "Rook_Svoboda_Armor_reductionWeight_Left_1_2",
@@ -1274,6 +1199,8 @@
   },
   {
     "sid": "Battle_Svoboda_Armor",
+    "category": "SUIT",
+    "faction": "FREEDOM",
     "upgrades": [
       "Battle_Svoboda_Armor_MaxDurability_Left_1_1",
       "Battle_Svoboda_Armor_protectionPhysical_Left_2_1",
@@ -1336,6 +1263,8 @@
   },
   {
     "sid": "SEVA_Svoboda_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "FREEDOM",
     "upgrades": [
       "SEVA_Svoboda_Armor_carryingCapacity_Left_1_1",
       "SEVA_Svoboda_Armor_MaxDurability_Left_2_1",
@@ -1408,6 +1337,8 @@
   },
   {
     "sid": "Heavy_Svoboda_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "FREEDOM",
     "upgrades": [
       "Heavy_Svoboda_Armor_protectionPhysical_Left_1_1",
       "Heavy_Svoboda_Armor_MaxDurability_Left_1_2",
@@ -1479,6 +1410,8 @@
   },
   {
     "sid": "HeavyExoskeleton_Svoboda_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "FREEDOM",
     "upgrades": [
       "HeavyExoskeleton_Svoboda_Armor_EXOprotectionPhysical_Left_1_1",
       "HeavyExoskeleton_Svoboda_Armor_reductionWeight_Left_2_1",
@@ -1556,6 +1489,8 @@
   },
   {
     "sid": "Exoskeleton_Svoboda_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "FREEDOM",
     "upgrades": [
       "Exoskeleton_Svoboda_Armor_EXOprotectionPhysical_Left_1_1",
       "Exoskeleton_Svoboda_Armor_EXOMaxDurability_Left_2_1",
@@ -1636,6 +1571,8 @@
   },
   {
     "sid": "Rook_Dolg_Armor",
+    "category": "SUIT",
+    "faction": "DUTY",
     "upgrades": [
       "Rook_Dolg_Armor_protectionPhysical_Left_1_1",
       "Rook_Dolg_Armor_protectionPhysical_Left_2_2",
@@ -1695,6 +1632,8 @@
   },
   {
     "sid": "Battle_Dolg_Armor",
+    "category": "SUIT",
+    "faction": "DUTY",
     "upgrades": [
       "Battle_Dolg_Armor_MaxDurability_Left_1_1",
       "Battle_Dolg_Armor_protectionPhysical_Left_2_1",
@@ -1758,6 +1697,8 @@
   },
   {
     "sid": "SEVA_Dolg_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "DUTY",
     "upgrades": [
       "SEVA_Dolg_Armor_protectionPhysical_Left_1_1",
       "SEVA_Dolg_Armor_MaxDurability_Left_2_1",
@@ -1831,6 +1772,8 @@
   },
   {
     "sid": "Heavy_Dolg_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "DUTY",
     "upgrades": [
       "Heavy_Dolg_Armor_MaxDurability_Left_1_1",
       "Heavy_Dolg_Armor_protectionPhysical_Left_2_1",
@@ -1903,6 +1846,8 @@
   },
   {
     "sid": "HeavyExoskeleton_Dolg_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "DUTY",
     "upgrades": [
       "HeavyExoskeleton_Dolg_Armor_EXOprotectionPhysical_Left_1_1",
       "HeavyExoskeleton_Dolg_Armor_reductionWeight_Left_2_1",
@@ -1981,6 +1926,8 @@
   },
   {
     "sid": "Exoskeleton_Dolg_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "DUTY",
     "upgrades": [
       "Exoskeleton_Dolg_Armor_EXOprotectionPhysical_Left_1_1",
       "Exoskeleton_Dolg_Armor_EXOMaxDurability_Left_2_1",
@@ -2058,6 +2005,8 @@
   },
   {
     "sid": "Battle_Monolith_Armor",
+    "category": "SUIT",
+    "faction": "MONOLITH",
     "upgrades": [
       "Battle_Monolith_Armor_protectionPhysical_Left_1_1",
       "Battle_Monolith_Armor_reductionWeight_Left_2_1",
@@ -2126,6 +2075,8 @@
   },
   {
     "sid": "HeavyAnomaly_Monolith_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "MONOLITH",
     "upgrades": [
       "HeavyAnomaly_Monolith_Armor_protectionPhysical_Left_1_1",
       "HeavyAnomaly_Monolith_Armor_MaxDurability_Left_2_1",
@@ -2198,6 +2149,8 @@
   },
   {
     "sid": "HeavyExoskeleton_Monolith_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "MONOLITH",
     "upgrades": [
       "HeavyExoskeleton_Monolith_Armor_pockets_Left_1_1",
       "HeavyExoskeleton_Monolith_Armor_EXOprotectionPhysical_Left_2_1",
@@ -2279,6 +2232,8 @@
   },
   {
     "sid": "Exoskeleton_Monolith_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "MONOLITH",
     "upgrades": [
       "Exoskeleton_Monolith_Armor_EXOMaxDurability_Left_1_1",
       "Exoskeleton_Monolith_Armor_EXOprotectionPhysical_Left_2_1",
@@ -2358,6 +2313,8 @@
   },
   {
     "sid": "Battle_Varta_Armor",
+    "category": "SUIT",
+    "faction": "WARD",
     "upgrades": [
       "Battle_Varta_Armor_wearing_Left_1_1",
       "Battle_Varta_Armor_reductionWeight_Left_1_2",
@@ -2420,6 +2377,8 @@
   },
   {
     "sid": "BattleExoskeleton_Varta_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "WARD",
     "upgrades": [
       "BattleExoskeleton_Varta_Armor_reductionWeight_Left_1_1",
       "BattleExoskeleton_Varta_Armor_EXOprotectionPhysical_Left_2_2",
@@ -2500,6 +2459,8 @@
   },
   {
     "sid": "Battle_Spark_Armor",
+    "category": "SUIT",
+    "faction": "SPARK",
     "upgrades": [
       "Battle_Spark_Armor_MaxDurability_Left_1_1",
       "Battle_Spark_Armor_protectionPhysical_Left_2_1",
@@ -2564,6 +2525,8 @@
   },
   {
     "sid": "HeavyAnomaly_Spark_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "SPARK",
     "upgrades": [
       "HeavyAnomaly_Spark_Armor_MaxDurability_Left_1_1",
       "HeavyAnomaly_Spark_Armor_carryingCapacity_Left_2_1",
@@ -2637,6 +2600,8 @@
   },
   {
     "sid": "SEVA_Spark_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "SPARK",
     "upgrades": [
       "SEVA_Spark_Armor_protectionPhysical_Left_1_1",
       "SEVA_Spark_Armor_MaxDurability_Left_2_1",
@@ -2710,6 +2675,8 @@
   },
   {
     "sid": "HeavyBattle_Spark_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "SPARK",
     "upgrades": [
       "HeavyBattle_Spark_Armor_protectionPhysical_Left_1_1",
       "HeavyBattle_Spark_Armor_MaxDurability_Left_1_2",
@@ -2785,6 +2752,8 @@
   },
   {
     "sid": "Battle_Dolg_End_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "DUTY",
     "upgrades": [],
     "fields": {
       "SID": [
@@ -2826,2159 +2795,9 @@
     }
   },
   {
-    "sid": "NPC_Sel_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Sel_Armor"
-      ],
-      "Icon": [
-        "PaperSprite'/Game/GameLite/FPS_Game/UI/ItemIcons/DolgArmor2K.DolgArmor2K'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Sel_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
-      ],
-      "BaseDurability": [
-        "143.0"
-      ],
-      "Weight": [
-        "10.5"
-      ],
-      "Cost": [
-        "3000.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Sel_Neutral_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Sel_Neutral_Armor"
-      ],
-      "Icon": [
-        "PaperSprite'/Game/GameLite/FPS_Game/UI/ItemIcons/DolgArmor2K.DolgArmor2K'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Sel_Neutral_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
-      ],
-      "BaseDurability": [
-        "143.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "3000.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Tec_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Tec_Armor"
-      ],
-      "Icon": [
-        "PaperSprite'/Game/GameLite/FPS_Game/UI/ItemIcons/DolgArmor2K.DolgArmor2K'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Tec_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
-      ],
-      "BaseDurability": [
-        "143.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "3000.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Cloak_Heavy_Neutral_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Cloak_Heavy_Neutral_Armor"
-      ],
-      "Icon": [
-        "PaperSprite'/Game/GameLite/FPS_Game/UI/ItemIcons/DolgArmor2K.DolgArmor2K'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Cloak_Heavy_Neutral_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Heavy.ArmorType-Heavy'"
-      ],
-      "BaseDurability": [
-        "1170.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "30000.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_SkinCloak_Bandit_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_SkinCloak_Bandit_Armor"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_SkinCloak_Bandit_Armor"
-      ],
-      "BaseDurability": [
-        "143.0"
-      ],
-      "Weight": [
-        "4.0"
-      ],
-      "Cost": [
-        "17200.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_HeavyExoskeleton_Mercenaries_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_HeavyExoskeleton_Mercenaries_Armor"
-      ],
-      "Icon": [
-        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_HeavyExoskeleton_Mercenaries_Armor.T_IFI_HeavyExoskeleton_Mercenaries_Armor'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_HeavyExoskeleton_Mercenaries_Armor"
-      ],
-      "BaseDurability": [
-        "1170.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "63000.0"
-      ],
-      "bBlockHead": [
-        "true"
-      ],
-      "ArmorSoundType": [
-        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Exoskeleton.ArmorType-Exoskeleton'"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "EffectPrototypeSIDs": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Heavy_Military_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Heavy_Military_Armor"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Heavy_Military_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Heavy.ArmorType-Heavy'"
-      ],
-      "BaseDurability": [
-        "1170.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "30000.0"
-      ],
-      "bBlockHead": [
-        "true"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Cloak_Heavy_Military_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Cloak_Heavy_Military_Armor"
-      ],
-      "Icon": [
-        "PaperSprite'/Game/GameLite/FPS_Game/UI/ItemIcons/DolgArmor2K.DolgArmor2K'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Cloak_Heavy_Military_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Heavy.ArmorType-Heavy'"
-      ],
-      "BaseDurability": [
-        "1170.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "30000.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Sci_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Sci_Armor"
-      ],
-      "Icon": [
-        "PaperSprite'/Game/GameLite/FPS_Game/UI/ItemIcons/DolgArmor2K.DolgArmor2K'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Sci_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
-      ],
-      "BaseDurability": [
-        "143.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "3250.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Battle_Noon_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Battle_Noon_Armor"
-      ],
-      "Icon": [
-        "PaperSprite'/Game/GameLite/FPS_Game/UI/ItemIcons/DolgArmor2K.DolgArmor2K'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Battle_Noon_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
-      ],
-      "BaseDurability": [
-        "663.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "10000.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_HeavyAnomaly_Noon_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_HeavyAnomaly_Noon_Armor"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_HeavyAnomaly_Noon_Armor"
-      ],
-      "BaseDurability": [
-        "1170.0"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Heavy.ArmorType-Heavy'"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "30000.0"
-      ],
-      "bBlockHead": [
-        "true"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_HeavyExoskeleton_Noon_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_HeavyExoskeleton_Noon_Armor"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_HeavyExoskeleton_Noon_Armor"
-      ],
-      "BaseDurability": [
-        "1690.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "90000.0"
-      ],
-      "bBlockHead": [
-        "true"
-      ],
-      "ArmorSoundType": [
-        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Exoskeleton.ArmorType-Exoskeleton'"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "EffectPrototypeSIDs": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Exoskeleton_Noon_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Exoskeleton_Noon_Armor"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Exoskeleton_Noon_Armor"
-      ],
-      "BaseDurability": [
-        "1690.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "100000.0"
-      ],
-      "bBlockHead": [
-        "true"
-      ],
-      "ArmorSoundType": [
-        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Exoskeleton.ArmorType-Exoskeleton'"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "EffectPrototypeSIDs": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Spark_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Spark_Armor"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Spark_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
-      ],
-      "BaseDurability": [
-        "143.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "2500.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Anomaly_Spark_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Anomaly_Spark_Armor"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Anomaly_Spark_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
-      ],
-      "BaseDurability": [
-        "143.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "2500.0"
-      ],
-      "bBlockHead": [
-        "true"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_HeavyExoskeleton_Spark_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_HeavyExoskeleton_Spark_Armor"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_HeavyExoskeleton_Spark_Armor"
-      ],
-      "BaseDurability": [
-        "1690.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "90000.0"
-      ],
-      "bBlockHead": [
-        "true"
-      ],
-      "ArmorSoundType": [
-        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Exoskeleton.ArmorType-Exoskeleton'"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "EffectPrototypeSIDs": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Heavy_Corps_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Heavy_Corps_Armor"
-      ],
-      "Icon": [
-        "PaperSprite'/Game/GameLite/FPS_Game/UI/ItemIcons/DolgArmor2K.DolgArmor2K'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Heavy_Corps_Armor"
-      ],
-      "BaseDurability": [
-        "1170.0"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Heavy.ArmorType-Heavy'"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "31000.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Heavy2_Coprs_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Heavy2_Coprs_Armor"
-      ],
-      "Icon": [
-        "PaperSprite'/Game/GameLite/FPS_Game/UI/ItemIcons/DolgArmor2K.DolgArmor2K'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Heavy2_Coprs_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Heavy.ArmorType-Heavy'"
-      ],
-      "BaseDurability": [
-        "1170.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "32000.0"
-      ],
-      "bBlockHead": [
-        "true"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Heavy3_Corps_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Heavy3_Corps_Armor"
-      ],
-      "Icon": [
-        "PaperSprite'/Game/GameLite/FPS_Game/UI/ItemIcons/DolgArmor2K.DolgArmor2K'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Heavy3_Corps_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Heavy.ArmorType-Heavy'"
-      ],
-      "BaseDurability": [
-        "1170.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "35000.0"
-      ],
-      "bBlockHead": [
-        "true"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Heavy3Exoskeleton_Coprs_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Heavy3Exoskeleton_Coprs_Armor"
-      ],
-      "Icon": [
-        "PaperSprite'/Game/GameLite/FPS_Game/UI/ItemIcons/DolgArmor2K.DolgArmor2K'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Heavy3Exoskeleton_Coprs_Armor"
-      ],
-      "BaseDurability": [
-        "1690.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "90000.0"
-      ],
-      "bBlockHead": [
-        "true"
-      ],
-      "ArmorSoundType": [
-        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Exoskeleton.ArmorType-Exoskeleton'"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "EffectPrototypeSIDs": [
-        "<struct>",
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Exoskeleton_Coprs_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Exoskeleton_Coprs_Armor"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Exoskeleton_Coprs_Armor"
-      ],
-      "BaseDurability": [
-        "1690.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "85000.0"
-      ],
-      "bBlockHead": [
-        "true"
-      ],
-      "ArmorSoundType": [
-        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Exoskeleton.ArmorType-Exoskeleton'"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "EffectPrototypeSIDs": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Richter_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Richter_Armor"
-      ],
-      "Icon": [
-        "PaperSprite'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Frames/side-look_4x3_armor-yastreb-small_png.side-look_4x3_armor-yastreb-small_png'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Richter_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
-      ],
-      "BaseDurability": [
-        "143.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "3750.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Korshunov_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Korshunov_Armor"
-      ],
-      "Icon": [
-        "PaperSprite'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Frames/side-look_4x3_armor-yastreb-small_png.side-look_4x3_armor-yastreb-small_png'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Korshunov_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
-      ],
-      "BaseDurability": [
-        "1690.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "130000.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Korshunov_Armor_2",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Korshunov_Armor_2"
-      ],
-      "Icon": [
-        "PaperSprite'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Frames/side-look_4x3_armor-yastreb-small_png.side-look_4x3_armor-yastreb-small_png'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Korshunov_Armor_2"
-      ],
-      "ArmorSoundType": [
-        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Exoskeleton.ArmorType-Exoskeleton'"
-      ],
-      "BaseDurability": [
-        "663.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "25000.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "bBlockHead": [
-        "true"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Dalin_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Dalin_Armor"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Dalin_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
-      ],
-      "BaseDurability": [
-        "143.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "3750.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Agata_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Agata_Armor"
-      ],
-      "Icon": [
-        "PaperSprite'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Frames/side-look_4x3_armor-yastreb-small_png.side-look_4x3_armor-yastreb-small_png'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Agata_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
-      ],
-      "BaseDurability": [
-        "143.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "3750.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Faust_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Faust_Armor"
-      ],
-      "Icon": [
-        "PaperSprite'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Frames/side-look_4x3_armor-yastreb-small_png.side-look_4x3_armor-yastreb-small_png'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Faust_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
-      ],
-      "BaseDurability": [
-        "143.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "3750.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Kaymanov_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Kaymanov_Armor"
-      ],
-      "Icon": [
-        "PaperSprite'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Frames/side-look_4x3_armor-yastreb-small_png.side-look_4x3_armor-yastreb-small_png'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Kaymanov_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
-      ],
-      "BaseDurability": [
-        "143.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "3750.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Shram_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Shram_Armor"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Shram_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
-      ],
-      "BaseDurability": [
-        "1170.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "40000.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Dekhtyarev_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Dekhtyarev_Armor"
-      ],
-      "Icon": [
-        "PaperSprite'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Frames/side-look_4x3_armor-yastreb-small_png.side-look_4x3_armor-yastreb-small_png'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Dekhtyarev_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
-      ],
-      "BaseDurability": [
-        "1170.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "40000.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Sidorovich_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Sidorovich_Armor"
-      ],
-      "Icon": [
-        "PaperSprite'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Frames/side-look_4x3_armor-yastreb-small_png.side-look_4x3_armor-yastreb-small_png'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Sidorovich_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
-      ],
-      "BaseDurability": [
-        "143.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "3750.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Barmen_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Barmen_Armor"
-      ],
-      "Icon": [
-        "PaperSprite'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Frames/side-look_4x3_armor-yastreb-small_png.side-look_4x3_armor-yastreb-small_png'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Barmen_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
-      ],
-      "BaseDurability": [
-        "143.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "3750.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Batya_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Batya_Armor"
-      ],
-      "Icon": [
-        "PaperSprite'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Frames/side-look_4x3_armor-yastreb-small_png.side-look_4x3_armor-yastreb-small_png'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Batya_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
-      ],
-      "BaseDurability": [
-        "143.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "3750.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "NpcMeshGenerator": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
-    "sid": "NPC_Tyotya_Armor",
-    "upgrades": [
-      "DutyArmor_4_E1_CarryweightUpgrade",
-      "DutyArmor_4_E1_RadiationDefUpgrade",
-      "DutyArmor_4_E1_NightVisionUpgrade",
-      "DutyArmor_4_E1_UpDurabilityArmorUpgrade",
-      "DutyArmor_4_E1_BulletProofUpgrade",
-      "DutyArmor_4_E1_DecreaseArmorWeightUpgrade",
-      "DutyArmor_4_E1_BulletProof2Upgrade",
-      "DutyArmor_4_E1_AddRunUpgrade",
-      "DutyArmor_4_E1_Carryweight2Upgrade",
-      "DutyArmor_4_E1_RadiationDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDefUpgrade",
-      "DutyArmor_4_E1_AddArtifactSlotUpgrade",
-      "DutyArmor_4_E1_CloseDamageDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDefUpgrade",
-      "DutyArmor_4_E1_ChemicalDef2Upgrade",
-      "DutyArmor_4_E1_ElectroDef2Upgrade",
-      "DutyArmor_4_E1_FireDefUpgrade",
-      "DutyArmor_4_E1_FireDef2Upgrade",
-      "DutyArmor_4_E1_NightVision2Upgrade",
-      "DutyArmor_4_E1_GaussianArmorUpgrade"
-    ],
-    "fields": {
-      "SID": [
-        "NPC_Tyotya_Armor"
-      ],
-      "Icon": [
-        "PaperSprite'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Frames/side-look_4x3_armor-yastreb-small_png.side-look_4x3_armor-yastreb-small_png'"
-      ],
-      "MeshPrototypeSID": [
-        "NPC_Tyotya_Armor"
-      ],
-      "ArmorSoundType": [
-        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
-      ],
-      "BaseDurability": [
-        "143.0"
-      ],
-      "Weight": [
-        "8.0"
-      ],
-      "Cost": [
-        "3750.0"
-      ],
-      "Protection": [
-        "<struct>"
-      ],
-      "ProtectionNPC": [
-        "<struct>"
-      ],
-      "UpgradePrototypeSIDs": [
-        "<struct>"
-      ],
-      "Invisible": [
-        "true"
-      ]
-    }
-  },
-  {
     "sid": "Light_Duty_Helmet",
+    "category": "HELMET",
+    "faction": "DUTY",
     "upgrades": [
       "Light_Duty_Helmet_Armor_protectionRadiation_Left_1_1",
       "Light_Duty_Helmet_Armor_wearing_Left_1_2",
@@ -5021,6 +2840,8 @@
   },
   {
     "sid": "Heavy_Duty_Helmet",
+    "category": "HELMET",
+    "faction": "DUTY",
     "upgrades": [
       "Heavy_Duty_Helmet_protectionPhysical_Left_1_1",
       "Heavy_Duty_Helmet_reductionWeight_Left_1_2",
@@ -5069,6 +2890,8 @@
   },
   {
     "sid": "Heavy_Svoboda_Helmet",
+    "category": "HELMET",
+    "faction": "FREEDOM",
     "upgrades": [
       "Heavy_Svoboda_Helmet_protectionPhysical_Left_1_1",
       "Heavy_Svoboda_Helmet_reductionWeight_Left_1_2",
@@ -5120,6 +2943,8 @@
   },
   {
     "sid": "Heavy_Varta_Helmet",
+    "category": "HELMET",
+    "faction": "WARD",
     "upgrades": [
       "Heavy_Varta_Helmet_protectionPhysical_Left_1_1",
       "Heavy_Varta_Helmet_reductionWeight_Left_1_2",
@@ -5170,6 +2995,8 @@
   },
   {
     "sid": "Heavy_Military_Helmet",
+    "category": "HELMET",
+    "faction": "MILITARY",
     "upgrades": [
       "Heavy_Military_Helmet_protectionPhysical_Left_1_1",
       "Heavy_Military_Helmet_reductionWeight_Left_1_2",
@@ -5222,6 +3049,8 @@
   },
   {
     "sid": "Light_Mercenaries_Helmet",
+    "category": "HELMET",
+    "faction": "MERCENARY",
     "upgrades": [
       "Light_Mercenaries_Helmet_Armor_protectionRadiation_Left_1_1",
       "Light_Mercenaries_Helmet_Armor_wearing_Left_1_2",
@@ -5265,6 +3094,8 @@
   },
   {
     "sid": "Light_Military_Helmet",
+    "category": "HELMET",
+    "faction": "MILITARY",
     "upgrades": [
       "Light_Military_Helmet_Armor_protectionRadiation_Left_1_1",
       "Light_Military_Helmet_Armor_wearing_Left_1_2",
@@ -5308,6 +3139,8 @@
   },
   {
     "sid": "Battle_Military_Helmet",
+    "category": "HELMET",
+    "faction": "MILITARY",
     "upgrades": [
       "Battle_Military_Helmet_protectionPhysical_Left_1_1",
       "Battle_Military_Helmet_reductionWeight_Left_1_2",
@@ -5356,6 +3189,8 @@
   },
   {
     "sid": "Light_Bandit_Helmet",
+    "category": "HELMET",
+    "faction": "BANDIT",
     "upgrades": [
       "Light_Bandit_Helmet_Armor_protectionRadiation_Left_1_1",
       "Light_Bandit_Helmet_Armor_wearing_Left_1_2",
@@ -5397,6 +3232,8 @@
   },
   {
     "sid": "Light_Neutral_Helmet",
+    "category": "HELMET",
+    "faction": "FREE_STALKER",
     "upgrades": [
       "Light_Neutral_Helmet_Armor_protectionRadiation_Left_1_1",
       "Light_Neutral_Helmet_Armor_protectionThermal_Left_2_1",
@@ -5439,6 +3276,8 @@
   },
   {
     "sid": "Anomaly_Scientific_Armor_PSY_preinstalled",
+    "category": "FULL_BODY_SUIT",
+    "faction": "ECOLOGIST",
     "upgrades": [],
     "fields": {
       "SID": [

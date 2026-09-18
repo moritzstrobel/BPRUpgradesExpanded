@@ -1,9 +1,11 @@
 {
-  "armor_structs_selected": 87,
-  "referenced_upgrade_sids": 696,
-  "resolved_upgrade_sids": 691,
+  "armor_structs_selected": 51,
+  "referenced_upgrade_sids": 676,
+  "resolved_upgrade_sids": 671,
   "missing_upgrade_sids": 5,
   "escape_term_upgrade_hits": 43,
-  "upgrade_field_count": 17,
-  "filter": null
+  "upgrade_field_count": 16,
+  "filter": null,
+  "player_armor_only": true,
+  "modification_upgrade_count": 15
 }
