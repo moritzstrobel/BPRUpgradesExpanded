@@ -15,6 +15,7 @@ REPORT_DIR = ANALYSIS_ROOT / "Reports"
 VANILLA = PYTHON_ROOT / "VanillaReference"
 ARMOR_CFG = VANILLA / "ArmorPrototypes.cfg"
 UPGRADE_CFG = VANILLA / "UpgradePrototypes.cfg"
+CLASSIFICATION_REPORT = REPORT_DIR / "armor_classification.json"
 
 STRUCT_START = re.compile(r"^\s*([^/\s][^:]*)\s*:\s*struct\.begin(?:\s*\{([^}]*)\})?\s*$")
 ARRAY_VALUE = re.compile(r"^\s*\[\d+\]\s*=\s*([^\s{]+)", re.MULTILINE)
@@ -24,6 +25,7 @@ NAMED_STRUCT = re.compile(r"^\s*([A-Za-z_][A-Za-z0-9_]*)\s*:\s*struct\.begin")
 
 ESCAPE_TERMS = ("module", "socket", "attachment", "fitting", "preinstalled")
 RELATION_TERMS = ("upgradeprototypesid", "effectprototypesid")
+ARRAY_FIELDS = ("EffectPrototypeSIDs", "RequiredUpgradePrototypeSIDs", "BlockingUpgradePrototypeSIDs", "RequiredItemPrototypeSIDs")
 
 
 def top_level_structs(text: str) -> dict[str, str]:
@@ -82,6 +84,29 @@ def direct_fields(block: str) -> dict[str, list[str]]:
     return dict(fields)
 
 
+def array_field_values(block: str, field: str) -> list[str]:
+    nested = extract_named_struct(block, field)
+    return [x for x in ARRAY_VALUE.findall(nested or "") if x != "empty"]
+
+
+def scalar_field(block: str, field: str) -> str | None:
+    values = direct_fields(block).get(field, [])
+    return values[-1] if values else None
+
+
+def load_player_classification() -> dict[str, dict[str, object]]:
+    if not CLASSIFICATION_REPORT.exists():
+        raise FileNotFoundError(
+            f"{CLASSIFICATION_REPORT} is missing. Run classify_armor.py first."
+        )
+    payload = json.loads(CLASSIFICATION_REPORT.read_text(encoding="utf-8"))
+    rows = {}
+    for category_rows in payload.get("categories", {}).values():
+        for row in category_rows:
+            rows[row["sid"]] = row
+    return rows
+
+
 def matching_lines(block: str, terms: tuple[str, ...]) -> list[str]:
     result = []
     for line in block.splitlines():
@@ -107,6 +132,7 @@ def main() -> int:
     armor_structs = top_level_structs(ARMOR_CFG.read_text(encoding="utf-8"))
     upgrade_structs = top_level_structs(UPGRADE_CFG.read_text(encoding="utf-8"))
 
+    classification = load_player_classification()
     armors = []
     referenced: set[str] = set()
     owners: dict[str, list[str]] = defaultdict(list)
@@ -114,6 +140,8 @@ def main() -> int:
     for name, block in armor_structs.items():
         sid_match = SID_FIELD.search(block)
         sid = sid_match.group(1) if sid_match else name
+        if sid not in classification:
+            continue
         if args.armor and args.armor.lower() not in sid.lower():
             continue
         arr = extract_named_struct(block, "UpgradePrototypeSIDs")
@@ -121,7 +149,14 @@ def main() -> int:
         for upgrade in upgrades:
             owners[upgrade].append(sid)
         referenced.update(upgrades)
-        armors.append({"sid": sid, "upgrades": upgrades, "fields": direct_fields(block)})
+        meta = classification[sid]
+        armors.append({
+            "sid": sid,
+            "category": meta["category"],
+            "faction": meta["faction_candidate"],
+            "upgrades": upgrades,
+            "fields": direct_fields(block),
+        })
 
     resolved = sorted(referenced.intersection(upgrade_structs))
     missing = sorted(referenced.difference(upgrade_structs))
@@ -146,6 +181,47 @@ def main() -> int:
         if relation_lines:
             relation_hits.append({"sid": sid, "armors": owners[sid], "lines": relation_lines})
 
+    upgrade_details = {}
+    modifications = []
+    for sid in resolved:
+        block = upgrade_structs[sid]
+        detail = {
+            "sid": sid,
+            "owners": sorted(owners[sid]),
+            "text": scalar_field(block, "Text"),
+            "hint": scalar_field(block, "Hint"),
+            "base_cost": scalar_field(block, "BaseCost"),
+            "upgrade_target_part": scalar_field(block, "UpgradeTargetPart"),
+            "vertical_position": scalar_field(block, "VerticalPosition"),
+            "horizontal_position": scalar_field(block, "HorizontalPosition"),
+            "is_modification": scalar_field(block, "IsModification") == "true",
+        }
+        for field in ARRAY_FIELDS:
+            detail[field] = array_field_values(block, field)
+        owner_meta = [classification[o] for o in owners[sid] if o in classification]
+        detail["owner_categories"] = sorted({m["category"] for m in owner_meta})
+        detail["owner_factions"] = sorted({m["faction_candidate"] for m in owner_meta})
+        upgrade_details[sid] = detail
+        if detail["is_modification"]:
+            modifications.append(detail)
+
+    modification_by_category = Counter(
+        category for item in modifications for category in item["owner_categories"]
+    )
+    modification_by_faction = Counter(
+        faction for item in modifications for faction in item["owner_factions"]
+    )
+    modification_effects = Counter(
+        effect for item in modifications for effect in item["EffectPrototypeSIDs"]
+    )
+    modification_report = {
+        "count": len(modifications),
+        "by_armor_category": dict(sorted(modification_by_category.items())),
+        "by_faction": dict(sorted(modification_by_faction.items())),
+        "effect_sid_counts": dict(modification_effects.most_common()),
+        "upgrades": sorted(modifications, key=lambda x: x["sid"]),
+    }
+
     inventory = [
         {"field": field, "count": count, "examples": field_examples[field]}
         for field, count in field_counts.most_common()
@@ -159,6 +235,8 @@ def main() -> int:
         "escape_term_upgrade_hits": len(escape_hits),
         "upgrade_field_count": len(field_counts),
         "filter": args.armor,
+        "player_armor_only": True,
+        "modification_upgrade_count": len(modifications),
     }
 
     write_json("armor_upgrade_summary.json", summary)
@@ -167,6 +245,8 @@ def main() -> int:
     write_json("armor_upgrade_relations.json", relation_hits)
     write_json("armor_upgrade_missing.json", missing)
     write_json("armor_upgrade_mapping.json", armors)
+    write_json("armor_upgrade_details.json", upgrade_details)
+    write_json("armor_modification_analysis.json", modification_report)
 
     print("=== BPRUE Vanilla Armor Upgrade Analysis ===")
     print(f"Armor structs selected: {len(armors)}")
@@ -175,10 +255,38 @@ def main() -> int:
     print(f"Missing from UpgradePrototypes.cfg: {len(missing)}")
     print(f"Distinct direct UpgradePrototype fields: {len(field_counts)}")
     print(f"Upgrade prototypes with module/escape-term hits: {len(escape_hits)}")
+    print(f"IsModification=true upgrades: {len(modifications)}")
 
     print("\n=== Most common direct UpgradePrototype fields ===")
     for field, count in field_counts.most_common():
         print(f"{field}: {count}")
+
+    print("\n=== IsModification=true by armor category ===")
+    if modification_by_category:
+        for category, count in sorted(modification_by_category.items()):
+            print(f"{category}: {count}")
+    else:
+        print("None")
+
+    print("\n=== IsModification=true by faction ===")
+    if modification_by_faction:
+        for faction, count in sorted(modification_by_faction.items()):
+            print(f"{faction}: {count}")
+    else:
+        print("None")
+
+    if modifications:
+        print("\n=== Modification upgrades ===")
+        for item in sorted(modifications, key=lambda x: x["sid"]):
+            effects = ", ".join(item["EffectPrototypeSIDs"]) or "no effects"
+            owners_text = ", ".join(item["owners"])
+            print(f"{item['sid']}")
+            print(f"  owners: {owners_text}")
+            print(f"  effects: {effects}")
+            if item["RequiredUpgradePrototypeSIDs"]:
+                print("  requires: " + ", ".join(item["RequiredUpgradePrototypeSIDs"]))
+            if item["BlockingUpgradePrototypeSIDs"]:
+                print("  blocks: " + ", ".join(item["BlockingUpgradePrototypeSIDs"]))
 
     print("\n=== Module / escape-path candidates ===")
     if escape_hits:
@@ -212,6 +320,8 @@ def main() -> int:
         "armor_upgrade_relations.json",
         "armor_upgrade_missing.json",
         "armor_upgrade_mapping.json",
+        "armor_upgrade_details.json",
+        "armor_modification_analysis.json",
     ):
         print(f"  - {name}")
 
