@@ -1,39 +1,29 @@
 #!/usr/bin/env python3
-"""Analyze Vanilla armor upgrade topology.
-
-This intentionally stays read-only. It correlates ArmorPrototypes.cfg with
-UpgradePrototypes.cfg and reports whether armor exposes module-like escape
-paths in addition to the ordinary UpgradePrototypeSIDs tree.
-
-The parser is deliberately lightweight: STALKER cfg is not quite a regular
-INI format, so we scan balanced struct blocks and retain the original text.
-"""
+"""Analyze Vanilla armor upgrade topology and write machine-readable reports."""
 
 from __future__ import annotations
 
 import argparse
+import json
 import re
-from collections import Counter
+from collections import Counter, defaultdict
 from pathlib import Path
 
 PYTHON_ROOT = Path(__file__).resolve().parents[1]
+ANALYSIS_ROOT = Path(__file__).resolve().parent
+REPORT_DIR = ANALYSIS_ROOT / "Reports"
 VANILLA = PYTHON_ROOT / "VanillaReference"
 ARMOR_CFG = VANILLA / "ArmorPrototypes.cfg"
 UPGRADE_CFG = VANILLA / "UpgradePrototypes.cfg"
 
 STRUCT_START = re.compile(r"^\s*([^/\s][^:]*)\s*:\s*struct\.begin(?:\s*\{([^}]*)\})?\s*$")
-UPGRADE_SID = re.compile(r"^\s*\[\d+\]\s*=\s*([^\s{]+)", re.MULTILINE)
+ARRAY_VALUE = re.compile(r"^\s*\[\d+\]\s*=\s*([^\s{]+)", re.MULTILINE)
 SID_FIELD = re.compile(r"^\s*SID\s*=\s*([^\s]+)", re.MULTILINE)
+FIELD_LINE = re.compile(r"^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*?)\s*(?:\{[^}]*\})?\s*$")
+NAMED_STRUCT = re.compile(r"^\s*([A-Za-z_][A-Za-z0-9_]*)\s*:\s*struct\.begin")
 
-ESCAPE_TERMS = (
-    "module",
-    "socket",
-    "attachment",
-    "fitting",
-    "preinstalled",
-    "effectprototypesid",
-    "upgradeprototypesid",
-)
+ESCAPE_TERMS = ("module", "socket", "attachment", "fitting", "preinstalled")
+RELATION_TERMS = ("upgradeprototypesid", "effectprototypesid")
 
 
 def top_level_structs(text: str) -> dict[str, str]:
@@ -49,8 +39,8 @@ def top_level_structs(text: str) -> dict[str, str]:
         depth = 1
         j = i + 1
         while j < len(lines) and depth:
-            depth += len(re.findall(r"\bstruct\.begin\b", lines[j]))
-            depth -= len(re.findall(r"\bstruct\.end\b", lines[j]))
+            depth += lines[j].count("struct.begin")
+            depth -= lines[j].count("struct.end")
             j += 1
         result[name] = "\n".join(lines[i:j])
         i = j
@@ -66,93 +56,164 @@ def extract_named_struct(block: str, field: str) -> str | None:
         depth = 1
         j = i + 1
         while j < len(lines) and depth:
-            depth += len(re.findall(r"\bstruct\.begin\b", lines[j]))
-            depth -= len(re.findall(r"\bstruct\.end\b", lines[j]))
+            depth += lines[j].count("struct.begin")
+            depth -= lines[j].count("struct.end")
             j += 1
         return "\n".join(lines[i:j])
     return None
 
 
+def direct_fields(block: str) -> dict[str, list[str]]:
+    """Return assignments/child-struct names that occur at top-level inside block."""
+    lines = block.splitlines()
+    fields: dict[str, list[str]] = defaultdict(list)
+    depth = 0
+    for line in lines[1:-1]:
+        if depth == 0:
+            sm = NAMED_STRUCT.match(line)
+            if sm:
+                fields[sm.group(1)].append("<struct>")
+            else:
+                fm = FIELD_LINE.match(line)
+                if fm:
+                    fields[fm.group(1)].append(fm.group(2).strip())
+        depth += line.count("struct.begin")
+        depth -= line.count("struct.end")
+    return dict(fields)
+
+
+def matching_lines(block: str, terms: tuple[str, ...]) -> list[str]:
+    result = []
+    for line in block.splitlines():
+        low = line.lower()
+        if any(term in low for term in terms):
+            result.append(line.strip())
+    return result
+
+
+def write_json(name: str, payload: object) -> None:
+    REPORT_DIR.mkdir(parents=True, exist_ok=True)
+    (REPORT_DIR / name).write_text(
+        json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--armor", help="Only show armor SIDs containing this text")
-    parser.add_argument("--details", action="store_true", help="Print every armor and its referenced upgrade SIDs")
+    parser.add_argument("--armor", help="Only analyze armor SIDs containing this text")
+    parser.add_argument("--details", action="store_true", help="Also print Armor -> Upgrade SIDs")
     args = parser.parse_args()
 
-    armor_text = ARMOR_CFG.read_text(encoding="utf-8")
-    upgrade_text = UPGRADE_CFG.read_text(encoding="utf-8")
-    armor_structs = top_level_structs(armor_text)
-    upgrade_structs = top_level_structs(upgrade_text)
+    armor_structs = top_level_structs(ARMOR_CFG.read_text(encoding="utf-8"))
+    upgrade_structs = top_level_structs(UPGRADE_CFG.read_text(encoding="utf-8"))
 
-    armors: list[tuple[str, list[str], str]] = []
+    armors = []
     referenced: set[str] = set()
+    owners: dict[str, list[str]] = defaultdict(list)
 
     for name, block in armor_structs.items():
         sid_match = SID_FIELD.search(block)
         sid = sid_match.group(1) if sid_match else name
         if args.armor and args.armor.lower() not in sid.lower():
             continue
-        upgrade_array = extract_named_struct(block, "UpgradePrototypeSIDs")
-        upgrades = UPGRADE_SID.findall(upgrade_array or "")
-        upgrades = [u for u in upgrades if u != "empty"]
+        arr = extract_named_struct(block, "UpgradePrototypeSIDs")
+        upgrades = [x for x in ARRAY_VALUE.findall(arr or "") if x != "empty"]
+        for upgrade in upgrades:
+            owners[upgrade].append(sid)
         referenced.update(upgrades)
-        armors.append((sid, upgrades, block))
+        armors.append({"sid": sid, "upgrades": upgrades, "fields": direct_fields(block)})
 
-    resolved = referenced.intersection(upgrade_structs)
-    missing = referenced.difference(upgrade_structs)
+    resolved = sorted(referenced.intersection(upgrade_structs))
+    missing = sorted(referenced.difference(upgrade_structs))
+
+    field_counts = Counter()
+    field_examples: dict[str, list[dict[str, object]]] = defaultdict(list)
+    escape_hits = []
+    relation_hits = []
+
+    for sid in resolved:
+        block = upgrade_structs[sid]
+        fields = direct_fields(block)
+        for field, values in fields.items():
+            field_counts[field] += 1
+            if len(field_examples[field]) < 8:
+                field_examples[field].append({"sid": sid, "values": values})
+
+        escape_lines = matching_lines(block, ESCAPE_TERMS)
+        relation_lines = matching_lines(block, RELATION_TERMS)
+        if escape_lines:
+            escape_hits.append({"sid": sid, "armors": owners[sid], "lines": escape_lines})
+        if relation_lines:
+            relation_hits.append({"sid": sid, "armors": owners[sid], "lines": relation_lines})
+
+    inventory = [
+        {"field": field, "count": count, "examples": field_examples[field]}
+        for field, count in field_counts.most_common()
+    ]
+
+    summary = {
+        "armor_structs_selected": len(armors),
+        "referenced_upgrade_sids": len(referenced),
+        "resolved_upgrade_sids": len(resolved),
+        "missing_upgrade_sids": len(missing),
+        "escape_term_upgrade_hits": len(escape_hits),
+        "upgrade_field_count": len(field_counts),
+        "filter": args.armor,
+    }
+
+    write_json("armor_upgrade_summary.json", summary)
+    write_json("armor_upgrade_field_inventory.json", inventory)
+    write_json("armor_upgrade_escape_paths.json", escape_hits)
+    write_json("armor_upgrade_relations.json", relation_hits)
+    write_json("armor_upgrade_missing.json", missing)
+    write_json("armor_upgrade_mapping.json", armors)
 
     print("=== BPRUE Vanilla Armor Upgrade Analysis ===")
     print(f"Armor structs selected: {len(armors)}")
     print(f"Referenced upgrade SIDs: {len(referenced)}")
     print(f"Resolved in UpgradePrototypes.cfg: {len(resolved)}")
     print(f"Missing from UpgradePrototypes.cfg: {len(missing)}")
+    print(f"Distinct direct UpgradePrototype fields: {len(field_counts)}")
+    print(f"Upgrade prototypes with module/escape-term hits: {len(escape_hits)}")
 
-    print("\n=== Potential module / escape-path fields in ArmorPrototypes ===")
-    counts = Counter()
-    examples: dict[str, list[str]] = {term: [] for term in ESCAPE_TERMS}
-    for sid, _, block in armors:
-        low = block.lower()
-        for term in ESCAPE_TERMS:
-            if term in low:
-                counts[term] += 1
-                if len(examples[term]) < 5:
-                    examples[term].append(sid)
+    print("\n=== Most common direct UpgradePrototype fields ===")
+    for field, count in field_counts.most_common():
+        print(f"{field}: {count}")
 
-    for term in ESCAPE_TERMS:
-        if counts[term]:
-            print(f"{term}: {counts[term]} armor structs; examples={', '.join(examples[term])}")
-
-    print("\n=== Potential module / escape-path fields in referenced UpgradePrototypes ===")
-    upgrade_counts = Counter()
-    upgrade_examples: dict[str, list[str]] = {term: [] for term in ESCAPE_TERMS}
-    for sid in sorted(resolved):
-        low = upgrade_structs[sid].lower()
-        for term in ESCAPE_TERMS:
-            if term in low:
-                upgrade_counts[term] += 1
-                if len(upgrade_examples[term]) < 5:
-                    upgrade_examples[term].append(sid)
-
-    found_escape = False
-    for term in ESCAPE_TERMS:
-        if upgrade_counts[term]:
-            found_escape = True
-            print(f"{term}: {upgrade_counts[term]} referenced upgrades; examples={', '.join(upgrade_examples[term])}")
-    if not found_escape:
-        print("No module-like terms found in referenced armor upgrade definitions.")
+    print("\n=== Module / escape-path candidates ===")
+    if escape_hits:
+        for hit in escape_hits[:25]:
+            print(f"{hit['sid']}:")
+            for line in hit["lines"]:
+                print(f"  {line}")
+        if len(escape_hits) > 25:
+            print(f"... {len(escape_hits) - 25} more; see JSON report")
+    else:
+        print("No module/socket/attachment/fitting/preinstalled terms found.")
 
     if missing:
         print("\n=== Missing referenced upgrade SIDs ===")
-        for sid in sorted(missing):
+        for sid in missing:
             print(sid)
 
     if args.details:
         print("\n=== Armor -> UpgradePrototypeSIDs ===")
-        for sid, upgrades, _ in sorted(armors):
-            print(f"\n{sid} ({len(upgrades)})")
-            for upgrade in upgrades:
+        for armor in sorted(armors, key=lambda x: x["sid"]):
+            print(f"\n{armor['sid']} ({len(armor['upgrades'])})")
+            for upgrade in armor["upgrades"]:
                 state = "OK" if upgrade in upgrade_structs else "MISSING"
                 print(f"  [{state}] {upgrade}")
+
+    print(f"\nReports written to: {REPORT_DIR}")
+    for name in (
+        "armor_upgrade_summary.json",
+        "armor_upgrade_field_inventory.json",
+        "armor_upgrade_escape_paths.json",
+        "armor_upgrade_relations.json",
+        "armor_upgrade_missing.json",
+        "armor_upgrade_mapping.json",
+    ):
+        print(f"  - {name}")
 
     return 1 if missing else 0
 
