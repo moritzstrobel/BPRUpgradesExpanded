@@ -95,30 +95,23 @@ def _upgrade_details() -> dict:
     return data
 
 
-def _field_value(row: dict, name: str) -> str | None:
-    direct = row.get("direct_fields", {})
-    value = direct.get(name)
-    if isinstance(value, list):
-        return value[0] if value else None
-    return value
-
-
 def _vanilla_module_columns(armor_sid: str, vanilla_sids: list[str], details: dict) -> set[tuple[str, int]]:
     occupied: set[tuple[str, int]] = set()
     for sid in vanilla_sids:
         row = details.get(sid)
-        if not row or not row.get("is_modification"):
+        if not row or not row.get("effective_is_modification"):
             continue
-        target = _field_value(row, "UpgradeTargetPart")
+        target = row.get("effective_upgrade_target_part")
         if not target:
             continue
         target = target.rsplit("::", 1)[-1]
-        raw_h = _field_value(row, "HorizontalPosition")
+        raw_h = row.get("effective_horizontal_position")
+        # Vanilla commonly omits HorizontalPosition. The engine treats that as H0,
+        # so the allocator must reserve H0 as well.
         horizontal = int(raw_h) if raw_h is not None and str(raw_h).lstrip("-").isdigit() else 0
         if 0 <= horizontal <= MAX_VISIBLE_HORIZONTAL_POSITION:
             occupied.add((target, horizontal))
     return occupied
-
 
 def _first_free_armor_column(preferred: str, occupied: set[tuple[str, int]]) -> tuple[str, int]:
     targets = (preferred, *(target for target in ARMOR_TARGET_ORDER if target != preferred))
