@@ -85,6 +85,7 @@ def main():
     for name,entry in structs.items():
         direct=direct_fields(entry["block"]); fields=effective_fields(name,structs)
         sid=fields.get("SID",name)
+        faction,matches=faction_candidate(sid)
         if name.startswith("NPC_") or sid.startswith("NPC_"):
             excluded.append({"sid":sid,"struct":name,"reason":"NPC_PREFIX","refkey":entry["refkey"]})
             continue
@@ -115,6 +116,9 @@ def main():
             "FULL_BODY_SUIT":"effective ItemSlotType == EInventoryEquipmentSlot::Body and bBlockHead == true"},
         "templates":[r for r in rows if r["struct"] in templates],
         "excluded":excluded,
+        "faction_hint_rules":{token:faction for token,faction in FACTION_HINTS},
+        "faction_counts":{k:len(v) for k,v in faction_groups.items()},
+        "factions":faction_groups,
         "counts":{k:len(v) for k,v in categories.items()},
         "categories":categories}
     REPORT_DIR.mkdir(parents=True,exist_ok=True)
