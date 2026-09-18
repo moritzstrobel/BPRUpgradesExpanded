@@ -64,7 +64,8 @@
               "text_sid": "sid_bprue_armor_freedom_loadbearing_name",
               "hint_sid": "sid_bprue_armor_freedom_suit_loadbearing_description",
               "effects": [
-                "BPRUE_Armor_Freedom_Suit_LoadBearing"
+                "BPRUE_Armor_Freedom_Suit_LoadBearing",
+                "BPRUE_Armor_Freedom_Suit_StrikeTradeoff"
               ]
             }
           ]
@@ -96,7 +97,9 @@
               "text_sid": "sid_bprue_armor_freedom_loadbearing_name",
               "hint_sid": "sid_bprue_armor_freedom_fullbody_loadbearing_description",
               "effects": [
-                "BPRUE_Armor_Freedom_FullBody_LoadBearing"
+                "BPRUE_Armor_Freedom_FullBody_LoadBearing",
+                "BPRUE_Armor_Freedom_FullBody_StrikeTradeoff",
+                "BPRUE_Armor_Freedom_FullBody_DurabilityTradeoff"
               ]
             }
           ]
