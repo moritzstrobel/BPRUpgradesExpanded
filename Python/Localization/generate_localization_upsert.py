@@ -61,11 +61,12 @@ def get_languages(entry):
     return {language_name(language):str(text) for language,text in value.items()}
 
 def verify_saved_asset(source_entries):
-    # Reload from disk instead of trusting the in-memory structs that were just mutated.
-    unreal.EditorAssetLibrary.unload_asset(ASSET_PATH)
+    # ZoneKit does not expose EditorAssetLibrary.unload_asset(). Verify the
+    # post-save asset state through a fresh load request instead. The separate
+    # snapshot exporter remains the independent disk/audit verification step.
     saved_asset=unreal.load_asset(ASSET_PATH)
     if saved_asset is None:
-        raise RuntimeError(f"Could not reload saved localization asset: {ASSET_PATH}")
+        raise RuntimeError(f"Could not load saved localization asset for verification: {ASSET_PATH}")
     saved_texts=saved_asset.get_editor_property("LocalizedTexts")
     saved_by_sid={}
     duplicates=[]
@@ -96,7 +97,7 @@ def verify_saved_asset(source_entries):
                     "actual":actual,
                 })
 
-    log("VERIFY AFTER SAVE")
+    log("VERIFY AFTER SAVE (loaded asset state)")
     log(f"verified={len(source_entries)-len(missing)}, missing={len(missing)}, mismatched_values={len(mismatches)}")
     for sid in missing:
         log(f"VERIFY MISSING SID: {sid}")
