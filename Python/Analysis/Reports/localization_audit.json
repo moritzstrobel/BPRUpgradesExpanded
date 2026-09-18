@@ -1,5 +1,5 @@
 {
-  "localization_sid_count": 307,
+  "localization_sid_count": 309,
   "required_languages": [
     "English",
     "Russian"
@@ -8,18 +8,22 @@
   "missing_languages": [],
   "scopes": {
     "BaseGame": {
-      "upgrade_count": 1253,
+      "upgrade_count": 1265,
       "text_sid_count": 109,
-      "hint_sid_count": 109,
+      "hint_sid_count": 111,
       "missing_count": 0,
-      "missing_sids": []
+      "missing_sids": [],
+      "incomplete_upgrade_count": 0,
+      "incomplete_upgrades": []
     },
     "DLC1": {
-      "upgrade_count": 225,
+      "upgrade_count": 229,
       "text_sid_count": 56,
-      "hint_sid_count": 56,
+      "hint_sid_count": 58,
       "missing_count": 0,
-      "missing_sids": []
+      "missing_sids": [],
+      "incomplete_upgrade_count": 0,
+      "incomplete_upgrades": []
     }
   },
   "effects": {
@@ -2917,6 +2921,13 @@
         "status": "vanilla_localization"
       }
     ]
+  },
+  "generated_cfg": {
+    "referenced_sid_count": 0,
+    "missing_count": 0,
+    "missing": [],
+    "case_mismatch_count": 0,
+    "case_mismatches": []
   },
   "unique_missing_upgrade_sid_count": 0,
   "missing_upgrade_sids": {},
