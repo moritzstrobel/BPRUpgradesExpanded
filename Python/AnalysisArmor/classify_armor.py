@@ -58,11 +58,11 @@ def classify(slot, block_head):
 
 def main():
     structs=parse_structs(ARMOR_CFG.read_text(encoding="utf-8"))
-    templates={"TemplateArmor","TemplateHelmet"}; rows=[]
+    templates={"TemplateArmor","TemplateHelmet"}; rows=[]\n    excluded=[]
     for name,entry in structs.items():
         direct=direct_fields(entry["block"]); fields=effective_fields(name,structs)
         rows.append({
-            "sid":fields.get("SID",name),"struct":name,
+            "sid":sid,"struct":name,
             "category":classify(fields.get("ItemSlotType"),fields.get("bBlockHead")),
             "item_slot_type":fields.get("ItemSlotType"),
             "blocks_head": {"true":True,"false":False}.get(fields.get("bBlockHead")),
@@ -86,7 +86,7 @@ def main():
     out.write_text(json.dumps(payload,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     counts=Counter(r["category"] for r in concrete)
     print("=== BPRUE Vanilla Armor Classification ===")
-    print(f"Concrete armor prototypes: {len(concrete)}")
+    print(f"Concrete player armor prototypes: {len(concrete)}")\n    print(f"Excluded NPC_* prototypes: {len(excluded)}")
     for k in categories: print(f"{k}: {counts[k]}")
     print("\n=== Full Body Suits ===")
     for r in categories["FULL_BODY_SUIT"]: print(r["sid"])
