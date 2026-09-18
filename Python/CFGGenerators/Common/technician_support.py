@@ -42,6 +42,25 @@ def _upgrade_children(upgrades: list[str] | None) -> list[list[str]]:
     return result
 
 
+def _direct_upgrade_array_info(block: list[str]) -> tuple[list[tuple[str, bool]], int] | None:
+    """Return direct upgrade entries and highest numeric Vanilla array index."""
+    upgrades = _direct_child(block, "Upgrades")
+    if upgrades is None:
+        return None
+    entries: list[tuple[str, bool]] = []
+    max_index = -1
+    for child in _upgrade_children(upgrades):
+        index_match = re.match(r"\s*\[(\d+)\]\s*:\s*struct\.begin", child[0])
+        if index_match:
+            max_index = max(max_index, int(index_match.group(1)))
+        sid = _direct_scalar(child, "UpgradePrototypeSID")
+        if not sid or sid == "empty":
+            continue
+        enabled = (_direct_scalar(child, "Enabled") or "false").lower() == "true"
+        entries.append((sid, enabled))
+    return entries, max_index
+
+
 def _upgrade_entries(block: list[str]) -> list[tuple[str, bool]]:
     """Read one NPC's direct Upgrades array."""
     result: list[tuple[str, bool]] = []
@@ -90,6 +109,24 @@ def _effective_upgrade_entries(blocks: dict[str, list[str]], sid: str) -> list[t
 
 
 @lru_cache(maxsize=1)
+def vanilla_technician_direct_upgrade_indices() -> dict[str, int]:
+    """Return last direct Vanilla index for technicians that own Upgrades."""
+    if not VANILLA_NPCS.exists():
+        raise FileNotFoundError(VANILLA_NPCS)
+    blocks = _read_blocks(VANILLA_NPCS)
+    result: dict[str, int] = {}
+    for sid, block in blocks.items():
+        if sid in TECHNICIAN_TEMPLATE_SIDS:
+            continue
+        if _effective_scalar(blocks, sid, "NPCType") != "ENPCType::Technician":
+            continue
+        info = _direct_upgrade_array_info(block)
+        if info is not None:
+            result[sid] = info[1]
+    return result
+
+
+@lru_cache(maxsize=1)
 def vanilla_technician_upgrade_sids() -> dict[str, tuple[str, ...]]:
     if not VANILLA_NPCS.exists():
         raise FileNotFoundError(VANILLA_NPCS)
@@ -134,9 +171,12 @@ def vanilla_technician_general_setups() -> dict[str, frozenset[str]]:
 def technician_upgrade_assignments(model: UpgradeBuildModel) -> dict[str, list[UpgradeDefinition]]:
     """Select BPRUE upgrades only for weapons supported by each Vanilla technician."""
     support = vanilla_technician_general_setups()
+    direct_owners = vanilla_technician_direct_upgrade_indices()
     candidates = model.technician_upgrades()
     assignments: dict[str, list[UpgradeDefinition]] = {}
     for technician_sid, supported_setups in support.items():
+        if technician_sid not in direct_owners:
+            continue
         assignments[technician_sid] = [
             upgrade
             for upgrade in candidates
