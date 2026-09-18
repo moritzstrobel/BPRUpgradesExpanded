@@ -323,7 +323,6 @@ BPRUE_Armor_Freedom_Helmet_LoadBearing : struct.begin {refurl=@BaseGame/EffectPr
    ShowUpgradeEffectValue = true
    ShowUpgradeEffect = true
 struct.end
-struct.end
 
 BPRUE_Armor_Freedom_Helmet_CarryWeight : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_Armor_Freedom_Helmet_CarryWeight
@@ -402,7 +401,6 @@ BPRUE_Armor_Freedom_Suit_LoadBearing : struct.begin {refurl=@BaseGame/EffectProt
    ShowUpgradeEffectValue = true
    ShowUpgradeEffect = true
 struct.end
-struct.end
 
 BPRUE_Armor_Freedom_Suit_CarryWeight : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_Armor_Freedom_Suit_CarryWeight
@@ -480,7 +478,6 @@ BPRUE_Armor_Freedom_FullBody_LoadBearing : struct.begin {refurl=@BaseGame/Effect
    ShouldPauseByDialog = false
    ShowUpgradeEffectValue = true
    ShowUpgradeEffect = true
-struct.end
 struct.end
 
 BPRUE_Armor_Freedom_FullBody_CarryWeight : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
