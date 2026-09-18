@@ -82,13 +82,21 @@ def audit_asset_snapshot(localization_sids: set[str], source_entries: dict[str, 
         sid = str(entry.get("sid", "")).strip()
         if sid not in source_entries:
             continue
-        exported = str(entry.get("export_text", ""))
+        asset_languages = entry.get("languages")
+        if not isinstance(asset_languages, dict):
+            content_mismatches.append({"sid": sid, "language": "*", "reason": "snapshot_has_no_structured_languages"})
+            continue
         for language in REQUIRED_LANGUAGES:
             expected = source_entries[sid].get(language, "")
-            escaped = expected.replace("\\", "\\\\").replace('"', '\\"').replace("\r", "").replace("\n", "\\n")
-            needle = "(" + language + ', "' + escaped + '")'
-            if needle not in exported:
-                content_mismatches.append({"sid": sid, "language": language})
+            actual = str(asset_languages.get(language, ""))
+            if actual != expected:
+                content_mismatches.append({
+                    "sid": sid,
+                    "language": language,
+                    "reason": "value_mismatch",
+                    "source": expected,
+                    "asset": actual,
+                })
     errors = []
     if duplicates: errors.append("Duplicate asset SIDs: " + ", ".join(duplicates))
     if missing: errors.append(f"{len(missing)} source localization SIDs are missing from the asset snapshot")
@@ -255,9 +263,11 @@ def main() -> None:
     print(f"Localization SIDs: {len(localization_sids)}")
     print(f"Required languages: {', '.join(REQUIRED_LANGUAGES)} | entries missing a required language: {len(missing_languages)}")
     if asset_snapshot["available"]:
-        print(f"Localization asset snapshot: asset={asset_snapshot['asset_entry_count']} source={asset_snapshot['source_entry_count']} missing={asset_snapshot['missing_count']} asset-only={asset_snapshot['asset_only_count']} duplicates={asset_snapshot['duplicate_count']}")
+        print(f"Localization asset snapshot: asset={asset_snapshot['asset_entry_count']} source={asset_snapshot['source_entry_count']} missing={asset_snapshot['missing_count']} asset-only={asset_snapshot['asset_only_count']} duplicates={asset_snapshot['duplicate_count']} content-mismatch={asset_snapshot['content_mismatch_count']}")
         for sid in asset_snapshot["missing_sids"]:
             print(f"  MISSING FROM ASSET: {sid}")
+        for item in asset_snapshot["content_mismatches"]:
+            print(f"  ASSET CONTENT MISMATCH: {item['sid']} [{item['language']}] ({item['reason']})")
     else:
         for error in asset_snapshot["errors"]:
             print(f"  ASSET SNAPSHOT ERROR: {error}")
