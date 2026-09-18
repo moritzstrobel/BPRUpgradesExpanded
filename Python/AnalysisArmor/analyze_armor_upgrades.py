@@ -277,6 +277,90 @@ def main() -> int:
             }),
         }
 
+    # Group effects by their actual engine mechanism (EEffectType), including
+    # observed values and nested extra-effect relationships.
+    effect_type_groups: dict[str, list[str]] = defaultdict(list)
+    for sid, detail in effect_details.items():
+        types = detail["direct_fields"].get("Type", [])
+        effect_type = types[-1] if types else "<missing>"
+        effect_type_groups[effect_type].append(sid)
+
+    effect_type_analysis = []
+    for effect_type, sids in sorted(
+        effect_type_groups.items(), key=lambda item: (-len(item[1]), item[0])
+    ):
+        values_min = Counter()
+        values_max = Counter()
+        levels = Counter()
+        extra_effects = Counter()
+        categories = Counter()
+        factions = Counter()
+        flag_like = []
+
+        for sid in sids:
+            detail = effect_details[sid]
+            fields = detail["direct_fields"]
+            values_min.update(fields.get("ValueMin", []))
+            values_max.update(fields.get("ValueMax", []))
+            levels.update(fields.get("EffectLevel", []))
+            categories.update(detail["owner_categories"])
+            factions.update(detail["owner_factions"])
+
+            block = effect_structs[sid]
+            extras = array_field_values(block, "ApplyExtraEffectPrototypeSIDs")
+            extra_effects.update(extras)
+            if not fields.get("ValueMin") and not fields.get("ValueMax"):
+                flag_like.append(sid)
+
+            detail["effect_type"] = effect_type
+            detail["extra_effect_sids"] = extras
+
+        effect_type_analysis.append({
+            "type": effect_type,
+            "count": len(sids),
+            "value_min_counts": dict(values_min.most_common()),
+            "value_max_counts": dict(values_max.most_common()),
+            "effect_level_counts": dict(levels.most_common()),
+            "extra_effect_sid_counts": dict(extra_effects.most_common()),
+            "owner_category_counts": dict(categories.most_common()),
+            "owner_faction_counts": dict(factions.most_common()),
+            "effects_without_values": sorted(flag_like),
+            "example_effect_sids": sorted(sids)[:20],
+        })
+
+    # Follow ApplyExtraEffectPrototypeSIDs recursively. Extra effects do not have
+    # to be referenced directly by an UpgradePrototype, so resolve them from the
+    # complete vanilla EffectPrototypes set.
+    extra_effect_graph = {}
+    all_extra_sids: set[str] = set()
+    dangling_extra_sids: set[str] = set()
+
+    def walk_extra_effects(root_sid: str, seen: set[str] | None = None) -> dict[str, object]:
+        seen = set() if seen is None else set(seen)
+        if root_sid in seen:
+            return {"sid": root_sid, "cycle": True}
+        seen.add(root_sid)
+        block = effect_structs.get(root_sid)
+        if block is None:
+            dangling_extra_sids.add(root_sid)
+            return {"sid": root_sid, "missing": True}
+
+        fields = direct_fields(block)
+        children = array_field_values(block, "ApplyExtraEffectPrototypeSIDs")
+        all_extra_sids.update(children)
+        return {
+            "sid": root_sid,
+            "type": (fields.get("Type") or [None])[-1],
+            "value_min": fields.get("ValueMin", []),
+            "value_max": fields.get("ValueMax", []),
+            "children": [walk_extra_effects(child, seen) for child in children],
+        }
+
+    for sid in resolved_effects:
+        children = array_field_values(effect_structs[sid], "ApplyExtraEffectPrototypeSIDs")
+        if children:
+            extra_effect_graph[sid] = walk_extra_effects(sid)
+
     effect_inventory = [
         {"field": field, "count": count, "examples": effect_field_examples[field]}
         for field, count in effect_field_counts.most_common()
@@ -297,6 +381,11 @@ def main() -> int:
         "missing_effect_sids": missing_effects,
         "distinct_direct_effect_fields": len(effect_field_counts),
         "structural_group_count": len(effect_groups),
+        "effect_type_count": len(effect_type_analysis),
+        "effect_types": effect_type_analysis,
+        "extra_effect_graph": extra_effect_graph,
+        "extra_effect_sids": sorted(all_extra_sids),
+        "dangling_extra_effect_sids": sorted(dangling_extra_sids),
         "field_inventory": effect_inventory,
         "structural_groups": effect_groups,
         "effects": effect_details,
@@ -321,6 +410,8 @@ def main() -> int:
         "resolved_effect_sids": len(resolved_effects),
         "missing_effect_sids": len(missing_effects),
         "effect_structural_groups": len(effect_groups),
+        "effect_type_count": len(effect_type_analysis),
+        "extra_effect_root_count": len(extra_effect_graph),
     }
 
     write_json("armor_upgrade_summary.json", summary)
@@ -347,6 +438,8 @@ def main() -> int:
     print(f"Missing from EffectPrototypes.cfg: {len(missing_effects)}")
     print(f"Distinct direct EffectPrototype fields: {len(effect_field_counts)}")
     print(f"Effect structural groups: {len(effect_groups)}")
+    print(f"Distinct EEffectType values: {len(effect_type_analysis)}")
+    print(f"Effects with nested ApplyExtraEffectPrototypeSIDs: {len(extra_effect_graph)}")
 
     print("\n=== Most common direct UpgradePrototype fields ===")
     for field, count in field_counts.most_common():
@@ -382,6 +475,35 @@ def main() -> int:
     print("\n=== Most common direct EffectPrototype fields ===")
     for field, count in effect_field_counts.most_common():
         print(f"{field}: {count}")
+
+    print("\n=== Armor Effect Types ===")
+    for group in effect_type_analysis:
+        print(f"{group['count']}x {group['type']}")
+        if group["value_min_counts"]:
+            values = ", ".join(
+                f"{value} ({count}x)" for value, count in list(group["value_min_counts"].items())[:8]
+            )
+            print(f"  ValueMin: {values}")
+        if group["effect_level_counts"]:
+            levels_text = ", ".join(
+                f"{level} ({count}x)" for level, count in group["effect_level_counts"].items()
+            )
+            print(f"  Levels: {levels_text}")
+        if group["extra_effect_sid_counts"]:
+            print("  Extra effects: " + ", ".join(group["extra_effect_sid_counts"].keys()))
+        if group["effects_without_values"]:
+            print("  No numeric value: " + ", ".join(group["effects_without_values"][:10]))
+
+    print("\n=== Nested Extra Effect Roots ===")
+    if extra_effect_graph:
+        for sid, node in sorted(extra_effect_graph.items()):
+            children = node.get("children", [])
+            child_text = ", ".join(
+                f"{child['sid']} [{child.get('type') or 'missing'}]" for child in children
+            )
+            print(f"{sid} -> {child_text or '<none>'}")
+    else:
+        print("None")
 
     print("\n=== Most common EffectPrototype structures ===")
     for group in effect_groups[:20]:
