@@ -10,6 +10,10 @@ CONTENT_ROOT = PYTHON_ROOT.parent
 CONFIG_PATH = SCRIPT_DIR / "armor_signatures.json"
 CLASSIFICATION_PATH = PYTHON_ROOT / "AnalysisArmor" / "Reports" / "armor_classification.json"
 UPGRADE_MAPPING_PATH = PYTHON_ROOT / "AnalysisArmor" / "Reports" / "armor_upgrade_mapping.json"
+UPGRADE_DETAILS_PATH = PYTHON_ROOT / "AnalysisArmor" / "Reports" / "armor_upgrade_details.json"
+MAX_VISIBLE_HORIZONTAL_POSITION = 2
+VERTICALS = ("Top", "Down", None)
+ARMOR_TARGET_ORDER = ("Body", "Barrel", "Handguard", "PistolGrip", "Stock")
 
 ARMOR_PATCH_PATH = CONTENT_ROOT / "GameLite/GameData/ItemPrototypes/ArmorPrototypes/ArmorPrototypes_patch_BPRUE.cfg"
 EFFECT_OUTPUT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_ArmorEffectPrototypes.cfg"
@@ -31,6 +35,8 @@ class ArmorUpgradeDefinition:
     hint_sid: str
     cost: int
     effects: tuple[str, ...]
+    horizontal_position: int | None = None
+    vertical_position: str | None = None
 
 
 def load_config() -> dict:
@@ -73,8 +79,75 @@ def build_upgrades(config: dict | None = None, classification: dict | None = Non
                 effects=tuple(category_cfg["effects"]),
             ))
 
+    result = apply_layout(result)
     validate(result)
     return result
+
+
+def _upgrade_details() -> dict:
+    if not UPGRADE_DETAILS_PATH.exists():
+        raise FileNotFoundError(
+            f"{UPGRADE_DETAILS_PATH} missing; run Python/AnalysisArmor/analyze_armor_upgrades.py first"
+        )
+    data = json.loads(UPGRADE_DETAILS_PATH.read_text(encoding="utf-8"))
+    if isinstance(data, list):
+        return {row["sid"]: row for row in data}
+    return data
+
+
+def _field_value(row: dict, name: str) -> str | None:
+    direct = row.get("direct_fields", {})
+    value = direct.get(name)
+    if isinstance(value, list):
+        return value[0] if value else None
+    return value
+
+
+def _vanilla_module_columns(armor_sid: str, vanilla_sids: list[str], details: dict) -> set[tuple[str, int]]:
+    occupied: set[tuple[str, int]] = set()
+    for sid in vanilla_sids:
+        row = details.get(sid)
+        if not row or not row.get("is_modification"):
+            continue
+        target = _field_value(row, "UpgradeTargetPart")
+        if not target:
+            continue
+        target = target.rsplit("::", 1)[-1]
+        raw_h = _field_value(row, "HorizontalPosition")
+        horizontal = int(raw_h) if raw_h is not None and str(raw_h).lstrip("-").isdigit() else 0
+        if 0 <= horizontal <= MAX_VISIBLE_HORIZONTAL_POSITION:
+            occupied.add((target, horizontal))
+    return occupied
+
+
+def _first_free_armor_column(preferred: str, occupied: set[tuple[str, int]]) -> tuple[str, int]:
+    targets = (preferred, *(target for target in ARMOR_TARGET_ORDER if target != preferred))
+    for target in targets:
+        for horizontal in range(MAX_VISIBLE_HORIZONTAL_POSITION + 1):
+            if (target, horizontal) not in occupied:
+                return target, horizontal
+    raise ValueError(f"No visible H0-H{MAX_VISIBLE_HORIZONTAL_POSITION} armor module column left")
+
+
+def apply_layout(upgrades: list[ArmorUpgradeDefinition]) -> list[ArmorUpgradeDefinition]:
+    from dataclasses import replace
+
+    vanilla_by_armor = _vanilla_upgrade_sids_by_armor()
+    details = _upgrade_details()
+    resolved: list[ArmorUpgradeDefinition] = []
+    for upgrade in upgrades:
+        vanilla_sids = vanilla_by_armor.get(upgrade.armor_sid)
+        if vanilla_sids is None:
+            raise ValueError(f"{upgrade.armor_sid}: missing Vanilla UpgradePrototypeSIDs mapping")
+        occupied = _vanilla_module_columns(upgrade.armor_sid, vanilla_sids, details)
+        target, horizontal = _first_free_armor_column(upgrade.target_part, occupied)
+        resolved.append(replace(
+            upgrade,
+            target_part=target,
+            horizontal_position=None if horizontal == 0 else horizontal,
+            vertical_position=VERTICALS[0],
+        ))
+    return resolved
 
 
 def validate(upgrades: list[ArmorUpgradeDefinition]) -> None:
@@ -113,6 +186,8 @@ def render_upgrade_fragment(upgrades: list[ArmorUpgradeDefinition]) -> str:
             f"   Image = {MODULE_IMAGE}",
             f"   Icon = {DEFAULT_ICON}",
             f"   BaseCost = {upgrade.cost}",
+            *([f"   HorizontalPosition = {upgrade.horizontal_position}"] if upgrade.horizontal_position is not None else []),
+            *([f"   VerticalPosition = EUpgradeVerticalPosition::{upgrade.vertical_position}"] if upgrade.vertical_position is not None else []),
             f"   UpgradeTargetPart = EUpgradeTargetPartType::{upgrade.target_part}",
             "   EffectPrototypeSIDs : struct.begin",
             *(f"      [{i}] = {effect}" for i, effect in enumerate(upgrade.effects)),
