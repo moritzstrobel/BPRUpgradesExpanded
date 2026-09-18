@@ -15,6 +15,7 @@ REPORT_DIR = ANALYSIS_ROOT / "Reports"
 VANILLA = PYTHON_ROOT / "VanillaReference"
 ARMOR_CFG = VANILLA / "ArmorPrototypes.cfg"
 UPGRADE_CFG = VANILLA / "UpgradePrototypes.cfg"
+EFFECT_CFG = VANILLA / "EffectPrototypes.cfg"
 CLASSIFICATION_REPORT = REPORT_DIR / "armor_classification.json"
 
 STRUCT_START = re.compile(r"^\s*([^/\s][^:]*)\s*:\s*struct\.begin(?:\s*\{([^}]*)\})?\s*$")
@@ -131,6 +132,7 @@ def main() -> int:
 
     armor_structs = top_level_structs(ARMOR_CFG.read_text(encoding="utf-8"))
     upgrade_structs = top_level_structs(UPGRADE_CFG.read_text(encoding="utf-8"))
+    effect_structs = top_level_structs(EFFECT_CFG.read_text(encoding="utf-8"))
 
     classification = load_player_classification()
     armors = []
@@ -222,6 +224,84 @@ def main() -> int:
         "upgrades": sorted(modifications, key=lambda x: x["sid"]),
     }
 
+    # Resolve the EffectPrototype layer used by the selected armor upgrades.
+    referenced_effects = sorted({
+        effect
+        for detail in upgrade_details.values()
+        for effect in detail["EffectPrototypeSIDs"]
+    })
+    resolved_effects = sorted(set(referenced_effects).intersection(effect_structs))
+    missing_effects = sorted(set(referenced_effects).difference(effect_structs))
+
+    effect_field_counts = Counter()
+    effect_field_examples: dict[str, list[dict[str, object]]] = defaultdict(list)
+    effect_details = {}
+    structural_groups: dict[str, list[str]] = defaultdict(list)
+
+    for sid in resolved_effects:
+        block = effect_structs[sid]
+        fields = direct_fields(block)
+        for field, values in fields.items():
+            effect_field_counts[field] += 1
+            if len(effect_field_examples[field]) < 8:
+                effect_field_examples[field].append({"sid": sid, "values": values})
+
+        used_by_upgrades = sorted(
+            upgrade_sid
+            for upgrade_sid, detail in upgrade_details.items()
+            if sid in detail["EffectPrototypeSIDs"]
+        )
+        used_by_armors = sorted({
+            owner
+            for upgrade_sid in used_by_upgrades
+            for owner in upgrade_details[upgrade_sid]["owners"]
+        })
+
+        # Group by field shape, not values. This exposes repeated GSC effect mechanisms
+        # even when every armor has its own SID and tuning values.
+        signature = tuple(sorted(fields.keys()))
+        signature_key = "|".join(signature) if signature else "<no-direct-fields>"
+        structural_groups[signature_key].append(sid)
+
+        effect_details[sid] = {
+            "sid": sid,
+            "direct_fields": fields,
+            "field_signature": list(signature),
+            "used_by_upgrades": used_by_upgrades,
+            "used_by_armors": used_by_armors,
+            "owner_categories": sorted({
+                classification[o]["category"] for o in used_by_armors if o in classification
+            }),
+            "owner_factions": sorted({
+                classification[o]["faction_candidate"] for o in used_by_armors if o in classification
+            }),
+        }
+
+    effect_inventory = [
+        {"field": field, "count": count, "examples": effect_field_examples[field]}
+        for field, count in effect_field_counts.most_common()
+    ]
+    effect_groups = [
+        {
+            "field_signature": [] if key == "<no-direct-fields>" else key.split("|"),
+            "count": len(sids),
+            "effect_sids": sorted(sids),
+        }
+        for key, sids in sorted(
+            structural_groups.items(), key=lambda item: (-len(item[1]), item[0])
+        )
+    ]
+    effect_report = {
+        "referenced_effect_sids": len(referenced_effects),
+        "resolved_effect_sids": len(resolved_effects),
+        "missing_effect_sids": missing_effects,
+        "distinct_direct_effect_fields": len(effect_field_counts),
+        "structural_group_count": len(effect_groups),
+        "field_inventory": effect_inventory,
+        "structural_groups": effect_groups,
+        "effects": effect_details,
+    }
+
     inventory = [
         {"field": field, "count": count, "examples": field_examples[field]}
         for field, count in field_counts.most_common()
@@ -237,6 +317,10 @@ def main() -> int:
         "filter": args.armor,
         "player_armor_only": True,
         "modification_upgrade_count": len(modifications),
+        "referenced_effect_sids": len(referenced_effects),
+        "resolved_effect_sids": len(resolved_effects),
+        "missing_effect_sids": len(missing_effects),
+        "effect_structural_groups": len(effect_groups),
     }
 
     write_json("armor_upgrade_summary.json", summary)
@@ -247,6 +331,8 @@ def main() -> int:
     write_json("armor_upgrade_mapping.json", armors)
     write_json("armor_upgrade_details.json", upgrade_details)
     write_json("armor_modification_analysis.json", modification_report)
+    write_json("armor_effect_analysis.json", effect_report)
+    write_json("armor_effect_details.json", effect_details)
 
     print("=== BPRUE Vanilla Armor Upgrade Analysis ===")
     print(f"Armor structs selected: {len(armors)}")
@@ -256,6 +342,11 @@ def main() -> int:
     print(f"Distinct direct UpgradePrototype fields: {len(field_counts)}")
     print(f"Upgrade prototypes with module/escape-term hits: {len(escape_hits)}")
     print(f"IsModification=true upgrades: {len(modifications)}")
+    print(f"Referenced EffectPrototype SIDs: {len(referenced_effects)}")
+    print(f"Resolved in EffectPrototypes.cfg: {len(resolved_effects)}")
+    print(f"Missing from EffectPrototypes.cfg: {len(missing_effects)}")
+    print(f"Distinct direct EffectPrototype fields: {len(effect_field_counts)}")
+    print(f"Effect structural groups: {len(effect_groups)}")
 
     print("\n=== Most common direct UpgradePrototype fields ===")
     for field, count in field_counts.most_common():
@@ -287,6 +378,24 @@ def main() -> int:
                 print("  requires: " + ", ".join(item["RequiredUpgradePrototypeSIDs"]))
             if item["BlockingUpgradePrototypeSIDs"]:
                 print("  blocks: " + ", ".join(item["BlockingUpgradePrototypeSIDs"]))
+
+    print("\n=== Most common direct EffectPrototype fields ===")
+    for field, count in effect_field_counts.most_common():
+        print(f"{field}: {count}")
+
+    print("\n=== Most common EffectPrototype structures ===")
+    for group in effect_groups[:20]:
+        signature = ", ".join(group["field_signature"]) or "<no direct fields>"
+        print(f"{group['count']}x: {signature}")
+        for sid in group["effect_sids"][:5]:
+            print(f"  {sid}")
+        if len(group["effect_sids"]) > 5:
+            print(f"  ... {len(group['effect_sids']) - 5} more")
+
+    if missing_effects:
+        print("\n=== Dangling Vanilla Effect References ===")
+        for sid in missing_effects:
+            print(sid)
 
     print("\n=== Module / escape-path candidates ===")
     if escape_hits:
@@ -322,6 +431,8 @@ def main() -> int:
         "armor_upgrade_mapping.json",
         "armor_upgrade_details.json",
         "armor_modification_analysis.json",
+        "armor_effect_analysis.json",
+        "armor_effect_details.json",
     ):
         print(f"  - {name}")
 
