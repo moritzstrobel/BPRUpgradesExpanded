@@ -1,6 +1,10 @@
 from __future__ import annotations
 
-from technician_support import (\n    dlc_technician_general_setups,\n    technician_upgrade_assignments,\n    vanilla_technician_direct_upgrade_indices,\n)
+from technician_support import (
+    dlc_technician_general_setups,
+    technician_upgrade_assignments,
+    vanilla_technician_direct_upgrade_indices,
+)
 from upgrade_build_model import UpgradeBuildModel, UpgradeDefinition
 from vanilla_upgrade_layout import dlc_general_setup_upgrades, vanilla_general_setup_upgrades
 
