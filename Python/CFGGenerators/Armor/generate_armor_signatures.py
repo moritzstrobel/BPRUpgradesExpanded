@@ -311,13 +311,18 @@ struct.end
 
 BPRUE_Armor_Freedom_Helmet_LoadBearing : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_Armor_Freedom_Helmet_LoadBearing
+   LocalizationSID = Armor_carryingCapacity
    Type = EEffectType::Composite
-   ShowUpgradeEffectValue = false
-   ShowUpgradeEffect = false
+   ValueMin = 5.0%
+   ValueMax = 5.0%
    ApplyExtraEffectPrototypeSIDs : struct.begin
       [0] = BPRUE_Armor_Freedom_Helmet_CarryWeight
       [1] = BPRUE_Armor_Freedom_Helmet_WeightPenalty
    struct.end
+   ShouldPauseByDialog = false
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
 struct.end
 
 BPRUE_Armor_Freedom_Helmet_CarryWeight : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
@@ -385,14 +390,18 @@ struct.end
 
 BPRUE_Armor_Freedom_Suit_LoadBearing : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_Armor_Freedom_Suit_LoadBearing
+   LocalizationSID = Armor_carryingCapacity
    Type = EEffectType::Composite
-   ShowUpgradeEffectValue = false
-   ShowUpgradeEffect = false
+   ValueMin = 15.0%
+   ValueMax = 15.0%
    ApplyExtraEffectPrototypeSIDs : struct.begin
       [0] = BPRUE_Armor_Freedom_Suit_CarryWeight
       [1] = BPRUE_Armor_Freedom_Suit_WeightPenalty
-      [2] = BPRUE_Armor_Freedom_Suit_StrikeTradeoff
    struct.end
+   ShouldPauseByDialog = false
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
 struct.end
 
 BPRUE_Armor_Freedom_Suit_CarryWeight : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
@@ -460,15 +469,18 @@ struct.end
 
 BPRUE_Armor_Freedom_FullBody_LoadBearing : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_Armor_Freedom_FullBody_LoadBearing
+   LocalizationSID = Armor_carryingCapacity
    Type = EEffectType::Composite
-   ShowUpgradeEffectValue = false
-   ShowUpgradeEffect = false
+   ValueMin = 20.0%
+   ValueMax = 20.0%
    ApplyExtraEffectPrototypeSIDs : struct.begin
       [0] = BPRUE_Armor_Freedom_FullBody_CarryWeight
       [1] = BPRUE_Armor_Freedom_FullBody_WeightPenalty
-      [2] = BPRUE_Armor_Freedom_FullBody_StrikeTradeoff
-      [3] = BPRUE_Armor_Freedom_FullBody_DurabilityTradeoff
    struct.end
+   ShouldPauseByDialog = false
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
 struct.end
 
 BPRUE_Armor_Freedom_FullBody_CarryWeight : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
