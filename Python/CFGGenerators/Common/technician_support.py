@@ -42,6 +42,30 @@ def _upgrade_children(upgrades: list[str] | None) -> list[list[str]]:
     return result
 
 
+def _direct_upgrade_array_info(block: list[str]) -> tuple[list[tuple[str, bool]], int] | None:
+    """Return direct upgrade entries and highest numeric array index.
+
+    Technician patches must continue Vanilla's explicit numeric indices. NPCs
+    that only inherit Upgrades return None and are intentionally not patched.
+    """
+    upgrades = _direct_child(block, "Upgrades")
+    if upgrades is None:
+        return None
+
+    entries: list[tuple[str, bool]] = []
+    max_index = -1
+    for child in _upgrade_children(upgrades):
+        index_match = re.match(r"\s*\[(\d+)\]\s*:\s*struct\.begin", child[0])
+        if index_match:
+            max_index = max(max_index, int(index_match.group(1)))
+        sid = _direct_scalar(child, "UpgradePrototypeSID")
+        if not sid or sid == "empty":
+            continue
+        enabled = (_direct_scalar(child, "Enabled") or "false").lower() == "true"
+        entries.append((sid, enabled))
+    return entries, max_index
+
+
 def _upgrade_entries(block: list[str]) -> list[tuple[str, bool]]:
     """Read one NPC's direct Upgrades array."""
     result: list[tuple[str, bool]] = []
@@ -132,11 +156,19 @@ def vanilla_technician_general_setups() -> dict[str, frozenset[str]]:
 
 
 def technician_upgrade_assignments(model: UpgradeBuildModel) -> dict[str, list[UpgradeDefinition]]:
-    """Select BPRUE upgrades only for weapons supported by each Vanilla technician."""
+    """Select BPRUE upgrades for technicians that directly own Vanilla Upgrades.
+
+    Inherited technician arrays are deliberately left untouched: patching the
+    Vanilla owner makes descendants inherit the same BPRUE additions without
+    materialising or duplicating their Upgrades arrays.
+    """
     support = vanilla_technician_general_setups()
+    direct_owners = vanilla_technician_direct_upgrade_indices()
     candidates = model.technician_upgrades()
     assignments: dict[str, list[UpgradeDefinition]] = {}
     for technician_sid, supported_setups in support.items():
+        if technician_sid not in direct_owners:
+            continue
         assignments[technician_sid] = [
             upgrade
             for upgrade in candidates
