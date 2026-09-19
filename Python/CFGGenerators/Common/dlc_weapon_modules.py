@@ -123,6 +123,7 @@ def build_dlc_models(source_model: UpgradeBuildModel, configs: dict) -> dict[str
                 general_setup_sid=target_setup,
                 additional_general_setup_sids=(),
                 blocking_sids=tuple(sid_map.get(sid, sid) for sid in source.blocking_sids),
+                required_upgrade_sids=tuple(sid_map.get(sid, sid) for sid in source.required_upgrade_sids),
                 horizontal_position=None,
             ))
 

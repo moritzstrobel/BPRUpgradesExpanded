@@ -13,8 +13,8 @@ from vanilla_upgrade_layout import (
 )
 
 GROUP_ORDER = {
-    "AR": {"Body": ["Caliber", "FireControl", "Reload", "ModuleReliability"], "Barrel": ["FireRate", "ModulePrecision", "ModuleAction", "ModuleBallistics"], "Stock": ["Stock"]},
-    "SMG": {"Body": ["Readiness", "Reload", "ModuleHandling"], "Barrel": ["Action", "ModuleAction", "ModuleBallistics", "ModuleRangeProfile"], "Stock": ["Stock"]},
+    "AR": {"Body": ["Caliber", "AdditionalCaliber", "FireControl", "Reload", "ModuleReliability"], "Barrel": ["FireRate", "ModulePrecision", "ModuleAction", "ModuleBallistics"], "Stock": ["Stock"]},
+    "SMG": {"Body": ["Caliber", "Readiness", "Reload", "ModuleHandling"], "Barrel": ["Action", "ModuleAction", "ModuleBallistics", "ModuleRangeProfile"], "Stock": ["Stock"]},
     "SG": {"Body": ["Action", "Handling", "ModuleHandling", "ModuleReliability"], "Barrel": ["Pattern", "ModuleRangeProfile"]},
     "Pistol": {"Body": ["Handling", "ModuleHandling"], "Barrel": ["Action", "Signature", "ModulePrecision", "ModuleBallistics"]},
     "Sniper": {"Body": ["Caliber", "Marksman", "ModuleReliability"], "Barrel": ["Ballistics", "Action", "Signature", "ModulePrecision", "ModuleBallistics", "ModuleRangeProfile"], "Stock": ["Stock"]},
@@ -99,15 +99,34 @@ def apply_layout_to_model(model: UpgradeBuildModel, *, content_pack: str | None 
             if upgrade.standalone: standalones.append(upgrade); continue
             allowed = GROUP_ORDER.get(upgrade.weapon_class, {}).get(upgrade.target_part, [])
             if upgrade.group not in allowed: passthrough.append(upgrade); continue
-            grouped[(upgrade.weapon_class, upgrade.group)].append(upgrade)
+            grouped[(upgrade.weapon_class, upgrade.layout_group or upgrade.group)].append(upgrade)
 
-        for (_weapon_class, _group), variants in sorted(grouped.items(), key=lambda item: _group_rank(item[1][0])):
-            if len(variants) > len(VERTICALS): raise ValueError(f"{setup_sid}/{variants[0].group}: {len(variants)} variants exceed 3 vertical slots")
+        for (_weapon_class, _layout_group), variants in sorted(grouped.items(), key=lambda item: _group_rank(item[1][0])):
+            if len(variants) > len(VERTICALS) and variants[0].group not in ("Caliber", "AdditionalCaliber"): raise ValueError(f"{setup_sid}/{variants[0].group}: {len(variants)} variants exceed 3 vertical slots")
             target, horizontal = _first_free_column(setup_sid, variants[0].target_part, occupied_columns, content_pack); occupied_columns.add((target, horizontal))
             for index, upgrade in enumerate(variants):
-                cells[(target, horizontal)].add(index); resolved_by_sid[upgrade.sid] = replace(upgrade, target_part=target, horizontal_position=None if horizontal == 0 else horizontal, vertical_position=VERTICALS[index])
+                # Test layout for the new additional-caliber chain: leave the
+                # vertical position unset for the conversion itself as well as
+                # its dependent Tier-2 upgrades. Existing/live groups keep their
+                # current Top/Down allocation unchanged.
+                vertical_position = None if upgrade.group in ("Caliber", "AdditionalCaliber") and len(variants) > len(VERTICALS) else VERTICALS[index]
+                cells[(target, horizontal)].add(index); resolved_by_sid[upgrade.sid] = replace(upgrade, target_part=target, horizontal_position=None if horizontal == 0 else horizontal, vertical_position=vertical_position)
 
         for upgrade in standalones:
+            prerequisite = next((resolved_by_sid.get(sid) for sid in upgrade.required_upgrade_sids if sid in resolved_by_sid), None)
+            if prerequisite is not None:
+                # Dependency-chain test: render the follow-up in the prerequisite's
+                # column and intentionally omit VerticalPosition.
+                target = prerequisite.target_part
+                horizontal = prerequisite.horizontal_position or 0
+                occupied_columns.add((target, horizontal))
+                resolved_by_sid[upgrade.sid] = replace(
+                    upgrade,
+                    target_part=target,
+                    horizontal_position=None if horizontal == 0 else horizontal,
+                    vertical_position=None,
+                )
+                continue
             target, horizontal, vertical_index = _standalone_cell(setup_sid, upgrade.target_part, cells, vanilla_columns, content_pack)
             cells[(target, horizontal)].add(vertical_index); occupied_columns.add((target, horizontal)); resolved_by_sid[upgrade.sid] = replace(upgrade, target_part=target, horizontal_position=None if horizontal == 0 else horizontal, vertical_position=VERTICALS[vertical_index])
         for upgrade in passthrough: resolved_by_sid[upgrade.sid] = upgrade

@@ -35,6 +35,7 @@ GROUP_ICON_FALLBACKS = {
 # the target caliber. This matters especially for 9x19, whose trade-offs differ
 # depending on the source weapon's original caliber.
 CALIBER_HINT_EFFECT_MARKERS = (
+    (("BPRUE_ChangeCaliber762x39Effect", "BPRUE_DamagePos15Effect", "BPRUE_RecoilPenalty15Effect", "BPRUE_Shared_FlatnessPenalty10Effect"), "sid_bprue_caliber_762x39_tradeoff_description"),
     (("BPRUE_DamagePos15Effect", "BPRUE_ArmorPiercingPos15Effect", "BPRUE_RecoilPenalty25Effect"), "sid_bprue_caliber_762_eastern_tradeoff_description"),
     (("BPRUE_DamagePos10Effect", "BPRUE_ArmorPiercingPos15Effect", "BPRUE_RecoilPenalty20Effect", "BPRUE_DurabilityPerShotNeg15Effect"), "sid_bprue_caliber_762_nato_tradeoff_description"),
     (("BPRUE_SMG_DamagePos10Effect", "BPRUE_SMG_EffectiveRangePos10Effect", "BPRUE_SMG_RecoilPenalty10Effect"), "sid_bprue_smg_caliber_918_to_919_description"),
@@ -47,6 +48,8 @@ CALIBER_HINT_EFFECT_MARKERS = (
 
 
 def semantic_upgrade_icon(upgrade: UpgradeDefinition) -> str:
+    if upgrade.preserve_icon:
+        return upgrade.icon
     for needles, icon_name in EFFECT_ICON_RULES:
         if any(needle in effect for effect in upgrade.effects for needle in needles): return _vanilla_icon(icon_name)
     fallback = GROUP_ICON_FALLBACKS.get(upgrade.group)
@@ -54,7 +57,7 @@ def semantic_upgrade_icon(upgrade: UpgradeDefinition) -> str:
 
 
 def semantic_upgrade_hint(upgrade: UpgradeDefinition) -> str:
-    if upgrade.group != "Caliber": return upgrade.hint_sid
+    if upgrade.group not in ("Caliber", "AdditionalCaliber"): return upgrade.hint_sid
     effect_set = set(upgrade.effects)
     for markers, hint_sid in CALIBER_HINT_EFFECT_MARKERS:
         if all(marker in effect_set for marker in markers): return hint_sid
@@ -62,6 +65,8 @@ def semantic_upgrade_hint(upgrade: UpgradeDefinition) -> str:
 
 
 def upgrade_module_image(upgrade: UpgradeDefinition) -> str:
+    if upgrade.module_image:
+        return upgrade.module_image
     return BPRUE_UNIQUE_MODULE_IMAGE if upgrade.group == "Signature" else BPRUE_MODULE_IMAGE
 
 
@@ -74,6 +79,8 @@ def _render_upgrade(upgrade: UpgradeDefinition, fallback_template: str | None = 
     lines.append(f"   UpgradeTargetPart = EUpgradeTargetPartType::{upgrade.target_part}")
     if upgrade.effects:
         lines.append("   EffectPrototypeSIDs : struct.begin"); lines += [f"      [{i}] = {effect}" for i, effect in enumerate(upgrade.effects)]; lines.append("   struct.end")
+    if upgrade.required_upgrade_sids:
+        lines.append("   RequiredUpgradePrototypeSIDs : struct.begin"); lines += [f"      [{i}] = {sid}" for i, sid in enumerate(upgrade.required_upgrade_sids)]; lines.append("   struct.end")
     if upgrade.blocking_sids:
         lines.append("   BlockingUpgradePrototypeSIDs : struct.begin"); lines += [f"      [{i}] = {sid}" for i, sid in enumerate(upgrade.blocking_sids)]; lines.append("   struct.end")
     return lines + ["struct.end", ""]
