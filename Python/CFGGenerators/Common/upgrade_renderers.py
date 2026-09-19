@@ -48,6 +48,8 @@ CALIBER_HINT_EFFECT_MARKERS = (
 
 
 def semantic_upgrade_icon(upgrade: UpgradeDefinition) -> str:
+    if upgrade.preserve_icon:
+        return upgrade.icon
     for needles, icon_name in EFFECT_ICON_RULES:
         if any(needle in effect for effect in upgrade.effects for needle in needles): return _vanilla_icon(icon_name)
     fallback = GROUP_ICON_FALLBACKS.get(upgrade.group)
