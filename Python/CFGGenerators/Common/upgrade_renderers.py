@@ -75,6 +75,8 @@ def _render_upgrade(upgrade: UpgradeDefinition, fallback_template: str | None = 
     lines.append(f"   UpgradeTargetPart = EUpgradeTargetPartType::{upgrade.target_part}")
     if upgrade.effects:
         lines.append("   EffectPrototypeSIDs : struct.begin"); lines += [f"      [{i}] = {effect}" for i, effect in enumerate(upgrade.effects)]; lines.append("   struct.end")
+    if upgrade.required_upgrade_sids:
+        lines.append("   RequiredUpgradePrototypeSIDs : struct.begin"); lines += [f"      [{i}] = {sid}" for i, sid in enumerate(upgrade.required_upgrade_sids)]; lines.append("   struct.end")
     if upgrade.blocking_sids:
         lines.append("   BlockingUpgradePrototypeSIDs : struct.begin"); lines += [f"      [{i}] = {sid}" for i, sid in enumerate(upgrade.blocking_sids)]; lines.append("   struct.end")
     return lines + ["struct.end", ""]
