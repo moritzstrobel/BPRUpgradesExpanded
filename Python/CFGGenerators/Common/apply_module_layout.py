@@ -102,7 +102,7 @@ def apply_layout_to_model(model: UpgradeBuildModel, *, content_pack: str | None 
             grouped[(upgrade.weapon_class, upgrade.group)].append(upgrade)
 
         for (_weapon_class, _group), variants in sorted(grouped.items(), key=lambda item: _group_rank(item[1][0])):
-            if len(variants) > len(VERTICALS): raise ValueError(f"{setup_sid}/{variants[0].group}: {len(variants)} variants exceed 3 vertical slots")
+            if len(variants) > len(VERTICALS) and variants[0].group != "AdditionalCaliber": raise ValueError(f"{setup_sid}/{variants[0].group}: {len(variants)} variants exceed 3 vertical slots")
             target, horizontal = _first_free_column(setup_sid, variants[0].target_part, occupied_columns, content_pack); occupied_columns.add((target, horizontal))
             for index, upgrade in enumerate(variants):
                 # Test layout for the new additional-caliber chain: leave the
