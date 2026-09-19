@@ -10,11 +10,17 @@
       "additional_caliber_conversions": [
         "A762"
       ],
+      "ammo_specializations": [
+        {
+          "caliber": "A762",
+          "variant": "Expanding"
+        }
+      ],
       "image": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/AK74/Barrel/Upgrade/T_AK47_Upg_a_1.T_AK47_Upg_a_1'",
       "ammo_specializations": [
         {
           "caliber": "A762",
-          "variant": "APOnly"
+          "variant": "AP"
         }
       ]
     },
