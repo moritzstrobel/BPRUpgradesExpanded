@@ -28,12 +28,10 @@
   },
   "effects": {
     "referenced_effect_count": 217,
-    "visible_effect_count": 178,
+    "visible_effect_count": 179,
     "vanilla_localization_count": 35,
-    "error_count": 1,
-    "errors": [
-      "BPRUE_SMG_RecoilPenalty15Effect: referenced by BaseGame but no effect prototype could be resolved"
-    ],
+    "error_count": 0,
+    "errors": [],
     "effects": [
       {
         "sid": "AimingMovementPos10Effect",
@@ -1706,10 +1704,14 @@
           "BaseGame"
         ],
         "visible": true,
-        "localization_sid": null,
-        "resolution_chain": [],
-        "sources": [],
-        "status": "unresolved"
+        "localization_sid": "bprue_recoil",
+        "resolution_chain": [
+          "BPRUE_SMG_RecoilPenalty15Effect"
+        ],
+        "sources": [
+          "BPRUE_SMGEffectPrototypes.cfg"
+        ],
+        "status": "ok"
       },
       {
         "sid": "BPRUE_SMG_RecoilPenalty20Effect",
@@ -3714,5 +3716,5 @@
   },
   "unique_missing_upgrade_sid_count": 0,
   "missing_upgrade_sids": {},
-  "error_count": 1
+  "error_count": 0
 }
