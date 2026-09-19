@@ -2,7 +2,7 @@
   "schema_version": 3,
   "description": "Assault-rifle specialization system: mutually-exclusive modules for fire control, fire rate, reload and stock, plus a power-caliber conversion where supported. BPRUE caliber conversions are disabled where Vanilla already provides one.",
   "families": {
-    "AK74": {"weapon_sid":"GunAK74_ST","general_setup_sid":"GunAK74_ST","prototype_prefix":"GunAK74","base_caliber":"A545","image":"Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/AK74/Barrel/Upgrade/T_AK47_Upg_a_1.T_AK47_Upg_a_1'"},
+    "AK74": {"weapon_sid":"GunAK74_ST","general_setup_sid":"GunAK74_ST","prototype_prefix":"GunAK74","base_caliber":"A545","additional_caliber_conversions":["A762"],"image":"Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/AK74/Barrel/Upgrade/T_AK47_Upg_a_1.T_AK47_Upg_a_1'"},
     "Fora": {"weapon_sid":"GunFora_ST","general_setup_sid":"GunFora_ST","prototype_prefix":"GunFora","base_caliber":"A545","bprue_caliber_conversion":false,"image":"Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/Fora/Barrel/Upgrade/T_ForaU_a_1.T_ForaU_a_1'"},
     "G37": {"weapon_sid":"GunG37_ST","general_setup_sid":"GunG37_ST","prototype_prefix":"GunG37","base_caliber":"A556","image":"Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/G37/Barrel/Upgrade/T_GP_upgr_3.T_GP_upgr_3'"},
     "M16": {"weapon_sid":"GunM16_ST","general_setup_sid":"GunM16_ST","prototype_prefix":"GunM16","base_caliber":"A556","image":"Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/M16/Barrel/Upgrade/T_M16_upgr_1.T_M16_upgr_1'"},
