@@ -146,6 +146,53 @@ BUCKET_A045_VARIANTS = {
     },
 }
 
+
+ZUBR_A918_VARIANTS = {
+    "Default": {
+        "suffix": "A918",
+        "text_sid": "sid_bprue_smg_caliber_a918_name",
+        "hint_sid": "sid_bprue_smg_caliber_a918_description",
+        "ammo_effect": "ChangeAmmoTypes918Effect",
+        "stat_effects": ("BPRUE_SMG_RecoilPos15Effect", "BPRUE_SMG_DurabilityPerShotPos10Effect", "BPRUE_SMG_DamagePenalty10Effect", "BPRUE_SMG_EffectiveRangePenalty10Effect"),
+        "icon": _ammo_icon("9x18"),
+    },
+    "AP": {
+        "suffix": "A918_AP",
+        "text_sid": "sid_bprue_smg_caliber_a918_ap_name",
+        "hint_sid": "sid_bprue_smg_caliber_a918_ap_description",
+        "ammo_effect": "BPRUE_SMG_ChangeAmmoTypes918APEffect",
+        "stat_effects": ("BPRUE_SMG_ArmorPiercingPos15Effect", "BPRUE_SMG_RecoilPos15Effect", "BPRUE_SMG_DurabilityPerShotPos10Effect", "BPRUE_SMG_DamagePenalty15Effect", "BPRUE_SMG_EffectiveRangePenalty15Effect"),
+        "icon": _ammo_icon("9x18_ap"),
+    },
+}
+
+ZUBR_A045_VARIANTS = {
+    "Default": {
+        "suffix": "A045",
+        "text_sid": "sid_bprue_smg_caliber_a045_name",
+        "hint_sid": "sid_bprue_smg_caliber_a045_description",
+        "ammo_effect": "ChangeAmmoTypes045Effect",
+        "stat_effects": ("BPRUE_SMG_DamagePos15Effect", "BPRUE_SMG_RecoilPenalty20Effect", "BPRUE_SMG_EffectiveRangePenalty10Effect"),
+        "icon": _ammo_icon("45acp"),
+    },
+    "AP": {
+        "suffix": "A045_AP",
+        "text_sid": "sid_bprue_smg_caliber_a045_ap_name",
+        "hint_sid": "sid_bprue_smg_caliber_a045_ap_description",
+        "ammo_effect": "BPRUE_SMG_ChangeAmmoTypes045APEffect",
+        "stat_effects": ("BPRUE_SMG_DamagePos10Effect", "BPRUE_SMG_ArmorPiercingPos15Effect", "BPRUE_SMG_RecoilPenalty25Effect", "BPRUE_SMG_EffectiveRangePenalty10Effect"),
+        "icon": _ammo_icon("45acp_ap"),
+    },
+    "Expanding": {
+        "suffix": "A045_Expanding",
+        "text_sid": "sid_bprue_smg_caliber_a045_expanding_name",
+        "hint_sid": "sid_bprue_smg_caliber_a045_expanding_description",
+        "ammo_effect": "BPRUE_SMG_ChangeAmmoTypes045ExpandingEffect",
+        "stat_effects": ("BPRUE_SMG_DamagePos20Effect", "BPRUE_SMG_RecoilPenalty25Effect", "BPRUE_SMG_EffectiveRangePenalty15Effect"),
+        "icon": _ammo_icon("45acp_hp"),
+    },
+}
+
 def load_config() -> dict: return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
 def sid(family: dict, key: str) -> str: return f"{family['prototype_prefix']}_Upgrade_BPRUE_{MODULES[key][0]}"
 def caliber_sid(family: dict, caliber: str) -> str: return f"{family['prototype_prefix']}_Upgrade_BPRUE_Caliber_{caliber}"
@@ -170,6 +217,8 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
                 variants = M10_A919_VARIANTS if caliber == "A919" else M10_A918_VARIANTS
             elif family["prototype_prefix"] == "GunBucket" and caliber in ("A919", "A045"):
                 variants = BUCKET_A919_VARIANTS if caliber == "A919" else BUCKET_A045_VARIANTS
+            elif family["prototype_prefix"] == "GunZubr" and caliber in ("A918", "A045"):
+                variants = ZUBR_A918_VARIANTS if caliber == "A918" else ZUBR_A045_VARIANTS
             if variants:
                 conversion_sids.extend(f"{family['prototype_prefix']}_Upgrade_BPRUE_Caliber_{spec['suffix']}" for spec in variants.values())
             else:
@@ -181,6 +230,8 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
                 variants = M10_A919_VARIANTS if caliber == "A919" else M10_A918_VARIANTS
             elif family["prototype_prefix"] == "GunBucket" and caliber in ("A919", "A045"):
                 variants = BUCKET_A919_VARIANTS if caliber == "A919" else BUCKET_A045_VARIANTS
+            elif family["prototype_prefix"] == "GunZubr" and caliber in ("A918", "A045"):
+                variants = ZUBR_A918_VARIANTS if caliber == "A918" else ZUBR_A045_VARIANTS
             if variants:
                 for spec in variants.values():
                     current=f"{family['prototype_prefix']}_Upgrade_BPRUE_Caliber_{spec['suffix']}"
