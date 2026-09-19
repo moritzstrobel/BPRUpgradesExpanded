@@ -242,8 +242,15 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
                 family_upgrades.append(_definition(family, *MODULE_SPECS[(group, variant)]))
         by_group: dict[str, list[UpgradeDefinition]] = {}
         for upgrade in family_upgrades: by_group.setdefault(upgrade.group, []).append(upgrade)
+
+        # All caliber conversions on a weapon are mutually exclusive, including
+        # variants that belong to different target-caliber families.
+        caliber_groups = {"Caliber", "AdditionalCaliber"}
+        caliber_upgrades = [upgrade for upgrade in family_upgrades if upgrade.group in caliber_groups]
+
         for upgrade in family_upgrades:
-            siblings = tuple(item.sid for item in by_group[upgrade.group] if item.sid != upgrade.sid)
+            blocking_pool = caliber_upgrades if upgrade.group in caliber_groups else by_group[upgrade.group]
+            siblings = tuple(item.sid for item in blocking_pool if item.sid != upgrade.sid)
             result.append(UpgradeDefinition(**{**upgrade.__dict__, "blocking_sids": siblings}))
     return result
 
