@@ -1,5 +1,13 @@
 from __future__ import annotations
 
+from pathlib import Path
+
+from CFGGenerators.Common.vanilla_upgrade_layout import (
+    _direct_child,
+    _general_setup_blocks,
+    _indexed_children,
+)
+
 CONVERSION_ATTACHMENTS = {
     "GunViper_PP": ("BPRUE_Viper_PistolConversionKit", "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Viper/T_inv_w_viper_toprail.T_inv_w_viper_toprail'", "FrontRailSocket", 150, 30, "GunViper_Upgrade_BPRUE_PistolConversion"),
     "GunAKU_PP": ("BPRUE_AKU_PistolConversionKit", "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/AKU/T_inv_w_aku_colimscope.T_inv_w_aku_colimscope'", "ColimScopeSocket", 155, 9, "GunAKU_Upgrade_BPRUE_PistolConversion"),
@@ -10,11 +18,46 @@ CONVERSION_ATTACHMENTS = {
 }
 
 
-def attachment_block(data: tuple[str, str, str, int, int, str]) -> list[str]:
+def _reindex_struct(block: list[str], index: int) -> list[str]:
+    rendered = list(block)
+    indent = rendered[0][: len(rendered[0]) - len(rendered[0].lstrip())]
+    rendered[0] = f"{indent}[{index}] : struct.begin"
+    return rendered
+
+
+def _vanilla_compatible_attachments(setup_sid: str) -> list[list[str]]:
+    block = _general_setup_blocks().get(setup_sid)
+    if not block:
+        raise ValueError(f"No Vanilla GeneralSetup found for conversion weapon {setup_sid}")
+
+    compatible = _direct_child(block, "CompatibleAttachments")
+    if compatible is None:
+        raise ValueError(f"No Vanilla CompatibleAttachments found for conversion weapon {setup_sid}")
+
+    entries = _indexed_children(compatible)
+    if not entries:
+        raise ValueError(f"Vanilla CompatibleAttachments is empty for conversion weapon {setup_sid}")
+    return entries
+
+
+def attachment_block(setup_sid: str, data: tuple[str, str, str, int, int, str]) -> list[str]:
+    """Render a complete deterministic CompatibleAttachments array.
+
+    Appending the conversion kit with [*] can disturb inherited Vanilla attachment
+    entries for some SMGs (confirmed with RU_Silen_1 on Zubr/Bucket). Re-render the
+    directly owned Vanilla array and put the conversion kit at the next numeric
+    index instead.
+    """
     attach_sid, icon, socket, x, y, upgrade_sid = data
-    return [
-        "   CompatibleAttachments : struct.begin {bpatch}",
-        "      [*] : struct.begin",
+    vanilla_entries = _vanilla_compatible_attachments(setup_sid)
+
+    lines = ["   CompatibleAttachments : struct.begin"]
+    for index, entry in enumerate(vanilla_entries):
+        lines.extend(_reindex_struct(entry, index))
+
+    index = len(vanilla_entries)
+    lines += [
+        f"      [{index}] : struct.begin",
         f"         AttachPrototypeSID = {attach_sid}",
         f"         WeaponSpecificIcon = {icon}",
         f"         Socket = {socket}",
@@ -26,3 +69,4 @@ def attachment_block(data: tuple[str, str, str, int, int, str]) -> list[str]:
         "      struct.end",
         "   struct.end",
     ]
+    return lines
