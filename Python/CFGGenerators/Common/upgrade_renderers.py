@@ -35,6 +35,7 @@ GROUP_ICON_FALLBACKS = {
 # the target caliber. This matters especially for 9x19, whose trade-offs differ
 # depending on the source weapon's original caliber.
 CALIBER_HINT_EFFECT_MARKERS = (
+    (("BPRUE_ChangeCaliber762x39Effect", "BPRUE_DamagePos15Effect", "BPRUE_ArmorPiercingPos15Effect", "BPRUE_RecoilPenalty25Effect"), "sid_bprue_caliber_762x39_tradeoff_description"),
     (("BPRUE_DamagePos15Effect", "BPRUE_ArmorPiercingPos15Effect", "BPRUE_RecoilPenalty25Effect"), "sid_bprue_caliber_762_eastern_tradeoff_description"),
     (("BPRUE_DamagePos10Effect", "BPRUE_ArmorPiercingPos15Effect", "BPRUE_RecoilPenalty20Effect", "BPRUE_DurabilityPerShotNeg15Effect"), "sid_bprue_caliber_762_nato_tradeoff_description"),
     (("BPRUE_SMG_DamagePos10Effect", "BPRUE_SMG_EffectiveRangePos10Effect", "BPRUE_SMG_RecoilPenalty10Effect"), "sid_bprue_smg_caliber_918_to_919_description"),
