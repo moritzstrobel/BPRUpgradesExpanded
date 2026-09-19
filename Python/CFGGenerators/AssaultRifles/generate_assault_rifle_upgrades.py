@@ -185,8 +185,8 @@ def load_config() -> dict:
     return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
 
 
-def _definition(family: dict, group: str, variant: str, target: str, cost: int, text: str, hint: str, effects: tuple[str, ...], icon: str = DEFAULT_ICON, image: str | None = None) -> UpgradeDefinition:
-    return UpgradeDefinition(sid=f"{family['prototype_prefix']}_Upgrade_BPRUE_{group}_{variant}", general_setup_sid=family["general_setup_sid"], weapon_class="AR", group=group, target_part=target, text_sid=text, hint_sid=hint, image=image or family["image"], icon=icon, cost=cost, effects=effects, template_sid=MODULE_TEMPLATE_SID)
+def _definition(family: dict, group: str, variant: str, target: str, cost: int, text: str, hint: str, effects: tuple[str, ...], icon: str = DEFAULT_ICON, module_image: str | None = None) -> UpgradeDefinition:
+    return UpgradeDefinition(sid=f"{family['prototype_prefix']}_Upgrade_BPRUE_{group}_{variant}", general_setup_sid=family["general_setup_sid"], weapon_class="AR", group=group, target_part=target, text_sid=text, hint_sid=hint, image=family["image"], icon=icon, cost=cost, effects=effects, template_sid=MODULE_TEMPLATE_SID, module_image=module_image)
 
 
 def build_upgrades(config: dict) -> list[UpgradeDefinition]:
@@ -211,7 +211,7 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
                         spec["hint_sid"],
                         (change, *removes, spec["ammo_effect"], *spec["stat_effects"]),
                         CALIBER_ICON,
-                        image=spec["icon"],
+                        module_image=spec["icon"],
                     ))
             else:
                 family_upgrades.append(_definition(family, "Caliber", suffix, "Body", cost, text, hint, (change, *removes, add, *stat_effects), CALIBER_ICON))
@@ -235,7 +235,7 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
                     spec["hint_sid"],
                     (change, *removes, spec["ammo_effect"], *spec["stat_effects"]),
                     CALIBER_ICON,
-                    image=spec["icon"],
+                    module_image=spec["icon"],
                 ))
         for group, variants in config["module_groups"].items():
             for variant in variants:
