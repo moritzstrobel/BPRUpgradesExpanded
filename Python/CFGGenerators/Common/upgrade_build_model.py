@@ -35,6 +35,8 @@ class UpgradeDefinition:
     layout_group: str | None = None
     # Explicit authored icons (for example ammo artwork) bypass semantic icon inference.
     preserve_icon: bool = False
+    # Optional explicit artwork for the large upgrade-tree module image.
+    module_image: str | None = None
 
     @property
     def general_setup_sids(self) -> tuple[str, ...]:
