@@ -19,6 +19,18 @@ POWER_CALIBER = {
 ADDITIONAL_CALIBER = {
     "A762": ("762x39", "sid_bprue_caliber_762x39_name", "sid_bprue_caliber_762x39_description", 2600),
 }
+AMMO_SPECIALIZATIONS = {
+    ("A762", "APOnly"): {
+        "text_sid": "sid_bprue_ammo_762x39_ap_only_name",
+        "hint_sid": "sid_bprue_ammo_762x39_ap_only_description",
+        "cost": 1800,
+        "effects": (
+            "BPRUE_ChangeAmmoTypesNo762x39DefaultEffect",
+            "BPRUE_ChangeAmmoTypesNo762x39ExpandingEffect",
+        ),
+    },
+}
+
 CALIBER_EFFECTS = {
     "A762": ("BPRUE_ChangeCaliber762x39Effect", ("ChangeAmmoTypesNo545Effect", "ChangeAmmoTypesNo556Effect", "BPRUE_ChangeAmmoTypesNo762Effect", "BPRUE_ChangeAmmoTypesNo762NATOEffect", "ChangeAmmoTypesNo939Effect"), "BPRUE_ChangeAmmoTypes762x39Effect", ("BPRUE_DamagePos15Effect", "BPRUE_RecoilPenalty15Effect", "BPRUE_Shared_FlatnessPenalty10Effect")),
     "A762Sniper": ("ChangeCaliber762Effect", ("ChangeAmmoTypesNo545Effect", "ChangeAmmoTypesNo556Effect", "BPRUE_ChangeAmmoTypesNo762NATOEffect", "ChangeAmmoTypesNo939Effect"), "ChangeAmmoTypes762Effect", ("BPRUE_DamagePos15Effect", "BPRUE_ArmorPiercingPos15Effect", "BPRUE_RecoilPenalty25Effect", "BPRUE_DurabilityPerShotNeg20Effect")),
@@ -61,6 +73,28 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
             suffix, text, hint, cost = ADDITIONAL_CALIBER[caliber]
             change, removes, add, stat_effects = CALIBER_EFFECTS[caliber]
             family_upgrades.append(_definition(family, "Caliber", suffix, "Body", cost, text, hint, (change, *removes, add, *stat_effects), CALIBER_ICON))
+        for specialization in family.get("ammo_specializations", []):
+            caliber = specialization["caliber"]
+            variant = specialization["variant"]
+            spec = AMMO_SPECIALIZATIONS[(caliber, variant)]
+            conversion_suffix = ADDITIONAL_CALIBER[caliber][0]
+            conversion_sid = f"{family['prototype_prefix']}_Upgrade_BPRUE_Caliber_{conversion_suffix}"
+            family_upgrades.append(UpgradeDefinition(
+                sid=f"{family['prototype_prefix']}_Upgrade_BPRUE_AmmoSpecialization_{variant}",
+                general_setup_sid=family["general_setup_sid"],
+                weapon_class="AR",
+                group="AmmoSpecialization",
+                target_part="Body",
+                text_sid=spec["text_sid"],
+                hint_sid=spec["hint_sid"],
+                image=family["image"],
+                icon=CALIBER_ICON,
+                cost=spec["cost"],
+                effects=spec["effects"],
+                required_upgrade_sids=(conversion_sid,),
+                template_sid=MODULE_TEMPLATE_SID,
+                standalone=True,
+            ))
         for group, variants in config["module_groups"].items():
             for variant in variants:
                 family_upgrades.append(_definition(family, *MODULE_SPECS[(group, variant)]))
@@ -253,6 +287,36 @@ BPRUE_ChangeAmmoTypes762x39Effect : struct.begin {refurl=@BaseGame/EffectPrototy
          ProjectilePrototypeSID = P762
       struct.end
    struct.end
+   ShowUpgradeEffectValue = false
+   ShowUpgradeEffect = false
+struct.end
+
+BPRUE_ChangeAmmoTypesNo762x39DefaultEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}
+   SID = BPRUE_ChangeAmmoTypesNo762x39DefaultEffect
+   AmmoTypeProjectiles : struct.begin
+      [0] : struct.begin
+         AmmoType = EAmmoType::Default
+         ProjectilePrototypeSID = P762
+      struct.end
+   struct.end
+   ValueMin = 100%
+   ValueMax = 100%
+   Positive = EBeneficial::Negative
+   ShowUpgradeEffectValue = false
+   ShowUpgradeEffect = false
+struct.end
+
+BPRUE_ChangeAmmoTypesNo762x39ExpandingEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}
+   SID = BPRUE_ChangeAmmoTypesNo762x39ExpandingEffect
+   AmmoTypeProjectiles : struct.begin
+      [0] : struct.begin
+         AmmoType = EAmmoType::Expanding
+         ProjectilePrototypeSID = P762
+      struct.end
+   struct.end
+   ValueMin = 100%
+   ValueMax = 100%
+   Positive = EBeneficial::Negative
    ShowUpgradeEffectValue = false
    ShowUpgradeEffect = false
 struct.end
