@@ -61,7 +61,7 @@ def build_upgrades(config):
                 suffix,text,hint,ammo_effect,stats,icon=spec
                 current=f"{prefix}_Upgrade_BPRUE_Sniper_Caliber_{conversion['suffix']}{suffix}"
                 effects=(conversion["change_effect"],conversion["remove_effect"],ammo_effect,*stats)
-                upgrades.append(UpgradeDefinition(sid=current,general_setup_sid=setup,weapon_class='Sniper',group='Caliber',target_part='Body',text_sid=text,hint_sid=hint,image=IMAGE,icon=icon,cost=round(conversion["cost"]*scale),effects=tuple(effects),blocking_sids=tuple(x for x in variant_sids if x!=current),template_sid=TEMPLATE_SID))
+                upgrades.append(UpgradeDefinition(sid=current,general_setup_sid=setup,weapon_class='Sniper',group='Caliber',target_part='Body',text_sid=text,hint_sid=hint,image=IMAGE,icon=icon,cost=round(conversion["cost"]*scale),effects=tuple(effects),blocking_sids=tuple(x for x in variant_sids if x!=current),template_sid=TEMPLATE_SID,layout_group=f"Caliber_{conversion['target']}",preserve_icon=True))
         for group,definitions,target,vertical in GROUPS:
             group_sids=[module_sid(prefix,group,key) for key in definitions]
             for key,(cost,effects) in definitions.items():
