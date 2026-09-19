@@ -54,8 +54,8 @@ CALIBER_STAT_EFFECTS = {
 IMAGE = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/AK74/Barrel/Upgrade/T_AK47_Upg_a_1.T_AK47_Upg_a_1'"
 ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_Recoil.T_PDA_Upgrades_Icon_Recoil'"
 CALIBER_ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_CaliberChange.T_PDA_Upgrades_Icon_CaliberChange'"
-AMMO_ICON_ROOT = "/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Ammo"
-PISTOL_CONVERSION_ICON = "Texture2D\'/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Special/T_Module_Special_ConvertionkitBase.T_Module_Special_ConvertionkitBase\'"
+AMMO_ICON_ROOT = "/BPRUpgradesExpanded/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Ammo"
+PISTOL_CONVERSION_ICON = "Texture2D\'/BPRUpgradesExpanded/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Special/T_Module_Special_ConvertionkitBase.T_Module_Special_ConvertionkitBase\'"
 
 def _ammo_icon(name: str) -> str:
     asset = f"T_Module_Ammo_{name}"
