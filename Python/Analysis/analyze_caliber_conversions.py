@@ -166,14 +166,23 @@ def main():
             "bprue_conversion_disabled": disabled,
         })
 
-    headers = ("Class", "Weapon", "Base", "Vanilla", "BPRUE", "Disabled")
+    # Highlight weapons that are safe candidates for new BPRUE conversions:
+    # no Vanilla caliber conversion and no BPRUE caliber conversion yet.
+    for row in report_rows:
+        row["candidate"] = (
+            not row["vanilla_conversions"]
+            and not row["bprue_conversions"]
+            and not row["bprue_conversion_disabled"]
+        )
+
+    headers = ("Class", "Weapon", "Base", "Vanilla", "BPRUE", "Candidate")
     printable = []
     for row in report_rows:
         printable.append((
             row["class"], row["weapon"], row["base_caliber"],
             ", ".join(row["vanilla_conversions"]) or "-",
             ", ".join(row["bprue_conversions"]) or "-",
-            "yes" if row["bprue_conversion_disabled"] else "-",
+            "YES" if row["candidate"] else "-",
         ))
     widths = [max(len(headers[i]), *(len(r[i]) for r in printable)) for i in range(len(headers))]
     print("  ".join(headers[i].ljust(widths[i]) for i in range(len(headers))))
@@ -189,12 +198,19 @@ def main():
                 "vanilla_conversion_upgrades": len(conversion_upgrades),
                 "tracked_weapon_families": len(report_rows),
                 "vanilla_general_setups_with_upgrades": len(setups),
+                "conversion_candidates": sum(1 for row in report_rows if row["candidate"]),
             },
             "weapons": report_rows,
             "vanilla_conversion_upgrades": conversion_upgrades,
         }
         args.json.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
         print(f"\nWrote {args.json.relative_to(REPO_ROOT)}")
+
+    candidates = [row for row in report_rows if row["candidate"]]
+    if candidates:
+        print("\nConversion candidates (no Vanilla/BPRUE caliber conversion):")
+        for row in candidates:
+            print(f"  {row['class']:<6} {row['weapon']:<12} {row['base_caliber']}")
 
 
 if __name__ == "__main__":
