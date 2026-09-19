@@ -236,12 +236,12 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
             if variants:
                 for spec in variants.values():
                     current=f"{family['prototype_prefix']}_Upgrade_BPRUE_Caliber_{spec['suffix']}"
-                    upgrades.append(UpgradeDefinition(sid=current,general_setup_sid=family["general_setup_sid"],weapon_class="SMG",group="Caliber",target_part="Body",text_sid=spec["text_sid"],hint_sid=spec["hint_sid"],image=IMAGE,icon=spec["icon"],cost=data["cost"],effects=(data["change_effect"],source_remove,spec["ammo_effect"],*spec["stat_effects"]),blocking_sids=tuple(x for x in conversion_sids if x!=current),template_sid=TEMPLATE_SID,layout_group=f"Caliber_{caliber}",preserve_icon=True))
+                    upgrades.append(UpgradeDefinition(sid=current,general_setup_sid=family["general_setup_sid"],weapon_class="SMG",group="Caliber",target_part="Body",text_sid=spec["text_sid"],hint_sid=spec["hint_sid"],image=spec["icon"],icon=CALIBER_ICON,cost=data["cost"],effects=(data["change_effect"],source_remove,spec["ammo_effect"],*spec["stat_effects"]),blocking_sids=tuple(x for x in conversion_sids if x!=current),template_sid=TEMPLATE_SID,layout_group=f"Caliber_{caliber}"))
                 continue
             current=caliber_sid(family,caliber); stat_effects=CALIBER_STAT_EFFECTS.get((source_caliber, caliber), ())
             upgrades.append(UpgradeDefinition(sid=current,general_setup_sid=family["general_setup_sid"],weapon_class="SMG",group="Caliber",target_part="Body",text_sid=data["name_sid"],hint_sid=data["hint_sid"],image=IMAGE,icon=CALIBER_ICON,cost=data["cost"],effects=(data["change_effect"],source_remove,data["add_ammo_effect"],*stat_effects),blocking_sids=tuple(x for x in conversion_sids if x!=current),template_sid=TEMPLATE_SID))
     for setup,(current,text,hint,cost) in PISTOL_CONVERSIONS.items():
-        upgrades.append(UpgradeDefinition(sid=current,general_setup_sid=setup,weapon_class="SMG",group="Conversion",target_part="Body",text_sid=text,hint_sid=hint,image=IMAGE,icon=PISTOL_CONVERSION_ICON,cost=cost,template_sid=TEMPLATE_SID,require_effects=False,standalone=True,preserve_icon=True))
+        upgrades.append(UpgradeDefinition(sid=current,general_setup_sid=setup,weapon_class="SMG",group="Conversion",target_part="Body",text_sid=text,hint_sid=hint,image=PISTOL_CONVERSION_ICON,icon=CALIBER_ICON,cost=cost,template_sid=TEMPLATE_SID,require_effects=False,standalone=True))
     return upgrades
 
 def render_effects() -> str:
