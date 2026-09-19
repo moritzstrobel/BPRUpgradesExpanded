@@ -30,6 +30,11 @@ class UpgradeDefinition:
     # Standalones are packed only after normal grouped rows. They may fill any
     # remaining visible cell instead of reserving a complete horizontal column.
     standalone: bool = False
+    # Optional layout-only grouping key. Keeps gameplay/upgrade group semantics stable
+    # while allowing independent columns for multiple conversion families.
+    layout_group: str | None = None
+    # Explicit authored icons (for example ammo artwork) bypass semantic icon inference.
+    preserve_icon: bool = False
 
     @property
     def general_setup_sids(self) -> tuple[str, ...]:
