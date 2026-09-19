@@ -504,6 +504,20 @@
         "English": "Converts the weapon to 9x19 mm armor-piercing ammunition only. Improves armor penetration and weapon control, but reduces damage and provides less effective range than the standard 9x19 mm conversion. This specialization is permanent.",
         "Russian": "Переводит оружие исключительно на бронебойные боеприпасы 9x19 мм. Повышает бронепробиваемость и управляемость оружия, но снижает урон и дает меньшую эффективную дальность по сравнению со стандартной конверсией на 9x19 мм. Эта специализация является постоянной."
       }
+    },
+    {
+      "sid": "sid_bprue_smg_caliber_a918_ap_name",
+      "languages": {
+        "English": "9x18 mm AP Conversion",
+        "Russian": "Перевод на 9x18 мм БП"
+      }
+    },
+    {
+      "sid": "sid_bprue_smg_caliber_a918_ap_description",
+      "languages": {
+        "English": "Converts the weapon to 9x18 mm armor-piercing ammunition only. Improves armor penetration and weapon control, but further reduces damage and provides less effective range than the standard 9x18 mm conversion. This specialization is permanent.",
+        "Russian": "Переводит оружие исключительно на бронебойные боеприпасы 9x18 мм. Повышает бронепробиваемость и управляемость оружия, но дополнительно снижает урон и дает меньшую эффективную дальность по сравнению со стандартной конверсией на 9x18 мм. Эта специализация является постоянной."
+      }
     }
   ]
 }
