@@ -4,7 +4,7 @@
     "vanilla_conversion_upgrades": 8,
     "tracked_weapon_families": 23,
     "vanilla_general_setups_with_upgrades": 192,
-    "conversion_candidates": 3
+    "conversion_candidates": 2
   },
   "weapons": [
     {
@@ -120,9 +120,11 @@
       "base_caliber": "A939",
       "vanilla_conversions": [],
       "vanilla_upgrade_sids": [],
-      "bprue_conversions": [],
+      "bprue_conversions": [
+        "A762"
+      ],
       "bprue_conversion_disabled": false,
-      "candidate": true
+      "candidate": false
     },
     {
       "class": "AR",
@@ -789,6 +791,194 @@
           "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
           "line": 565
         }
+      ]
+    }
+  },
+  "ammo_variant_matrix": {
+    "A012": {
+      "Default": [],
+      "ArmorPiercing": [],
+      "Expanding": [],
+      "Supersonic": [],
+      "EAmmoType::ArmorPiercing": [
+        "A012A"
+      ],
+      "EAmmoType::Default": [
+        "A012D"
+      ],
+      "EAmmoType::Expanding": [
+        "A012E"
+      ]
+    },
+    "A045": {
+      "Default": [],
+      "ArmorPiercing": [],
+      "Expanding": [],
+      "Supersonic": [],
+      "EAmmoType::ArmorPiercing": [
+        "A045A"
+      ],
+      "EAmmoType::Default": [
+        "A045D"
+      ],
+      "EAmmoType::Expanding": [
+        "A045E"
+      ]
+    },
+    "A545": {
+      "Default": [],
+      "ArmorPiercing": [],
+      "Expanding": [],
+      "Supersonic": [],
+      "EAmmoType::ArmorPiercing": [
+        "A545A"
+      ],
+      "EAmmoType::Default": [
+        "A545D"
+      ],
+      "EAmmoType::Expanding": [
+        "A545E"
+      ]
+    },
+    "A556": {
+      "Default": [],
+      "ArmorPiercing": [],
+      "Expanding": [],
+      "Supersonic": [],
+      "EAmmoType::ArmorPiercing": [
+        "A556A"
+      ],
+      "EAmmoType::Default": [
+        "A556D"
+      ],
+      "EAmmoType::Expanding": [
+        "A556E"
+      ],
+      "EAmmoType::Supersonic": [
+        "A556S"
+      ]
+    },
+    "A762": {
+      "Default": [],
+      "ArmorPiercing": [],
+      "Expanding": [],
+      "Supersonic": [],
+      "EAmmoType::ArmorPiercing": [
+        "A762A"
+      ],
+      "EAmmoType::Default": [
+        "A762D"
+      ],
+      "EAmmoType::Expanding": [
+        "A762E"
+      ]
+    },
+    "A762NATO": {
+      "Default": [],
+      "ArmorPiercing": [],
+      "Expanding": [],
+      "Supersonic": [],
+      "EAmmoType::ArmorPiercing": [
+        "A762NATOA"
+      ],
+      "EAmmoType::Default": [
+        "A762NATOD"
+      ],
+      "EAmmoType::Supersonic": [
+        "A762NATOS"
+      ]
+    },
+    "A762Sniper": {
+      "Default": [],
+      "ArmorPiercing": [],
+      "Expanding": [],
+      "Supersonic": [],
+      "EAmmoType::ArmorPiercing": [
+        "A762SniperA"
+      ],
+      "EAmmoType::Default": [
+        "A762SniperD"
+      ],
+      "EAmmoType::Supersonic": [
+        "A762SniperS"
+      ]
+    },
+    "A918": {
+      "Default": [],
+      "ArmorPiercing": [],
+      "Expanding": [],
+      "Supersonic": [],
+      "EAmmoType::ArmorPiercing": [
+        "A918A"
+      ],
+      "EAmmoType::Default": [
+        "A918D"
+      ]
+    },
+    "A919": {
+      "Default": [],
+      "ArmorPiercing": [],
+      "Expanding": [],
+      "Supersonic": [],
+      "EAmmoType::ArmorPiercing": [
+        "A919A"
+      ],
+      "EAmmoType::Default": [
+        "A919D"
+      ]
+    },
+    "A939": {
+      "Default": [],
+      "ArmorPiercing": [],
+      "Expanding": [],
+      "Supersonic": [],
+      "EAmmoType::ArmorPiercing": [
+        "A939A"
+      ],
+      "EAmmoType::Default": [
+        "A939D"
+      ],
+      "EAmmoType::Expanding": [
+        "A939E"
+      ],
+      "EAmmoType::Supersonic": [
+        "A939S"
+      ]
+    },
+    "AGA": {
+      "Default": [],
+      "ArmorPiercing": [],
+      "Expanding": [],
+      "Supersonic": [],
+      "EAmmoType::Default": [
+        "AGA"
+      ]
+    },
+    "AHEDP": {
+      "Default": [],
+      "ArmorPiercing": [],
+      "Expanding": [],
+      "Supersonic": [],
+      "EAmmoType::Default": [
+        "AHEDP"
+      ]
+    },
+    "APG7V": {
+      "Default": [],
+      "ArmorPiercing": [],
+      "Expanding": [],
+      "Supersonic": [],
+      "EAmmoType::Default": [
+        "APG7V"
+      ]
+    },
+    "AVOG": {
+      "Default": [],
+      "ArmorPiercing": [],
+      "Expanding": [],
+      "Supersonic": [],
+      "EAmmoType::Default": [
+        "AVOG"
       ]
     }
   }

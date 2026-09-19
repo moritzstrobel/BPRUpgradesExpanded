@@ -267,7 +267,8 @@ def main():
             and not row["bprue_conversion_disabled"]
         )
 
-    print_ammo_variant_matrix(ammo_matrix)\n\n    headers = ("Class", "Weapon", "Base", "Vanilla", "BPRUE", "Candidate")
+    print_ammo_variant_matrix(ammo_matrix)
+    headers = ("Class", "Weapon", "Base", "Vanilla", "BPRUE", "Candidate")
     printable = []
     for row in report_rows:
         printable.append((
@@ -294,7 +295,9 @@ def main():
             },
             "weapons": report_rows,
             "vanilla_conversion_upgrades": conversion_upgrades,
-            "caliber_support": support,\n            "ammo_variant_matrix": ammo_matrix,\n        }
+            "caliber_support": support,
+            "ammo_variant_matrix": ammo_matrix,
+            }
         args.json.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
         print(f"\nWrote {args.json.relative_to(REPO_ROOT)}")
 
