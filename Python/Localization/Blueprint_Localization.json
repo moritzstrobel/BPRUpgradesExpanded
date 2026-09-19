@@ -16,6 +16,20 @@
       }
     },
     {
+      "sid": "sid_bprue_caliber_762x39_name",
+      "languages": {
+        "English": "7.62x39 mm Conversion",
+        "Russian": "Переделка под патрон 7,62x39 мм"
+      }
+    },
+    {
+      "sid": "sid_bprue_caliber_762x39_description",
+      "languages": {
+        "English": "Converts the weapon to 7.62x39 mm ammunition. Increases damage, armor penetration, recoil and weapon wear. This specialization is permanent.",
+        "Russian": "Переводит оружие на боеприпасы 7,62x39 мм. Увеличивает урон, бронепробиваемость, отдачу и износ оружия. Эта специализация является постоянной."
+      }
+    },
+    {
       "sid": "sid_bprue_caliber_762_nato_name",
       "languages": {
         "English": "7.62x51 mm NATO Conversion",
