@@ -31,6 +31,7 @@ A762_CONVERSION_VARIANTS = {
             "BPRUE_Shared_FlatnessPenalty10Effect",
         ),
         "cost": 2600,
+        "icon": _ammo_icon("762x39"),
     },
     "AP": {
         "suffix": "762x39_AP",
@@ -44,6 +45,7 @@ A762_CONVERSION_VARIANTS = {
             "BPRUE_Shared_FlatnessPenalty10Effect",
         ),
         "cost": 2600,
+        "icon": _ammo_icon("762x39_ap"),
     },
     "Expanding": {
         "suffix": "762x39_Expanding",
@@ -56,6 +58,7 @@ A762_CONVERSION_VARIANTS = {
             "BPRUE_Shared_FlatnessPenalty15Effect",
         ),
         "cost": 2600,
+        "icon": _ammo_icon("762x39_hp"),
     },
 }
 
@@ -66,6 +69,12 @@ CALIBER_EFFECTS = {
 }
 DEFAULT_ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_Recoil.T_PDA_Upgrades_Icon_Recoil'"
 CALIBER_ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_CaliberChange.T_PDA_Upgrades_Icon_CaliberChange'"
+AMMO_ICON_ROOT = "/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Ammo"
+
+
+def _ammo_icon(name: str) -> str:
+    asset = f"T_Module_Ammo_{name}"
+    return f"Texture2D'{AMMO_ICON_ROOT}/{asset}.{asset}'"
 
 MODULE_SPECS = {
     ("fire_control", "burst"): ("FireControl", "Burst", "Body", 3000, "sid_bprue_fire_control_burst_name", "sid_bprue_fire_control_burst_description", ("BPRUE_AddBurstFireModeEffect", "RecoilPos5Effect", "BPRUE_DurabilityPerShotNeg10Effect")),
@@ -116,7 +125,7 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
                     spec["text_sid"],
                     spec["hint_sid"],
                     (change, *removes, spec["ammo_effect"], *spec["stat_effects"]),
-                    CALIBER_ICON,
+                    spec["icon"],
                 ))
         for group, variants in config["module_groups"].items():
             for variant in variants:
