@@ -35,7 +35,7 @@ def build_upgrades(config):
         conversion=CALIBER_CONVERSIONS.get(family.get('base_caliber')) if family.get('bprue_caliber_conversion',True) else None
         if conversion:
             _,suffix,text,hint,cost,effects=conversion
-            upgrades.append(UpgradeDefinition(sid=f"{prefix}_Upgrade_BPRUE_Sniper_Caliber_{suffix}",general_setup_sid=setup,weapon_class='Sniper',group='Caliber',target_part='Body',text_sid=text,hint_sid=hint,image=IMAGE,icon=CALIBER_ICON,cost=round(cost*scale),effects=tuple(effects),template_sid=TEMPLATE_SID,standalone=True))
+            upgrades.append(UpgradeDefinition(sid=f"{prefix}_Upgrade_BPRUE_Sniper_Caliber_{suffix}",general_setup_sid=setup,weapon_class='Sniper',group='Caliber',target_part='Body',text_sid=text,hint_sid=hint,image=IMAGE,icon=CALIBER_ICON,cost=round(cost*scale),effects=tuple(effects),template_sid=TEMPLATE_SID))
         for group,definitions,target,vertical in GROUPS:
             group_sids=[module_sid(prefix,group,key) for key in definitions]
             for key,(cost,effects) in definitions.items():
