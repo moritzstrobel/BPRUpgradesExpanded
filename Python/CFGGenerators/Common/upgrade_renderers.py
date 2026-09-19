@@ -65,6 +65,8 @@ def semantic_upgrade_hint(upgrade: UpgradeDefinition) -> str:
 
 
 def upgrade_module_image(upgrade: UpgradeDefinition) -> str:
+    if upgrade.module_image:
+        return upgrade.module_image
     return BPRUE_UNIQUE_MODULE_IMAGE if upgrade.group == "Signature" else BPRUE_MODULE_IMAGE
 
 
