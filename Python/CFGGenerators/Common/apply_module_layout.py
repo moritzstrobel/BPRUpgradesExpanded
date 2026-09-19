@@ -13,7 +13,7 @@ from vanilla_upgrade_layout import (
 )
 
 GROUP_ORDER = {
-    "AR": {"Body": ["Caliber", "FireControl", "Reload", "ModuleReliability"], "Barrel": ["FireRate", "ModulePrecision", "ModuleAction", "ModuleBallistics"], "Stock": ["Stock"]},
+    "AR": {"Body": ["Caliber", "AdditionalCaliber", "FireControl", "Reload", "ModuleReliability"], "Barrel": ["FireRate", "ModulePrecision", "ModuleAction", "ModuleBallistics"], "Stock": ["Stock"]},
     "SMG": {"Body": ["Readiness", "Reload", "ModuleHandling"], "Barrel": ["Action", "ModuleAction", "ModuleBallistics", "ModuleRangeProfile"], "Stock": ["Stock"]},
     "SG": {"Body": ["Action", "Handling", "ModuleHandling", "ModuleReliability"], "Barrel": ["Pattern", "ModuleRangeProfile"]},
     "Pistol": {"Body": ["Handling", "ModuleHandling"], "Barrel": ["Action", "Signature", "ModulePrecision", "ModuleBallistics"]},
@@ -108,6 +108,20 @@ def apply_layout_to_model(model: UpgradeBuildModel, *, content_pack: str | None 
                 cells[(target, horizontal)].add(index); resolved_by_sid[upgrade.sid] = replace(upgrade, target_part=target, horizontal_position=None if horizontal == 0 else horizontal, vertical_position=VERTICALS[index])
 
         for upgrade in standalones:
+            prerequisite = next((resolved_by_sid.get(sid) for sid in upgrade.required_upgrade_sids if sid in resolved_by_sid), None)
+            if prerequisite is not None:
+                # Dependency-chain test: render the follow-up in the prerequisite's
+                # column and intentionally omit VerticalPosition.
+                target = prerequisite.target_part
+                horizontal = prerequisite.horizontal_position or 0
+                occupied_columns.add((target, horizontal))
+                resolved_by_sid[upgrade.sid] = replace(
+                    upgrade,
+                    target_part=target,
+                    horizontal_position=None if horizontal == 0 else horizontal,
+                    vertical_position=None,
+                )
+                continue
             target, horizontal, vertical_index = _standalone_cell(setup_sid, upgrade.target_part, cells, vanilla_columns, content_pack)
             cells[(target, horizontal)].add(vertical_index); occupied_columns.add((target, horizontal)); resolved_by_sid[upgrade.sid] = replace(upgrade, target_part=target, horizontal_position=None if horizontal == 0 else horizontal, vertical_position=VERTICALS[vertical_index])
         for upgrade in passthrough: resolved_by_sid[upgrade.sid] = upgrade
