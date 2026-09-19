@@ -55,7 +55,7 @@ def semantic_upgrade_icon(upgrade: UpgradeDefinition) -> str:
 
 
 def semantic_upgrade_hint(upgrade: UpgradeDefinition) -> str:
-    if upgrade.group != "Caliber": return upgrade.hint_sid
+    if upgrade.group not in ("Caliber", "AdditionalCaliber"): return upgrade.hint_sid
     effect_set = set(upgrade.effects)
     for markers, hint_sid in CALIBER_HINT_EFFECT_MARKERS:
         if all(marker in effect_set for marker in markers): return hint_sid
