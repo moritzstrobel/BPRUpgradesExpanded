@@ -3,7 +3,8 @@
     "vanilla_change_caliber_effects": 8,
     "vanilla_conversion_upgrades": 8,
     "tracked_weapon_families": 23,
-    "vanilla_general_setups_with_upgrades": 192
+    "vanilla_general_setups_with_upgrades": 192,
+    "conversion_candidates": 3
   },
   "weapons": [
     {
@@ -18,7 +19,8 @@
         "A762Sniper",
         "A762"
       ],
-      "bprue_conversion_disabled": false
+      "bprue_conversion_disabled": false,
+      "candidate": false
     },
     {
       "class": "AR",
@@ -33,7 +35,8 @@
         "GunFora_Upgrade_Body_2_1"
       ],
       "bprue_conversions": [],
-      "bprue_conversion_disabled": true
+      "bprue_conversion_disabled": true,
+      "candidate": false
     },
     {
       "class": "AR",
@@ -46,7 +49,8 @@
       "bprue_conversions": [
         "A762NATO"
       ],
-      "bprue_conversion_disabled": false
+      "bprue_conversion_disabled": false,
+      "candidate": false
     },
     {
       "class": "AR",
@@ -59,7 +63,8 @@
       "bprue_conversions": [
         "A762NATO"
       ],
-      "bprue_conversion_disabled": false
+      "bprue_conversion_disabled": false,
+      "candidate": false
     },
     {
       "class": "AR",
@@ -74,7 +79,8 @@
         "GunKharod_Upgrade_Body_1"
       ],
       "bprue_conversions": [],
-      "bprue_conversion_disabled": true
+      "bprue_conversion_disabled": true,
+      "candidate": false
     },
     {
       "class": "AR",
@@ -87,7 +93,8 @@
       "bprue_conversions": [
         "A762NATO"
       ],
-      "bprue_conversion_disabled": false
+      "bprue_conversion_disabled": false,
+      "candidate": false
     },
     {
       "class": "AR",
@@ -102,7 +109,8 @@
         "GunDnipro_Upgrade_Body_2"
       ],
       "bprue_conversions": [],
-      "bprue_conversion_disabled": true
+      "bprue_conversion_disabled": true,
+      "candidate": false
     },
     {
       "class": "AR",
@@ -113,7 +121,8 @@
       "vanilla_conversions": [],
       "vanilla_upgrade_sids": [],
       "bprue_conversions": [],
-      "bprue_conversion_disabled": false
+      "bprue_conversion_disabled": false,
+      "candidate": true
     },
     {
       "class": "AR",
@@ -124,7 +133,8 @@
       "vanilla_conversions": [],
       "vanilla_upgrade_sids": [],
       "bprue_conversions": [],
-      "bprue_conversion_disabled": false
+      "bprue_conversion_disabled": false,
+      "candidate": true
     },
     {
       "class": "AR",
@@ -135,7 +145,8 @@
       "vanilla_conversions": [],
       "vanilla_upgrade_sids": [],
       "bprue_conversions": [],
-      "bprue_conversion_disabled": false
+      "bprue_conversion_disabled": false,
+      "candidate": true
     },
     {
       "class": "SMG",
@@ -150,7 +161,8 @@
         "GunViper_Upgrade_Body_3_1"
       ],
       "bprue_conversions": [],
-      "bprue_conversion_disabled": true
+      "bprue_conversion_disabled": true,
+      "candidate": false
     },
     {
       "class": "SMG",
@@ -164,7 +176,8 @@
         "A919",
         "A045"
       ],
-      "bprue_conversion_disabled": false
+      "bprue_conversion_disabled": false,
+      "candidate": false
     },
     {
       "class": "SMG",
@@ -179,7 +192,8 @@
         "GunIntegral_Upgrade_Body_3"
       ],
       "bprue_conversions": [],
-      "bprue_conversion_disabled": true
+      "bprue_conversion_disabled": true,
+      "candidate": false
     },
     {
       "class": "SMG",
@@ -193,7 +207,8 @@
         "A918",
         "A045"
       ],
-      "bprue_conversion_disabled": false
+      "bprue_conversion_disabled": false,
+      "candidate": false
     },
     {
       "class": "SMG",
@@ -210,7 +225,8 @@
         "GunFora230_Upgrade_Body_2_2"
       ],
       "bprue_conversions": [],
-      "bprue_conversion_disabled": true
+      "bprue_conversion_disabled": true,
+      "candidate": false
     },
     {
       "class": "SMG",
@@ -224,7 +240,8 @@
         "A919",
         "A918"
       ],
-      "bprue_conversion_disabled": false
+      "bprue_conversion_disabled": false,
+      "candidate": false
     },
     {
       "class": "Sniper",
@@ -237,7 +254,8 @@
       "bprue_conversions": [
         "A762NATO"
       ],
-      "bprue_conversion_disabled": false
+      "bprue_conversion_disabled": false,
+      "candidate": false
     },
     {
       "class": "Sniper",
@@ -250,7 +268,8 @@
       "bprue_conversions": [
         "A762NATO"
       ],
-      "bprue_conversion_disabled": false
+      "bprue_conversion_disabled": false,
+      "candidate": false
     },
     {
       "class": "Sniper",
@@ -263,7 +282,8 @@
       "bprue_conversions": [
         "A762Sniper"
       ],
-      "bprue_conversion_disabled": false
+      "bprue_conversion_disabled": false,
+      "candidate": false
     },
     {
       "class": "Sniper",
@@ -276,7 +296,8 @@
       "bprue_conversions": [
         "A762Sniper"
       ],
-      "bprue_conversion_disabled": false
+      "bprue_conversion_disabled": false,
+      "candidate": false
     },
     {
       "class": "Sniper",
@@ -289,7 +310,8 @@
       "bprue_conversions": [
         "A762NATO"
       ],
-      "bprue_conversion_disabled": false
+      "bprue_conversion_disabled": false,
+      "candidate": false
     },
     {
       "class": "Sniper",
@@ -302,7 +324,8 @@
       "bprue_conversions": [
         "A762NATO"
       ],
-      "bprue_conversion_disabled": false
+      "bprue_conversion_disabled": false,
+      "candidate": false
     },
     {
       "class": "Sniper",
@@ -315,7 +338,8 @@
       "bprue_conversions": [
         "A762Sniper"
       ],
-      "bprue_conversion_disabled": false
+      "bprue_conversion_disabled": false,
+      "candidate": false
     }
   ],
   "vanilla_conversion_upgrades": {
@@ -440,6 +464,331 @@
       "line": 10972,
       "targets": [
         "A045"
+      ]
+    }
+  },
+  "caliber_support": {
+    "A919": {
+      "change_caliber_effects": [
+        "ChangeCaliber919Effect"
+      ],
+      "ammo": [
+        {
+          "sid": "A919D",
+          "ammo_type": "EAmmoType::Default",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 130
+        },
+        {
+          "sid": "A919A",
+          "ammo_type": "EAmmoType::ArmorPiercing",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 150
+        }
+      ]
+    },
+    "A556": {
+      "change_caliber_effects": [
+        "ChangeCaliberTemplate",
+        "ChangeCaliber556Effect"
+      ],
+      "ammo": [
+        {
+          "sid": "A556D",
+          "ammo_type": "EAmmoType::Default",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 277
+        },
+        {
+          "sid": "A556A",
+          "ammo_type": "EAmmoType::ArmorPiercing",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 297
+        },
+        {
+          "sid": "A556S",
+          "ammo_type": "EAmmoType::Supersonic",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 309
+        },
+        {
+          "sid": "A556E",
+          "ammo_type": "EAmmoType::Expanding",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 319
+        }
+      ]
+    },
+    "A918": {
+      "change_caliber_effects": [
+        "ChangeCaliber918Effect"
+      ],
+      "ammo": [
+        {
+          "sid": "A918D",
+          "ammo_type": "EAmmoType::Default",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 33
+        },
+        {
+          "sid": "A918A",
+          "ammo_type": "EAmmoType::ArmorPiercing",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 53
+        }
+      ]
+    },
+    "A045": {
+      "change_caliber_effects": [
+        "ChangeCaliber045Effect"
+      ],
+      "ammo": [
+        {
+          "sid": "A045D",
+          "ammo_type": "EAmmoType::Default",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 64
+        },
+        {
+          "sid": "A045A",
+          "ammo_type": "EAmmoType::ArmorPiercing",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 84
+        },
+        {
+          "sid": "A045E",
+          "ammo_type": "EAmmoType::Expanding",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 96
+        }
+      ]
+    },
+    "A012": {
+      "change_caliber_effects": [
+        "ChangeCaliber012Effect"
+      ],
+      "ammo": [
+        {
+          "sid": "A012D",
+          "ammo_type": "EAmmoType::Default",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 405
+        },
+        {
+          "sid": "A012A",
+          "ammo_type": "EAmmoType::ArmorPiercing",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 433
+        },
+        {
+          "sid": "A012E",
+          "ammo_type": "EAmmoType::Expanding",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 453
+        }
+      ]
+    },
+    "A545": {
+      "change_caliber_effects": [
+        "ChangeCaliber545Effect"
+      ],
+      "ammo": [
+        {
+          "sid": "A545D",
+          "ammo_type": "EAmmoType::Default",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 162
+        },
+        {
+          "sid": "A545A",
+          "ammo_type": "EAmmoType::ArmorPiercing",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 182
+        },
+        {
+          "sid": "A545E",
+          "ammo_type": "EAmmoType::Expanding",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 194
+        }
+      ]
+    },
+    "A762Sniper": {
+      "change_caliber_effects": [
+        "ChangeCaliber762Effect"
+      ],
+      "ammo": [
+        {
+          "sid": "A762SniperD",
+          "ammo_type": "EAmmoType::Default",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 347
+        },
+        {
+          "sid": "A762SniperA",
+          "ammo_type": "EAmmoType::ArmorPiercing",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 367
+        },
+        {
+          "sid": "A762SniperS",
+          "ammo_type": "EAmmoType::Supersonic",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 387
+        }
+      ]
+    },
+    "AVOG": {
+      "change_caliber_effects": [],
+      "ammo": [
+        {
+          "sid": "AVOG",
+          "ammo_type": "EAmmoType::Default",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 108
+        }
+      ]
+    },
+    "AHEDP": {
+      "change_caliber_effects": [],
+      "ammo": [
+        {
+          "sid": "AHEDP",
+          "ammo_type": "EAmmoType::Default",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 206
+        }
+      ]
+    },
+    "A939": {
+      "change_caliber_effects": [],
+      "ammo": [
+        {
+          "sid": "A939D",
+          "ammo_type": "EAmmoType::Default",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 223
+        },
+        {
+          "sid": "A939A",
+          "ammo_type": "EAmmoType::ArmorPiercing",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 243
+        },
+        {
+          "sid": "A939S",
+          "ammo_type": "EAmmoType::Supersonic",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 255
+        },
+        {
+          "sid": "A939E",
+          "ammo_type": "EAmmoType::Expanding",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 265
+        }
+      ]
+    },
+    "APG7V": {
+      "change_caliber_effects": [],
+      "ammo": [
+        {
+          "sid": "APG7V",
+          "ammo_type": "EAmmoType::Default",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 331
+        }
+      ]
+    },
+    "AGA": {
+      "change_caliber_effects": [],
+      "ammo": [
+        {
+          "sid": "AGA",
+          "ammo_type": "EAmmoType::Default",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 473
+        }
+      ]
+    },
+    "A762": {
+      "change_caliber_effects": [],
+      "ammo": [
+        {
+          "sid": "A762D",
+          "ammo_type": "EAmmoType::Default",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 489
+        },
+        {
+          "sid": "A762A",
+          "ammo_type": "EAmmoType::ArmorPiercing",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 504
+        },
+        {
+          "sid": "A762E",
+          "ammo_type": "EAmmoType::Expanding",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 516
+        }
+      ]
+    },
+    "A762NATO": {
+      "change_caliber_effects": [],
+      "ammo": [
+        {
+          "sid": "A762NATOD",
+          "ammo_type": "EAmmoType::Default",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 528
+        },
+        {
+          "sid": "A762NATOA",
+          "ammo_type": "EAmmoType::ArmorPiercing",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 547
+        },
+        {
+          "sid": "A762NATOS",
+          "ammo_type": "EAmmoType::Supersonic",
+          "projectile_sid": null,
+          "source": "Python\\VanillaReference\\AmmoPrototypes.cfg",
+          "line": 565
+        }
       ]
     }
   }
