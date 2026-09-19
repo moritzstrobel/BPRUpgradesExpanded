@@ -1,0 +1,446 @@
+{
+  "summary": {
+    "vanilla_change_caliber_effects": 8,
+    "vanilla_conversion_upgrades": 8,
+    "tracked_weapon_families": 23,
+    "vanilla_general_setups_with_upgrades": 192
+  },
+  "weapons": [
+    {
+      "class": "AR",
+      "weapon": "AK74",
+      "weapon_sid": "GunAK74_ST",
+      "general_setup_sid": "GunAK74_ST",
+      "base_caliber": "A545",
+      "vanilla_conversions": [],
+      "vanilla_upgrade_sids": [],
+      "bprue_conversions": [
+        "A762Sniper",
+        "A762"
+      ],
+      "bprue_conversion_disabled": false
+    },
+    {
+      "class": "AR",
+      "weapon": "Fora",
+      "weapon_sid": "GunFora_ST",
+      "general_setup_sid": "GunFora_ST",
+      "base_caliber": "A545",
+      "vanilla_conversions": [
+        "A556"
+      ],
+      "vanilla_upgrade_sids": [
+        "GunFora_Upgrade_Body_2_1"
+      ],
+      "bprue_conversions": [],
+      "bprue_conversion_disabled": true
+    },
+    {
+      "class": "AR",
+      "weapon": "G37",
+      "weapon_sid": "GunG37_ST",
+      "general_setup_sid": "GunG37_ST",
+      "base_caliber": "A556",
+      "vanilla_conversions": [],
+      "vanilla_upgrade_sids": [],
+      "bprue_conversions": [
+        "A762NATO"
+      ],
+      "bprue_conversion_disabled": false
+    },
+    {
+      "class": "AR",
+      "weapon": "M16",
+      "weapon_sid": "GunM16_ST",
+      "general_setup_sid": "GunM16_ST",
+      "base_caliber": "A556",
+      "vanilla_conversions": [],
+      "vanilla_upgrade_sids": [],
+      "bprue_conversions": [
+        "A762NATO"
+      ],
+      "bprue_conversion_disabled": false
+    },
+    {
+      "class": "AR",
+      "weapon": "Kharod",
+      "weapon_sid": "GunKharod_ST",
+      "general_setup_sid": "GunKharod_ST",
+      "base_caliber": "A556",
+      "vanilla_conversions": [
+        "A545"
+      ],
+      "vanilla_upgrade_sids": [
+        "GunKharod_Upgrade_Body_1"
+      ],
+      "bprue_conversions": [],
+      "bprue_conversion_disabled": true
+    },
+    {
+      "class": "AR",
+      "weapon": "Arev",
+      "weapon_sid": "GunArev_ST",
+      "general_setup_sid": "GunArev_ST_GS",
+      "base_caliber": "A556",
+      "vanilla_conversions": [],
+      "vanilla_upgrade_sids": [],
+      "bprue_conversions": [
+        "A762NATO"
+      ],
+      "bprue_conversion_disabled": false
+    },
+    {
+      "class": "AR",
+      "weapon": "Dnipro",
+      "weapon_sid": "GunDnipro_ST",
+      "general_setup_sid": "GunDnipro_ST",
+      "base_caliber": "A545",
+      "vanilla_conversions": [
+        "A762Sniper"
+      ],
+      "vanilla_upgrade_sids": [
+        "GunDnipro_Upgrade_Body_2"
+      ],
+      "bprue_conversions": [],
+      "bprue_conversion_disabled": true
+    },
+    {
+      "class": "AR",
+      "weapon": "Gvintar",
+      "weapon_sid": "GunGvintar_ST",
+      "general_setup_sid": "GunGvintar_ST",
+      "base_caliber": "A939",
+      "vanilla_conversions": [],
+      "vanilla_upgrade_sids": [],
+      "bprue_conversions": [],
+      "bprue_conversion_disabled": false
+    },
+    {
+      "class": "AR",
+      "weapon": "Grim",
+      "weapon_sid": "GunGrim_ST",
+      "general_setup_sid": "GunGrim_ST",
+      "base_caliber": "A939",
+      "vanilla_conversions": [],
+      "vanilla_upgrade_sids": [],
+      "bprue_conversions": [],
+      "bprue_conversion_disabled": false
+    },
+    {
+      "class": "AR",
+      "weapon": "Lavina",
+      "weapon_sid": "GunLavina_ST",
+      "general_setup_sid": "GunLavina_ST",
+      "base_caliber": "A939",
+      "vanilla_conversions": [],
+      "vanilla_upgrade_sids": [],
+      "bprue_conversions": [],
+      "bprue_conversion_disabled": false
+    },
+    {
+      "class": "SMG",
+      "weapon": "Viper",
+      "weapon_sid": "GunViper_PP",
+      "general_setup_sid": "GunViper_PP",
+      "base_caliber": "A919",
+      "vanilla_conversions": [
+        "A045"
+      ],
+      "vanilla_upgrade_sids": [
+        "GunViper_Upgrade_Body_3_1"
+      ],
+      "bprue_conversions": [],
+      "bprue_conversion_disabled": true
+    },
+    {
+      "class": "SMG",
+      "weapon": "Bucket",
+      "weapon_sid": "GunBucket_PP",
+      "general_setup_sid": "GunBucket_PP",
+      "base_caliber": "A918",
+      "vanilla_conversions": [],
+      "vanilla_upgrade_sids": [],
+      "bprue_conversions": [
+        "A919",
+        "A045"
+      ],
+      "bprue_conversion_disabled": false
+    },
+    {
+      "class": "SMG",
+      "weapon": "Integral",
+      "weapon_sid": "GunIntegral_PP",
+      "general_setup_sid": "GunIntegral_PP",
+      "base_caliber": "A919",
+      "vanilla_conversions": [
+        "A045"
+      ],
+      "vanilla_upgrade_sids": [
+        "GunIntegral_Upgrade_Body_3"
+      ],
+      "bprue_conversions": [],
+      "bprue_conversion_disabled": true
+    },
+    {
+      "class": "SMG",
+      "weapon": "Zubr",
+      "weapon_sid": "GunZubr_PP",
+      "general_setup_sid": "GunZubr_PP",
+      "base_caliber": "A919",
+      "vanilla_conversions": [],
+      "vanilla_upgrade_sids": [],
+      "bprue_conversions": [
+        "A918",
+        "A045"
+      ],
+      "bprue_conversion_disabled": false
+    },
+    {
+      "class": "SMG",
+      "weapon": "Fora230",
+      "weapon_sid": "GunFora230_PP",
+      "general_setup_sid": "GunFora230_PP_GS",
+      "base_caliber": "A919",
+      "vanilla_conversions": [
+        "A045",
+        "A918"
+      ],
+      "vanilla_upgrade_sids": [
+        "GunFora230_Upgrade_Body_2_1",
+        "GunFora230_Upgrade_Body_2_2"
+      ],
+      "bprue_conversions": [],
+      "bprue_conversion_disabled": true
+    },
+    {
+      "class": "SMG",
+      "weapon": "M10",
+      "weapon_sid": null,
+      "general_setup_sid": "GunM10_HG",
+      "base_caliber": "A045",
+      "vanilla_conversions": [],
+      "vanilla_upgrade_sids": [],
+      "bprue_conversions": [
+        "A919",
+        "A918"
+      ],
+      "bprue_conversion_disabled": false
+    },
+    {
+      "class": "Sniper",
+      "weapon": "SVDM",
+      "weapon_sid": "GunSVDM_SP",
+      "general_setup_sid": "GunSVDM_SP",
+      "base_caliber": "A762Sniper",
+      "vanilla_conversions": [],
+      "vanilla_upgrade_sids": [],
+      "bprue_conversions": [
+        "A762NATO"
+      ],
+      "bprue_conversion_disabled": false
+    },
+    {
+      "class": "Sniper",
+      "weapon": "SVU",
+      "weapon_sid": "GunSVU_SP",
+      "general_setup_sid": "GunSVU_SP",
+      "base_caliber": "A762Sniper",
+      "vanilla_conversions": [],
+      "vanilla_upgrade_sids": [],
+      "bprue_conversions": [
+        "A762NATO"
+      ],
+      "bprue_conversion_disabled": false
+    },
+    {
+      "class": "Sniper",
+      "weapon": "Mark",
+      "weapon_sid": "GunMark_SP",
+      "general_setup_sid": "GunMark_SP",
+      "base_caliber": "A762NATO",
+      "vanilla_conversions": [],
+      "vanilla_upgrade_sids": [],
+      "bprue_conversions": [
+        "A762Sniper"
+      ],
+      "bprue_conversion_disabled": false
+    },
+    {
+      "class": "Sniper",
+      "weapon": "M701",
+      "weapon_sid": "GunM701_SP",
+      "general_setup_sid": "GunM701_SP",
+      "base_caliber": "A762NATO",
+      "vanilla_conversions": [],
+      "vanilla_upgrade_sids": [],
+      "bprue_conversions": [
+        "A762Sniper"
+      ],
+      "bprue_conversion_disabled": false
+    },
+    {
+      "class": "Sniper",
+      "weapon": "SIC",
+      "weapon_sid": "GunSKP_DMR",
+      "general_setup_sid": "GunSKP_DMR_GS",
+      "base_caliber": "A762Sniper",
+      "vanilla_conversions": [],
+      "vanilla_upgrade_sids": [],
+      "bprue_conversions": [
+        "A762NATO"
+      ],
+      "bprue_conversion_disabled": false
+    },
+    {
+      "class": "Sniper",
+      "weapon": "ThreeLine",
+      "weapon_sid": "GunThreeLine_SP",
+      "general_setup_sid": "GunThreeLine_SP_GS",
+      "base_caliber": "A762Sniper",
+      "vanilla_conversions": [],
+      "vanilla_upgrade_sids": [],
+      "bprue_conversions": [
+        "A762NATO"
+      ],
+      "bprue_conversion_disabled": false
+    },
+    {
+      "class": "Sniper",
+      "weapon": "GP3A",
+      "weapon_sid": "GunGP3A_DMR",
+      "general_setup_sid": "GunGP3A_DMR_GS",
+      "base_caliber": "A762NATO",
+      "vanilla_conversions": [],
+      "vanilla_upgrade_sids": [],
+      "bprue_conversions": [
+        "A762Sniper"
+      ],
+      "bprue_conversion_disabled": false
+    }
+  ],
+  "vanilla_conversion_upgrades": {
+    "GunViper_Upgrade_Body_3_1": {
+      "effects": [
+        "ChangeCaliber045Effect",
+        "ChangeAmmoTypesNo919Effect",
+        "ChangeAmmoTypes045Effect",
+        "DamagePos20Effect",
+        "RecoilNeg20Effect"
+      ],
+      "source": "Python\\VanillaReference\\UpgradePrototypes.cfg",
+      "line": 3549,
+      "targets": [
+        "A045"
+      ]
+    },
+    "GunIntegral_Upgrade_Body_3": {
+      "effects": [
+        "ChangeCaliber045Effect",
+        "ChangeAmmoTypesNo919Effect",
+        "ChangeAmmoTypes045Effect",
+        "DamagePos20Effect",
+        "RecoilNeg20Effect"
+      ],
+      "source": "Python\\VanillaReference\\UpgradePrototypes.cfg",
+      "line": 4107,
+      "targets": [
+        "A045"
+      ]
+    },
+    "GunFora_Upgrade_Body_2_1": {
+      "effects": [
+        "ChangeCaliber556Effect",
+        "ChangeAmmoTypesNo545Effect",
+        "ChangeAmmoTypes556Effect",
+        "RecoilPos5Effect",
+        "FireDistancePos10Effect",
+        "MaxDispersionPos15Effect",
+        "DamageNeg10Effect"
+      ],
+      "source": "Python\\VanillaReference\\UpgradePrototypes.cfg",
+      "line": 4875,
+      "targets": [
+        "A556"
+      ]
+    },
+    "GunRhino_Upgrade_Body_1_1": {
+      "effects": [
+        "ChangeCaliber012Effect",
+        "ChangeAmmoTypesNo939Effect",
+        "ChangeAmmoTypesAddBuckEffect",
+        "DamagePos15Effect",
+        "DispersionNeg55Effect",
+        "FireDistanceNeg55Effect",
+        "DamageFalloffNeg70Effect",
+        "ChangeWeaponPatternBullShotgunEffect",
+        "DispersionAimModifierNeg70Effect",
+        "DispersionOffsetAimModifierNeg70Effect",
+        "DispersionNeg80Effect"
+      ],
+      "source": "Python\\VanillaReference\\UpgradePrototypes.cfg",
+      "line": 7832,
+      "targets": [
+        "A012"
+      ]
+    },
+    "GunKharod_Upgrade_Body_1": {
+      "effects": [
+        "ChangeCaliber545Effect",
+        "ChangeAmmoTypesNo556Effect",
+        "ChangeAmmoTypes545Effect",
+        "DurabilityPerShotPos20Effect",
+        "MaxDispersionNeg10Effect"
+      ],
+      "source": "Python\\VanillaReference\\UpgradePrototypes.cfg",
+      "line": 9343,
+      "targets": [
+        "A545"
+      ]
+    },
+    "GunDnipro_Upgrade_Body_2": {
+      "effects": [
+        "ChangeCaliber762Effect",
+        "ChangeAmmoTypesNo545Effect",
+        "ChangeAmmoTypes762Effect",
+        "DamagePos28Effect",
+        "RecoilNeg35Effect",
+        "DurabilityPerShotNeg5Effect"
+      ],
+      "source": "Python\\VanillaReference\\UpgradePrototypes.cfg",
+      "line": 9716,
+      "targets": [
+        "A762Sniper"
+      ]
+    },
+    "GunFora230_Upgrade_Body_2_1": {
+      "effects": [
+        "ChangeCaliber918Effect",
+        "ChangeAmmoTypesNo919Effect",
+        "ChangeAmmoTypes918Effect",
+        "DurabilityPerShotPos10Effect",
+        "RecoilPos5Effect"
+      ],
+      "source": "Python\\VanillaReference\\UpgradePrototypes.cfg",
+      "line": 10945,
+      "targets": [
+        "A918"
+      ]
+    },
+    "GunFora230_Upgrade_Body_2_2": {
+      "effects": [
+        "ChangeCaliber045Effect",
+        "ChangeAmmoTypesNo919Effect",
+        "ChangeAmmoTypes045Effect",
+        "DurabilityPerShotNeg10Effect",
+        "RecoilNeg20Effect",
+        "ArmorPiercingPos30Effect",
+        "CoverPiercingPos30Effect"
+      ],
+      "source": "Python\\VanillaReference\\UpgradePrototypes.cfg",
+      "line": 10972,
+      "targets": [
+        "A045"
+      ]
+    }
+  }
+}
