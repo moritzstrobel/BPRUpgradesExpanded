@@ -25,8 +25,8 @@ AMMO_SPECIALIZATIONS = {
         "hint_sid": "sid_bprue_ammo_762x39_ap_only_description",
         "cost": 1800,
         "effects": (
-            "BPRUE_ChangeAmmoTypesNo762x39DefaultEffect",
-            "BPRUE_ChangeAmmoTypesNo762x39ExpandingEffect",
+            "BPRUE_ChangeAmmoTypesNo762x39Effect",
+            "BPRUE_ChangeAmmoTypes762x39APOnlyEffect",
         ),
     },
 }
@@ -291,11 +291,19 @@ BPRUE_ChangeAmmoTypes762x39Effect : struct.begin {refurl=@BaseGame/EffectPrototy
    ShowUpgradeEffect = false
 struct.end
 
-BPRUE_ChangeAmmoTypesNo762x39DefaultEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}
-   SID = BPRUE_ChangeAmmoTypesNo762x39DefaultEffect
+BPRUE_ChangeAmmoTypesNo762x39Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}
+   SID = BPRUE_ChangeAmmoTypesNo762x39Effect
    AmmoTypeProjectiles : struct.begin
       [0] : struct.begin
          AmmoType = EAmmoType::Default
+         ProjectilePrototypeSID = P762
+      struct.end
+      [1] : struct.begin
+         AmmoType = EAmmoType::ArmorPiercing
+         ProjectilePrototypeSID = P762
+      struct.end
+      [2] : struct.begin
+         AmmoType = EAmmoType::Expanding
          ProjectilePrototypeSID = P762
       struct.end
    struct.end
@@ -306,17 +314,17 @@ BPRUE_ChangeAmmoTypesNo762x39DefaultEffect : struct.begin {refurl=@BaseGame/Effe
    ShowUpgradeEffect = false
 struct.end
 
-BPRUE_ChangeAmmoTypesNo762x39ExpandingEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}
-   SID = BPRUE_ChangeAmmoTypesNo762x39ExpandingEffect
+BPRUE_ChangeAmmoTypes762x39APOnlyEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}
+   SID = BPRUE_ChangeAmmoTypes762x39APOnlyEffect
    AmmoTypeProjectiles : struct.begin
       [0] : struct.begin
-         AmmoType = EAmmoType::Expanding
+         AmmoType = EAmmoType::ArmorPiercing
          ProjectilePrototypeSID = P762
       struct.end
    struct.end
    ValueMin = 100%
    ValueMax = 100%
-   Positive = EBeneficial::Negative
+   Positive = EBeneficial::Positive
    ShowUpgradeEffectValue = false
    ShowUpgradeEffect = false
 struct.end
