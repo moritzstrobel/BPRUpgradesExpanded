@@ -165,7 +165,7 @@ def main():
     printable = []
     for row in report_rows:
         printable.append((
-            row["class"], row["weapon"], row["base"],
+            row["class"], row["weapon"], row["base_caliber"],
             ", ".join(row["vanilla_conversions"]) or "-",
             ", ".join(row["bprue_conversions"]) or "-",
             "yes" if row["bprue_conversion_disabled"] else "-",
