@@ -11,7 +11,7 @@ CONTENT_ROOT = PYTHON_ROOT.parent
 CONFIG_PATH = SCRIPT_DIR / "assault_rifles_upgrades.json"
 EFFECT_OUTPUT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_EffectPrototypes.cfg"
 MODULE_TEMPLATE_SID = "BPRUE_ModuleTemplate"
-AMMO_ICON_ROOT = "/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Ammo"
+AMMO_ICON_ROOT = "/BPRUpgradesExpanded/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Ammo"
 
 
 def _ammo_icon(name: str) -> str:
