@@ -518,6 +518,34 @@
         "English": "Converts the weapon to 9x18 mm armor-piercing ammunition only. Improves armor penetration and weapon control, but further reduces damage and provides less effective range than the standard 9x18 mm conversion. This specialization is permanent.",
         "Russian": "Переводит оружие исключительно на бронебойные боеприпасы 9x18 мм. Повышает бронепробиваемость и управляемость оружия, но дополнительно снижает урон и дает меньшую эффективную дальность по сравнению со стандартной конверсией на 9x18 мм. Эта специализация является постоянной."
       }
+    },
+    {
+      "sid": "sid_bprue_smg_caliber_a045_ap_name",
+      "languages": {
+        "English": ".45 ACP AP Conversion",
+        "Russian": "Перевод на .45 ACP БП"
+      }
+    },
+    {
+      "sid": "sid_bprue_smg_caliber_a045_ap_description",
+      "languages": {
+        "English": "Converts the weapon to .45 ACP armor-piercing ammunition only. Improves armor penetration while retaining increased damage, at the cost of heavier recoil and reduced effective range. This specialization is permanent.",
+        "Russian": "Переводит оружие исключительно на бронебойные боеприпасы .45 ACP. Повышает бронепробиваемость и сохраняет повышенный урон ценой более сильной отдачи и меньшей эффективной дальности. Эта специализация является постоянной."
+      }
+    },
+    {
+      "sid": "sid_bprue_smg_caliber_a045_expanding_name",
+      "languages": {
+        "English": ".45 ACP Expanding Conversion",
+        "Russian": "Перевод на экспансивный .45 ACP"
+      }
+    },
+    {
+      "sid": "sid_bprue_smg_caliber_a045_expanding_description",
+      "languages": {
+        "English": "Converts the weapon to .45 ACP expanding ammunition only. Maximizes damage at the cost of heavier recoil and substantially reduced effective range. This specialization is permanent.",
+        "Russian": "Переводит оружие исключительно на экспансивные боеприпасы .45 ACP. Максимизирует урон ценой более сильной отдачи и значительно меньшей эффективной дальности. Эта специализация является постоянной."
+      }
     }
   ]
 }
