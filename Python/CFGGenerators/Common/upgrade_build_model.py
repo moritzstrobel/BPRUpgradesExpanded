@@ -20,6 +20,7 @@ class UpgradeDefinition:
     cost: int
     effects: tuple[str, ...] = ()
     blocking_sids: tuple[str, ...] = ()
+    required_upgrade_sids: tuple[str, ...] = ()
     vertical_position: str | None = None
     technician: bool = True
     template_sid: str | None = None
@@ -91,6 +92,12 @@ class UpgradeBuildModel:
 
         known = set(by_sid)
         for upgrade in self.upgrades:
+            unknown_requirements = [sid for sid in upgrade.required_upgrade_sids if sid not in known]
+            if unknown_requirements:
+                errors.append(
+                    f"{upgrade.sid}: RequiredUpgradePrototypeSIDs not generated: "
+                    + ", ".join(unknown_requirements)
+                )
             unknown_blocks = [sid for sid in upgrade.blocking_sids if sid not in known]
             if unknown_blocks:
                 errors.append(
