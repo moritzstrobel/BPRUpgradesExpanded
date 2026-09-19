@@ -11,6 +11,13 @@ CONTENT_ROOT = PYTHON_ROOT.parent
 CONFIG_PATH = SCRIPT_DIR / "assault_rifles_upgrades.json"
 EFFECT_OUTPUT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_EffectPrototypes.cfg"
 MODULE_TEMPLATE_SID = "BPRUE_ModuleTemplate"
+AMMO_ICON_ROOT = "/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Ammo"
+
+
+def _ammo_icon(name: str) -> str:
+    asset = f"T_Module_Ammo_{name}"
+    return f"Texture2D'{AMMO_ICON_ROOT}/{asset}.{asset}'"
+
 
 POWER_CALIBER = {
     "A545": ("A762Sniper", "762", "sid_bprue_caliber_762_eastern_name", "sid_bprue_caliber_762_eastern_description", 2800),
@@ -69,13 +76,6 @@ CALIBER_EFFECTS = {
 }
 DEFAULT_ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_Recoil.T_PDA_Upgrades_Icon_Recoil'"
 CALIBER_ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_CaliberChange.T_PDA_Upgrades_Icon_CaliberChange'"
-AMMO_ICON_ROOT = "/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Ammo"
-
-
-def _ammo_icon(name: str) -> str:
-    asset = f"T_Module_Ammo_{name}"
-    return f"Texture2D'{AMMO_ICON_ROOT}/{asset}.{asset}'"
-
 MODULE_SPECS = {
     ("fire_control", "burst"): ("FireControl", "Burst", "Body", 3000, "sid_bprue_fire_control_burst_name", "sid_bprue_fire_control_burst_description", ("BPRUE_AddBurstFireModeEffect", "RecoilPos5Effect", "BPRUE_DurabilityPerShotNeg10Effect")),
     ("fire_control", "precision"): ("FireControl", "Precision", "Body", 3600, "sid_bprue_fire_control_precision_name", "sid_bprue_fire_control_precision_description", ("BPRUE_SemiAutoOnlyEffect", "BPRUE_DamagePos10Effect", "ArmorPiercingPos15Effect", "BPRUE_DurabilityPerShotNeg20Effect")),
