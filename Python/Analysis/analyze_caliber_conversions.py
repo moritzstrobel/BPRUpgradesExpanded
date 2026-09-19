@@ -157,6 +157,38 @@ def load_ammo_catalog():
     return dict(catalog)
 
 
+AMMO_VARIANT_ORDER = ("Default", "ArmorPiercing", "Expanding", "Supersonic")
+
+
+def ammo_variant_matrix(ammo_catalog):
+    """Summarize the actually defined Vanilla ammo types for every caliber."""
+    matrix = {}
+    for caliber, ammo in sorted(ammo_catalog.items()):
+        variants = defaultdict(list)
+        for item in ammo:
+            if item["sid"] == "TemplateAmmo":
+                continue
+            ammo_type = item["ammo_type"] or "Unknown"
+            variants[ammo_type].append(item["sid"])
+        ordered = {kind: sorted(variants.pop(kind, [])) for kind in AMMO_VARIANT_ORDER}
+        ordered.update({kind: sorted(sids) for kind, sids in sorted(variants.items())})
+        matrix[caliber] = ordered
+    return matrix
+
+
+def print_ammo_variant_matrix(matrix):
+    print("\\nVanilla ammo variant matrix:")
+    headers = ("Caliber", *AMMO_VARIANT_ORDER, "Variants")
+    rows = []
+    for caliber, variants in matrix.items():
+        rows.append((caliber, *(" / ".join(variants.get(kind, [])) or "-" for kind in AMMO_VARIANT_ORDER), str(sum(bool(variants.get(kind)) for kind in AMMO_VARIANT_ORDER))))
+    widths = [max(len(headers[i]), *(len(row[i]) for row in rows)) for i in range(len(headers))]
+    print("  ".join(headers[i].ljust(widths[i]) for i in range(len(headers))))
+    print("  ".join("-" * width for width in widths))
+    for row in rows:
+        print("  ".join(row[i].ljust(widths[i]) for i in range(len(headers))))
+
+
 def caliber_support(effects, ammo_catalog):
     by_caliber = defaultdict(lambda: {"change_caliber_effects": [], "ammo": []})
     for sid, data in effects.items():
@@ -208,6 +240,7 @@ def main():
     conversion_upgrades, by_setup = vanilla_conversions(effects, upgrades, setups)
     ammo_catalog = load_ammo_catalog()
     support = caliber_support(effects, ammo_catalog)
+    ammo_matrix = ammo_variant_matrix(ammo_catalog)
 
     report_rows = []
     for weapon_class, name, weapon_sid, setup_sid, base, bprue, disabled in bprue_rows():
@@ -234,7 +267,7 @@ def main():
             and not row["bprue_conversion_disabled"]
         )
 
-    headers = ("Class", "Weapon", "Base", "Vanilla", "BPRUE", "Candidate")
+    print_ammo_variant_matrix(ammo_matrix)\n\n    headers = ("Class", "Weapon", "Base", "Vanilla", "BPRUE", "Candidate")
     printable = []
     for row in report_rows:
         printable.append((
@@ -261,8 +294,7 @@ def main():
             },
             "weapons": report_rows,
             "vanilla_conversion_upgrades": conversion_upgrades,
-            "caliber_support": support,
-        }
+            "caliber_support": support,\n            "ammo_variant_matrix": ammo_matrix,\n        }
         args.json.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
         print(f"\nWrote {args.json.relative_to(REPO_ROOT)}")
 
