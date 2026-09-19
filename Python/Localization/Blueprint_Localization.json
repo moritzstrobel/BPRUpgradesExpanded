@@ -546,6 +546,62 @@
         "English": "Converts the weapon to .45 ACP expanding ammunition only. Maximizes damage at the cost of heavier recoil and substantially reduced effective range. This specialization is permanent.",
         "Russian": "Переводит оружие исключительно на экспансивные боеприпасы .45 ACP. Максимизирует урон ценой более сильной отдачи и значительно меньшей эффективной дальности. Эта специализация является постоянной."
       }
+    },
+    {
+      "sid": "sid_bprue_sniper_caliber_762nato_ap_name",
+      "languages": {
+        "English": "7.62x51 mm NATO AP Conversion",
+        "Russian": "Перевод на 7,62x51 мм НАТО БП"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_caliber_762nato_ap_description",
+      "languages": {
+        "English": "Converts the weapon to 7.62x51 mm NATO armor-piercing ammunition only. Improves armor penetration and retains some recoil control at the cost of reduced damage. This specialization is permanent.",
+        "Russian": "Переводит оружие исключительно на бронебойные боеприпасы 7,62x51 мм НАТО. Повышает бронепробиваемость и сохраняет часть преимущества в контроле отдачи ценой снижения урона. Эта специализация является постоянной."
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_caliber_762nato_supersonic_name",
+      "languages": {
+        "English": "7.62x51 mm NATO Supersonic Conversion",
+        "Russian": "Перевод на сверхзвуковой 7,62x51 мм НАТО"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_caliber_762nato_supersonic_description",
+      "languages": {
+        "English": "Converts the weapon to 7.62x51 mm NATO supersonic ammunition only. Retains improved recoil control and provides a flatter, more effective trajectory at the cost of reduced damage. This specialization is permanent.",
+        "Russian": "Переводит оружие исключительно на сверхзвуковые боеприпасы 7,62x51 мм НАТО. Сохраняет улучшенный контроль отдачи и обеспечивает более настильную и эффективную траекторию ценой снижения урона. Эта специализация является постоянной."
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_caliber_762sniper_ap_name",
+      "languages": {
+        "English": "7.62x54 mm AP Conversion",
+        "Russian": "Перевод на 7,62x54 мм БП"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_caliber_762sniper_ap_description",
+      "languages": {
+        "English": "Converts the weapon to 7.62x54 mm armor-piercing ammunition only. Prioritizes armor penetration while retaining increased damage, at the cost of increased recoil and weapon wear. This specialization is permanent.",
+        "Russian": "Переводит оружие исключительно на бронебойные боеприпасы 7,62x54 мм. Повышает бронепробиваемость и сохраняет повышенный урон ценой большей отдачи и износа оружия. Эта специализация является постоянной."
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_caliber_762sniper_supersonic_name",
+      "languages": {
+        "English": "7.62x54 mm Supersonic Conversion",
+        "Russian": "Перевод на сверхзвуковой 7,62x54 мм"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_caliber_762sniper_supersonic_description",
+      "languages": {
+        "English": "Converts the weapon to 7.62x54 mm supersonic ammunition only. Provides a flatter, more effective trajectory while retaining increased damage, at the cost of increased recoil and weapon wear. This specialization is permanent.",
+        "Russian": "Переводит оружие исключительно на сверхзвуковые боеприпасы 7,62x54 мм. Обеспечивает более настильную и эффективную траекторию и сохраняет повышенный урон ценой большей отдачи и износа оружия. Эта специализация является постоянной."
+      }
     }
   ]
 }
