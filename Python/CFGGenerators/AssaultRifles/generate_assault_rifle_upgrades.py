@@ -69,6 +69,52 @@ A762_CONVERSION_VARIANTS = {
     },
 }
 
+A762SNIPER_CONVERSION_VARIANTS = {
+    "Default": {
+        "suffix": "762",
+        "text_sid": "sid_bprue_caliber_762_eastern_name",
+        "hint_sid": "sid_bprue_caliber_762_eastern_description",
+        "ammo_effect": "ChangeAmmoTypes762Effect",
+        "stat_effects": (
+            "BPRUE_DamagePos15Effect",
+            "BPRUE_ArmorPiercingPos15Effect",
+            "BPRUE_RecoilPenalty25Effect",
+            "BPRUE_DurabilityPerShotNeg20Effect",
+        ),
+        "cost": 2800,
+        "icon": _ammo_icon("762x54"),
+    },
+    "AP": {
+        "suffix": "762_AP",
+        "text_sid": "sid_bprue_caliber_762_eastern_ap_name",
+        "hint_sid": "sid_bprue_caliber_762_eastern_ap_description",
+        "ammo_effect": "BPRUE_ChangeAmmoTypes762SniperAPEffect",
+        "stat_effects": (
+            "BPRUE_DamagePos10Effect",
+            "BPRUE_ArmorPiercingPos25Effect",
+            "BPRUE_RecoilPenalty30Effect",
+            "BPRUE_DurabilityPerShotNeg20Effect",
+        ),
+        "cost": 2800,
+        "icon": _ammo_icon("762x54_ap"),
+    },
+    "Supersonic": {
+        "suffix": "762_Supersonic",
+        "text_sid": "sid_bprue_caliber_762_eastern_supersonic_name",
+        "hint_sid": "sid_bprue_caliber_762_eastern_supersonic_description",
+        "ammo_effect": "BPRUE_ChangeAmmoTypes762SniperSupersonicEffect",
+        "stat_effects": (
+            "BPRUE_DamagePos15Effect",
+            "BPRUE_ArmorPiercingPos10Effect",
+            "BPRUE_RecoilPenalty25Effect",
+            "BPRUE_DurabilityPerShotNeg20Effect",
+            "BPRUE_Shared_FlatnessPos15Effect",
+        ),
+        "cost": 2800,
+        "icon": _ammo_icon("762x54_ss"),
+    },
+}
+
 A762NATO_CONVERSION_VARIANTS = {
     "Default": {
         "suffix": "762NATO",
@@ -151,9 +197,10 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
         if power:
             caliber, suffix, text, hint, cost = power
             change, removes, add, stat_effects = CALIBER_EFFECTS[caliber]
-            if caliber == "A762NATO":
+            if caliber in ("A762Sniper", "A762NATO"):
+                variants = A762SNIPER_CONVERSION_VARIANTS if caliber == "A762Sniper" else A762NATO_CONVERSION_VARIANTS
                 for variant in ("Default", "AP", "Supersonic"):
-                    spec = A762NATO_CONVERSION_VARIANTS[variant]
+                    spec = variants[variant]
                     family_upgrades.append(_definition(
                         family,
                         "Caliber",
@@ -359,6 +406,16 @@ BPRUE_RecoilPenalty20Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cf
    ShowUpgradeEffect = true
 struct.end
 
+BPRUE_RecoilPenalty30Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=RecoilTemplate}
+   SID = BPRUE_RecoilPenalty30Effect
+   LocalizationSID = bprue_recoil
+   ValueMin = -30%
+   ValueMax = -30%
+   Positive = EBeneficial::Negative
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
 BPRUE_RecoilPenalty25Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=RecoilTemplate}
    SID = BPRUE_RecoilPenalty25Effect
    LocalizationSID = bprue_recoil
@@ -476,6 +533,30 @@ BPRUE_ChangeAmmoTypes762x39ExpandingEffect : struct.begin {refurl=@BaseGame/Effe
    ValueMin = 100%
    ValueMax = 100%
    Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = false
+   ShowUpgradeEffect = false
+struct.end
+
+BPRUE_ChangeAmmoTypes762SniperAPEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}
+   SID = BPRUE_ChangeAmmoTypes762SniperAPEffect
+   AmmoTypeProjectiles : struct.begin
+      [0] : struct.begin
+         AmmoType = EAmmoType::ArmorPiercing
+         ProjectilePrototypeSID = P762Sniper
+      struct.end
+   struct.end
+   ShowUpgradeEffectValue = false
+   ShowUpgradeEffect = false
+struct.end
+
+BPRUE_ChangeAmmoTypes762SniperSupersonicEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}
+   SID = BPRUE_ChangeAmmoTypes762SniperSupersonicEffect
+   AmmoTypeProjectiles : struct.begin
+      [0] : struct.begin
+         AmmoType = EAmmoType::Supersonic
+         ProjectilePrototypeSID = P762Sniper
+      struct.end
+   struct.end
    ShowUpgradeEffectValue = false
    ShowUpgradeEffect = false
 struct.end
