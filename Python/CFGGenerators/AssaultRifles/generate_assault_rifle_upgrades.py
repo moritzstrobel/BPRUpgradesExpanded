@@ -81,7 +81,7 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
             variant = specialization["variant"]
             spec = AMMO_SPECIALIZATIONS[(caliber, variant)]
             conversion_suffix = ADDITIONAL_CALIBER[caliber][0]
-            conversion_sid = f"{family['prototype_prefix']}_Upgrade_BPRUE_Caliber_{conversion_suffix}"
+            conversion_sid = f"{family['prototype_prefix']}_Upgrade_BPRUE_AdditionalCaliber_{conversion_suffix}"
             family_upgrades.append(UpgradeDefinition(
                 sid=f"{family['prototype_prefix']}_Upgrade_BPRUE_AmmoSpecialization_{variant}",
                 general_setup_sid=family["general_setup_sid"],
