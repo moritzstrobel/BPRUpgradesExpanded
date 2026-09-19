@@ -20,7 +20,7 @@ ACTION={'rapid':(4500,['BPRUE_FireIntervalNeg20Effect','BPRUE_Sniper_RecoilPenal
 MARKSMAN={'snap_shooter':(4100,['BPRUE_Sniper_AimingTimePos20Effect','AimingMovementPos10Effect','BPRUE_Sniper_RecoilPenalty10Effect']),'field_marksman':(4200,['AimingMovementPos15Effect','IdleSwayXPos15Effect','IdleSwayYPos15Effect','ShotRecoveryPos10Effect']),'benchrest':(4400,['BPRUE_Sniper_IdleSwayXPos30Effect','BPRUE_Sniper_IdleSwayYPos30Effect','RecoilPos15Effect','BPRUE_Sniper_AimingTimePenalty15Effect','BPRUE_Sniper_WeightPenalty10Effect'])}
 STOCK={'lightweight_stock':(3900,['AimingTimePos15Effect','AimingMovementPos10Effect','BPRUE_Sniper_RecoilPenalty10Effect']),'adjustable_stock':(4200,['IdleSwayXPos15Effect','IdleSwayYPos15Effect','AimingMovementPos10Effect','RecoilPos10Effect']),'precision_stock':(4500,['BPRUE_Sniper_IdleSwayXPos30Effect','BPRUE_Sniper_IdleSwayYPos30Effect','RecoilPos20Effect','ShotRecoveryPos20Effect','BPRUE_Sniper_AimingTimePenalty15Effect'])}
 GROUPS=(("Ballistics",BALLISTICS,"Barrel","Top"),("Action",ACTION,"Barrel","Down"),("Marksman",MARKSMAN,"Body","Down"),("Stock",STOCK,"Stock","Top"))
-AMMO_ICON_ROOT="/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Ammo"
+AMMO_ICON_ROOT="/BPRUpgradesExpanded/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Ammo"
 
 def _ammo_icon(name):
     asset=f"T_Module_Ammo_{name}"
