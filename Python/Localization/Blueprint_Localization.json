@@ -434,6 +434,34 @@
         "English": "Converts the weapon to 7.62x39 mm ammunition and supports standard, armor-piercing and expanding rounds. This specialization is permanent.",
         "Russian": "Переводит оружие на боеприпасы 7,62×39 мм с поддержкой стандартных, бронебойных и экспансивных патронов. Эта специализация является постоянной."
       }
+    },
+    {
+      "sid": "sid_bprue_caliber_762_nato_ap_name",
+      "languages": {
+        "English": "7.62x51 mm NATO AP Conversion",
+        "Russian": "Перевод на 7,62x51 мм НАТО БП"
+      }
+    },
+    {
+      "sid": "sid_bprue_caliber_762_nato_ap_description",
+      "languages": {
+        "English": "Converts the weapon to 7.62x51 mm NATO armor-piercing ammunition only. Prioritizes armor penetration at the cost of increased recoil and weapon wear. This specialization is permanent.",
+        "Russian": "Переводит оружие исключительно на бронебойные боеприпасы 7,62x51 мм НАТО. Повышает бронепробиваемость ценой большей отдачи и износа оружия. Эта специализация является постоянной."
+      }
+    },
+    {
+      "sid": "sid_bprue_caliber_762_nato_supersonic_name",
+      "languages": {
+        "English": "7.62x51 mm NATO Supersonic Conversion",
+        "Russian": "Перевод на сверхзвуковой 7,62x51 мм НАТО"
+      }
+    },
+    {
+      "sid": "sid_bprue_caliber_762_nato_supersonic_description",
+      "languages": {
+        "English": "Converts the weapon to 7.62x51 mm NATO supersonic ammunition only. Provides a flatter, more effective trajectory while retaining increased damage, recoil and weapon wear. This specialization is permanent.",
+        "Russian": "Переводит оружие исключительно на сверхзвуковые боеприпасы 7,62x51 мм НАТО. Обеспечивает более настильную и эффективную траекторию, сохраняя повышенные урон, отдачу и износ оружия. Эта специализация является постоянной."
+      }
     }
   ]
 }
