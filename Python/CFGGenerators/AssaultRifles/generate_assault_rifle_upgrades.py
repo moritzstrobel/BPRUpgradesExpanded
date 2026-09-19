@@ -69,6 +69,52 @@ A762_CONVERSION_VARIANTS = {
     },
 }
 
+A762NATO_CONVERSION_VARIANTS = {
+    "Default": {
+        "suffix": "762NATO",
+        "text_sid": "sid_bprue_caliber_762_nato_name",
+        "hint_sid": "sid_bprue_caliber_762_nato_description",
+        "ammo_effect": "BPRUE_ChangeAmmoTypes762NATOEffect",
+        "stat_effects": (
+            "BPRUE_DamagePos10Effect",
+            "BPRUE_ArmorPiercingPos15Effect",
+            "BPRUE_RecoilPenalty20Effect",
+            "BPRUE_DurabilityPerShotNeg15Effect",
+        ),
+        "cost": 3200,
+        "icon": _ammo_icon("762x51"),
+    },
+    "AP": {
+        "suffix": "762NATO_AP",
+        "text_sid": "sid_bprue_caliber_762_nato_ap_name",
+        "hint_sid": "sid_bprue_caliber_762_nato_ap_description",
+        "ammo_effect": "BPRUE_ChangeAmmoTypes762NATOAPEffect",
+        "stat_effects": (
+            "BPRUE_DamagePos5Effect",
+            "BPRUE_ArmorPiercingPos25Effect",
+            "BPRUE_RecoilPenalty25Effect",
+            "BPRUE_DurabilityPerShotNeg15Effect",
+        ),
+        "cost": 3200,
+        "icon": _ammo_icon("762x51_ap"),
+    },
+    "Supersonic": {
+        "suffix": "762NATO_Supersonic",
+        "text_sid": "sid_bprue_caliber_762_nato_supersonic_name",
+        "hint_sid": "sid_bprue_caliber_762_nato_supersonic_description",
+        "ammo_effect": "BPRUE_ChangeAmmoTypes762NATOSupersonicEffect",
+        "stat_effects": (
+            "BPRUE_DamagePos10Effect",
+            "BPRUE_ArmorPiercingPos10Effect",
+            "BPRUE_RecoilPenalty20Effect",
+            "BPRUE_DurabilityPerShotNeg15Effect",
+            "BPRUE_Shared_FlatnessPos15Effect",
+        ),
+        "cost": 3200,
+        "icon": _ammo_icon("762x51_ss"),
+    },
+}
+
 CALIBER_EFFECTS = {
     "A762": ("BPRUE_ChangeCaliber762x39Effect", ("ChangeAmmoTypesNo545Effect", "ChangeAmmoTypesNo556Effect", "BPRUE_ChangeAmmoTypesNo762Effect", "BPRUE_ChangeAmmoTypesNo762NATOEffect", "ChangeAmmoTypesNo939Effect"), "BPRUE_ChangeAmmoTypes762x39Effect", ("BPRUE_DamagePos15Effect", "BPRUE_RecoilPenalty15Effect", "BPRUE_Shared_FlatnessPenalty10Effect")),
     "A762Sniper": ("ChangeCaliber762Effect", ("ChangeAmmoTypesNo545Effect", "ChangeAmmoTypesNo556Effect", "BPRUE_ChangeAmmoTypesNo762NATOEffect", "ChangeAmmoTypesNo939Effect"), "ChangeAmmoTypes762Effect", ("BPRUE_DamagePos15Effect", "BPRUE_ArmorPiercingPos15Effect", "BPRUE_RecoilPenalty25Effect", "BPRUE_DurabilityPerShotNeg20Effect")),
@@ -105,7 +151,22 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
         if power:
             caliber, suffix, text, hint, cost = power
             change, removes, add, stat_effects = CALIBER_EFFECTS[caliber]
-            family_upgrades.append(_definition(family, "Caliber", suffix, "Body", cost, text, hint, (change, *removes, add, *stat_effects), CALIBER_ICON))
+            if caliber == "A762NATO":
+                for variant in ("Default", "AP", "Supersonic"):
+                    spec = A762NATO_CONVERSION_VARIANTS[variant]
+                    family_upgrades.append(_definition(
+                        family,
+                        "Caliber",
+                        spec["suffix"],
+                        "Body",
+                        spec["cost"],
+                        spec["text_sid"],
+                        spec["hint_sid"],
+                        (change, *removes, spec["ammo_effect"], *spec["stat_effects"]),
+                        spec["icon"],
+                    ))
+            else:
+                family_upgrades.append(_definition(family, "Caliber", suffix, "Body", cost, text, hint, (change, *removes, add, *stat_effects), CALIBER_ICON))
         for caliber in family.get("additional_caliber_conversions", []):
             if caliber != "A762":
                 suffix, text, hint, cost = ADDITIONAL_CALIBER[caliber]
@@ -182,6 +243,15 @@ BPRUE_FireIntervalPos5Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.c
    ShowUpgradeEffect = true
 struct.end
 
+BPRUE_DamagePos5Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=DamageTemplate}
+   SID = BPRUE_DamagePos5Effect
+   LocalizationSID = bprue_damage
+   ValueMin = 5%
+   ValueMax = 5%
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
 BPRUE_DamagePos10Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=DamageTemplate}
    SID = BPRUE_DamagePos10Effect
    LocalizationSID = bprue_damage
@@ -209,10 +279,46 @@ BPRUE_DamagePos15Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;re
    ShowUpgradeEffect = true
 struct.end
 
+BPRUE_ArmorPiercingPos10Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_ArmorPiercingPos10Effect
+   Type = EEffectType::ArmorPiercing
+   LocalizationSID = bprue_armor_piercing
+   ValueMin = 10%
+   ValueMax = 10%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
+BPRUE_ArmorPiercingPos25Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_ArmorPiercingPos25Effect
+   Type = EEffectType::ArmorPiercing
+   LocalizationSID = bprue_armor_piercing
+   ValueMin = 25%
+   ValueMax = 25%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
 BPRUE_ArmorPiercingPos15Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_ArmorPiercingPos15Effect
    Type = EEffectType::ArmorPiercing
    LocalizationSID = bprue_armor_piercing
+   ValueMin = 15%
+   ValueMax = 15%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
+BPRUE_Shared_FlatnessPos15Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Shared_FlatnessPos15Effect
+   Type = EEffectType::EffectiveFireDistance
+   LocalizationSID = bprue_effective_range
    ValueMin = 15%
    ValueMax = 15%
    bIsPermanent = true
@@ -393,6 +499,30 @@ BPRUE_ChangeAmmoTypes762NATOEffect : struct.begin {refurl=@BaseGame/EffectProtot
          ProjectilePrototypeSID = P762NATO
       struct.end
       [2] : struct.begin
+         AmmoType = EAmmoType::Supersonic
+         ProjectilePrototypeSID = P762NATO
+      struct.end
+   struct.end
+   ShowUpgradeEffectValue = false
+   ShowUpgradeEffect = false
+struct.end
+
+BPRUE_ChangeAmmoTypes762NATOAPEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}
+   SID = BPRUE_ChangeAmmoTypes762NATOAPEffect
+   AmmoTypeProjectiles : struct.begin
+      [0] : struct.begin
+         AmmoType = EAmmoType::ArmorPiercing
+         ProjectilePrototypeSID = P762NATO
+      struct.end
+   struct.end
+   ShowUpgradeEffectValue = false
+   ShowUpgradeEffect = false
+struct.end
+
+BPRUE_ChangeAmmoTypes762NATOSupersonicEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}
+   SID = BPRUE_ChangeAmmoTypes762NATOSupersonicEffect
+   AmmoTypeProjectiles : struct.begin
+      [0] : struct.begin
          AmmoType = EAmmoType::Supersonic
          ProjectilePrototypeSID = P762NATO
       struct.end
