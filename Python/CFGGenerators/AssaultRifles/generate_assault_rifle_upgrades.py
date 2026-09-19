@@ -25,6 +25,11 @@ A762_CONVERSION_VARIANTS = {
         "text_sid": "sid_bprue_caliber_762x39_name",
         "hint_sid": "sid_bprue_caliber_762x39_description",
         "ammo_effect": "BPRUE_ChangeAmmoTypes762x39Effect",
+        "stat_effects": (
+            "BPRUE_DamagePos15Effect",
+            "BPRUE_RecoilPenalty15Effect",
+            "BPRUE_Shared_FlatnessPenalty10Effect",
+        ),
         "cost": 2600,
     },
     "AP": {
@@ -32,6 +37,12 @@ A762_CONVERSION_VARIANTS = {
         "text_sid": "sid_bprue_caliber_762x39_ap_name",
         "hint_sid": "sid_bprue_caliber_762x39_ap_description",
         "ammo_effect": "BPRUE_ChangeAmmoTypes762x39APEffect",
+        "stat_effects": (
+            "BPRUE_DamagePos10Effect",
+            "BPRUE_ArmorPiercingPos15Effect",
+            "BPRUE_RecoilPenalty20Effect",
+            "BPRUE_Shared_FlatnessPenalty10Effect",
+        ),
         "cost": 2600,
     },
     "Expanding": {
@@ -39,13 +50,11 @@ A762_CONVERSION_VARIANTS = {
         "text_sid": "sid_bprue_caliber_762x39_expanding_name",
         "hint_sid": "sid_bprue_caliber_762x39_expanding_description",
         "ammo_effect": "BPRUE_ChangeAmmoTypes762x39ExpandingEffect",
-        "cost": 2600,
-    },
-    "All": {
-        "suffix": "762x39_All",
-        "text_sid": "sid_bprue_caliber_762x39_all_name",
-        "hint_sid": "sid_bprue_caliber_762x39_all_description",
-        "ammo_effect": "BPRUE_ChangeAmmoTypes762x39AllEffect",
+        "stat_effects": (
+            "BPRUE_DamagePos20Effect",
+            "BPRUE_RecoilPenalty20Effect",
+            "BPRUE_Shared_FlatnessPenalty15Effect",
+        ),
         "cost": 2600,
     },
 }
@@ -95,8 +104,8 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
                 family_upgrades.append(_definition(family, "AdditionalCaliber", suffix, "Body", cost, text, hint, (change, *removes, add, *stat_effects), CALIBER_ICON))
                 continue
 
-            change, removes, _add, stat_effects = CALIBER_EFFECTS[caliber]
-            for variant in ("Default", "AP", "Expanding", "All"):
+            change, removes, _add, _stat_effects = CALIBER_EFFECTS[caliber]
+            for variant in ("Default", "AP", "Expanding"):
                 spec = A762_CONVERSION_VARIANTS[variant]
                 family_upgrades.append(_definition(
                     family,
@@ -106,7 +115,7 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
                     spec["cost"],
                     spec["text_sid"],
                     spec["hint_sid"],
-                    (change, *removes, spec["ammo_effect"], *stat_effects),
+                    (change, *removes, spec["ammo_effect"], *spec["stat_effects"]),
                     CALIBER_ICON,
                 ))
         for group, variants in config["module_groups"].items():
@@ -173,6 +182,15 @@ BPRUE_DamagePos10Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;re
    ShowUpgradeEffect = true
 struct.end
 
+BPRUE_DamagePos20Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=DamageTemplate}
+   SID = BPRUE_DamagePos20Effect
+   LocalizationSID = bprue_damage
+   ValueMin = 20%
+   ValueMax = 20%
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
 BPRUE_DamagePos15Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=DamageTemplate}
    SID = BPRUE_DamagePos15Effect
    LocalizationSID = bprue_damage
@@ -190,6 +208,18 @@ BPRUE_ArmorPiercingPos15Effect : struct.begin {refurl=@BaseGame/EffectPrototypes
    ValueMax = 15%
    bIsPermanent = true
    Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
+BPRUE_Shared_FlatnessPenalty15Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Shared_FlatnessPenalty15Effect
+   Type = EEffectType::EffectiveFireDistance
+   LocalizationSID = bprue_effective_range
+   ValueMin = -15%
+   ValueMax = -15%
+   bIsPermanent = true
+   Positive = EBeneficial::Negative
    ShowUpgradeEffectValue = true
    ShowUpgradeEffect = true
 struct.end
@@ -289,7 +319,11 @@ BPRUE_ChangeAmmoTypes762x39Effect : struct.begin {refurl=@BaseGame/EffectPrototy
    SID = BPRUE_ChangeAmmoTypes762x39Effect
    AmmoTypeProjectiles : struct.begin
       [0] : struct.begin
-         AmmoType = EAmmoType::Default
+         AmmoType = EAmmoType::ArmorPiercing
+         ProjectilePrototypeSID = P762
+      struct.end
+      [2] : struct.begin
+         AmmoType = EAmmoType::Expanding
          ProjectilePrototypeSID = P762
       struct.end
    struct.end
@@ -320,10 +354,6 @@ BPRUE_ChangeAmmoTypes762x39ExpandingEffect : struct.begin {refurl=@BaseGame/Effe
    SID = BPRUE_ChangeAmmoTypes762x39ExpandingEffect
    AmmoTypeProjectiles : struct.begin
       [0] : struct.begin
-         AmmoType = EAmmoType::Default
-         ProjectilePrototypeSID = P762
-      struct.end
-      [1] : struct.begin
          AmmoType = EAmmoType::Expanding
          ProjectilePrototypeSID = P762
       struct.end
@@ -335,22 +365,6 @@ BPRUE_ChangeAmmoTypes762x39ExpandingEffect : struct.begin {refurl=@BaseGame/Effe
    ShowUpgradeEffect = false
 struct.end
 
-BPRUE_ChangeAmmoTypes762x39AllEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}
-   SID = BPRUE_ChangeAmmoTypes762x39AllEffect
-   AmmoTypeProjectiles : struct.begin
-      [0] : struct.begin
-         AmmoType = EAmmoType::Default
-         ProjectilePrototypeSID = P762
-      struct.end
-      [1] : struct.begin
-         AmmoType = EAmmoType::ArmorPiercing
-         ProjectilePrototypeSID = P762
-      struct.end
-      [2] : struct.begin
-         AmmoType = EAmmoType::Expanding
-         ProjectilePrototypeSID = P762
-      struct.end
-   struct.end
    ValueMin = 100%
    ValueMax = 100%
    Positive = EBeneficial::Positive
