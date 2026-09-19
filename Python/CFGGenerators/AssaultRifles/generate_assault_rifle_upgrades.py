@@ -19,18 +19,34 @@ POWER_CALIBER = {
 ADDITIONAL_CALIBER = {
     "A762": ("762x39", "sid_bprue_caliber_762x39_name", "sid_bprue_caliber_762x39_description", 2600),
 }
-AMMO_SPECIALIZATIONS = {
-    ("A762", "AP"): {
-        "text_sid": "sid_bprue_ammo_762x39_ap_name",
-        "hint_sid": "sid_bprue_ammo_762x39_ap_description",
-        "cost": 1800,
-        "effects": ("BPRUE_ChangeAmmoTypes762x39APEffect",),
+A762_CONVERSION_VARIANTS = {
+    "Default": {
+        "suffix": "762x39",
+        "text_sid": "sid_bprue_caliber_762x39_name",
+        "hint_sid": "sid_bprue_caliber_762x39_description",
+        "ammo_effect": "BPRUE_ChangeAmmoTypes762x39Effect",
+        "cost": 2600,
     },
-    ("A762", "Expanding"): {
-        "text_sid": "sid_bprue_ammo_762x39_expanding_name",
-        "hint_sid": "sid_bprue_ammo_762x39_expanding_description",
-        "cost": 1800,
-        "effects": ("BPRUE_ChangeAmmoTypes762x39ExpandingEffect",),
+    "AP": {
+        "suffix": "762x39_AP",
+        "text_sid": "sid_bprue_caliber_762x39_ap_name",
+        "hint_sid": "sid_bprue_caliber_762x39_ap_description",
+        "ammo_effect": "BPRUE_ChangeAmmoTypes762x39APEffect",
+        "cost": 2600,
+    },
+    "Expanding": {
+        "suffix": "762x39_Expanding",
+        "text_sid": "sid_bprue_caliber_762x39_expanding_name",
+        "hint_sid": "sid_bprue_caliber_762x39_expanding_description",
+        "ammo_effect": "BPRUE_ChangeAmmoTypes762x39ExpandingEffect",
+        "cost": 2600,
+    },
+    "All": {
+        "suffix": "762x39_All",
+        "text_sid": "sid_bprue_caliber_762x39_all_name",
+        "hint_sid": "sid_bprue_caliber_762x39_all_description",
+        "ammo_effect": "BPRUE_ChangeAmmoTypes762x39AllEffect",
+        "cost": 2600,
     },
 }
 
@@ -73,31 +89,26 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
             change, removes, add, stat_effects = CALIBER_EFFECTS[caliber]
             family_upgrades.append(_definition(family, "Caliber", suffix, "Body", cost, text, hint, (change, *removes, add, *stat_effects), CALIBER_ICON))
         for caliber in family.get("additional_caliber_conversions", []):
-            suffix, text, hint, cost = ADDITIONAL_CALIBER[caliber]
-            change, removes, add, stat_effects = CALIBER_EFFECTS[caliber]
-            family_upgrades.append(_definition(family, "AdditionalCaliber", suffix, "Body", cost, text, hint, (change, *removes, add, *stat_effects), CALIBER_ICON))
-        for specialization in family.get("ammo_specializations", []):
-            caliber = specialization["caliber"]
-            variant = specialization["variant"]
-            spec = AMMO_SPECIALIZATIONS[(caliber, variant)]
-            conversion_suffix = ADDITIONAL_CALIBER[caliber][0]
-            conversion_sid = f"{family['prototype_prefix']}_Upgrade_BPRUE_AdditionalCaliber_{conversion_suffix}"
-            family_upgrades.append(UpgradeDefinition(
-                sid=f"{family['prototype_prefix']}_Upgrade_BPRUE_AmmoSpecialization_{variant}",
-                general_setup_sid=family["general_setup_sid"],
-                weapon_class="AR",
-                group="AmmoSpecialization",
-                target_part="Body",
-                text_sid=spec["text_sid"],
-                hint_sid=spec["hint_sid"],
-                image=family["image"],
-                icon=CALIBER_ICON,
-                cost=spec["cost"],
-                effects=spec["effects"],
-                required_upgrade_sids=(conversion_sid,),
-                template_sid=MODULE_TEMPLATE_SID,
-                standalone=True,
-            ))
+            if caliber != "A762":
+                suffix, text, hint, cost = ADDITIONAL_CALIBER[caliber]
+                change, removes, add, stat_effects = CALIBER_EFFECTS[caliber]
+                family_upgrades.append(_definition(family, "AdditionalCaliber", suffix, "Body", cost, text, hint, (change, *removes, add, *stat_effects), CALIBER_ICON))
+                continue
+
+            change, removes, _add, stat_effects = CALIBER_EFFECTS[caliber]
+            for variant in ("Default", "AP", "Expanding", "All"):
+                spec = A762_CONVERSION_VARIANTS[variant]
+                family_upgrades.append(_definition(
+                    family,
+                    "AdditionalCaliber",
+                    spec["suffix"],
+                    "Body",
+                    spec["cost"],
+                    spec["text_sid"],
+                    spec["hint_sid"],
+                    (change, *removes, spec["ammo_effect"], *stat_effects),
+                    CALIBER_ICON,
+                ))
         for group, variants in config["module_groups"].items():
             for variant in variants:
                 family_upgrades.append(_definition(family, *MODULE_SPECS[(group, variant)]))
@@ -290,6 +301,10 @@ BPRUE_ChangeAmmoTypes762x39APEffect : struct.begin {refurl=@BaseGame/EffectProto
    SID = BPRUE_ChangeAmmoTypes762x39APEffect
    AmmoTypeProjectiles : struct.begin
       [0] : struct.begin
+         AmmoType = EAmmoType::Default
+         ProjectilePrototypeSID = P762
+      struct.end
+      [1] : struct.begin
          AmmoType = EAmmoType::ArmorPiercing
          ProjectilePrototypeSID = P762
       struct.end
@@ -305,6 +320,33 @@ BPRUE_ChangeAmmoTypes762x39ExpandingEffect : struct.begin {refurl=@BaseGame/Effe
    SID = BPRUE_ChangeAmmoTypes762x39ExpandingEffect
    AmmoTypeProjectiles : struct.begin
       [0] : struct.begin
+         AmmoType = EAmmoType::Default
+         ProjectilePrototypeSID = P762
+      struct.end
+      [1] : struct.begin
+         AmmoType = EAmmoType::Expanding
+         ProjectilePrototypeSID = P762
+      struct.end
+   struct.end
+   ValueMin = 100%
+   ValueMax = 100%
+   Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = false
+   ShowUpgradeEffect = false
+struct.end
+
+BPRUE_ChangeAmmoTypes762x39AllEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}
+   SID = BPRUE_ChangeAmmoTypes762x39AllEffect
+   AmmoTypeProjectiles : struct.begin
+      [0] : struct.begin
+         AmmoType = EAmmoType::Default
+         ProjectilePrototypeSID = P762
+      struct.end
+      [1] : struct.begin
+         AmmoType = EAmmoType::ArmorPiercing
+         ProjectilePrototypeSID = P762
+      struct.end
+      [2] : struct.begin
          AmmoType = EAmmoType::Expanding
          ProjectilePrototypeSID = P762
       struct.end
