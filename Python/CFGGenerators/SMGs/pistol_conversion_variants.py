@@ -19,14 +19,15 @@ from dataclasses import dataclass
 class PistolConversionVariant:
     weapon_sid: str
     source_weapon_sid: str
+    localization_sid: str
     conversion_upgrade_sid: str
 
 
 PISTOL_CONVERSION_VARIANTS: tuple[PistolConversionVariant, ...] = (
-    PistolConversionVariant("BPRUE_GunViper_Pistol_PP", "GunViper_PP", "GunViper_Upgrade_BPRUE_PistolConversion"),
-    PistolConversionVariant("BPRUE_GunAKU_Pistol_PP", "GunAKU_PP", "GunAKU_Upgrade_BPRUE_PistolConversion"),
-    PistolConversionVariant("BPRUE_GunBucket_Pistol_PP", "GunBucket_PP", "GunBucket_Upgrade_BPRUE_PistolConversion"),
-    PistolConversionVariant("BPRUE_GunIntegral_Pistol_PP", "GunIntegral_PP", "GunIntegral_Upgrade_BPRUE_PistolConversion"),
-    PistolConversionVariant("BPRUE_GunZubr_Pistol_PP", "GunZubr_PP", "GunZubr_Upgrade_BPRUE_PistolConversion"),
-    PistolConversionVariant("BPRUE_GunFora230_Pistol_PP", "GunFora230_PP", "GunFora230_Upgrade_BPRUE_PistolConversion"),
+    PistolConversionVariant("BPRUE_GunViper_Pistol_PP", "GunViper_PP", "GunViper_PP", "GunViper_Upgrade_BPRUE_PistolConversion"),
+    PistolConversionVariant("BPRUE_GunAKU_Pistol_PP", "GunAKU_PP", "GunAKU_PP", "GunAKU_Upgrade_BPRUE_PistolConversion"),
+    PistolConversionVariant("BPRUE_GunBucket_Pistol_PP", "GunBucket_PP", "GunBucket_PP", "GunBucket_Upgrade_BPRUE_PistolConversion"),
+    PistolConversionVariant("BPRUE_GunIntegral_Pistol_PP", "GunIntegral_PP", "GunIntegral_PP", "GunIntegral_Upgrade_BPRUE_PistolConversion"),
+    PistolConversionVariant("BPRUE_GunZubr_Pistol_PP", "GunZubr_PP", "GunZubr_PP", "GunZubr_Upgrade_BPRUE_PistolConversion"),
+    PistolConversionVariant("BPRUE_GunFora230_Pistol_PP", "GunFora230_PP", "nwpack_GunFora230_PP", "GunFora230_Upgrade_BPRUE_PistolConversion"),
 )
