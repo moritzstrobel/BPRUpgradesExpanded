@@ -169,6 +169,7 @@ def ammo_variant_matrix(ammo_catalog):
             if item["sid"] == "TemplateAmmo":
                 continue
             ammo_type = item["ammo_type"] or "Unknown"
+            ammo_type = ammo_type.rsplit("::", 1)[-1]
             variants[ammo_type].append(item["sid"])
         ordered = {kind: sorted(variants.pop(kind, [])) for kind in AMMO_VARIANT_ORDER}
         ordered.update({kind: sorted(sids) for kind, sids in sorted(variants.items())})
@@ -177,7 +178,8 @@ def ammo_variant_matrix(ammo_catalog):
 
 
 def print_ammo_variant_matrix(matrix):
-    print()\n    print("Vanilla ammo variant matrix:")
+    print()
+    print("Vanilla ammo variant matrix:")
     headers = ("Caliber", *AMMO_VARIANT_ORDER, "Variants")
     rows = []
     for caliber, variants in matrix.items():
