@@ -109,6 +109,63 @@ def vanilla_conversions(effects, upgrades, setups):
     return conversion_upgrades, by_setup
 
 
+def load_ammo_catalog():
+    """Collect Vanilla ammo variants by caliber, including inherited caliber."""
+    blocks = {}
+    for path in cfg_files(VANILLA_ROOT):
+        if path.name != "AmmoPrototypes.cfg":
+            continue
+        for block in parse_blocks(path):
+            sid = clean(block["fields"].get("SID")) or block["name"]
+            if sid and not sid.startswith("["):
+                ref = re.search(r"refkey=([^;}]*)", block["attrs"])
+                blocks[sid] = {
+                    "sid": sid,
+                    "refkey": clean(ref.group(1)) if ref else None,
+                    "fields": block["fields"],
+                    "source": block["path"],
+                    "line": block["line"],
+                }
+
+    def inherited_field(sid, field, seen=None):
+        seen = set() if seen is None else seen
+        if sid in seen or sid not in blocks:
+            return None
+        seen.add(sid)
+        block = blocks[sid]
+        value = block["fields"].get(field)
+        if value is not None:
+            return value
+        ref = block["refkey"]
+        if ref and ref != "[0]":
+            return inherited_field(ref, field, seen)
+        return None
+
+    catalog = defaultdict(list)
+    for sid, block in blocks.items():
+        caliber_value = inherited_field(sid, "Caliber")
+        match = CALIBER_RE.search(caliber_value or "")
+        if not match or match.group(1) == "None":
+            continue
+        catalog[match.group(1)].append({
+            "sid": sid,
+            "ammo_type": clean(inherited_field(sid, "AmmoType")),
+            "projectile_sid": clean(inherited_field(sid, "ProjectilePrototypeSID")),
+            "source": block["source"],
+            "line": block["line"],
+        })
+    return dict(catalog)
+
+
+def caliber_support(effects, ammo_catalog):
+    by_caliber = defaultdict(lambda: {"change_caliber_effects": [], "ammo": []})
+    for sid, data in effects.items():
+        by_caliber[data["caliber"]]["change_caliber_effects"].append(sid)
+    for caliber, ammo in ammo_catalog.items():
+        by_caliber[caliber]["ammo"] = ammo
+    return dict(by_caliber)
+
+
 def load_json(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -149,6 +206,8 @@ def main():
 
     effects, upgrades, setups = load_vanilla()
     conversion_upgrades, by_setup = vanilla_conversions(effects, upgrades, setups)
+    ammo_catalog = load_ammo_catalog()
+    support = caliber_support(effects, ammo_catalog)
 
     report_rows = []
     for weapon_class, name, weapon_sid, setup_sid, base, bprue, disabled in bprue_rows():
@@ -202,6 +261,7 @@ def main():
             },
             "weapons": report_rows,
             "vanilla_conversion_upgrades": conversion_upgrades,
+            "caliber_support": support,
         }
         args.json.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
         print(f"\nWrote {args.json.relative_to(REPO_ROOT)}")
@@ -211,6 +271,22 @@ def main():
         print("\nConversion candidates (no Vanilla/BPRUE caliber conversion):")
         for row in candidates:
             print(f"  {row['class']:<6} {row['weapon']:<12} {row['base_caliber']}")
+
+        candidate_bases = sorted({row["base_caliber"] for row in candidates})
+        print("\nAvailable Vanilla target-caliber building blocks:")
+        for caliber in sorted(support):
+            if caliber in candidate_bases:
+                continue
+            data = support[caliber]
+            effects_text = ", ".join(sorted(data["change_caliber_effects"])) or "-"
+            ammo_text = ", ".join(
+                f"{a['sid']}[{a['ammo_type'] or '?'}]"
+                for a in data["ammo"]
+                if a["sid"] != "TemplateAmmo"
+            ) or "-"
+            print(f"  {caliber}")
+            print(f"    ChangeCaliber effects: {effects_text}")
+            print(f"    Ammo: {ammo_text}")
 
 
 if __name__ == "__main__":
