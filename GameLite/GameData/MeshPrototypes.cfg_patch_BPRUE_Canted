@@ -1,0 +1,8 @@
+// -----------------------------------------------------------------------------
+// BPRUE canted scope mesh prototype
+// -----------------------------------------------------------------------------
+
+BPRUE_CantedScope : struct.begin
+   SID = BPRUE_CantedScope
+   MeshPath = StaticMesh'/BPRUpgradesExpanded/_Stalker_2/weapons/attachments/canted/Canted_as02_en_rds01_en.Canted_as02_en_rds01_en'
+struct.end
