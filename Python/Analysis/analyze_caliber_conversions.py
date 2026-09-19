@@ -83,7 +83,12 @@ def load_vanilla():
             effect_sids = block["arrays"].get("EffectPrototypeSIDs", [])
             if effect_sids:
                 upgrades[sid] = {"effects": effect_sids, "source": block["path"], "line": block["line"]}
-            upgrade_sids = block["arrays"].get("Upgrades", [])
+            # WeaponGeneralSetupPrototypes uses UpgradePrototypeSIDs. Keep the
+            # older/generic "Upgrades" alias as a fallback for other scopes.
+            upgrade_sids = (
+                block["arrays"].get("UpgradePrototypeSIDs", [])
+                or block["arrays"].get("Upgrades", [])
+            )
             if upgrade_sids:
                 setups[sid] = {"upgrades": upgrade_sids, "source": block["path"], "line": block["line"]}
     return effects, upgrades, setups
@@ -183,6 +188,7 @@ def main():
                 "vanilla_change_caliber_effects": len(effects),
                 "vanilla_conversion_upgrades": len(conversion_upgrades),
                 "tracked_weapon_families": len(report_rows),
+                "vanilla_general_setups_with_upgrades": len(setups),
             },
             "weapons": report_rows,
             "vanilla_conversion_upgrades": conversion_upgrades,
