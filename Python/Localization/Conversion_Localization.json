@@ -9,6 +9,13 @@
       }
     },
     {
+      "sid": "sid_bprue_caliber_762x39_tradeoff_description",
+      "languages": {
+        "English": "Converts the weapon from 5.45x39 mm to 7.62x39 mm ammunition. Damage and armor penetration increase by 15%, at the cost of 25% more recoil and 20% increased weapon wear. This specialization is permanent.",
+        "Russian": "Переводит оружие с 5,45x39 мм на боеприпасы 7,62x39 мм. Урон и бронепробиваемость увеличиваются на 15%, но отдача возрастает на 25%, а износ оружия — на 20%. Эта специализация является необратимой."
+      }
+    },
+    {
       "sid": "sid_bprue_caliber_762_nato_tradeoff_description",
       "languages": {
         "English": "Converts the weapon from 5.56 mm to 7.62x51 mm NATO ammunition. Damage increases by 10% and armor penetration by 15%, at the cost of 20% more recoil and 15% increased weapon wear. This specialization is permanent.",
