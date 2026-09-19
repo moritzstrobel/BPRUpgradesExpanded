@@ -319,6 +319,10 @@ BPRUE_ChangeAmmoTypes762x39Effect : struct.begin {refurl=@BaseGame/EffectPrototy
    SID = BPRUE_ChangeAmmoTypes762x39Effect
    AmmoTypeProjectiles : struct.begin
       [0] : struct.begin
+         AmmoType = EAmmoType::Default
+         ProjectilePrototypeSID = P762
+      struct.end
+      [1] : struct.begin
          AmmoType = EAmmoType::ArmorPiercing
          ProjectilePrototypeSID = P762
       struct.end
@@ -335,10 +339,6 @@ BPRUE_ChangeAmmoTypes762x39APEffect : struct.begin {refurl=@BaseGame/EffectProto
    SID = BPRUE_ChangeAmmoTypes762x39APEffect
    AmmoTypeProjectiles : struct.begin
       [0] : struct.begin
-         AmmoType = EAmmoType::Default
-         ProjectilePrototypeSID = P762
-      struct.end
-      [1] : struct.begin
          AmmoType = EAmmoType::ArmorPiercing
          ProjectilePrototypeSID = P762
       struct.end
@@ -358,13 +358,6 @@ BPRUE_ChangeAmmoTypes762x39ExpandingEffect : struct.begin {refurl=@BaseGame/Effe
          ProjectilePrototypeSID = P762
       struct.end
    struct.end
-   ValueMin = 100%
-   ValueMax = 100%
-   Positive = EBeneficial::Positive
-   ShowUpgradeEffectValue = false
-   ShowUpgradeEffect = false
-struct.end
-
    ValueMin = 100%
    ValueMax = 100%
    Positive = EBeneficial::Positive
