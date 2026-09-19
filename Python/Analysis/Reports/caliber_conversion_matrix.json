@@ -796,190 +796,156 @@
   },
   "ammo_variant_matrix": {
     "A012": {
-      "Default": [],
-      "ArmorPiercing": [],
-      "Expanding": [],
-      "Supersonic": [],
-      "EAmmoType::ArmorPiercing": [
-        "A012A"
-      ],
-      "EAmmoType::Default": [
+      "Default": [
         "A012D"
       ],
-      "EAmmoType::Expanding": [
+      "ArmorPiercing": [
+        "A012A"
+      ],
+      "Expanding": [
         "A012E"
-      ]
+      ],
+      "Supersonic": []
     },
     "A045": {
-      "Default": [],
-      "ArmorPiercing": [],
-      "Expanding": [],
-      "Supersonic": [],
-      "EAmmoType::ArmorPiercing": [
-        "A045A"
-      ],
-      "EAmmoType::Default": [
+      "Default": [
         "A045D"
       ],
-      "EAmmoType::Expanding": [
+      "ArmorPiercing": [
+        "A045A"
+      ],
+      "Expanding": [
         "A045E"
-      ]
+      ],
+      "Supersonic": []
     },
     "A545": {
-      "Default": [],
-      "ArmorPiercing": [],
-      "Expanding": [],
-      "Supersonic": [],
-      "EAmmoType::ArmorPiercing": [
-        "A545A"
-      ],
-      "EAmmoType::Default": [
+      "Default": [
         "A545D"
       ],
-      "EAmmoType::Expanding": [
+      "ArmorPiercing": [
+        "A545A"
+      ],
+      "Expanding": [
         "A545E"
-      ]
+      ],
+      "Supersonic": []
     },
     "A556": {
-      "Default": [],
-      "ArmorPiercing": [],
-      "Expanding": [],
-      "Supersonic": [],
-      "EAmmoType::ArmorPiercing": [
-        "A556A"
-      ],
-      "EAmmoType::Default": [
+      "Default": [
         "A556D"
       ],
-      "EAmmoType::Expanding": [
+      "ArmorPiercing": [
+        "A556A"
+      ],
+      "Expanding": [
         "A556E"
       ],
-      "EAmmoType::Supersonic": [
+      "Supersonic": [
         "A556S"
       ]
     },
     "A762": {
-      "Default": [],
-      "ArmorPiercing": [],
-      "Expanding": [],
-      "Supersonic": [],
-      "EAmmoType::ArmorPiercing": [
-        "A762A"
-      ],
-      "EAmmoType::Default": [
+      "Default": [
         "A762D"
       ],
-      "EAmmoType::Expanding": [
+      "ArmorPiercing": [
+        "A762A"
+      ],
+      "Expanding": [
         "A762E"
-      ]
+      ],
+      "Supersonic": []
     },
     "A762NATO": {
-      "Default": [],
-      "ArmorPiercing": [],
-      "Expanding": [],
-      "Supersonic": [],
-      "EAmmoType::ArmorPiercing": [
-        "A762NATOA"
-      ],
-      "EAmmoType::Default": [
+      "Default": [
         "A762NATOD"
       ],
-      "EAmmoType::Supersonic": [
+      "ArmorPiercing": [
+        "A762NATOA"
+      ],
+      "Expanding": [],
+      "Supersonic": [
         "A762NATOS"
       ]
     },
     "A762Sniper": {
-      "Default": [],
-      "ArmorPiercing": [],
-      "Expanding": [],
-      "Supersonic": [],
-      "EAmmoType::ArmorPiercing": [
-        "A762SniperA"
-      ],
-      "EAmmoType::Default": [
+      "Default": [
         "A762SniperD"
       ],
-      "EAmmoType::Supersonic": [
+      "ArmorPiercing": [
+        "A762SniperA"
+      ],
+      "Expanding": [],
+      "Supersonic": [
         "A762SniperS"
       ]
     },
     "A918": {
-      "Default": [],
-      "ArmorPiercing": [],
-      "Expanding": [],
-      "Supersonic": [],
-      "EAmmoType::ArmorPiercing": [
+      "Default": [
+        "A918D"
+      ],
+      "ArmorPiercing": [
         "A918A"
       ],
-      "EAmmoType::Default": [
-        "A918D"
-      ]
+      "Expanding": [],
+      "Supersonic": []
     },
     "A919": {
-      "Default": [],
-      "ArmorPiercing": [],
-      "Expanding": [],
-      "Supersonic": [],
-      "EAmmoType::ArmorPiercing": [
+      "Default": [
+        "A919D"
+      ],
+      "ArmorPiercing": [
         "A919A"
       ],
-      "EAmmoType::Default": [
-        "A919D"
-      ]
+      "Expanding": [],
+      "Supersonic": []
     },
     "A939": {
-      "Default": [],
-      "ArmorPiercing": [],
-      "Expanding": [],
-      "Supersonic": [],
-      "EAmmoType::ArmorPiercing": [
-        "A939A"
-      ],
-      "EAmmoType::Default": [
+      "Default": [
         "A939D"
       ],
-      "EAmmoType::Expanding": [
+      "ArmorPiercing": [
+        "A939A"
+      ],
+      "Expanding": [
         "A939E"
       ],
-      "EAmmoType::Supersonic": [
+      "Supersonic": [
         "A939S"
       ]
     },
     "AGA": {
-      "Default": [],
+      "Default": [
+        "AGA"
+      ],
       "ArmorPiercing": [],
       "Expanding": [],
-      "Supersonic": [],
-      "EAmmoType::Default": [
-        "AGA"
-      ]
+      "Supersonic": []
     },
     "AHEDP": {
-      "Default": [],
+      "Default": [
+        "AHEDP"
+      ],
       "ArmorPiercing": [],
       "Expanding": [],
-      "Supersonic": [],
-      "EAmmoType::Default": [
-        "AHEDP"
-      ]
+      "Supersonic": []
     },
     "APG7V": {
-      "Default": [],
+      "Default": [
+        "APG7V"
+      ],
       "ArmorPiercing": [],
       "Expanding": [],
-      "Supersonic": [],
-      "EAmmoType::Default": [
-        "APG7V"
-      ]
+      "Supersonic": []
     },
     "AVOG": {
-      "Default": [],
+      "Default": [
+        "AVOG"
+      ],
       "ArmorPiercing": [],
       "Expanding": [],
-      "Supersonic": [],
-      "EAmmoType::Default": [
-        "AVOG"
-      ]
+      "Supersonic": []
     }
   }
 }
