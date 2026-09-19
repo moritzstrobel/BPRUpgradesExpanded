@@ -99,6 +99,53 @@ M10_A918_VARIANTS = {
     },
 }
 
+
+BUCKET_A919_VARIANTS = {
+    "Default": {
+        "suffix": "A919",
+        "text_sid": "sid_bprue_smg_caliber_a919_name",
+        "hint_sid": "sid_bprue_smg_caliber_a919_description",
+        "ammo_effect": "BPRUE_SMG_ChangeAmmoTypes919Effect",
+        "stat_effects": ("BPRUE_SMG_DamagePos10Effect", "BPRUE_SMG_EffectiveRangePos10Effect", "BPRUE_SMG_RecoilPenalty10Effect", "BPRUE_DurabilityPerShotNeg10Effect"),
+        "icon": _ammo_icon("9x19"),
+    },
+    "AP": {
+        "suffix": "A919_AP",
+        "text_sid": "sid_bprue_smg_caliber_a919_ap_name",
+        "hint_sid": "sid_bprue_smg_caliber_a919_ap_description",
+        "ammo_effect": "BPRUE_SMG_ChangeAmmoTypes919APEffect",
+        "stat_effects": ("BPRUE_SMG_DamagePos5Effect", "BPRUE_SMG_ArmorPiercingPos15Effect", "BPRUE_SMG_EffectiveRangePos5Effect", "BPRUE_SMG_RecoilPenalty15Effect", "BPRUE_DurabilityPerShotNeg10Effect"),
+        "icon": _ammo_icon("9x19_ap"),
+    },
+}
+
+BUCKET_A045_VARIANTS = {
+    "Default": {
+        "suffix": "A045",
+        "text_sid": "sid_bprue_smg_caliber_a045_name",
+        "hint_sid": "sid_bprue_smg_caliber_a045_description",
+        "ammo_effect": "ChangeAmmoTypes045Effect",
+        "stat_effects": ("BPRUE_SMG_DamagePos15Effect", "BPRUE_SMG_RecoilPenalty25Effect", "BPRUE_SMG_EffectiveRangePenalty15Effect"),
+        "icon": _ammo_icon("45acp"),
+    },
+    "AP": {
+        "suffix": "A045_AP",
+        "text_sid": "sid_bprue_smg_caliber_a045_ap_name",
+        "hint_sid": "sid_bprue_smg_caliber_a045_ap_description",
+        "ammo_effect": "BPRUE_SMG_ChangeAmmoTypes045APEffect",
+        "stat_effects": ("BPRUE_SMG_DamagePos10Effect", "BPRUE_SMG_ArmorPiercingPos15Effect", "BPRUE_SMG_RecoilPenalty30Effect", "BPRUE_SMG_EffectiveRangePenalty15Effect"),
+        "icon": _ammo_icon("45acp_ap"),
+    },
+    "Expanding": {
+        "suffix": "A045_Expanding",
+        "text_sid": "sid_bprue_smg_caliber_a045_expanding_name",
+        "hint_sid": "sid_bprue_smg_caliber_a045_expanding_description",
+        "ammo_effect": "BPRUE_SMG_ChangeAmmoTypes045ExpandingEffect",
+        "stat_effects": ("BPRUE_SMG_DamagePos20Effect", "BPRUE_SMG_RecoilPenalty30Effect", "BPRUE_SMG_EffectiveRangePenalty20Effect"),
+        "icon": _ammo_icon("45acp_hp"),
+    },
+}
+
 def load_config() -> dict: return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
 def sid(family: dict, key: str) -> str: return f"{family['prototype_prefix']}_Upgrade_BPRUE_{MODULES[key][0]}"
 def caliber_sid(family: dict, caliber: str) -> str: return f"{family['prototype_prefix']}_Upgrade_BPRUE_Caliber_{caliber}"
@@ -118,17 +165,25 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
         source_caliber=family["base_caliber"]; source_remove=CALIBER_DATA[source_caliber]["remove_ammo_effect"]
         conversion_sids=[]
         for caliber in family["conversions"]:
+            variants = None
             if family["prototype_prefix"] == "GunM10" and caliber in ("A919", "A918"):
                 variants = M10_A919_VARIANTS if caliber == "A919" else M10_A918_VARIANTS
+            elif family["prototype_prefix"] == "GunBucket" and caliber in ("A919", "A045"):
+                variants = BUCKET_A919_VARIANTS if caliber == "A919" else BUCKET_A045_VARIANTS
+            if variants:
                 conversion_sids.extend(f"{family['prototype_prefix']}_Upgrade_BPRUE_Caliber_{spec['suffix']}" for spec in variants.values())
             else:
                 conversion_sids.append(caliber_sid(family,caliber))
         for caliber in family["conversions"]:
             data=CALIBER_DATA[caliber]
+            variants = None
             if family["prototype_prefix"] == "GunM10" and caliber in ("A919", "A918"):
                 variants = M10_A919_VARIANTS if caliber == "A919" else M10_A918_VARIANTS
-                for variant in ("Default", "AP"):
-                    spec=variants[variant]; current=f"{family['prototype_prefix']}_Upgrade_BPRUE_Caliber_{spec['suffix']}"
+            elif family["prototype_prefix"] == "GunBucket" and caliber in ("A919", "A045"):
+                variants = BUCKET_A919_VARIANTS if caliber == "A919" else BUCKET_A045_VARIANTS
+            if variants:
+                for spec in variants.values():
+                    current=f"{family['prototype_prefix']}_Upgrade_BPRUE_Caliber_{spec['suffix']}"
                     upgrades.append(UpgradeDefinition(sid=current,general_setup_sid=family["general_setup_sid"],weapon_class="SMG",group="Caliber",target_part="Body",text_sid=spec["text_sid"],hint_sid=spec["hint_sid"],image=IMAGE,icon=spec["icon"],cost=data["cost"],effects=(data["change_effect"],source_remove,spec["ammo_effect"],*spec["stat_effects"]),blocking_sids=tuple(x for x in conversion_sids if x!=current),template_sid=TEMPLATE_SID))
                 continue
             current=caliber_sid(family,caliber); stat_effects=CALIBER_STAT_EFFECTS.get((source_caliber, caliber), ())
@@ -141,10 +196,13 @@ def render_effects() -> str:
     defs = [
         ("BPRUE_SMG_DamagePos15Effect", "WeaponDamage", "15%", "Positive", "bprue_damage"),
         ("BPRUE_SMG_DamagePos10Effect", "WeaponDamage", "10%", "Positive", "bprue_damage"),
+        ("BPRUE_SMG_DamagePos5Effect", "WeaponDamage", "5%", "Positive", "bprue_damage"),
+        ("BPRUE_SMG_DamagePos20Effect", "WeaponDamage", "20%", "Positive", "bprue_damage"),
         ("BPRUE_SMG_ArmorPiercingPos15Effect", "ArmorPiercing", "15%", "Positive", "bprue_armor_piercing"),
         ("BPRUE_SMG_DamagePenalty10Effect", "WeaponDamage", "-10%", "Negative", "bprue_damage"),
         ("BPRUE_SMG_DamagePenalty15Effect", "WeaponDamage", "-15%", "Negative", "bprue_damage"),
         ("BPRUE_SMG_DamagePenalty20Effect", "WeaponDamage", "-20%", "Negative", "bprue_damage"),
+        ("BPRUE_SMG_RecoilPenalty30Effect", "Recoil", "-30%", "Negative", "bprue_recoil"),
         ("BPRUE_SMG_RecoilPenalty25Effect", "Recoil", "-25%", "Negative", "bprue_recoil"),
         ("BPRUE_SMG_RecoilPenalty20Effect", "Recoil", "-20%", "Negative", "bprue_recoil"),
         ("BPRUE_SMG_RecoilPenalty10Effect", "Recoil", "-10%", "Negative", "bprue_recoil"),
@@ -155,12 +213,13 @@ def render_effects() -> str:
         ("BPRUE_SMG_EffectiveRangePos15Effect", "EffectiveFireDistance", "15%", "Positive", "bprue_effective_range"),
         ("BPRUE_SMG_EffectiveRangePenalty10Effect", "EffectiveFireDistance", "-10%", "Negative", "bprue_effective_range"),
         ("BPRUE_SMG_EffectiveRangePenalty15Effect", "EffectiveFireDistance", "-15%", "Negative", "bprue_effective_range"),
+        ("BPRUE_SMG_EffectiveRangePenalty20Effect", "EffectiveFireDistance", "-20%", "Negative", "bprue_effective_range"),
         ("BPRUE_SMG_DurabilityPerShotPos10Effect", "DurabilityPerShot", "-10%", "Positive", "bprue_weapon_wear"),
     ]
     lines=["// AUTO-GENERATED - Source: smg_upgrades.json", "", "BPRUE_SMG_ReloadingTimePos10Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}", "   SID = BPRUE_SMG_ReloadingTimePos10Effect", "   Text = Increase Reloading Time", "   Type = EEffectType::ReloadingTime", "   LocalizationSID = bprue_reload_speed", "   ValueMin = 10%", "   ValueMax = 10%", "   bIsPermanent = true", "   Positive = EBeneficial::Negative", "   ShowUpgradeEffectValue = true", "   ShowUpgradeEffect = true", "struct.end", ""]
     for effect_sid,effect_type,value,beneficial,loc in defs:
         lines += [f"{effect_sid} : struct.begin {{refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}}", f"   SID = {effect_sid}", f"   Type = EEffectType::{effect_type}", f"   LocalizationSID = {loc}", f"   ValueMin = {value}", f"   ValueMax = {value}", "   bIsPermanent = true", f"   Positive = EBeneficial::{beneficial}", "   ShowUpgradeEffectValue = true", "   ShowUpgradeEffect = true", "struct.end", ""]
-    lines += ["BPRUE_SMG_ChangeAmmoTypes918APEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}", "   SID = BPRUE_SMG_ChangeAmmoTypes918APEffect", "   AmmoTypeProjectiles : struct.begin", "      [0] : struct.begin", "         AmmoType = EAmmoType::ArmorPiercing", "         ProjectilePrototypeSID = P918", "      struct.end", "   struct.end", "   ShowUpgradeEffectValue = false", "   ShowUpgradeEffect = false", "struct.end", "", "BPRUE_SMG_ChangeAmmoTypes919APEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}", "   SID = BPRUE_SMG_ChangeAmmoTypes919APEffect", "   AmmoTypeProjectiles : struct.begin", "      [0] : struct.begin", "         AmmoType = EAmmoType::ArmorPiercing", "         ProjectilePrototypeSID = P919", "      struct.end", "   struct.end", "   ShowUpgradeEffectValue = false", "   ShowUpgradeEffect = false", "struct.end", "", "BPRUE_SMG_ChangeAmmoTypes919Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}", "   SID = BPRUE_SMG_ChangeAmmoTypes919Effect", "   AmmoTypeProjectiles : struct.begin", "      [0] : struct.begin", "         AmmoType = EAmmoType::Default", "         ProjectilePrototypeSID = P919", "      struct.end", "      [1] : struct.begin", "         AmmoType = EAmmoType::ArmorPiercing", "         ProjectilePrototypeSID = P919", "      struct.end", "   struct.end", "   ShowUpgradeEffectValue = false", "   ShowUpgradeEffect = false", "struct.end", "", "BPRUE_SMG_ChangeAmmoTypesNo918Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}", "   SID = BPRUE_SMG_ChangeAmmoTypesNo918Effect", "   AmmoTypeProjectiles : struct.begin", "      [0] : struct.begin", "         AmmoType = EAmmoType::Default", "         ProjectilePrototypeSID = P918", "      struct.end", "      [1] : struct.begin", "         AmmoType = EAmmoType::ArmorPiercing", "         ProjectilePrototypeSID = P918", "      struct.end", "   struct.end", "   Positive = EBeneficial::Negative", "   ShowUpgradeEffectValue = false", "   ShowUpgradeEffect = false", "struct.end", "", "BPRUE_VIPER_TEST : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}", "   SID = BPRUE_VIPER_TEST", "   Type = EEffectType::CameraShake", "   Positive = EBeneficial::Negative", "   CameraShakeEffectSubtype = ECameraShakeEffectSubtype::AddEffect", "   CameraShakePrototypeSID = BPR_PM_WeaponConversion_Shake", "struct.end", ""]
+    lines += ["BPRUE_SMG_ChangeAmmoTypes045APEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}", "   SID = BPRUE_SMG_ChangeAmmoTypes045APEffect", "   AmmoTypeProjectiles : struct.begin", "      [0] : struct.begin", "         AmmoType = EAmmoType::ArmorPiercing", "         ProjectilePrototypeSID = P045", "      struct.end", "   struct.end", "   ShowUpgradeEffectValue = false", "   ShowUpgradeEffect = false", "struct.end", "", "BPRUE_SMG_ChangeAmmoTypes045ExpandingEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}", "   SID = BPRUE_SMG_ChangeAmmoTypes045ExpandingEffect", "   AmmoTypeProjectiles : struct.begin", "      [0] : struct.begin", "         AmmoType = EAmmoType::Expanding", "         ProjectilePrototypeSID = P045", "      struct.end", "   struct.end", "   ShowUpgradeEffectValue = false", "   ShowUpgradeEffect = false", "struct.end", "", "BPRUE_SMG_ChangeAmmoTypes918APEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}", "   SID = BPRUE_SMG_ChangeAmmoTypes918APEffect", "   AmmoTypeProjectiles : struct.begin", "      [0] : struct.begin", "         AmmoType = EAmmoType::ArmorPiercing", "         ProjectilePrototypeSID = P918", "      struct.end", "   struct.end", "   ShowUpgradeEffectValue = false", "   ShowUpgradeEffect = false", "struct.end", "", "BPRUE_SMG_ChangeAmmoTypes919APEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}", "   SID = BPRUE_SMG_ChangeAmmoTypes919APEffect", "   AmmoTypeProjectiles : struct.begin", "      [0] : struct.begin", "         AmmoType = EAmmoType::ArmorPiercing", "         ProjectilePrototypeSID = P919", "      struct.end", "   struct.end", "   ShowUpgradeEffectValue = false", "   ShowUpgradeEffect = false", "struct.end", "", "BPRUE_SMG_ChangeAmmoTypes919Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}", "   SID = BPRUE_SMG_ChangeAmmoTypes919Effect", "   AmmoTypeProjectiles : struct.begin", "      [0] : struct.begin", "         AmmoType = EAmmoType::Default", "         ProjectilePrototypeSID = P919", "      struct.end", "      [1] : struct.begin", "         AmmoType = EAmmoType::ArmorPiercing", "         ProjectilePrototypeSID = P919", "      struct.end", "   struct.end", "   ShowUpgradeEffectValue = false", "   ShowUpgradeEffect = false", "struct.end", "", "BPRUE_SMG_ChangeAmmoTypesNo918Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}", "   SID = BPRUE_SMG_ChangeAmmoTypesNo918Effect", "   AmmoTypeProjectiles : struct.begin", "      [0] : struct.begin", "         AmmoType = EAmmoType::Default", "         ProjectilePrototypeSID = P918", "      struct.end", "      [1] : struct.begin", "         AmmoType = EAmmoType::ArmorPiercing", "         ProjectilePrototypeSID = P918", "      struct.end", "   struct.end", "   Positive = EBeneficial::Negative", "   ShowUpgradeEffectValue = false", "   ShowUpgradeEffect = false", "struct.end", "", "BPRUE_VIPER_TEST : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}", "   SID = BPRUE_VIPER_TEST", "   Type = EEffectType::CameraShake", "   Positive = EBeneficial::Negative", "   CameraShakeEffectSubtype = ECameraShakeEffectSubtype::AddEffect", "   CameraShakePrototypeSID = BPR_PM_WeaponConversion_Shake", "struct.end", ""]
     return "\n".join(lines)
 
 def main():
