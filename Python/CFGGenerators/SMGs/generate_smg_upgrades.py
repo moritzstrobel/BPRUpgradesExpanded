@@ -256,6 +256,7 @@ def render_effects() -> str:
         ("BPRUE_SMG_RecoilPenalty30Effect", "Recoil", "-30%", "Negative", "bprue_recoil"),
         ("BPRUE_SMG_RecoilPenalty25Effect", "Recoil", "-25%", "Negative", "bprue_recoil"),
         ("BPRUE_SMG_RecoilPenalty20Effect", "Recoil", "-20%", "Negative", "bprue_recoil"),
+        ("BPRUE_SMG_RecoilPenalty15Effect", "Recoil", "-15%", "Negative", "bprue_recoil"),
         ("BPRUE_SMG_RecoilPenalty10Effect", "Recoil", "-10%", "Negative", "bprue_recoil"),
         ("BPRUE_SMG_RecoilPos10Effect", "Recoil", "10%", "Positive", "bprue_recoil"),
         ("BPRUE_SMG_RecoilPos15Effect", "Recoil", "15%", "Positive", "bprue_recoil"),
