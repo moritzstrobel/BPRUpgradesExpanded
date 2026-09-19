@@ -27,6 +27,7 @@ from CFGGenerators.Pistols import generate_pistol_upgrades as pistol
 from CFGGenerators.Shotguns import generate_shotgun_upgrades as shotgun
 from CFGGenerators.SMGs import generate_smg_upgrades as smg
 from CFGGenerators.SMGs.smg_conversion_attachments import CONVERSION_ATTACHMENTS, attachment_block
+from CFGGenerators.SMGs.pistol_conversion_variants import PISTOL_CONVERSION_VARIANTS
 from CFGGenerators.Snipers import generate_sniper_upgrades as sniper
 from CFGGenerators.Common.shared_effects import render_shared_effects
 from CFGGenerators.Common.shared_upgrades import build_shared_upgrades
@@ -202,6 +203,37 @@ def render_weapon_sections_patch(model, content_pack=None):
             if moved: lines += [f"         // BPRUE hotspot moved from ({entry['origin'][0]:.6f}, {entry['origin'][1]:.6f}) for UI spacing", f"         LeftPosition = {position[0]:.6f}", f"         TopPosition = {position[1]:.6f}"]
             lines.append("      struct.end")
         lines += ["   struct.end", "struct.end", ""]; patches.extend(lines)
+
+        # Pistol-slot conversion items inherit the source weapon's GeneralWeaponSetup
+        # and SectionSettings. Mirror the BPRUE section enable/position overrides as
+        # well, otherwise only the sections that were enabled in Vanilla remain
+        # visible on the converted weapon.
+        if content_pack is None:
+            for variant in PISTOL_CONVERSION_VARIANTS:
+                if variant.source_weapon_sid != weapon_sid:
+                    continue
+                variant_lines = [
+                    f"{variant.weapon_sid} : struct.begin {{bpatch}}",
+                    "   SectionSettings : struct.begin {bpatch}",
+                ]
+                for entry, position, moved in changed:
+                    variant_lines += [
+                        f"      [{entry['index']}] : struct.begin {{bpatch}}",
+                        "         SectionIsEnabled = true",
+                    ]
+                    if moved:
+                        variant_lines += [
+                            f"         // BPRUE hotspot moved from ({entry['origin'][0]:.6f}, {entry['origin'][1]:.6f}) for UI spacing",
+                            f"         LeftPosition = {position[0]:.6f}",
+                            f"         TopPosition = {position[1]:.6f}",
+                        ]
+                    variant_lines.append("      struct.end")
+                variant_lines += ["   struct.end", "struct.end", ""]
+                patches.extend(variant_lines)
+                weapon_count += 1
+                enabled_count += len(changed)
+                moved_count += sum(1 for _, _, moved in changed if moved)
+
     scope = f"DLCGameData/{content_pack}" if content_pack else "BaseGame"
     header = ["// -----------------------------------------------------------------------------", "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND", f"// Scope: {scope}", "// Enables inherited predefined weapon upgrade sections for BPRUE.", f"// Minimum hotspot center distance: {MIN_SECTION_DISTANCE:.1f}", f"// Search ring step: {SECTION_NUDGE_STEP:.1f}; directions per ring: {SECTION_SEARCH_DIRECTIONS}; rings: {SECTION_NUDGE_RINGS}", f"// Patched weapons: {weapon_count}; enabled disabled sections: {enabled_count}; repositioned collisions: {moved_count}", "// -----------------------------------------------------------------------------", ""]
     return "\n".join(header + patches).rstrip() + "\n"
