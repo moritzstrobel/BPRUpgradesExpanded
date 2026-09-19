@@ -105,7 +105,12 @@ def apply_layout_to_model(model: UpgradeBuildModel, *, content_pack: str | None 
             if len(variants) > len(VERTICALS): raise ValueError(f"{setup_sid}/{variants[0].group}: {len(variants)} variants exceed 3 vertical slots")
             target, horizontal = _first_free_column(setup_sid, variants[0].target_part, occupied_columns, content_pack); occupied_columns.add((target, horizontal))
             for index, upgrade in enumerate(variants):
-                cells[(target, horizontal)].add(index); resolved_by_sid[upgrade.sid] = replace(upgrade, target_part=target, horizontal_position=None if horizontal == 0 else horizontal, vertical_position=VERTICALS[index])
+                # Test layout for the new additional-caliber chain: leave the
+                # vertical position unset for the conversion itself as well as
+                # its dependent Tier-2 upgrades. Existing/live groups keep their
+                # current Top/Down allocation unchanged.
+                vertical_position = None if upgrade.group == "AdditionalCaliber" else VERTICALS[index]
+                cells[(target, horizontal)].add(index); resolved_by_sid[upgrade.sid] = replace(upgrade, target_part=target, horizontal_position=None if horizontal == 0 else horizontal, vertical_position=vertical_position)
 
         for upgrade in standalones:
             prerequisite = next((resolved_by_sid.get(sid) for sid in upgrade.required_upgrade_sids if sid in resolved_by_sid), None)
