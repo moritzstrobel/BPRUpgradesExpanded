@@ -177,7 +177,8 @@ def ammo_variant_matrix(ammo_catalog):
 
 
 def print_ammo_variant_matrix(matrix):
-    print()\n    print("Vanilla ammo variant matrix:")
+    print()
+    print("Vanilla ammo variant matrix:")
     headers = ("Caliber", *AMMO_VARIANT_ORDER, "Variants")
     rows = []
     for caliber, variants in matrix.items():
