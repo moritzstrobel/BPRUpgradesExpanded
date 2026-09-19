@@ -16,7 +16,11 @@ POWER_CALIBER = {
     "A545": ("A762Sniper", "762", "sid_bprue_caliber_762_eastern_name", "sid_bprue_caliber_762_eastern_description", 2800),
     "A556": ("A762NATO", "762NATO", "sid_bprue_caliber_762_nato_name", "sid_bprue_caliber_762_nato_description", 3200),
 }
+ADDITIONAL_CALIBER = {
+    "A762": ("762x39", "sid_bprue_caliber_762x39_name", "sid_bprue_caliber_762x39_description", 2600),
+}
 CALIBER_EFFECTS = {
+    "A762": ("BPRUE_ChangeCaliber762x39Effect", ("ChangeAmmoTypesNo545Effect", "ChangeAmmoTypesNo556Effect", "BPRUE_ChangeAmmoTypesNo762Effect", "BPRUE_ChangeAmmoTypesNo762NATOEffect", "ChangeAmmoTypesNo939Effect"), "BPRUE_ChangeAmmoTypes762x39Effect", ("BPRUE_DamagePos15Effect", "BPRUE_ArmorPiercingPos15Effect", "BPRUE_RecoilPenalty25Effect", "BPRUE_DurabilityPerShotNeg20Effect")),
     "A762Sniper": ("ChangeCaliber762Effect", ("ChangeAmmoTypesNo545Effect", "ChangeAmmoTypesNo556Effect", "BPRUE_ChangeAmmoTypesNo762NATOEffect", "ChangeAmmoTypesNo939Effect"), "ChangeAmmoTypes762Effect", ("BPRUE_DamagePos15Effect", "BPRUE_ArmorPiercingPos15Effect", "BPRUE_RecoilPenalty25Effect", "BPRUE_DurabilityPerShotNeg20Effect")),
     "A762NATO": ("BPRUE_ChangeCaliber762NATOEffect", ("ChangeAmmoTypesNo545Effect", "ChangeAmmoTypesNo556Effect", "BPRUE_ChangeAmmoTypesNo762Effect", "ChangeAmmoTypesNo939Effect"), "BPRUE_ChangeAmmoTypes762NATOEffect", ("BPRUE_DamagePos10Effect", "BPRUE_ArmorPiercingPos15Effect", "BPRUE_RecoilPenalty20Effect", "BPRUE_DurabilityPerShotNeg15Effect")),
 }
@@ -51,6 +55,10 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
         power = POWER_CALIBER.get(family["base_caliber"]) if family.get("bprue_caliber_conversion", True) else None
         if power:
             caliber, suffix, text, hint, cost = power
+            change, removes, add, stat_effects = CALIBER_EFFECTS[caliber]
+            family_upgrades.append(_definition(family, "Caliber", suffix, "Body", cost, text, hint, (change, *removes, add, *stat_effects), CALIBER_ICON))
+        for caliber in family.get("additional_caliber_conversions", []):
+            suffix, text, hint, cost = ADDITIONAL_CALIBER[caliber]
             change, removes, add, stat_effects = CALIBER_EFFECTS[caliber]
             family_upgrades.append(_definition(family, "Caliber", suffix, "Body", cost, text, hint, (change, *removes, add, *stat_effects), CALIBER_ICON))
         for group, variants in config["module_groups"].items():
@@ -210,6 +218,33 @@ BPRUE_ReloadingTimeNeg10Effect : struct.begin {refurl=@BaseGame/EffectPrototypes
    Positive = EBeneficial::Positive
    ShowUpgradeEffectValue = true
    ShowUpgradeEffect = true
+struct.end
+
+BPRUE_ChangeCaliber762x39Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeCaliberTemplate}
+   SID = BPRUE_ChangeCaliber762x39Effect
+   Caliber = EAmmoCaliber::A762
+   ShowUpgradeEffectValue = false
+   ShowUpgradeEffect = false
+struct.end
+
+BPRUE_ChangeAmmoTypes762x39Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeAmmoTypesTemplate}
+   SID = BPRUE_ChangeAmmoTypes762x39Effect
+   AmmoTypeProjectiles : struct.begin
+      [0] : struct.begin
+         AmmoType = EAmmoType::Default
+         ProjectilePrototypeSID = P762
+      struct.end
+      [1] : struct.begin
+         AmmoType = EAmmoType::ArmorPiercing
+         ProjectilePrototypeSID = P762
+      struct.end
+      [2] : struct.begin
+         AmmoType = EAmmoType::Expanding
+         ProjectilePrototypeSID = P762
+      struct.end
+   struct.end
+   ShowUpgradeEffectValue = false
+   ShowUpgradeEffect = false
 struct.end
 
 BPRUE_ChangeCaliber762NATOEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=ChangeCaliberTemplate}
