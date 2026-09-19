@@ -14,7 +14,7 @@ from vanilla_upgrade_layout import (
 
 GROUP_ORDER = {
     "AR": {"Body": ["Caliber", "AdditionalCaliber", "FireControl", "Reload", "ModuleReliability"], "Barrel": ["FireRate", "ModulePrecision", "ModuleAction", "ModuleBallistics"], "Stock": ["Stock"]},
-    "SMG": {"Body": ["Readiness", "Reload", "ModuleHandling"], "Barrel": ["Action", "ModuleAction", "ModuleBallistics", "ModuleRangeProfile"], "Stock": ["Stock"]},
+    "SMG": {"Body": ["Caliber", "Readiness", "Reload", "ModuleHandling"], "Barrel": ["Action", "ModuleAction", "ModuleBallistics", "ModuleRangeProfile"], "Stock": ["Stock"]},
     "SG": {"Body": ["Action", "Handling", "ModuleHandling", "ModuleReliability"], "Barrel": ["Pattern", "ModuleRangeProfile"]},
     "Pistol": {"Body": ["Handling", "ModuleHandling"], "Barrel": ["Action", "Signature", "ModulePrecision", "ModuleBallistics"]},
     "Sniper": {"Body": ["Caliber", "Marksman", "ModuleReliability"], "Barrel": ["Ballistics", "Action", "Signature", "ModulePrecision", "ModuleBallistics", "ModuleRangeProfile"], "Stock": ["Stock"]},
