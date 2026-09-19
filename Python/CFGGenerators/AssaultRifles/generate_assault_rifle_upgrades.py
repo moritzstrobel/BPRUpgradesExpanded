@@ -210,7 +210,8 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
                         spec["text_sid"],
                         spec["hint_sid"],
                         (change, *removes, spec["ammo_effect"], *spec["stat_effects"]),
-                        spec["icon"],
+                        CALIBER_ICON,
+                        image=spec["icon"],
                     ))
             else:
                 family_upgrades.append(_definition(family, "Caliber", suffix, "Body", cost, text, hint, (change, *removes, add, *stat_effects), CALIBER_ICON))
