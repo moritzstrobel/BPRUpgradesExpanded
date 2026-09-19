@@ -18,15 +18,15 @@
     {
       "sid": "sid_bprue_caliber_762x39_name",
       "languages": {
-        "English": "7.62x39 mm Conversion",
+        "English": "7.62x39 Assault Conversion",
         "Russian": "Переделка под патрон 7,62x39 мм"
       }
     },
     {
       "sid": "sid_bprue_caliber_762x39_description",
       "languages": {
-        "English": "Converts the weapon to 7.62x39 mm ammunition. Increases damage, armor penetration, recoil and weapon wear. This specialization is permanent.",
-        "Russian": "Переводит оружие на боеприпасы 7,62x39 мм. Увеличивает урон, бронепробиваемость, отдачу и износ оружия. Эта специализация является постоянной."
+        "English": "Converts the weapon to 7.62x39 mm ammunition for greater close- to mid-range stopping power, at the cost of increased recoil and a less effective trajectory. This specialization is permanent.",
+        "Russian": "Переводит оружие на боеприпасы 7,62x39 мм для повышения останавливающего действия на ближней и средней дистанции ценой большей отдачи и менее настильной траектории. Эта специализация является постоянной."
       }
     },
     {
