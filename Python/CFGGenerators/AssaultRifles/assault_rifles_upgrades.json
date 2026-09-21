@@ -2,21 +2,103 @@
   "schema_version": 3,
   "description": "Assault-rifle specialization system: mutually-exclusive modules for fire control, fire rate, reload and stock, plus a power-caliber conversion where supported. BPRUE caliber conversions are disabled where Vanilla already provides one.",
   "families": {
-    "AK74": {"weapon_sid":"GunAK74_ST","general_setup_sid":"GunAK74_ST","prototype_prefix":"GunAK74","base_caliber":"A545","image":"Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/AK74/Barrel/Upgrade/T_AK47_Upg_a_1.T_AK47_Upg_a_1'"},
-    "Fora": {"weapon_sid":"GunFora_ST","general_setup_sid":"GunFora_ST","prototype_prefix":"GunFora","base_caliber":"A545","bprue_caliber_conversion":false,"image":"Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/Fora/Barrel/Upgrade/T_ForaU_a_1.T_ForaU_a_1'"},
-    "G37": {"weapon_sid":"GunG37_ST","general_setup_sid":"GunG37_ST","prototype_prefix":"GunG37","base_caliber":"A556","image":"Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/G37/Barrel/Upgrade/T_GP_upgr_3.T_GP_upgr_3'"},
-    "M16": {"weapon_sid":"GunM16_ST","general_setup_sid":"GunM16_ST","prototype_prefix":"GunM16","base_caliber":"A556","image":"Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/M16/Barrel/Upgrade/T_M16_upgr_1.T_M16_upgr_1'"},
-    "Kharod": {"weapon_sid":"GunKharod_ST","general_setup_sid":"GunKharod_ST","prototype_prefix":"GunKharod","base_caliber":"A556","bprue_caliber_conversion":false,"image":"Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/Kharod/Barrel/Upgrade/T_Kharod_upgr_1.T_Kharod_upgr_1'"},
-    "Arev": {"weapon_sid":"GunArev_ST","general_setup_sid":"GunArev_ST_GS","prototype_prefix":"GunArev","base_caliber":"A556","image":"Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/Arev/Barrel/Upgrade/T_Arev_upgr_1.T_Arev_upgr_1'"},
-    "Dnipro": {"weapon_sid":"GunDnipro_ST","general_setup_sid":"GunDnipro_ST","prototype_prefix":"GunDnipro","base_caliber":"A545","bprue_caliber_conversion":false,"image":"Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/Dnipro/Barrel/Upgrade/T_Dnipro_upgr_1.T_Dnipro_upgr_1'"},
-    "Gvintar": {"weapon_sid":"GunGvintar_ST","general_setup_sid":"GunGvintar_ST","prototype_prefix":"GunGvintar","base_caliber":"A939","image":"Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/Gvintar/Barrel/Upgrade/T_Gvintar_upgr_1.T_Gvintar_upgr_1'"},
-    "Grim": {"weapon_sid":"GunGrim_ST","general_setup_sid":"GunGrim_ST","prototype_prefix":"GunGrim","base_caliber":"A939","image":"Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/Grim/Barrel/Upgrade/T_Grim_upgr_1.T_Grim_upgr_1'"},
-    "Lavina": {"weapon_sid":"GunLavina_ST","general_setup_sid":"GunLavina_ST","prototype_prefix":"GunLavina","base_caliber":"A939","image":"Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/Lavina/Barrel/Upgrade/T_Lavina_upgr_1.T_Lavina_upgr_1'"}
+    "AK74": {
+      "weapon_sid": "GunAK74_ST",
+      "general_setup_sid": "GunAK74_ST",
+      "prototype_prefix": "GunAK74",
+      "base_caliber": "A545",
+      "additional_caliber_conversions": [
+        "A762"
+      ],
+      "image": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/AK74/Barrel/Upgrade/T_AK47_Upg_a_1.T_AK47_Upg_a_1'"
+    },
+    "Fora": {
+      "weapon_sid": "GunFora_ST",
+      "general_setup_sid": "GunFora_ST",
+      "prototype_prefix": "GunFora",
+      "base_caliber": "A545",
+      "bprue_caliber_conversion": false,
+      "image": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/Fora/Barrel/Upgrade/T_ForaU_a_1.T_ForaU_a_1'"
+    },
+    "G37": {
+      "weapon_sid": "GunG37_ST",
+      "general_setup_sid": "GunG37_ST",
+      "prototype_prefix": "GunG37",
+      "base_caliber": "A556",
+      "image": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/G37/Barrel/Upgrade/T_GP_upgr_3.T_GP_upgr_3'"
+    },
+    "M16": {
+      "weapon_sid": "GunM16_ST",
+      "general_setup_sid": "GunM16_ST",
+      "prototype_prefix": "GunM16",
+      "base_caliber": "A556",
+      "image": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/M16/Barrel/Upgrade/T_M16_upgr_1.T_M16_upgr_1'"
+    },
+    "Kharod": {
+      "weapon_sid": "GunKharod_ST",
+      "general_setup_sid": "GunKharod_ST",
+      "prototype_prefix": "GunKharod",
+      "base_caliber": "A556",
+      "bprue_caliber_conversion": false,
+      "image": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/Kharod/Barrel/Upgrade/T_Kharod_upgr_1.T_Kharod_upgr_1'"
+    },
+    "Arev": {
+      "weapon_sid": "GunArev_ST",
+      "general_setup_sid": "GunArev_ST_GS",
+      "prototype_prefix": "GunArev",
+      "base_caliber": "A556",
+      "image": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/Arev/Barrel/Upgrade/T_Arev_upgr_1.T_Arev_upgr_1'"
+    },
+    "Dnipro": {
+      "weapon_sid": "GunDnipro_ST",
+      "general_setup_sid": "GunDnipro_ST",
+      "prototype_prefix": "GunDnipro",
+      "base_caliber": "A545",
+      "bprue_caliber_conversion": false,
+      "image": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/Dnipro/Barrel/Upgrade/T_Dnipro_upgr_1.T_Dnipro_upgr_1'"
+    },
+    "Gvintar": {
+      "weapon_sid": "GunGvintar_ST",
+      "general_setup_sid": "GunGvintar_ST",
+      "prototype_prefix": "GunGvintar",
+      "base_caliber": "A939",
+      "image": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/Gvintar/Barrel/Upgrade/T_Gvintar_upgr_1.T_Gvintar_upgr_1'",
+      "additional_caliber_conversions": [
+        "A762"
+      ]
+    },
+    "Grim": {
+      "weapon_sid": "GunGrim_ST",
+      "general_setup_sid": "GunGrim_ST",
+      "prototype_prefix": "GunGrim",
+      "base_caliber": "A939",
+      "image": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/Grim/Barrel/Upgrade/T_Grim_upgr_1.T_Grim_upgr_1'"
+    },
+    "Lavina": {
+      "weapon_sid": "GunLavina_ST",
+      "general_setup_sid": "GunLavina_ST",
+      "prototype_prefix": "GunLavina",
+      "base_caliber": "A939",
+      "image": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/Lavina/Barrel/Upgrade/T_Lavina_upgr_1.T_Lavina_upgr_1'"
+    }
   },
   "module_groups": {
-    "fire_control": ["burst", "precision"],
-    "fire_rate": ["high_speed", "balanced"],
-    "reload": ["competition", "reinforced"],
-    "stock": ["lightweight", "stabilized", "marksman"]
+    "fire_control": [
+      "burst",
+      "precision"
+    ],
+    "fire_rate": [
+      "high_speed",
+      "balanced"
+    ],
+    "reload": [
+      "competition",
+      "reinforced"
+    ],
+    "stock": [
+      "lightweight",
+      "stabilized",
+      "marksman"
+    ]
   }
 }

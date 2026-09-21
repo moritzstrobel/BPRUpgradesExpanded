@@ -28,6 +28,7 @@ from CFGGenerators.Pistols import generate_pistol_upgrades as pistol
 from CFGGenerators.Shotguns import generate_shotgun_upgrades as shotgun
 from CFGGenerators.SMGs import generate_smg_upgrades as smg
 from CFGGenerators.SMGs.smg_conversion_attachments import CONVERSION_ATTACHMENTS, attachment_block
+from CFGGenerators.SMGs.pistol_conversion_variants import PISTOL_CONVERSION_VARIANTS
 from CFGGenerators.Snipers import generate_sniper_upgrades as sniper
 from CFGGenerators.Common.shared_effects import render_shared_effects
 from CFGGenerators.Common.shared_upgrades import build_shared_upgrades
@@ -39,6 +40,7 @@ DLC_OUTPUT_ROOT = CONTENT_ROOT / "GameLite/DLCGameData"
 UPGRADES_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/UpgradePrototypes/BPRUE_UpgradePrototypes.cfg"
 GENERAL_SETUP_PATH = CONTENT_ROOT / "GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg"
 WEAPON_PATH = CONTENT_ROOT / "GameLite/GameData/ItemPrototypes/WeaponPrototypes/WeaponPrototypes_patch_BPRUE.cfg"
+CONVERSION_WEAPON_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/ItemPrototypes/WeaponPrototypes/BPRUE_WeaponPrototypes.cfg"
 NPC_PATH = CONTENT_ROOT / "GameLite/GameData/NPCPrototypes/NPCPrototypes_patch_BPRUE.cfg"
 VANILLA_COMPACTION_PATH = CONTENT_ROOT / "GameLite/GameData/UpgradePrototypes/UpgradePrototypes_patch_BPRUE.cfg"
 VANILLA_EFFECT_UI_PATH = CONTENT_ROOT / "GameLite/GameData/EffectPrototypes/EffectPrototypes_patch_BPRUE_UI.cfg"
@@ -205,9 +207,82 @@ def render_weapon_sections_patch(model, content_pack=None):
             if moved: lines += [f"         // BPRUE hotspot moved from ({entry['origin'][0]:.6f}, {entry['origin'][1]:.6f}) for UI spacing", f"         LeftPosition = {position[0]:.6f}", f"         TopPosition = {position[1]:.6f}"]
             lines.append("      struct.end")
         lines += ["   struct.end", "struct.end", ""]; patches.extend(lines)
+
     scope = f"DLCGameData/{content_pack}" if content_pack else "BaseGame"
     header = ["// -----------------------------------------------------------------------------", "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND", f"// Scope: {scope}", "// Enables inherited predefined weapon upgrade sections for BPRUE.", f"// Minimum hotspot center distance: {MIN_SECTION_DISTANCE:.1f}", f"// Search ring step: {SECTION_NUDGE_STEP:.1f}; directions per ring: {SECTION_SEARCH_DIRECTIONS}; rings: {SECTION_NUDGE_RINGS}", f"// Patched weapons: {weapon_count}; enabled disabled sections: {enabled_count}; repositioned collisions: {moved_count}", "// -----------------------------------------------------------------------------", ""]
     return "\n".join(header + patches).rstrip() + "\n"
+
+
+def render_conversion_weapon_prototypes(model):
+    """Render BPRUE-owned pistol-slot variants with the source weapon's BPRUE section overrides."""
+    wanted_setups = {setup for upgrade in model.upgrades for setup in upgrade.general_setup_sids}
+    vanilla = _blocks_by_sid(VANILLA_WEAPONS)
+    lines = [
+        "// -----------------------------------------------------------------------------",
+        "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND",
+        "// BPRUE pistol-slot conversion weapon prototypes.",
+        "// Converted variants inherit BaseGame weapons and mirror BPRUE section overrides.",
+        "// -----------------------------------------------------------------------------",
+        "",
+    ]
+
+    for variant in PISTOL_CONVERSION_VARIANTS:
+        weapon = vanilla.get(variant.source_weapon_sid)
+        if not weapon:
+            raise ValueError(f"No Vanilla weapon prototype found for conversion source {variant.source_weapon_sid}")
+
+        setup_sid = _effective_scalar(variant.source_weapon_sid, "GeneralWeaponSetup", vanilla, {})
+        settings = _effective_section_settings(variant.source_weapon_sid, vanilla, {})
+        changed = []
+        if setup_sid in wanted_setups and settings:
+            sections = []
+            for section in _indexed_children(settings):
+                target = _direct_scalar(section, "UpgradeTargetPartType")
+                left = _float_scalar(section, "LeftPosition")
+                top = _float_scalar(section, "TopPosition")
+                if target is None or left is None or top is None:
+                    continue
+                sections.append({
+                    "index": _section_index(section),
+                    "enabled": (_direct_scalar(section, "SectionIsEnabled") or "").lower() == "true",
+                    "origin": (left, top),
+                })
+
+            occupied = [entry["origin"] for entry in sections if entry["enabled"]]
+            for entry in sections:
+                if entry["enabled"]:
+                    continue
+                position = _resolve_section_position(entry["origin"], occupied)
+                occupied.append(position)
+                changed.append((entry, position, position != entry["origin"]))
+
+        lines += [
+            f"// {variant.source_weapon_sid} variant used after the pistol-slot conversion.",
+            f"{variant.weapon_sid} : struct.begin {{refurl=@BaseGame/ItemPrototypes/WeaponPrototypes.cfg;refkey={variant.source_weapon_sid}}}",
+            f"   SID = {variant.weapon_sid}",
+            f"   LocalizationSID = {variant.localization_sid}",
+            "   ItemSlotType = EInventoryEquipmentSlot::Pistol",
+        ]
+
+        if changed:
+            lines.append("   SectionSettings : struct.begin {bpatch}")
+            for entry, position, moved in changed:
+                lines += [
+                    f"      [{entry['index']}] : struct.begin {{bpatch}}",
+                    "         SectionIsEnabled = true",
+                ]
+                if moved:
+                    lines += [
+                        f"         // BPRUE hotspot moved from ({entry['origin'][0]:.6f}, {entry['origin'][1]:.6f}) for UI spacing",
+                        f"         LeftPosition = {position[0]:.6f}",
+                        f"         TopPosition = {position[1]:.6f}",
+                    ]
+                lines.append("      struct.end")
+            lines.append("   struct.end")
+
+        lines += ["struct.end", ""]
+
+    return "\n".join(lines).rstrip() + "\n"
 
 
 def write(path, content): path.parent.mkdir(parents=True, exist_ok=True); path.write_text(content, encoding="utf-8"); print(f"Generated {path}")
@@ -230,17 +305,11 @@ def _remove_obsolete_bprue_effect_ui_patch():
 def main():
     print("Building unified weapon upgrade model")
     model, configs = build_model(apply_layout=False); dlc_models = build_dlc_outputs(model, configs); apply_layout_to_model(model); model.validate(); print(f"Built {model.summary()}")
-    attachments = {sid: attachment_block(data) for sid, data in CONVERSION_ATTACHMENTS.items()}
-    armor_upgrades = armor.build_upgrades()
-    weapon_upgrade_text = render_consolidated_upgrade_prototypes(model)
-    armor_upgrade_text = armor.render_upgrade_fragment(armor_upgrades)
-    # One consolidated UpgradePrototypes file owns both domains. Armor is appended
-    # to the generated weapon graph; neither generator rewrites the other's data.
-    upgrade_text = weapon_upgrade_text.rstrip() + "\n\n" + armor_upgrade_text
-    setup_text = render_final_general_setup_patch(model, attachments); npc_text = render_technician_patch(model, dlc_models=dlc_models); weapon_text = render_weapon_sections_patch(model)
+    attachments = {sid: attachment_block(sid, data) for sid, data in CONVERSION_ATTACHMENTS.items()}
+    upgrade_text = render_consolidated_upgrade_prototypes(model); setup_text = render_final_general_setup_patch(model, attachments); npc_text = render_technician_patch(model, dlc_models=dlc_models); weapon_text = render_weapon_sections_patch(model); conversion_weapon_text = render_conversion_weapon_prototypes(model)
     validate_rendered_outputs(model, upgrade_text, setup_text, npc_text)
-    write(UPGRADES_PATH, upgrade_text); write(GENERAL_SETUP_PATH, setup_text); write(WEAPON_PATH, weapon_text); write(NPC_PATH, npc_text); write(VANILLA_COMPACTION_PATH, render_vanilla_compaction_patch())
-    write(VANILLA_EFFECT_UI_PATH, render_vanilla_effect_ui_patch()); write(ARMOR_PATCH_PATH, armor.render_armor_patch(armor_upgrades)); _remove_obsolete_bprue_effect_ui_patch(); _remove_independent_dlc_output()
+    write(UPGRADES_PATH, upgrade_text); write(GENERAL_SETUP_PATH, setup_text); write(WEAPON_PATH, weapon_text); write(CONVERSION_WEAPON_PATH, conversion_weapon_text); write(NPC_PATH, npc_text); write(VANILLA_COMPACTION_PATH, render_vanilla_compaction_patch())
+    write(VANILLA_EFFECT_UI_PATH, render_vanilla_effect_ui_patch()); _remove_obsolete_bprue_effect_ui_patch(); _remove_independent_dlc_output()
     for pack, dlc_model in sorted(dlc_models.items()):
         dlc_upgrade_text = render_consolidated_upgrade_prototypes(dlc_model); dlc_setup_text = render_dlc_general_setup_patch(dlc_model, pack); dlc_weapon_text = render_weapon_sections_patch(dlc_model, content_pack=pack); validate_rendered_outputs(dlc_model, dlc_upgrade_text, dlc_setup_text)
         pack_root = DLC_OUTPUT_ROOT / pack

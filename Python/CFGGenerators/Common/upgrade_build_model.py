@@ -20,6 +20,7 @@ class UpgradeDefinition:
     cost: int
     effects: tuple[str, ...] = ()
     blocking_sids: tuple[str, ...] = ()
+    required_upgrade_sids: tuple[str, ...] = ()
     vertical_position: str | None = None
     technician: bool = True
     template_sid: str | None = None
@@ -29,6 +30,13 @@ class UpgradeDefinition:
     # Standalones are packed only after normal grouped rows. They may fill any
     # remaining visible cell instead of reserving a complete horizontal column.
     standalone: bool = False
+    # Optional layout-only grouping key. Keeps gameplay/upgrade group semantics stable
+    # while allowing independent columns for multiple conversion families.
+    layout_group: str | None = None
+    # Explicit authored icons (for example ammo artwork) bypass semantic icon inference.
+    preserve_icon: bool = False
+    # Optional explicit artwork for the large upgrade-tree module image.
+    module_image: str | None = None
 
     @property
     def general_setup_sids(self) -> tuple[str, ...]:
@@ -91,6 +99,12 @@ class UpgradeBuildModel:
 
         known = set(by_sid)
         for upgrade in self.upgrades:
+            unknown_requirements = [sid for sid in upgrade.required_upgrade_sids if sid not in known]
+            if unknown_requirements:
+                errors.append(
+                    f"{upgrade.sid}: RequiredUpgradePrototypeSIDs not generated: "
+                    + ", ".join(unknown_requirements)
+                )
             unknown_blocks = [sid for sid in upgrade.blocking_sids if sid not in known]
             if unknown_blocks:
                 errors.append(
