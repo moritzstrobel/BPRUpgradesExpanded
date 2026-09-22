@@ -147,10 +147,26 @@ def render_technician_patch(
 
     lines = [
         "// AUTO-GENERATED - BPRUE upgrades follow each technician's effective Vanilla/DLC weapon support.",
-        "// Only technicians that directly own a Vanilla Upgrades array are patched.",
-        "// BPRUE upgrades are appended to the existing Upgrades array via bpatch + wildcard entries.",
+        "// TechnicianNPC and AllTechnicianNPC receive the union of all BPRUE technician upgrades.",
+        "// Concrete technicians keep their own assignments; all additions use bpatch + wildcard entries.",
         "",
     ]
+
+    # Keep one occurrence per SID across all technician assignments while preserving
+    # the first BaseGame -> DLC occurrence. The common technician prototypes receive
+    # this complete union, matching the working reference mod's structure.
+    all_upgrades = list({
+        upgrade.sid: upgrade
+        for upgrades in assignments.values()
+        for upgrade in upgrades
+    }.values())
+
+    for common_sid in ("TechnicianNPC", "AllTechnicianNPC"):
+        lines += [f"{common_sid} : struct.begin {{bpatch}}", "   Upgrades : struct.begin {bpatch}"]
+        for upgrade in all_upgrades:
+            lines += ["      [*] : struct.begin", f"         UpgradePrototypeSID = {upgrade.sid}", "         Enabled = true", "      struct.end"]
+        lines += ["   struct.end", "struct.end", ""]
+
     for technician_sid, upgrades in assignments.items():
         if not upgrades:
             continue
