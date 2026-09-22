@@ -147,9 +147,8 @@ def render_technician_patch(
 
     lines = [
         "// AUTO-GENERATED - BPRUE upgrades follow each technician's effective Vanilla/DLC weapon support.",
-        "// Only technicians that directly own a Vanilla Upgrades array are extended.",
-        "// Each technician gets a <VanillaSID>_BPRUE node inheriting the Vanilla prototype while keeping the original runtime SID.",
-        "// BPRUE upgrades are added with wildcard entries; inherited Vanilla upgrades are not copied.",
+        "// Only technicians that directly own a Vanilla Upgrades array are patched.",
+        "// BPRUE upgrades are appended to the existing Upgrades array via bpatch + wildcard entries.",
         "",
     ]
     for technician_sid, upgrades in assignments.items():
@@ -157,14 +156,9 @@ def render_technician_patch(
             continue
         # Keep one occurrence per SID while preserving BaseGame -> DLC order.
         upgrades = list({upgrade.sid: upgrade for upgrade in upgrades}.values())
-        node_name = f"{technician_sid}_BPRUE"
         lines += [
-            f"{node_name} : struct.begin {{refurl=../NPCPrototypes.cfg;refkey={technician_sid}}}",
-            f"   SID = {technician_sid}",
-            "   NPCType = ENPCType::Technician",
-            "   ThreshHoldItemCondition = 0.8",
-            "   NPCMarker = Technician",
-            "   Upgrades : struct.begin",
+            f"{technician_sid} : struct.begin {{bpatch}}",
+            "   Upgrades : struct.begin {bpatch}",
         ]
         for upgrade in upgrades:
             lines += ["      [*] : struct.begin", f"         UpgradePrototypeSID = {upgrade.sid}", "         Enabled = true", "      struct.end"]
