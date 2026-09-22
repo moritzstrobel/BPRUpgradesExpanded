@@ -148,7 +148,7 @@ def render_technician_patch(
     lines = [
         "// AUTO-GENERATED - BPRUE upgrades follow each technician's effective Vanilla/DLC weapon support.",
         "// Only technicians that directly own a Vanilla Upgrades array are patched.",
-        "// Entries continue after Vanilla numeric indices; wildcard append is intentionally avoided.",
+        "// Entries use wildcard append so each BPRUE technician upgrade is appended at runtime.",
         "",
     ]
     for technician_sid, upgrades in assignments.items():
@@ -156,10 +156,9 @@ def render_technician_patch(
             continue
         # Keep one occurrence per SID while preserving BaseGame -> DLC order.
         upgrades = list({upgrade.sid: upgrade for upgrade in upgrades}.values())
-        next_index = direct_owners[technician_sid] + 1
         lines += [f"{technician_sid} : struct.begin {{bpatch}}", "   Upgrades : struct.begin {bpatch}"]
-        for offset, upgrade in enumerate(upgrades):
-            lines += [f"      [{next_index + offset}] : struct.begin", f"         UpgradePrototypeSID = {upgrade.sid}", "         Enabled = true", "      struct.end"]
+        for upgrade in upgrades:
+            lines += ["      [*] : struct.begin", f"         UpgradePrototypeSID = {upgrade.sid}", "         Enabled = true", "      struct.end"]
         lines += ["   struct.end", "struct.end", ""]
     return "\n".join(lines).rstrip() + "\n"
 
