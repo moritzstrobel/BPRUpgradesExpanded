@@ -161,6 +161,9 @@ def render_technician_patch(
         lines += [
             f"{node_name} : struct.begin {{refurl=../NPCPrototypes.cfg;refkey={technician_sid}}}",
             f"   SID = {technician_sid}",
+            "   NPCType = ENPCType::Technician",
+            "   ThreshHoldItemCondition = 0.8",
+            "   NPCMarker = Technician",
             "   Upgrades : struct.begin",
         ]
         for upgrade in upgrades:
