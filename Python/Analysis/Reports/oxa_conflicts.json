@@ -43,6 +43,13 @@
       "oxa_inherited_arrays": 94,
       "oxa_replaced_arrays": 8
     },
+    "removal_identity_mismatches": {
+      "count": 3,
+      "resolution_counts": {
+        "comment_identity": 1,
+        "unresolved_comment_identity": 2
+      }
+    },
     "removal_analysis": {
       "upgrade_removal_category_counts": {
         "AutMuz": 15,
@@ -1055,6 +1062,45 @@
       }
     ],
     "unexpected_gameplay_upgrade_count": 6
+  },
+  "removal_identity_mismatches": {
+    "count": 3,
+    "resolution_counts": {
+      "comment_identity": 1,
+      "unresolved_comment_identity": 2
+    },
+    "records": [
+      {
+        "prototype": "GunAKU_PP",
+        "array": "UpgradePrototypeSIDs",
+        "patch_index": "[10]",
+        "index_identity": "GunAKU_Upgrade_Stock_1_2",
+        "comment_identity": "GunAKU_Upgrade_Attachment_Offset_Stock",
+        "resolved_index": "[11]",
+        "resolution": "comment_identity",
+        "source": "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_AKS74U.cfg"
+      },
+      {
+        "prototype": "GunDefender_SG",
+        "array": "UpgradePrototypeSIDs",
+        "patch_index": "[22]",
+        "index_identity": "GunD12_Upgrade_Attachment_Laser_HP",
+        "comment_identity": "GunM860_Upgrade_Attachment_Laser_HP",
+        "resolved_index": null,
+        "resolution": "unresolved_comment_identity",
+        "source": "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg"
+      },
+      {
+        "prototype": "Gun_Silence_SMG_GS",
+        "array": "UpgradePrototypeSIDs",
+        "patch_index": "[0]",
+        "index_identity": "GunAKU_Upgrade_Handguard_1_1",
+        "comment_identity": "GunAKU_Upgrade_Attachment_AutMuz",
+        "resolved_index": null,
+        "resolution": "unresolved_comment_identity",
+        "source": "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_AKS74U.cfg"
+      }
+    ]
   },
   "three_way": [
     {

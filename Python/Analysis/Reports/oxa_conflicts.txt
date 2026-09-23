@@ -11,12 +11,26 @@ overlap_records: 865
 oxa_multi_source_prototypes: 38
 semantic_arrays: {'groups': 82, 'severity_counts': {'CONTENT_CONFLICT': 6, 'INDEX_COLLISION': 1, 'MERGE_REQUIRED': 75}, 'array_counts': {'CompatibleAttachments': 6, 'FittingWeaponsSIDs': 8, 'UpgradePrototypeSIDs': 68}}
 three_way: {'groups': 102, 'classification_counts': {'BOTH_EXTEND_BASELINE': 1, 'BPRUE_ADDITION': 25, 'OXA_REMOVAL_REINTRODUCED': 76}, 'array_counts': {'CompatibleAttachments': 6, 'FittingWeaponsSIDs': 13, 'UpgradePrototypeSIDs': 83}, 'reintroduced_oxa_removal_entries': 234, 'oxa_inherited_arrays': 94, 'oxa_replaced_arrays': 8}
+removal_identity_mismatches: {'count': 3, 'resolution_counts': {'comment_identity': 1, 'unresolved_comment_identity': 2}}
 removal_analysis: {'upgrade_removal_category_counts': {'AutMuz': 15, 'Grip': 9, 'Laser': 12, 'Laser_HP': 44, 'Offset': 52, 'OtherGameplayUpgrade': 6, 'Rail': 5, 'SinMuz': 27}, 'compatible_attachment_removals': 11, 'fitting_weapon_removals': 53, 'unexpected_gameplay_upgrade_count': 6}
 severity_counts:
   CONFLICT: 471
   PROTOTYPE_OVERLAP: 203
   SAME_VALUE: 33
   STRUCTURAL: 158
+
+OXA removenode identity mismatches
+---------------------------------
+Total mismatches: 3
+  comment_identity: 1
+  unresolved_comment_identity: 2
+Review:
+  [comment_identity] GunAKU_PP :: UpgradePrototypeSIDs [10] comment=GunAKU_Upgrade_Attachment_Offset_Stock index_identity=GunAKU_Upgrade_Stock_1_2 resolved_index=[11]
+    source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_AKS74U.cfg
+  [unresolved_comment_identity] GunDefender_SG :: UpgradePrototypeSIDs [22] comment=GunM860_Upgrade_Attachment_Laser_HP index_identity=GunD12_Upgrade_Attachment_Laser_HP resolved_index=None
+    source: Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg
+  [unresolved_comment_identity] Gun_Silence_SMG_GS :: UpgradePrototypeSIDs [0] comment=GunAKU_Upgrade_Attachment_AutMuz index_identity=GunAKU_Upgrade_Handguard_1_1 resolved_index=None
+    source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_AKS74U.cfg
 
 OXA Vanilla-removal classification
 ----------------------------------
