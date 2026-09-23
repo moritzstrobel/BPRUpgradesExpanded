@@ -185,3 +185,32 @@ def render(result: dict) -> str:
     _render_items(lines, result["oxa_patched_vanilla"])
     return "\n".join(lines).rstrip() + "\n"
 
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(
+        description=(
+            "Inventory real OXA weapon setup prototypes and separate new SIDs, "
+            "replacement weapons, and ordinary Vanilla/DLC patches."
+        )
+    )
+    parser.add_argument("--oxa-root", type=Path, default=DEFAULT_OXA_ROOT)
+    parser.add_argument("--vanilla-root", type=Path, default=DEFAULT_VANILLA_ROOT)
+    parser.add_argument("--text-out", type=Path, default=DEFAULT_TEXT_OUT)
+    parser.add_argument("--json-out", type=Path, default=DEFAULT_JSON_OUT)
+    args = parser.parse_args()
+
+    result = discover(args.oxa_root, args.vanilla_root)
+    text_report = render(result)
+
+    args.text_out.parent.mkdir(parents=True, exist_ok=True)
+    args.text_out.write_text(text_report, encoding="utf-8")
+    args.json_out.write_text(json.dumps(result, indent=2), encoding="utf-8")
+
+    print(text_report, end="")
+    print(f"\nFull report: {args.text_out.relative_to(ROOT).as_posix()}")
+    print(f"JSON:        {args.json_out.relative_to(ROOT).as_posix()}")
+
+
+if __name__ == "__main__":
+    main()
