@@ -100,10 +100,29 @@ def render_general_setup(model: UpgradeBuildModel) -> str:
         "",
     ]
     for setup_sid, upgrades in model.by_general_setup().items():
+        # OXA owns the baseline array for these weapons. Emit one complete,
+        # deterministic indexed array: existing OXA entries first, then BPRUE.
+        # GunAKS74N_G2_ST currently reuses the eight Vanilla AK74 roots; the
+        # two OXA pistols intentionally start with no upgrade roots.
+        baseline = {
+            "GunAKS74N_G2_ST": [
+                "GunAK74_Upgrade_Barrel_1",
+                "GunAK74_Upgrade_Barrel_2_1",
+                "GunAK74_Upgrade_Barrel_2_2",
+                "GunAK74_Upgrade_Body_1",
+                "GunAK74_Upgrade_Body_2",
+                "GunAK74_Upgrade_Stock_1",
+                "GunAK74_Upgrade_Stock_2",
+                "GunAK74_Upgrade_Stock_3",
+            ],
+            "GunGlock17_HG": [],
+            "GunP30L_HG": [],
+        }[setup_sid]
+        combined = list(dict.fromkeys([*baseline, *(upgrade.sid for upgrade in upgrades)]))
         lines += [
             f"{setup_sid} : struct.begin {{bpatch}}",
-            "   UpgradePrototypeSIDs : struct.begin {bpatch}",
-            *(f"      [*] = {upgrade.sid}" for upgrade in upgrades),
+            "   UpgradePrototypeSIDs : struct.begin",
+            *(f"      [{index}] = {sid}" for index, sid in enumerate(combined)),
             "   struct.end",
             "struct.end",
             "",
