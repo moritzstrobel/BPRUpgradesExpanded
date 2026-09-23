@@ -136,8 +136,9 @@ def render_technician_patch(
     dlc_models: dict[str, UpgradeBuildModel] | None = None,
 ) -> str:
     assignments = technician_upgrade_assignments(model)
+
     # DLC upgrades live in separate models, but technician capability still lives
-    # in BaseGame NPCPrototypes. Merge them into the same NPC patch.
+    # in BaseGame NPCPrototypes. Merge them into the same per-technician list.
     for content_pack, dlc_model in sorted((dlc_models or {}).items()):
         support = dlc_technician_general_setups(content_pack)
         candidates = dlc_model.technician_upgrades()
@@ -149,36 +150,44 @@ def render_technician_patch(
             ]
             assignments.setdefault(technician_sid, []).extend(additions)
 
-    # Patch the node that actually owns the Vanilla Upgrades struct. Patching an
-    # inherited Upgrades child on a concrete technician (for example Surup ->
-    # semenyc_0) does not reliably extend that technician's install permissions.
-    owners = vanilla_technician_upgrade_owners()
-    owner_assignments: dict[str, list[UpgradeDefinition]] = {}
-    for technician_sid, upgrades in assignments.items():
-        owner_sid = owners.get(technician_sid)
-        if not owner_sid:
-            continue
-        owner_assignments.setdefault(owner_sid, []).extend(upgrades)
-
+    # UpgradeAway demonstrates a useful CFG pattern for inherited technicians:
+    # materialize the concrete NPC's Upgrades node and give it an explicit
+    # refkey to a standalone named upgrade-list struct. This avoids relying on
+    # a bpatch against an Upgrades node that only exists through NPC refkey
+    # inheritance.
     lines = [
         "// AUTO-GENERATED - BPRUE upgrades follow each technician's effective Vanilla/DLC weapon support.",
-        "// Patches target the Vanilla refkey-chain node that directly owns Upgrades.",
-        "// Concrete technicians inherit the extended list from that same Vanilla owner.",
-        "// Entries are keyed by UpgradePrototypeSID instead of Vanilla numeric indices or [*].",
-        "// This gives every BPRUE entry a stable merge key so third-party technician bpatches",
-        "// can coexist without competing for append/index positions.",
+        "// Each technician gets a standalone BPRUE upgrade-list struct and explicitly references it",
+        "// from Upgrades via {bpatch;refkey=...}, following the proven UpgradeAway CFG pattern.",
+        "// Lists remain technician-specific: BPRUE does not grant every upgrade to every technician.",
         "",
     ]
-    for owner_sid, upgrades in owner_assignments.items():
+
+    rendered: list[tuple[str, str]] = []
+    for technician_sid, upgrades in assignments.items():
         if not upgrades:
             continue
-        # Multiple concrete technicians can resolve to the same owner. Keep one
-        # occurrence per SID while preserving BaseGame -> DLC order.
         upgrades = list({upgrade.sid: upgrade for upgrade in upgrades}.values())
-        lines += [f"{owner_sid} : struct.begin {{bpatch}}", "   Upgrades : struct.begin {bpatch}"]
+        list_sid = f"BPRUE_{technician_sid}_UpgradeList"
+        rendered.append((technician_sid, list_sid))
+
+        lines += [f"{list_sid} : struct.begin"]
         for upgrade in upgrades:
-            lines += [f"      {upgrade.sid} : struct.begin", f"         UpgradePrototypeSID = {upgrade.sid}", "         Enabled = true", "      struct.end"]
-        lines += ["   struct.end", "struct.end", ""]
-    return "\n".join(lines).rstrip() + "\n"
+            lines += [
+                f"   {upgrade.sid} : struct.begin",
+                f"      UpgradePrototypeSID = {upgrade.sid}",
+                "      Enabled = true",
+                "   struct.end",
+            ]
+        lines += ["struct.end", ""]
 
+    for technician_sid, list_sid in rendered:
+        lines += [
+            f"{technician_sid} : struct.begin {{bpatch}}",
+            f"   Upgrades : struct.begin {{bpatch;refkey={list_sid}}}",
+            "   struct.end",
+            "struct.end",
+            "",
+        ]
 
+    return "\\n".join(lines).rstrip() + "\\n"
