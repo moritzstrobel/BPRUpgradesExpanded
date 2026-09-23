@@ -1,6 +1,6 @@
 BPRUE <-> OXA SMG pipeline
 ==========================
-SMGs=11 groups=22 findings=443 severity={'CRITICAL': 323, 'HIGH': 1, 'MEDIUM': 119}
+SMGs=11 groups=22 findings=97 severity={'HIGH': 2, 'MEDIUM': 95}
 Compat property changes=0 suspicious=0
 
 GunAKU_PP: hashes V=185bea7a2d84 O=ca49ebc93c02 B=a2f39a3d4620 F=a2f39a3d4620 | changes=18 compat=0 suspicious=0
@@ -16,23 +16,16 @@ Gun_Spitfire_SMG_GS: hashes V=23df9bb5830d O=728ef31b612e B=728ef31b612e F=728ef
 Gun_Spitter_SMG_GS: hashes V=1d1eaedb160e O=d77ae28ac796 B=d77ae28ac796 F=d77ae28ac796 | changes=26 compat=0 suspicious=0
 
 Array findings:
-  GunAKU_PP :: CompatibleAttachments -> {'OXA_ENTRY_LOST': 56, 'BPRUE_ADDITION_LOST': 1}
   GunAKU_PP :: UpgradePrototypeSIDs -> {'EXISTING_ENTRY_MOVED': 10}
-  GunBucket_PP :: CompatibleAttachments -> {'OXA_ENTRY_LOST': 40, 'BPRUE_ADDITION_LOST': 1}
-  GunBucket_PP :: UpgradePrototypeSIDs -> {'EXISTING_ENTRY_MOVED': 12}
-  GunFora230_PP_GS :: CompatibleAttachments -> {'OXA_ENTRY_LOST': 54, 'BPRUE_ADDITION_LOST': 1}
+  GunBucket_PP :: CompatibleAttachments -> {'DUPLICATE_IDENTITIES': 1}
+  GunBucket_PP :: UpgradePrototypeSIDs -> {'EXISTING_ENTRY_MOVED': 11}
   GunFora230_PP_GS :: UpgradePrototypeSIDs -> {'EXISTING_ENTRY_MOVED': 11}
-  GunIntegral_PP :: CompatibleAttachments -> {'OXA_ENTRY_LOST': 58, 'BPRUE_ADDITION_LOST': 1}
   GunIntegral_PP :: UpgradePrototypeSIDs -> {'EXISTING_ENTRY_MOVED': 13}
-  GunViper_PP :: CompatibleAttachments -> {'OXA_ENTRY_LOST': 53, 'BPRUE_ADDITION_LOST': 1}
-  GunViper_PP :: UpgradePrototypeSIDs -> {'EXISTING_ENTRY_MOVED': 11}
-  GunZubr_PP :: CompatibleAttachments -> {'OXA_ENTRY_LOST': 56, 'BPRUE_ADDITION_LOST': 1}
   GunZubr_PP :: UpgradePrototypeSIDs -> {'EXISTING_ENTRY_MOVED': 15}
   Gun_RatKiller_SMG_GS :: UpgradePrototypeSIDs -> {'EXISTING_ENTRY_MOVED': 14}
-  Gun_Shakh_SMG_GS :: UpgradePrototypeSIDs -> {'EXISTING_ENTRY_MOVED': 11}
   Gun_Spitfire_SMG_GS :: UpgradePrototypeSIDs -> {'EXISTING_ENTRY_MOVED': 10}
   Gun_Spitter_SMG_GS :: CompatibleAttachments -> {'DUPLICATE_IDENTITIES': 1}
-  Gun_Spitter_SMG_GS :: UpgradePrototypeSIDs -> {'EXISTING_ENTRY_MOVED': 12}
+  Gun_Spitter_SMG_GS :: UpgradePrototypeSIDs -> {'EXISTING_ENTRY_MOVED': 11}
 
 PROPERTY DIFFS
 ==============
@@ -725,463 +718,110 @@ hashes: {'vanilla': '1d1eaedb160e', 'oxa': 'd77ae28ac796', 'after_bprue': 'd77ae
 
 ARRAY FINDINGS
 ==============
-GunAKU_PP :: CompatibleAttachments counts={'vanilla': 7, 'oxa': 56, 'after_bprue': 8, 'final': 57} replace(O/B/C)=False/True/True
-  CRITICAL OXA_ENTRY_LOST :: identity=RU_AutMuz_2
-  CRITICAL OXA_ENTRY_LOST :: identity=AKU_DefaultMuz
-  CRITICAL OXA_ENTRY_LOST :: identity=OXAMuzzleBrake_545
-  CRITICAL OXA_ENTRY_LOST :: identity=OXALateralComp_545
-  CRITICAL OXA_ENTRY_LOST :: identity=OXABalancedVent_545
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M2
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M3
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M4
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M5
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M6
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M7
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M8
-  CRITICAL OXA_ENTRY_LOST :: identity=GunAKU_MagDefault
-  CRITICAL OXA_ENTRY_LOST :: identity=GunAK_MagPaired
-  CRITICAL OXA_ENTRY_LOST :: identity=GunAK74_MagIncreased
-  CRITICAL OXA_ENTRY_LOST :: identity=GunAK74_MagIncreased2
-  CRITICAL OXA_ENTRY_LOST :: identity=GunAKU_Silence_MagDefault
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Mag_545x39_PMag30r
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Rail_Scope
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Rail_Laser
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_X2Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_X3Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_X4Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Aselsan
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_OASYS
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Spitfire
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_SpitfireAR
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_SpitfireHD
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_XM157
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_X2Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=RU_X2Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_ColimScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_GoloScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_HoloScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Crossfire
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Cyelee
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_EOTech551
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_EXPS2
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_EXPS3
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Holosun
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_MicroT1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Romeo8T
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Venom
-  CRITICAL OXA_ENTRY_LOST :: identity=RU_ColimScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_OKP7
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_2
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_3
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_4
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_5
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_6
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_7
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_8
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_9
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_10
-  CRITICAL BPRUE_ADDITION_LOST :: identity=BPRUE_AKU_PistolConversionKit
 GunAKU_PP :: UpgradePrototypeSIDs counts={'vanilla': 12, 'oxa': 10, 'after_bprue': 30, 'final': 28} replace(O/B/C)=False/True/True
   MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Attachment_Rail, oxa_index=[1], final_index=[0]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Handguard_1_1, oxa_index=[2], final_index=[22]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Handguard_1_2, oxa_index=[3], final_index=[23]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Handguard_2_1, oxa_index=[4], final_index=[24]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Handguard_2_2, oxa_index=[5], final_index=[25]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Body_1, oxa_index=[6], final_index=[19]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Body_2_1, oxa_index=[7], final_index=[20]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Body_2_2, oxa_index=[8], final_index=[21]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Stock_1_1, oxa_index=[9], final_index=[26]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Stock_1_2, oxa_index=[10], final_index=[27]
-GunBucket_PP :: CompatibleAttachments counts={'vanilla': 8, 'oxa': 41, 'after_bprue': 9, 'final': 41} replace(O/B/C)=False/True/True
-  CRITICAL OXA_ENTRY_LOST :: identity=RU_AutMuz_1
-  CRITICAL OXA_ENTRY_LOST :: identity=RU_Laser_1
-  CRITICAL OXA_ENTRY_LOST :: identity=HP_Laser_2
-  CRITICAL OXA_ENTRY_LOST :: identity=OXAMuzzleBrake_9mm
-  CRITICAL OXA_ENTRY_LOST :: identity=OXALateralComp_9mm
-  CRITICAL OXA_ENTRY_LOST :: identity=OXABalancedVent_9mm
-  CRITICAL OXA_ENTRY_LOST :: identity=Spitter_DefaultMuz
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_S1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_S2
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_S3
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_S4
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_S5
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M2
-  CRITICAL OXA_ENTRY_LOST :: identity=GunBucket_MagDefault
-  CRITICAL OXA_ENTRY_LOST :: identity=GunBucket_MagIncreased
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Rail_Scope
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Rail_Laser
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_ColimScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_GoloScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_HoloScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Crossfire
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Cyelee
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_EOTech551
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_EXPS2
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_EXPS3
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Holosun
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_MicroT1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Romeo8T
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Venom
-  CRITICAL OXA_ENTRY_LOST :: identity=RU_ColimScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_2
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_3
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_4
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_5
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_6
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_7
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_8
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_9
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_10
-  CRITICAL BPRUE_ADDITION_LOST :: identity=BPRUE_Bucket_PistolConversionKit
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Handguard_1_1, oxa_index=[2], final_index=[1]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Handguard_1_2, oxa_index=[3], final_index=[2]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Handguard_2_1, oxa_index=[4], final_index=[3]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Handguard_2_2, oxa_index=[5], final_index=[4]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Body_1, oxa_index=[6], final_index=[5]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Body_2_1, oxa_index=[7], final_index=[6]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Body_2_2, oxa_index=[8], final_index=[7]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Stock_1_1, oxa_index=[9], final_index=[8]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Stock_1_2, oxa_index=[10], final_index=[9]
+GunBucket_PP :: CompatibleAttachments counts={'vanilla': 8, 'oxa': 41, 'after_bprue': 9, 'final': 42} replace(O/B/C)=False/True/True
+  HIGH DUPLICATE_IDENTITIES :: identities=['RU_AutMuz_1']
 GunBucket_PP :: UpgradePrototypeSIDs counts={'vanilla': 15, 'oxa': 12, 'after_bprue': 38, 'final': 35} replace(O/B/C)=False/True/True
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Attachment_Rail, oxa_index=[0], final_index=[1]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Attachment_Laser, oxa_index=[2], final_index=[0]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Barrel_1, oxa_index=[3], final_index=[25]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Barrel_2_1, oxa_index=[4], final_index=[26]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Barrel_2_2, oxa_index=[5], final_index=[27]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Barrel_3, oxa_index=[6], final_index=[28]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Body_1, oxa_index=[7], final_index=[29]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Body_2, oxa_index=[8], final_index=[30]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Body_3, oxa_index=[9], final_index=[31]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Grip_1, oxa_index=[10], final_index=[32]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Grip_2, oxa_index=[11], final_index=[33]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Grip_3, oxa_index=[12], final_index=[34]
-GunFora230_PP_GS :: CompatibleAttachments counts={'vanilla': 11, 'oxa': 54, 'after_bprue': 12, 'final': 55} replace(O/B/C)=False/True/True
-  CRITICAL OXA_ENTRY_LOST :: identity=RU_Silen_1
-  CRITICAL OXA_ENTRY_LOST :: identity=RU_SinMuz_1
-  CRITICAL OXA_ENTRY_LOST :: identity=RU_Laser_1
-  CRITICAL OXA_ENTRY_LOST :: identity=HP_Laser_1
-  CRITICAL OXA_ENTRY_LOST :: identity=Ironsights_02
-  CRITICAL OXA_ENTRY_LOST :: identity=GunFora230_DefaultMuz
-  CRITICAL OXA_ENTRY_LOST :: identity=OXAMuzzleBrake_9mm
-  CRITICAL OXA_ENTRY_LOST :: identity=OXALateralComp_9mm
-  CRITICAL OXA_ENTRY_LOST :: identity=OXABalancedVent_9mm
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M2
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M3
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M4
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M5
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M6
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M7
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M8
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M9
-  CRITICAL OXA_ENTRY_LOST :: identity=GunFora230_MagDefault
-  CRITICAL OXA_ENTRY_LOST :: identity=GunFora230_MagIncreased
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_X2Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_X3Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_X4Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Aselsan
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_OASYS
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Spitfire
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_SpitfireAR
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_SpitfireHD
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_XM157
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_X2Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=RU_X2Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_ColimScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_GoloScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_HoloScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Crossfire
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Cyelee
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_EOTech551
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_EXPS2
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_EXPS3
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Holosun
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_MicroT1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Romeo8T
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Venom
-  CRITICAL OXA_ENTRY_LOST :: identity=RU_ColimScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_2
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_3
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_4
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_5
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_6
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_7
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_8
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_9
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_10
-  CRITICAL BPRUE_ADDITION_LOST :: identity=BPRUE_Fora230_PistolConversionKit
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Attachment_Laser, oxa_index=[2], final_index=[1]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Barrel_1, oxa_index=[3], final_index=[2]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Barrel_2_1, oxa_index=[4], final_index=[3]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Barrel_2_2, oxa_index=[5], final_index=[4]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Barrel_3, oxa_index=[6], final_index=[5]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Body_1, oxa_index=[7], final_index=[6]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Body_2, oxa_index=[8], final_index=[7]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Body_3, oxa_index=[9], final_index=[8]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Grip_1, oxa_index=[10], final_index=[9]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Grip_2, oxa_index=[11], final_index=[10]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Grip_3, oxa_index=[12], final_index=[11]
 GunFora230_PP_GS :: UpgradePrototypeSIDs counts={'vanilla': 15, 'oxa': 11, 'after_bprue': 33, 'final': 29} replace(O/B/C)=False/True/True
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunFora230_Upgrade_Barrel_1_1, oxa_index=[4], final_index=[18]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunFora230_Upgrade_Barrel_1_2, oxa_index=[5], final_index=[19]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunFora230_Upgrade_Barrel_2, oxa_index=[6], final_index=[20]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunFora230_Upgrade_Handguard_1, oxa_index=[7], final_index=[24]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunFora230_Upgrade_Handguard_2, oxa_index=[8], final_index=[25]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunFora230_Upgrade_Body_1, oxa_index=[9], final_index=[21]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunFora230_Upgrade_Body_2_1, oxa_index=[10], final_index=[22]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunFora230_Upgrade_Body_2_2, oxa_index=[11], final_index=[23]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunFora230_Upgrade_Stock_1, oxa_index=[12], final_index=[26]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunFora230_Upgrade_Stock_2, oxa_index=[13], final_index=[27]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunFora230_Upgrade_Stock_3, oxa_index=[14], final_index=[28]
-GunIntegral_PP :: CompatibleAttachments counts={'vanilla': 12, 'oxa': 58, 'after_bprue': 13, 'final': 59} replace(O/B/C)=False/True/True
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_SinMuz_2
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_AutMuz_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_Grip_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_Laser_1
-  CRITICAL OXA_ENTRY_LOST :: identity=Ironsights_01
-  CRITICAL OXA_ENTRY_LOST :: identity=OXAMuzzleBrake_9mm
-  CRITICAL OXA_ENTRY_LOST :: identity=OXALateralComp_9mm
-  CRITICAL OXA_ENTRY_LOST :: identity=OXABalancedVent_9mm
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M2
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M3
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M4
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M5
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M6
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M7
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M8
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M9
-  CRITICAL OXA_ENTRY_LOST :: identity=GunIntegral_MagDefault
-  CRITICAL OXA_ENTRY_LOST :: identity=GunIntegral_MagIncreased
-  CRITICAL OXA_ENTRY_LOST :: identity=OXAGripContoured
-  CRITICAL OXA_ENTRY_LOST :: identity=OXAGripStubby
-  CRITICAL OXA_ENTRY_LOST :: identity=OXAGripWeighted
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Rail_Laser
-  CRITICAL OXA_ENTRY_LOST :: identity=GunIntegral_FrontExtension
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_X2Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_X3Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_X4Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Aselsan
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_OASYS
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Spitfire
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_SpitfireAR
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_SpitfireHD
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_XM157
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_X2Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=RU_X2Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_ColimScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_GoloScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_HoloScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Crossfire
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Cyelee
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_EOTech551
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_EXPS2
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_EXPS3
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Holosun
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_MicroT1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Romeo8T
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Venom
-  CRITICAL OXA_ENTRY_LOST :: identity=RU_ColimScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_2
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_3
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_4
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_5
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_6
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_7
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_8
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_9
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_10
-  CRITICAL BPRUE_ADDITION_LOST :: identity=BPRUE_Integral_PistolConversionKit
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunFora230_Upgrade_Barrel_1_1, oxa_index=[4], final_index=[0]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunFora230_Upgrade_Barrel_1_2, oxa_index=[5], final_index=[1]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunFora230_Upgrade_Barrel_2, oxa_index=[6], final_index=[2]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunFora230_Upgrade_Handguard_1, oxa_index=[7], final_index=[3]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunFora230_Upgrade_Handguard_2, oxa_index=[8], final_index=[4]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunFora230_Upgrade_Body_1, oxa_index=[9], final_index=[5]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunFora230_Upgrade_Body_2_1, oxa_index=[10], final_index=[6]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunFora230_Upgrade_Body_2_2, oxa_index=[11], final_index=[7]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunFora230_Upgrade_Stock_1, oxa_index=[12], final_index=[8]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunFora230_Upgrade_Stock_2, oxa_index=[13], final_index=[9]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunFora230_Upgrade_Stock_3, oxa_index=[14], final_index=[10]
 GunIntegral_PP :: UpgradePrototypeSIDs counts={'vanilla': 18, 'oxa': 13, 'after_bprue': 36, 'final': 31} replace(O/B/C)=False/True/True
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Attachment_Laser, oxa_index=[2], final_index=[1]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Attachment_FrontExtension, oxa_index=[4], final_index=[0]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Barrel_1, oxa_index=[5], final_index=[20]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Barrel_2, oxa_index=[6], final_index=[21]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Barrel_3_1, oxa_index=[7], final_index=[22]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Barrel_3_2, oxa_index=[8], final_index=[23]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Body_1, oxa_index=[9], final_index=[24]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Body_2_1, oxa_index=[10], final_index=[25]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Body_2_2, oxa_index=[11], final_index=[26]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Body_3, oxa_index=[12], final_index=[27]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Stock_1, oxa_index=[13], final_index=[28]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Stock_2_1, oxa_index=[14], final_index=[29]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Stock_2_2, oxa_index=[15], final_index=[30]
-GunViper_PP :: CompatibleAttachments counts={'vanilla': 7, 'oxa': 53, 'after_bprue': 8, 'final': 54} replace(O/B/C)=False/True/True
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_Laser_1
-  CRITICAL OXA_ENTRY_LOST :: identity=Gun_Shakh_MagIncreased
-  CRITICAL OXA_ENTRY_LOST :: identity=HP_Laser_2
-  CRITICAL OXA_ENTRY_LOST :: identity=OXAMuzzleBrake_9mm
-  CRITICAL OXA_ENTRY_LOST :: identity=OXALateralComp_9mm
-  CRITICAL OXA_ENTRY_LOST :: identity=OXABalancedVent_9mm
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M2
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M3
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M4
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M5
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M6
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M7
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M8
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M9
-  CRITICAL OXA_ENTRY_LOST :: identity=GunViper_MagDefault
-  CRITICAL OXA_ENTRY_LOST :: identity=GunViper_MagIncreased
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Rail_Scope
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Rail_Laser
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_X2Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_X3Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_X4Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Aselsan
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_OASYS
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Spitfire
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_SpitfireAR
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_SpitfireHD
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_XM157
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_X2Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=RU_X2Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_ColimScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_GoloScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_HoloScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Crossfire
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Cyelee
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_EOTech551
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_EXPS2
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_EXPS3
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Holosun
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_MicroT1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Romeo8T
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Venom
-  CRITICAL OXA_ENTRY_LOST :: identity=RU_ColimScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_2
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_3
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_4
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_5
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_6
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_7
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_8
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_9
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_10
-  CRITICAL BPRUE_ADDITION_LOST :: identity=BPRUE_Viper_PistolConversionKit
-GunViper_PP :: UpgradePrototypeSIDs counts={'vanilla': 13, 'oxa': 11, 'after_bprue': 31, 'final': 29} replace(O/B/C)=False/True/True
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunViper_Upgrade_Attachment_Rail, oxa_index=[0], final_index=[1]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunViper_Upgrade_Attachment_Laser, oxa_index=[1], final_index=[0]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunViper_Upgrade_Barrel_1_1, oxa_index=[2], final_index=[20]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunViper_Upgrade_Barrel_1_2, oxa_index=[3], final_index=[21]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunViper_Upgrade_Barrel_2_1, oxa_index=[4], final_index=[22]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunViper_Upgrade_Barrel_2_2, oxa_index=[5], final_index=[23]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunViper_Upgrade_Barrel_3, oxa_index=[6], final_index=[24]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunViper_Upgrade_Body_1, oxa_index=[7], final_index=[25]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunViper_Upgrade_Body_2, oxa_index=[8], final_index=[26]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunViper_Upgrade_Body_3_1, oxa_index=[9], final_index=[27]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunViper_Upgrade_Body_3_2, oxa_index=[10], final_index=[28]
-GunZubr_PP :: CompatibleAttachments counts={'vanilla': 11, 'oxa': 56, 'after_bprue': 12, 'final': 57} replace(O/B/C)=False/True/True
-  CRITICAL OXA_ENTRY_LOST :: identity=Zubr_SinMuz
-  CRITICAL OXA_ENTRY_LOST :: identity=RU_AutMuz_1
-  CRITICAL OXA_ENTRY_LOST :: identity=RU_Laser_1
-  CRITICAL OXA_ENTRY_LOST :: identity=HP_Laser_1
-  CRITICAL OXA_ENTRY_LOST :: identity=IronsightEnabler
-  CRITICAL OXA_ENTRY_LOST :: identity=OXAMuzzleBrake_9mm
-  CRITICAL OXA_ENTRY_LOST :: identity=OXALateralComp_9mm
-  CRITICAL OXA_ENTRY_LOST :: identity=OXABalancedVent_9mm
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M2
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M3
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M4
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M5
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M6
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M7
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M8
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Silen_M9
-  CRITICAL OXA_ENTRY_LOST :: identity=GunZubr_MagDefault
-  CRITICAL OXA_ENTRY_LOST :: identity=GunZubr_MagIncreased
-  CRITICAL OXA_ENTRY_LOST :: identity=Gun_RatKiller_MagDefault
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Rail_Scope
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Rail_Laser
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_X2Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_X3Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_X4Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Aselsan
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_OASYS
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Spitfire
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_SpitfireAR
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_SpitfireHD
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_XM157
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_X2Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=RU_X2Scope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_ColimScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=EN_GoloScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_HoloScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Crossfire
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Cyelee
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_EOTech551
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_EXPS2
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_EXPS3
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Holosun
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_MicroT1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Romeo8T
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Scope_Venom
-  CRITICAL OXA_ENTRY_LOST :: identity=RU_ColimScope_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_1
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_2
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_3
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_4
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_5
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_6
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_7
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_8
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_9
-  CRITICAL OXA_ENTRY_LOST :: identity=OXA_Laser_10
-  CRITICAL BPRUE_ADDITION_LOST :: identity=BPRUE_Zubr_PistolConversionKit
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Attachment_Laser, oxa_index=[2], final_index=[0]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Attachment_FrontExtension, oxa_index=[4], final_index=[1]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Barrel_1, oxa_index=[5], final_index=[2]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Barrel_2, oxa_index=[6], final_index=[3]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Barrel_3_1, oxa_index=[7], final_index=[4]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Barrel_3_2, oxa_index=[8], final_index=[5]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Body_1, oxa_index=[9], final_index=[6]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Body_2_1, oxa_index=[10], final_index=[7]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Body_2_2, oxa_index=[11], final_index=[8]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Body_3, oxa_index=[12], final_index=[9]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Stock_1, oxa_index=[13], final_index=[10]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Stock_2_1, oxa_index=[14], final_index=[11]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunIntegral_Upgrade_Stock_2_2, oxa_index=[15], final_index=[12]
 GunZubr_PP :: UpgradePrototypeSIDs counts={'vanilla': 19, 'oxa': 15, 'after_bprue': 42, 'final': 38} replace(O/B/C)=False/True/True
   MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Attachment_Laser, oxa_index=[2], final_index=[0]
   MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Attachment_Rail, oxa_index=[3], final_index=[1]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Barrel_1, oxa_index=[4], final_index=[25]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Barrel_2_1, oxa_index=[5], final_index=[26]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Barrel_2_2, oxa_index=[6], final_index=[27]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Barrel_3, oxa_index=[7], final_index=[28]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Handguard_1, oxa_index=[8], final_index=[35]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Handguard_2_1, oxa_index=[9], final_index=[36]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Handguard_2_2, oxa_index=[10], final_index=[37]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Body_1, oxa_index=[11], final_index=[29]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Body_2, oxa_index=[12], final_index=[30]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Grip_1, oxa_index=[13], final_index=[31]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Grip_2_1, oxa_index=[14], final_index=[32]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Grip_2_2, oxa_index=[15], final_index=[33]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Grip_3, oxa_index=[16], final_index=[34]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Barrel_1, oxa_index=[4], final_index=[2]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Barrel_2_1, oxa_index=[5], final_index=[3]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Barrel_2_2, oxa_index=[6], final_index=[4]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Barrel_3, oxa_index=[7], final_index=[5]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Handguard_1, oxa_index=[8], final_index=[6]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Handguard_2_1, oxa_index=[9], final_index=[7]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Handguard_2_2, oxa_index=[10], final_index=[8]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Body_1, oxa_index=[11], final_index=[9]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Body_2, oxa_index=[12], final_index=[10]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Grip_1, oxa_index=[13], final_index=[11]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Grip_2_1, oxa_index=[14], final_index=[12]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Grip_2_2, oxa_index=[15], final_index=[13]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Grip_3, oxa_index=[16], final_index=[14]
 Gun_RatKiller_SMG_GS :: UpgradePrototypeSIDs counts={'vanilla': 18, 'oxa': 14, 'after_bprue': 42, 'final': 38} replace(O/B/C)=False/True/True
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Barrel_1, oxa_index=[2], final_index=[25]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Barrel_2_1, oxa_index=[3], final_index=[26]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Barrel_2_2, oxa_index=[4], final_index=[27]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Barrel_3, oxa_index=[5], final_index=[28]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Handguard_1, oxa_index=[6], final_index=[35]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Handguard_2_1, oxa_index=[7], final_index=[36]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Handguard_2_2, oxa_index=[8], final_index=[37]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Body_1, oxa_index=[9], final_index=[29]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Body_2, oxa_index=[10], final_index=[30]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Grip_1, oxa_index=[11], final_index=[31]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Grip_2_1, oxa_index=[12], final_index=[32]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Grip_2_2, oxa_index=[13], final_index=[33]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Grip_3, oxa_index=[14], final_index=[34]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Attachment_Offset_Stock, oxa_index=[17], final_index=[24]
-Gun_Shakh_SMG_GS :: UpgradePrototypeSIDs counts={'vanilla': 13, 'oxa': 11, 'after_bprue': 32, 'final': 30} replace(O/B/C)=False/True/True
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunViper_Upgrade_Attachment_Rail, oxa_index=[0], final_index=[20]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunViper_Upgrade_Attachment_Laser, oxa_index=[1], final_index=[19]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunViper_Upgrade_Barrel_1_1, oxa_index=[2], final_index=[21]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunViper_Upgrade_Barrel_1_2, oxa_index=[3], final_index=[22]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunViper_Upgrade_Barrel_2_1, oxa_index=[4], final_index=[23]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunViper_Upgrade_Barrel_2_2, oxa_index=[5], final_index=[24]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunViper_Upgrade_Barrel_3, oxa_index=[6], final_index=[25]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunViper_Upgrade_Body_1, oxa_index=[7], final_index=[26]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunViper_Upgrade_Body_2, oxa_index=[8], final_index=[27]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunViper_Upgrade_Body_3_1, oxa_index=[9], final_index=[28]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunViper_Upgrade_Body_3_2, oxa_index=[10], final_index=[29]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Barrel_1, oxa_index=[2], final_index=[0]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Barrel_2_1, oxa_index=[3], final_index=[1]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Barrel_2_2, oxa_index=[4], final_index=[2]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Barrel_3, oxa_index=[5], final_index=[3]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Handguard_1, oxa_index=[6], final_index=[4]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Handguard_2_1, oxa_index=[7], final_index=[5]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Handguard_2_2, oxa_index=[8], final_index=[6]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Body_1, oxa_index=[9], final_index=[7]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Body_2, oxa_index=[10], final_index=[8]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Grip_1, oxa_index=[11], final_index=[9]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Grip_2_1, oxa_index=[12], final_index=[10]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Grip_2_2, oxa_index=[13], final_index=[11]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Grip_3, oxa_index=[14], final_index=[12]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunZubr_Upgrade_Attachment_Offset_Stock, oxa_index=[17], final_index=[13]
 Gun_Spitfire_SMG_GS :: UpgradePrototypeSIDs counts={'vanilla': 12, 'oxa': 10, 'after_bprue': 31, 'final': 29} replace(O/B/C)=False/True/True
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Attachment_Rail, oxa_index=[1], final_index=[19]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Handguard_1_1, oxa_index=[2], final_index=[23]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Handguard_1_2, oxa_index=[3], final_index=[24]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Handguard_2_1, oxa_index=[4], final_index=[25]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Handguard_2_2, oxa_index=[5], final_index=[26]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Body_1, oxa_index=[6], final_index=[20]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Body_2_1, oxa_index=[7], final_index=[21]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Body_2_2, oxa_index=[8], final_index=[22]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Stock_1_1, oxa_index=[9], final_index=[27]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Stock_1_2, oxa_index=[10], final_index=[28]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Attachment_Rail, oxa_index=[1], final_index=[0]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Handguard_1_1, oxa_index=[2], final_index=[1]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Handguard_1_2, oxa_index=[3], final_index=[2]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Handguard_2_1, oxa_index=[4], final_index=[3]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Handguard_2_2, oxa_index=[5], final_index=[4]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Body_1, oxa_index=[6], final_index=[5]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Body_2_1, oxa_index=[7], final_index=[6]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Body_2_2, oxa_index=[8], final_index=[7]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Stock_1_1, oxa_index=[9], final_index=[8]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunAKU_Upgrade_Stock_1_2, oxa_index=[10], final_index=[9]
 Gun_Spitter_SMG_GS :: CompatibleAttachments counts={'vanilla': 7, 'oxa': 41, 'after_bprue': 41, 'final': 41} replace(O/B/C)=False/False/False
   HIGH DUPLICATE_IDENTITIES :: identities=['RU_AutMuz_1']
 Gun_Spitter_SMG_GS :: UpgradePrototypeSIDs counts={'vanilla': 15, 'oxa': 12, 'after_bprue': 39, 'final': 36} replace(O/B/C)=False/True/True
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Attachment_Rail, oxa_index=[0], final_index=[25]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Attachment_Laser, oxa_index=[2], final_index=[24]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Barrel_1, oxa_index=[3], final_index=[26]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Barrel_2_1, oxa_index=[4], final_index=[27]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Barrel_2_2, oxa_index=[5], final_index=[28]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Barrel_3, oxa_index=[6], final_index=[29]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Body_1, oxa_index=[7], final_index=[30]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Body_2, oxa_index=[8], final_index=[31]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Body_3, oxa_index=[9], final_index=[32]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Grip_1, oxa_index=[10], final_index=[33]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Grip_2, oxa_index=[11], final_index=[34]
-  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Grip_3, oxa_index=[12], final_index=[35]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Attachment_Laser, oxa_index=[2], final_index=[1]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Barrel_1, oxa_index=[3], final_index=[2]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Barrel_2_1, oxa_index=[4], final_index=[3]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Barrel_2_2, oxa_index=[5], final_index=[4]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Barrel_3, oxa_index=[6], final_index=[5]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Body_1, oxa_index=[7], final_index=[6]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Body_2, oxa_index=[8], final_index=[7]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Body_3, oxa_index=[9], final_index=[8]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Grip_1, oxa_index=[10], final_index=[9]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Grip_2, oxa_index=[11], final_index=[10]
+  MEDIUM EXISTING_ENTRY_MOVED :: identity=GunBucket_Upgrade_Grip_3, oxa_index=[12], final_index=[11]

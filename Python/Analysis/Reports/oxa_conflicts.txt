@@ -1,9 +1,9 @@
 BPRUE <-> OXA CFG conflict analysis
 ====================================
 
-bprue_cfg_writes: 46604
+bprue_cfg_writes: 83389
 oxa_cfg_writes: 46423
-bprue_prototypes: 2035
+bprue_prototypes: 2060
 oxa_prototypes: 945
 overlapping_prototypes: 116
 overlapping_paths: 778
@@ -142,7 +142,7 @@ Vanilla -> effective BPRUE / effective OXA analysis
   BPRUE additions: BPRUE_GunBucket_Pistol_PP
 
 [OXA_REMOVAL_REINTRODUCED] GunBucket_PP :: CompatibleAttachments
-  vanilla=8 bprue=9 oxa=40 candidate=41
+  vanilla=8 bprue=9 oxa=40 candidate=42
   REINTRODUCED OXA REMOVALS: GunBucket_TopRail, RU_Silen_1
   BPRUE additions: BPRUE_Bucket_PistolConversionKit
   OXA additions:   EN_GoloScope_1, OXABalancedVent_9mm, OXALateralComp_9mm, OXAMuzzleBrake_9mm, OXA_HoloScope_1, OXA_Laser_1, OXA_Laser_10, OXA_Laser_2, OXA_Laser_3, OXA_Laser_4, OXA_Laser_5, OXA_Laser_6, OXA_Laser_7, OXA_Laser_8, OXA_Laser_9, OXA_Rail_Laser, OXA_Rail_Scope, OXA_Scope_Crossfire, OXA_Scope_Cyelee, OXA_Scope_EOTech551, OXA_Scope_EXPS2, OXA_Scope_EXPS3, OXA_Scope_Holosun, OXA_Scope_MicroT1, OXA_Scope_Romeo8T, OXA_Scope_Venom, OXA_Silen_M2, OXA_Silen_S1, OXA_Silen_S2, OXA_Silen_S3, OXA_Silen_S4, OXA_Silen_S5, RU_ColimScope_1, Spitter_DefaultMuz
