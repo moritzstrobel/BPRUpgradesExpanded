@@ -59,8 +59,6 @@ def parse_compat(root: Path) -> tuple[dict[tuple[str, str], dict], list[str]]:
         numeric = [int(e["index"][1:-1]) for e in entries if e["index"][1:-1].isdigit()]
         if numeric != list(range(len(numeric))):
             errors.append(f"non-contiguous indexes {prototype} :: {array}: {numeric}")
-        if len(values) != len(set(values)):
-            errors.append(f"duplicate values {prototype} :: {array}")
 
         sources = sorted(group.get("sources", []))
         groups[key] = {
@@ -151,22 +149,26 @@ def validate(report: dict, compat_root: Path) -> dict:
         want = item["compatibility_candidate"]
         got_set, want_set = set(got), set(want)
 
-        if got_set != want_set or len(got) != len(want):
-            content_mismatches.append({
-                "prototype": prototype,
-                "array": array,
-                "missing_values": sorted(want_set - got_set),
-                "extra_values": sorted(got_set - want_set),
-                "expected_count": len(want),
-                "actual_count": len(got),
-                "source": actual[key]["source"],
-            })
-        elif got != want:
-            ordering_notes.append({
-                "prototype": prototype,
-                "array": array,
-                "source": actual[key]["source"],
-            })
+        # Candidate equality is occurrence-sensitive. Duplicate identities are
+        # valid when the analyzer candidate contains them (notably structured
+        # CompatibleAttachments); multiplicity and order must still match.
+        if got != want:
+            if got_set != want_set or len(got) != len(want):
+                content_mismatches.append({
+                    "prototype": prototype,
+                    "array": array,
+                    "missing_values": sorted(want_set - got_set),
+                    "extra_values": sorted(got_set - want_set),
+                    "expected_count": len(want),
+                    "actual_count": len(got),
+                    "source": actual[key]["source"],
+                })
+            else:
+                ordering_notes.append({
+                    "prototype": prototype,
+                    "array": array,
+                    "source": actual[key]["source"],
+                })
 
         source = actual[key]["source"]
         expected_suffix = ARRAY_PATHS[array] + "/"
