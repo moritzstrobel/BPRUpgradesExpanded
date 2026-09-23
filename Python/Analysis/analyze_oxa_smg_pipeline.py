@@ -95,30 +95,56 @@ def _analyse_group(prototype, root, vanilla_groups, oxa_groups, bprue_groups, co
         "after_bprue": _ordered_entries(after_bprue, root),
         "final": _ordered_entries(final, root),
     }
-    oxa_by_id, final_by_id = _by_identity(stages["oxa"]), _by_identity(stages["final"])
-    bprue_by_id = _by_identity(stages["after_bprue"])
+    by_stage = {name: _by_identity(entries) for name, entries in stages.items()}
     findings = []
 
-    for identity, old in oxa_by_id.items():
-        if identity not in final_by_id:
-            findings.append({"severity": "CRITICAL", "kind": "OXA_ENTRY_LOST", "identity": identity})
-            continue
-        old_index, new_index = old[0]["index"], final_by_id[identity][0]["index"]
-        if old_index != new_index:
-            findings.append({
-                "severity": "HIGH" if root == "CompatibleAttachments" else "MEDIUM",
-                "kind": "EXISTING_ENTRY_MOVED", "identity": identity,
-                "oxa_index": old_index, "final_index": new_index,
-            })
+    transitions = (
+        ("OXA", "vanilla", "oxa"),
+        ("BPRUE", "oxa", "after_bprue"),
+        ("COMPAT", "after_bprue", "final"),
+    )
+    for owner, before_name, after_name in transitions:
+        before, after = by_stage[before_name], by_stage[after_name]
+        for identity, old in before.items():
+            if identity not in after:
+                findings.append({
+                    "severity": "CRITICAL",
+                    "kind": f"{owner}_ENTRY_LOST",
+                    "identity": identity,
+                    "from_stage": before_name,
+                    "to_stage": after_name,
+                })
+                continue
+            old_index, new_index = old[0]["index"], after[identity][0]["index"]
+            if old_index != new_index:
+                findings.append({
+                    "severity": "HIGH" if root == "CompatibleAttachments" else "MEDIUM",
+                    "kind": f"{owner}_MOVE",
+                    "identity": identity,
+                    "from_index": old_index,
+                    "to_index": new_index,
+                })
 
-    vanilla_ids = set(_by_identity(stages["vanilla"]))
-    for identity in sorted((set(bprue_by_id) - vanilla_ids) - set(final_by_id)):
+    vanilla_ids = set(by_stage["vanilla"])
+    bprue_ids = set(by_stage["after_bprue"])
+    final_ids = set(by_stage["final"])
+    for identity in sorted((bprue_ids - vanilla_ids) - final_ids):
         findings.append({"severity": "CRITICAL", "kind": "BPRUE_ADDITION_LOST", "identity": identity})
 
-    final_ids = [e["identity"] for e in stages["final"] if e["identity"] is not None]
-    duplicates = sorted({x for x in final_ids if final_ids.count(x) > 1})
-    if duplicates:
-        findings.append({"severity": "HIGH", "kind": "DUPLICATE_IDENTITIES", "identities": duplicates})
+    # Attribute duplicates to the stage that introduced them instead of reporting
+    # every inherited duplicate as a final-state problem.
+    previous_dupes = set()
+    for stage_name in STAGES:
+        ids = [e["identity"] for e in stages[stage_name] if e["identity"] is not None]
+        dupes = {x for x in ids if ids.count(x) > 1}
+        introduced = sorted(dupes - previous_dupes)
+        if introduced:
+            findings.append({
+                "severity": "HIGH",
+                "kind": f"{stage_name.upper()}_DUPLICATE_INTRODUCED",
+                "identities": introduced,
+            })
+        previous_dupes = dupes
 
     return {
         "prototype": prototype, "array": root,
