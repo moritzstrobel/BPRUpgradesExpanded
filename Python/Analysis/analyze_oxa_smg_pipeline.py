@@ -224,19 +224,18 @@ def _analyse_group(prototype, root, vanilla_groups, oxa_groups, bprue_groups, co
                 finding["severity"] = "INFO"
                 finding["intentional_unresolved_oxa_removal"] = True
 
-    # Attribute duplicates to the layer that first introduces them.
-    previous_dupes = set()
+    # Duplicate identities are diagnostic only for structured attachments.
+    # The occurrence-based contract above is authoritative: if Final exactly
+    # matches Expected, repeated AttachPrototypeSIDs are legitimate occurrences.
     for stage_name in STAGES:
         ids = [e["identity"] for e in stages[stage_name] if e["identity"] is not None]
-        dupes = {x for x in ids if ids.count(x) > 1}
-        introduced = sorted(dupes - previous_dupes)
-        if introduced:
+        dupes = sorted({x for x in ids if ids.count(x) > 1})
+        if dupes:
             findings.append({
-                "severity": "HIGH" if stage_name == "final" else "INFO",
-                "kind": f"{stage_name.upper()}_DUPLICATE_INTRODUCED",
-                "identities": introduced,
+                "severity": "INFO",
+                "kind": f"{stage_name.upper()}_DUPLICATE_PRESENT",
+                "identities": dupes,
             })
-        previous_dupes = dupes
 
     return {
         "prototype": prototype, "array": root,
