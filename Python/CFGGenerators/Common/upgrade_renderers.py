@@ -135,16 +135,12 @@ def render_technician_patch(
     dlc_models: dict[str, UpgradeBuildModel] | None = None,
 ) -> str:
     assignments = technician_upgrade_assignments(model)
-    direct_owners = vanilla_technician_direct_upgrade_indices()
-
     # DLC upgrades live in separate models, but technician capability still lives
-    # in BaseGame NPCPrototypes. Merge them into the same indexed NPC patch.
+    # in BaseGame NPCPrototypes. Merge them into the same NPC patch.
     for content_pack, dlc_model in sorted((dlc_models or {}).items()):
         support = dlc_technician_general_setups(content_pack)
         candidates = dlc_model.technician_upgrades()
         for technician_sid, supported_setups in support.items():
-            if technician_sid not in direct_owners:
-                continue
             additions = [
                 upgrade
                 for upgrade in candidates
@@ -154,7 +150,7 @@ def render_technician_patch(
 
     lines = [
         "// AUTO-GENERATED - BPRUE upgrades follow each technician's effective Vanilla/DLC weapon support.",
-        "// Only technicians that directly own a Vanilla Upgrades array are patched.",
+        "// Technicians are patched from their effective inherited Vanilla/DLC weapon support.",
         "// Entries are keyed by UpgradePrototypeSID instead of Vanilla numeric indices or [*].",
         "// This gives every BPRUE entry a stable merge key so third-party technician bpatches",
         "// can coexist without competing for append/index positions.",
