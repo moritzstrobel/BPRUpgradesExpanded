@@ -31,15 +31,15 @@
       "groups": 102,
       "classification_counts": {
         "BOTH_EXTEND_BASELINE": 1,
-        "BPRUE_ADDITION": 24,
-        "OXA_REMOVAL_REINTRODUCED": 77
+        "BPRUE_ADDITION": 25,
+        "OXA_REMOVAL_REINTRODUCED": 76
       },
       "array_counts": {
         "CompatibleAttachments": 6,
         "FittingWeaponsSIDs": 13,
         "UpgradePrototypeSIDs": 83
       },
-      "reintroduced_oxa_removal_entries": 236,
+      "reintroduced_oxa_removal_entries": 234,
       "oxa_inherited_arrays": 94,
       "oxa_replaced_arrays": 8
     },
@@ -48,15 +48,15 @@
         "AutMuz": 15,
         "Grip": 9,
         "Laser": 12,
-        "Laser_HP": 45,
+        "Laser_HP": 44,
         "Offset": 52,
-        "OtherGameplayUpgrade": 7,
+        "OtherGameplayUpgrade": 6,
         "Rail": 5,
         "SinMuz": 27
       },
       "compatible_attachment_removals": 11,
       "fitting_weapon_removals": 53,
-      "unexpected_gameplay_upgrade_count": 7
+      "unexpected_gameplay_upgrade_count": 6
     }
   },
   "removal_analysis": {
@@ -64,9 +64,9 @@
       "AutMuz": 15,
       "Grip": 9,
       "Laser": 12,
-      "Laser_HP": 45,
+      "Laser_HP": 44,
       "Offset": 52,
-      "OtherGameplayUpgrade": 7,
+      "OtherGameplayUpgrade": 6,
       "Rail": 5,
       "SinMuz": 27
     },
@@ -244,10 +244,6 @@
         },
         {
           "prototype": "GunD12_SG",
-          "sid": "GunD12_Upgrade_Attachment_Laser_HP"
-        },
-        {
-          "prototype": "GunDefender_SG",
           "sid": "GunD12_Upgrade_Attachment_Laser_HP"
         },
         {
@@ -633,10 +629,6 @@
         {
           "prototype": "Gun_Lynx_SR_GS",
           "sid": "GunSVDM_Upgrade_Barrel_3_2"
-        },
-        {
-          "prototype": "Gun_Silence_SMG_GS",
-          "sid": "GunAKU_Upgrade_Handguard_1_1"
         },
         {
           "prototype": "Gun_Whip_SR_GS",
@@ -1058,15 +1050,11 @@
         "sid": "GunSVDM_Upgrade_Barrel_3_2"
       },
       {
-        "prototype": "Gun_Silence_SMG_GS",
-        "sid": "GunAKU_Upgrade_Handguard_1_1"
-      },
-      {
         "prototype": "Gun_Whip_SR_GS",
         "sid": "GunSVU_Upgrade_Barrel_3_2"
       }
     ],
-    "unexpected_gameplay_upgrade_count": 7
+    "unexpected_gameplay_upgrade_count": 6
   },
   "three_way": [
     {
@@ -3541,7 +3529,7 @@
       }
     },
     {
-      "classification": "OXA_REMOVAL_REINTRODUCED",
+      "classification": "BPRUE_ADDITION",
       "prototype": "GunDefender_SG",
       "array": "UpgradePrototypeSIDs",
       "vanilla": [
@@ -3612,6 +3600,7 @@
       ],
       "oxa_effective": [
         "GunD12_Upgrade_Attachment_Laser",
+        "GunD12_Upgrade_Attachment_Laser_HP",
         "GunD12_Upgrade_Attachment_SinMuz",
         "GunD12_Upgrade_Barrel_1_1",
         "GunD12_Upgrade_Barrel_1_2",
@@ -3654,12 +3643,8 @@
       ],
       "bprue_removed_vanilla": [],
       "oxa_additions": [],
-      "oxa_removed_vanilla": [
-        "GunD12_Upgrade_Attachment_Laser_HP"
-      ],
-      "reintroduced_oxa_removals": [
-        "GunD12_Upgrade_Attachment_Laser_HP"
-      ],
+      "oxa_removed_vanilla": [],
+      "reintroduced_oxa_removals": [],
       "shared_additions": [],
       "compatibility_candidate": [
         "BPRUEDLCDLC1Defender_Upgrade_BPRUE_SGShared_ModuleHandling_LightweightAssembly",
@@ -3679,6 +3664,7 @@
         "BPRUEDLCDLC1Defender_Upgrade_BPRUE_SG_Pattern_FullChoke",
         "BPRUEDLCDLC1Defender_Upgrade_BPRUE_Signature_Indestructible",
         "GunD12_Upgrade_Attachment_Laser",
+        "GunD12_Upgrade_Attachment_Laser_HP",
         "GunD12_Upgrade_Attachment_SinMuz",
         "GunD12_Upgrade_Barrel_1_1",
         "GunD12_Upgrade_Barrel_1_2",
@@ -3720,7 +3706,7 @@
             "index_identity": "GunD12_Upgrade_Attachment_Laser_HP",
             "comment_identity": "GunM860_Upgrade_Attachment_Laser_HP",
             "resolved_index": null,
-            "resolution": "index_fallback",
+            "resolution": "unresolved_comment_identity",
             "source": "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg"
           }
         ],
@@ -14130,6 +14116,7 @@
         "GunAKU_Upgrade_Body_1",
         "GunAKU_Upgrade_Body_2_1",
         "GunAKU_Upgrade_Body_2_2",
+        "GunAKU_Upgrade_Handguard_1_1",
         "GunAKU_Upgrade_Handguard_1_2",
         "GunAKU_Upgrade_Handguard_2_1",
         "GunAKU_Upgrade_Handguard_2_2",
@@ -14160,12 +14147,10 @@
       "bprue_removed_vanilla": [],
       "oxa_additions": [],
       "oxa_removed_vanilla": [
-        "GunAKU_Upgrade_Attachment_Offset_Stock",
-        "GunAKU_Upgrade_Handguard_1_1"
+        "GunAKU_Upgrade_Attachment_Offset_Stock"
       ],
       "reintroduced_oxa_removals": [
-        "GunAKU_Upgrade_Attachment_Offset_Stock",
-        "GunAKU_Upgrade_Handguard_1_1"
+        "GunAKU_Upgrade_Attachment_Offset_Stock"
       ],
       "shared_additions": [],
       "compatibility_candidate": [
@@ -14192,6 +14177,7 @@
         "GunAKU_Upgrade_Body_1",
         "GunAKU_Upgrade_Body_2_1",
         "GunAKU_Upgrade_Body_2_2",
+        "GunAKU_Upgrade_Handguard_1_1",
         "GunAKU_Upgrade_Handguard_1_2",
         "GunAKU_Upgrade_Handguard_2_1",
         "GunAKU_Upgrade_Handguard_2_2",
@@ -14217,7 +14203,7 @@
             "index_identity": "GunAKU_Upgrade_Handguard_1_1",
             "comment_identity": "GunAKU_Upgrade_Attachment_AutMuz",
             "resolved_index": null,
-            "resolution": "index_fallback",
+            "resolution": "unresolved_comment_identity",
             "source": "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_AKS74U.cfg"
           }
         ],

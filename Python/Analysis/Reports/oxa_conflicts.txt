@@ -10,8 +10,8 @@ overlapping_paths: 778
 overlap_records: 865
 oxa_multi_source_prototypes: 38
 semantic_arrays: {'groups': 82, 'severity_counts': {'CONTENT_CONFLICT': 6, 'INDEX_COLLISION': 1, 'MERGE_REQUIRED': 75}, 'array_counts': {'CompatibleAttachments': 6, 'FittingWeaponsSIDs': 8, 'UpgradePrototypeSIDs': 68}}
-three_way: {'groups': 102, 'classification_counts': {'BOTH_EXTEND_BASELINE': 1, 'BPRUE_ADDITION': 24, 'OXA_REMOVAL_REINTRODUCED': 77}, 'array_counts': {'CompatibleAttachments': 6, 'FittingWeaponsSIDs': 13, 'UpgradePrototypeSIDs': 83}, 'reintroduced_oxa_removal_entries': 236, 'oxa_inherited_arrays': 94, 'oxa_replaced_arrays': 8}
-removal_analysis: {'upgrade_removal_category_counts': {'AutMuz': 15, 'Grip': 9, 'Laser': 12, 'Laser_HP': 45, 'Offset': 52, 'OtherGameplayUpgrade': 7, 'Rail': 5, 'SinMuz': 27}, 'compatible_attachment_removals': 11, 'fitting_weapon_removals': 53, 'unexpected_gameplay_upgrade_count': 7}
+three_way: {'groups': 102, 'classification_counts': {'BOTH_EXTEND_BASELINE': 1, 'BPRUE_ADDITION': 25, 'OXA_REMOVAL_REINTRODUCED': 76}, 'array_counts': {'CompatibleAttachments': 6, 'FittingWeaponsSIDs': 13, 'UpgradePrototypeSIDs': 83}, 'reintroduced_oxa_removal_entries': 234, 'oxa_inherited_arrays': 94, 'oxa_replaced_arrays': 8}
+removal_analysis: {'upgrade_removal_category_counts': {'AutMuz': 15, 'Grip': 9, 'Laser': 12, 'Laser_HP': 44, 'Offset': 52, 'OtherGameplayUpgrade': 6, 'Rail': 5, 'SinMuz': 27}, 'compatible_attachment_removals': 11, 'fitting_weapon_removals': 53, 'unexpected_gameplay_upgrade_count': 6}
 severity_counts:
   CONFLICT: 471
   PROTOTYPE_OVERLAP: 203
@@ -24,21 +24,20 @@ UpgradePrototypeSIDs:
   AutMuz: 15
   Grip: 9
   Laser: 12
-  Laser_HP: 45
+  Laser_HP: 44
   Offset: 52
-  OtherGameplayUpgrade: 7
+  OtherGameplayUpgrade: 6
   Rail: 5
   SinMuz: 27
 CompatibleAttachments removals: 11
 FittingWeaponsSIDs removals: 53
-Unexpected gameplay upgrades: 7
+Unexpected gameplay upgrades: 6
 Unexpected / review manually:
   GunM701_SP: GunM701_Upgrade_Barrel_3_2
   GunSVDM_SP: GunSVDM_Upgrade_Barrel_3_2
   GunSVU_SP: GunSVU_Upgrade_Barrel_3_2
   Gun_Cavalier_SR_GS: GunM701_Upgrade_Barrel_3_2
   Gun_Lynx_SR_GS: GunSVDM_Upgrade_Barrel_3_2
-  Gun_Silence_SMG_GS: GunAKU_Upgrade_Handguard_1_1
   Gun_Whip_SR_GS: GunSVU_Upgrade_Barrel_3_2
 
 Vanilla -> effective BPRUE / effective OXA analysis
@@ -153,11 +152,9 @@ Vanilla -> effective BPRUE / effective OXA analysis
   BPRUE additions: GunD12_Upgrade_BPRUE_SGShared_ModuleHandling_LightweightAssembly, GunD12_Upgrade_BPRUE_SGShared_ModuleHandling_ReinforcedAssembly, GunD12_Upgrade_BPRUE_SGShared_ModuleRangeProfile_CqbConfiguration, GunD12_Upgrade_BPRUE_SGShared_ModuleRangeProfile_RangeConfiguration, GunD12_Upgrade_BPRUE_SGShared_ModuleReliability_HardenedComponents, GunD12_Upgrade_BPRUE_SGShared_ModuleReliability_LightweightComponents, GunD12_Upgrade_BPRUE_SG_Action_HighSpeed, GunD12_Upgrade_BPRUE_SG_Action_Reinforced, GunD12_Upgrade_BPRUE_SG_Action_Tuned, GunD12_Upgrade_BPRUE_SG_Handling_Combat, GunD12_Upgrade_BPRUE_SG_Handling_Lightweight, GunD12_Upgrade_BPRUE_SG_Handling_Stabilized, GunD12_Upgrade_BPRUE_SG_Pattern_Breacher, GunD12_Upgrade_BPRUE_SG_Pattern_FieldChoke, GunD12_Upgrade_BPRUE_SG_Pattern_FullChoke
   OXA removed:     GunD12_Upgrade_Attachment_Laser_HP, GunD12_Upgrade_Attachment_Offset_Stock
 
-[OXA_REMOVAL_REINTRODUCED] GunDefender_SG :: UpgradePrototypeSIDs
-  vanilla=23 bprue=39 oxa=22 candidate=38
-  REINTRODUCED OXA REMOVALS: GunD12_Upgrade_Attachment_Laser_HP
+[BPRUE_ADDITION] GunDefender_SG :: UpgradePrototypeSIDs
+  vanilla=23 bprue=39 oxa=23 candidate=39
   BPRUE additions: BPRUEDLCDLC1Defender_Upgrade_BPRUE_SGShared_ModuleHandling_LightweightAssembly, BPRUEDLCDLC1Defender_Upgrade_BPRUE_SGShared_ModuleHandling_ReinforcedAssembly, BPRUEDLCDLC1Defender_Upgrade_BPRUE_SGShared_ModuleRangeProfile_CqbConfiguration, BPRUEDLCDLC1Defender_Upgrade_BPRUE_SGShared_ModuleRangeProfile_RangeConfiguration, BPRUEDLCDLC1Defender_Upgrade_BPRUE_SGShared_ModuleReliability_HardenedComponents, BPRUEDLCDLC1Defender_Upgrade_BPRUE_SGShared_ModuleReliability_LightweightComponents, BPRUEDLCDLC1Defender_Upgrade_BPRUE_SG_Action_HighSpeed, BPRUEDLCDLC1Defender_Upgrade_BPRUE_SG_Action_Reinforced, BPRUEDLCDLC1Defender_Upgrade_BPRUE_SG_Action_Tuned, BPRUEDLCDLC1Defender_Upgrade_BPRUE_SG_Handling_Combat, BPRUEDLCDLC1Defender_Upgrade_BPRUE_SG_Handling_Lightweight, BPRUEDLCDLC1Defender_Upgrade_BPRUE_SG_Handling_Stabilized, BPRUEDLCDLC1Defender_Upgrade_BPRUE_SG_Pattern_Breacher, BPRUEDLCDLC1Defender_Upgrade_BPRUE_SG_Pattern_FieldChoke, BPRUEDLCDLC1Defender_Upgrade_BPRUE_SG_Pattern_FullChoke, BPRUEDLCDLC1Defender_Upgrade_BPRUE_Signature_Indestructible
-  OXA removed:     GunD12_Upgrade_Attachment_Laser_HP
 
 [OXA_REMOVAL_REINTRODUCED] GunDniproDuty_ST :: UpgradePrototypeSIDs
   vanilla=19 bprue=37 oxa=17 candidate=35
@@ -530,10 +527,10 @@ Vanilla -> effective BPRUE / effective OXA analysis
   OXA removed:     GunM16_Upgrade_Attachment_Grip
 
 [OXA_REMOVAL_REINTRODUCED] Gun_Silence_SMG_GS :: UpgradePrototypeSIDs
-  vanilla=11 bprue=30 oxa=9 candidate=28
-  REINTRODUCED OXA REMOVALS: GunAKU_Upgrade_Attachment_Offset_Stock, GunAKU_Upgrade_Handguard_1_1
+  vanilla=11 bprue=30 oxa=10 candidate=29
+  REINTRODUCED OXA REMOVALS: GunAKU_Upgrade_Attachment_Offset_Stock
   BPRUE additions: BPRUEUniqueSilence_Upgrade_BPRUE_Action_Controlled, BPRUEUniqueSilence_Upgrade_BPRUE_Action_HighSpeed, BPRUEUniqueSilence_Upgrade_BPRUE_PistolConversion, BPRUEUniqueSilence_Upgrade_BPRUE_Readiness_QuickDraw, BPRUEUniqueSilence_Upgrade_BPRUE_Readiness_Stabilized, BPRUEUniqueSilence_Upgrade_BPRUE_Reload_Competition, BPRUEUniqueSilence_Upgrade_BPRUE_Reload_Tactical, BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction, BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem, BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing, BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget, BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly, BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly, BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration, BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration, BPRUEUniqueSilence_Upgrade_BPRUE_Signature_SilentEntryPackage, BPRUEUniqueSilence_Upgrade_BPRUE_Stock_Lightweight, BPRUEUniqueSilence_Upgrade_BPRUE_Stock_Stabilized, BPRUEUniqueSilence_Upgrade_BPRUE_Stock_Tactical
-  OXA removed:     GunAKU_Upgrade_Attachment_Offset_Stock, GunAKU_Upgrade_Handguard_1_1
+  OXA removed:     GunAKU_Upgrade_Attachment_Offset_Stock
 
 [OXA_REMOVAL_REINTRODUCED] Gun_Sledgehammer_SG_GS :: UpgradePrototypeSIDs
   vanilla=18 bprue=34 oxa=16 candidate=32
