@@ -1,0 +1,216 @@
+OXA weapon inventory
+====================
+OXA prototypes: 945
+Vanilla/DLC prototypes: 6667
+Real weapon candidates: 81
+New OXA SIDs: 4
+OXA new platforms: 0
+Ordinary patched Vanilla weapons: 77
+
+OXA NEW WEAPON SIDS
+===================
+GunAKS74N_G2_ST | writes=601 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_OXA.cfg
+GunGlock17_HG | writes=276 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Glock17.cfg
+GunP30L_HG | writes=285 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_P30L.cfg
+Gun_SkifGun_HG_GS | writes=97 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_PM.cfg
+
+OXA NEW WEAPON PLATFORMS
+========================
+<none>
+
+ORDINARY OXA PATCHES TO VANILLA
+===============================
+GunAK74_ST | writes=566 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_AKS74N.cfg
+GunAK9_ST_GS | writes=567 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg
+GunAKU_PP | writes=487 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_AKS74U.cfg
+GunAPB_HG | writes=150 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_APB.cfg
+GunArevLight_AR_GS | writes=722 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg
+GunArevPrecise_AR_GS | writes=726 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_HK433.cfg
+GunArev_ST_GS | writes=723 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_HK433.cfg
+GunBucket_PP | writes=376 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Kiparis.cfg
+GunClapper_SG_GS | writes=358 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg
+GunD12_SG | writes=433 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Saiga12K.cfg
+GunDefender_SG | writes=382 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/ItemPrototypes/ItemPrototypes_DLC1.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg
+GunDniproDuty_ST | writes=753 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/ItemPrototypes/ItemPrototypes_DLC1.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg
+GunDnipro_ST | writes=749 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Malyuk.cfg
+GunFora230_PP_GS | writes=604 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Fort230.cfg
+GunFora_ST | writes=684 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Fort221.cfg
+GunG37V2_ST | writes=713 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_G36.cfg
+GunG37_ST | writes=691 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_G36.cfg
+GunGP3A_DMR_GS | writes=669 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_G3.cfg
+GunGonta_SP_GS | writes=295 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Mosin.cfg
+GunGrim_ST | writes=519 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Groza.cfg
+GunGvintar_ST | writes=412 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Vintorez.cfg
+GunIntegral_PP | writes=622 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Vector.cfg
+GunKharodFreedom_ST | writes=694 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/ItemPrototypes/ItemPrototypes_DLC1.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg
+GunKharod_ST | writes=690 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Carmel.cfg
+GunKora_HG | writes=216 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_M1911.cfg
+GunLavina_ST | writes=480 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_ASVal.cfg
+GunM16_ST | writes=464 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_HK416.cfg
+GunM701_SP | writes=392 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_M700.cfg
+GunM860_SG | writes=354 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_M870.cfg
+GunMark_SP | writes=487 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_M1A.cfg
+GunNightStalker_HG | writes=221 | arrays=CompatibleAttachments
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_M1911.cfg
+GunPM_HG | writes=98 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_PM.cfg
+GunRam2_SG | writes=320 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_DP12.cfg
+GunSPSA_SG | writes=366 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_SPAS12.cfg
+GunSVDM_SP | writes=473 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_SVD.cfg
+GunSVU_CQB_SP | writes=515 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/ItemPrototypes/ItemPrototypes_DLC1.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg
+GunSVU_SP | writes=506 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_SVU.cfg
+GunThreeLine_SP_GS | writes=296 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Mosin.cfg
+GunUDP_Deadeye_HG | writes=160 | arrays=CompatibleAttachments
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_USP.cfg
+GunUDP_HG | writes=160 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_USP.cfg
+GunViper_PP | writes=465 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_MP5.cfg
+GunWarszawa_AR_GS | writes=730 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg
+GunZubr_PP | writes=513 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Bizon.cfg
+Gun_Cavalier_SR_GS | writes=391 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_M700.cfg
+Gun_Combatant_AR_GS | writes=562 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_AKS74N.cfg
+Gun_Decider_AR_GS | writes=680 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Fort221.cfg
+Gun_Drowned_AR_GS | writes=565 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_AKS74N.cfg
+Gun_Encourage_HG_GS | writes=146 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_APB.cfg
+Gun_Gabion_AR_GS | writes=449 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/Deluxe/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_Deluxe.cfg
+Gun_Kaimanov_HG_GS | writes=97 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_PM.cfg
+Gun_Krivenko_HG_GS | writes=159 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_USP.cfg
+Gun_Lummox_AR_GS | writes=584 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_OXA.cfg
+Gun_Lynx_SR_GS | writes=472 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_SVD.cfg
+Gun_Merc_AR_GS | writes=408 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Vintorez.cfg
+Gun_Monolit_AR_GS | writes=460 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/Deluxe/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_Deluxe.cfg
+Gun_Monolit_HG_GS | writes=94 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/Deluxe/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_Deluxe.cfg
+Gun_Monolit_SG_GS | writes=350 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/Deluxe/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_Deluxe.cfg
+Gun_Partner_SR_GS | writes=489 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_M1A.cfg
+Gun_Predator_SG_GS | writes=350 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_M870.cfg
+Gun_RatKiller_SMG_GS | writes=322 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_OXA.cfg
+Gun_S15_AR | writes=520 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Groza.cfg
+Gun_SMGMonolith_SMG_GS | writes=461 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/Ultimate/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_Ultimate.cfg
+Gun_SOFMOD_AR_GS | writes=469 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_HK416.cfg
+Gun_Shakh_SMG_GS | writes=464 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_MP5.cfg
+Gun_Sharpshooter_AR_GS | writes=601 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_OXA.cfg
+Gun_Silence_SMG_GS | writes=489 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_AKS74U.cfg
+Gun_Sledgehammer_SG_GS | writes=371 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_SPAS12.cfg
+Gun_Sotnyk_AR_GS | writes=761 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Malyuk.cfg
+Gun_Spitfire_SMG_GS | writes=486 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_AKS74U.cfg
+Gun_Spitter_SMG_GS | writes=375 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Kiparis.cfg
+Gun_Star_HG_GS | writes=97 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_PM.cfg
+Gun_Texas_SG_GS | writes=333 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_DP12.cfg
+Gun_Trophy_AR_GS | writes=479 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_ASVal.cfg
+Gun_Unknown_AR_GS | writes=463 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_HK416.cfg
+Gun_Veteran_AR_GS | writes=414 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/Preorder/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_PreOrder.cfg
+Gun_Whip_SR_GS | writes=505 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_SVU.cfg
+Gun_Zvirolov_SR_GS | writes=390 | arrays=CompatibleAttachments, UpgradePrototypeSIDs
+  source: Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/Deluxe/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_Deluxe.cfg

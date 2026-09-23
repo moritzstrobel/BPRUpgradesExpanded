@@ -266,6 +266,8 @@ def main() -> None:
         print(f"Localization asset snapshot: asset={asset_snapshot['asset_entry_count']} source={asset_snapshot['source_entry_count']} missing={asset_snapshot['missing_count']} asset-only={asset_snapshot['asset_only_count']} duplicates={asset_snapshot['duplicate_count']} content-mismatch={asset_snapshot['content_mismatch_count']}")
         for sid in asset_snapshot["missing_sids"]:
             print(f"  MISSING FROM ASSET: {sid}")
+        for sid in asset_snapshot["asset_only_sids"]:
+            print(f"  STALE ASSET-ONLY SID: {sid}")
         for item in asset_snapshot["content_mismatches"]:
             print(f"  ASSET CONTENT MISMATCH: {item['sid']} [{item['language']}] ({item['reason']})")
     else:

@@ -125,9 +125,9 @@ for entry in localized_texts:
     existing_by_sid[sid]=entry
 
 source_sids={entry["sid"] for entry in entries}
-unmanaged_exports=[entry.export_text() for entry in localized_texts if get_sid(entry) not in source_sids]
 existing_managed_count=sum(1 for sid in source_sids if sid in existing_by_sid)
 added=len(source_sids)-existing_managed_count
+removed=len(existing_by_sid)-existing_managed_count
 
 # Rebuild the array with independent struct instances. Appending the same
 # template object repeatedly aliases one mutable Unreal struct and therefore
@@ -137,7 +137,6 @@ managed_written=0
 for original in localized_texts:
     sid=get_sid(original)
     if sid not in source_sids:
-        rebuilt_texts.append(original)
         continue
     source=next(item for item in entries if item["sid"]==sid)
     original.import_text(make_struct_text(source["sid"],source["languages"]))
@@ -166,10 +165,10 @@ if len(final_sids)!=len(set(final_sids)):
     raise RuntimeError("Duplicate SIDs detected after rebuild:\n"+"\n".join(duplicates))
 missing=sorted(source_sids-set(final_sids))
 if missing: raise RuntimeError("SIDs missing after rebuild:\n"+"\n".join(missing))
-if len(rebuilt_texts)!=len(unmanaged_exports)+len(entries):
-    raise RuntimeError("Entry count mismatch after rebuild.")
+if len(rebuilt_texts)!=len(entries):
+    raise RuntimeError(f"Entry count mismatch after rebuild: expected {len(entries)}, got {len(rebuilt_texts)}.")
 asset.modify(); asset.set_editor_property("LocalizedTexts",rebuilt_texts)
 if not unreal.EditorAssetLibrary.save_asset(ASSET_PATH,only_if_is_dirty=False): raise RuntimeError(f"Failed to save asset: {ASSET_PATH}")
-log(f"REBUILD - input={len(entries)}, rebuilt={managed_written}, previously_managed={existing_managed_count}, added={added}, preserved_unmanaged={len(unmanaged_exports)}, final={len(rebuilt_texts)}")
+log(f"REBUILD - input={len(entries)}, rebuilt={managed_written}, previously_managed={existing_managed_count}, added={added}, removed_stale={removed}, final={len(rebuilt_texts)}")
 saved_count=verify_saved_asset(entries)
 log(f"SUCCESS - verified={len(entries)}, asset_entries={saved_count}, missing=0, mismatched_values=0"); log("========================================")

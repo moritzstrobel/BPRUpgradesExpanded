@@ -3,6 +3,7 @@ from __future__ import annotations
 from technician_support import (
     dlc_technician_general_setups,
     technician_upgrade_assignments,
+    vanilla_technician_upgrade_owners,
     vanilla_technician_direct_upgrade_indices,
 )
 from upgrade_build_model import UpgradeBuildModel, UpgradeDefinition
@@ -135,16 +136,13 @@ def render_technician_patch(
     dlc_models: dict[str, UpgradeBuildModel] | None = None,
 ) -> str:
     assignments = technician_upgrade_assignments(model)
-    direct_owners = vanilla_technician_direct_upgrade_indices()
 
     # DLC upgrades live in separate models, but technician capability still lives
-    # in BaseGame NPCPrototypes. Merge them into the same indexed NPC patch.
+    # in BaseGame NPCPrototypes. Merge them into the same per-technician list.
     for content_pack, dlc_model in sorted((dlc_models or {}).items()):
         support = dlc_technician_general_setups(content_pack)
         candidates = dlc_model.technician_upgrades()
         for technician_sid, supported_setups in support.items():
-            if technician_sid not in direct_owners:
-                continue
             additions = [
                 upgrade
                 for upgrade in candidates
@@ -152,22 +150,44 @@ def render_technician_patch(
             ]
             assignments.setdefault(technician_sid, []).extend(additions)
 
+    # UpgradeAway demonstrates a useful CFG pattern for inherited technicians:
+    # materialize the concrete NPC's Upgrades node and give it an explicit
+    # refkey to a standalone named upgrade-list struct. This avoids relying on
+    # a bpatch against an Upgrades node that only exists through NPC refkey
+    # inheritance.
     lines = [
         "// AUTO-GENERATED - BPRUE upgrades follow each technician's effective Vanilla/DLC weapon support.",
-        "// Only technicians that directly own a Vanilla Upgrades array are patched.",
-        "// Entries continue after Vanilla numeric indices; wildcard append is intentionally avoided.",
+        "// Each technician gets a standalone BPRUE upgrade-list struct and explicitly references it",
+        "// from Upgrades via {bpatch;refkey=...}, following the proven UpgradeAway CFG pattern.",
+        "// Lists remain technician-specific: BPRUE does not grant every upgrade to every technician.",
         "",
     ]
+
+    rendered: list[tuple[str, str]] = []
     for technician_sid, upgrades in assignments.items():
         if not upgrades:
             continue
-        # Keep one occurrence per SID while preserving BaseGame -> DLC order.
         upgrades = list({upgrade.sid: upgrade for upgrade in upgrades}.values())
-        next_index = direct_owners[technician_sid] + 1
-        lines += [f"{technician_sid} : struct.begin {{bpatch}}", "   Upgrades : struct.begin {bpatch}"]
-        for offset, upgrade in enumerate(upgrades):
-            lines += [f"      [{next_index + offset}] : struct.begin", f"         UpgradePrototypeSID = {upgrade.sid}", "         Enabled = true", "      struct.end"]
-        lines += ["   struct.end", "struct.end", ""]
+        list_sid = f"BPRUE_{technician_sid}_UpgradeList"
+        rendered.append((technician_sid, list_sid))
+
+        lines += [f"{list_sid} : struct.begin"]
+        for upgrade in upgrades:
+            lines += [
+                f"   {upgrade.sid} : struct.begin",
+                f"      UpgradePrototypeSID = {upgrade.sid}",
+                "      Enabled = true",
+                "   struct.end",
+            ]
+        lines += ["struct.end", ""]
+
+    for technician_sid, list_sid in rendered:
+        lines += [
+            f"{technician_sid} : struct.begin {{bpatch}}",
+            f"   Upgrades : struct.begin {{bpatch;refkey={list_sid}}}",
+            "   struct.end",
+            "struct.end",
+            "",
+        ]
+
     return "\n".join(lines).rstrip() + "\n"
-
-

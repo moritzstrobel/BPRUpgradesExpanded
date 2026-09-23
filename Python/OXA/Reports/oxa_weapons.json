@@ -1,0 +1,1676 @@
+{
+  "summary": {
+    "oxa_prototypes": 945,
+    "vanilla_prototypes": 6667,
+    "weapon_candidates": 81,
+    "oxa_new_sid": 4,
+    "oxa_new_platforms": 0,
+    "oxa_patched_vanilla": 77
+  },
+  "oxa_new_sid": [
+    {
+      "sid": "GunAKS74N_G2_ST",
+      "classification": "OXA_NEW_SID",
+      "vanilla_families": [],
+      "oxa_families": [
+        "WeaponGeneralSetupPrototypes_OXA"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_OXA.cfg"
+      ],
+      "prototype_modes": [
+        "refkey=GunAK74_ST",
+        "refkey=TemplateRifle",
+        "refurl=../WeaponGeneralSetupPrototypes.cfg",
+        "refurl=WeaponPrototypes.cfg"
+      ],
+      "write_count": 601,
+      "explicit_path_count": 598,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunGlock17_HG",
+      "classification": "OXA_NEW_SID",
+      "vanilla_families": [],
+      "oxa_families": [
+        "Glock17"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Glock17.cfg"
+      ],
+      "prototype_modes": [
+        "refkey=TemplatePistol",
+        "refurl=../WeaponGeneralSetupPrototypes.cfg",
+        "refurl=WeaponPrototypes.cfg"
+      ],
+      "write_count": 276,
+      "explicit_path_count": 273,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunP30L_HG",
+      "classification": "OXA_NEW_SID",
+      "vanilla_families": [],
+      "oxa_families": [
+        "P30L"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_P30L.cfg"
+      ],
+      "prototype_modes": [
+        "refkey=TemplatePistol",
+        "refurl=../WeaponGeneralSetupPrototypes.cfg",
+        "refurl=WeaponPrototypes.cfg"
+      ],
+      "write_count": 285,
+      "explicit_path_count": 273,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_SkifGun_HG_GS",
+      "classification": "OXA_NEW_SID",
+      "vanilla_families": [],
+      "oxa_families": [
+        "PM"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_PM.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 97,
+      "explicit_path_count": 96,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    }
+  ],
+  "oxa_new_platforms": [],
+  "oxa_patched_vanilla": [
+    {
+      "sid": "GunAK74_ST",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "AKS74N"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_AKS74N.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 566,
+      "explicit_path_count": 564,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunAK9_ST_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "WeaponGeneralSetupPrototypes_DLC1"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 567,
+      "explicit_path_count": 566,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunAKU_PP",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "AKS74U"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_AKS74U.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 487,
+      "explicit_path_count": 485,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunAPB_HG",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "APB"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_APB.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 150,
+      "explicit_path_count": 148,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunArevLight_AR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "WeaponGeneralSetupPrototypes_DLC1"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 722,
+      "explicit_path_count": 652,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunArevPrecise_AR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "HK433"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_HK433.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 726,
+      "explicit_path_count": 656,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunArev_ST_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "HK433"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_HK433.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 723,
+      "explicit_path_count": 653,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunBucket_PP",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "Kiparis"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Kiparis.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 376,
+      "explicit_path_count": 374,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunClapper_SG_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "WeaponGeneralSetupPrototypes_DLC1"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 358,
+      "explicit_path_count": 357,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunD12_SG",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "Saiga12K"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Saiga12K.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 433,
+      "explicit_path_count": 431,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunDefender_SG",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "WeaponGeneralSetupPrototypes_DLC1"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/ItemPrototypes/ItemPrototypes_DLC1.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 382,
+      "explicit_path_count": 380,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunDniproDuty_ST",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "WeaponGeneralSetupPrototypes_DLC1"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/ItemPrototypes/ItemPrototypes_DLC1.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 753,
+      "explicit_path_count": 679,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunDnipro_ST",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "Malyuk"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Malyuk.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 749,
+      "explicit_path_count": 675,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunFora230_PP_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "Fort230"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Fort230.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 604,
+      "explicit_path_count": 558,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunFora_ST",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "Fort221"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Fort221.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 684,
+      "explicit_path_count": 610,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunG37V2_ST",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "G36"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_G36.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 713,
+      "explicit_path_count": 711,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunG37_ST",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "G36"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_G36.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 691,
+      "explicit_path_count": 689,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunGP3A_DMR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "G3"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_G3.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 669,
+      "explicit_path_count": 668,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunGonta_SP_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "Mosin"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Mosin.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 295,
+      "explicit_path_count": 294,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunGrim_ST",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "Groza"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Groza.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 519,
+      "explicit_path_count": 517,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunGvintar_ST",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "Vintorez"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Vintorez.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 412,
+      "explicit_path_count": 410,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunIntegral_PP",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "Vector"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Vector.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 622,
+      "explicit_path_count": 569,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunKharodFreedom_ST",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "WeaponGeneralSetupPrototypes_DLC1"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/ItemPrototypes/ItemPrototypes_DLC1.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 694,
+      "explicit_path_count": 635,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunKharod_ST",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "Carmel"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Carmel.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 690,
+      "explicit_path_count": 631,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunKora_HG",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "M1911"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_M1911.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 216,
+      "explicit_path_count": 214,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunLavina_ST",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "ASVal"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_ASVal.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 480,
+      "explicit_path_count": 478,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunM16_ST",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "HK416"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_HK416.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 464,
+      "explicit_path_count": 462,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunM701_SP",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "M700"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_M700.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 392,
+      "explicit_path_count": 390,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunM860_SG",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "M870"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_M870.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 354,
+      "explicit_path_count": 352,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunMark_SP",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "M1A"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_M1A.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 487,
+      "explicit_path_count": 485,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunNightStalker_HG",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "M1911"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_M1911.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 221,
+      "explicit_path_count": 219,
+      "semantic_roots": [
+        "CompatibleAttachments"
+      ]
+    },
+    {
+      "sid": "GunPM_HG",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "PM"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_PM.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 98,
+      "explicit_path_count": 96,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunRam2_SG",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "DP12"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_DP12.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 320,
+      "explicit_path_count": 318,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunSPSA_SG",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "SPAS12"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_SPAS12.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 366,
+      "explicit_path_count": 364,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunSVDM_SP",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "SVD"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_SVD.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 473,
+      "explicit_path_count": 471,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunSVU_CQB_SP",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "WeaponGeneralSetupPrototypes_DLC1"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/ItemPrototypes/ItemPrototypes_DLC1.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 515,
+      "explicit_path_count": 513,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunSVU_SP",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "SVU"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_SVU.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 506,
+      "explicit_path_count": 504,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunThreeLine_SP_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "Mosin"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Mosin.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 296,
+      "explicit_path_count": 295,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunUDP_Deadeye_HG",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "USP"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_USP.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 160,
+      "explicit_path_count": 150,
+      "semantic_roots": [
+        "CompatibleAttachments"
+      ]
+    },
+    {
+      "sid": "GunUDP_HG",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "USP"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_USP.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 160,
+      "explicit_path_count": 149,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunViper_PP",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "MP5"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_MP5.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 465,
+      "explicit_path_count": 463,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunWarszawa_AR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "WeaponGeneralSetupPrototypes_DLC1"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 730,
+      "explicit_path_count": 660,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunZubr_PP",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "Bizon"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Bizon.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 513,
+      "explicit_path_count": 511,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Cavalier_SR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "M700"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_M700.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 391,
+      "explicit_path_count": 390,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Combatant_AR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "AKS74N"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_AKS74N.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 562,
+      "explicit_path_count": 561,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Decider_AR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "Fort221"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Fort221.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 680,
+      "explicit_path_count": 607,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Drowned_AR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "AKS74N"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_AKS74N.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 565,
+      "explicit_path_count": 564,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Encourage_HG_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "APB"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_APB.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 146,
+      "explicit_path_count": 145,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Gabion_AR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "WeaponGeneralSetupPrototypes_Deluxe"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/Deluxe/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_Deluxe.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 449,
+      "explicit_path_count": 448,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Kaimanov_HG_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "PM"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_PM.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 97,
+      "explicit_path_count": 96,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Krivenko_HG_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "USP"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_USP.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 159,
+      "explicit_path_count": 149,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Lummox_AR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "WeaponGeneralSetupPrototypes_OXA"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_OXA.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 584,
+      "explicit_path_count": 583,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Lynx_SR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "SVD"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_SVD.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 472,
+      "explicit_path_count": 471,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Merc_AR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "Vintorez"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Vintorez.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 408,
+      "explicit_path_count": 407,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Monolit_AR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "WeaponGeneralSetupPrototypes_Deluxe"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/Deluxe/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_Deluxe.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 460,
+      "explicit_path_count": 459,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Monolit_HG_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "WeaponGeneralSetupPrototypes_Deluxe"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/Deluxe/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_Deluxe.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 94,
+      "explicit_path_count": 93,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Monolit_SG_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "WeaponGeneralSetupPrototypes_Deluxe"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/Deluxe/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_Deluxe.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 350,
+      "explicit_path_count": 349,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Partner_SR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "M1A"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_M1A.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 489,
+      "explicit_path_count": 488,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Predator_SG_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "M870"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_M870.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 350,
+      "explicit_path_count": 349,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_RatKiller_SMG_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "WeaponGeneralSetupPrototypes_OXA"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_OXA.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 322,
+      "explicit_path_count": 321,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_S15_AR",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "Groza"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Groza.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 520,
+      "explicit_path_count": 518,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_SMGMonolith_SMG_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "WeaponGeneralSetupPrototypes_Ultimate"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/Ultimate/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_Ultimate.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 461,
+      "explicit_path_count": 460,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_SOFMOD_AR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "HK416"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_HK416.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 469,
+      "explicit_path_count": 468,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Shakh_SMG_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "MP5"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_MP5.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 464,
+      "explicit_path_count": 463,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Sharpshooter_AR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "WeaponGeneralSetupPrototypes_OXA"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_OXA.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 601,
+      "explicit_path_count": 546,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Silence_SMG_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "AKS74U"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_AKS74U.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 489,
+      "explicit_path_count": 488,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Sledgehammer_SG_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "SPAS12"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_SPAS12.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 371,
+      "explicit_path_count": 370,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Sotnyk_AR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "Malyuk"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Malyuk.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 761,
+      "explicit_path_count": 688,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Spitfire_SMG_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "AKS74U"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_AKS74U.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 486,
+      "explicit_path_count": 485,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Spitter_SMG_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "Kiparis"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Kiparis.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 375,
+      "explicit_path_count": 374,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Star_HG_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "PM"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_PM.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 97,
+      "explicit_path_count": 96,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Texas_SG_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "DP12"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_DP12.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 333,
+      "explicit_path_count": 332,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Trophy_AR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "ASVal"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_ASVal.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 479,
+      "explicit_path_count": 478,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Unknown_AR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "HK416"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_HK416.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 463,
+      "explicit_path_count": 462,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Veteran_AR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "WeaponGeneralSetupPrototypes_PreOrder"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/Preorder/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_PreOrder.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 414,
+      "explicit_path_count": 413,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Whip_SR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "SVU"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_SVU.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 505,
+      "explicit_path_count": 504,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "Gun_Zvirolov_SR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "WeaponGeneralSetupPrototypes_Deluxe"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/Deluxe/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_Deluxe.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 390,
+      "explicit_path_count": 389,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    }
+  ]
+}
