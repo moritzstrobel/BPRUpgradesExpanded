@@ -32,15 +32,9 @@ WEAPON_SIGNAL_PATHS = {
     "WeaponType",
 }
 
-# OXA's replacement weapons commonly keep a Vanilla SID while the defining
-# WeaponGeneralSetup file is named after the real replacement platform.
-GENERIC_SOURCE_STEMS = {
-    "WeaponGeneralSetupPrototypes_OXA",
-    "WeaponGeneralSetupPrototypes_DLC1",
-    "WeaponGeneralSetupPrototypes_Deluxe",
-    "WeaponGeneralSetupPrototypes_PreOrder",
-    "WeaponGeneralSetupPrototypes_Ultimate",
-}
+# A def_<platform>.cfg filename is useful only when compared with the file
+# family that defines the same SID in Vanilla/DLC. On its own it merely names
+# OXA's implementation file and is not evidence of a replacement.
 
 
 def _prototype_nodes(writes: list[Write]) -> dict[str, list[Write]]:
@@ -62,14 +56,21 @@ def _looks_like_weapon(writes: list[Write]) -> bool:
     return bool(top_paths & WEAPON_SIGNAL_PATHS)
 
 
-def _replacement_labels(writes: list[Write]) -> list[str]:
+def _weapon_family_labels(writes: list[Write]) -> list[str]:
     labels = set()
     for write in writes:
         source = write.source.replace("\\", "/")
-        name = Path(source).stem
+        if "/WeaponGeneralSetupPrototypes/" not in ("/" + source):
+            continue
+        stem = Path(source).stem
         prefix = "WeaponGeneralSetupPrototypes_def_"
-        if name.startswith(prefix):
-            labels.add(name[len(prefix):])
+        if stem.startswith(prefix):
+            labels.add(stem[len(prefix):])
+        else:
+            # Generic Vanilla/DLC/OXA files are still meaningful for comparison:
+            # equal generic stems mean no file-family transition; a def_* on only
+            # one side is a useful platform-change signal.
+            labels.add(stem)
     return sorted(labels)
 
 
@@ -100,7 +101,9 @@ def discover(oxa_root: Path, vanilla_root: Path) -> dict:
 
         header = _prototype_header(writes)
         is_new = sid not in vanilla_ids
-        replacement_labels = _replacement_labels(writes)
+        oxa_families = _weapon_family_labels(writes)
+        vanilla_families = _weapon_family_labels(vanilla_by_proto.get(sid, []))
+        family_changed = bool(vanilla_families and oxa_families and set(vanilla_families) != set(oxa_families))
         explicit_paths = sorted({w.path for w in writes if w.path != "<prototype>"})
         semantic_roots = sorted({
             w.path.split(".", 1)[0]
@@ -114,13 +117,14 @@ def discover(oxa_root: Path, vanilla_root: Path) -> dict:
 
         classification = (
             "OXA_NEW_SID" if is_new
-            else "OXA_WEAPON_REPLACEMENT" if replacement_labels
+            else "OXA_NEW_PLATFORM" if family_changed
             else "OXA_PATCHED_VANILLA"
         )
         candidates.append({
             "sid": sid,
             "classification": classification,
-            "replacement_labels": replacement_labels,
+            "vanilla_families": vanilla_families,
+            "oxa_families": oxa_families,
             "sources": header["sources"],
             "prototype_modes": header["modes"],
             "write_count": len(writes),
@@ -129,7 +133,7 @@ def discover(oxa_root: Path, vanilla_root: Path) -> dict:
         })
 
     new_sids = [x for x in candidates if x["classification"] == "OXA_NEW_SID"]
-    replacements = [x for x in candidates if x["classification"] == "OXA_WEAPON_REPLACEMENT"]
+    new_platforms = [x for x in candidates if x["classification"] == "OXA_NEW_PLATFORM"]
     patched = [x for x in candidates if x["classification"] == "OXA_PATCHED_VANILLA"]
 
     return {
@@ -138,25 +142,27 @@ def discover(oxa_root: Path, vanilla_root: Path) -> dict:
             "vanilla_prototypes": len(vanilla_by_proto),
             "weapon_candidates": len(candidates),
             "oxa_new_sid": len(new_sids),
-            "oxa_weapon_replacements": len(replacements),
+            "oxa_new_platforms": len(new_platforms),
             "oxa_patched_vanilla": len(patched),
         },
         "oxa_new_sid": new_sids,
-        "oxa_weapon_replacements": replacements,
+        "oxa_new_platforms": new_platforms,
         "oxa_patched_vanilla": patched,
     }
 
 
-def _render_items(lines: list[str], items: list[dict], show_replacement: bool = False) -> None:
+def _render_items(lines: list[str], items: list[dict], show_transition: bool = False) -> None:
     if not items:
         lines.append("<none>")
         return
     for item in items:
         roots = ", ".join(item["semantic_roots"]) or "-"
-        replacement = ""
-        if show_replacement:
-            replacement = " -> " + "/".join(item["replacement_labels"])
-        lines.append(f"{item['sid']}{replacement} | writes={item['write_count']} | arrays={roots}")
+        transition = ""
+        if show_transition:
+            vanilla = "/".join(item["vanilla_families"]) or "?"
+            oxa = "/".join(item["oxa_families"]) or "?"
+            transition = f" | family: {vanilla} -> {oxa}"
+        lines.append(f"{item['sid']}{transition} | writes={item['write_count']} | arrays={roots}")
         for source in item["sources"]:
             lines.append(f"  source: {source}")
 
@@ -170,7 +176,7 @@ def render(result: dict) -> str:
         f"Vanilla/DLC prototypes: {s['vanilla_prototypes']}",
         f"Real weapon candidates: {s['weapon_candidates']}",
         f"New OXA SIDs: {s['oxa_new_sid']}",
-        f"OXA weapon replacements: {s['oxa_weapon_replacements']}",
+        f"OXA new platforms: {s['oxa_new_platforms']}",
         f"Ordinary patched Vanilla weapons: {s['oxa_patched_vanilla']}",
         "",
         "OXA NEW WEAPON SIDS",
@@ -178,8 +184,8 @@ def render(result: dict) -> str:
     ]
     _render_items(lines, result["oxa_new_sid"])
 
-    lines += ["", "OXA WEAPON REPLACEMENTS", "======================="]
-    _render_items(lines, result["oxa_weapon_replacements"], show_replacement=True)
+    lines += ["", "OXA NEW WEAPON PLATFORMS", "========================"]
+    _render_items(lines, result["oxa_new_platforms"], show_transition=True)
 
     lines += ["", "ORDINARY OXA PATCHES TO VANILLA", "==============================="]
     _render_items(lines, result["oxa_patched_vanilla"])
@@ -191,7 +197,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description=(
             "Inventory real OXA weapon setup prototypes and separate new SIDs, "
-            "replacement weapons, and ordinary Vanilla/DLC patches."
+            "new weapon platforms, and ordinary Vanilla/DLC patches."
         )
     )
     parser.add_argument("--oxa-root", type=Path, default=DEFAULT_OXA_ROOT)
