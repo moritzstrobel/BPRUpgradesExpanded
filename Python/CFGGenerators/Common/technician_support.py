@@ -89,7 +89,21 @@ def _effective_scalar(blocks: dict[str, list[str]], sid: str, name: str) -> str 
     return None
 
 
-def _effective_upgrade_owner(blocks: dict[str, list[str]], sid: str) -> str | None:\n    """Resolve the refkey-chain owner that directly defines Upgrades."""\n    seen: set[str] = set()\n    current = sid\n    while current and current not in seen:\n        seen.add(current)\n        block = blocks.get(current)\n        if not block:\n            return None\n        if _direct_child(block, "Upgrades") is not None:\n            return current\n        current = _refkey(block)\n    return None\n\n\ndef _effective_upgrade_entries(blocks: dict[str, list[str]], sid: str) -> list[tuple[str, bool]]:
+def _effective_upgrade_owner(blocks: dict[str, list[str]], sid: str) -> str | None:
+    """Resolve the refkey-chain owner that directly defines Upgrades."""
+    seen: set[str] = set()
+    current = sid
+    while current and current not in seen:
+        seen.add(current)
+        block = blocks.get(current)
+        if not block:
+            return None
+        if _direct_child(block, "Upgrades") is not None:
+            return current
+        current = _refkey(block)
+    return None
+
+def _effective_upgrade_entries(blocks: dict[str, list[str]], sid: str) -> list[tuple[str, bool]]:
     """Resolve the first Upgrades array in the NPC refkey chain.
 
     Vanilla child structs that do not define Upgrades inherit their parent's
@@ -203,4 +217,20 @@ def technician_upgrade_assignments(model: UpgradeBuildModel) -> dict[str, list[U
             if any(setup_sid in supported_setups for setup_sid in upgrade.general_setup_sids)
         ]
     return assignments
-\n\n@lru_cache(maxsize=1)\ndef vanilla_technician_upgrade_owners() -> dict[str, str]:\n    """Map each concrete Vanilla technician to the refkey-chain node owning Upgrades."""\n    if not VANILLA_NPCS.exists():\n        raise FileNotFoundError(VANILLA_NPCS)\n    blocks = _read_blocks(VANILLA_NPCS)\n    result: dict[str, str] = {}\n    for sid in blocks:\n        if sid in TECHNICIAN_TEMPLATE_SIDS:\n            continue\n        if _effective_scalar(blocks, sid, "NPCType") != "ENPCType::Technician":\n            continue\n        owner = _effective_upgrade_owner(blocks, sid)\n        if owner and owner not in TECHNICIAN_TEMPLATE_SIDS:\n            result[sid] = owner\n    return result\n
+ 
+@lru_cache(maxsize=1)
+def vanilla_technician_upgrade_owners() -> dict[str, str]:
+    """Map each concrete Vanilla technician to the refkey-chain node owning Upgrades."""
+    if not VANILLA_NPCS.exists():
+        raise FileNotFoundError(VANILLA_NPCS)
+    blocks = _read_blocks(VANILLA_NPCS)
+    result: dict[str, str] = {}
+    for sid in blocks:
+        if sid in TECHNICIAN_TEMPLATE_SIDS:
+            continue
+        if _effective_scalar(blocks, sid, "NPCType") != "ENPCType::Technician":
+            continue
+        owner = _effective_upgrade_owner(blocks, sid)
+        if owner and owner not in TECHNICIAN_TEMPLATE_SIDS:
+            result[sid] = owner
+    return result
