@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_OXA_ROOT = ROOT / "Python/VanillaReference/OxaData"
 DEFAULT_BPRUE_ROOT = ROOT / "GameLite"
 DEFAULT_REPORT_DIR = ROOT / "Python/Analysis/Reports"
+DEFAULT_VANILLA_ROOT = ROOT / "Python/VanillaReference"
 
 STRUCT_BEGIN = re.compile(r"^\s*([^\s:]+)\s*:\s*struct\.begin(?:\s*\{([^}]*)\})?")
 STRUCT_END = re.compile(r"^\s*struct\.end\s*$")
@@ -235,6 +236,113 @@ def _semantic_compare(bprue: list[Write], oxa: list[Write]) -> list[dict]:
     return results
 
 
+
+def _vanilla_cfg_files(root: Path) -> list[Path]:
+    """Return only Vanilla reference CFGs; OxaData is a mod snapshot, not Vanilla."""
+    files = []
+    for path in root.rglob("*.cfg"):
+        try:
+            path.relative_to(root / "OxaData")
+            continue
+        except ValueError:
+            pass
+        files.append(path)
+    return sorted(files)
+
+
+def collect_vanilla(root: Path) -> list[Write]:
+    if not root.exists():
+        raise FileNotFoundError(root)
+    writes: list[Write] = []
+    for path in _vanilla_cfg_files(root):
+        writes.extend(parse_cfg(path))
+    return writes
+
+
+def _semantic_id_sets(writes: list[Write]) -> dict[tuple[str, str], set[str]]:
+    result = {}
+    for key, group in _semantic_arrays(writes).items():
+        root = key[1]
+        result[key] = {
+            identity
+            for fields in group["entries"].values()
+            if (identity := _entry_identity(root, fields)) is not None
+        }
+    return result
+
+
+def _three_way_compare(vanilla: list[Write], bprue: list[Write], oxa: list[Write]) -> list[dict]:
+    vanilla_sets = _semantic_id_sets(vanilla)
+    bprue_sets = _semantic_id_sets(bprue)
+    oxa_sets = _semantic_id_sets(oxa)
+    keys = sorted(set(bprue_sets) & set(oxa_sets | vanilla_sets))
+    results = []
+
+    for prototype, root in keys:
+        key = (prototype, root)
+        v = vanilla_sets.get(key, set())
+        b = bprue_sets.get(key, set())
+        o = oxa_sets.get(key, set())
+
+        bprue_additions = b - v
+        bprue_removed_vanilla = v - b
+        oxa_additions = o - v
+        oxa_removed_vanilla = v - o
+        reintroduced = (b & v) & oxa_removed_vanilla
+        shared_additions = bprue_additions & oxa_additions
+        independent_bprue = bprue_additions - oxa_additions
+
+        if reintroduced:
+            classification = "OXA_REMOVAL_REINTRODUCED"
+        elif independent_bprue and oxa_additions:
+            classification = "BOTH_EXTEND_BASELINE"
+        elif independent_bprue:
+            classification = "BPRUE_ADDITION"
+        elif oxa_removed_vanilla:
+            classification = "OXA_REMOVAL"
+        elif oxa_additions:
+            classification = "OXA_ADDITION"
+        else:
+            classification = "UNCHANGED_OR_INCOMPLETE_BASELINE"
+
+        # Proposed compatibility content is intentionally conservative:
+        # preserve OXA's effective entries and add only BPRUE-owned additions.
+        proposed = sorted(o | independent_bprue)
+
+        results.append({
+            "classification": classification,
+            "prototype": prototype,
+            "array": root,
+            "vanilla": sorted(v),
+            "bprue": sorted(b),
+            "oxa": sorted(o),
+            "bprue_additions": sorted(bprue_additions),
+            "bprue_removed_vanilla": sorted(bprue_removed_vanilla),
+            "oxa_additions": sorted(oxa_additions),
+            "oxa_removed_vanilla": sorted(oxa_removed_vanilla),
+            "reintroduced_oxa_removals": sorted(reintroduced),
+            "shared_additions": sorted(shared_additions),
+            "compatibility_candidate": proposed,
+        })
+    return results
+
+
+def _three_way_summary(items: list[dict]) -> dict:
+    counts = defaultdict(int)
+    arrays = defaultdict(int)
+    reintroduced = 0
+    for item in items:
+        counts[item["classification"]] += 1
+        arrays[item["array"]] += 1
+        reintroduced += len(item["reintroduced_oxa_removals"])
+    return {
+        "groups": len(items),
+        "classification_counts": dict(sorted(counts.items())),
+        "array_counts": dict(sorted(arrays.items())),
+        "reintroduced_oxa_removal_entries": reintroduced,
+    }
+
+
 def _semantic_summary(items: list[dict]) -> dict:
     counts = defaultdict(int)
     arrays = defaultdict(int)
@@ -248,7 +356,7 @@ def _semantic_summary(items: list[dict]) -> dict:
     }
 
 
-def analyze(bprue: list[Write], oxa: list[Write]) -> dict:
+def analyze(bprue: list[Write], oxa: list[Write], vanilla: list[Write] | None = None) -> dict:
     left, right = index(bprue), index(oxa)
     overlaps = []
     for key in sorted(set(left) & set(right)):
@@ -274,6 +382,7 @@ def analyze(bprue: list[Write], oxa: list[Write]) -> dict:
         oxa_sources[w.prototype].add(w.source)
 
     semantic = _semantic_compare(bprue, oxa)
+    three_way = _three_way_compare(vanilla or [], bprue, oxa)
 
     return {
         "summary": {
@@ -287,7 +396,9 @@ def analyze(bprue: list[Write], oxa: list[Write]) -> dict:
             "severity_counts": dict(sorted(counts.items())),
             "oxa_multi_source_prototypes": sum(1 for sources in oxa_sources.values() if len(sources) > 1),
             "semantic_arrays": _semantic_summary(semantic),
+            "three_way": _three_way_summary(three_way),
         },
+        "three_way": three_way,
         "semantic_arrays": semantic,
         "overlaps": overlaps,
         "oxa_multi_source": [
@@ -307,6 +418,25 @@ def render_text(report: dict) -> str:
     lines.append("severity_counts:")
     for key, value in summary["severity_counts"].items():
         lines.append(f"  {key}: {value}")
+
+    if report.get("three_way"):
+        lines += ["", "Vanilla -> BPRUE / OXA three-way analysis", "-----------------------------------------"]
+        for item in report["three_way"]:
+            if item["classification"] == "UNCHANGED_OR_INCOMPLETE_BASELINE":
+                continue
+            lines += [
+                f"[{item['classification']}] {item['prototype']} :: {item['array']}",
+                f"  vanilla={len(item['vanilla'])} bprue={len(item['bprue'])} oxa={len(item['oxa'])} candidate={len(item['compatibility_candidate'])}",
+            ]
+            if item["reintroduced_oxa_removals"]:
+                lines.append("  REINTRODUCED OXA REMOVALS: " + ", ".join(item["reintroduced_oxa_removals"]))
+            if item["bprue_additions"]:
+                lines.append("  BPRUE additions: " + ", ".join(item["bprue_additions"]))
+            if item["oxa_additions"]:
+                lines.append("  OXA additions:   " + ", ".join(item["oxa_additions"]))
+            if item["oxa_removed_vanilla"]:
+                lines.append("  OXA removed:     " + ", ".join(item["oxa_removed_vanilla"]))
+            lines.append("")
 
     if report.get("semantic_arrays"):
         lines += ["", "Semantic array conflicts", "------------------------"]
@@ -353,11 +483,13 @@ def main() -> None:
     parser.add_argument("--bprue-root", type=Path, default=DEFAULT_BPRUE_ROOT)
     parser.add_argument("--oxa-root", type=Path, default=DEFAULT_OXA_ROOT)
     parser.add_argument("--report-dir", type=Path, default=DEFAULT_REPORT_DIR)
+    parser.add_argument("--vanilla-root", type=Path, default=DEFAULT_VANILLA_ROOT)
     args = parser.parse_args()
 
     bprue = collect(args.bprue_root)
     oxa = collect(args.oxa_root)
-    report = analyze(bprue, oxa)
+    vanilla = collect_vanilla(args.vanilla_root)
+    report = analyze(bprue, oxa, vanilla)
 
     args.report_dir.mkdir(parents=True, exist_ok=True)
     json_path = args.report_dir / "oxa_conflicts.json"
@@ -365,7 +497,7 @@ def main() -> None:
     json_path.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     text_path.write_text(render_text(report), encoding="utf-8")
 
-    print(render_text({"summary": report["summary"], "semantic_arrays": report["semantic_arrays"], "overlaps": [], "oxa_multi_source": []}).rstrip())
+    print(render_text({"summary": report["summary"], "three_way": report["three_way"], "semantic_arrays": report["semantic_arrays"], "overlaps": [], "oxa_multi_source": []}).rstrip())
     print(f"\nWrote {rel(json_path)}")
     print(f"Wrote {rel(text_path)}")
 
