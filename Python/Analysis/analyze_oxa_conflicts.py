@@ -450,6 +450,67 @@ def _three_way_summary(items: list[dict]) -> dict:
     }
 
 
+def _upgrade_removal_category(sid: str) -> str:
+    """Classify removed Vanilla upgrade SIDs without hardcoding weapon names."""
+    lowered = sid.lower()
+    if "laser_hp" in lowered:
+        return "Laser_HP"
+    if "offset_stock" in lowered or "offset" in lowered:
+        return "Offset"
+    if "autmuz" in lowered:
+        return "AutMuz"
+    if "sinmuz" in lowered:
+        return "SinMuz"
+    if "_attachment_laser" in lowered:
+        return "Laser"
+    if "_attachment_grip" in lowered:
+        return "Grip"
+    if "_attachment_rail" in lowered:
+        return "Rail"
+    if "_attachment_" in lowered:
+        return "OtherAttachment"
+    return "OtherGameplayUpgrade"
+
+
+def _removal_analysis(items: list[dict]) -> dict:
+    upgrade_categories: dict[str, list[dict]] = defaultdict(list)
+    attachment_removals: list[dict] = []
+    fitting_removals: list[dict] = []
+    unexpected: list[dict] = []
+
+    for item in items:
+        removed = item["oxa_removed_vanilla"]
+        if not removed:
+            continue
+
+        if item["array"] == "UpgradePrototypeSIDs":
+            for sid in removed:
+                category = _upgrade_removal_category(sid)
+                record = {"prototype": item["prototype"], "sid": sid}
+                upgrade_categories[category].append(record)
+                if category == "OtherGameplayUpgrade":
+                    unexpected.append(record)
+        elif item["array"] == "CompatibleAttachments":
+            for sid in removed:
+                attachment_removals.append({"prototype": item["prototype"], "sid": sid})
+        elif item["array"] == "FittingWeaponsSIDs":
+            for sid in removed:
+                fitting_removals.append({"prototype": item["prototype"], "sid": sid})
+
+    category_counts = {
+        category: len(records)
+        for category, records in sorted(upgrade_categories.items())
+    }
+    return {
+        "upgrade_removal_category_counts": category_counts,
+        "upgrade_removals": dict(sorted(upgrade_categories.items())),
+        "compatible_attachment_removals": attachment_removals,
+        "fitting_weapon_removals": fitting_removals,
+        "unexpected_gameplay_upgrades": unexpected,
+        "unexpected_gameplay_upgrade_count": len(unexpected),
+    }
+
+
 def _semantic_summary(items: list[dict]) -> dict:
     counts = defaultdict(int)
     arrays = defaultdict(int)
@@ -490,6 +551,7 @@ def analyze(bprue: list[Write], oxa: list[Write], vanilla: list[Write] | None = 
 
     semantic = _semantic_compare(bprue, oxa)
     three_way = _three_way_compare(vanilla or [], bprue, oxa)
+    removal_analysis = _removal_analysis(three_way)
 
     return {
         "summary": {
@@ -504,7 +566,14 @@ def analyze(bprue: list[Write], oxa: list[Write], vanilla: list[Write] | None = 
             "oxa_multi_source_prototypes": sum(1 for sources in oxa_sources.values() if len(sources) > 1),
             "semantic_arrays": _semantic_summary(semantic),
             "three_way": _three_way_summary(three_way),
+            "removal_analysis": {
+                "upgrade_removal_category_counts": removal_analysis["upgrade_removal_category_counts"],
+                "compatible_attachment_removals": len(removal_analysis["compatible_attachment_removals"]),
+                "fitting_weapon_removals": len(removal_analysis["fitting_weapon_removals"]),
+                "unexpected_gameplay_upgrade_count": removal_analysis["unexpected_gameplay_upgrade_count"],
+            },
         },
+        "removal_analysis": removal_analysis,
         "three_way": three_way,
         "semantic_arrays": semantic,
         "overlaps": overlaps,
@@ -525,6 +594,22 @@ def render_text(report: dict) -> str:
     lines.append("severity_counts:")
     for key, value in summary["severity_counts"].items():
         lines.append(f"  {key}: {value}")
+
+    if report.get("removal_analysis"):
+        analysis = report["removal_analysis"]
+        lines += ["", "OXA Vanilla-removal classification", "----------------------------------"]
+        lines.append("UpgradePrototypeSIDs:")
+        for category, count in analysis["upgrade_removal_category_counts"].items():
+            lines.append(f"  {category}: {count}")
+        lines += [
+            f"CompatibleAttachments removals: {len(analysis['compatible_attachment_removals'])}",
+            f"FittingWeaponsSIDs removals: {len(analysis['fitting_weapon_removals'])}",
+            f"Unexpected gameplay upgrades: {analysis['unexpected_gameplay_upgrade_count']}",
+        ]
+        if analysis["unexpected_gameplay_upgrades"]:
+            lines.append("Unexpected / review manually:")
+            for item in analysis["unexpected_gameplay_upgrades"]:
+                lines.append(f"  {item['prototype']}: {item['sid']}")
 
     if report.get("three_way"):
         lines += ["", "Vanilla -> effective BPRUE / effective OXA analysis", "-----------------------------------------"]
@@ -604,7 +689,7 @@ def main() -> None:
     json_path.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     text_path.write_text(render_text(report), encoding="utf-8")
 
-    print(render_text({"summary": report["summary"], "three_way": report["three_way"], "semantic_arrays": report["semantic_arrays"], "overlaps": [], "oxa_multi_source": []}).rstrip())
+    print(render_text({"summary": report["summary"], "removal_analysis": report["removal_analysis"], "three_way": report["three_way"], "semantic_arrays": report["semantic_arrays"], "overlaps": [], "oxa_multi_source": []}).rstrip())
     print(f"\nWrote {rel(json_path)}")
     print(f"Wrote {rel(text_path)}")
 
