@@ -11,7 +11,7 @@ overlap_records: 865
 oxa_multi_source_prototypes: 38
 semantic_arrays: {'groups': 82, 'severity_counts': {'CONTENT_CONFLICT': 6, 'INDEX_COLLISION': 1, 'MERGE_REQUIRED': 75}, 'array_counts': {'CompatibleAttachments': 6, 'FittingWeaponsSIDs': 8, 'UpgradePrototypeSIDs': 68}}
 three_way: {'groups': 102, 'classification_counts': {'BOTH_EXTEND_BASELINE': 1, 'BPRUE_ADDITION': 24, 'OXA_REMOVAL_REINTRODUCED': 77}, 'array_counts': {'CompatibleAttachments': 6, 'FittingWeaponsSIDs': 13, 'UpgradePrototypeSIDs': 83}, 'reintroduced_oxa_removal_entries': 236, 'oxa_inherited_arrays': 94, 'oxa_replaced_arrays': 8}
-removal_analysis: {'upgrade_removal_category_counts': {'AutMuz': 15, 'Grip': 9, 'Laser': 12, 'Laser_HP': 45, 'Offset': 51, 'OtherGameplayUpgrade': 8, 'Rail': 5, 'SinMuz': 27}, 'compatible_attachment_removals': 11, 'fitting_weapon_removals': 53, 'unexpected_gameplay_upgrade_count': 8}
+removal_analysis: {'upgrade_removal_category_counts': {'AutMuz': 15, 'Grip': 9, 'Laser': 12, 'Laser_HP': 45, 'Offset': 52, 'OtherGameplayUpgrade': 7, 'Rail': 5, 'SinMuz': 27}, 'compatible_attachment_removals': 11, 'fitting_weapon_removals': 53, 'unexpected_gameplay_upgrade_count': 7}
 severity_counts:
   CONFLICT: 471
   PROTOTYPE_OVERLAP: 203
@@ -25,15 +25,14 @@ UpgradePrototypeSIDs:
   Grip: 9
   Laser: 12
   Laser_HP: 45
-  Offset: 51
-  OtherGameplayUpgrade: 8
+  Offset: 52
+  OtherGameplayUpgrade: 7
   Rail: 5
   SinMuz: 27
 CompatibleAttachments removals: 11
 FittingWeaponsSIDs removals: 53
-Unexpected gameplay upgrades: 8
+Unexpected gameplay upgrades: 7
 Unexpected / review manually:
-  GunAKU_PP: GunAKU_Upgrade_Stock_1_2
   GunM701_SP: GunM701_Upgrade_Barrel_3_2
   GunSVDM_SP: GunSVDM_Upgrade_Barrel_3_2
   GunSVU_SP: GunSVU_Upgrade_Barrel_3_2
@@ -93,9 +92,9 @@ Vanilla -> effective BPRUE / effective OXA analysis
 
 [OXA_REMOVAL_REINTRODUCED] GunAKU_PP :: UpgradePrototypeSIDs
   vanilla=12 bprue=30 oxa=10 candidate=28
-  REINTRODUCED OXA REMOVALS: GunAKU_Upgrade_Attachment_AutMuz, GunAKU_Upgrade_Stock_1_2
+  REINTRODUCED OXA REMOVALS: GunAKU_Upgrade_Attachment_AutMuz, GunAKU_Upgrade_Attachment_Offset_Stock
   BPRUE additions: GunAKU_Upgrade_BPRUE_Action_Controlled, GunAKU_Upgrade_BPRUE_Action_HighSpeed, GunAKU_Upgrade_BPRUE_PistolConversion, GunAKU_Upgrade_BPRUE_Readiness_QuickDraw, GunAKU_Upgrade_BPRUE_Readiness_Stabilized, GunAKU_Upgrade_BPRUE_Reload_Competition, GunAKU_Upgrade_BPRUE_Reload_Tactical, GunAKU_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction, GunAKU_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem, GunAKU_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing, GunAKU_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget, GunAKU_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly, GunAKU_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly, GunAKU_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration, GunAKU_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration, GunAKU_Upgrade_BPRUE_Stock_Lightweight, GunAKU_Upgrade_BPRUE_Stock_Stabilized, GunAKU_Upgrade_BPRUE_Stock_Tactical
-  OXA removed:     GunAKU_Upgrade_Attachment_AutMuz, GunAKU_Upgrade_Stock_1_2
+  OXA removed:     GunAKU_Upgrade_Attachment_AutMuz, GunAKU_Upgrade_Attachment_Offset_Stock
 
 [BPRUE_ADDITION] GunAK_MagPaired :: FittingWeaponsSIDs
   vanilla=2 bprue=3 oxa=2 candidate=3

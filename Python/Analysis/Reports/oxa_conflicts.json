@@ -49,14 +49,14 @@
         "Grip": 9,
         "Laser": 12,
         "Laser_HP": 45,
-        "Offset": 51,
-        "OtherGameplayUpgrade": 8,
+        "Offset": 52,
+        "OtherGameplayUpgrade": 7,
         "Rail": 5,
         "SinMuz": 27
       },
       "compatible_attachment_removals": 11,
       "fitting_weapon_removals": 53,
-      "unexpected_gameplay_upgrade_count": 8
+      "unexpected_gameplay_upgrade_count": 7
     }
   },
   "removal_analysis": {
@@ -65,8 +65,8 @@
       "Grip": 9,
       "Laser": 12,
       "Laser_HP": 45,
-      "Offset": 51,
-      "OtherGameplayUpgrade": 8,
+      "Offset": 52,
+      "OtherGameplayUpgrade": 7,
       "Rail": 5,
       "SinMuz": 27
     },
@@ -413,6 +413,10 @@
           "sid": "GunAK74_Upgrade_Attachment_Offset_Stock"
         },
         {
+          "prototype": "GunAKU_PP",
+          "sid": "GunAKU_Upgrade_Attachment_Offset_Stock"
+        },
+        {
           "prototype": "GunArevLight_AR_GS",
           "sid": "GunArev_Upgrade_Attachment_Offset_Stock"
         },
@@ -610,10 +614,6 @@
         }
       ],
       "OtherGameplayUpgrade": [
-        {
-          "prototype": "GunAKU_PP",
-          "sid": "GunAKU_Upgrade_Stock_1_2"
-        },
         {
           "prototype": "GunM701_SP",
           "sid": "GunM701_Upgrade_Barrel_3_2"
@@ -1038,10 +1038,6 @@
     ],
     "unexpected_gameplay_upgrades": [
       {
-        "prototype": "GunAKU_PP",
-        "sid": "GunAKU_Upgrade_Stock_1_2"
-      },
-      {
         "prototype": "GunM701_SP",
         "sid": "GunM701_Upgrade_Barrel_3_2"
       },
@@ -1070,7 +1066,7 @@
         "sid": "GunSVU_Upgrade_Barrel_3_2"
       }
     ],
-    "unexpected_gameplay_upgrade_count": 8
+    "unexpected_gameplay_upgrade_count": 7
   },
   "three_way": [
     {
@@ -1149,12 +1145,14 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       },
       "oxa_array_semantics": {
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       }
     },
@@ -1246,12 +1244,14 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       },
       "oxa_array_semantics": {
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       }
     },
@@ -1297,12 +1297,14 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       },
       "oxa_array_semantics": {
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       }
     },
@@ -1374,12 +1376,14 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       },
       "oxa_array_semantics": {
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       }
     },
@@ -1517,6 +1521,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -1525,6 +1530,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -1657,6 +1663,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -1665,6 +1672,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -1878,6 +1886,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -1886,6 +1895,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -1940,7 +1950,6 @@
         "GunAKU_Upgrade_Stock_1_2"
       ],
       "oxa_effective": [
-        "GunAKU_Upgrade_Attachment_Offset_Stock",
         "GunAKU_Upgrade_Attachment_Rail",
         "GunAKU_Upgrade_Body_1",
         "GunAKU_Upgrade_Body_2_1",
@@ -1949,7 +1958,8 @@
         "GunAKU_Upgrade_Handguard_1_2",
         "GunAKU_Upgrade_Handguard_2_1",
         "GunAKU_Upgrade_Handguard_2_2",
-        "GunAKU_Upgrade_Stock_1_1"
+        "GunAKU_Upgrade_Stock_1_1",
+        "GunAKU_Upgrade_Stock_1_2"
       ],
       "bprue_additions": [
         "GunAKU_Upgrade_BPRUE_Action_Controlled",
@@ -1975,15 +1985,14 @@
       "oxa_additions": [],
       "oxa_removed_vanilla": [
         "GunAKU_Upgrade_Attachment_AutMuz",
-        "GunAKU_Upgrade_Stock_1_2"
+        "GunAKU_Upgrade_Attachment_Offset_Stock"
       ],
       "reintroduced_oxa_removals": [
         "GunAKU_Upgrade_Attachment_AutMuz",
-        "GunAKU_Upgrade_Stock_1_2"
+        "GunAKU_Upgrade_Attachment_Offset_Stock"
       ],
       "shared_additions": [],
       "compatibility_candidate": [
-        "GunAKU_Upgrade_Attachment_Offset_Stock",
         "GunAKU_Upgrade_Attachment_Rail",
         "GunAKU_Upgrade_BPRUE_Action_Controlled",
         "GunAKU_Upgrade_BPRUE_Action_HighSpeed",
@@ -2010,12 +2019,14 @@
         "GunAKU_Upgrade_Handguard_1_2",
         "GunAKU_Upgrade_Handguard_2_1",
         "GunAKU_Upgrade_Handguard_2_2",
-        "GunAKU_Upgrade_Stock_1_1"
+        "GunAKU_Upgrade_Stock_1_1",
+        "GunAKU_Upgrade_Stock_1_2"
       ],
       "bprue_array_semantics": {
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -2023,6 +2034,16 @@
         "replaced": false,
         "modes": [
           "bpatch"
+        ],
+        "removal_identity_mismatches": [
+          {
+            "patch_index": "[10]",
+            "index_identity": "GunAKU_Upgrade_Stock_1_2",
+            "comment_identity": "GunAKU_Upgrade_Attachment_Offset_Stock",
+            "resolved_index": "[11]",
+            "resolution": "comment_identity",
+            "source": "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_AKS74U.cfg"
+          }
         ],
         "inherited": true
       }
@@ -2063,13 +2084,15 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       },
       "oxa_array_semantics": {
         "explicit": false,
         "replaced": false,
         "modes": [],
-        "inherited": true
+        "inherited": true,
+        "removal_identity_mismatches": []
       }
     },
     {
@@ -2193,6 +2216,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -2201,6 +2225,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -2396,6 +2421,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -2404,6 +2430,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -2595,6 +2622,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -2603,6 +2631,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -2799,6 +2828,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -2807,6 +2837,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -2842,13 +2873,15 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       },
       "oxa_array_semantics": {
         "explicit": false,
         "replaced": false,
         "modes": [],
-        "inherited": true
+        "inherited": true,
+        "removal_identity_mismatches": []
       }
     },
     {
@@ -3014,6 +3047,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -3022,6 +3056,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -3179,6 +3214,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -3187,6 +3223,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -3303,6 +3340,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -3311,6 +3349,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -3488,6 +3527,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -3496,6 +3536,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -3664,6 +3705,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -3671,6 +3713,16 @@
         "replaced": false,
         "modes": [
           "bpatch"
+        ],
+        "removal_identity_mismatches": [
+          {
+            "patch_index": "[22]",
+            "index_identity": "GunD12_Upgrade_Attachment_Laser_HP",
+            "comment_identity": "GunM860_Upgrade_Attachment_Laser_HP",
+            "resolved_index": null,
+            "resolution": "index_fallback",
+            "source": "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg"
+          }
         ],
         "inherited": true
       }
@@ -3830,6 +3882,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -3838,6 +3891,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -4005,6 +4059,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -4013,6 +4068,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -4215,13 +4271,15 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
         "explicit": false,
         "replaced": false,
         "modes": [],
-        "inherited": true
+        "inherited": true,
+        "removal_identity_mismatches": []
       }
     },
     {
@@ -4424,6 +4482,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -4432,6 +4491,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -4574,6 +4634,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -4582,6 +4643,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -4729,6 +4791,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -4737,6 +4800,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -4884,6 +4948,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -4892,6 +4957,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -5052,6 +5118,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -5060,6 +5127,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -5265,6 +5333,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -5273,6 +5342,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -5413,6 +5483,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -5421,6 +5492,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -5584,6 +5656,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -5592,6 +5665,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -5740,6 +5814,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -5748,6 +5823,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -5938,13 +6014,15 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
         "explicit": false,
         "replaced": false,
         "modes": [],
-        "inherited": true
+        "inherited": true,
+        "removal_identity_mismatches": []
       }
     },
     {
@@ -5979,13 +6057,15 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       },
       "oxa_array_semantics": {
         "explicit": false,
         "replaced": false,
         "modes": [],
-        "inherited": true
+        "inherited": true,
+        "removal_identity_mismatches": []
       }
     },
     {
@@ -6209,6 +6289,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -6217,6 +6298,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -6371,6 +6453,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -6379,6 +6462,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -6541,6 +6625,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -6549,6 +6634,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -6712,6 +6798,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -6720,6 +6807,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -6822,6 +6910,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -6830,6 +6919,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -6989,6 +7079,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -6997,6 +7088,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -7103,13 +7195,15 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
         "explicit": false,
         "replaced": false,
         "modes": [],
-        "inherited": true
+        "inherited": true,
+        "removal_identity_mismatches": []
       }
     },
     {
@@ -7237,6 +7331,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -7245,6 +7340,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -7414,6 +7510,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -7422,6 +7519,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -7543,6 +7641,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -7551,6 +7650,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -7716,6 +7816,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -7724,6 +7825,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -7825,13 +7927,15 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
         "explicit": false,
         "replaced": false,
         "modes": [],
-        "inherited": true
+        "inherited": true,
+        "removal_identity_mismatches": []
       }
     },
     {
@@ -7918,13 +8022,15 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
         "explicit": false,
         "replaced": false,
         "modes": [],
-        "inherited": true
+        "inherited": true,
+        "removal_identity_mismatches": []
       }
     },
     {
@@ -8049,13 +8155,15 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
         "explicit": false,
         "replaced": false,
         "modes": [],
-        "inherited": true
+        "inherited": true,
+        "removal_identity_mismatches": []
       }
     },
     {
@@ -8185,13 +8293,15 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
         "explicit": false,
         "replaced": false,
         "modes": [],
-        "inherited": true
+        "inherited": true,
+        "removal_identity_mismatches": []
       }
     },
     {
@@ -8268,6 +8378,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -8276,6 +8387,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -8413,6 +8525,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -8421,6 +8534,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -8535,13 +8649,15 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
         "explicit": false,
         "replaced": false,
         "modes": [],
-        "inherited": true
+        "inherited": true,
+        "removal_identity_mismatches": []
       }
     },
     {
@@ -8728,13 +8844,15 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
         "explicit": false,
         "replaced": false,
         "modes": [],
-        "inherited": true
+        "inherited": true,
+        "removal_identity_mismatches": []
       }
     },
     {
@@ -8883,6 +9001,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -8891,6 +9010,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -9041,13 +9161,15 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
         "explicit": false,
         "replaced": false,
         "modes": [],
-        "inherited": true
+        "inherited": true,
+        "removal_identity_mismatches": []
       }
     },
     {
@@ -9200,6 +9322,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -9208,6 +9331,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -9400,6 +9524,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -9408,6 +9533,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -9609,6 +9735,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -9617,6 +9744,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -9720,13 +9848,15 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
         "explicit": false,
         "replaced": false,
         "modes": [],
-        "inherited": true
+        "inherited": true,
+        "removal_identity_mismatches": []
       }
     },
     {
@@ -9875,6 +10005,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -9883,6 +10014,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -10057,13 +10189,15 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
         "explicit": false,
         "replaced": false,
         "modes": [],
-        "inherited": true
+        "inherited": true,
+        "removal_identity_mismatches": []
       }
     },
     {
@@ -10148,13 +10282,15 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
         "explicit": false,
         "replaced": false,
         "modes": [],
-        "inherited": true
+        "inherited": true,
+        "removal_identity_mismatches": []
       }
     },
     {
@@ -10242,6 +10378,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -10250,6 +10387,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -10285,13 +10423,15 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       },
       "oxa_array_semantics": {
         "explicit": false,
         "replaced": false,
         "modes": [],
-        "inherited": true
+        "inherited": true,
+        "removal_identity_mismatches": []
       }
     },
     {
@@ -10495,6 +10635,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -10503,6 +10644,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -10637,6 +10779,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -10645,6 +10788,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -10816,6 +10960,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -10824,6 +10969,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -10859,13 +11005,15 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       },
       "oxa_array_semantics": {
         "explicit": false,
         "replaced": false,
         "modes": [],
-        "inherited": true
+        "inherited": true,
+        "removal_identity_mismatches": []
       }
     },
     {
@@ -11085,6 +11233,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -11093,6 +11242,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -11266,6 +11416,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -11274,6 +11425,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -11446,6 +11598,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -11454,6 +11607,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -11594,6 +11748,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -11602,6 +11757,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -11752,6 +11908,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -11760,6 +11917,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -11900,6 +12058,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -11908,6 +12067,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -12035,6 +12195,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -12043,6 +12204,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -12152,13 +12314,15 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
         "explicit": false,
         "replaced": false,
         "modes": [],
-        "inherited": true
+        "inherited": true,
+        "removal_identity_mismatches": []
       }
     },
     {
@@ -12238,6 +12402,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -12246,6 +12411,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -12337,6 +12503,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -12345,6 +12512,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -12485,6 +12653,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -12493,6 +12662,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -12649,6 +12819,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -12657,6 +12828,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -12808,6 +12980,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -12816,6 +12989,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -12976,6 +13150,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -12984,6 +13159,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -13104,6 +13280,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -13112,6 +13289,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -13284,6 +13462,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -13292,6 +13471,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -13454,6 +13634,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -13462,6 +13643,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -13593,6 +13775,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -13601,6 +13784,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -13738,6 +13922,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -13746,6 +13931,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -13877,6 +14063,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -13885,6 +14072,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -14014,6 +14202,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -14021,6 +14210,16 @@
         "replaced": false,
         "modes": [
           "bpatch"
+        ],
+        "removal_identity_mismatches": [
+          {
+            "patch_index": "[0]",
+            "index_identity": "GunAKU_Upgrade_Handguard_1_1",
+            "comment_identity": "GunAKU_Upgrade_Attachment_AutMuz",
+            "resolved_index": null,
+            "resolution": "index_fallback",
+            "source": "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_AKS74U.cfg"
+          }
         ],
         "inherited": true
       }
@@ -14170,6 +14369,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -14178,6 +14378,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -14308,6 +14509,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -14316,6 +14518,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -14449,6 +14652,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -14457,6 +14661,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -14617,6 +14822,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -14625,6 +14831,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -14705,6 +14912,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -14713,6 +14921,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -14846,13 +15055,15 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
         "explicit": false,
         "replaced": false,
         "modes": [],
-        "inherited": true
+        "inherited": true,
+        "removal_identity_mismatches": []
       }
     },
     {
@@ -14988,6 +15199,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -14996,6 +15208,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -15154,6 +15367,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -15162,6 +15376,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -15293,6 +15508,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -15301,6 +15517,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -15505,6 +15722,7 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
@@ -15513,6 +15731,7 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       }
     },
@@ -15588,12 +15807,14 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       },
       "oxa_array_semantics": {
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       }
     },
@@ -15655,12 +15876,14 @@
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       },
       "oxa_array_semantics": {
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       }
     },
@@ -15714,12 +15937,14 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       },
       "oxa_array_semantics": {
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       }
     },
@@ -15787,12 +16012,14 @@
         "modes": [
           "bpatch"
         ],
+        "removal_identity_mismatches": [],
         "inherited": true
       },
       "oxa_array_semantics": {
         "explicit": true,
         "replaced": true,
         "modes": [],
+        "removal_identity_mismatches": [],
         "inherited": false
       }
     }
