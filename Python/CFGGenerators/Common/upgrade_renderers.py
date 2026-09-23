@@ -190,4 +190,4 @@ def render_technician_patch(
             "",
         ]
 
-    return "\\n".join(lines).rstrip() + "\\n"
+    return "\n".join(lines).rstrip() + "\n"
