@@ -27,6 +27,7 @@ class Write:
     kind: str
     value: str | None = None
     modes: tuple[str, ...] = field(default_factory=tuple)
+    comment: str | None = None
 
 
 def rel(path: Path) -> str:
@@ -48,7 +49,9 @@ def parse_cfg(path: Path) -> list[Write]:
     prototype: str | None = None
 
     for raw in path.read_text(encoding="utf-8", errors="ignore").splitlines():
-        line = raw.split("//", 1)[0].rstrip()
+        code, sep, raw_comment = raw.partition("//")
+        line = code.rstrip()
+        comment = raw_comment.strip() if sep and raw_comment.strip() else None
         if not line.strip():
             continue
 
@@ -79,7 +82,7 @@ def parse_cfg(path: Path) -> list[Write]:
         match = REMOVE.match(line)
         if match:
             node_path = ".".join([part[0] for part in stack[1:]] + [match.group(1)])
-            writes.append(Write(rel(path), prototype, node_path, "remove", None, ()))
+            writes.append(Write(rel(path), prototype, node_path, "remove", None, (), comment))
             continue
 
         match = SCALAR.match(line)
@@ -307,6 +310,7 @@ def _apply_array_patch(base: dict[str, dict], writes: list[Write], root: str) ->
         default=-1,
     ) + 1
     wildcard_map: dict[str, str] = {}
+    meta_mismatches: list[dict] = []
 
     for w in writes:
         if w.path == root:
@@ -320,7 +324,33 @@ def _apply_array_patch(base: dict[str, dict], writes: list[Write], root: str) ->
                 next_append += 1
 
         if w.kind == "remove" and child is None:
-            state.pop(index_name, None)
+            # OXA's numeric patch indices can target a different Vanilla build than
+            # our local VanillaReference.  OXA conveniently annotates removals as
+            # "[N] : removenode //ActualSID"; prefer that semantic identity over
+            # blindly removing whatever currently occupies index N.
+            comment_identity = w.comment.split()[0] if w.comment else None
+            identity_field = SEMANTIC_ARRAYS[root]
+            identity_key = identity_field or "<value>"
+            matched_index = None
+            if comment_identity:
+                for candidate_index, fields in state.items():
+                    if fields.get(identity_key) == comment_identity:
+                        matched_index = candidate_index
+                        break
+
+            target_index = matched_index or index_name
+            index_identity = state.get(index_name, {}).get(identity_key)
+            state.pop(target_index, None)
+
+            if comment_identity and index_identity != comment_identity:
+                meta_mismatches.append({
+                    "patch_index": index_name,
+                    "index_identity": index_identity,
+                    "comment_identity": comment_identity,
+                    "resolved_index": matched_index,
+                    "resolution": "comment_identity" if matched_index else "index_fallback",
+                    "source": w.source,
+                })
             continue
 
         entry = state.setdefault(index_name, {})
@@ -333,6 +363,7 @@ def _apply_array_patch(base: dict[str, dict], writes: list[Write], root: str) ->
         "explicit": explicit,
         "replaced": replaced,
         "modes": sorted(modes_seen),
+        "removal_identity_mismatches": meta_mismatches,
     }
 
 
@@ -354,7 +385,7 @@ def _effective_semantic_arrays(
         mod_writes = mod_groups.get(key, [])
         if not mod_writes:
             state = base_entries
-            meta = {"explicit": False, "replaced": False, "modes": [], "inherited": True}
+            meta = {"explicit": False, "replaced": False, "modes": [], "inherited": True, "removal_identity_mismatches": []}
         else:
             state, meta = _apply_array_patch(base_entries, mod_writes, root)
             meta["inherited"] = not meta["replaced"]
