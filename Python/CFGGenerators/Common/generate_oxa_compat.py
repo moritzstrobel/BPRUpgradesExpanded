@@ -5,7 +5,7 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_REPORT = ROOT / "Python/Analysis/Reports/oxa_conflicts.json"
 DEFAULT_VANILLA = ROOT / "Python/VanillaReference"
 DEFAULT_OUTPUT = ROOT / "Compat/OXA/GameLite"
