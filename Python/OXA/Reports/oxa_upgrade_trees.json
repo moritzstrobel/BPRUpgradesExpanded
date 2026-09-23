@@ -1,0 +1,1388 @@
+{
+  "weapons": [
+    {
+      "weapon_sid": "GunAKS74N_G2_ST",
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_OXA.cfg"
+      ],
+      "upgrade_roots": [
+        "GunAK74_Upgrade_Barrel_1",
+        "GunAK74_Upgrade_Barrel_2_1",
+        "GunAK74_Upgrade_Barrel_2_2",
+        "GunAK74_Upgrade_Body_1",
+        "GunAK74_Upgrade_Body_2",
+        "GunAK74_Upgrade_Stock_1",
+        "GunAK74_Upgrade_Stock_2",
+        "GunAK74_Upgrade_Stock_3"
+      ],
+      "attachments": [
+        {
+          "index": "[0]",
+          "sid": "RU_SinMuz_2",
+          "fields": {
+            "AttachPrototypeSID": "RU_SinMuz_2",
+            "Socket": "SinMuzzleSocket",
+            "Muzzle": "AutMuzzle",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/AK74/T_inv_w_ak74_muz_02.T_inv_w_ak74_muz_02'",
+            "RequiredUpgradeIDs.[0]": "GunAK74_Upgrade_Attachment_SinMuz"
+          }
+        },
+        {
+          "index": "[1]",
+          "sid": "AK74_DefaultMuz",
+          "fields": {
+            "AttachPrototypeSID": "AK74_DefaultMuz",
+            "Socket": "Muzzle_163",
+            "Muzzle": "MuzFX_163",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N/Muzzle/T_inv_aks74n_muz_default.T_inv_aks74n_muz_default'"
+          }
+        },
+        {
+          "index": "[2]",
+          "sid": "OXAMuzzleBrake_545",
+          "fields": {
+            "AttachPrototypeSID": "OXAMuzzleBrake_545",
+            "Socket": "Muzzle_163",
+            "Muzzle": "MuzFX_163",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N/Muzzle/T_inv_aks74n_muz_mbrake545.T_inv_aks74n_muz_mbrake545'"
+          }
+        },
+        {
+          "index": "[3]",
+          "sid": "OXABalancedVent_545",
+          "fields": {
+            "AttachPrototypeSID": "OXABalancedVent_545",
+            "Socket": "Muzzle_163",
+            "Muzzle": "MuzFX_163",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N/Muzzle/T_inv_aks74n_muz_bvent545.T_inv_aks74n_muz_bvent545'"
+          }
+        },
+        {
+          "index": "[4]",
+          "sid": "OXALateralComp_545",
+          "fields": {
+            "AttachPrototypeSID": "OXALateralComp_545",
+            "Socket": "Muzzle_163",
+            "Muzzle": "MuzFX_163",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N/Muzzle/T_inv_aks74n_muz_lcomp545.T_inv_aks74n_muz_lcomp545'"
+          }
+        },
+        {
+          "index": "[5]",
+          "sid": "OXA_Silen_M1",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_M1",
+            "Socket": "Silencer_163",
+            "Muzzle": "SilFX_163",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N/Silencer/T_inv_aks74n_sil_m1.T_inv_aks74n_sil_m1'"
+          }
+        },
+        {
+          "index": "[6]",
+          "sid": "OXA_Silen_M2",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_M2",
+            "Socket": "Silencer_163",
+            "Muzzle": "SilFX_163",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N/Silencer/T_inv_aks74n_sil_m2.T_inv_aks74n_sil_m2'"
+          }
+        },
+        {
+          "index": "[7]",
+          "sid": "OXA_Silen_M3",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_M3",
+            "Socket": "Silencer_163",
+            "Muzzle": "SilFX_163",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N/Silencer/T_inv_aks74n_sil_m3.T_inv_aks74n_sil_m3'"
+          }
+        },
+        {
+          "index": "[8]",
+          "sid": "OXA_Silen_M4",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_M4",
+            "Socket": "Silencer_163",
+            "Muzzle": "SilFX_163",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N/Silencer/T_inv_aks74n_sil_m4.T_inv_aks74n_sil_m4'"
+          }
+        },
+        {
+          "index": "[9]",
+          "sid": "OXA_Silen_M5",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_M5",
+            "Socket": "Silencer_163",
+            "Muzzle": "SilFX_163",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N/Silencer/T_inv_aks74n_sil_m5.T_inv_aks74n_sil_m5'"
+          }
+        },
+        {
+          "index": "[10]",
+          "sid": "OXA_Silen_M6",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_M6",
+            "Socket": "Silencer_163",
+            "Muzzle": "SilFX_163",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N/Silencer/T_inv_aks74n_sil_m6.T_inv_aks74n_sil_m6'"
+          }
+        },
+        {
+          "index": "[11]",
+          "sid": "OXA_Silen_M7",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_M7",
+            "Socket": "Silencer_163",
+            "Muzzle": "SilFX_163",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N/Silencer/T_inv_aks74n_sil_m7.T_inv_aks74n_sil_m7'"
+          }
+        },
+        {
+          "index": "[12]",
+          "sid": "OXA_Silen_M8",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_M8",
+            "Socket": "Silencer_163",
+            "Muzzle": "SilFX_163",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N/Silencer/T_inv_aks74n_sil_m8.T_inv_aks74n_sil_m8'"
+          }
+        },
+        {
+          "index": "[19]",
+          "sid": "GunAK74_MagDefault",
+          "fields": {
+            "AttachPrototypeSID": "GunAK74_MagDefault",
+            "Socket": "jnt_magazine",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N/Magazine/T_inv_aks74n_mag_default.T_inv_aks74n_mag_default'"
+          }
+        },
+        {
+          "index": "[20]",
+          "sid": "GunAK74_MagIncreased",
+          "fields": {
+            "AttachPrototypeSID": "GunAK74_MagIncreased",
+            "Socket": "jnt_magazine",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N/Magazine/T_inv_aks74n_mag_ext1.T_inv_aks74n_mag_ext1'"
+          }
+        },
+        {
+          "index": "[21]",
+          "sid": "GunAK74_MagIncreased2",
+          "fields": {
+            "AttachPrototypeSID": "GunAK74_MagIncreased2",
+            "Socket": "jnt_magazine",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N/Magazine/T_inv_aks74n_mag_ext2.T_inv_aks74n_mag_ext2'"
+          }
+        },
+        {
+          "index": "[22]",
+          "sid": "GunAK_MagPaired",
+          "fields": {
+            "AttachPrototypeSID": "GunAK_MagPaired",
+            "Socket": "jnt_magazine",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N/Magazine/T_inv_aks74n_mag_paired.T_inv_aks74n_mag_paired'"
+          }
+        },
+        {
+          "index": "[23]",
+          "sid": "OXA_Mag_545x39_PMag30r",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Mag_545x39_PMag30r",
+            "Socket": "jnt_magazine",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N/Magazine/T_inv_aks74n_mag_545pmag30r.T_inv_aks74n_mag_545pmag30r'"
+          }
+        },
+        {
+          "index": "[24]",
+          "sid": "RU_SideRail_1",
+          "fields": {
+            "AttachPrototypeSID": "RU_SideRail_1",
+            "MeshPrototypeSID": "RISadapter_AKS74N",
+            "Socket": "jnt_offset",
+            "IconPosX": "150",
+            "IconPosY": "30"
+          }
+        },
+        {
+          "index": "[25]",
+          "sid": "EN_X2Scope_1",
+          "fields": {
+            "AttachPrototypeSID": "EN_X2Scope_1",
+            "Socket": "ScopeSocketA1",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_enx2.T_inv_aks74n_scope_enx2'"
+          }
+        },
+        {
+          "index": "[26]",
+          "sid": "EN_X3Scope_1",
+          "fields": {
+            "AttachPrototypeSID": "EN_X3Scope_1",
+            "Socket": "ScopeSocketA1",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_enx3.T_inv_aks74n_scope_enx3'"
+          }
+        },
+        {
+          "index": "[27]",
+          "sid": "EN_X4Scope_1",
+          "fields": {
+            "AttachPrototypeSID": "EN_X4Scope_1",
+            "Socket": "ScopeSocketA1",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_enx4.T_inv_aks74n_scope_enx4'",
+            "AimMuzzleVFXSocket": "X4ScopeMuzzle",
+            "AimShellShutterVFXSocket": "X4ScopeShells"
+          }
+        },
+        {
+          "index": "[28]",
+          "sid": "EN_X8Scope_1",
+          "fields": {
+            "AttachPrototypeSID": "EN_X8Scope_1",
+            "Socket": "ScopeSocketA1",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_enx8.T_inv_aks74n_scope_enx8'",
+            "AimMuzzleVFXSocket": "X4ScopeMuzzle",
+            "AimShellShutterVFXSocket": "X4ScopeShells"
+          }
+        },
+        {
+          "index": "[29]",
+          "sid": "OXA_Scope_Aselsan",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Scope_Aselsan",
+            "Socket": "ScopeSocketA1",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_aselsan.T_inv_aks74n_scope_aselsan'",
+            "AimMuzzleVFXSocket": "X4ScopeMuzzle",
+            "AimShellShutterVFXSocket": "X4ScopeShells"
+          }
+        },
+        {
+          "index": "[30]",
+          "sid": "OXA_Scope_OASYS",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Scope_OASYS",
+            "Socket": "ScopeSocketA1",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_oasys.T_inv_aks74n_scope_oasys'",
+            "AimMuzzleVFXSocket": "X4ScopeMuzzle",
+            "AimShellShutterVFXSocket": "X4ScopeShells"
+          }
+        },
+        {
+          "index": "[31]",
+          "sid": "OXA_Scope_Spitfire",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Scope_Spitfire",
+            "Socket": "ScopeSocketA1",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_spitfire.T_inv_aks74n_scope_spitfire'",
+            "AimMuzzleVFXSocket": "X4ScopeMuzzle",
+            "AimShellShutterVFXSocket": "X4ScopeShells"
+          }
+        },
+        {
+          "index": "[32]",
+          "sid": "OXA_Scope_SpitfireAR",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Scope_SpitfireAR",
+            "Socket": "ScopeSocketA1",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_spitfirear.T_inv_aks74n_scope_spitfirear'"
+          }
+        },
+        {
+          "index": "[33]",
+          "sid": "OXA_Scope_SpitfireHD",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Scope_SpitfireHD",
+            "Socket": "ScopeSocketA1",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_spitfirehd.T_inv_aks74n_scope_spitfirehd'",
+            "AimMuzzleVFXSocket": "X4ScopeMuzzle",
+            "AimShellShutterVFXSocket": "X4ScopeShells"
+          }
+        },
+        {
+          "index": "[34]",
+          "sid": "OXA_Scope_XM157",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Scope_XM157",
+            "Socket": "ScopeSocketA1",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_xm157.T_inv_aks74n_scope_xm157'",
+            "AimMuzzleVFXSocket": "X4ScopeMuzzle",
+            "AimShellShutterVFXSocket": "X4ScopeShells"
+          }
+        },
+        {
+          "index": "[35]",
+          "sid": "OXA_X2Scope_1",
+          "fields": {
+            "AttachPrototypeSID": "OXA_X2Scope_1",
+            "Socket": "ScopeSocketA1",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_oxax2.T_inv_aks74n_scope_oxax2'"
+          }
+        },
+        {
+          "index": "[36]",
+          "sid": "RU_X2Scope_1",
+          "fields": {
+            "AttachPrototypeSID": "RU_X2Scope_1",
+            "Socket": "ScopeSocketA1",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_rux2.T_inv_aks74n_scope_rux2'"
+          }
+        },
+        {
+          "index": "[37]",
+          "sid": "EN_ColimScope_1",
+          "fields": {
+            "AttachPrototypeSID": "EN_ColimScope_1",
+            "Socket": "ScopeSocketA2",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_encol.T_inv_aks74n_scope_encol'"
+          }
+        },
+        {
+          "index": "[38]",
+          "sid": "EN_GoloScope_1",
+          "fields": {
+            "AttachPrototypeSID": "EN_GoloScope_1",
+            "Socket": "ScopeSocketA2",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_enholo.T_inv_aks74n_scope_enholo'"
+          }
+        },
+        {
+          "index": "[39]",
+          "sid": "OXA_HoloScope_1",
+          "fields": {
+            "AttachPrototypeSID": "OXA_HoloScope_1",
+            "Socket": "ScopeSocketA2",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_oxaholo.T_inv_aks74n_scope_oxaholo'"
+          }
+        },
+        {
+          "index": "[40]",
+          "sid": "OXA_Scope_1P87",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Scope_1P87",
+            "Socket": "ScopeSocketA2",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_1p87.T_inv_aks74n_scope_1p87'"
+          }
+        },
+        {
+          "index": "[41]",
+          "sid": "OXA_Scope_Crossfire",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Scope_Crossfire",
+            "Socket": "ScopeSocketA2",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_crossfire.T_inv_aks74n_scope_crossfire'"
+          }
+        },
+        {
+          "index": "[42]",
+          "sid": "OXA_Scope_Cyelee",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Scope_Cyelee",
+            "Socket": "ScopeSocketA2",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_cyelee.T_inv_aks74n_scope_cyelee'"
+          }
+        },
+        {
+          "index": "[43]",
+          "sid": "OXA_Scope_EOTech551",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Scope_EOTech551",
+            "Socket": "ScopeSocketA2",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_eotech551.T_inv_aks74n_scope_eotech551'"
+          }
+        },
+        {
+          "index": "[44]",
+          "sid": "OXA_Scope_EXPS2",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Scope_EXPS2",
+            "Socket": "ScopeSocketA2",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_exps2.T_inv_aks74n_scope_exps2'"
+          }
+        },
+        {
+          "index": "[45]",
+          "sid": "OXA_Scope_EXPS3",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Scope_EXPS3",
+            "Socket": "ScopeSocketA2",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_exps3.T_inv_aks74n_scope_exps3'"
+          }
+        },
+        {
+          "index": "[46]",
+          "sid": "OXA_Scope_Holosun",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Scope_Holosun",
+            "Socket": "ScopeSocketA2",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_holosun.T_inv_aks74n_scope_holosun'"
+          }
+        },
+        {
+          "index": "[47]",
+          "sid": "OXA_Scope_MicroT1",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Scope_MicroT1",
+            "Socket": "ScopeSocketA2",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_microt1.T_inv_aks74n_scope_microt1'"
+          }
+        },
+        {
+          "index": "[48]",
+          "sid": "OXA_Scope_Romeo8T",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Scope_Romeo8T",
+            "Socket": "ScopeSocketA2",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_romeo8t.T_inv_aks74n_scope_romeo8t'"
+          }
+        },
+        {
+          "index": "[49]",
+          "sid": "OXA_Scope_Venom",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Scope_Venom",
+            "Socket": "ScopeSocketA2",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_venom.T_inv_aks74n_scope_venom'"
+          }
+        },
+        {
+          "index": "[50]",
+          "sid": "RU_ColimScope_1",
+          "fields": {
+            "AttachPrototypeSID": "RU_ColimScope_1",
+            "Socket": "ScopeSocketA2",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_rucol.T_inv_aks74n_scope_rucol'"
+          }
+        },
+        {
+          "index": "[51]",
+          "sid": "OXA_Scope_1OP50",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Scope_1OP50",
+            "Socket": "ScopeSocketB",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_1op50.T_inv_aks74n_scope_1op50'",
+            "AimMuzzleVFXSocket": "X4ScopeMuzzle",
+            "AimShellShutterVFXSocket": "X4ScopeShells"
+          }
+        },
+        {
+          "index": "[52]",
+          "sid": "OXA_Scope_1P63",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Scope_1P63",
+            "Socket": "ScopeSocketB",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_1p63.T_inv_aks74n_scope_1p63'"
+          }
+        },
+        {
+          "index": "[53]",
+          "sid": "OXA_Scope_1P78",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Scope_1P78",
+            "Socket": "ScopeSocketB",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_1p78.T_inv_aks74n_scope_1p78'",
+            "AimMuzzleVFXSocket": "X4ScopeMuzzle",
+            "AimShellShutterVFXSocket": "X4ScopeShells"
+          }
+        },
+        {
+          "index": "[54]",
+          "sid": "OXA_Scope_OKP7",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Scope_OKP7",
+            "Socket": "ScopeSocketB",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_okp7.T_inv_aks74n_scope_okp7'"
+          }
+        },
+        {
+          "index": "[55]",
+          "sid": "RU_X4Scope_1",
+          "fields": {
+            "AttachPrototypeSID": "RU_X4Scope_1",
+            "Socket": "ScopeSocketB",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_rux4.T_inv_aks74n_scope_rux4'",
+            "AimMuzzleVFXSocket": "X4ScopeMuzzle",
+            "AimShellShutterVFXSocket": "X4ScopeShells"
+          }
+        },
+        {
+          "index": "[56]",
+          "sid": "RU_X8Scope_1",
+          "fields": {
+            "AttachPrototypeSID": "RU_X8Scope_1",
+            "Socket": "ScopeSocketB",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Scope/T_inv_aks74n_scope_rux8.T_inv_aks74n_scope_rux8'",
+            "AimMuzzleVFXSocket": "X4ScopeMuzzle",
+            "AimShellShutterVFXSocket": "X4ScopeShells"
+          }
+        },
+        {
+          "index": "[57]",
+          "sid": "OXA_Laser_1",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Laser_1",
+            "Socket": "LaserSocketA1",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Laser_G2/T_inv_aks74n_laser1.T_inv_aks74n_laser1'",
+            "AdditionalMeshes.[*].MeshPrototypeSID": "OXA_LaserRail_AK",
+            "AdditionalMeshes.[*].Socket": "Rail_Laser"
+          }
+        },
+        {
+          "index": "[58]",
+          "sid": "OXA_Laser_2",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Laser_2",
+            "Socket": "LaserSocketA1",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Laser_G2/T_inv_aks74n_laser2.T_inv_aks74n_laser2'",
+            "AdditionalMeshes.[*].MeshPrototypeSID": "OXA_LaserRail_AK",
+            "AdditionalMeshes.[*].Socket": "Rail_Laser"
+          }
+        },
+        {
+          "index": "[59]",
+          "sid": "OXA_Laser_3",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Laser_3",
+            "Socket": "LaserSocketA1",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Laser_G2/T_inv_aks74n_laser3.T_inv_aks74n_laser3'",
+            "AdditionalMeshes.[*].MeshPrototypeSID": "OXA_LaserRail_AK",
+            "AdditionalMeshes.[*].Socket": "Rail_Laser"
+          }
+        },
+        {
+          "index": "[60]",
+          "sid": "OXA_Laser_4",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Laser_4",
+            "Socket": "LaserSocketA1",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Laser_G2/T_inv_aks74n_laser4.T_inv_aks74n_laser4'",
+            "AdditionalMeshes.[*].MeshPrototypeSID": "OXA_LaserRail_AK",
+            "AdditionalMeshes.[*].Socket": "Rail_Laser"
+          }
+        },
+        {
+          "index": "[61]",
+          "sid": "OXA_Laser_5",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Laser_5",
+            "MeshPrototypeSID": "OXALaser5_R",
+            "Socket": "LaserSocketA1",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Laser_G2/T_inv_aks74n_laser5.T_inv_aks74n_laser5'",
+            "AdditionalMeshes.[*].MeshPrototypeSID": "OXA_LaserRail_AK",
+            "AdditionalMeshes.[*].Socket": "Rail_Laser"
+          }
+        },
+        {
+          "index": "[62]",
+          "sid": "OXA_Laser_6",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Laser_6",
+            "Socket": "LaserSocketA1",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Laser_G2/T_inv_aks74n_laser6.T_inv_aks74n_laser6'",
+            "AdditionalMeshes.[*].MeshPrototypeSID": "OXA_LaserRail_AK",
+            "AdditionalMeshes.[*].Socket": "Rail_Laser"
+          }
+        },
+        {
+          "index": "[63]",
+          "sid": "OXA_Laser_7",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Laser_7",
+            "Socket": "LaserSocketA1",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Laser_G2/T_inv_aks74n_laser7.T_inv_aks74n_laser7'",
+            "AdditionalMeshes.[*].MeshPrototypeSID": "OXA_LaserRail_AK",
+            "AdditionalMeshes.[*].Socket": "Rail_Laser"
+          }
+        },
+        {
+          "index": "[64]",
+          "sid": "OXA_Laser_8",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Laser_8",
+            "Socket": "LaserSocketA1",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Laser_G2/T_inv_aks74n_laser8.T_inv_aks74n_laser8'",
+            "AdditionalMeshes.[*].MeshPrototypeSID": "OXA_LaserRail_AK",
+            "AdditionalMeshes.[*].Socket": "Rail_Laser"
+          }
+        },
+        {
+          "index": "[65]",
+          "sid": "OXA_Laser_9",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Laser_9",
+            "Socket": "LaserSocketA1",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Laser_G2/T_inv_aks74n_laser9.T_inv_aks74n_laser9'",
+            "AdditionalMeshes.[*].MeshPrototypeSID": "OXA_LaserRail_AK",
+            "AdditionalMeshes.[*].Socket": "Rail_Laser"
+          }
+        },
+        {
+          "index": "[66]",
+          "sid": "OXA_Laser_10",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Laser_10",
+            "Socket": "LaserSocketA1",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N_Custom/Laser_G2/T_inv_aks74n_laser10.T_inv_aks74n_laser10'",
+            "AdditionalMeshes.[*].MeshPrototypeSID": "OXA_LaserRail_AK",
+            "AdditionalMeshes.[*].Socket": "Rail_Laser"
+          }
+        },
+        {
+          "index": "[67]",
+          "sid": "RU_GLaunch_1",
+          "fields": {
+            "AttachPrototypeSID": "RU_GLaunch_1",
+            "Socket": "GLaunchSocket",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74N/Underbarrel/T_inv_aks74n_ruglaunch.T_inv_aks74n_ruglaunch'"
+          }
+        }
+      ],
+      "upgrade_nodes": [
+        {
+          "sid": "GunAK74_Upgrade_Barrel_1",
+          "defined": false,
+          "sources": [],
+          "required": [],
+          "interchangeable": [],
+          "effects": [],
+          "scalars": {}
+        },
+        {
+          "sid": "GunAK74_Upgrade_Barrel_2_1",
+          "defined": false,
+          "sources": [],
+          "required": [],
+          "interchangeable": [],
+          "effects": [],
+          "scalars": {}
+        },
+        {
+          "sid": "GunAK74_Upgrade_Barrel_2_2",
+          "defined": false,
+          "sources": [],
+          "required": [],
+          "interchangeable": [],
+          "effects": [],
+          "scalars": {}
+        },
+        {
+          "sid": "GunAK74_Upgrade_Body_1",
+          "defined": false,
+          "sources": [],
+          "required": [],
+          "interchangeable": [],
+          "effects": [],
+          "scalars": {}
+        },
+        {
+          "sid": "GunAK74_Upgrade_Body_2",
+          "defined": false,
+          "sources": [],
+          "required": [],
+          "interchangeable": [],
+          "effects": [],
+          "scalars": {}
+        },
+        {
+          "sid": "GunAK74_Upgrade_Stock_1",
+          "defined": false,
+          "sources": [],
+          "required": [],
+          "interchangeable": [],
+          "effects": [],
+          "scalars": {}
+        },
+        {
+          "sid": "GunAK74_Upgrade_Stock_2",
+          "defined": false,
+          "sources": [],
+          "required": [],
+          "interchangeable": [],
+          "effects": [],
+          "scalars": {}
+        },
+        {
+          "sid": "GunAK74_Upgrade_Stock_3",
+          "defined": false,
+          "sources": [],
+          "required": [],
+          "interchangeable": [],
+          "effects": [],
+          "scalars": {}
+        }
+      ],
+      "missing_upgrade_prototypes": [
+        "GunAK74_Upgrade_Barrel_1",
+        "GunAK74_Upgrade_Barrel_2_1",
+        "GunAK74_Upgrade_Barrel_2_2",
+        "GunAK74_Upgrade_Body_1",
+        "GunAK74_Upgrade_Body_2",
+        "GunAK74_Upgrade_Stock_1",
+        "GunAK74_Upgrade_Stock_2",
+        "GunAK74_Upgrade_Stock_3"
+      ]
+    },
+    {
+      "weapon_sid": "GunGlock17_HG",
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Glock17.cfg"
+      ],
+      "upgrade_roots": [],
+      "attachments": [
+        {
+          "index": "[10]",
+          "sid": "Ironsights_Glock17",
+          "fields": {
+            "AttachPrototypeSID": "Ironsights_Glock17",
+            "Socket": "jnt_shutter",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/Glock17/Scope/T_inv_glock17_ironsights.T_inv_glock17_ironsights'",
+            "AdditionalMeshes.[*].MeshPrototypeSID": "Ironsights_Glock17_Front",
+            "AdditionalMeshes.[*].Socket": "jnt_shutter"
+          }
+        },
+        {
+          "index": "[11]",
+          "sid": "OXA_Silen_S1",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_S1",
+            "Socket": "Silencer_Glock17",
+            "Muzzle": "SilFX_Glock17",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/Glock17/Silencer/T_inv_glock17_sil_s1.T_inv_glock17_sil_s1'"
+          }
+        },
+        {
+          "index": "[12]",
+          "sid": "OXA_Silen_S2",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_S2",
+            "Socket": "Silencer_Glock17",
+            "Muzzle": "SilFX_Glock17",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/Glock17/Silencer/T_inv_glock17_sil_s2.T_inv_glock17_sil_s2'"
+          }
+        },
+        {
+          "index": "[13]",
+          "sid": "OXA_Silen_S3",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_S3",
+            "Socket": "Silencer_Glock17",
+            "Muzzle": "SilFX_Glock17",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/Glock17/Silencer/T_inv_glock17_sil_s3.T_inv_glock17_sil_s3'"
+          }
+        },
+        {
+          "index": "[14]",
+          "sid": "OXA_Silen_S4",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_S4",
+            "Socket": "Silencer_Glock17",
+            "Muzzle": "SilFX_Glock17",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/Glock17/Silencer/T_inv_glock17_sil_s4.T_inv_glock17_sil_s4'"
+          }
+        },
+        {
+          "index": "[15]",
+          "sid": "OXA_Silen_S5",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_S5",
+            "Socket": "Silencer_Glock17",
+            "Muzzle": "SilFX_Glock17",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/Glock17/Silencer/T_inv_glock17_sil_s5.T_inv_glock17_sil_s5'"
+          }
+        },
+        {
+          "index": "[16]",
+          "sid": "OXA_Silen_S6",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_S6",
+            "Socket": "Silencer_Glock17",
+            "Muzzle": "SilFX_Glock17",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/Glock17/Silencer/T_inv_glock17_sil_s6.T_inv_glock17_sil_s6'"
+          }
+        },
+        {
+          "index": "[17]",
+          "sid": "GunGlock17_MagDefault",
+          "fields": {
+            "AttachPrototypeSID": "GunGlock17_MagDefault",
+            "Socket": "jnt_magazine",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/Glock17/Magazine/T_inv_glock17_mag_default.T_inv_glock17_mag_default'"
+          }
+        },
+        {
+          "index": "[18]",
+          "sid": "EN_ColimScope_1Mini",
+          "fields": {
+            "AttachPrototypeSID": "EN_ColimScope_1Mini",
+            "Socket": "ScopeSocket_Glock17",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/Glock17/Scope/T_inv_glock17_en_colimscope_1mini.T_inv_glock17_en_colimscope_1mini'",
+            "AdditionalMeshes.[*].MeshPrototypeSID": "Ironsights_Glock17_Front",
+            "AdditionalMeshes.[*].Socket": "jnt_shutter"
+          }
+        },
+        {
+          "index": "[19]",
+          "sid": "OXA_Scope_Wasp",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Scope_Wasp",
+            "Socket": "ScopeSocket_Glock17",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/Glock17/Scope/T_inv_glock17_scope_wasp.T_inv_glock17_scope_wasp'",
+            "AdditionalMeshes.[*].MeshPrototypeSID": "Ironsights_Glock17_Front",
+            "AdditionalMeshes.[*].Socket": "jnt_shutter"
+          }
+        },
+        {
+          "index": "[20]",
+          "sid": "RU_ColimScope_1Mini",
+          "fields": {
+            "AttachPrototypeSID": "RU_ColimScope_1Mini",
+            "Socket": "ScopeSocket_Glock17",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/Glock17/Scope/T_inv_glock17_ru_colimscope_1mini.T_inv_glock17_ru_colimscope_1mini'",
+            "AdditionalMeshes.[*].MeshPrototypeSID": "Ironsights_Glock17_Front",
+            "AdditionalMeshes.[*].Socket": "jnt_shutter"
+          }
+        },
+        {
+          "index": "[21]",
+          "sid": "OXA_Laser_1",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Laser_1",
+            "Socket": "Laser_Glock17",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/Glock17/Laser/T_inv_glock17_laser1.T_inv_glock17_laser1'"
+          }
+        },
+        {
+          "index": "[22]",
+          "sid": "OXA_Laser_2",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Laser_2",
+            "Socket": "Laser_Glock17",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/Glock17/Laser/T_inv_glock17_laser2.T_inv_glock17_laser2'"
+          }
+        },
+        {
+          "index": "[23]",
+          "sid": "OXA_Laser_6",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Laser_6",
+            "Socket": "Laser_Glock17",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/Glock17/Laser/T_inv_glock17_laser6.T_inv_glock17_laser6'"
+          }
+        },
+        {
+          "index": "[24]",
+          "sid": "OXA_Laser_9",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Laser_9",
+            "Socket": "Laser_Glock17",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/Glock17/Laser/T_inv_glock17_laser9.T_inv_glock17_laser9'"
+          }
+        },
+        {
+          "index": "[25]",
+          "sid": "OXA_Laser_10",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Laser_10",
+            "Socket": "Laser_Glock17",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/Glock17/Laser/T_inv_glock17_laser10.T_inv_glock17_laser10'"
+          }
+        }
+      ],
+      "upgrade_nodes": [],
+      "missing_upgrade_prototypes": []
+    },
+    {
+      "weapon_sid": "GunP30L_HG",
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_P30L.cfg"
+      ],
+      "upgrade_roots": [],
+      "attachments": [
+        {
+          "index": "[10]",
+          "sid": "Ironsights_P30L",
+          "fields": {
+            "AttachPrototypeSID": "Ironsights_P30L",
+            "Socket": "jnt_shutter",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/P30L/Scope/T_inv_p30l_ironsights.T_inv_p30l_ironsights'",
+            "AdditionalMeshes.[*].MeshPrototypeSID": "Ironsights_P30L_Front",
+            "AdditionalMeshes.[*].Socket": "jnt_shutter"
+          }
+        },
+        {
+          "index": "[11]",
+          "sid": "OXA_Silen_S1",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_S1",
+            "Socket": "Silencer_P30L",
+            "Muzzle": "SilFX_P30L",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/P30L/Silencer/T_inv_p30l_sil_s1.T_inv_p30l_sil_s1'"
+          }
+        },
+        {
+          "index": "[12]",
+          "sid": "OXA_Silen_S2",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_S2",
+            "Socket": "Silencer_P30L",
+            "Muzzle": "SilFX_P30L",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/P30L/Silencer/T_inv_p30l_sil_s2.T_inv_p30l_sil_s2'"
+          }
+        },
+        {
+          "index": "[13]",
+          "sid": "OXA_Silen_S3",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_S3",
+            "Socket": "Silencer_P30L",
+            "Muzzle": "SilFX_P30L",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/P30L/Silencer/T_inv_p30l_sil_s3.T_inv_p30l_sil_s3'"
+          }
+        },
+        {
+          "index": "[14]",
+          "sid": "OXA_Silen_S4",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_S4",
+            "Socket": "Silencer_P30L",
+            "Muzzle": "SilFX_P30L",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/P30L/Silencer/T_inv_p30l_sil_s4.T_inv_p30l_sil_s4'"
+          }
+        },
+        {
+          "index": "[15]",
+          "sid": "OXA_Silen_S5",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_S5",
+            "Socket": "Silencer_P30L",
+            "Muzzle": "SilFX_P30L",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/P30L/Silencer/T_inv_p30l_sil_s5.T_inv_p30l_sil_s5'"
+          }
+        },
+        {
+          "index": "[16]",
+          "sid": "OXA_Silen_S6",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_S6",
+            "Socket": "Silencer_P30L",
+            "Muzzle": "SilFX_P30L",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/P30L/Silencer/T_inv_p30l_sil_s6.T_inv_p30l_sil_s6'"
+          }
+        },
+        {
+          "index": "[17]",
+          "sid": "GunP30L_MagDefault",
+          "fields": {
+            "AttachPrototypeSID": "GunP30L_MagDefault",
+            "Socket": "jnt_magazine",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/P30L/Magazine/T_inv_p30l_mag_default.T_inv_p30l_mag_default'"
+          }
+        },
+        {
+          "index": "[18]",
+          "sid": "EN_ColimScope_1Mini",
+          "fields": {
+            "AttachPrototypeSID": "EN_ColimScope_1Mini",
+            "Socket": "ScopeSocket_P30L",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/P30L/Scope/T_inv_p30l_en_colimscope_1mini.T_inv_p30l_en_colimscope_1mini'",
+            "AdditionalMeshes.[*].MeshPrototypeSID": "Ironsights_P30L_Front",
+            "AdditionalMeshes.[*].Socket": "jnt_shutter"
+          }
+        },
+        {
+          "index": "[19]",
+          "sid": "OXA_Scope_Wasp",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Scope_Wasp",
+            "Socket": "ScopeSocket_P30L",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/P30L/Scope/T_inv_p30l_scope_wasp.T_inv_p30l_scope_wasp'",
+            "AdditionalMeshes.[*].MeshPrototypeSID": "Ironsights_P30L_Front",
+            "AdditionalMeshes.[*].Socket": "jnt_shutter"
+          }
+        },
+        {
+          "index": "[20]",
+          "sid": "RU_ColimScope_1Mini",
+          "fields": {
+            "AttachPrototypeSID": "RU_ColimScope_1Mini",
+            "Socket": "ScopeSocket_P30L",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/P30L/Scope/T_inv_p30l_ru_colimscope_1mini.T_inv_p30l_ru_colimscope_1mini'",
+            "AdditionalMeshes.[*].MeshPrototypeSID": "Ironsights_P30L_Front",
+            "AdditionalMeshes.[*].Socket": "jnt_shutter"
+          }
+        },
+        {
+          "index": "[21]",
+          "sid": "OXA_Laser_1",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Laser_1",
+            "Socket": "Laser_P30L",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/P30L/Laser/T_inv_p30l_laser1.T_inv_p30l_laser1'"
+          }
+        },
+        {
+          "index": "[22]",
+          "sid": "OXA_Laser_2",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Laser_2",
+            "Socket": "Laser_P30L",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/P30L/Laser/T_inv_p30l_laser2.T_inv_p30l_laser2'"
+          }
+        },
+        {
+          "index": "[23]",
+          "sid": "OXA_Laser_6",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Laser_6",
+            "Socket": "Laser_P30L",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/P30L/Laser/T_inv_p30l_laser6.T_inv_p30l_laser6'"
+          }
+        },
+        {
+          "index": "[24]",
+          "sid": "OXA_Laser_9",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Laser_9",
+            "Socket": "Laser_P30L",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/P30L/Laser/T_inv_p30l_laser9.T_inv_p30l_laser9'"
+          }
+        },
+        {
+          "index": "[25]",
+          "sid": "OXA_Laser_10",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Laser_10",
+            "Socket": "Laser_P30L",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/P30L/Laser/T_inv_p30l_laser10.T_inv_p30l_laser10'"
+          }
+        }
+      ],
+      "upgrade_nodes": [],
+      "missing_upgrade_prototypes": []
+    },
+    {
+      "weapon_sid": "Gun_SkifGun_HG_GS",
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_PM.cfg"
+      ],
+      "upgrade_roots": [],
+      "attachments": [
+        {
+          "index": "[0]",
+          "sid": "OXA_Silen_S1",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_S1",
+            "Socket": "SilencerMuzzleSocket",
+            "Muzzle": "SilencerMuzzle",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/PM/Silencer/T_inv_pm_sil_s1.T_inv_pm_sil_s1'"
+          }
+        },
+        {
+          "index": "[1]",
+          "sid": "OXA_Silen_S2",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_S2",
+            "Socket": "SilencerMuzzleSocket",
+            "Muzzle": "SilencerMuzzle",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/PM/Silencer/T_inv_pm_sil_s2.T_inv_pm_sil_s2'"
+          }
+        },
+        {
+          "index": "[2]",
+          "sid": "OXA_Silen_S3",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_S3",
+            "Socket": "SilencerMuzzleSocket",
+            "Muzzle": "SilencerMuzzle",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/PM/Silencer/T_inv_pm_sil_s3.T_inv_pm_sil_s3'"
+          }
+        },
+        {
+          "index": "[3]",
+          "sid": "OXA_Silen_S4",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_S4",
+            "Socket": "SilencerMuzzleSocket",
+            "Muzzle": "SilencerMuzzle",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/PM/Silencer/T_inv_pm_sil_s4.T_inv_pm_sil_s4'"
+          }
+        },
+        {
+          "index": "[4]",
+          "sid": "OXA_Silen_S5",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_S5",
+            "Socket": "SilencerMuzzleSocket",
+            "Muzzle": "SilencerMuzzle",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/PM/Silencer/T_inv_pm_sil_s5.T_inv_pm_sil_s5'"
+          }
+        },
+        {
+          "index": "[5]",
+          "sid": "OXA_Silen_S6",
+          "fields": {
+            "AttachPrototypeSID": "OXA_Silen_S6",
+            "Socket": "SilencerMuzzleSocket",
+            "Muzzle": "SilencerMuzzle",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/PM/Silencer/T_inv_pm_sil_s6.T_inv_pm_sil_s6'"
+          }
+        },
+        {
+          "index": "[6]",
+          "sid": "GunPM_MagDefault",
+          "fields": {
+            "AttachPrototypeSID": "GunPM_MagDefault",
+            "Socket": "jnt_clip_base",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/PM/Magazine/T_inv_pm_mag_default.T_inv_pm_mag_default'"
+          }
+        },
+        {
+          "index": "[7]",
+          "sid": "GunPM_MagIncreased",
+          "fields": {
+            "AttachPrototypeSID": "GunPM_MagIncreased",
+            "Socket": "jnt_clip_base",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/PM/Magazine/T_inv_pm_mag_ext.T_inv_pm_mag_ext'"
+          }
+        },
+        {
+          "index": "[8]",
+          "sid": "GunPM_Screw",
+          "fields": {
+            "AttachPrototypeSID": "GunPM_Screw",
+            "Socket": "ScrewSocket",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/PM/Misc/T_inv_pm_pmscrew.T_inv_pm_pmscrew'"
+          }
+        },
+        {
+          "index": "[9]",
+          "sid": "EN_ColimScope_1Mini",
+          "fields": {
+            "AttachPrototypeSID": "EN_ColimScope_1Mini",
+            "Socket": "ScopeSocket",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/PM/Scope/T_inv_pm_en_colimscope_1mini.T_inv_pm_en_colimscope_1mini'"
+          }
+        },
+        {
+          "index": "[10]",
+          "sid": "RU_ColimScope_1Mini",
+          "fields": {
+            "AttachPrototypeSID": "RU_ColimScope_1Mini",
+            "Socket": "ScopeSocket",
+            "IconPosX": "150",
+            "IconPosY": "30",
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/PM/Scope/T_inv_pm_ru_colimscope_1mini.T_inv_pm_ru_colimscope_1mini'"
+          }
+        }
+      ],
+      "upgrade_nodes": [],
+      "missing_upgrade_prototypes": []
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+OXA new-SID upgrade trees
+=========================
+Weapons: 4
+
+GunAKS74N_G2_ST
+---------------
+Upgrade roots: 8
+Reachable upgrade nodes: 8
+Compatible attachments: 62
+Missing upgrade prototypes: 8
+  root: GunAK74_Upgrade_Barrel_1
+  root: GunAK74_Upgrade_Barrel_2_1
+  root: GunAK74_Upgrade_Barrel_2_2
+  root: GunAK74_Upgrade_Body_1
+  root: GunAK74_Upgrade_Body_2
+  root: GunAK74_Upgrade_Stock_1
+  root: GunAK74_Upgrade_Stock_2
+  root: GunAK74_Upgrade_Stock_3
+  GunAK74_Upgrade_Barrel_1 [MISSING]
+    required: -
+    interchangeable: -
+    effects: -
+  GunAK74_Upgrade_Barrel_2_1 [MISSING]
+    required: -
+    interchangeable: -
+    effects: -
+  GunAK74_Upgrade_Barrel_2_2 [MISSING]
+    required: -
+    interchangeable: -
+    effects: -
+  GunAK74_Upgrade_Body_1 [MISSING]
+    required: -
+    interchangeable: -
+    effects: -
+  GunAK74_Upgrade_Body_2 [MISSING]
+    required: -
+    interchangeable: -
+    effects: -
+  GunAK74_Upgrade_Stock_1 [MISSING]
+    required: -
+    interchangeable: -
+    effects: -
+  GunAK74_Upgrade_Stock_2 [MISSING]
+    required: -
+    interchangeable: -
+    effects: -
+  GunAK74_Upgrade_Stock_3 [MISSING]
+    required: -
+    interchangeable: -
+    effects: -
+  unresolved: GunAK74_Upgrade_Barrel_1, GunAK74_Upgrade_Barrel_2_1, GunAK74_Upgrade_Barrel_2_2, GunAK74_Upgrade_Body_1, GunAK74_Upgrade_Body_2, GunAK74_Upgrade_Stock_1, GunAK74_Upgrade_Stock_2, GunAK74_Upgrade_Stock_3
+
+GunGlock17_HG
+-------------
+Upgrade roots: 0
+Reachable upgrade nodes: 0
+Compatible attachments: 16
+Missing upgrade prototypes: 0
+
+GunP30L_HG
+----------
+Upgrade roots: 0
+Reachable upgrade nodes: 0
+Compatible attachments: 16
+Missing upgrade prototypes: 0
+
+Gun_SkifGun_HG_GS
+-----------------
+Upgrade roots: 0
+Reachable upgrade nodes: 0
+Compatible attachments: 11
+Missing upgrade prototypes: 0
