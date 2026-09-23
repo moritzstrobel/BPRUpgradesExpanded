@@ -1,6 +1,6 @@
 BPRUE <-> OXA SMG pipeline
 ==========================
-SMGs=11 groups=22 findings=96 severity={'HIGH': 2, 'MEDIUM': 94}
+SMGs=11 groups=22 findings=1 severity={'HIGH': 1}
 Compat property changes=0 suspicious=0
 
 GunAKU_PP: hashes V=185bea7a2d84 O=ca49ebc93c02 B=a2f39a3d4620 F=a2f39a3d4620 | changes=18 compat=0 suspicious=0
@@ -16,9 +16,7 @@ Gun_Spitfire_SMG_GS: hashes V=23df9bb5830d O=728ef31b612e B=728ef31b612e F=728ef
 Gun_Spitter_SMG_GS: hashes V=1d1eaedb160e O=d77ae28ac796 B=d77ae28ac796 F=d77ae28ac796 | changes=26 compat=0 suspicious=0
 
 Array findings:
-  GunBucket_PP :: CompatibleAttachments -> {'COMPAT_ORDER_CHANGED': 38, 'FINAL_DUPLICATE_INTRODUCED': 1}
-  Gun_Silence_SMG_GS :: UpgradePrototypeSIDs -> {'COMPAT_ORDER_CHANGED': 19, 'COMPAT_UNEXPECTED_ENTRIES': 1}
-  Gun_Spitter_SMG_GS :: CompatibleAttachments -> {'COMPAT_ORDER_CHANGED': 37}
+  GunBucket_PP :: CompatibleAttachments -> {'FINAL_DUPLICATE_INTRODUCED': 1}
 
 PROPERTY DIFFS
 ==============
@@ -712,101 +710,4 @@ hashes: {'vanilla': '1d1eaedb160e', 'oxa': 'd77ae28ac796', 'after_bprue': 'd77ae
 ARRAY FINDINGS
 ==============
 GunBucket_PP :: CompatibleAttachments counts={'vanilla': 8, 'oxa': 41, 'after_bprue': 9, 'final': 42} replace(O/B/C)=False/True/True
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXAMuzzleBrake_9mm, expected_index=[3], final_index=[4]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXALateralComp_9mm, expected_index=[4], final_index=[5]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXABalancedVent_9mm, expected_index=[5], final_index=[6]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=Spitter_DefaultMuz, expected_index=[6], final_index=[7]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Silen_S1, expected_index=[7], final_index=[8]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Silen_S2, expected_index=[8], final_index=[9]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Silen_S3, expected_index=[9], final_index=[10]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Silen_S4, expected_index=[10], final_index=[11]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Silen_S5, expected_index=[11], final_index=[12]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Silen_M2, expected_index=[12], final_index=[13]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=GunBucket_MagDefault, expected_index=[13], final_index=[14]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=GunBucket_MagIncreased, expected_index=[14], final_index=[15]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Rail_Scope, expected_index=[15], final_index=[16]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Rail_Laser, expected_index=[16], final_index=[17]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=EN_ColimScope_1, expected_index=[17], final_index=[18]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=EN_GoloScope_1, expected_index=[18], final_index=[19]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_HoloScope_1, expected_index=[19], final_index=[20]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Scope_Crossfire, expected_index=[20], final_index=[21]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Scope_Cyelee, expected_index=[21], final_index=[22]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Scope_EOTech551, expected_index=[22], final_index=[23]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Scope_EXPS2, expected_index=[23], final_index=[24]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Scope_EXPS3, expected_index=[24], final_index=[25]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Scope_Holosun, expected_index=[25], final_index=[26]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Scope_MicroT1, expected_index=[26], final_index=[27]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Scope_Romeo8T, expected_index=[27], final_index=[28]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Scope_Venom, expected_index=[28], final_index=[29]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=RU_ColimScope_1, expected_index=[29], final_index=[30]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Laser_1, expected_index=[30], final_index=[31]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Laser_2, expected_index=[31], final_index=[32]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Laser_3, expected_index=[32], final_index=[33]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Laser_4, expected_index=[33], final_index=[34]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Laser_5, expected_index=[34], final_index=[35]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Laser_6, expected_index=[35], final_index=[36]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Laser_7, expected_index=[36], final_index=[37]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Laser_8, expected_index=[37], final_index=[38]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Laser_9, expected_index=[38], final_index=[39]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Laser_10, expected_index=[39], final_index=[40]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=BPRUE_Bucket_PistolConversionKit, expected_index=[40], final_index=[41]
   HIGH FINAL_DUPLICATE_INTRODUCED :: identities=['RU_AutMuz_1']
-Gun_Silence_SMG_GS :: UpgradePrototypeSIDs counts={'vanilla': 11, 'oxa': 10, 'after_bprue': 30, 'final': 30} replace(O/B/C)=False/True/False
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=BPRUEUniqueSilence_Upgrade_BPRUE_Readiness_QuickDraw, expected_index=[10], final_index=[11]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=BPRUEUniqueSilence_Upgrade_BPRUE_Readiness_Stabilized, expected_index=[11], final_index=[12]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=BPRUEUniqueSilence_Upgrade_BPRUE_Reload_Competition, expected_index=[12], final_index=[13]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=BPRUEUniqueSilence_Upgrade_BPRUE_Reload_Tactical, expected_index=[13], final_index=[14]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=BPRUEUniqueSilence_Upgrade_BPRUE_Action_HighSpeed, expected_index=[14], final_index=[15]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=BPRUEUniqueSilence_Upgrade_BPRUE_Action_Controlled, expected_index=[15], final_index=[16]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=BPRUEUniqueSilence_Upgrade_BPRUE_Stock_Lightweight, expected_index=[16], final_index=[17]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=BPRUEUniqueSilence_Upgrade_BPRUE_Stock_Tactical, expected_index=[17], final_index=[18]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=BPRUEUniqueSilence_Upgrade_BPRUE_Stock_Stabilized, expected_index=[18], final_index=[19]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=BPRUEUniqueSilence_Upgrade_BPRUE_PistolConversion, expected_index=[19], final_index=[20]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly, expected_index=[20], final_index=[21]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly, expected_index=[21], final_index=[22]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem, expected_index=[22], final_index=[23]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction, expected_index=[23], final_index=[24]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget, expected_index=[24], final_index=[25]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing, expected_index=[25], final_index=[26]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration, expected_index=[26], final_index=[27]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration, expected_index=[27], final_index=[28]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=BPRUEUniqueSilence_Upgrade_BPRUE_Signature_SilentEntryPackage, expected_index=[28], final_index=[29]
-  HIGH COMPAT_UNEXPECTED_ENTRIES :: identities=['GunAKU_Upgrade_Attachment_Offset_Stock']
-Gun_Spitter_SMG_GS :: CompatibleAttachments counts={'vanilla': 7, 'oxa': 41, 'after_bprue': 41, 'final': 41} replace(O/B/C)=False/False/False
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXAMuzzleBrake_9mm, expected_index=[3], final_index=[4]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXALateralComp_9mm, expected_index=[4], final_index=[5]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXABalancedVent_9mm, expected_index=[5], final_index=[6]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=Spitter_DefaultMuz, expected_index=[6], final_index=[7]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Silen_S1, expected_index=[7], final_index=[8]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Silen_S2, expected_index=[8], final_index=[9]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Silen_S3, expected_index=[9], final_index=[10]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Silen_S4, expected_index=[10], final_index=[11]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Silen_S5, expected_index=[11], final_index=[12]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Silen_M2, expected_index=[12], final_index=[13]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=GunBucket_MagDefault, expected_index=[13], final_index=[14]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=GunBucket_MagIncreased, expected_index=[14], final_index=[15]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Rail_Scope, expected_index=[15], final_index=[16]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Rail_Laser, expected_index=[16], final_index=[17]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=EN_ColimScope_1, expected_index=[17], final_index=[18]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=EN_GoloScope_1, expected_index=[18], final_index=[19]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_HoloScope_1, expected_index=[19], final_index=[20]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Scope_Crossfire, expected_index=[20], final_index=[21]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Scope_Cyelee, expected_index=[21], final_index=[22]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Scope_EOTech551, expected_index=[22], final_index=[23]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Scope_EXPS2, expected_index=[23], final_index=[24]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Scope_EXPS3, expected_index=[24], final_index=[25]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Scope_Holosun, expected_index=[25], final_index=[26]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Scope_MicroT1, expected_index=[26], final_index=[27]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Scope_Romeo8T, expected_index=[27], final_index=[28]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Scope_Venom, expected_index=[28], final_index=[29]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=RU_ColimScope_1, expected_index=[29], final_index=[30]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Laser_1, expected_index=[30], final_index=[31]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Laser_2, expected_index=[31], final_index=[32]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Laser_3, expected_index=[32], final_index=[33]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Laser_4, expected_index=[33], final_index=[34]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Laser_5, expected_index=[34], final_index=[35]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Laser_6, expected_index=[35], final_index=[36]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Laser_7, expected_index=[36], final_index=[37]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Laser_8, expected_index=[37], final_index=[38]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Laser_9, expected_index=[38], final_index=[39]
-  MEDIUM COMPAT_ORDER_CHANGED :: identity=OXA_Laser_10, expected_index=[39], final_index=[40]
