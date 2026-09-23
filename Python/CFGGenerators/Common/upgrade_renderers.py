@@ -3,6 +3,7 @@ from __future__ import annotations
 from technician_support import (
     dlc_technician_general_setups,
     technician_upgrade_assignments,
+    vanilla_technician_upgrade_owners,
     vanilla_technician_direct_upgrade_indices,
 )
 from upgrade_build_model import UpgradeBuildModel, UpgradeDefinition
