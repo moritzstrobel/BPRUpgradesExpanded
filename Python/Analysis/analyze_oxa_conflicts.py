@@ -338,19 +338,27 @@ def _apply_array_patch(base: dict[str, dict], writes: list[Write], root: str) ->
                         matched_index = candidate_index
                         break
 
-            target_index = matched_index or index_name
             index_identity = state.get(index_name, {}).get(identity_key)
-            state.pop(target_index, None)
 
-            if comment_identity and index_identity != comment_identity:
-                meta_mismatches.append({
-                    "patch_index": index_name,
-                    "index_identity": index_identity,
-                    "comment_identity": comment_identity,
-                    "resolved_index": matched_index,
-                    "resolution": "comment_identity" if matched_index else "index_fallback",
-                    "source": w.source,
-                })
+            if comment_identity:
+                # A semantic removal comment is authoritative. If that SID is not
+                # present in our Vanilla baseline, do NOT fall back to the numeric
+                # index: doing so can silently remove an unrelated entry when OXA
+                # was authored against a different baseline/inheritance layout.
+                if matched_index is not None:
+                    state.pop(matched_index, None)
+                if index_identity != comment_identity or matched_index is None:
+                    meta_mismatches.append({
+                        "patch_index": index_name,
+                        "index_identity": index_identity,
+                        "comment_identity": comment_identity,
+                        "resolved_index": matched_index,
+                        "resolution": "comment_identity" if matched_index is not None else "unresolved_comment_identity",
+                        "source": w.source,
+                    })
+            else:
+                # Only legacy/unannotated removenodes may use their numeric index.
+                state.pop(index_name, None)
             continue
 
         entry = state.setdefault(index_name, {})
