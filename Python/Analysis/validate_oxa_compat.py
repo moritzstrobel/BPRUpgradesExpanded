@@ -8,7 +8,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_REPORT = ROOT / "Python/Analysis/Reports/oxa_conflicts.json"
-DEFAULT_COMPAT = ROOT / "Compat/OXA/GameLite"\nDEFAULT_VANILLA = ROOT / "Python/VanillaReference"
+DEFAULT_COMPAT = ROOT / "Compat/OXA/GameLite"
+DEFAULT_VANILLA = ROOT / "Python/VanillaReference"
 
 PROTO_RE = re.compile(r"^\s*([^\s/][^:]*)\s*:\s*struct\.begin\s*\{bpatch\}")
 ARRAY_RE = re.compile(r"^\s*(UpgradePrototypeSIDs|FittingWeaponsSIDs|CompatibleAttachments)\s*:\s*struct\.begin(?!\s*\{bpatch\})")
@@ -151,7 +152,8 @@ def validate(report: dict, compat_root: Path) -> dict:
     unexpected = []
     content_mismatches = []
     ordering_notes = []
-    scope_errors = []\n    effective_state_failures = []
+    scope_errors = []
+    effective_state_failures = []
 
     for key, item in expected.items():
         prototype, array = key
@@ -190,7 +192,8 @@ def validate(report: dict, compat_root: Path) -> dict:
                 "expected_path_fragment": expected_suffix,
             })
 
-    effective_state_failures = _apply_against_vanilla(report, actual)\n\n    for key, value in actual.items():
+    effective_state_failures = _apply_against_vanilla(report, actual)
+    for key, value in actual.items():
         if key not in expected:
             unexpected.append({
                 "prototype": key[0],
@@ -208,7 +211,8 @@ def validate(report: dict, compat_root: Path) -> dict:
             "missing_groups": len(missing),
             "unexpected_groups": len(unexpected),
             "content_mismatches": len(content_mismatches),
-            "scope_errors": len(scope_errors),\n            "effective_state_failures": len(effective_state_failures),
+            "scope_errors": len(scope_errors),
+            "effective_state_failures": len(effective_state_failures),
             "ordering_notes": len(ordering_notes),
             "intentionally_unresolved_groups": len(unresolved),
         },
@@ -216,7 +220,7 @@ def validate(report: dict, compat_root: Path) -> dict:
         "missing_groups": missing,
         "unexpected_groups": unexpected,
         "content_mismatches": content_mismatches,
-        "scope_errors": scope_errors,\n        "effective_state_failures": effective_state_failures,
+        "scope_errors": scope_errors,        "effective_state_failures": effective_state_failures,
         "ordering_notes": ordering_notes,
     }
 
