@@ -119,57 +119,110 @@ def _analyse_group(prototype, root, vanilla_groups, oxa_groups, bprue_groups, co
 
     # Compat is validated against its actual contract:
     # Final = Effective OXA + (Effective BPRUE - Vanilla).
+    # Structured CompatibleAttachments are occurrence-sensitive: the same
+    # AttachPrototypeSID may legitimately occur more than once with different
+    # metadata, so never collapse them by identity.
     vanilla_ids = set(by_stage["vanilla"])
     oxa_entries = stages["oxa"]
     bprue_entries = stages["after_bprue"]
-    expected = []
-    seen = set()
-    for entry in oxa_entries:
-        identity = entry["identity"]
-        if identity is None or identity in seen:
-            continue
-        expected.append(entry)
-        seen.add(identity)
-    for entry in bprue_entries:
-        identity = entry["identity"]
-        if identity is None or identity in seen or identity in vanilla_ids:
-            continue
-        expected.append(entry)
-        seen.add(identity)
 
-    final_by_id = by_stage["final"]
-    expected_ids = [e["identity"] for e in expected]
-    final_ids_ordered = [e["identity"] for e in stages["final"] if e["identity"] is not None]
+    if root == "CompatibleAttachments":
+        expected = [dict(entry) for entry in oxa_entries]
+        oxa_identities = {entry["identity"] for entry in oxa_entries if entry["identity"] is not None}
+        for entry in bprue_entries:
+            identity = entry["identity"]
+            if identity is None or identity in vanilla_ids or identity in oxa_identities:
+                continue
+            expected.append(dict(entry))
 
-    for expected_index, entry in enumerate(expected):
-        identity = entry["identity"]
-        if identity not in final_by_id:
-            kind = "COMPAT_MISSING_OXA_ENTRY" if identity in by_stage["oxa"] else "COMPAT_MISSING_BPRUE_ADDITION"
-            findings.append({"severity": "CRITICAL", "kind": kind, "identity": identity})
-            continue
-        actual = final_by_id[identity][0]
-        if actual["index"] != f"[{expected_index}]":
+        final_entries = stages["final"]
+        max_len = max(len(expected), len(final_entries))
+        for pos in range(max_len):
+            if pos >= len(expected):
+                findings.append({
+                    "severity": "HIGH", "kind": "COMPAT_UNEXPECTED_ATTACHMENT_ENTRY",
+                    "position": pos, "final": final_entries[pos],
+                })
+                continue
+            if pos >= len(final_entries):
+                findings.append({
+                    "severity": "CRITICAL", "kind": "COMPAT_MISSING_ATTACHMENT_ENTRY",
+                    "position": pos, "expected": expected[pos],
+                })
+                continue
+            want, got = expected[pos], final_entries[pos]
+            if want["identity"] != got["identity"]:
+                findings.append({
+                    "severity": "HIGH", "kind": "COMPAT_ATTACHMENT_ORDER_CHANGED",
+                    "position": pos, "expected_identity": want["identity"],
+                    "final_identity": got["identity"],
+                })
+                continue
+            if want["fields"] != got["fields"]:
+                changed_fields = sorted(
+                    key for key in set(want["fields"]) | set(got["fields"])
+                    if want["fields"].get(key) != got["fields"].get(key)
+                )
+                findings.append({
+                    "severity": "CRITICAL", "kind": "COMPAT_ATTACHMENT_METADATA_CHANGED",
+                    "position": pos, "identity": want["identity"], "fields": changed_fields,
+                })
+    else:
+        expected = []
+        seen = set()
+        for entry in oxa_entries:
+            identity = entry["identity"]
+            if identity is None or identity in seen:
+                continue
+            expected.append(entry)
+            seen.add(identity)
+        for entry in bprue_entries:
+            identity = entry["identity"]
+            if identity is None or identity in seen or identity in vanilla_ids:
+                continue
+            expected.append(entry)
+            seen.add(identity)
+
+        final_by_id = by_stage["final"]
+        expected_ids = [e["identity"] for e in expected]
+        final_ids_ordered = [e["identity"] for e in stages["final"] if e["identity"] is not None]
+
+        for expected_index, entry in enumerate(expected):
+            identity = entry["identity"]
+            if identity not in final_by_id:
+                kind = "COMPAT_MISSING_OXA_ENTRY" if identity in by_stage["oxa"] else "COMPAT_MISSING_BPRUE_ADDITION"
+                findings.append({"severity": "CRITICAL", "kind": kind, "identity": identity})
+                continue
+            actual = final_by_id[identity][0]
+            if actual["index"] != f"[{expected_index}]":
+                findings.append({
+                    "severity": "MEDIUM", "kind": "COMPAT_ORDER_CHANGED", "identity": identity,
+                    "expected_index": f"[{expected_index}]", "final_index": actual["index"],
+                })
+
+        expected_set = set(expected_ids)
+        unexpected = [x for x in final_ids_ordered if x not in expected_set]
+        if unexpected:
             findings.append({
-                "severity": "MEDIUM", "kind": "COMPAT_ORDER_CHANGED", "identity": identity,
-                "expected_index": f"[{expected_index}]", "final_index": actual["index"],
-            })
-        if root == "CompatibleAttachments" and actual["fields"] != entry["fields"]:
-            changed_fields = sorted(
-                key for key in set(entry["fields"]) | set(actual["fields"])
-                if entry["fields"].get(key) != actual["fields"].get(key)
-            )
-            findings.append({
-                "severity": "CRITICAL", "kind": "COMPAT_ATTACHMENT_METADATA_CHANGED",
-                "identity": identity, "fields": changed_fields,
+                "severity": "HIGH", "kind": "COMPAT_UNEXPECTED_ENTRIES",
+                "identities": sorted(set(unexpected)),
             })
 
-    expected_set = set(expected_ids)
-    unexpected = [x for x in final_ids_ordered if x not in expected_set]
-    if unexpected:
-        findings.append({
-            "severity": "HIGH", "kind": "COMPAT_UNEXPECTED_ENTRIES",
-            "identities": sorted(set(unexpected)),
-        })
+    # Groups skipped by the generator because OXA removal identity is unresolved
+    # are intentional exceptions, not compat regressions.
+    unresolved = [
+        mismatch for mismatch in oxa_meta.get("removal_identity_mismatches", [])
+        if mismatch.get("resolution") == "unresolved_comment_identity"
+    ]
+    if unresolved:
+        compat_kinds = {
+            "COMPAT_MISSING_OXA_ENTRY", "COMPAT_MISSING_BPRUE_ADDITION",
+            "COMPAT_ORDER_CHANGED", "COMPAT_UNEXPECTED_ENTRIES",
+        }
+        for finding in findings:
+            if finding["kind"] in compat_kinds:
+                finding["severity"] = "INFO"
+                finding["intentional_unresolved_oxa_removal"] = True
 
     # Attribute duplicates to the layer that first introduces them.
     previous_dupes = set()
