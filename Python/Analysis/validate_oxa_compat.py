@@ -6,6 +6,8 @@ import re
 from collections import defaultdict
 from pathlib import Path
 
+from analyze_oxa_conflicts import collect, _entry_identity, _semantic_arrays
+
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_REPORT = ROOT / "Python/Analysis/Reports/oxa_conflicts.json"
 DEFAULT_COMPAT = ROOT / "Compat/OXA/GameLite"
@@ -24,64 +26,48 @@ ARRAY_PATHS = {
 
 
 def parse_compat(root: Path) -> tuple[dict[tuple[str, str], dict], list[str]]:
-    groups: dict[tuple[str, str], dict] = {}
-    errors: list[str] = []
+    """Parse generated compat arrays with the same CFG parser as the analyzer.
 
-    for path in sorted(root.rglob("*.cfg")):
-        rel = path.relative_to(root).as_posix()
-        lines = path.read_text(encoding="utf-8", errors="ignore").splitlines()
-        prototype = None
-        array = None
-        entries: list[tuple[int, str]] = []
+    This is important for CompatibleAttachments: entries are child structs with
+    metadata, not scalar SID values.
+    """
+    groups = {}
+    errors = []
+    try:
+        parsed = _semantic_arrays(collect(root))
+    except Exception as exc:
+        return {}, [f"failed to parse compat CFGs: {exc}"]
 
-        def finish_array() -> None:
-            nonlocal array, entries
-            if prototype is None or array is None:
-                return
-            key = (prototype, array)
-            if key in groups:
-                errors.append(f"duplicate group {prototype} :: {array} ({groups[key]['source']} and {rel})")
-            indexes = [i for i, _ in entries]
-            if indexes != list(range(len(entries))):
-                errors.append(f"non-contiguous indexes {prototype} :: {array} in {rel}: {indexes}")
-            values = [v for _, v in sorted(entries)]
-            if len(values) != len(set(values)):
-                errors.append(f"duplicate values {prototype} :: {array} in {rel}")
-            groups[key] = {"values": values, "source": rel}
-            array = None
-            entries = []
-
-        for lineno, line in enumerate(lines, 1):
-            if array is not None:
-                m = ENTRY_RE.match(line)
-                if m:
-                    entries.append((int(m.group(1)), m.group(2)))
-                    continue
-                if END_RE.match(line):
-                    finish_array()
-                    continue
-                if line.strip() and not line.lstrip().startswith("//"):
-                    errors.append(f"unexpected array syntax {rel}:{lineno}: {line.strip()}")
+    for key, group in parsed.items():
+        prototype, array = key
+        if array not in ARRAY_PATHS:
+            continue
+        ordered = sorted(
+            group["entries"].items(),
+            key=lambda pair: int(pair[0][1:-1]) if pair[0][1:-1].isdigit() else 10**9,
+        )
+        values = []
+        entries = []
+        for index, fields in ordered:
+            identity = _entry_identity(array, fields)
+            if identity is None:
+                errors.append(f"missing identity {prototype} :: {array} {index}")
                 continue
+            values.append(identity)
+            entries.append({"index": index, "identity": identity, "fields": dict(fields)})
 
-            m = PROTO_RE.match(line)
-            if m:
-                prototype = m.group(1).strip()
-                continue
+        numeric = [int(e["index"][1:-1]) for e in entries if e["index"][1:-1].isdigit()]
+        if numeric != list(range(len(numeric))):
+            errors.append(f"non-contiguous indexes {prototype} :: {array}: {numeric}")
+        if len(values) != len(set(values)):
+            errors.append(f"duplicate values {prototype} :: {array}")
 
-            if prototype is not None:
-                m = ARRAY_RE.match(line)
-                if m:
-                    array = m.group(1)
-                    entries = []
-                    continue
-                if END_RE.match(line):
-                    prototype = None
-
-        if array is not None:
-            errors.append(f"unterminated array in {rel}")
-            finish_array()
-
+        sources = sorted(group.get("sources", []))
+        groups[key] = {
+            "values": values,
+            "entries": entries,
+            "source": sources[0] if sources else "<unknown>",
+        }
     return groups, errors
 
 
