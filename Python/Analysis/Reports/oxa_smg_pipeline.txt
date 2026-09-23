@@ -1,6 +1,6 @@
 BPRUE <-> OXA SMG pipeline
 ==========================
-SMGs=11 groups=22 findings=1 severity={'HIGH': 1}
+SMGs=11 groups=22 findings=0 severity={}
 Compat property changes=0 suspicious=0
 
 GunAKU_PP: hashes V=185bea7a2d84 O=ca49ebc93c02 B=a2f39a3d4620 F=a2f39a3d4620 | changes=18 compat=0 suspicious=0
@@ -14,9 +14,6 @@ Gun_Shakh_SMG_GS: hashes V=1e33fde61756 O=4f0dba3a2ed3 B=4f0dba3a2ed3 F=4f0dba3a
 Gun_Silence_SMG_GS: hashes V=16d2905c3ddc O=9a4ca645e829 B=9a4ca645e829 F=9a4ca645e829 | changes=31 compat=0 suspicious=0
 Gun_Spitfire_SMG_GS: hashes V=23df9bb5830d O=728ef31b612e B=728ef31b612e F=728ef31b612e | changes=37 compat=0 suspicious=0
 Gun_Spitter_SMG_GS: hashes V=1d1eaedb160e O=d77ae28ac796 B=d77ae28ac796 F=d77ae28ac796 | changes=26 compat=0 suspicious=0
-
-Array findings:
-  GunBucket_PP :: CompatibleAttachments -> {'FINAL_DUPLICATE_INTRODUCED': 1}
 
 PROPERTY DIFFS
 ==============
@@ -709,5 +706,3 @@ hashes: {'vanilla': '1d1eaedb160e', 'oxa': 'd77ae28ac796', 'after_bprue': 'd77ae
 
 ARRAY FINDINGS
 ==============
-GunBucket_PP :: CompatibleAttachments counts={'vanilla': 8, 'oxa': 41, 'after_bprue': 9, 'final': 42} replace(O/B/C)=False/True/True
-  HIGH FINAL_DUPLICATE_INTRODUCED :: identities=['RU_AutMuz_1']

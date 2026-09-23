@@ -5680,14 +5680,14 @@
         },
         {
           "severity": "INFO",
-          "kind": "OXA_DUPLICATE_INTRODUCED",
+          "kind": "OXA_DUPLICATE_PRESENT",
           "identities": [
             "RU_AutMuz_1"
           ]
         },
         {
-          "severity": "HIGH",
-          "kind": "FINAL_DUPLICATE_INTRODUCED",
+          "severity": "INFO",
+          "kind": "FINAL_DUPLICATE_PRESENT",
           "identities": [
             "RU_AutMuz_1"
           ]
@@ -38868,7 +38868,21 @@
         },
         {
           "severity": "INFO",
-          "kind": "OXA_DUPLICATE_INTRODUCED",
+          "kind": "OXA_DUPLICATE_PRESENT",
+          "identities": [
+            "RU_AutMuz_1"
+          ]
+        },
+        {
+          "severity": "INFO",
+          "kind": "AFTER_BPRUE_DUPLICATE_PRESENT",
+          "identities": [
+            "RU_AutMuz_1"
+          ]
+        },
+        {
+          "severity": "INFO",
+          "kind": "FINAL_DUPLICATE_PRESENT",
           "identities": [
             "RU_AutMuz_1"
           ]
@@ -43133,13 +43147,9 @@
   "summary": {
     "prototype_count": 11,
     "group_count": 22,
-    "finding_count": 1,
-    "severity_counts": {
-      "HIGH": 1
-    },
-    "kind_counts": {
-      "FINAL_DUPLICATE_INTRODUCED": 1
-    },
+    "finding_count": 0,
+    "severity_counts": {},
+    "kind_counts": {},
     "compat_property_changes": 0,
     "suspicious_compat_property_changes": 0
   }
