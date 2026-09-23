@@ -465,6 +465,31 @@ def _three_way_compare(vanilla: list[Write], bprue: list[Write], oxa: list[Write
     return results
 
 
+def _removal_mismatch_summary(items: list[dict]) -> dict:
+    """Aggregate semantic removenode mismatches for review.
+
+    OXA comments are useful identity hints, but they are not executable CFG.
+    Keep unresolved comment/index disagreements visible instead of guessing
+    whether the numeric index or the comment is correct.
+    """
+    records = []
+    counts = defaultdict(int)
+    for item in items:
+        for mismatch in item["oxa_array_semantics"].get("removal_identity_mismatches", []):
+            record = {
+                "prototype": item["prototype"],
+                "array": item["array"],
+                **mismatch,
+            }
+            records.append(record)
+            counts[mismatch["resolution"]] += 1
+    return {
+        "count": len(records),
+        "resolution_counts": dict(sorted(counts.items())),
+        "records": records,
+    }
+
+
 def _three_way_summary(items: list[dict]) -> dict:
     counts = defaultdict(int)
     arrays = defaultdict(int)
@@ -591,6 +616,7 @@ def analyze(bprue: list[Write], oxa: list[Write], vanilla: list[Write] | None = 
     semantic = _semantic_compare(bprue, oxa)
     three_way = _three_way_compare(vanilla or [], bprue, oxa)
     removal_analysis = _removal_analysis(three_way)
+    removal_mismatches = _removal_mismatch_summary(three_way)
 
     return {
         "summary": {
@@ -605,6 +631,10 @@ def analyze(bprue: list[Write], oxa: list[Write], vanilla: list[Write] | None = 
             "oxa_multi_source_prototypes": sum(1 for sources in oxa_sources.values() if len(sources) > 1),
             "semantic_arrays": _semantic_summary(semantic),
             "three_way": _three_way_summary(three_way),
+            "removal_identity_mismatches": {
+                "count": removal_mismatches["count"],
+                "resolution_counts": removal_mismatches["resolution_counts"],
+            },
             "removal_analysis": {
                 "upgrade_removal_category_counts": removal_analysis["upgrade_removal_category_counts"],
                 "compatible_attachment_removals": len(removal_analysis["compatible_attachment_removals"]),
@@ -613,6 +643,7 @@ def analyze(bprue: list[Write], oxa: list[Write], vanilla: list[Write] | None = 
             },
         },
         "removal_analysis": removal_analysis,
+        "removal_identity_mismatches": removal_mismatches,
         "three_way": three_way,
         "semantic_arrays": semantic,
         "overlaps": overlaps,
@@ -633,6 +664,23 @@ def render_text(report: dict) -> str:
     lines.append("severity_counts:")
     for key, value in summary["severity_counts"].items():
         lines.append(f"  {key}: {value}")
+
+    if report.get("removal_identity_mismatches"):
+        mismatches = report["removal_identity_mismatches"]
+        lines += ["", "OXA removenode identity mismatches", "---------------------------------"]
+        lines.append(f"Total mismatches: {mismatches['count']}")
+        for resolution, count in mismatches["resolution_counts"].items():
+            lines.append(f"  {resolution}: {count}")
+        if mismatches["records"]:
+            lines.append("Review:")
+            for item in mismatches["records"]:
+                lines.append(
+                    f"  [{item['resolution']}] {item['prototype']} :: {item['array']} "
+                    f"{item['patch_index']} comment={item['comment_identity']} "
+                    f"index_identity={item['index_identity']} "
+                    f"resolved_index={item['resolved_index']}"
+                )
+                lines.append(f"    source: {item['source']}")
 
     if report.get("removal_analysis"):
         analysis = report["removal_analysis"]
@@ -728,7 +776,7 @@ def main() -> None:
     json_path.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     text_path.write_text(render_text(report), encoding="utf-8")
 
-    print(render_text({"summary": report["summary"], "removal_analysis": report["removal_analysis"], "three_way": report["three_way"], "semantic_arrays": report["semantic_arrays"], "overlaps": [], "oxa_multi_source": []}).rstrip())
+    print(render_text({"summary": report["summary"], "removal_identity_mismatches": report["removal_identity_mismatches"], "removal_analysis": report["removal_analysis"], "three_way": report["three_way"], "semantic_arrays": report["semantic_arrays"], "overlaps": [], "oxa_multi_source": []}).rstrip())
     print(f"\nWrote {rel(json_path)}")
     print(f"Wrote {rel(text_path)}")
 
