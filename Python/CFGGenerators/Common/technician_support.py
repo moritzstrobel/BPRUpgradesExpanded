@@ -187,14 +187,16 @@ def dlc_technician_general_setups(content_pack: str) -> dict[str, frozenset[str]
 
 
 def technician_upgrade_assignments(model: UpgradeBuildModel) -> dict[str, list[UpgradeDefinition]]:
-    """Select BPRUE upgrades only for weapons supported by each Vanilla technician."""
+    """Select BPRUE upgrades for every weapon supported by each effective Vanilla technician.
+
+    Technician weapon support is inherited through the Vanilla refkey chain. A
+    concrete technician therefore does not need to own an Upgrades struct
+    directly in order to receive BPRUE additions.
+    """
     support = vanilla_technician_general_setups()
-    direct_owners = vanilla_technician_direct_upgrade_indices()
     candidates = model.technician_upgrades()
     assignments: dict[str, list[UpgradeDefinition]] = {}
     for technician_sid, supported_setups in support.items():
-        if technician_sid not in direct_owners:
-            continue
         assignments[technician_sid] = [
             upgrade
             for upgrade in candidates
