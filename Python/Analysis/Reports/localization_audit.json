@@ -3592,11 +3592,11 @@
   },
   "asset_snapshot": {
     "available": true,
-    "asset_entry_count": 453,
+    "asset_entry_count": 451,
     "source_entry_count": 352,
     "missing_count": 0,
     "missing_sids": [],
-    "asset_only_count": 101,
+    "asset_only_count": 99,
     "asset_only_sids": [
       "sid_bprue_GunAK74_Upgrade_Barrel_2_3_description",
       "sid_bprue_GunAK74_Upgrade_Barrel_2_3_name",
@@ -3696,8 +3696,6 @@
       "sid_bprue_GunM16_Upgrade_FireRate_name",
       "sid_bprue_GunM16_Upgrade_Reload_description",
       "sid_bprue_GunM16_Upgrade_Reload_name",
-      "sid_bprue_ammo_762x39_ap_only_description",
-      "sid_bprue_ammo_762x39_ap_only_name",
       "tmp"
     ],
     "duplicate_count": 0,
