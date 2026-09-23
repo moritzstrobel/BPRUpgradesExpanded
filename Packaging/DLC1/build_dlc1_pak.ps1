@@ -140,17 +140,30 @@ if ($LASTEXITCODE -ne 0) {
     throw "UnrealPak failed while listing the generated PAK (exit code $LASTEXITCODE)."
 }
 
-# UnrealPak -List reports filenames relative to the PAK mount point rather than
-# repeating the ../../../Stalker2/Content mount prefix from the response file.
-# Validate the DLC-relative paths and file count; the response file itself is
-# responsible for the mount mapping used when the PAK is created.
-# UnrealPak strips the common part of the destination path into the PAK mount
-# point. With mixed DLCGameData + GameData content, that common mount is
-# ../../../Stalker2/Content/GameLite/, so -List reports paths relative to GameLite.
+# UnrealPak -List reports paths relative to the common mount point it selected.
+# Derive that mount point from the listing instead of assuming GameLite: when the
+# package contains only DLC1 files UnrealPak mounts directly at
+# .../GameLite/DLCGameData/DLC1/, while mixed generated content can move the
+# common mount higher up.
+$mountLine = $listOutput | Where-Object { $_ -like '*with mount point "*' } | Select-Object -First 1
+if (-not $mountLine) {
+    throw "Could not determine PAK mount point from UnrealPak -List output."
+}
+$mountMatch = [regex]::Match($mountLine, 'with mount point "([^"]+)"')
+if (-not $mountMatch.Success) {
+    throw "Could not parse PAK mount point from UnrealPak -List output: $mountLine"
+}
+$listedMount = (To-PakPath -Path $mountMatch.Groups[1].Value).TrimEnd('/')
+$contentPrefix = (To-PakPath -Path $ContentMountRoot).TrimEnd('/')
+if (-not $listedMount.StartsWith($contentPrefix, [System.StringComparison]::OrdinalIgnoreCase)) {
+    throw "Unexpected PAK mount point: $listedMount"
+}
+$mountRelative = $listedMount.Substring($contentPrefix.Length).Trim('/')
+
 $expectedRelativePaths = foreach ($entry in $packageEntries) {
-    $relativePath = $entry.RelativePath
-    if ($relativePath.StartsWith("GameLite/")) {
-        $relativePath.Substring("GameLite/".Length)
+    $relativePath = (To-PakPath -Path $entry.RelativePath).TrimStart('/')
+    if ($mountRelative -and $relativePath.StartsWith("$mountRelative/", [System.StringComparison]::OrdinalIgnoreCase)) {
+        $relativePath.Substring($mountRelative.Length + 1)
     } else {
         $relativePath
     }
@@ -167,7 +180,7 @@ $missingPaths = @($expectedRelativePaths | Where-Object {
 if ($missingPaths.Count -gt 0) {
     Write-Host "UnrealPak -List output:"
     $listOutput | ForEach-Object { Write-Host "  $_" }
-    Write-Host "Missing DLC-relative entries:"
+    Write-Host "Missing PAK-relative entries:"
     $missingPaths | ForEach-Object { Write-Host "  $_" }
     throw "Generated PAK is missing $($missingPaths.Count) expected file(s)."
 }
