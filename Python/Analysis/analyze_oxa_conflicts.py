@@ -271,18 +271,117 @@ def _semantic_id_sets(writes: list[Write]) -> dict[tuple[str, str], set[str]]:
     return result
 
 
+def _writes_by_semantic_group(writes: list[Write]) -> dict[tuple[str, str], list[Write]]:
+    result: dict[tuple[str, str], list[Write]] = defaultdict(list)
+    for write in writes:
+        root = _semantic_array_root(write.path)
+        if root is not None:
+            result[(write.prototype, root)].append(write)
+    return result
+
+
+def _apply_array_patch(base: dict[str, dict], writes: list[Write], root: str) -> tuple[dict[str, dict], dict]:
+    """Approximate effective CFG array state for the constructs used by BPRUE/OXA.
+
+    Rules:
+    - no writes for the array => inherit baseline unchanged
+    - plain struct.begin / bskipref on the array => replace inherited array
+    - bpatch => start from baseline and patch indexed entries
+    - removenode => remove the targeted inherited index
+    - [*] => append after the current highest numeric index
+    """
+    state = {idx: dict(fields) for idx, fields in base.items()}
+    array_nodes = [w for w in writes if w.path == root and w.kind == "struct"]
+    explicit = bool(writes)
+    replaced = False
+    modes_seen: set[str] = set()
+
+    for node in array_nodes:
+        modes_seen.update(node.modes)
+        if "bpatch" not in node.modes:
+            state = {}
+            replaced = True
+
+    next_append = max(
+        (int(idx[1:-1]) for idx in state if re.fullmatch(r"\[\d+\]", idx)),
+        default=-1,
+    ) + 1
+    wildcard_map: dict[str, str] = {}
+
+    for w in writes:
+        if w.path == root:
+            continue
+        index_name, child = _array_entry_path(w.path, root)
+        if index_name is None:
+            continue
+        if index_name == "[*]":
+            index_name = wildcard_map.setdefault(w.path.split(".", 2)[1], f"[{next_append}]")
+            if index_name == f"[{next_append}]":
+                next_append += 1
+
+        if w.kind == "remove" and child is None:
+            state.pop(index_name, None)
+            continue
+
+        entry = state.setdefault(index_name, {})
+        if w.kind == "scalar":
+            entry[child or "<value>"] = w.value
+        elif w.kind == "remove":
+            entry.pop(child or "<value>", None)
+
+    return state, {
+        "explicit": explicit,
+        "replaced": replaced,
+        "modes": sorted(modes_seen),
+    }
+
+
+def _effective_semantic_arrays(
+    vanilla: list[Write], mod: list[Write]
+) -> tuple[dict[tuple[str, str], set[str]], dict[tuple[str, str], dict]]:
+    vanilla_groups = _semantic_arrays(vanilla)
+    mod_groups = _writes_by_semantic_group(mod)
+    keys = set(vanilla_groups) | set(mod_groups)
+    effective: dict[tuple[str, str], set[str]] = {}
+    metadata: dict[tuple[str, str], dict] = {}
+
+    for key in keys:
+        prototype, root = key
+        base_entries = {
+            idx: dict(fields)
+            for idx, fields in vanilla_groups.get(key, {"entries": {}})["entries"].items()
+        }
+        mod_writes = mod_groups.get(key, [])
+        if not mod_writes:
+            state = base_entries
+            meta = {"explicit": False, "replaced": False, "modes": [], "inherited": True}
+        else:
+            state, meta = _apply_array_patch(base_entries, mod_writes, root)
+            meta["inherited"] = not meta["replaced"]
+
+        effective[key] = {
+            identity
+            for fields in state.values()
+            if (identity := _entry_identity(root, fields)) is not None
+        }
+        metadata[key] = meta
+
+    return effective, metadata
+
+
 def _three_way_compare(vanilla: list[Write], bprue: list[Write], oxa: list[Write]) -> list[dict]:
     vanilla_sets = _semantic_id_sets(vanilla)
-    bprue_sets = _semantic_id_sets(bprue)
-    oxa_sets = _semantic_id_sets(oxa)
-    keys = sorted(set(bprue_sets) & set(oxa_sets | vanilla_sets))
+    bprue_sets, bprue_meta = _effective_semantic_arrays(vanilla, bprue)
+    oxa_sets, oxa_meta = _effective_semantic_arrays(vanilla, oxa)
+    explicit_bprue = set(_writes_by_semantic_group(bprue))
+    keys = sorted(explicit_bprue & (set(vanilla_sets) | set(oxa_sets)))
     results = []
 
     for prototype, root in keys:
         key = (prototype, root)
         v = vanilla_sets.get(key, set())
-        b = bprue_sets.get(key, set())
-        o = oxa_sets.get(key, set())
+        b = bprue_sets.get(key, v)
+        o = oxa_sets.get(key, v)
 
         bprue_additions = b - v
         bprue_removed_vanilla = v - b
@@ -303,10 +402,8 @@ def _three_way_compare(vanilla: list[Write], bprue: list[Write], oxa: list[Write
         elif oxa_additions:
             classification = "OXA_ADDITION"
         else:
-            classification = "UNCHANGED_OR_INCOMPLETE_BASELINE"
+            classification = "UNCHANGED_BASELINE"
 
-        # Proposed compatibility content is intentionally conservative:
-        # preserve OXA's effective entries and add only BPRUE-owned additions.
         proposed = sorted(o | independent_bprue)
 
         results.append({
@@ -314,8 +411,8 @@ def _three_way_compare(vanilla: list[Write], bprue: list[Write], oxa: list[Write
             "prototype": prototype,
             "array": root,
             "vanilla": sorted(v),
-            "bprue": sorted(b),
-            "oxa": sorted(o),
+            "bprue_effective": sorted(b),
+            "oxa_effective": sorted(o),
             "bprue_additions": sorted(bprue_additions),
             "bprue_removed_vanilla": sorted(bprue_removed_vanilla),
             "oxa_additions": sorted(oxa_additions),
@@ -323,6 +420,8 @@ def _three_way_compare(vanilla: list[Write], bprue: list[Write], oxa: list[Write
             "reintroduced_oxa_removals": sorted(reintroduced),
             "shared_additions": sorted(shared_additions),
             "compatibility_candidate": proposed,
+            "bprue_array_semantics": bprue_meta.get(key, {}),
+            "oxa_array_semantics": oxa_meta.get(key, {}),
         })
     return results
 
@@ -331,15 +430,23 @@ def _three_way_summary(items: list[dict]) -> dict:
     counts = defaultdict(int)
     arrays = defaultdict(int)
     reintroduced = 0
+    inherited_oxa = 0
+    replaced_oxa = 0
     for item in items:
         counts[item["classification"]] += 1
         arrays[item["array"]] += 1
         reintroduced += len(item["reintroduced_oxa_removals"])
+        if item["oxa_array_semantics"].get("inherited"):
+            inherited_oxa += 1
+        if item["oxa_array_semantics"].get("replaced"):
+            replaced_oxa += 1
     return {
         "groups": len(items),
         "classification_counts": dict(sorted(counts.items())),
         "array_counts": dict(sorted(arrays.items())),
         "reintroduced_oxa_removal_entries": reintroduced,
+        "oxa_inherited_arrays": inherited_oxa,
+        "oxa_replaced_arrays": replaced_oxa,
     }
 
 
@@ -420,13 +527,13 @@ def render_text(report: dict) -> str:
         lines.append(f"  {key}: {value}")
 
     if report.get("three_way"):
-        lines += ["", "Vanilla -> BPRUE / OXA three-way analysis", "-----------------------------------------"]
+        lines += ["", "Vanilla -> effective BPRUE / effective OXA analysis", "-----------------------------------------"]
         for item in report["three_way"]:
             if item["classification"] == "UNCHANGED_OR_INCOMPLETE_BASELINE":
                 continue
             lines += [
                 f"[{item['classification']}] {item['prototype']} :: {item['array']}",
-                f"  vanilla={len(item['vanilla'])} bprue={len(item['bprue'])} oxa={len(item['oxa'])} candidate={len(item['compatibility_candidate'])}",
+                f"  vanilla={len(item['vanilla'])} bprue={len(item['bprue_effective'])} oxa={len(item['oxa_effective'])} candidate={len(item['compatibility_candidate'])}",
             ]
             if item["reintroduced_oxa_removals"]:
                 lines.append("  REINTRODUCED OXA REMOVALS: " + ", ".join(item["reintroduced_oxa_removals"]))
