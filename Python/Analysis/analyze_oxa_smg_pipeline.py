@@ -98,41 +98,80 @@ def _analyse_group(prototype, root, vanilla_groups, oxa_groups, bprue_groups, co
     by_stage = {name: _by_identity(entries) for name, entries in stages.items()}
     findings = []
 
-    transitions = (
-        ("OXA", "vanilla", "oxa"),
-        ("BPRUE", "oxa", "after_bprue"),
-        ("COMPAT", "after_bprue", "final"),
-    )
+    # OXA/BPRUE transitions are descriptive only. A replacement is allowed to
+    # reorder/drop inherited entries, so do not inflate them into compat errors.
+    transitions = (("OXA", "vanilla", "oxa"), ("BPRUE", "oxa", "after_bprue"))
     for owner, before_name, after_name in transitions:
         before, after = by_stage[before_name], by_stage[after_name]
         for identity, old in before.items():
             if identity not in after:
                 findings.append({
-                    "severity": "CRITICAL",
-                    "kind": f"{owner}_ENTRY_LOST",
-                    "identity": identity,
-                    "from_stage": before_name,
-                    "to_stage": after_name,
+                    "severity": "INFO", "kind": f"{owner}_ENTRY_LOST",
+                    "identity": identity, "from_stage": before_name, "to_stage": after_name,
                 })
                 continue
             old_index, new_index = old[0]["index"], after[identity][0]["index"]
             if old_index != new_index:
                 findings.append({
-                    "severity": "HIGH" if root == "CompatibleAttachments" else "MEDIUM",
-                    "kind": f"{owner}_MOVE",
-                    "identity": identity,
-                    "from_index": old_index,
-                    "to_index": new_index,
+                    "severity": "INFO", "kind": f"{owner}_MOVE", "identity": identity,
+                    "from_index": old_index, "to_index": new_index,
                 })
 
+    # Compat is validated against its actual contract:
+    # Final = Effective OXA + (Effective BPRUE - Vanilla).
     vanilla_ids = set(by_stage["vanilla"])
-    bprue_ids = set(by_stage["after_bprue"])
-    final_ids = set(by_stage["final"])
-    for identity in sorted((bprue_ids - vanilla_ids) - final_ids):
-        findings.append({"severity": "CRITICAL", "kind": "BPRUE_ADDITION_LOST", "identity": identity})
+    oxa_entries = stages["oxa"]
+    bprue_entries = stages["after_bprue"]
+    expected = []
+    seen = set()
+    for entry in oxa_entries:
+        identity = entry["identity"]
+        if identity is None or identity in seen:
+            continue
+        expected.append(entry)
+        seen.add(identity)
+    for entry in bprue_entries:
+        identity = entry["identity"]
+        if identity is None or identity in seen or identity in vanilla_ids:
+            continue
+        expected.append(entry)
+        seen.add(identity)
 
-    # Attribute duplicates to the stage that introduced them instead of reporting
-    # every inherited duplicate as a final-state problem.
+    final_by_id = by_stage["final"]
+    expected_ids = [e["identity"] for e in expected]
+    final_ids_ordered = [e["identity"] for e in stages["final"] if e["identity"] is not None]
+
+    for expected_index, entry in enumerate(expected):
+        identity = entry["identity"]
+        if identity not in final_by_id:
+            kind = "COMPAT_MISSING_OXA_ENTRY" if identity in by_stage["oxa"] else "COMPAT_MISSING_BPRUE_ADDITION"
+            findings.append({"severity": "CRITICAL", "kind": kind, "identity": identity})
+            continue
+        actual = final_by_id[identity][0]
+        if actual["index"] != f"[{expected_index}]":
+            findings.append({
+                "severity": "MEDIUM", "kind": "COMPAT_ORDER_CHANGED", "identity": identity,
+                "expected_index": f"[{expected_index}]", "final_index": actual["index"],
+            })
+        if root == "CompatibleAttachments" and actual["fields"] != entry["fields"]:
+            changed_fields = sorted(
+                key for key in set(entry["fields"]) | set(actual["fields"])
+                if entry["fields"].get(key) != actual["fields"].get(key)
+            )
+            findings.append({
+                "severity": "CRITICAL", "kind": "COMPAT_ATTACHMENT_METADATA_CHANGED",
+                "identity": identity, "fields": changed_fields,
+            })
+
+    expected_set = set(expected_ids)
+    unexpected = [x for x in final_ids_ordered if x not in expected_set]
+    if unexpected:
+        findings.append({
+            "severity": "HIGH", "kind": "COMPAT_UNEXPECTED_ENTRIES",
+            "identities": sorted(set(unexpected)),
+        })
+
+    # Attribute duplicates to the layer that first introduces them.
     previous_dupes = set()
     for stage_name in STAGES:
         ids = [e["identity"] for e in stages[stage_name] if e["identity"] is not None]
@@ -140,7 +179,7 @@ def _analyse_group(prototype, root, vanilla_groups, oxa_groups, bprue_groups, co
         introduced = sorted(dupes - previous_dupes)
         if introduced:
             findings.append({
-                "severity": "HIGH",
+                "severity": "HIGH" if stage_name == "final" else "INFO",
                 "kind": f"{stage_name.upper()}_DUPLICATE_INTRODUCED",
                 "identities": introduced,
             })
@@ -150,6 +189,7 @@ def _analyse_group(prototype, root, vanilla_groups, oxa_groups, bprue_groups, co
         "prototype": prototype, "array": root,
         "metadata": {"oxa": oxa_meta, "bprue": bprue_meta, "compat": compat_meta},
         "counts": {name: len(entries) for name, entries in stages.items()},
+        "expected_final": expected,
         "stages": stages, "findings": findings,
     }
 
@@ -277,8 +317,9 @@ def analyse(report, vanilla_root, oxa_root, bprue_root, compat_root, prototypes)
     severity_counts, kind_counts = defaultdict(int), defaultdict(int)
     for group in groups:
         for finding in group["findings"]:
-            severity_counts[finding["severity"]] += 1
-            kind_counts[finding["kind"]] += 1
+            if finding["severity"] != "INFO":
+                severity_counts[finding["severity"]] += 1
+                kind_counts[finding["kind"]] += 1
 
     return {
         "prototypes": prototypes, "groups": groups, "effective": effective,
@@ -327,13 +368,14 @@ def _render_console(result: dict) -> str:
         if len(item["suspicious_compat_changes"]) > 8:
             lines.append(f"  ... +{len(item['suspicious_compat_changes']) - 8} more in report")
 
-    flagged_groups = [g for g in result["groups"] if g["findings"]]
+    flagged_groups = [g for g in result["groups"] if any(f["severity"] != "INFO" for f in g["findings"])]
     if flagged_groups:
         lines += ["", "Array findings:"]
         for group in flagged_groups:
             kinds = defaultdict(int)
             for f in group["findings"]:
-                kinds[f["kind"]] += 1
+                if f["severity"] != "INFO":
+                    kinds[f["kind"]] += 1
             lines.append(f"  {group['prototype']} :: {group['array']} -> {dict(kinds)}")
     return "\n".join(lines) + "\n"
 
@@ -360,14 +402,15 @@ def _render_report(result: dict) -> str:
 
     lines += ["", "ARRAY FINDINGS", "=============="]
     for group in result["groups"]:
-        if not group["findings"]:
+        actionable = [f for f in group["findings"] if f["severity"] != "INFO"]
+        if not actionable:
             continue
         lines.append(
             f"{group['prototype']} :: {group['array']} counts={group['counts']} "
             f"replace(O/B/C)={group['metadata']['oxa'].get('replaced')}/"
             f"{group['metadata']['bprue'].get('replaced')}/{group['metadata']['compat'].get('replaced')}"
         )
-        for f in group["findings"]:
+        for f in actionable:
             details = ", ".join(f"{k}={v}" for k, v in f.items() if k not in {"severity", "kind"})
             lines.append(f"  {f['severity']} {f['kind']}" + (f" :: {details}" if details else ""))
     return "\n".join(lines).rstrip() + "\n"
