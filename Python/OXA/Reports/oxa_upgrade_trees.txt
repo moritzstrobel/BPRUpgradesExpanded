@@ -7,7 +7,7 @@ GunAKS74N_G2_ST
 Upgrade roots: 8
 Reachable upgrade nodes: 8
 Compatible attachments: 62
-Missing upgrade prototypes: 8
+Missing upgrade prototypes: 0
   root: GunAK74_Upgrade_Barrel_1
   root: GunAK74_Upgrade_Barrel_2_1
   root: GunAK74_Upgrade_Barrel_2_2
@@ -16,39 +16,38 @@ Missing upgrade prototypes: 8
   root: GunAK74_Upgrade_Stock_1
   root: GunAK74_Upgrade_Stock_2
   root: GunAK74_Upgrade_Stock_3
-  GunAK74_Upgrade_Barrel_1 [MISSING]
+  GunAK74_Upgrade_Barrel_1 [VANILLA]
     required: -
     interchangeable: -
-    effects: -
-  GunAK74_Upgrade_Barrel_2_1 [MISSING]
+    effects: RecoilPos10Effect
+  GunAK74_Upgrade_Barrel_2_1 [VANILLA]
     required: -
     interchangeable: -
-    effects: -
-  GunAK74_Upgrade_Barrel_2_2 [MISSING]
+    effects: ArmorPiercingPos30Effect, CoverPiercingPos30Effect
+  GunAK74_Upgrade_Barrel_2_2 [VANILLA]
     required: -
     interchangeable: -
-    effects: -
-  GunAK74_Upgrade_Body_1 [MISSING]
+    effects: FireDistancePos10Effect
+  GunAK74_Upgrade_Body_1 [VANILLA]
     required: -
     interchangeable: -
-    effects: -
-  GunAK74_Upgrade_Body_2 [MISSING]
+    effects: WeightPos30Effect
+  GunAK74_Upgrade_Body_2 [VANILLA]
     required: -
     interchangeable: -
-    effects: -
-  GunAK74_Upgrade_Stock_1 [MISSING]
+    effects: BulletFalloffPos15Effect
+  GunAK74_Upgrade_Stock_1 [VANILLA]
     required: -
     interchangeable: -
-    effects: -
-  GunAK74_Upgrade_Stock_2 [MISSING]
+    effects: AimingTimePos15Effect
+  GunAK74_Upgrade_Stock_2 [VANILLA]
     required: -
     interchangeable: -
-    effects: -
-  GunAK74_Upgrade_Stock_3 [MISSING]
+    effects: IdleSwayXPos15Effect, IdleSwayYPos15Effect
+  GunAK74_Upgrade_Stock_3 [VANILLA]
     required: -
     interchangeable: -
-    effects: -
-  unresolved: GunAK74_Upgrade_Barrel_1, GunAK74_Upgrade_Barrel_2_1, GunAK74_Upgrade_Barrel_2_2, GunAK74_Upgrade_Body_1, GunAK74_Upgrade_Body_2, GunAK74_Upgrade_Stock_1, GunAK74_Upgrade_Stock_2, GunAK74_Upgrade_Stock_3
+    effects: RecoilPos10Effect
 
 GunGlock17_HG
 -------------
