@@ -443,7 +443,35 @@ def _three_way_compare(vanilla: list[Write], bprue: list[Write], oxa: list[Write
         else:
             classification = "UNCHANGED_BASELINE"
 
-        proposed = sorted(o | independent_bprue)
+        # Preserve OXA's effective order and complete entry metadata.  The
+        # compatibility patch must be OXA + (BPRUE - Vanilla), but arrays are
+        # order/index sensitive and CompatibleAttachments entries are structs.
+        vanilla_groups = _semantic_arrays(vanilla)
+        bprue_groups = _writes_by_semantic_group(bprue)
+        oxa_groups = _writes_by_semantic_group(oxa)
+        base_entries = {
+            idx: dict(fields)
+            for idx, fields in vanilla_groups.get(key, {"entries": {}})["entries"].items()
+        }
+        oxa_state, _ = _apply_array_patch(base_entries, oxa_groups.get(key, []), root)
+        bprue_state, _ = _apply_array_patch(base_entries, bprue_groups.get(key, []), root)
+
+        candidate_entries = []
+        seen = set()
+        for idx, fields in oxa_state.items():
+            identity = _entry_identity(root, fields)
+            if identity is None:
+                continue
+            candidate_entries.append({"source_index": idx, "identity": identity, "fields": dict(fields)})
+            seen.add(identity)
+        for idx, fields in bprue_state.items():
+            identity = _entry_identity(root, fields)
+            if identity is None or identity in seen or identity not in independent_bprue:
+                continue
+            candidate_entries.append({"source_index": idx, "identity": identity, "fields": dict(fields)})
+            seen.add(identity)
+
+        proposed = [entry["identity"] for entry in candidate_entries]
 
         results.append({
             "classification": classification,
@@ -459,6 +487,7 @@ def _three_way_compare(vanilla: list[Write], bprue: list[Write], oxa: list[Write
             "reintroduced_oxa_removals": sorted(reintroduced),
             "shared_additions": sorted(shared_additions),
             "compatibility_candidate": proposed,
+            "compatibility_candidate_entries": candidate_entries,
             "bprue_array_semantics": bprue_meta.get(key, {}),
             "oxa_array_semantics": oxa_meta.get(key, {}),
         })
