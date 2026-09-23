@@ -11,11 +11,36 @@ overlap_records: 865
 oxa_multi_source_prototypes: 38
 semantic_arrays: {'groups': 82, 'severity_counts': {'CONTENT_CONFLICT': 6, 'INDEX_COLLISION': 1, 'MERGE_REQUIRED': 75}, 'array_counts': {'CompatibleAttachments': 6, 'FittingWeaponsSIDs': 8, 'UpgradePrototypeSIDs': 68}}
 three_way: {'groups': 102, 'classification_counts': {'BOTH_EXTEND_BASELINE': 1, 'BPRUE_ADDITION': 24, 'OXA_REMOVAL_REINTRODUCED': 77}, 'array_counts': {'CompatibleAttachments': 6, 'FittingWeaponsSIDs': 13, 'UpgradePrototypeSIDs': 83}, 'reintroduced_oxa_removal_entries': 236, 'oxa_inherited_arrays': 94, 'oxa_replaced_arrays': 8}
+removal_analysis: {'upgrade_removal_category_counts': {'AutMuz': 15, 'Grip': 9, 'Laser': 12, 'Laser_HP': 45, 'Offset': 51, 'OtherGameplayUpgrade': 8, 'Rail': 5, 'SinMuz': 27}, 'compatible_attachment_removals': 11, 'fitting_weapon_removals': 53, 'unexpected_gameplay_upgrade_count': 8}
 severity_counts:
   CONFLICT: 471
   PROTOTYPE_OVERLAP: 203
   SAME_VALUE: 33
   STRUCTURAL: 158
+
+OXA Vanilla-removal classification
+----------------------------------
+UpgradePrototypeSIDs:
+  AutMuz: 15
+  Grip: 9
+  Laser: 12
+  Laser_HP: 45
+  Offset: 51
+  OtherGameplayUpgrade: 8
+  Rail: 5
+  SinMuz: 27
+CompatibleAttachments removals: 11
+FittingWeaponsSIDs removals: 53
+Unexpected gameplay upgrades: 8
+Unexpected / review manually:
+  GunAKU_PP: GunAKU_Upgrade_Stock_1_2
+  GunM701_SP: GunM701_Upgrade_Barrel_3_2
+  GunSVDM_SP: GunSVDM_Upgrade_Barrel_3_2
+  GunSVU_SP: GunSVU_Upgrade_Barrel_3_2
+  Gun_Cavalier_SR_GS: GunM701_Upgrade_Barrel_3_2
+  Gun_Lynx_SR_GS: GunSVDM_Upgrade_Barrel_3_2
+  Gun_Silence_SMG_GS: GunAKU_Upgrade_Handguard_1_1
+  Gun_Whip_SR_GS: GunSVU_Upgrade_Barrel_3_2
 
 Vanilla -> effective BPRUE / effective OXA analysis
 -----------------------------------------

@@ -42,7 +42,1035 @@
       "reintroduced_oxa_removal_entries": 236,
       "oxa_inherited_arrays": 94,
       "oxa_replaced_arrays": 8
+    },
+    "removal_analysis": {
+      "upgrade_removal_category_counts": {
+        "AutMuz": 15,
+        "Grip": 9,
+        "Laser": 12,
+        "Laser_HP": 45,
+        "Offset": 51,
+        "OtherGameplayUpgrade": 8,
+        "Rail": 5,
+        "SinMuz": 27
+      },
+      "compatible_attachment_removals": 11,
+      "fitting_weapon_removals": 53,
+      "unexpected_gameplay_upgrade_count": 8
     }
+  },
+  "removal_analysis": {
+    "upgrade_removal_category_counts": {
+      "AutMuz": 15,
+      "Grip": 9,
+      "Laser": 12,
+      "Laser_HP": 45,
+      "Offset": 51,
+      "OtherGameplayUpgrade": 8,
+      "Rail": 5,
+      "SinMuz": 27
+    },
+    "upgrade_removals": {
+      "AutMuz": [
+        {
+          "prototype": "GunAKU_PP",
+          "sid": "GunAKU_Upgrade_Attachment_AutMuz"
+        },
+        {
+          "prototype": "GunArev_ST_GS",
+          "sid": "GunArev_Upgrade_Attachment_AutMuz"
+        },
+        {
+          "prototype": "GunBucket_PP",
+          "sid": "GunBucket_Upgrade_Attachment_AutMuz"
+        },
+        {
+          "prototype": "GunDnipro_ST",
+          "sid": "GunDnipro_Upgrade_Attachment_AutMuz"
+        },
+        {
+          "prototype": "GunFora_ST",
+          "sid": "GunFora_Upgrade_Attachment_AutMuz"
+        },
+        {
+          "prototype": "GunG37_ST",
+          "sid": "GunG37_Upgrade_Attachment_AutMuz"
+        },
+        {
+          "prototype": "GunGP3A_DMR_GS",
+          "sid": "GunGP3A_Upgrade_Attachment_AutMuz"
+        },
+        {
+          "prototype": "GunGrim_ST",
+          "sid": "GunGrim_Upgrade_Attachment_AutMuz"
+        },
+        {
+          "prototype": "GunIntegral_PP",
+          "sid": "GunIntegral_Upgrade_Attachment_AutMuz"
+        },
+        {
+          "prototype": "GunKharod_ST",
+          "sid": "GunKharod_Upgrade_Attachment_AutMuz"
+        },
+        {
+          "prototype": "GunZubr_PP",
+          "sid": "GunZubr_Upgrade_Attachment_AutMuz"
+        },
+        {
+          "prototype": "Gun_Decider_AR_GS",
+          "sid": "GunFora_Upgrade_Attachment_AutMuz"
+        },
+        {
+          "prototype": "Gun_S15_AR",
+          "sid": "GunGrim_Upgrade_Attachment_AutMuz"
+        },
+        {
+          "prototype": "Gun_Spitfire_SMG_GS",
+          "sid": "GunAKU_Upgrade_Attachment_AutMuz"
+        },
+        {
+          "prototype": "Gun_Spitter_SMG_GS",
+          "sid": "GunBucket_Upgrade_Attachment_AutMuz"
+        }
+      ],
+      "Grip": [
+        {
+          "prototype": "GunArevLight_AR_GS",
+          "sid": "GunArev_Upgrade_Attachment_Grip"
+        },
+        {
+          "prototype": "GunArev_ST_GS",
+          "sid": "GunArev_Upgrade_Attachment_Grip"
+        },
+        {
+          "prototype": "GunIntegral_PP",
+          "sid": "GunIntegral_Upgrade_Attachment_Grip"
+        },
+        {
+          "prototype": "GunKharod_ST",
+          "sid": "GunKharod_Upgrade_Attachment_Grip"
+        },
+        {
+          "prototype": "GunM16_ST",
+          "sid": "GunM16_Upgrade_Attachment_Grip"
+        },
+        {
+          "prototype": "GunWarszawa_AR_GS",
+          "sid": "GunArev_Upgrade_Attachment_Grip"
+        },
+        {
+          "prototype": "Gun_SOFMOD_AR_GS",
+          "sid": "GunM16_Upgrade_Attachment_Grip"
+        },
+        {
+          "prototype": "Gun_Sharpshooter_AR_GS",
+          "sid": "GunM16_Upgrade_Attachment_Grip"
+        },
+        {
+          "prototype": "Gun_Unknown_AR_GS",
+          "sid": "GunM16_Upgrade_Attachment_Grip"
+        }
+      ],
+      "Laser": [
+        {
+          "prototype": "GunFora230_PP_GS",
+          "sid": "GunFora230_Upgrade_Attachment_Laser"
+        },
+        {
+          "prototype": "GunFora_ST",
+          "sid": "GunFora_Upgrade_Attachment_Laser"
+        },
+        {
+          "prototype": "GunG37_ST",
+          "sid": "GunG37_Upgrade_Attachment_Laser"
+        },
+        {
+          "prototype": "GunKharod_ST",
+          "sid": "GunKharod_Upgrade_Attachment_Laser"
+        },
+        {
+          "prototype": "GunLavina_ST",
+          "sid": "GunLavina_Upgrade_Attachment_Laser"
+        },
+        {
+          "prototype": "GunRam2_SG",
+          "sid": "GunRam2_Upgrade_Attachment_Laser"
+        },
+        {
+          "prototype": "GunUDP_HG",
+          "sid": "GunUDP_Upgrade_Attachment_Laser"
+        },
+        {
+          "prototype": "Gun_Decider_AR_GS",
+          "sid": "GunFora_Upgrade_Attachment_Laser"
+        },
+        {
+          "prototype": "Gun_Krivenko_HG_GS",
+          "sid": "GunUDP_Upgrade_Attachment_Laser"
+        },
+        {
+          "prototype": "Gun_RatKiller_SMG_GS",
+          "sid": "GunZubr_Upgrade_Attachment_Laser"
+        },
+        {
+          "prototype": "Gun_Texas_SG_GS",
+          "sid": "GunRam2_Upgrade_Attachment_Laser"
+        },
+        {
+          "prototype": "Gun_Trophy_AR_GS",
+          "sid": "GunLavina_Upgrade_Attachment_Laser"
+        }
+      ],
+      "Laser_HP": [
+        {
+          "prototype": "GunArevLight_AR_GS",
+          "sid": "GunArev_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunArevPrecise_AR_GS",
+          "sid": "GunArev_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunArev_ST_GS",
+          "sid": "GunArev_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunBucket_PP",
+          "sid": "GunBucket_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunClapper_SG_GS",
+          "sid": "GunM860_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunD12_SG",
+          "sid": "GunD12_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunDefender_SG",
+          "sid": "GunD12_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunDniproDuty_ST",
+          "sid": "GunDnipro_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunDnipro_ST",
+          "sid": "GunDnipro_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunFora230_PP_GS",
+          "sid": "GunFora230_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunFora_ST",
+          "sid": "GunFora_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunG37V2_ST",
+          "sid": "GunG37_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunG37_ST",
+          "sid": "GunG37_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunGP3A_DMR_GS",
+          "sid": "GunGP3A_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunGrim_ST",
+          "sid": "GunGrim_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunGvintar_ST",
+          "sid": "GunGvintar_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunIntegral_PP",
+          "sid": "GunIntegral_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunKharodFreedom_ST",
+          "sid": "GunKharod_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunKharod_ST",
+          "sid": "GunKharod_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunLavina_ST",
+          "sid": "GunLavina_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunM701_SP",
+          "sid": "GunM701_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunM860_SG",
+          "sid": "GunM860_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunMark_SP",
+          "sid": "GunMark_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunRam2_SG",
+          "sid": "GunRam2_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunSPSA_SG",
+          "sid": "GunSPSA_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunSVDM_SP",
+          "sid": "GunSVDM_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunSVU_CQB_SP",
+          "sid": "GunSVU_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunSVU_SP",
+          "sid": "GunSVU_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunViper_PP",
+          "sid": "GunViper_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunWarszawa_AR_GS",
+          "sid": "GunArev_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunZubr_PP",
+          "sid": "GunZubr_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "Gun_Cavalier_SR_GS",
+          "sid": "GunM701_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "Gun_Decider_AR_GS",
+          "sid": "GunFora_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "Gun_Lynx_SR_GS",
+          "sid": "GunSVDM_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "Gun_Merc_AR_GS",
+          "sid": "GunGvintar_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "Gun_Partner_SR_GS",
+          "sid": "GunMark_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "Gun_Predator_SG_GS",
+          "sid": "GunM860_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "Gun_RatKiller_SMG_GS",
+          "sid": "GunZubr_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "Gun_S15_AR",
+          "sid": "GunGrim_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "Gun_Shakh_SMG_GS",
+          "sid": "GunViper_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "Gun_Sledgehammer_SG_GS",
+          "sid": "GunSPSA_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "Gun_Sotnyk_AR_GS",
+          "sid": "GunDnipro_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "Gun_Spitter_SMG_GS",
+          "sid": "GunBucket_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "Gun_Trophy_AR_GS",
+          "sid": "GunLavina_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "Gun_Whip_SR_GS",
+          "sid": "GunSVU_Upgrade_Attachment_Laser_HP"
+        }
+      ],
+      "Offset": [
+        {
+          "prototype": "GunAK74_ST",
+          "sid": "GunAK74_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunAK9_ST_GS",
+          "sid": "GunAK74_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunArevLight_AR_GS",
+          "sid": "GunArev_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunArevPrecise_AR_GS",
+          "sid": "GunArev_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunArev_ST_GS",
+          "sid": "GunArev_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunBucket_PP",
+          "sid": "GunBucket_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunD12_SG",
+          "sid": "GunD12_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunDnipro_ST",
+          "sid": "GunDnipro_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunFora230_PP_GS",
+          "sid": "GunFora230_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunFora_ST",
+          "sid": "GunFora_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunG37V2_ST",
+          "sid": "GunG37_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunG37_ST",
+          "sid": "GunG37_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunGP3A_DMR_GS",
+          "sid": "GunGP3A_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunGrim_ST",
+          "sid": "GunGrim_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunGvintar_ST",
+          "sid": "GunGvintar_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunIntegral_PP",
+          "sid": "GunIntegral_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunKharodFreedom_ST",
+          "sid": "GunKharod_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunLavina_ST",
+          "sid": "GunLavina_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunM16_ST",
+          "sid": "GunM16_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunM701_SP",
+          "sid": "GunM701_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunM860_SG",
+          "sid": "GunM860_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunMark_SP",
+          "sid": "GunMark_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunRam2_SG",
+          "sid": "GunRam2_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunSPSA_SG",
+          "sid": "GunSPSA_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunSVDM_SP",
+          "sid": "GunSVDM_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunSVU_SP",
+          "sid": "GunSVU_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunThreeLine_SP_GS",
+          "sid": "GunThreeLine_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunViper_PP",
+          "sid": "GunViper_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunWarszawa_AR_GS",
+          "sid": "GunArev_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunZubr_PP",
+          "sid": "GunZubr_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "Gun_Cavalier_SR_GS",
+          "sid": "GunM701_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "Gun_Combatant_AR_GS",
+          "sid": "GunAK74_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "Gun_Decider_AR_GS",
+          "sid": "GunFora_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "Gun_Drowned_AR_GS",
+          "sid": "GunAK74_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "Gun_Lummox_AR_GS",
+          "sid": "GunAK74_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "Gun_Lynx_SR_GS",
+          "sid": "GunSVDM_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "Gun_Merc_AR_GS",
+          "sid": "GunGvintar_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "Gun_Partner_SR_GS",
+          "sid": "GunMark_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "Gun_Predator_SG_GS",
+          "sid": "GunM860_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "Gun_S15_AR",
+          "sid": "GunGrim_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "Gun_SOFMOD_AR_GS",
+          "sid": "GunM16_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "Gun_Shakh_SMG_GS",
+          "sid": "GunViper_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "Gun_Silence_SMG_GS",
+          "sid": "GunAKU_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "Gun_Sledgehammer_SG_GS",
+          "sid": "GunSPSA_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "Gun_Sotnyk_AR_GS",
+          "sid": "GunDnipro_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "Gun_Spitfire_SMG_GS",
+          "sid": "GunAKU_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "Gun_Spitter_SMG_GS",
+          "sid": "GunBucket_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "Gun_Texas_SG_GS",
+          "sid": "GunRam2_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "Gun_Trophy_AR_GS",
+          "sid": "GunLavina_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "Gun_Unknown_AR_GS",
+          "sid": "GunM16_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "Gun_Whip_SR_GS",
+          "sid": "GunSVU_Upgrade_Attachment_Offset_Stock"
+        }
+      ],
+      "OtherGameplayUpgrade": [
+        {
+          "prototype": "GunAKU_PP",
+          "sid": "GunAKU_Upgrade_Stock_1_2"
+        },
+        {
+          "prototype": "GunM701_SP",
+          "sid": "GunM701_Upgrade_Barrel_3_2"
+        },
+        {
+          "prototype": "GunSVDM_SP",
+          "sid": "GunSVDM_Upgrade_Barrel_3_2"
+        },
+        {
+          "prototype": "GunSVU_SP",
+          "sid": "GunSVU_Upgrade_Barrel_3_2"
+        },
+        {
+          "prototype": "Gun_Cavalier_SR_GS",
+          "sid": "GunM701_Upgrade_Barrel_3_2"
+        },
+        {
+          "prototype": "Gun_Lynx_SR_GS",
+          "sid": "GunSVDM_Upgrade_Barrel_3_2"
+        },
+        {
+          "prototype": "Gun_Silence_SMG_GS",
+          "sid": "GunAKU_Upgrade_Handguard_1_1"
+        },
+        {
+          "prototype": "Gun_Whip_SR_GS",
+          "sid": "GunSVU_Upgrade_Barrel_3_2"
+        }
+      ],
+      "Rail": [
+        {
+          "prototype": "GunAPB_HG",
+          "sid": "GunAPB_Upgrade_Attachment_Rail"
+        },
+        {
+          "prototype": "GunLavina_ST",
+          "sid": "GunLavina_Upgrade_Attachment_Rail"
+        },
+        {
+          "prototype": "Gun_Encourage_HG_GS",
+          "sid": "GunAPB_Upgrade_Attachment_Rail"
+        },
+        {
+          "prototype": "Gun_RatKiller_SMG_GS",
+          "sid": "GunZubr_Upgrade_Attachment_Rail"
+        },
+        {
+          "prototype": "Gun_Trophy_AR_GS",
+          "sid": "GunLavina_Upgrade_Attachment_Rail"
+        }
+      ],
+      "SinMuz": [
+        {
+          "prototype": "GunAK74_ST",
+          "sid": "GunAK74_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "GunArevLight_AR_GS",
+          "sid": "GunArev_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "GunArev_ST_GS",
+          "sid": "GunArev_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "GunDniproDuty_ST",
+          "sid": "GunDnipro_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "GunDnipro_ST",
+          "sid": "GunDnipro_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "GunFora230_PP_GS",
+          "sid": "GunFora230_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "GunFora_ST",
+          "sid": "GunFora_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "GunG37_ST",
+          "sid": "GunG37_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "GunGP3A_DMR_GS",
+          "sid": "GunGP3A_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "GunGonta_SP_GS",
+          "sid": "GunThreeLine_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "GunGrim_ST",
+          "sid": "GunGrim_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "GunIntegral_PP",
+          "sid": "GunIntegral_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "GunM701_SP",
+          "sid": "GunM701_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "GunMark_SP",
+          "sid": "GunMark_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "GunSVDM_SP",
+          "sid": "GunSVDM_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "GunSVU_SP",
+          "sid": "GunSVU_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "GunThreeLine_SP_GS",
+          "sid": "GunThreeLine_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "GunZubr_PP",
+          "sid": "GunZubr_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "Gun_Cavalier_SR_GS",
+          "sid": "GunM701_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "Gun_Combatant_AR_GS",
+          "sid": "GunAK74_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "Gun_Decider_AR_GS",
+          "sid": "GunFora_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "Gun_Drowned_AR_GS",
+          "sid": "GunAK74_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "Gun_Lummox_AR_GS",
+          "sid": "GunAK74_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "Gun_Lynx_SR_GS",
+          "sid": "GunSVDM_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "Gun_Partner_SR_GS",
+          "sid": "GunMark_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "Gun_RatKiller_SMG_GS",
+          "sid": "GunZubr_Upgrade_Attachment_SinMuz"
+        },
+        {
+          "prototype": "Gun_Whip_SR_GS",
+          "sid": "GunSVU_Upgrade_Attachment_SinMuz"
+        }
+      ]
+    },
+    "compatible_attachment_removals": [
+      {
+        "prototype": "GunAKU_PP",
+        "sid": "RU_Silen_2"
+      },
+      {
+        "prototype": "GunAKU_PP",
+        "sid": "TopRailAKU"
+      },
+      {
+        "prototype": "GunBucket_PP",
+        "sid": "GunBucket_TopRail"
+      },
+      {
+        "prototype": "GunBucket_PP",
+        "sid": "RU_Silen_1"
+      },
+      {
+        "prototype": "GunIntegral_PP",
+        "sid": "EN_Silen_2"
+      },
+      {
+        "prototype": "GunIntegral_PP",
+        "sid": "HP_Laser_2"
+      },
+      {
+        "prototype": "GunViper_PP",
+        "sid": "EN_Silen_2"
+      },
+      {
+        "prototype": "GunViper_PP",
+        "sid": "TopRailViper"
+      },
+      {
+        "prototype": "GunZubr_PP",
+        "sid": "RU_ColimScope_2"
+      },
+      {
+        "prototype": "GunZubr_PP",
+        "sid": "RU_Silen_1"
+      },
+      {
+        "prototype": "GunZubr_PP",
+        "sid": "TopRailZubr"
+      }
+    ],
+    "fitting_weapon_removals": [
+      {
+        "prototype": "EN_ColimScope_1",
+        "sid": "GunAPB_HG"
+      },
+      {
+        "prototype": "EN_ColimScope_1",
+        "sid": "GunBucket_PP"
+      },
+      {
+        "prototype": "EN_ColimScope_1",
+        "sid": "GunM10_HG"
+      },
+      {
+        "prototype": "EN_ColimScope_1",
+        "sid": "GunRam2_SG"
+      },
+      {
+        "prototype": "EN_ColimScope_1",
+        "sid": "myriflepack_GunKora_HG"
+      },
+      {
+        "prototype": "EN_ColimScope_1",
+        "sid": "myriflepack_GunThreeLine_SP"
+      },
+      {
+        "prototype": "EN_ColimScope_1",
+        "sid": "nwpack_GunArev_ST"
+      },
+      {
+        "prototype": "EN_ColimScope_1",
+        "sid": "nwpack_GunFora230_PP"
+      },
+      {
+        "prototype": "EN_ColimScope_1",
+        "sid": "nwpack_GunGP3A_DMR"
+      },
+      {
+        "prototype": "EN_GoloScope_1",
+        "sid": "GunDnipro_ST"
+      },
+      {
+        "prototype": "EN_GoloScope_1",
+        "sid": "GunFora_ST"
+      },
+      {
+        "prototype": "EN_GoloScope_1",
+        "sid": "GunG37_ST"
+      },
+      {
+        "prototype": "EN_GoloScope_1",
+        "sid": "GunIntegral_PP"
+      },
+      {
+        "prototype": "EN_GoloScope_1",
+        "sid": "GunKharod_ST"
+      },
+      {
+        "prototype": "EN_GoloScope_1",
+        "sid": "GunM16_ST"
+      },
+      {
+        "prototype": "EN_GoloScope_1",
+        "sid": "GunM860_SG"
+      },
+      {
+        "prototype": "EN_GoloScope_1",
+        "sid": "GunRam2_SG"
+      },
+      {
+        "prototype": "EN_GoloScope_1",
+        "sid": "GunSPSA_SG"
+      },
+      {
+        "prototype": "EN_GoloScope_1",
+        "sid": "GunViper_PP"
+      },
+      {
+        "prototype": "EN_GoloScope_1",
+        "sid": "nwpack_GunArev_ST"
+      },
+      {
+        "prototype": "EN_GoloScope_1",
+        "sid": "nwpack_GunGP3A_DMR"
+      },
+      {
+        "prototype": "EN_Silen_2",
+        "sid": "GunIntegral_PP"
+      },
+      {
+        "prototype": "EN_Silen_2",
+        "sid": "GunViper_PP"
+      },
+      {
+        "prototype": "EN_X2Scope_1",
+        "sid": "GunFora_ST"
+      },
+      {
+        "prototype": "EN_X2Scope_1",
+        "sid": "GunIntegral_PP"
+      },
+      {
+        "prototype": "EN_X2Scope_1",
+        "sid": "GunKharod_ST"
+      },
+      {
+        "prototype": "EN_X2Scope_1",
+        "sid": "GunMark_SP"
+      },
+      {
+        "prototype": "EN_X2Scope_1",
+        "sid": "GunRhino_HG"
+      },
+      {
+        "prototype": "EN_X2Scope_1",
+        "sid": "nwpack_GunArev_ST"
+      },
+      {
+        "prototype": "EN_X2Scope_1",
+        "sid": "nwpack_GunGP3A_DMR"
+      },
+      {
+        "prototype": "RU_ColimScope_1",
+        "sid": "GunAKU_PP"
+      },
+      {
+        "prototype": "RU_ColimScope_1",
+        "sid": "GunD12_SG"
+      },
+      {
+        "prototype": "RU_ColimScope_1",
+        "sid": "GunDnipro_ST"
+      },
+      {
+        "prototype": "RU_ColimScope_1",
+        "sid": "GunGrim_ST"
+      },
+      {
+        "prototype": "RU_ColimScope_1",
+        "sid": "GunPKP_MG"
+      },
+      {
+        "prototype": "RU_ColimScope_1",
+        "sid": "GunZubr_PP"
+      },
+      {
+        "prototype": "RU_ColimScope_1",
+        "sid": "nwpack_GunFora230_PP"
+      },
+      {
+        "prototype": "RU_ColimScope_1",
+        "sid": "nwpack_GunSKP_SP"
+      },
+      {
+        "prototype": "RU_Silen_1",
+        "sid": "GunAPB_HG"
+      },
+      {
+        "prototype": "RU_Silen_1",
+        "sid": "GunBucket_PP"
+      },
+      {
+        "prototype": "RU_Silen_1",
+        "sid": "GunPM_HG"
+      },
+      {
+        "prototype": "RU_Silen_1",
+        "sid": "GunZubr_PP"
+      },
+      {
+        "prototype": "RU_Silen_1",
+        "sid": "nwpack_GunFora230_PP"
+      },
+      {
+        "prototype": "RU_Silen_2",
+        "sid": "GunAK74_ST"
+      },
+      {
+        "prototype": "RU_Silen_2",
+        "sid": "GunAKU_PP"
+      },
+      {
+        "prototype": "RU_Silen_2",
+        "sid": "GunDnipro_ST"
+      },
+      {
+        "prototype": "RU_Silen_2",
+        "sid": "GunGrim_ST"
+      },
+      {
+        "prototype": "RU_X2Scope_1",
+        "sid": "GunD12_SG"
+      },
+      {
+        "prototype": "RU_X2Scope_1",
+        "sid": "GunDnipro_ST"
+      },
+      {
+        "prototype": "RU_X2Scope_1",
+        "sid": "GunLavina_ST"
+      },
+      {
+        "prototype": "RU_X2Scope_1",
+        "sid": "GunZubr_PP"
+      },
+      {
+        "prototype": "RU_X2Scope_1",
+        "sid": "nwpack_GunFora230_PP"
+      },
+      {
+        "prototype": "RU_X2Scope_1",
+        "sid": "nwpack_GunSKP_SP"
+      }
+    ],
+    "unexpected_gameplay_upgrades": [
+      {
+        "prototype": "GunAKU_PP",
+        "sid": "GunAKU_Upgrade_Stock_1_2"
+      },
+      {
+        "prototype": "GunM701_SP",
+        "sid": "GunM701_Upgrade_Barrel_3_2"
+      },
+      {
+        "prototype": "GunSVDM_SP",
+        "sid": "GunSVDM_Upgrade_Barrel_3_2"
+      },
+      {
+        "prototype": "GunSVU_SP",
+        "sid": "GunSVU_Upgrade_Barrel_3_2"
+      },
+      {
+        "prototype": "Gun_Cavalier_SR_GS",
+        "sid": "GunM701_Upgrade_Barrel_3_2"
+      },
+      {
+        "prototype": "Gun_Lynx_SR_GS",
+        "sid": "GunSVDM_Upgrade_Barrel_3_2"
+      },
+      {
+        "prototype": "Gun_Silence_SMG_GS",
+        "sid": "GunAKU_Upgrade_Handguard_1_1"
+      },
+      {
+        "prototype": "Gun_Whip_SR_GS",
+        "sid": "GunSVU_Upgrade_Barrel_3_2"
+      }
+    ],
+    "unexpected_gameplay_upgrade_count": 8
   },
   "three_way": [
     {
