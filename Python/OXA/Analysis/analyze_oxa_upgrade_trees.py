@@ -16,9 +16,11 @@ from analyze_oxa_conflicts import (  # noqa: E402
     _semantic_arrays,
     _writes_by_semantic_group,
     collect,
+    collect_vanilla,
 )
 
 DEFAULT_OXA_ROOT = ROOT / "Python/VanillaReference/OxaData"
+DEFAULT_VANILLA_ROOT = ROOT / "Python/VanillaReference"
 DEFAULT_INVENTORY = ROOT / "Python/OXA/Reports/oxa_weapons.json"
 DEFAULT_TEXT_OUT = ROOT / "Python/OXA/Reports/oxa_upgrade_trees.txt"
 DEFAULT_JSON_OUT = ROOT / "Python/OXA/Reports/oxa_upgrade_trees.json"
@@ -39,13 +41,14 @@ def _by_prototype(writes: list[Write]) -> dict[str, list[Write]]:
     return result
 
 
-def _effective_array(writes: list[Write], sid: str, root: str) -> list[dict]:
-    groups = _semantic_arrays(writes)
-    group_writes = _writes_by_semantic_group(writes).get((sid, root), [])
-    base = {}
-    # OXA snapshots are self-contained enough for discovery. Apply their writes
-    # in source order so bpatch/wildcard arrays are materialized consistently.
-    state, _ = _apply_array_patch(base, group_writes, root)
+def _effective_array(vanilla: list[Write], oxa: list[Write], sid: str, root: str) -> list[dict]:
+    vanilla_group = _semantic_arrays(vanilla).get((sid, root), {"entries": {}})
+    base = {idx: dict(fields) for idx, fields in vanilla_group["entries"].items()}
+    group_writes = _writes_by_semantic_group(oxa).get((sid, root), [])
+    if group_writes:
+        state, _ = _apply_array_patch(base, group_writes, root)
+    else:
+        state = base
     result = []
     for index in sorted(
         state,
@@ -68,10 +71,16 @@ def _scalar_values(writes: list[Write], sid: str) -> dict[str, list[str]]:
     return dict(result)
 
 
-def analyze_weapon(all_writes: list[Write], by_proto: dict[str, list[Write]], weapon_sid: str) -> dict:
-    weapon_writes = by_proto.get(weapon_sid, [])
-    upgrades = _effective_array(all_writes, weapon_sid, "UpgradePrototypeSIDs")
-    attachments = _effective_array(all_writes, weapon_sid, "CompatibleAttachments")
+def analyze_weapon(
+    vanilla: list[Write],
+    oxa: list[Write],
+    vanilla_by_proto: dict[str, list[Write]],
+    oxa_by_proto: dict[str, list[Write]],
+    weapon_sid: str,
+) -> dict:
+    weapon_writes = oxa_by_proto.get(weapon_sid, [])
+    upgrades = _effective_array(vanilla, oxa, weapon_sid, "UpgradePrototypeSIDs")
+    attachments = _effective_array(vanilla, oxa, weapon_sid, "CompatibleAttachments")
 
     queue = deque(x["sid"] for x in upgrades)
     seen = set()
@@ -82,14 +91,22 @@ def analyze_weapon(all_writes: list[Write], by_proto: dict[str, list[Write]], we
         if sid in seen:
             continue
         seen.add(sid)
-        writes = by_proto.get(sid, [])
-        required = _effective_array(all_writes, sid, "RequiredUpgradeIDs")
-        interchangeable = _effective_array(all_writes, sid, "InterchangeableUpgradePrototypeSIDs")
-        effects = _effective_array(all_writes, sid, "EffectPrototypeSIDs")
+        vanilla_writes = vanilla_by_proto.get(sid, [])
+        oxa_writes = oxa_by_proto.get(sid, [])
+        writes = vanilla_writes + oxa_writes
+        required = _effective_array(vanilla, oxa, sid, "RequiredUpgradeIDs")
+        interchangeable = _effective_array(vanilla, oxa, sid, "InterchangeableUpgradePrototypeSIDs")
+        effects = _effective_array(vanilla, oxa, sid, "EffectPrototypeSIDs")
         upgrade_nodes.append({
             "sid": sid,
             "defined": bool(writes),
             "sources": sorted({w.source for w in writes}),
+            "definition_origin": (
+                "VANILLA_AND_OXA" if vanilla_writes and oxa_writes
+                else "OXA" if oxa_writes
+                else "VANILLA" if vanilla_writes
+                else "MISSING"
+            ),
             "required": [x["sid"] for x in required],
             "interchangeable": [x["sid"] for x in interchangeable],
             "effects": [x["sid"] for x in effects],
@@ -132,7 +149,7 @@ def render(result: dict) -> str:
             inter = ", ".join(node["interchangeable"]) or "-"
             effects = ", ".join(node["effects"]) or "-"
             marker = "" if node["defined"] else " [MISSING]"
-            lines.append(f"  {node['sid']}{marker}")
+            lines.append(f"  {node['sid']}{marker} [{node['definition_origin']}]")
             lines.append(f"    required: {req}")
             lines.append(f"    interchangeable: {inter}")
             lines.append(f"    effects: {effects}")
@@ -145,14 +162,17 @@ def render(result: dict) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Reconstruct OXA upgrade graphs for OXA-new weapon SIDs.")
     parser.add_argument("--oxa-root", type=Path, default=DEFAULT_OXA_ROOT)
+    parser.add_argument("--vanilla-root", type=Path, default=DEFAULT_VANILLA_ROOT)
     parser.add_argument("--inventory", type=Path, default=DEFAULT_INVENTORY)
     parser.add_argument("--weapon", action="append", default=[], help="Analyze only this SID; repeatable.")
     parser.add_argument("--text-out", type=Path, default=DEFAULT_TEXT_OUT)
     parser.add_argument("--json-out", type=Path, default=DEFAULT_JSON_OUT)
     args = parser.parse_args()
 
-    writes = collect(args.oxa_root)
-    by_proto = _by_prototype(writes)
+    oxa = collect(args.oxa_root)
+    vanilla = collect_vanilla(args.vanilla_root)
+    oxa_by_proto = _by_prototype(oxa)
+    vanilla_by_proto = _by_prototype(vanilla)
 
     if args.weapon:
         weapon_sids = args.weapon
@@ -160,7 +180,12 @@ def main() -> None:
         inventory = json.loads(args.inventory.read_text(encoding="utf-8"))
         weapon_sids = [x["sid"] for x in inventory.get("oxa_new_sid", [])]
 
-    result = {"weapons": [analyze_weapon(writes, by_proto, sid) for sid in weapon_sids]}
+    result = {
+        "weapons": [
+            analyze_weapon(vanilla, oxa, vanilla_by_proto, oxa_by_proto, sid)
+            for sid in weapon_sids
+        ]
+    }
     report = render(result)
     args.text_out.parent.mkdir(parents=True, exist_ok=True)
     args.text_out.write_text(report, encoding="utf-8")
