@@ -32,6 +32,16 @@ WEAPON_SIGNAL_PATHS = {
     "WeaponType",
 }
 
+# OXA's replacement weapons commonly keep a Vanilla SID while the defining
+# WeaponGeneralSetup file is named after the real replacement platform.
+GENERIC_SOURCE_STEMS = {
+    "WeaponGeneralSetupPrototypes_OXA",
+    "WeaponGeneralSetupPrototypes_DLC1",
+    "WeaponGeneralSetupPrototypes_Deluxe",
+    "WeaponGeneralSetupPrototypes_PreOrder",
+    "WeaponGeneralSetupPrototypes_Ultimate",
+}
+
 
 def _prototype_nodes(writes: list[Write]) -> dict[str, list[Write]]:
     result: dict[str, list[Write]] = defaultdict(list)
@@ -52,6 +62,21 @@ def _looks_like_weapon(writes: list[Write]) -> bool:
     return bool(top_paths & WEAPON_SIGNAL_PATHS)
 
 
+def _replacement_labels(writes: list[Write]) -> list[str]:
+    labels = set()
+    for write in writes:
+        source = write.source.replace("\\", "/")
+        name = Path(source).stem
+        prefix = "WeaponGeneralSetupPrototypes_def_"
+        if name.startswith(prefix):
+            labels.add(name[len(prefix):])
+    return sorted(labels)
+
+
+def _is_real_weapon_setup(writes: list[Write]) -> bool:
+    return any("/WeaponGeneralSetupPrototypes/" in ("/" + w.source.replace("\\", "/")) for w in writes)
+
+
 def _prototype_header(writes: list[Write]) -> dict:
     nodes = [w for w in writes if w.path == "<prototype>" and w.kind == "prototype"]
     return {
@@ -70,11 +95,12 @@ def discover(oxa_root: Path, vanilla_root: Path) -> dict:
 
     candidates = []
     for sid, writes in sorted(oxa_by_proto.items()):
-        if not _looks_like_weapon(writes):
+        if not _looks_like_weapon(writes) or not _is_real_weapon_setup(writes):
             continue
 
         header = _prototype_header(writes)
         is_new = sid not in vanilla_ids
+        replacement_labels = _replacement_labels(writes)
         explicit_paths = sorted({w.path for w in writes if w.path != "<prototype>"})
         semantic_roots = sorted({
             w.path.split(".", 1)[0]
@@ -86,9 +112,15 @@ def discover(oxa_root: Path, vanilla_root: Path) -> dict:
             }
         })
 
+        classification = (
+            "OXA_NEW_SID" if is_new
+            else "OXA_WEAPON_REPLACEMENT" if replacement_labels
+            else "OXA_PATCHED_VANILLA"
+        )
         candidates.append({
             "sid": sid,
-            "classification": "OXA_ONLY" if is_new else "OXA_PATCHES_VANILLA",
+            "classification": classification,
+            "replacement_labels": replacement_labels,
             "sources": header["sources"],
             "prototype_modes": header["modes"],
             "write_count": len(writes),
@@ -96,20 +128,37 @@ def discover(oxa_root: Path, vanilla_root: Path) -> dict:
             "semantic_roots": semantic_roots,
         })
 
-    oxa_only = [x for x in candidates if x["classification"] == "OXA_ONLY"]
-    patched = [x for x in candidates if x["classification"] == "OXA_PATCHES_VANILLA"]
+    new_sids = [x for x in candidates if x["classification"] == "OXA_NEW_SID"]
+    replacements = [x for x in candidates if x["classification"] == "OXA_WEAPON_REPLACEMENT"]
+    patched = [x for x in candidates if x["classification"] == "OXA_PATCHED_VANILLA"]
 
     return {
         "summary": {
             "oxa_prototypes": len(oxa_by_proto),
             "vanilla_prototypes": len(vanilla_by_proto),
             "weapon_candidates": len(candidates),
-            "oxa_only_weapon_candidates": len(oxa_only),
-            "patched_vanilla_weapon_candidates": len(patched),
+            "oxa_new_sid": len(new_sids),
+            "oxa_weapon_replacements": len(replacements),
+            "oxa_patched_vanilla": len(patched),
         },
-        "oxa_only": oxa_only,
-        "patched_vanilla": patched,
+        "oxa_new_sid": new_sids,
+        "oxa_weapon_replacements": replacements,
+        "oxa_patched_vanilla": patched,
     }
+
+
+def _render_items(lines: list[str], items: list[dict], show_replacement: bool = False) -> None:
+    if not items:
+        lines.append("<none>")
+        return
+    for item in items:
+        roots = ", ".join(item["semantic_roots"]) or "-"
+        replacement = ""
+        if show_replacement:
+            replacement = " -> " + "/".join(item["replacement_labels"])
+        lines.append(f"{item['sid']}{replacement} | writes={item['write_count']} | arrays={roots}")
+        for source in item["sources"]:
+            lines.append(f"  source: {source}")
 
 
 def render(result: dict) -> str:
@@ -119,63 +168,20 @@ def render(result: dict) -> str:
         "====================",
         f"OXA prototypes: {s['oxa_prototypes']}",
         f"Vanilla/DLC prototypes: {s['vanilla_prototypes']}",
-        f"Weapon candidates: {s['weapon_candidates']}",
-        f"OXA-only candidates: {s['oxa_only_weapon_candidates']}",
-        f"Patched Vanilla candidates: {s['patched_vanilla_weapon_candidates']}",
+        f"Real weapon candidates: {s['weapon_candidates']}",
+        f"New OXA SIDs: {s['oxa_new_sid']}",
+        f"OXA weapon replacements: {s['oxa_weapon_replacements']}",
+        f"Ordinary patched Vanilla weapons: {s['oxa_patched_vanilla']}",
         "",
-        "OXA-ONLY WEAPON CANDIDATES",
-        "==========================",
+        "OXA NEW WEAPON SIDS",
+        "===================",
     ]
+    _render_items(lines, result["oxa_new_sid"])
 
-    if not result["oxa_only"]:
-        lines.append("<none>")
-    for item in result["oxa_only"]:
-        roots = ", ".join(item["semantic_roots"]) or "-"
-        lines.append(
-            f"{item['sid']} | writes={item['write_count']} | arrays={roots}"
-        )
-        for source in item["sources"]:
-            lines.append(f"  source: {source}")
+    lines += ["", "OXA WEAPON REPLACEMENTS", "======================="]
+    _render_items(lines, result["oxa_weapon_replacements"], show_replacement=True)
 
-    lines += ["", "PATCHED VANILLA WEAPON CANDIDATES", "================================="]
-    if not result["patched_vanilla"]:
-        lines.append("<none>")
-    for item in result["patched_vanilla"]:
-        roots = ", ".join(item["semantic_roots"]) or "-"
-        lines.append(
-            f"{item['sid']} | writes={item['write_count']} | arrays={roots}"
-        )
-        for source in item["sources"]:
-            lines.append(f"  source: {source}")
-
+    lines += ["", "ORDINARY OXA PATCHES TO VANILLA", "==============================="]
+    _render_items(lines, result["oxa_patched_vanilla"])
     return "\n".join(lines).rstrip() + "\n"
 
-
-def main() -> None:
-    parser = argparse.ArgumentParser(
-        description=(
-            "Inventory OXA weapon prototypes and separate OXA-only weapons from "
-            "patches to Vanilla/DLC weapons. This is discovery only; it does not "
-            "generate BPRUE upgrades."
-        )
-    )
-    parser.add_argument("--oxa-root", type=Path, default=DEFAULT_OXA_ROOT)
-    parser.add_argument("--vanilla-root", type=Path, default=DEFAULT_VANILLA_ROOT)
-    parser.add_argument("--text-out", type=Path, default=DEFAULT_TEXT_OUT)
-    parser.add_argument("--json-out", type=Path, default=DEFAULT_JSON_OUT)
-    args = parser.parse_args()
-
-    result = discover(args.oxa_root, args.vanilla_root)
-    text_report = render(result)
-
-    args.text_out.parent.mkdir(parents=True, exist_ok=True)
-    args.text_out.write_text(text_report, encoding="utf-8")
-    args.json_out.write_text(json.dumps(result, indent=2), encoding="utf-8")
-
-    print(text_report, end="")
-    print(f"\nFull report: {args.text_out.relative_to(ROOT).as_posix()}")
-    print(f"JSON:        {args.json_out.relative_to(ROOT).as_posix()}")
-
-
-if __name__ == "__main__":
-    main()
