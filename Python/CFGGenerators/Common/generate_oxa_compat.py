@@ -45,13 +45,46 @@ def _vanilla_scope_for(prototype: str, array: str, vanilla_root: Path) -> str:
     return f"GameData/{relative_dir}"
 
 
-def _render_array(prototype: str, array: str, values: list[str]) -> str:
+def _field_tree(fields: dict[str, str]) -> dict:
+    tree: dict = {}
+    for path, value in fields.items():
+        if path == "<value>":
+            tree["<value>"] = value
+            continue
+        node = tree
+        parts = path.split(".")
+        for part in parts[:-1]:
+            node = node.setdefault(part, {})
+        node[parts[-1]] = value
+    return tree
+
+
+def _render_tree(node: dict, indent: int) -> list[str]:
+    lines = []
+    pad = " " * indent
+    for key, value in node.items():
+        if isinstance(value, dict):
+            lines.append(f"{pad}{key} : struct.begin")
+            lines.extend(_render_tree(value, indent + 3))
+            lines.append(f"{pad}struct.end")
+        else:
+            lines.append(f"{pad}{key} = {value}")
+    return lines
+
+
+def _render_array(prototype: str, array: str, entries: list[dict]) -> str:
     lines = [
         f"{prototype} : struct.begin {{bpatch}}",
         f"   {array} : struct.begin",
     ]
-    for index, value in enumerate(values):
-        lines.append(f"      [{index}] = {value}")
+    for index, entry in enumerate(entries):
+        fields = entry["fields"]
+        if "<value>" in fields and len(fields) == 1:
+            lines.append(f"      [{index}] = {fields['<value>']}")
+            continue
+        lines.append(f"      [{index}] : struct.begin")
+        lines.extend(_render_tree(_field_tree(fields), 9))
+        lines.append("      struct.end")
     lines += [
         "   struct.end",
         "struct.end",
@@ -114,7 +147,7 @@ def generate(report: dict, vanilla_root: Path, output_root: Path) -> tuple[list[
             lines.append(_render_array(
                 item["prototype"],
                 item["array"],
-                item["compatibility_candidate"],
+                item["compatibility_candidate_entries"],
             ))
 
         target.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
