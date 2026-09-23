@@ -148,20 +148,33 @@ def render_technician_patch(
             ]
             assignments.setdefault(technician_sid, []).extend(additions)
 
+    # Patch the node that actually owns the Vanilla Upgrades struct. Patching an
+    # inherited Upgrades child on a concrete technician (for example Surup ->
+    # semenyc_0) does not reliably extend that technician's install permissions.
+    owners = vanilla_technician_upgrade_owners()
+    owner_assignments: dict[str, list[UpgradeDefinition]] = {}
+    for technician_sid, upgrades in assignments.items():
+        owner_sid = owners.get(technician_sid)
+        if not owner_sid:
+            continue
+        owner_assignments.setdefault(owner_sid, []).extend(upgrades)
+
     lines = [
         "// AUTO-GENERATED - BPRUE upgrades follow each technician's effective Vanilla/DLC weapon support.",
-        "// Technicians are patched from their effective inherited Vanilla/DLC weapon support.",
+        "// Patches target the Vanilla refkey-chain node that directly owns Upgrades.",
+        "// Concrete technicians inherit the extended list from that same Vanilla owner.",
         "// Entries are keyed by UpgradePrototypeSID instead of Vanilla numeric indices or [*].",
         "// This gives every BPRUE entry a stable merge key so third-party technician bpatches",
         "// can coexist without competing for append/index positions.",
         "",
     ]
-    for technician_sid, upgrades in assignments.items():
+    for owner_sid, upgrades in owner_assignments.items():
         if not upgrades:
             continue
-        # Keep one occurrence per SID while preserving BaseGame -> DLC order.
+        # Multiple concrete technicians can resolve to the same owner. Keep one
+        # occurrence per SID while preserving BaseGame -> DLC order.
         upgrades = list({upgrade.sid: upgrade for upgrade in upgrades}.values())
-        lines += [f"{technician_sid} : struct.begin {{bpatch}}", "   Upgrades : struct.begin {bpatch}"]
+        lines += [f"{owner_sid} : struct.begin {{bpatch}}", "   Upgrades : struct.begin {bpatch}"]
         for upgrade in upgrades:
             lines += [f"      {upgrade.sid} : struct.begin", f"         UpgradePrototypeSID = {upgrade.sid}", "         Enabled = true", "      struct.end"]
         lines += ["   struct.end", "struct.end", ""]
