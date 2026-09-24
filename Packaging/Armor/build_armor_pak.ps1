@@ -19,7 +19,7 @@ if (-not $OutputDirectory) {
 
 $PakName = "BPRUpgradesExpanded_Armor.pak"
 $PakPath = Join-Path $OutputDirectory $PakName
-$ContentMountRoot = "../../../Stalker2/Content"
+$MountRoot = "../../../Stalker2/Content/GameLite"
 
 function Find-UnrealPak {
     param([string]$ExplicitPath)
@@ -68,7 +68,7 @@ $packageEntries = foreach ($file in $sourceFiles) {
     $relative = $file.FullName.Substring($ArmorSourceRoot.Length).TrimStart('\', '/')
     [PSCustomObject]@{
         File = $file
-        RelativePath = "GameLite/$(To-PakPath -Path $relative)"
+        RelativePath = To-PakPath -Path $relative
     }
 }
 
@@ -78,7 +78,7 @@ $pakEntries = foreach ($entry in $packageEntries) {
     if ($dir) { New-Item -ItemType Directory -Path $dir -Force | Out-Null }
     Copy-Item -LiteralPath $entry.File.FullName -Destination $stagedPath -Force
     $source = To-PakPath -Path $stagedPath
-    $destination = "$ContentMountRoot/$($entry.RelativePath)"
+    $destination = "$MountRoot/$($entry.RelativePath)"
     '"{0}" "{1}"' -f $source, $destination
 }
 
@@ -93,34 +93,20 @@ if (-not (Test-Path -LiteralPath $PakPath -PathType Leaf)) { throw "Expected PAK
 $listOutput = @(& $UnrealPak $PakPath -List 2>&1 | ForEach-Object { $_.ToString() })
 if ($LASTEXITCODE -ne 0) { throw "UnrealPak failed while validating the generated PAK." }
 
-$mountLine = $listOutput | Where-Object { $_ -like '*with mount point "*' } | Select-Object -First 1
-if (-not $mountLine) { throw "Could not determine PAK mount point from UnrealPak -List output." }
-$mountMatch = [regex]::Match($mountLine, 'with mount point "([^"]+)"')
-if (-not $mountMatch.Success) { throw "Could not parse PAK mount point from UnrealPak -List output: $mountLine" }
-$listedMount = (To-PakPath -Path $mountMatch.Groups[1].Value).TrimEnd('/')
-$contentPrefix = (To-PakPath -Path $ContentMountRoot).TrimEnd('/')
-if (-not $listedMount.StartsWith($contentPrefix, [System.StringComparison]::OrdinalIgnoreCase)) {
-    throw "Unexpected PAK mount point: $listedMount"
-}
-$mountRelative = $listedMount.Substring($contentPrefix.Length).Trim('/')
-
-$expectedRelativePaths = foreach ($entry in $packageEntries) {
-    $relativePath = (To-PakPath -Path $entry.RelativePath).TrimStart('/')
-    if ($mountRelative -and $relativePath.StartsWith("$mountRelative/", [System.StringComparison]::OrdinalIgnoreCase)) {
-        $relativePath.Substring($mountRelative.Length + 1)
-    } else {
-        $relativePath
-    }
-}
-$missingPaths = @($expectedRelativePaths | Where-Object {
-    $expected = $_
-    -not ($listOutput | Where-Object { $_.Replace("\\", "/") -like "*$expected*" })
+# The Armor PAK uses the same structure as the OXA compatibility PAK:
+# mount directly at ../../../Stalker2/Content/GameLite and keep entries GameLite-relative.
+$missingPaths = @($packageEntries | Where-Object {
+    $expected = $_.RelativePath
+    -not ($listOutput | Where-Object {
+        $line = $_.Replace("\\", "/")
+        $line -like "*$expected*"
+    })
 })
 if ($missingPaths.Count -gt 0) {
     Write-Host "UnrealPak -List output:"
     $listOutput | ForEach-Object { Write-Host "  $_" }
-    Write-Host "Missing PAK-relative entries:"
-    $missingPaths | ForEach-Object { Write-Host "  $_" }
+    Write-Host "Missing GameLite-relative entries:"
+    $missingPaths | ForEach-Object { Write-Host "  $($_.RelativePath)" }
     throw "Generated Armor PAK is missing $($missingPaths.Count) expected file(s)."
 }
 
@@ -129,7 +115,7 @@ Write-Host "SUCCESS"
 Write-Host "PAK          : $($pakInfo.FullName)"
 Write-Host "Size         : $([math]::Round($pakInfo.Length / 1KB, 2)) KiB"
 Write-Host "Packed files : $($sourceFiles.Count)"
-Write-Host "Mount root   : $ContentMountRoot"
+Write-Host "Mount root   : $MountRoot"
 
 if (-not $KeepStaging) { Remove-Item -LiteralPath $StagingRoot -Recurse -Force }
 else { Write-Host "Staging kept : $StagingRoot" }
