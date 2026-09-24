@@ -152,22 +152,22 @@ def build_upgrades(config: dict | None = None, classification: dict | None = Non
                 cost=int(module_cfg["cost"][category]),
                 effects=tuple(effect_sids),
                 tier_index=0,
-                family="GENERIC_ARMOR_MODULE",
+                family=f"GENERIC:{module_cfg['group']}",
                 image=BPRUE_MODULE_IMAGE,
             ))
 
-    # Every generic module on the same armor is one mutually-exclusive choice group.
+    # Generic modules are mutually exclusive only inside their authored trade-off group.
     from dataclasses import replace
-    generic_by_armor: dict[str, list[ArmorUpgradeDefinition]] = {}
+    generic_groups: dict[tuple[str, str], list[ArmorUpgradeDefinition]] = {}
     for upgrade in result:
-        if upgrade.family == "GENERIC_ARMOR_MODULE":
-            generic_by_armor.setdefault(upgrade.armor_sid, []).append(upgrade)
+        if upgrade.family.startswith("GENERIC:"):
+            generic_groups.setdefault((upgrade.armor_sid, upgrade.family), []).append(upgrade)
     blocked_result: list[ArmorUpgradeDefinition] = []
     for upgrade in result:
-        if upgrade.family == "GENERIC_ARMOR_MODULE":
+        if upgrade.family.startswith("GENERIC:"):
             siblings = tuple(
                 sibling.sid
-                for sibling in generic_by_armor[upgrade.armor_sid]
+                for sibling in generic_groups[(upgrade.armor_sid, upgrade.family)]
                 if sibling.sid != upgrade.sid
             )
             upgrade = replace(upgrade, blocking_sids=siblings)
@@ -237,30 +237,22 @@ def apply_layout(upgrades: list[ArmorUpgradeDefinition]) -> list[ArmorUpgradeDef
         for upgrade in tiers:
             families[upgrade.family].append(upgrade)
         for family, family_upgrades in families.items():
-            # Faction signatures are vertical 3-tier chains. Generic modules are
-            # mutually-exclusive alternatives and must be laid out horizontally
-            # as one row instead of stacking eight upgrades into one slot.
-            if family == "GENERIC_ARMOR_MODULE":
-                for upgrade in sorted(family_upgrades, key=lambda item: item.sid):
-                    target, horizontal = _first_free_armor_column(upgrade.target_part, occupied)
-                    occupied.add((target, horizontal))
-                    resolved.append(replace(
-                        upgrade,
-                        target_part=target,
-                        horizontal_position=None if horizontal == 0 else horizontal,
-                        vertical_position=None,
-                    ))
-                continue
             target, horizontal = _first_free_armor_column(family_upgrades[0].target_part, occupied)
             occupied.add((target, horizontal))
-            for upgrade in sorted(family_upgrades, key=lambda item: item.tier_index):
-                if upgrade.tier_index >= len(VERTICALS):
-                    raise ValueError(f"{armor_sid}: armor module family {family} exceeds {len(VERTICALS)} vertical tier slots")
+            ordered = (
+                sorted(family_upgrades, key=lambda item: item.sid)
+                if family.startswith("GENERIC:")
+                else sorted(family_upgrades, key=lambda item: item.tier_index)
+            )
+            if len(ordered) > len(VERTICALS):
+                raise ValueError(f"{armor_sid}: armor module family {family} exceeds {len(VERTICALS)} vertical slots")
+            for index, upgrade in enumerate(ordered):
+                vertical_index = index if family.startswith("GENERIC:") else upgrade.tier_index
                 resolved.append(replace(
                     upgrade,
                     target_part=target,
                     horizontal_position=None if horizontal == 0 else horizontal,
-                    vertical_position=VERTICALS[upgrade.tier_index],
+                    vertical_position=VERTICALS[vertical_index],
                 ))
     return resolved
 
