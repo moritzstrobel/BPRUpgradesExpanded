@@ -649,7 +649,14 @@ def technician_armor_assignments(upgrades: list[ArmorUpgradeDefinition]) -> dict
         supported = set(_effective_npc_upgrade_sids(blocks, technician_sid))
         selected = [
             upgrade for upgrade in upgrades
-            if supported.intersection(vanilla_sets.get(upgrade.armor_sid, set()))
+            # Armor mappings can contain shared/global upgrade SIDs (for example
+            # FaustPsyResist_Quest_1_1).  Those must not make every armor look
+            # supported by a technician.  Require at least one armor-owned
+            # Vanilla SID instead.
+            if supported.intersection(
+                sid for sid in vanilla_sets.get(upgrade.armor_sid, set())
+                if sid.startswith(f"{upgrade.armor_sid}_")
+            )
         ]
         if selected:
             assignments[technician_sid] = selected
