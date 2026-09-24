@@ -93,20 +93,41 @@ if (-not (Test-Path -LiteralPath $PakPath -PathType Leaf)) { throw "Expected PAK
 $listOutput = @(& $UnrealPak $PakPath -List 2>&1 | ForEach-Object { $_.ToString() })
 if ($LASTEXITCODE -ne 0) { throw "UnrealPak failed while validating the generated PAK." }
 
-# The Armor PAK uses the same structure as the OXA compatibility PAK:
-# mount directly at ../../../Stalker2/Content/GameLite and keep entries GameLite-relative.
-$missingPaths = @($packageEntries | Where-Object {
-    $expected = $_.RelativePath
-    -not ($listOutput | Where-Object {
-        $line = $_.Replace("\\", "/")
-        $line -like "*$expected*"
-    })
+# UnrealPak chooses the deepest common mount point. Validate entries relative
+# to the mount point reported by UnrealPak rather than assuming GameLite.
+$mountLine = $listOutput | Where-Object { $_ -like '*with mount point "*' } | Select-Object -First 1
+if (-not $mountLine) {
+    throw "Could not determine PAK mount point from UnrealPak -List output."
+}
+$mountMatch = [regex]::Match($mountLine, 'with mount point "([^"]+)"')
+if (-not $mountMatch.Success) {
+    throw "Could not parse PAK mount point from UnrealPak -List output: $mountLine"
+}
+$listedMount = (To-PakPath -Path $mountMatch.Groups[1].Value).TrimEnd('/')
+$gameLitePrefix = (To-PakPath -Path $MountRoot).TrimEnd('/')
+if (-not $listedMount.StartsWith($gameLitePrefix, [System.StringComparison]::OrdinalIgnoreCase)) {
+    throw "Unexpected PAK mount point: $listedMount"
+}
+$mountRelative = $listedMount.Substring($gameLitePrefix.Length).Trim('/')
+
+$expectedRelativePaths = foreach ($entry in $packageEntries) {
+    $relativePath = (To-PakPath -Path $entry.RelativePath).TrimStart('/')
+    if ($mountRelative -and $relativePath.StartsWith("$mountRelative/", [System.StringComparison]::OrdinalIgnoreCase)) {
+        $relativePath.Substring($mountRelative.Length + 1)
+    } else {
+        $relativePath
+    }
+}
+
+$missingPaths = @($expectedRelativePaths | Where-Object {
+    $expected = $_
+    -not ($listOutput | Where-Object { $_.Replace("\\", "/") -like "*$expected*" })
 })
 if ($missingPaths.Count -gt 0) {
     Write-Host "UnrealPak -List output:"
     $listOutput | ForEach-Object { Write-Host "  $_" }
-    Write-Host "Missing GameLite-relative entries:"
-    $missingPaths | ForEach-Object { Write-Host "  $($_.RelativePath)" }
+    Write-Host "Missing PAK-relative entries:"
+    $missingPaths | ForEach-Object { Write-Host "  $_" }
     throw "Generated Armor PAK is missing $($missingPaths.Count) expected file(s)."
 }
 
