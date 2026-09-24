@@ -210,6 +210,822 @@
           ]
         }
       }
+    },
+    "ECOLOGIST": {
+      "signature": "Anomaly Exploration",
+      "enabled": true,
+      "categories": {
+        "HELMET": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Insulated",
+              "cost": 1500,
+              "text_sid": "sid_bprue_armor_ecologist_insulated_name",
+              "hint_sid": "sid_bprue_armor_ecologist_helmet_insulated_description",
+              "effects": [
+                "BPRUE_Armor_Ecologist_Helmet_Insulated"
+              ]
+            },
+            {
+              "id": "Sealed",
+              "cost": 2500,
+              "text_sid": "sid_bprue_armor_ecologist_sealed_name",
+              "hint_sid": "sid_bprue_armor_ecologist_helmet_sealed_description",
+              "effects": [
+                "BPRUE_Armor_Ecologist_Helmet_Sealed"
+              ]
+            },
+            {
+              "id": "ZoneShielded",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_ecologist_zoneshielded_name",
+              "hint_sid": "sid_bprue_armor_ecologist_helmet_zoneshielded_description",
+              "effects": [
+                "BPRUE_Armor_Ecologist_Helmet_ZoneShielded"
+              ]
+            }
+          ]
+        },
+        "SUIT": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Insulated",
+              "cost": 2500,
+              "text_sid": "sid_bprue_armor_ecologist_insulated_name",
+              "hint_sid": "sid_bprue_armor_ecologist_suit_insulated_description",
+              "effects": [
+                "BPRUE_Armor_Ecologist_Suit_Insulated"
+              ]
+            },
+            {
+              "id": "Sealed",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_ecologist_sealed_name",
+              "hint_sid": "sid_bprue_armor_ecologist_suit_sealed_description",
+              "effects": [
+                "BPRUE_Armor_Ecologist_Suit_Sealed"
+              ]
+            },
+            {
+              "id": "ZoneShielded",
+              "cost": 4500,
+              "text_sid": "sid_bprue_armor_ecologist_zoneshielded_name",
+              "hint_sid": "sid_bprue_armor_ecologist_suit_zoneshielded_description",
+              "effects": [
+                "BPRUE_Armor_Ecologist_Suit_ZoneShielded"
+              ]
+            }
+          ]
+        },
+        "FULL_BODY_SUIT": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Insulated",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_ecologist_insulated_name",
+              "hint_sid": "sid_bprue_armor_ecologist_fullbody_insulated_description",
+              "effects": [
+                "BPRUE_Armor_Ecologist_FullBody_Insulated"
+              ]
+            },
+            {
+              "id": "Sealed",
+              "cost": 4500,
+              "text_sid": "sid_bprue_armor_ecologist_sealed_name",
+              "hint_sid": "sid_bprue_armor_ecologist_fullbody_sealed_description",
+              "effects": [
+                "BPRUE_Armor_Ecologist_FullBody_Sealed"
+              ]
+            },
+            {
+              "id": "ZoneShielded",
+              "cost": 5500,
+              "text_sid": "sid_bprue_armor_ecologist_zoneshielded_name",
+              "hint_sid": "sid_bprue_armor_ecologist_fullbody_zoneshielded_description",
+              "effects": [
+                "BPRUE_Armor_Ecologist_FullBody_ZoneShielded"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "FREE_STALKER": {
+      "signature": "Scavenging",
+      "enabled": true,
+      "categories": {
+        "HELMET": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Lightweight",
+              "cost": 1500,
+              "text_sid": "sid_bprue_armor_free_stalker_lightweight_name",
+              "hint_sid": "sid_bprue_armor_free_stalker_helmet_lightweight_description",
+              "effects": [
+                "BPRUE_Armor_Free_stalker_Helmet_Lightweight"
+              ]
+            },
+            {
+              "id": "LoadBearing",
+              "cost": 2500,
+              "text_sid": "sid_bprue_armor_free_stalker_loadbearing_name",
+              "hint_sid": "sid_bprue_armor_free_stalker_helmet_loadbearing_description",
+              "effects": [
+                "BPRUE_Armor_Free_stalker_Helmet_LoadBearing"
+              ]
+            },
+            {
+              "id": "TrailReady",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_free_stalker_trailready_name",
+              "hint_sid": "sid_bprue_armor_free_stalker_helmet_trailready_description",
+              "effects": [
+                "BPRUE_Armor_Free_stalker_Helmet_TrailReady"
+              ]
+            }
+          ]
+        },
+        "SUIT": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Lightweight",
+              "cost": 2500,
+              "text_sid": "sid_bprue_armor_free_stalker_lightweight_name",
+              "hint_sid": "sid_bprue_armor_free_stalker_suit_lightweight_description",
+              "effects": [
+                "BPRUE_Armor_Free_stalker_Suit_Lightweight"
+              ]
+            },
+            {
+              "id": "LoadBearing",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_free_stalker_loadbearing_name",
+              "hint_sid": "sid_bprue_armor_free_stalker_suit_loadbearing_description",
+              "effects": [
+                "BPRUE_Armor_Free_stalker_Suit_LoadBearing"
+              ]
+            },
+            {
+              "id": "TrailReady",
+              "cost": 4500,
+              "text_sid": "sid_bprue_armor_free_stalker_trailready_name",
+              "hint_sid": "sid_bprue_armor_free_stalker_suit_trailready_description",
+              "effects": [
+                "BPRUE_Armor_Free_stalker_Suit_TrailReady"
+              ]
+            }
+          ]
+        },
+        "FULL_BODY_SUIT": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Lightweight",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_free_stalker_lightweight_name",
+              "hint_sid": "sid_bprue_armor_free_stalker_fullbody_lightweight_description",
+              "effects": [
+                "BPRUE_Armor_Free_stalker_FullBody_Lightweight"
+              ]
+            },
+            {
+              "id": "LoadBearing",
+              "cost": 4500,
+              "text_sid": "sid_bprue_armor_free_stalker_loadbearing_name",
+              "hint_sid": "sid_bprue_armor_free_stalker_fullbody_loadbearing_description",
+              "effects": [
+                "BPRUE_Armor_Free_stalker_FullBody_LoadBearing"
+              ]
+            },
+            {
+              "id": "TrailReady",
+              "cost": 5500,
+              "text_sid": "sid_bprue_armor_free_stalker_trailready_name",
+              "hint_sid": "sid_bprue_armor_free_stalker_fullbody_trailready_description",
+              "effects": [
+                "BPRUE_Armor_Free_stalker_FullBody_TrailReady"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "BANDIT": {
+      "signature": "Improvised Hybrid",
+      "enabled": true,
+      "categories": {
+        "HELMET": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Scavenged",
+              "cost": 1500,
+              "text_sid": "sid_bprue_armor_bandit_scavenged_name",
+              "hint_sid": "sid_bprue_armor_bandit_helmet_scavenged_description",
+              "effects": [
+                "BPRUE_Armor_Bandit_Helmet_Scavenged"
+              ]
+            },
+            {
+              "id": "Reinforced",
+              "cost": 2500,
+              "text_sid": "sid_bprue_armor_bandit_reinforced_name",
+              "hint_sid": "sid_bprue_armor_bandit_helmet_reinforced_description",
+              "effects": [
+                "BPRUE_Armor_Bandit_Helmet_Reinforced"
+              ]
+            },
+            {
+              "id": "PackRig",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_bandit_packrig_name",
+              "hint_sid": "sid_bprue_armor_bandit_helmet_packrig_description",
+              "effects": [
+                "BPRUE_Armor_Bandit_Helmet_PackRig"
+              ]
+            }
+          ]
+        },
+        "SUIT": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Scavenged",
+              "cost": 2500,
+              "text_sid": "sid_bprue_armor_bandit_scavenged_name",
+              "hint_sid": "sid_bprue_armor_bandit_suit_scavenged_description",
+              "effects": [
+                "BPRUE_Armor_Bandit_Suit_Scavenged"
+              ]
+            },
+            {
+              "id": "Reinforced",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_bandit_reinforced_name",
+              "hint_sid": "sid_bprue_armor_bandit_suit_reinforced_description",
+              "effects": [
+                "BPRUE_Armor_Bandit_Suit_Reinforced"
+              ]
+            },
+            {
+              "id": "PackRig",
+              "cost": 4500,
+              "text_sid": "sid_bprue_armor_bandit_packrig_name",
+              "hint_sid": "sid_bprue_armor_bandit_suit_packrig_description",
+              "effects": [
+                "BPRUE_Armor_Bandit_Suit_PackRig"
+              ]
+            }
+          ]
+        },
+        "FULL_BODY_SUIT": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Scavenged",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_bandit_scavenged_name",
+              "hint_sid": "sid_bprue_armor_bandit_fullbody_scavenged_description",
+              "effects": [
+                "BPRUE_Armor_Bandit_FullBody_Scavenged"
+              ]
+            },
+            {
+              "id": "Reinforced",
+              "cost": 4500,
+              "text_sid": "sid_bprue_armor_bandit_reinforced_name",
+              "hint_sid": "sid_bprue_armor_bandit_fullbody_reinforced_description",
+              "effects": [
+                "BPRUE_Armor_Bandit_FullBody_Reinforced"
+              ]
+            },
+            {
+              "id": "PackRig",
+              "cost": 5500,
+              "text_sid": "sid_bprue_armor_bandit_packrig_name",
+              "hint_sid": "sid_bprue_armor_bandit_fullbody_packrig_description",
+              "effects": [
+                "BPRUE_Armor_Bandit_FullBody_PackRig"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "MILITARY": {
+      "signature": "Combat Loadout",
+      "enabled": true,
+      "categories": {
+        "HELMET": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Ballistic",
+              "cost": 1500,
+              "text_sid": "sid_bprue_armor_military_ballistic_name",
+              "hint_sid": "sid_bprue_armor_military_helmet_ballistic_description",
+              "effects": [
+                "BPRUE_Armor_Military_Helmet_Ballistic"
+              ]
+            },
+            {
+              "id": "ServiceHardened",
+              "cost": 2500,
+              "text_sid": "sid_bprue_armor_military_servicehardened_name",
+              "hint_sid": "sid_bprue_armor_military_helmet_servicehardened_description",
+              "effects": [
+                "BPRUE_Armor_Military_Helmet_ServiceHardened"
+              ]
+            },
+            {
+              "id": "Conditioned",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_military_conditioned_name",
+              "hint_sid": "sid_bprue_armor_military_helmet_conditioned_description",
+              "effects": [
+                "BPRUE_Armor_Military_Helmet_Conditioned"
+              ]
+            }
+          ]
+        },
+        "SUIT": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Ballistic",
+              "cost": 2500,
+              "text_sid": "sid_bprue_armor_military_ballistic_name",
+              "hint_sid": "sid_bprue_armor_military_suit_ballistic_description",
+              "effects": [
+                "BPRUE_Armor_Military_Suit_Ballistic"
+              ]
+            },
+            {
+              "id": "ServiceHardened",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_military_servicehardened_name",
+              "hint_sid": "sid_bprue_armor_military_suit_servicehardened_description",
+              "effects": [
+                "BPRUE_Armor_Military_Suit_ServiceHardened"
+              ]
+            },
+            {
+              "id": "Conditioned",
+              "cost": 4500,
+              "text_sid": "sid_bprue_armor_military_conditioned_name",
+              "hint_sid": "sid_bprue_armor_military_suit_conditioned_description",
+              "effects": [
+                "BPRUE_Armor_Military_Suit_Conditioned"
+              ]
+            }
+          ]
+        },
+        "FULL_BODY_SUIT": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Ballistic",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_military_ballistic_name",
+              "hint_sid": "sid_bprue_armor_military_fullbody_ballistic_description",
+              "effects": [
+                "BPRUE_Armor_Military_FullBody_Ballistic"
+              ]
+            },
+            {
+              "id": "ServiceHardened",
+              "cost": 4500,
+              "text_sid": "sid_bprue_armor_military_servicehardened_name",
+              "hint_sid": "sid_bprue_armor_military_fullbody_servicehardened_description",
+              "effects": [
+                "BPRUE_Armor_Military_FullBody_ServiceHardened"
+              ]
+            },
+            {
+              "id": "Conditioned",
+              "cost": 5500,
+              "text_sid": "sid_bprue_armor_military_conditioned_name",
+              "hint_sid": "sid_bprue_armor_military_fullbody_conditioned_description",
+              "effects": [
+                "BPRUE_Armor_Military_FullBody_Conditioned"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "MERCENARY": {
+      "signature": "Tactical Mobility",
+      "enabled": true,
+      "categories": {
+        "HELMET": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Lightweight",
+              "cost": 1500,
+              "text_sid": "sid_bprue_armor_mercenary_lightweight_name",
+              "hint_sid": "sid_bprue_armor_mercenary_helmet_lightweight_description",
+              "effects": [
+                "BPRUE_Armor_Mercenary_Helmet_Lightweight"
+              ]
+            },
+            {
+              "id": "Ballistic",
+              "cost": 2500,
+              "text_sid": "sid_bprue_armor_mercenary_ballistic_name",
+              "hint_sid": "sid_bprue_armor_mercenary_helmet_ballistic_description",
+              "effects": [
+                "BPRUE_Armor_Mercenary_Helmet_Ballistic"
+              ]
+            },
+            {
+              "id": "Endurance",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_mercenary_endurance_name",
+              "hint_sid": "sid_bprue_armor_mercenary_helmet_endurance_description",
+              "effects": [
+                "BPRUE_Armor_Mercenary_Helmet_Endurance"
+              ]
+            }
+          ]
+        },
+        "SUIT": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Lightweight",
+              "cost": 2500,
+              "text_sid": "sid_bprue_armor_mercenary_lightweight_name",
+              "hint_sid": "sid_bprue_armor_mercenary_suit_lightweight_description",
+              "effects": [
+                "BPRUE_Armor_Mercenary_Suit_Lightweight"
+              ]
+            },
+            {
+              "id": "Ballistic",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_mercenary_ballistic_name",
+              "hint_sid": "sid_bprue_armor_mercenary_suit_ballistic_description",
+              "effects": [
+                "BPRUE_Armor_Mercenary_Suit_Ballistic"
+              ]
+            },
+            {
+              "id": "Endurance",
+              "cost": 4500,
+              "text_sid": "sid_bprue_armor_mercenary_endurance_name",
+              "hint_sid": "sid_bprue_armor_mercenary_suit_endurance_description",
+              "effects": [
+                "BPRUE_Armor_Mercenary_Suit_Endurance"
+              ]
+            }
+          ]
+        },
+        "FULL_BODY_SUIT": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Lightweight",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_mercenary_lightweight_name",
+              "hint_sid": "sid_bprue_armor_mercenary_fullbody_lightweight_description",
+              "effects": [
+                "BPRUE_Armor_Mercenary_FullBody_Lightweight"
+              ]
+            },
+            {
+              "id": "Ballistic",
+              "cost": 4500,
+              "text_sid": "sid_bprue_armor_mercenary_ballistic_name",
+              "hint_sid": "sid_bprue_armor_mercenary_fullbody_ballistic_description",
+              "effects": [
+                "BPRUE_Armor_Mercenary_FullBody_Ballistic"
+              ]
+            },
+            {
+              "id": "Endurance",
+              "cost": 5500,
+              "text_sid": "sid_bprue_armor_mercenary_endurance_name",
+              "hint_sid": "sid_bprue_armor_mercenary_fullbody_endurance_description",
+              "effects": [
+                "BPRUE_Armor_Mercenary_FullBody_Endurance"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "WARD": {
+      "signature": "Advanced Protection",
+      "enabled": true,
+      "categories": {
+        "HELMET": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Ballistic",
+              "cost": 1500,
+              "text_sid": "sid_bprue_armor_ward_ballistic_name",
+              "hint_sid": "sid_bprue_armor_ward_helmet_ballistic_description",
+              "effects": [
+                "BPRUE_Armor_Ward_Helmet_Ballistic"
+              ]
+            },
+            {
+              "id": "Hardened",
+              "cost": 2500,
+              "text_sid": "sid_bprue_armor_ward_hardened_name",
+              "hint_sid": "sid_bprue_armor_ward_helmet_hardened_description",
+              "effects": [
+                "BPRUE_Armor_Ward_Helmet_Hardened"
+              ]
+            },
+            {
+              "id": "PsyShielded",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_ward_psyshielded_name",
+              "hint_sid": "sid_bprue_armor_ward_helmet_psyshielded_description",
+              "effects": [
+                "BPRUE_Armor_Ward_Helmet_PsyShielded"
+              ]
+            }
+          ]
+        },
+        "SUIT": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Ballistic",
+              "cost": 2500,
+              "text_sid": "sid_bprue_armor_ward_ballistic_name",
+              "hint_sid": "sid_bprue_armor_ward_suit_ballistic_description",
+              "effects": [
+                "BPRUE_Armor_Ward_Suit_Ballistic"
+              ]
+            },
+            {
+              "id": "Hardened",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_ward_hardened_name",
+              "hint_sid": "sid_bprue_armor_ward_suit_hardened_description",
+              "effects": [
+                "BPRUE_Armor_Ward_Suit_Hardened"
+              ]
+            },
+            {
+              "id": "PsyShielded",
+              "cost": 4500,
+              "text_sid": "sid_bprue_armor_ward_psyshielded_name",
+              "hint_sid": "sid_bprue_armor_ward_suit_psyshielded_description",
+              "effects": [
+                "BPRUE_Armor_Ward_Suit_PsyShielded"
+              ]
+            }
+          ]
+        },
+        "FULL_BODY_SUIT": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Ballistic",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_ward_ballistic_name",
+              "hint_sid": "sid_bprue_armor_ward_fullbody_ballistic_description",
+              "effects": [
+                "BPRUE_Armor_Ward_FullBody_Ballistic"
+              ]
+            },
+            {
+              "id": "Hardened",
+              "cost": 4500,
+              "text_sid": "sid_bprue_armor_ward_hardened_name",
+              "hint_sid": "sid_bprue_armor_ward_fullbody_hardened_description",
+              "effects": [
+                "BPRUE_Armor_Ward_FullBody_Hardened"
+              ]
+            },
+            {
+              "id": "PsyShielded",
+              "cost": 5500,
+              "text_sid": "sid_bprue_armor_ward_psyshielded_name",
+              "hint_sid": "sid_bprue_armor_ward_fullbody_psyshielded_description",
+              "effects": [
+                "BPRUE_Armor_Ward_FullBody_PsyShielded"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "SPARK": {
+      "signature": "Zone Combat",
+      "enabled": true,
+      "categories": {
+        "HELMET": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Insulated",
+              "cost": 1500,
+              "text_sid": "sid_bprue_armor_spark_insulated_name",
+              "hint_sid": "sid_bprue_armor_spark_helmet_insulated_description",
+              "effects": [
+                "BPRUE_Armor_Spark_Helmet_Insulated"
+              ]
+            },
+            {
+              "id": "RadiationShielded",
+              "cost": 2500,
+              "text_sid": "sid_bprue_armor_spark_radiationshielded_name",
+              "hint_sid": "sid_bprue_armor_spark_helmet_radiationshielded_description",
+              "effects": [
+                "BPRUE_Armor_Spark_Helmet_RadiationShielded"
+              ]
+            },
+            {
+              "id": "PsyConditioned",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_spark_psyconditioned_name",
+              "hint_sid": "sid_bprue_armor_spark_helmet_psyconditioned_description",
+              "effects": [
+                "BPRUE_Armor_Spark_Helmet_PsyConditioned"
+              ]
+            }
+          ]
+        },
+        "SUIT": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Insulated",
+              "cost": 2500,
+              "text_sid": "sid_bprue_armor_spark_insulated_name",
+              "hint_sid": "sid_bprue_armor_spark_suit_insulated_description",
+              "effects": [
+                "BPRUE_Armor_Spark_Suit_Insulated"
+              ]
+            },
+            {
+              "id": "RadiationShielded",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_spark_radiationshielded_name",
+              "hint_sid": "sid_bprue_armor_spark_suit_radiationshielded_description",
+              "effects": [
+                "BPRUE_Armor_Spark_Suit_RadiationShielded"
+              ]
+            },
+            {
+              "id": "PsyConditioned",
+              "cost": 4500,
+              "text_sid": "sid_bprue_armor_spark_psyconditioned_name",
+              "hint_sid": "sid_bprue_armor_spark_suit_psyconditioned_description",
+              "effects": [
+                "BPRUE_Armor_Spark_Suit_PsyConditioned"
+              ]
+            }
+          ]
+        },
+        "FULL_BODY_SUIT": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Insulated",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_spark_insulated_name",
+              "hint_sid": "sid_bprue_armor_spark_fullbody_insulated_description",
+              "effects": [
+                "BPRUE_Armor_Spark_FullBody_Insulated"
+              ]
+            },
+            {
+              "id": "RadiationShielded",
+              "cost": 4500,
+              "text_sid": "sid_bprue_armor_spark_radiationshielded_name",
+              "hint_sid": "sid_bprue_armor_spark_fullbody_radiationshielded_description",
+              "effects": [
+                "BPRUE_Armor_Spark_FullBody_RadiationShielded"
+              ]
+            },
+            {
+              "id": "PsyConditioned",
+              "cost": 5500,
+              "text_sid": "sid_bprue_armor_spark_psyconditioned_name",
+              "hint_sid": "sid_bprue_armor_spark_fullbody_psyconditioned_description",
+              "effects": [
+                "BPRUE_Armor_Spark_FullBody_PsyConditioned"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "MONOLITH": {
+      "signature": "Resilience",
+      "enabled": true,
+      "categories": {
+        "HELMET": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Hardened",
+              "cost": 1500,
+              "text_sid": "sid_bprue_armor_monolith_hardened_name",
+              "hint_sid": "sid_bprue_armor_monolith_helmet_hardened_description",
+              "effects": [
+                "BPRUE_Armor_Monolith_Helmet_Hardened"
+              ]
+            },
+            {
+              "id": "Ballistic",
+              "cost": 2500,
+              "text_sid": "sid_bprue_armor_monolith_ballistic_name",
+              "hint_sid": "sid_bprue_armor_monolith_helmet_ballistic_description",
+              "effects": [
+                "BPRUE_Armor_Monolith_Helmet_Ballistic"
+              ]
+            },
+            {
+              "id": "PsyShielded",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_monolith_psyshielded_name",
+              "hint_sid": "sid_bprue_armor_monolith_helmet_psyshielded_description",
+              "effects": [
+                "BPRUE_Armor_Monolith_Helmet_PsyShielded"
+              ]
+            }
+          ]
+        },
+        "SUIT": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Hardened",
+              "cost": 2500,
+              "text_sid": "sid_bprue_armor_monolith_hardened_name",
+              "hint_sid": "sid_bprue_armor_monolith_suit_hardened_description",
+              "effects": [
+                "BPRUE_Armor_Monolith_Suit_Hardened"
+              ]
+            },
+            {
+              "id": "Ballistic",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_monolith_ballistic_name",
+              "hint_sid": "sid_bprue_armor_monolith_suit_ballistic_description",
+              "effects": [
+                "BPRUE_Armor_Monolith_Suit_Ballistic"
+              ]
+            },
+            {
+              "id": "PsyShielded",
+              "cost": 4500,
+              "text_sid": "sid_bprue_armor_monolith_psyshielded_name",
+              "hint_sid": "sid_bprue_armor_monolith_suit_psyshielded_description",
+              "effects": [
+                "BPRUE_Armor_Monolith_Suit_PsyShielded"
+              ]
+            }
+          ]
+        },
+        "FULL_BODY_SUIT": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Hardened",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_monolith_hardened_name",
+              "hint_sid": "sid_bprue_armor_monolith_fullbody_hardened_description",
+              "effects": [
+                "BPRUE_Armor_Monolith_FullBody_Hardened"
+              ]
+            },
+            {
+              "id": "Ballistic",
+              "cost": 4500,
+              "text_sid": "sid_bprue_armor_monolith_ballistic_name",
+              "hint_sid": "sid_bprue_armor_monolith_fullbody_ballistic_description",
+              "effects": [
+                "BPRUE_Armor_Monolith_FullBody_Ballistic"
+              ]
+            },
+            {
+              "id": "PsyShielded",
+              "cost": 5500,
+              "text_sid": "sid_bprue_armor_monolith_psyshielded_name",
+              "hint_sid": "sid_bprue_armor_monolith_fullbody_psyshielded_description",
+              "effects": [
+                "BPRUE_Armor_Monolith_FullBody_PsyShielded"
+              ]
+            }
+          ]
+        }
+      }
     }
   },
   "effect_prototypes": {
@@ -458,6 +1274,678 @@
       "value": "10.0%",
       "localization_sid": "armor_wearing",
       "text": "Max Durability",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Ecologist_Helmet_Insulated": {
+      "type": "ProtectionBurn",
+      "value": "5.0%",
+      "localization_sid": "armor_protectionThermal",
+      "text": "Thermal Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Ecologist_Helmet_Sealed": {
+      "type": "ProtectionChemical",
+      "value": "5.0%",
+      "localization_sid": "armor_protectionChemical",
+      "text": "Chemical Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Ecologist_Helmet_ZoneShielded": {
+      "type": "ProtectionShock",
+      "value": "5.0%",
+      "localization_sid": "armor_protectionElectrical",
+      "text": "Electrical Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Ecologist_Suit_Insulated": {
+      "type": "ProtectionBurn",
+      "value": "10.0%",
+      "localization_sid": "armor_protectionThermal",
+      "text": "Thermal Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Ecologist_Suit_Sealed": {
+      "type": "ProtectionChemical",
+      "value": "10.0%",
+      "localization_sid": "armor_protectionChemical",
+      "text": "Chemical Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Ecologist_Suit_ZoneShielded": {
+      "type": "ProtectionShock",
+      "value": "10.0%",
+      "localization_sid": "armor_protectionElectrical",
+      "text": "Electrical Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Ecologist_FullBody_Insulated": {
+      "type": "ProtectionBurn",
+      "value": "10.0%",
+      "localization_sid": "armor_protectionThermal",
+      "text": "Thermal Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Ecologist_FullBody_Sealed": {
+      "type": "ProtectionChemical",
+      "value": "10.0%",
+      "localization_sid": "armor_protectionChemical",
+      "text": "Chemical Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Ecologist_FullBody_ZoneShielded": {
+      "type": "ProtectionShock",
+      "value": "10.0%",
+      "localization_sid": "armor_protectionElectrical",
+      "text": "Electrical Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Free_stalker_Helmet_Lightweight": {
+      "type": "ArmorItemWeight",
+      "value": -0.5,
+      "localization_sid": "armor_reductionWeight",
+      "text": "Item Weight",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Free_stalker_Helmet_LoadBearing": {
+      "type": "Composite",
+      "value": "5.0%",
+      "localization_sid": "Armor_carryingCapacity",
+      "show": true,
+      "extra_effects": [
+        {
+          "sid": "BPRUE_Armor_Free_stalker_Helmet_LoadBearing_CarryWeight",
+          "type": "AdditionalInventoryWeight",
+          "value": "5.0%",
+          "localization_sid": "increase_max_inventory_weight",
+          "text": "Increase max inventory weight",
+          "positive": "Positive",
+          "show": true
+        },
+        {
+          "sid": "BPRUE_Armor_Free_stalker_Helmet_LoadBearing_WeightPenalty",
+          "type": "PenaltyLessWeight",
+          "value": "5.0%",
+          "positive": "Positive",
+          "show": false
+        }
+      ]
+    },
+    "BPRUE_Armor_Free_stalker_Helmet_TrailReady": {
+      "type": "RegenStamina",
+      "value": "5.0%",
+      "localization_sid": "Armor_regenerationStamina",
+      "text": "Regen Stamina",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Free_stalker_Suit_Lightweight": {
+      "type": "ArmorItemWeight",
+      "value": -1.5,
+      "localization_sid": "armor_reductionWeight",
+      "text": "Item Weight",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Free_stalker_Suit_LoadBearing": {
+      "type": "Composite",
+      "value": "10.0%",
+      "localization_sid": "Armor_carryingCapacity",
+      "show": true,
+      "extra_effects": [
+        {
+          "sid": "BPRUE_Armor_Free_stalker_Suit_LoadBearing_CarryWeight",
+          "type": "AdditionalInventoryWeight",
+          "value": "10.0%",
+          "localization_sid": "increase_max_inventory_weight",
+          "text": "Increase max inventory weight",
+          "positive": "Positive",
+          "show": true
+        },
+        {
+          "sid": "BPRUE_Armor_Free_stalker_Suit_LoadBearing_WeightPenalty",
+          "type": "PenaltyLessWeight",
+          "value": "10.0%",
+          "positive": "Positive",
+          "show": false
+        }
+      ]
+    },
+    "BPRUE_Armor_Free_stalker_Suit_TrailReady": {
+      "type": "RegenStamina",
+      "value": "5.0%",
+      "localization_sid": "Armor_regenerationStamina",
+      "text": "Regen Stamina",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Free_stalker_FullBody_Lightweight": {
+      "type": "ArmorItemWeight",
+      "value": -2,
+      "localization_sid": "armor_reductionWeight",
+      "text": "Item Weight",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Free_stalker_FullBody_LoadBearing": {
+      "type": "Composite",
+      "value": "10.0%",
+      "localization_sid": "Armor_carryingCapacity",
+      "show": true,
+      "extra_effects": [
+        {
+          "sid": "BPRUE_Armor_Free_stalker_FullBody_LoadBearing_CarryWeight",
+          "type": "AdditionalInventoryWeight",
+          "value": "10.0%",
+          "localization_sid": "increase_max_inventory_weight",
+          "text": "Increase max inventory weight",
+          "positive": "Positive",
+          "show": true
+        },
+        {
+          "sid": "BPRUE_Armor_Free_stalker_FullBody_LoadBearing_WeightPenalty",
+          "type": "PenaltyLessWeight",
+          "value": "10.0%",
+          "positive": "Positive",
+          "show": false
+        }
+      ]
+    },
+    "BPRUE_Armor_Free_stalker_FullBody_TrailReady": {
+      "type": "RegenStamina",
+      "value": "5.0%",
+      "localization_sid": "Armor_regenerationStamina",
+      "text": "Regen Stamina",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Bandit_Helmet_Scavenged": {
+      "type": "ArmorItemWeight",
+      "value": -0.5,
+      "localization_sid": "armor_reductionWeight",
+      "text": "Item Weight",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Bandit_Helmet_Reinforced": {
+      "type": "ProtectionStrike",
+      "value": "5.0%",
+      "localization_sid": "armor_protectionPhysical",
+      "text": "Strike Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Bandit_Helmet_PackRig": {
+      "type": "Composite",
+      "value": "5.0%",
+      "localization_sid": "Armor_carryingCapacity",
+      "show": true,
+      "extra_effects": [
+        {
+          "sid": "BPRUE_Armor_Bandit_Helmet_PackRig_CarryWeight",
+          "type": "AdditionalInventoryWeight",
+          "value": "5.0%",
+          "localization_sid": "increase_max_inventory_weight",
+          "text": "Increase max inventory weight",
+          "positive": "Positive",
+          "show": true
+        },
+        {
+          "sid": "BPRUE_Armor_Bandit_Helmet_PackRig_WeightPenalty",
+          "type": "PenaltyLessWeight",
+          "value": "5.0%",
+          "positive": "Positive",
+          "show": false
+        }
+      ]
+    },
+    "BPRUE_Armor_Bandit_Suit_Scavenged": {
+      "type": "ArmorItemWeight",
+      "value": -1.5,
+      "localization_sid": "armor_reductionWeight",
+      "text": "Item Weight",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Bandit_Suit_Reinforced": {
+      "type": "ProtectionStrike",
+      "value": "10.0%",
+      "localization_sid": "armor_protectionPhysical",
+      "text": "Strike Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Bandit_Suit_PackRig": {
+      "type": "Composite",
+      "value": "10.0%",
+      "localization_sid": "Armor_carryingCapacity",
+      "show": true,
+      "extra_effects": [
+        {
+          "sid": "BPRUE_Armor_Bandit_Suit_PackRig_CarryWeight",
+          "type": "AdditionalInventoryWeight",
+          "value": "10.0%",
+          "localization_sid": "increase_max_inventory_weight",
+          "text": "Increase max inventory weight",
+          "positive": "Positive",
+          "show": true
+        },
+        {
+          "sid": "BPRUE_Armor_Bandit_Suit_PackRig_WeightPenalty",
+          "type": "PenaltyLessWeight",
+          "value": "10.0%",
+          "positive": "Positive",
+          "show": false
+        }
+      ]
+    },
+    "BPRUE_Armor_Bandit_FullBody_Scavenged": {
+      "type": "ArmorItemWeight",
+      "value": -2,
+      "localization_sid": "armor_reductionWeight",
+      "text": "Item Weight",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Bandit_FullBody_Reinforced": {
+      "type": "ProtectionStrike",
+      "value": "10.0%",
+      "localization_sid": "armor_protectionPhysical",
+      "text": "Strike Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Bandit_FullBody_PackRig": {
+      "type": "Composite",
+      "value": "10.0%",
+      "localization_sid": "Armor_carryingCapacity",
+      "show": true,
+      "extra_effects": [
+        {
+          "sid": "BPRUE_Armor_Bandit_FullBody_PackRig_CarryWeight",
+          "type": "AdditionalInventoryWeight",
+          "value": "10.0%",
+          "localization_sid": "increase_max_inventory_weight",
+          "text": "Increase max inventory weight",
+          "positive": "Positive",
+          "show": true
+        },
+        {
+          "sid": "BPRUE_Armor_Bandit_FullBody_PackRig_WeightPenalty",
+          "type": "PenaltyLessWeight",
+          "value": "10.0%",
+          "positive": "Positive",
+          "show": false
+        }
+      ]
+    },
+    "BPRUE_Armor_Military_Helmet_Ballistic": {
+      "type": "ProtectionStrike",
+      "value": "5.0%",
+      "localization_sid": "armor_protectionPhysical",
+      "text": "Strike Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Military_Helmet_ServiceHardened": {
+      "type": "MaxDurability",
+      "value": "5.0%",
+      "localization_sid": "armor_wearing",
+      "text": "Max Durability",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Military_Helmet_Conditioned": {
+      "type": "RegenStamina",
+      "value": "5.0%",
+      "localization_sid": "Armor_regenerationStamina",
+      "text": "Regen Stamina",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Military_Suit_Ballistic": {
+      "type": "ProtectionStrike",
+      "value": "10.0%",
+      "localization_sid": "armor_protectionPhysical",
+      "text": "Strike Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Military_Suit_ServiceHardened": {
+      "type": "MaxDurability",
+      "value": "10.0%",
+      "localization_sid": "armor_wearing",
+      "text": "Max Durability",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Military_Suit_Conditioned": {
+      "type": "RegenStamina",
+      "value": "5.0%",
+      "localization_sid": "Armor_regenerationStamina",
+      "text": "Regen Stamina",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Military_FullBody_Ballistic": {
+      "type": "ProtectionStrike",
+      "value": "10.0%",
+      "localization_sid": "armor_protectionPhysical",
+      "text": "Strike Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Military_FullBody_ServiceHardened": {
+      "type": "MaxDurability",
+      "value": "10.0%",
+      "localization_sid": "armor_wearing",
+      "text": "Max Durability",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Military_FullBody_Conditioned": {
+      "type": "RegenStamina",
+      "value": "5.0%",
+      "localization_sid": "Armor_regenerationStamina",
+      "text": "Regen Stamina",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Mercenary_Helmet_Lightweight": {
+      "type": "ArmorItemWeight",
+      "value": -0.5,
+      "localization_sid": "armor_reductionWeight",
+      "text": "Item Weight",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Mercenary_Helmet_Ballistic": {
+      "type": "ProtectionStrike",
+      "value": "5.0%",
+      "localization_sid": "armor_protectionPhysical",
+      "text": "Strike Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Mercenary_Helmet_Endurance": {
+      "type": "RegenStamina",
+      "value": "5.0%",
+      "localization_sid": "Armor_regenerationStamina",
+      "text": "Regen Stamina",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Mercenary_Suit_Lightweight": {
+      "type": "ArmorItemWeight",
+      "value": -1.5,
+      "localization_sid": "armor_reductionWeight",
+      "text": "Item Weight",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Mercenary_Suit_Ballistic": {
+      "type": "ProtectionStrike",
+      "value": "10.0%",
+      "localization_sid": "armor_protectionPhysical",
+      "text": "Strike Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Mercenary_Suit_Endurance": {
+      "type": "RegenStamina",
+      "value": "5.0%",
+      "localization_sid": "Armor_regenerationStamina",
+      "text": "Regen Stamina",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Mercenary_FullBody_Lightweight": {
+      "type": "ArmorItemWeight",
+      "value": -2,
+      "localization_sid": "armor_reductionWeight",
+      "text": "Item Weight",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Mercenary_FullBody_Ballistic": {
+      "type": "ProtectionStrike",
+      "value": "10.0%",
+      "localization_sid": "armor_protectionPhysical",
+      "text": "Strike Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Mercenary_FullBody_Endurance": {
+      "type": "RegenStamina",
+      "value": "5.0%",
+      "localization_sid": "Armor_regenerationStamina",
+      "text": "Regen Stamina",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Ward_Helmet_Ballistic": {
+      "type": "ProtectionStrike",
+      "value": "5.0%",
+      "localization_sid": "armor_protectionPhysical",
+      "text": "Strike Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Ward_Helmet_Hardened": {
+      "type": "MaxDurability",
+      "value": "5.0%",
+      "localization_sid": "armor_wearing",
+      "text": "Max Durability",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Ward_Helmet_PsyShielded": {
+      "type": "ProtectionPSY",
+      "value": "5.0%",
+      "localization_sid": "armor_protectionPSY",
+      "text": "PSY Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Ward_Suit_Ballistic": {
+      "type": "ProtectionStrike",
+      "value": "10.0%",
+      "localization_sid": "armor_protectionPhysical",
+      "text": "Strike Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Ward_Suit_Hardened": {
+      "type": "MaxDurability",
+      "value": "10.0%",
+      "localization_sid": "armor_wearing",
+      "text": "Max Durability",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Ward_Suit_PsyShielded": {
+      "type": "ProtectionPSY",
+      "value": "5.0%",
+      "localization_sid": "armor_protectionPSY",
+      "text": "PSY Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Ward_FullBody_Ballistic": {
+      "type": "ProtectionStrike",
+      "value": "10.0%",
+      "localization_sid": "armor_protectionPhysical",
+      "text": "Strike Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Ward_FullBody_Hardened": {
+      "type": "MaxDurability",
+      "value": "10.0%",
+      "localization_sid": "armor_wearing",
+      "text": "Max Durability",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Ward_FullBody_PsyShielded": {
+      "type": "ProtectionPSY",
+      "value": "5.0%",
+      "localization_sid": "armor_protectionPSY",
+      "text": "PSY Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Spark_Helmet_Insulated": {
+      "type": "ProtectionShock",
+      "value": "5.0%",
+      "localization_sid": "armor_protectionElectrical",
+      "text": "Electrical Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Spark_Helmet_RadiationShielded": {
+      "type": "ProtectionRadiation",
+      "value": "5.0%",
+      "localization_sid": "armor_protectionRadiation",
+      "text": "Radiation Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Spark_Helmet_PsyConditioned": {
+      "type": "ProtectionPSY",
+      "value": "5.0%",
+      "localization_sid": "armor_protectionPSY",
+      "text": "PSY Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Spark_Suit_Insulated": {
+      "type": "ProtectionShock",
+      "value": "10.0%",
+      "localization_sid": "armor_protectionElectrical",
+      "text": "Electrical Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Spark_Suit_RadiationShielded": {
+      "type": "ProtectionRadiation",
+      "value": "10.0%",
+      "localization_sid": "armor_protectionRadiation",
+      "text": "Radiation Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Spark_Suit_PsyConditioned": {
+      "type": "ProtectionPSY",
+      "value": "5.0%",
+      "localization_sid": "armor_protectionPSY",
+      "text": "PSY Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Spark_FullBody_Insulated": {
+      "type": "ProtectionShock",
+      "value": "10.0%",
+      "localization_sid": "armor_protectionElectrical",
+      "text": "Electrical Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Spark_FullBody_RadiationShielded": {
+      "type": "ProtectionRadiation",
+      "value": "10.0%",
+      "localization_sid": "armor_protectionRadiation",
+      "text": "Radiation Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Spark_FullBody_PsyConditioned": {
+      "type": "ProtectionPSY",
+      "value": "5.0%",
+      "localization_sid": "armor_protectionPSY",
+      "text": "PSY Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Monolith_Helmet_Hardened": {
+      "type": "MaxDurability",
+      "value": "5.0%",
+      "localization_sid": "armor_wearing",
+      "text": "Max Durability",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Monolith_Helmet_Ballistic": {
+      "type": "ProtectionStrike",
+      "value": "5.0%",
+      "localization_sid": "armor_protectionPhysical",
+      "text": "Strike Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Monolith_Helmet_PsyShielded": {
+      "type": "ProtectionPSY",
+      "value": "5.0%",
+      "localization_sid": "armor_protectionPSY",
+      "text": "PSY Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Monolith_Suit_Hardened": {
+      "type": "MaxDurability",
+      "value": "10.0%",
+      "localization_sid": "armor_wearing",
+      "text": "Max Durability",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Monolith_Suit_Ballistic": {
+      "type": "ProtectionStrike",
+      "value": "10.0%",
+      "localization_sid": "armor_protectionPhysical",
+      "text": "Strike Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Monolith_Suit_PsyShielded": {
+      "type": "ProtectionPSY",
+      "value": "5.0%",
+      "localization_sid": "armor_protectionPSY",
+      "text": "PSY Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Monolith_FullBody_Hardened": {
+      "type": "MaxDurability",
+      "value": "10.0%",
+      "localization_sid": "armor_wearing",
+      "text": "Max Durability",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Monolith_FullBody_Ballistic": {
+      "type": "ProtectionStrike",
+      "value": "10.0%",
+      "localization_sid": "armor_protectionPhysical",
+      "text": "Strike Protection",
+      "positive": "Positive",
+      "show": true
+    },
+    "BPRUE_Armor_Monolith_FullBody_PsyShielded": {
+      "type": "ProtectionPSY",
+      "value": "5.0%",
+      "localization_sid": "armor_protectionPSY",
+      "text": "PSY Protection",
       "positive": "Positive",
       "show": true
     }
