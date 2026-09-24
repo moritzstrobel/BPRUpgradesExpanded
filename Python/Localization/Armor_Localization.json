@@ -168,6 +168,678 @@
         "English": "The final fortification adds another 10% physical protection and 10% maximum durability, completing a heavily armored frontline platform.",
         "Russian": "Финальное укрепление добавляет ещё 10% физической защиты и 10% максимальной прочности, завершая тяжёлую фронтовую бронесистему."
       }
+    },
+    {
+      "sid": "sid_bprue_armor_ecologist_insulated_name",
+      "languages": {
+        "English": "Insulated Layer",
+        "Russian": "Insulated Layer"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ecologist_sealed_name",
+      "languages": {
+        "English": "Sealed Assembly",
+        "Russian": "Sealed Assembly"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ecologist_zoneshielded_name",
+      "languages": {
+        "English": "Zone Shielding",
+        "Russian": "Zone Shielding"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ecologist_helmet_insulated_description",
+      "languages": {
+        "English": "Insulated Layer gives the helmet thermal insulation, reinforcing the anomaly exploration role.",
+        "Russian": "The Insulated Layer upgrade reinforces this helmet's anomaly exploration role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ecologist_helmet_sealed_description",
+      "languages": {
+        "English": "Sealed Assembly gives the helmet chemical sealing, reinforcing the anomaly exploration role.",
+        "Russian": "The Sealed Assembly upgrade reinforces this helmet's anomaly exploration role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ecologist_helmet_zoneshielded_description",
+      "languages": {
+        "English": "Zone Shielding gives the helmet electrical shielding, reinforcing the anomaly exploration role.",
+        "Russian": "The Zone Shielding upgrade reinforces this helmet's anomaly exploration role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ecologist_suit_insulated_description",
+      "languages": {
+        "English": "Insulated Layer gives the suit thermal insulation, reinforcing the anomaly exploration role.",
+        "Russian": "The Insulated Layer upgrade reinforces this suit's anomaly exploration role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ecologist_suit_sealed_description",
+      "languages": {
+        "English": "Sealed Assembly gives the suit chemical sealing, reinforcing the anomaly exploration role.",
+        "Russian": "The Sealed Assembly upgrade reinforces this suit's anomaly exploration role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ecologist_suit_zoneshielded_description",
+      "languages": {
+        "English": "Zone Shielding gives the suit electrical shielding, reinforcing the anomaly exploration role.",
+        "Russian": "The Zone Shielding upgrade reinforces this suit's anomaly exploration role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ecologist_fullbody_insulated_description",
+      "languages": {
+        "English": "Insulated Layer gives the full-body suit thermal insulation, reinforcing the anomaly exploration role.",
+        "Russian": "The Insulated Layer upgrade reinforces this full-body suit's anomaly exploration role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ecologist_fullbody_sealed_description",
+      "languages": {
+        "English": "Sealed Assembly gives the full-body suit chemical sealing, reinforcing the anomaly exploration role.",
+        "Russian": "The Sealed Assembly upgrade reinforces this full-body suit's anomaly exploration role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ecologist_fullbody_zoneshielded_description",
+      "languages": {
+        "English": "Zone Shielding gives the full-body suit electrical shielding, reinforcing the anomaly exploration role.",
+        "Russian": "The Zone Shielding upgrade reinforces this full-body suit's anomaly exploration role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_free_stalker_lightweight_name",
+      "languages": {
+        "English": "Lightweight Kit",
+        "Russian": "Lightweight Kit"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_free_stalker_loadbearing_name",
+      "languages": {
+        "English": "Load-Bearing Rig",
+        "Russian": "Load-Bearing Rig"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_free_stalker_trailready_name",
+      "languages": {
+        "English": "Trail-Ready Harness",
+        "Russian": "Trail-Ready Harness"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_free_stalker_helmet_lightweight_description",
+      "languages": {
+        "English": "Lightweight Kit gives the helmet reduced equipment weight, reinforcing the scavenging role.",
+        "Russian": "The Lightweight Kit upgrade reinforces this helmet's scavenging role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_free_stalker_helmet_loadbearing_description",
+      "languages": {
+        "English": "Load-Bearing Rig gives the helmet improved carrying capacity, reinforcing the scavenging role.",
+        "Russian": "The Load-Bearing Rig upgrade reinforces this helmet's scavenging role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_free_stalker_helmet_trailready_description",
+      "languages": {
+        "English": "Trail-Ready Harness gives the helmet field endurance, reinforcing the scavenging role.",
+        "Russian": "The Trail-Ready Harness upgrade reinforces this helmet's scavenging role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_free_stalker_suit_lightweight_description",
+      "languages": {
+        "English": "Lightweight Kit gives the suit reduced equipment weight, reinforcing the scavenging role.",
+        "Russian": "The Lightweight Kit upgrade reinforces this suit's scavenging role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_free_stalker_suit_loadbearing_description",
+      "languages": {
+        "English": "Load-Bearing Rig gives the suit improved carrying capacity, reinforcing the scavenging role.",
+        "Russian": "The Load-Bearing Rig upgrade reinforces this suit's scavenging role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_free_stalker_suit_trailready_description",
+      "languages": {
+        "English": "Trail-Ready Harness gives the suit field endurance, reinforcing the scavenging role.",
+        "Russian": "The Trail-Ready Harness upgrade reinforces this suit's scavenging role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_free_stalker_fullbody_lightweight_description",
+      "languages": {
+        "English": "Lightweight Kit gives the full-body suit reduced equipment weight, reinforcing the scavenging role.",
+        "Russian": "The Lightweight Kit upgrade reinforces this full-body suit's scavenging role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_free_stalker_fullbody_loadbearing_description",
+      "languages": {
+        "English": "Load-Bearing Rig gives the full-body suit improved carrying capacity, reinforcing the scavenging role.",
+        "Russian": "The Load-Bearing Rig upgrade reinforces this full-body suit's scavenging role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_free_stalker_fullbody_trailready_description",
+      "languages": {
+        "English": "Trail-Ready Harness gives the full-body suit field endurance, reinforcing the scavenging role.",
+        "Russian": "The Trail-Ready Harness upgrade reinforces this full-body suit's scavenging role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_bandit_scavenged_name",
+      "languages": {
+        "English": "Scavenged Components",
+        "Russian": "Scavenged Components"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_bandit_reinforced_name",
+      "languages": {
+        "English": "Improvised Reinforcement",
+        "Russian": "Improvised Reinforcement"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_bandit_packrig_name",
+      "languages": {
+        "English": "Makeshift Pack Rig",
+        "Russian": "Makeshift Pack Rig"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_bandit_helmet_scavenged_description",
+      "languages": {
+        "English": "Scavenged Components gives the helmet scavenged lightweight components, reinforcing the improvised hybrid role.",
+        "Russian": "The Scavenged Components upgrade reinforces this helmet's improvised hybrid role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_bandit_helmet_reinforced_description",
+      "languages": {
+        "English": "Improvised Reinforcement gives the helmet improvised physical reinforcement, reinforcing the improvised hybrid role.",
+        "Russian": "The Improvised Reinforcement upgrade reinforces this helmet's improvised hybrid role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_bandit_helmet_packrig_description",
+      "languages": {
+        "English": "Makeshift Pack Rig gives the helmet a makeshift load-bearing rig, reinforcing the improvised hybrid role.",
+        "Russian": "The Makeshift Pack Rig upgrade reinforces this helmet's improvised hybrid role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_bandit_suit_scavenged_description",
+      "languages": {
+        "English": "Scavenged Components gives the suit scavenged lightweight components, reinforcing the improvised hybrid role.",
+        "Russian": "The Scavenged Components upgrade reinforces this suit's improvised hybrid role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_bandit_suit_reinforced_description",
+      "languages": {
+        "English": "Improvised Reinforcement gives the suit improvised physical reinforcement, reinforcing the improvised hybrid role.",
+        "Russian": "The Improvised Reinforcement upgrade reinforces this suit's improvised hybrid role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_bandit_suit_packrig_description",
+      "languages": {
+        "English": "Makeshift Pack Rig gives the suit a makeshift load-bearing rig, reinforcing the improvised hybrid role.",
+        "Russian": "The Makeshift Pack Rig upgrade reinforces this suit's improvised hybrid role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_bandit_fullbody_scavenged_description",
+      "languages": {
+        "English": "Scavenged Components gives the full-body suit scavenged lightweight components, reinforcing the improvised hybrid role.",
+        "Russian": "The Scavenged Components upgrade reinforces this full-body suit's improvised hybrid role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_bandit_fullbody_reinforced_description",
+      "languages": {
+        "English": "Improvised Reinforcement gives the full-body suit improvised physical reinforcement, reinforcing the improvised hybrid role.",
+        "Russian": "The Improvised Reinforcement upgrade reinforces this full-body suit's improvised hybrid role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_bandit_fullbody_packrig_description",
+      "languages": {
+        "English": "Makeshift Pack Rig gives the full-body suit a makeshift load-bearing rig, reinforcing the improvised hybrid role.",
+        "Russian": "The Makeshift Pack Rig upgrade reinforces this full-body suit's improvised hybrid role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_military_ballistic_name",
+      "languages": {
+        "English": "Ballistic Reinforcement",
+        "Russian": "Ballistic Reinforcement"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_military_servicehardened_name",
+      "languages": {
+        "English": "Service-Hardened Construction",
+        "Russian": "Service-Hardened Construction"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_military_conditioned_name",
+      "languages": {
+        "English": "Combat Conditioning",
+        "Russian": "Combat Conditioning"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_military_helmet_ballistic_description",
+      "languages": {
+        "English": "Ballistic Reinforcement gives the helmet ballistic reinforcement, reinforcing the combat loadout role.",
+        "Russian": "The Ballistic Reinforcement upgrade reinforces this helmet's combat loadout role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_military_helmet_servicehardened_description",
+      "languages": {
+        "English": "Service-Hardened Construction gives the helmet service-grade durability, reinforcing the combat loadout role.",
+        "Russian": "The Service-Hardened Construction upgrade reinforces this helmet's combat loadout role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_military_helmet_conditioned_description",
+      "languages": {
+        "English": "Combat Conditioning gives the helmet combat conditioning, reinforcing the combat loadout role.",
+        "Russian": "The Combat Conditioning upgrade reinforces this helmet's combat loadout role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_military_suit_ballistic_description",
+      "languages": {
+        "English": "Ballistic Reinforcement gives the suit ballistic reinforcement, reinforcing the combat loadout role.",
+        "Russian": "The Ballistic Reinforcement upgrade reinforces this suit's combat loadout role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_military_suit_servicehardened_description",
+      "languages": {
+        "English": "Service-Hardened Construction gives the suit service-grade durability, reinforcing the combat loadout role.",
+        "Russian": "The Service-Hardened Construction upgrade reinforces this suit's combat loadout role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_military_suit_conditioned_description",
+      "languages": {
+        "English": "Combat Conditioning gives the suit combat conditioning, reinforcing the combat loadout role.",
+        "Russian": "The Combat Conditioning upgrade reinforces this suit's combat loadout role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_military_fullbody_ballistic_description",
+      "languages": {
+        "English": "Ballistic Reinforcement gives the full-body suit ballistic reinforcement, reinforcing the combat loadout role.",
+        "Russian": "The Ballistic Reinforcement upgrade reinforces this full-body suit's combat loadout role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_military_fullbody_servicehardened_description",
+      "languages": {
+        "English": "Service-Hardened Construction gives the full-body suit service-grade durability, reinforcing the combat loadout role.",
+        "Russian": "The Service-Hardened Construction upgrade reinforces this full-body suit's combat loadout role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_military_fullbody_conditioned_description",
+      "languages": {
+        "English": "Combat Conditioning gives the full-body suit combat conditioning, reinforcing the combat loadout role.",
+        "Russian": "The Combat Conditioning upgrade reinforces this full-body suit's combat loadout role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_mercenary_lightweight_name",
+      "languages": {
+        "English": "Lightweight Kit",
+        "Russian": "Lightweight Kit"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_mercenary_ballistic_name",
+      "languages": {
+        "English": "Ballistic Reinforcement",
+        "Russian": "Ballistic Reinforcement"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_mercenary_endurance_name",
+      "languages": {
+        "English": "Tactical Endurance",
+        "Russian": "Tactical Endurance"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_mercenary_helmet_lightweight_description",
+      "languages": {
+        "English": "Lightweight Kit gives the helmet weight-conscious tactical components, reinforcing the tactical mobility role.",
+        "Russian": "The Lightweight Kit upgrade reinforces this helmet's tactical mobility role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_mercenary_helmet_ballistic_description",
+      "languages": {
+        "English": "Ballistic Reinforcement gives the helmet selective ballistic reinforcement, reinforcing the tactical mobility role.",
+        "Russian": "The Ballistic Reinforcement upgrade reinforces this helmet's tactical mobility role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_mercenary_helmet_endurance_description",
+      "languages": {
+        "English": "Tactical Endurance gives the helmet field endurance, reinforcing the tactical mobility role.",
+        "Russian": "The Tactical Endurance upgrade reinforces this helmet's tactical mobility role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_mercenary_suit_lightweight_description",
+      "languages": {
+        "English": "Lightweight Kit gives the suit weight-conscious tactical components, reinforcing the tactical mobility role.",
+        "Russian": "The Lightweight Kit upgrade reinforces this suit's tactical mobility role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_mercenary_suit_ballistic_description",
+      "languages": {
+        "English": "Ballistic Reinforcement gives the suit selective ballistic reinforcement, reinforcing the tactical mobility role.",
+        "Russian": "The Ballistic Reinforcement upgrade reinforces this suit's tactical mobility role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_mercenary_suit_endurance_description",
+      "languages": {
+        "English": "Tactical Endurance gives the suit field endurance, reinforcing the tactical mobility role.",
+        "Russian": "The Tactical Endurance upgrade reinforces this suit's tactical mobility role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_mercenary_fullbody_lightweight_description",
+      "languages": {
+        "English": "Lightweight Kit gives the full-body suit weight-conscious tactical components, reinforcing the tactical mobility role.",
+        "Russian": "The Lightweight Kit upgrade reinforces this full-body suit's tactical mobility role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_mercenary_fullbody_ballistic_description",
+      "languages": {
+        "English": "Ballistic Reinforcement gives the full-body suit selective ballistic reinforcement, reinforcing the tactical mobility role.",
+        "Russian": "The Ballistic Reinforcement upgrade reinforces this full-body suit's tactical mobility role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_mercenary_fullbody_endurance_description",
+      "languages": {
+        "English": "Tactical Endurance gives the full-body suit field endurance, reinforcing the tactical mobility role.",
+        "Russian": "The Tactical Endurance upgrade reinforces this full-body suit's tactical mobility role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ward_ballistic_name",
+      "languages": {
+        "English": "Ballistic Reinforcement",
+        "Russian": "Ballistic Reinforcement"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ward_hardened_name",
+      "languages": {
+        "English": "Hardened Construction",
+        "Russian": "Hardened Construction"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ward_psyshielded_name",
+      "languages": {
+        "English": "Psy Shielding",
+        "Russian": "Psy Shielding"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ward_helmet_ballistic_description",
+      "languages": {
+        "English": "Ballistic Reinforcement gives the helmet advanced ballistic reinforcement, reinforcing the advanced protection role.",
+        "Russian": "The Ballistic Reinforcement upgrade reinforces this helmet's advanced protection role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ward_helmet_hardened_description",
+      "languages": {
+        "English": "Hardened Construction gives the helmet hardened construction, reinforcing the advanced protection role.",
+        "Russian": "The Hardened Construction upgrade reinforces this helmet's advanced protection role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ward_helmet_psyshielded_description",
+      "languages": {
+        "English": "Psy Shielding gives the helmet integrated psy shielding, reinforcing the advanced protection role.",
+        "Russian": "The Psy Shielding upgrade reinforces this helmet's advanced protection role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ward_suit_ballistic_description",
+      "languages": {
+        "English": "Ballistic Reinforcement gives the suit advanced ballistic reinforcement, reinforcing the advanced protection role.",
+        "Russian": "The Ballistic Reinforcement upgrade reinforces this suit's advanced protection role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ward_suit_hardened_description",
+      "languages": {
+        "English": "Hardened Construction gives the suit hardened construction, reinforcing the advanced protection role.",
+        "Russian": "The Hardened Construction upgrade reinforces this suit's advanced protection role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ward_suit_psyshielded_description",
+      "languages": {
+        "English": "Psy Shielding gives the suit integrated psy shielding, reinforcing the advanced protection role.",
+        "Russian": "The Psy Shielding upgrade reinforces this suit's advanced protection role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ward_fullbody_ballistic_description",
+      "languages": {
+        "English": "Ballistic Reinforcement gives the full-body suit advanced ballistic reinforcement, reinforcing the advanced protection role.",
+        "Russian": "The Ballistic Reinforcement upgrade reinforces this full-body suit's advanced protection role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ward_fullbody_hardened_description",
+      "languages": {
+        "English": "Hardened Construction gives the full-body suit hardened construction, reinforcing the advanced protection role.",
+        "Russian": "The Hardened Construction upgrade reinforces this full-body suit's advanced protection role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_ward_fullbody_psyshielded_description",
+      "languages": {
+        "English": "Psy Shielding gives the full-body suit integrated psy shielding, reinforcing the advanced protection role.",
+        "Russian": "The Psy Shielding upgrade reinforces this full-body suit's advanced protection role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_spark_insulated_name",
+      "languages": {
+        "English": "Insulated Layer",
+        "Russian": "Insulated Layer"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_spark_radiationshielded_name",
+      "languages": {
+        "English": "Radiation Shielding",
+        "Russian": "Radiation Shielding"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_spark_psyconditioned_name",
+      "languages": {
+        "English": "Psy Conditioning",
+        "Russian": "Psy Conditioning"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_spark_helmet_insulated_description",
+      "languages": {
+        "English": "Insulated Layer gives the helmet electrical insulation, reinforcing the zone combat role.",
+        "Russian": "The Insulated Layer upgrade reinforces this helmet's zone combat role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_spark_helmet_radiationshielded_description",
+      "languages": {
+        "English": "Radiation Shielding gives the helmet radiation shielding, reinforcing the zone combat role.",
+        "Russian": "The Radiation Shielding upgrade reinforces this helmet's zone combat role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_spark_helmet_psyconditioned_description",
+      "languages": {
+        "English": "Psy Conditioning gives the helmet psy protection, reinforcing the zone combat role.",
+        "Russian": "The Psy Conditioning upgrade reinforces this helmet's zone combat role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_spark_suit_insulated_description",
+      "languages": {
+        "English": "Insulated Layer gives the suit electrical insulation, reinforcing the zone combat role.",
+        "Russian": "The Insulated Layer upgrade reinforces this suit's zone combat role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_spark_suit_radiationshielded_description",
+      "languages": {
+        "English": "Radiation Shielding gives the suit radiation shielding, reinforcing the zone combat role.",
+        "Russian": "The Radiation Shielding upgrade reinforces this suit's zone combat role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_spark_suit_psyconditioned_description",
+      "languages": {
+        "English": "Psy Conditioning gives the suit psy protection, reinforcing the zone combat role.",
+        "Russian": "The Psy Conditioning upgrade reinforces this suit's zone combat role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_spark_fullbody_insulated_description",
+      "languages": {
+        "English": "Insulated Layer gives the full-body suit electrical insulation, reinforcing the zone combat role.",
+        "Russian": "The Insulated Layer upgrade reinforces this full-body suit's zone combat role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_spark_fullbody_radiationshielded_description",
+      "languages": {
+        "English": "Radiation Shielding gives the full-body suit radiation shielding, reinforcing the zone combat role.",
+        "Russian": "The Radiation Shielding upgrade reinforces this full-body suit's zone combat role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_spark_fullbody_psyconditioned_description",
+      "languages": {
+        "English": "Psy Conditioning gives the full-body suit psy protection, reinforcing the zone combat role.",
+        "Russian": "The Psy Conditioning upgrade reinforces this full-body suit's zone combat role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_monolith_hardened_name",
+      "languages": {
+        "English": "Hardened Construction",
+        "Russian": "Hardened Construction"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_monolith_ballistic_name",
+      "languages": {
+        "English": "Ballistic Reinforcement",
+        "Russian": "Ballistic Reinforcement"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_monolith_psyshielded_name",
+      "languages": {
+        "English": "Psy Shielding",
+        "Russian": "Psy Shielding"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_monolith_helmet_hardened_description",
+      "languages": {
+        "English": "Hardened Construction gives the helmet exceptional structural durability, reinforcing the resilience role.",
+        "Russian": "The Hardened Construction upgrade reinforces this helmet's resilience role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_monolith_helmet_ballistic_description",
+      "languages": {
+        "English": "Ballistic Reinforcement gives the helmet heavy physical protection, reinforcing the resilience role.",
+        "Russian": "The Ballistic Reinforcement upgrade reinforces this helmet's resilience role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_monolith_helmet_psyshielded_description",
+      "languages": {
+        "English": "Psy Shielding gives the helmet psy resistance, reinforcing the resilience role.",
+        "Russian": "The Psy Shielding upgrade reinforces this helmet's resilience role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_monolith_suit_hardened_description",
+      "languages": {
+        "English": "Hardened Construction gives the suit exceptional structural durability, reinforcing the resilience role.",
+        "Russian": "The Hardened Construction upgrade reinforces this suit's resilience role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_monolith_suit_ballistic_description",
+      "languages": {
+        "English": "Ballistic Reinforcement gives the suit heavy physical protection, reinforcing the resilience role.",
+        "Russian": "The Ballistic Reinforcement upgrade reinforces this suit's resilience role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_monolith_suit_psyshielded_description",
+      "languages": {
+        "English": "Psy Shielding gives the suit psy resistance, reinforcing the resilience role.",
+        "Russian": "The Psy Shielding upgrade reinforces this suit's resilience role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_monolith_fullbody_hardened_description",
+      "languages": {
+        "English": "Hardened Construction gives the full-body suit exceptional structural durability, reinforcing the resilience role.",
+        "Russian": "The Hardened Construction upgrade reinforces this full-body suit's resilience role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_monolith_fullbody_ballistic_description",
+      "languages": {
+        "English": "Ballistic Reinforcement gives the full-body suit heavy physical protection, reinforcing the resilience role.",
+        "Russian": "The Ballistic Reinforcement upgrade reinforces this full-body suit's resilience role."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_monolith_fullbody_psyshielded_description",
+      "languages": {
+        "English": "Psy Shielding gives the full-body suit psy resistance, reinforcing the resilience role.",
+        "Russian": "The Psy Shielding upgrade reinforces this full-body suit's resilience role."
+      }
     }
   ]
 }
