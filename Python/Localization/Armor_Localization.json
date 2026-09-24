@@ -60,8 +60,8 @@
     {
       "sid": "sid_bprue_armor_freedom_loadbearing_name",
       "languages": {
-        "English": "Free Stalker Rig",
-        "Russian": "Разгрузка вольного сталкера"
+        "English": "Freedom Field Rig",
+        "Russian": "Полевая разгрузка «Свободы»"
       }
     },
     {
@@ -74,8 +74,8 @@
     {
       "sid": "sid_bprue_armor_freedom_suit_loadbearing_description",
       "languages": {
-        "English": "A Free Stalker load-bearing rig improves carrying capacity and weight distribution by 15%, but sacrifices 10% physical protection for unrestricted mobility.",
-        "Russian": "Разгрузка вольного сталкера улучшает грузоподъёмность и распределение веса на 15%, но ради свободы движений снижает физическую защиту на 10%."
+        "English": "A Freedom field rig improves carrying capacity and weight distribution by 15%, but sacrifices 10% physical protection for unrestricted mobility.",
+        "Russian": "Полевая разгрузка «Свободы» улучшает грузоподъёмность и распределение веса на 15%, но ради свободы движений снижает физическую защиту на 10%."
       }
     },
     {
