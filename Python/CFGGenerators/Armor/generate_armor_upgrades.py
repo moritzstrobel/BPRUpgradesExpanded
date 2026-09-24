@@ -283,259 +283,94 @@ def render_armor_patch(upgrades: list[ArmorUpgradeDefinition]) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
-def render_effects() -> str:
-    return r"""// AUTO-GENERATED - BPRUE armor faction signature effects
-// FREEDOM / Mobility: increasingly aggressive field adaptation.
-// Each tier is cumulative; stronger mobility comes with increasing durability/protection trade-offs.
+def _effect_value(value: object) -> str:
+    if isinstance(value, (int, float)):
+        return str(value)
+    return str(value)
 
-BPRUE_Armor_Freedom_Helmet_Weight : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_Helmet_Weight
-   LocalizationSID = armor_reductionWeight
-   Text = Item Weight
-   Type = EEffectType::ArmorItemWeight
-   ValueMin = -0.5
-   ValueMax = -0.5
-   bIsPermanent = true
-   Positive = EBeneficial::Positive
-   ShowUpgradeEffectValue = true
-   ShowUpgradeEffect = true
-struct.end
 
-BPRUE_Armor_Freedom_Helmet_Stamina : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_Helmet_Stamina
-   LocalizationSID = Armor_regenerationStamina
-   Text = Regen Stamina
-   Type = EEffectType::RegenStamina
-   ValueMin = 5.0%
-   ValueMax = 5.0%
-   bIsPermanent = true
-   Positive = EBeneficial::Positive
-   ShowUpgradeEffectValue = true
-   ShowUpgradeEffect = true
-struct.end
+def _render_effect(sid: str, spec: dict) -> list[str]:
+    effect_type = spec["type"]
+    value = _effect_value(spec["value"])
+    show = bool(spec.get("show", True))
+    lines = [
+        f"{sid} : struct.begin {{refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}}",
+        f"   SID = {sid}",
+    ]
+    if spec.get("localization_sid"):
+        lines.append(f"   LocalizationSID = {spec['localization_sid']}")
+    if spec.get("text"):
+        lines.append(f"   Text = {spec['text']}")
+    lines += [
+        f"   Type = EEffectType::{effect_type}",
+        f"   ValueMin = {value}",
+        f"   ValueMax = {value}",
+    ]
 
-BPRUE_Armor_Freedom_Helmet_LoadBearing : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_Helmet_LoadBearing
-   LocalizationSID = Armor_carryingCapacity
-   Type = EEffectType::Composite
-   ValueMin = 5.0%
-   ValueMax = 5.0%
-   ApplyExtraEffectPrototypeSIDs : struct.begin
-      [0] = BPRUE_Armor_Freedom_Helmet_CarryWeight
-      [1] = BPRUE_Armor_Freedom_Helmet_WeightPenalty
-   struct.end
-   ShouldPauseByDialog = false
-   ShowUpgradeEffectValue = true
-   ShowUpgradeEffect = true
-struct.end
+    extra_effects = spec.get("extra_effects", [])
+    if extra_effects:
+        lines.append("   ApplyExtraEffectPrototypeSIDs : struct.begin")
+        lines.extend(
+            f"      [{index}] = {child['sid']}"
+            for index, child in enumerate(extra_effects)
+        )
+        lines += [
+            "   struct.end",
+            "   ShouldPauseByDialog = false",
+        ]
+    else:
+        lines.append("   bIsPermanent = true")
+        if spec.get("positive"):
+            lines.append(f"   Positive = EBeneficial::{spec['positive']}")
 
-BPRUE_Armor_Freedom_Helmet_CarryWeight : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_Helmet_CarryWeight
-   LocalizationSID = increase_max_inventory_weight
-   Text = Increase max inventory weight
-   Type = EEffectType::AdditionalInventoryWeight
-   ValueMin = 5.0%
-   ValueMax = 5.0%
-   bIsPermanent = true
-   Positive = EBeneficial::Positive
-   ShowUpgradeEffectValue = true
-   ShowUpgradeEffect = true
-struct.end
+    lines += [
+        f"   ShowUpgradeEffectValue = {'true' if show else 'false'}",
+        f"   ShowUpgradeEffect = {'true' if show else 'false'}",
+        "struct.end",
+        "",
+    ]
+    return lines
 
-BPRUE_Armor_Freedom_Helmet_WeightPenalty : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_Helmet_WeightPenalty
-   Type = EEffectType::PenaltyLessWeight
-   ValueMin = 5.0%
-   ValueMax = 5.0%
-   bIsPermanent = true
-   Positive = EBeneficial::Positive
-   ShowUpgradeEffectValue = false
-   ShowUpgradeEffect = false
-struct.end
 
-BPRUE_Armor_Freedom_Helmet_DurabilityTradeoff : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_Helmet_DurabilityTradeoff
-   LocalizationSID = armor_wearing
-   Text = Max Durability
-   Type = EEffectType::MaxDurability
-   ValueMin = -10.0%
-   ValueMax = -10.0%
-   bIsPermanent = true
-   Positive = EBeneficial::Negative
-   ShowUpgradeEffectValue = true
-   ShowUpgradeEffect = true
-struct.end
+def render_effects(config: dict | None = None) -> str:
+    config = config or load_config()
+    definitions = config.get("effect_prototypes", {})
+    referenced = {
+        effect_sid
+        for faction_cfg in config["prototype_factions"].values()
+        if faction_cfg.get("enabled", True)
+        for category_cfg in faction_cfg["categories"].values()
+        for tier_cfg in category_cfg["tiers"]
+        for effect_sid in tier_cfg["effects"]
+    }
 
-BPRUE_Armor_Freedom_Suit_Weight : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_Suit_Weight
-   LocalizationSID = armor_reductionWeight
-   Text = Item Weight
-   Type = EEffectType::ArmorItemWeight
-   ValueMin = -1.5
-   ValueMax = -1.5
-   bIsPermanent = true
-   Positive = EBeneficial::Positive
-   ShowUpgradeEffectValue = true
-   ShowUpgradeEffect = true
-struct.end
+    missing = sorted(referenced - set(definitions))
+    if missing:
+        raise ValueError(
+            "Armor signature effects missing from effect_prototypes:\n  - "
+            + "\n  - ".join(missing)
+        )
 
-BPRUE_Armor_Freedom_Suit_Stamina : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_Suit_Stamina
-   LocalizationSID = Armor_regenerationStamina
-   Text = Regen Stamina
-   Type = EEffectType::RegenStamina
-   ValueMin = 10.0%
-   ValueMax = 10.0%
-   bIsPermanent = true
-   Positive = EBeneficial::Positive
-   ShowUpgradeEffectValue = true
-   ShowUpgradeEffect = true
-struct.end
-
-BPRUE_Armor_Freedom_Suit_LoadBearing : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_Suit_LoadBearing
-   LocalizationSID = Armor_carryingCapacity
-   Type = EEffectType::Composite
-   ValueMin = 15.0%
-   ValueMax = 15.0%
-   ApplyExtraEffectPrototypeSIDs : struct.begin
-      [0] = BPRUE_Armor_Freedom_Suit_CarryWeight
-      [1] = BPRUE_Armor_Freedom_Suit_WeightPenalty
-   struct.end
-   ShouldPauseByDialog = false
-   ShowUpgradeEffectValue = true
-   ShowUpgradeEffect = true
-struct.end
-
-BPRUE_Armor_Freedom_Suit_CarryWeight : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_Suit_CarryWeight
-   LocalizationSID = increase_max_inventory_weight
-   Text = Increase max inventory weight
-   Type = EEffectType::AdditionalInventoryWeight
-   ValueMin = 15.0%
-   ValueMax = 15.0%
-   bIsPermanent = true
-   Positive = EBeneficial::Positive
-   ShowUpgradeEffectValue = true
-   ShowUpgradeEffect = true
-struct.end
-
-BPRUE_Armor_Freedom_Suit_WeightPenalty : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_Suit_WeightPenalty
-   Type = EEffectType::PenaltyLessWeight
-   ValueMin = 15.0%
-   ValueMax = 15.0%
-   bIsPermanent = true
-   Positive = EBeneficial::Positive
-   ShowUpgradeEffectValue = false
-   ShowUpgradeEffect = false
-struct.end
-
-BPRUE_Armor_Freedom_Suit_StrikeTradeoff : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_Suit_StrikeTradeoff
-   LocalizationSID = armor_protectionPhysical
-   Text = Strike Protection
-   Type = EEffectType::ProtectionStrike
-   ValueMin = -10.0%
-   ValueMax = -10.0%
-   bIsPermanent = true
-   Positive = EBeneficial::Negative
-   ShowUpgradeEffectValue = true
-   ShowUpgradeEffect = true
-struct.end
-
-BPRUE_Armor_Freedom_FullBody_Weight : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_FullBody_Weight
-   LocalizationSID = armor_reductionWeight
-   Text = Item Weight
-   Type = EEffectType::ArmorItemWeight
-   ValueMin = -2
-   ValueMax = -2
-   bIsPermanent = true
-   Positive = EBeneficial::Positive
-   ShowUpgradeEffectValue = true
-   ShowUpgradeEffect = true
-struct.end
-
-BPRUE_Armor_Freedom_FullBody_Stamina : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_FullBody_Stamina
-   LocalizationSID = Armor_regenerationStamina
-   Text = Regen Stamina
-   Type = EEffectType::RegenStamina
-   ValueMin = 10.0%
-   ValueMax = 10.0%
-   bIsPermanent = true
-   Positive = EBeneficial::Positive
-   ShowUpgradeEffectValue = true
-   ShowUpgradeEffect = true
-struct.end
-
-BPRUE_Armor_Freedom_FullBody_LoadBearing : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_FullBody_LoadBearing
-   LocalizationSID = Armor_carryingCapacity
-   Type = EEffectType::Composite
-   ValueMin = 20.0%
-   ValueMax = 20.0%
-   ApplyExtraEffectPrototypeSIDs : struct.begin
-      [0] = BPRUE_Armor_Freedom_FullBody_CarryWeight
-      [1] = BPRUE_Armor_Freedom_FullBody_WeightPenalty
-   struct.end
-   ShouldPauseByDialog = false
-   ShowUpgradeEffectValue = true
-   ShowUpgradeEffect = true
-struct.end
-
-BPRUE_Armor_Freedom_FullBody_CarryWeight : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_FullBody_CarryWeight
-   LocalizationSID = increase_max_inventory_weight
-   Text = Increase max inventory weight
-   Type = EEffectType::AdditionalInventoryWeight
-   ValueMin = 20.0%
-   ValueMax = 20.0%
-   bIsPermanent = true
-   Positive = EBeneficial::Positive
-   ShowUpgradeEffectValue = true
-   ShowUpgradeEffect = true
-struct.end
-
-BPRUE_Armor_Freedom_FullBody_WeightPenalty : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_FullBody_WeightPenalty
-   Type = EEffectType::PenaltyLessWeight
-   ValueMin = 20.0%
-   ValueMax = 20.0%
-   bIsPermanent = true
-   Positive = EBeneficial::Positive
-   ShowUpgradeEffectValue = false
-   ShowUpgradeEffect = false
-struct.end
-
-BPRUE_Armor_Freedom_FullBody_StrikeTradeoff : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_FullBody_StrikeTradeoff
-   LocalizationSID = armor_protectionPhysical
-   Text = Strike Protection
-   Type = EEffectType::ProtectionStrike
-   ValueMin = -10.0%
-   ValueMax = -10.0%
-   bIsPermanent = true
-   Positive = EBeneficial::Negative
-   ShowUpgradeEffectValue = true
-   ShowUpgradeEffect = true
-struct.end
-
-BPRUE_Armor_Freedom_FullBody_DurabilityTradeoff : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
-   SID = BPRUE_Armor_Freedom_FullBody_DurabilityTradeoff
-   LocalizationSID = armor_wearing
-   Text = Max Durability
-   Type = EEffectType::MaxDurability
-   ValueMin = -10.0%
-   ValueMax = -10.0%
-   bIsPermanent = true
-   Positive = EBeneficial::Negative
-   ShowUpgradeEffectValue = true
-   ShowUpgradeEffect = true
-struct.end
-"""
-
+    lines = [
+        "// -----------------------------------------------------------------------------",
+        "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND",
+        "// BPRUE Armor faction signature effects.",
+        "// Source of truth: CFGGenerators/Armor/armor_signatures.json",
+        "// -----------------------------------------------------------------------------",
+        "",
+    ]
+    rendered: set[str] = set()
+    for sid in sorted(referenced):
+        spec = definitions[sid]
+        lines.extend(_render_effect(sid, spec))
+        rendered.add(sid)
+        for child in spec.get("extra_effects", []):
+            child_sid = child["sid"]
+            if child_sid in rendered:
+                raise ValueError(f"Duplicate Armor effect SID {child_sid}")
+            lines.extend(_render_effect(child_sid, child))
+            rendered.add(child_sid)
+    return "\n".join(lines).rstrip() + "\n"
 
 
 def _parse_npc_blocks(text: str) -> dict[str, list[str]]:
@@ -706,7 +541,7 @@ def main() -> None:
 
     upgrade_text = render_upgrade_fragment(upgrades)
     armor_patch_text = render_armor_patch(upgrades)
-    effect_text = render_effects()
+    effect_text = render_effects(load_config())
     npc_text = render_npc_patch(upgrades)
 
     UPGRADE_OUTPUT_PATH.write_text(upgrade_text, encoding="utf-8")
