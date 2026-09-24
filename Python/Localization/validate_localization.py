@@ -27,6 +27,7 @@ LOCALIZATION_FILES = (
     LOCALIZATION_DIR / "Unique_Sniper_Localization.json",
     LOCALIZATION_DIR / "Unique_MachineGun_Localization.json",
     LOCALIZATION_DIR / "DLC1_Localization.json",
+    LOCALIZATION_DIR / "Armor_Localization.json",
 )
 REQUIRED_LANGUAGES = ("English", "Russian")
 VANILLA_EFFECTS = PYTHON_ROOT / "VanillaReference" / "EffectPrototypes.cfg"
@@ -36,7 +37,7 @@ DLC_EFFECT_ROOT = REPO_ROOT / "GameLite/DLCGameData"
 ASSET_SNAPSHOT = REPORT_DIR / "localization_asset_snapshot.json"
 
 EFFECT_SID_RE = re.compile(r"^\s*LocalizationSID\s*=\s*([A-Za-z0-9_]+)\s*$", re.MULTILINE)
-BPRUE_TEXT_SID_RE = re.compile(r"\\b(?:sid_bprue|sid_item_bprue)_[A-Za-z0-9_]+\\b", re.IGNORECASE)
+BPRUE_TEXT_SID_RE = re.compile(r"\b(?:sid_bprue|sid_item_bprue)_[A-Za-z0-9_]+\b", re.IGNORECASE)
 SHOW_RE = re.compile(r"^\s*ShowUpgradeEffect\s*=\s*(true|false)\s*$", re.MULTILINE | re.IGNORECASE)
 REFKEY_RE = re.compile(r"\brefkey=([^}\s]+)")
 PROTOTYPE_RE = re.compile(r"(?ms)^([A-Za-z0-9_]+)\s*:\s*struct\.begin([^\n]*)\n(.*?)^struct\.end")
@@ -144,10 +145,17 @@ def audit_upgrade_model(model, localization_sids: set[str]) -> dict:
 
 def audit_generated_cfg_localization(localization_sids: set[str]) -> dict:
     references: dict[str, set[str]] = defaultdict(set)
-    for path in sorted((REPO_ROOT / "GameLite").rglob("*.cfg")):
-        text = path.read_text(encoding="utf-8", errors="replace")
-        for match in BPRUE_TEXT_SID_RE.finditer(text):
-            references[match.group(0)].add(str(path.relative_to(REPO_ROOT)))
+    cfg_roots = (
+        REPO_ROOT / "GameLite",
+        REPO_ROOT / "Armor" / "GameLite",
+    )
+    for root in cfg_roots:
+        if not root.exists():
+            continue
+        for path in sorted(root.rglob("*.cfg")):
+            text = path.read_text(encoding="utf-8", errors="replace")
+            for match in BPRUE_TEXT_SID_RE.finditer(text):
+                references[match.group(0)].add(str(path.relative_to(REPO_ROOT)))
     missing = []
     case_mismatches = []
     by_lower = {sid.lower(): sid for sid in localization_sids}
