@@ -539,19 +539,32 @@ struct.end
 
 
 def _parse_npc_blocks(text: str) -> dict[str, list[str]]:
-    """Parse top-level NPC structs; sufficient for resolving refkey + Upgrades ownership."""
+    """Parse only depth-0 NPC structs and keep each complete nested block intact."""
     import re
     lines = text.splitlines()
-    starts: list[tuple[int, str]] = []
     root_re = re.compile(r"^([A-Za-z0-9_.-]+)\s*:\s*struct\.begin(?:\s*\{[^}]*\})?\s*$")
-    for index, line in enumerate(lines):
-        match = root_re.match(line)
-        if match:
-            starts.append((index, match.group(1)))
     result: dict[str, list[str]] = {}
-    for pos, (start, sid) in enumerate(starts):
-        end = starts[pos + 1][0] if pos + 1 < len(starts) else len(lines)
-        result[sid] = lines[start:end]
+    index = 0
+
+    while index < len(lines):
+        match = root_re.match(lines[index])
+        if not match:
+            index += 1
+            continue
+
+        sid = match.group(1)
+        start = index
+        depth = 0
+        while index < len(lines):
+            line = lines[index]
+            depth += len(re.findall(r"\bstruct\.begin\b", line))
+            depth -= len(re.findall(r"\bstruct\.end\b", line))
+            index += 1
+            if depth == 0:
+                break
+
+        result[sid] = lines[start:index]
+
     return result
 
 
@@ -695,7 +708,7 @@ def main() -> None:
     NPC_OUTPUT_PATH.write_text(npc_text, encoding="utf-8")
 
     # Guard the module boundary: this generator must never write into Main/GameLite.
-    for path in (ARMOR_PATCH_PATH, UPGRADE_OUTPUT_PATH, EFFECT_OUTPUT_PATH):
+    for path in (ARMOR_PATCH_PATH, UPGRADE_OUTPUT_PATH, EFFECT_OUTPUT_PATH, NPC_OUTPUT_PATH):
         if ARMOR_ROOT not in path.parents:
             raise ValueError(f"Armor generator attempted to write outside Armor/: {path}")
 
