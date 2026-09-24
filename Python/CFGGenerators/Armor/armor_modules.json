@@ -11,7 +11,7 @@
         "HELMET": [
           {
             "type": "ProtectionStrike",
-            "value": "10%",
+            "value": "25%",
             "positive": "Positive"
           },
           {
@@ -23,7 +23,7 @@
         "SUIT": [
           {
             "type": "ProtectionStrike",
-            "value": "15%",
+            "value": "30%",
             "positive": "Positive"
           },
           {
@@ -35,7 +35,7 @@
         "FULL_BODY_SUIT": [
           {
             "type": "ProtectionStrike",
-            "value": "20%",
+            "value": "40%",
             "positive": "Positive"
           },
           {
@@ -80,7 +80,7 @@
           },
           {
             "type": "RegenStamina",
-            "value": "10%",
+            "value": "5%",
             "positive": "Positive"
           },
           {
@@ -97,7 +97,7 @@
           },
           {
             "type": "RegenStamina",
-            "value": "10%",
+            "value": "5%",
             "positive": "Positive"
           },
           {
@@ -117,22 +117,6 @@
         "FULL_BODY_SUIT": 4500
       },
       "effects": {
-        "HELMET": [
-          {
-            "type": "Composite",
-            "value": "5%",
-            "positive": "Positive",
-            "composite": [
-              "AdditionalInventoryWeight",
-              "PenaltyLessWeight"
-            ]
-          },
-          {
-            "type": "RegenStamina",
-            "value": "-5%",
-            "positive": "Negative"
-          }
-        ],
         "SUIT": [
           {
             "type": "Composite",
@@ -145,14 +129,14 @@
           },
           {
             "type": "RegenStamina",
-            "value": "-10%",
+            "value": "-5%",
             "positive": "Negative"
           }
         ],
         "FULL_BODY_SUIT": [
           {
             "type": "Composite",
-            "value": "15%",
+            "value": "20%",
             "positive": "Positive",
             "composite": [
               "AdditionalInventoryWeight",
@@ -179,19 +163,19 @@
         "HELMET": [
           {
             "type": "MaxDurability",
-            "value": "15%",
+            "value": "20%",
             "positive": "Positive"
           },
           {
             "type": "ArmorItemWeight",
-            "value": 0.25,
+            "value": 0.5,
             "positive": "Negative"
           }
         ],
         "SUIT": [
           {
             "type": "MaxDurability",
-            "value": "20%",
+            "value": "25%",
             "positive": "Positive"
           },
           {
@@ -203,7 +187,7 @@
         "FULL_BODY_SUIT": [
           {
             "type": "MaxDurability",
-            "value": "25%",
+            "value": "30%",
             "positive": "Positive"
           },
           {
@@ -226,36 +210,36 @@
         "HELMET": [
           {
             "type": "ProtectionBurn",
-            "value": "10%",
-            "positive": "Positive"
-          },
-          {
-            "type": "ProtectionShock",
-            "value": "-5%",
-            "positive": "Negative"
-          }
-        ],
-        "SUIT": [
-          {
-            "type": "ProtectionBurn",
-            "value": "15%",
-            "positive": "Positive"
-          },
-          {
-            "type": "ProtectionShock",
-            "value": "-10%",
-            "positive": "Negative"
-          }
-        ],
-        "FULL_BODY_SUIT": [
-          {
-            "type": "ProtectionBurn",
             "value": "20%",
             "positive": "Positive"
           },
           {
             "type": "ProtectionShock",
             "value": "-10%",
+            "positive": "Negative"
+          }
+        ],
+        "SUIT": [
+          {
+            "type": "ProtectionBurn",
+            "value": "30%",
+            "positive": "Positive"
+          },
+          {
+            "type": "ProtectionShock",
+            "value": "-15%",
+            "positive": "Negative"
+          }
+        ],
+        "FULL_BODY_SUIT": [
+          {
+            "type": "ProtectionBurn",
+            "value": "40%",
+            "positive": "Positive"
+          },
+          {
+            "type": "ProtectionShock",
+            "value": "-20%",
             "positive": "Negative"
           }
         ]
@@ -273,36 +257,36 @@
         "HELMET": [
           {
             "type": "ProtectionShock",
-            "value": "10%",
-            "positive": "Positive"
-          },
-          {
-            "type": "ProtectionBurn",
-            "value": "-5%",
-            "positive": "Negative"
-          }
-        ],
-        "SUIT": [
-          {
-            "type": "ProtectionShock",
-            "value": "15%",
-            "positive": "Positive"
-          },
-          {
-            "type": "ProtectionBurn",
-            "value": "-10%",
-            "positive": "Negative"
-          }
-        ],
-        "FULL_BODY_SUIT": [
-          {
-            "type": "ProtectionShock",
             "value": "20%",
             "positive": "Positive"
           },
           {
             "type": "ProtectionBurn",
             "value": "-10%",
+            "positive": "Negative"
+          }
+        ],
+        "SUIT": [
+          {
+            "type": "ProtectionShock",
+            "value": "30%",
+            "positive": "Positive"
+          },
+          {
+            "type": "ProtectionBurn",
+            "value": "-15%",
+            "positive": "Negative"
+          }
+        ],
+        "FULL_BODY_SUIT": [
+          {
+            "type": "ProtectionShock",
+            "value": "40%",
+            "positive": "Positive"
+          },
+          {
+            "type": "ProtectionBurn",
+            "value": "-20%",
             "positive": "Negative"
           }
         ]
@@ -320,7 +304,7 @@
         "HELMET": [
           {
             "type": "ProtectionChemical",
-            "value": "10%",
+            "value": "20%",
             "positive": "Positive"
           },
           {
@@ -332,19 +316,19 @@
         "SUIT": [
           {
             "type": "ProtectionChemical",
-            "value": "15%",
+            "value": "30%",
             "positive": "Positive"
           },
           {
             "type": "RegenStamina",
-            "value": "-10%",
+            "value": "-5%",
             "positive": "Negative"
           }
         ],
         "FULL_BODY_SUIT": [
           {
             "type": "ProtectionChemical",
-            "value": "20%",
+            "value": "40%",
             "positive": "Positive"
           },
           {
@@ -384,7 +368,7 @@
           },
           {
             "type": "ArmorItemWeight",
-            "value": 0.75,
+            "value": 0.5,
             "positive": "Negative"
           }
         ],
@@ -396,7 +380,33 @@
           },
           {
             "type": "ArmorItemWeight",
-            "value": 1,
+            "value": 0.75,
+            "positive": "Negative"
+          }
+        ]
+      },
+      "group": "UTILITY"
+    },
+    "ENHANCED_FILTRATION": {
+      "name": "Enhanced Filtration",
+      "cost": {
+        "HELMET": 2200
+      },
+      "effects": {
+        "HELMET": [
+          {
+            "type": "ProtectionChemical",
+            "value": "20%",
+            "positive": "Positive"
+          },
+          {
+            "type": "ProtectionRadiation",
+            "value": "10%",
+            "positive": "Positive"
+          },
+          {
+            "type": "MaxDurability",
+            "value": "-15%",
             "positive": "Negative"
           }
         ]
