@@ -10,6 +10,7 @@ CONTENT_ROOT = PYTHON_ROOT.parent
 ARMOR_ROOT = CONTENT_ROOT / "Armor"
 ARMOR_GAME_ROOT = ARMOR_ROOT / "GameLite"
 CONFIG_PATH = SCRIPT_DIR / "armor_signatures.json"
+MODULE_CONFIG_PATH = SCRIPT_DIR / "armor_modules.json"
 CLASSIFICATION_PATH = PYTHON_ROOT / "AnalysisArmor" / "Reports" / "armor_classification.json"
 UPGRADE_MAPPING_PATH = PYTHON_ROOT / "AnalysisArmor" / "Reports" / "armor_upgrade_mapping.json"
 UPGRADE_DETAILS_PATH = PYTHON_ROOT / "AnalysisArmor" / "Reports" / "armor_upgrade_details.json"
@@ -65,13 +66,18 @@ class ArmorUpgradeDefinition:
     cost: int
     effects: tuple[str, ...]
     tier_index: int
+    family: str
+    image: str | None = None
     required_upgrade_sid: str | None = None
     horizontal_position: int | None = None
     vertical_position: str | None = None
 
 
 def load_config() -> dict:
-    return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
+    config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
+    module_config = json.loads(MODULE_CONFIG_PATH.read_text(encoding="utf-8"))
+    config["generic_modules"] = module_config["modules"]
+    return config
 
 
 def load_classification() -> dict:
@@ -113,9 +119,39 @@ def build_upgrades(config: dict | None = None, classification: dict | None = Non
                     cost=int(tier_cfg["cost"]),
                     effects=tuple(tier_cfg["effects"]),
                     tier_index=tier_index,
+                    family=f"FACTION:{faction}",
+                    image=faction_module_image(faction),
                     required_upgrade_sid=previous_sid,
                 ))
                 previous_sid = sid
+
+    # Generic faction-agnostic modules: one independent trade-off upgrade per armor.
+    for armor in classification["armors"]:
+        category = armor["category"]
+        armor_sid = armor["sid"]
+        for module_id, module_cfg in config.get("generic_modules", {}).items():
+            category_effects = module_cfg["effects"].get(category)
+            if not category_effects:
+                continue
+            effect_sids = []
+            for index, effect in enumerate(category_effects):
+                effect_sids.append(f"BPRUE_Armor_Generic_{module_id}_{category}_Effect_{index + 1}")
+            module_slug = module_id.title().replace("_", "")
+            result.append(ArmorUpgradeDefinition(
+                sid=f"{armor_sid}_Upgrade_BPRUE_GENERIC_{module_slug}",
+                armor_sid=armor_sid,
+                faction="GENERIC",
+                category=category,
+                signature="Generic",
+                target_part="Body",
+                text_sid=f"sid_bprue_armor_generic_{module_id.lower()}_name",
+                hint_sid=f"sid_bprue_armor_generic_{module_id.lower()}_{category.lower()}_description",
+                cost=int(module_cfg["cost"][category]),
+                effects=tuple(effect_sids),
+                tier_index=0,
+                family=f"GENERIC:{module_id}",
+                image=DEFAULT_ICON,
+            ))
 
     result = apply_layout(result)
     validate(result)
@@ -176,16 +212,21 @@ def apply_layout(upgrades: list[ArmorUpgradeDefinition]) -> list[ArmorUpgradeDef
         if vanilla_sids is None:
             raise ValueError(f"{armor_sid}: missing Vanilla UpgradePrototypeSIDs mapping")
         occupied = _vanilla_module_columns(armor_sid, vanilla_sids, details)
-        target, horizontal = _first_free_armor_column(tiers[0].target_part, occupied)
-        for upgrade in sorted(tiers, key=lambda item: item.tier_index):
-            if upgrade.tier_index >= len(VERTICALS):
-                raise ValueError(f"{armor_sid}: armor signature exceeds {len(VERTICALS)} vertical tier slots")
-            resolved.append(replace(
-                upgrade,
-                target_part=target,
-                horizontal_position=None if horizontal == 0 else horizontal,
-                vertical_position=VERTICALS[upgrade.tier_index],
-            ))
+        families: dict[str, list[ArmorUpgradeDefinition]] = defaultdict(list)
+        for upgrade in tiers:
+            families[upgrade.family].append(upgrade)
+        for family, family_upgrades in families.items():
+            target, horizontal = _first_free_armor_column(family_upgrades[0].target_part, occupied)
+            occupied.add((target, horizontal))
+            for upgrade in sorted(family_upgrades, key=lambda item: item.tier_index):
+                if upgrade.tier_index >= len(VERTICALS):
+                    raise ValueError(f"{armor_sid}: armor module family {family} exceeds {len(VERTICALS)} vertical tier slots")
+                resolved.append(replace(
+                    upgrade,
+                    target_part=target,
+                    horizontal_position=None if horizontal == 0 else horizontal,
+                    vertical_position=VERTICALS[upgrade.tier_index],
+                ))
     return resolved
 
 
@@ -224,7 +265,7 @@ def render_upgrade_fragment(upgrades: list[ArmorUpgradeDefinition]) -> str:
             f"   SID = {upgrade.sid}",
             f"   Text = {upgrade.text_sid}",
             f"   Hint = {upgrade.hint_sid}",
-            f"   Image = {faction_module_image(upgrade.faction)}",
+            f"   Image = {upgrade.image or DEFAULT_ICON}",
             f"   Icon = {DEFAULT_ICON}",
             f"   BaseCost = {upgrade.cost}",
             *([f"   HorizontalPosition = {upgrade.horizontal_position}"] if upgrade.horizontal_position is not None else []),
@@ -334,7 +375,18 @@ def _render_effect(sid: str, spec: dict) -> list[str]:
 
 def render_effects(config: dict | None = None) -> str:
     config = config or load_config()
-    definitions = config.get("effect_prototypes", {})
+    definitions = dict(config.get("effect_prototypes", {}))
+    for module_id, module_cfg in config.get("generic_modules", {}).items():
+        for category, effects in module_cfg["effects"].items():
+            for index, spec in enumerate(effects):
+                sid = f"BPRUE_Armor_Generic_{module_id}_{category}_Effect_{index + 1}"
+                if spec["type"] == "Composite":
+                    children = []
+                    for child_index, child_type in enumerate(spec.get("composite", [])):
+                        children.append({"sid": f"{sid}_Child_{child_index + 1}", "type": child_type, "value": spec["value"], "show": False, "positive": spec.get("positive")})
+                    definitions[sid] = {"type": "Composite", "value": spec["value"], "show": True, "positive": spec.get("positive"), "extra_effects": children}
+                else:
+                    definitions[sid] = spec
     referenced = {
         effect_sid
         for faction_cfg in config["prototype_factions"].values()
@@ -343,6 +395,12 @@ def render_effects(config: dict | None = None) -> str:
         for tier_cfg in category_cfg["tiers"]
         for effect_sid in tier_cfg["effects"]
     }
+    referenced.update(
+        f"BPRUE_Armor_Generic_{module_id}_{category}_Effect_{index + 1}"
+        for module_id, module_cfg in config.get("generic_modules", {}).items()
+        for category, effects in module_cfg["effects"].items()
+        for index, _ in enumerate(effects)
+    )
 
     missing = sorted(referenced - set(definitions))
     if missing:
