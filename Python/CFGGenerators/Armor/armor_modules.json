@@ -1,0 +1,399 @@
+{
+  "modules": {
+    "REINFORCED_PLATING": {
+      "name": "Reinforced Plating",
+      "cost": {
+        "HELMET": 1800,
+        "SUIT": 3000,
+        "FULL_BODY_SUIT": 4200
+      },
+      "effects": {
+        "HELMET": [
+          {
+            "type": "ProtectionStrike",
+            "value": "10%",
+            "positive": "Positive"
+          },
+          {
+            "type": "ArmorItemWeight",
+            "value": 0.5,
+            "positive": "Negative"
+          }
+        ],
+        "SUIT": [
+          {
+            "type": "ProtectionStrike",
+            "value": "15%",
+            "positive": "Positive"
+          },
+          {
+            "type": "ArmorItemWeight",
+            "value": 1,
+            "positive": "Negative"
+          }
+        ],
+        "FULL_BODY_SUIT": [
+          {
+            "type": "ProtectionStrike",
+            "value": "20%",
+            "positive": "Positive"
+          },
+          {
+            "type": "ArmorItemWeight",
+            "value": 1.5,
+            "positive": "Negative"
+          }
+        ]
+      }
+    },
+    "LIGHTWEIGHT_MATERIALS": {
+      "name": "Lightweight Materials",
+      "cost": {
+        "HELMET": 1800,
+        "SUIT": 3000,
+        "FULL_BODY_SUIT": 4200
+      },
+      "effects": {
+        "HELMET": [
+          {
+            "type": "ArmorItemWeight",
+            "value": -0.5,
+            "positive": "Positive"
+          },
+          {
+            "type": "RegenStamina",
+            "value": "5%",
+            "positive": "Positive"
+          },
+          {
+            "type": "MaxDurability",
+            "value": "-10%",
+            "positive": "Negative"
+          }
+        ],
+        "SUIT": [
+          {
+            "type": "ArmorItemWeight",
+            "value": -1,
+            "positive": "Positive"
+          },
+          {
+            "type": "RegenStamina",
+            "value": "10%",
+            "positive": "Positive"
+          },
+          {
+            "type": "MaxDurability",
+            "value": "-15%",
+            "positive": "Negative"
+          }
+        ],
+        "FULL_BODY_SUIT": [
+          {
+            "type": "ArmorItemWeight",
+            "value": -1.5,
+            "positive": "Positive"
+          },
+          {
+            "type": "RegenStamina",
+            "value": "10%",
+            "positive": "Positive"
+          },
+          {
+            "type": "MaxDurability",
+            "value": "-20%",
+            "positive": "Negative"
+          }
+        ]
+      }
+    },
+    "LOAD_BEARING_SYSTEM": {
+      "name": "Load-Bearing System",
+      "cost": {
+        "HELMET": 1800,
+        "SUIT": 3200,
+        "FULL_BODY_SUIT": 4500
+      },
+      "effects": {
+        "HELMET": [
+          {
+            "type": "Composite",
+            "value": "5%",
+            "positive": "Positive",
+            "composite": [
+              "AdditionalInventoryWeight",
+              "PenaltyLessWeight"
+            ]
+          },
+          {
+            "type": "RegenStamina",
+            "value": "-5%",
+            "positive": "Negative"
+          }
+        ],
+        "SUIT": [
+          {
+            "type": "Composite",
+            "value": "15%",
+            "positive": "Positive",
+            "composite": [
+              "AdditionalInventoryWeight",
+              "PenaltyLessWeight"
+            ]
+          },
+          {
+            "type": "RegenStamina",
+            "value": "-10%",
+            "positive": "Negative"
+          }
+        ],
+        "FULL_BODY_SUIT": [
+          {
+            "type": "Composite",
+            "value": "15%",
+            "positive": "Positive",
+            "composite": [
+              "AdditionalInventoryWeight",
+              "PenaltyLessWeight"
+            ]
+          },
+          {
+            "type": "RegenStamina",
+            "value": "-10%",
+            "positive": "Negative"
+          }
+        ]
+      }
+    },
+    "HARDENED_COMPONENTS": {
+      "name": "Hardened Components",
+      "cost": {
+        "HELMET": 1600,
+        "SUIT": 2800,
+        "FULL_BODY_SUIT": 4000
+      },
+      "effects": {
+        "HELMET": [
+          {
+            "type": "MaxDurability",
+            "value": "15%",
+            "positive": "Positive"
+          },
+          {
+            "type": "ArmorItemWeight",
+            "value": 0.25,
+            "positive": "Negative"
+          }
+        ],
+        "SUIT": [
+          {
+            "type": "MaxDurability",
+            "value": "20%",
+            "positive": "Positive"
+          },
+          {
+            "type": "ArmorItemWeight",
+            "value": 0.75,
+            "positive": "Negative"
+          }
+        ],
+        "FULL_BODY_SUIT": [
+          {
+            "type": "MaxDurability",
+            "value": "25%",
+            "positive": "Positive"
+          },
+          {
+            "type": "ArmorItemWeight",
+            "value": 1,
+            "positive": "Negative"
+          }
+        ]
+      }
+    },
+    "THERMAL_INSULATION": {
+      "name": "Thermal Insulation",
+      "cost": {
+        "HELMET": 1600,
+        "SUIT": 2800,
+        "FULL_BODY_SUIT": 4000
+      },
+      "effects": {
+        "HELMET": [
+          {
+            "type": "ProtectionBurn",
+            "value": "10%",
+            "positive": "Positive"
+          },
+          {
+            "type": "ProtectionShock",
+            "value": "-5%",
+            "positive": "Negative"
+          }
+        ],
+        "SUIT": [
+          {
+            "type": "ProtectionBurn",
+            "value": "15%",
+            "positive": "Positive"
+          },
+          {
+            "type": "ProtectionShock",
+            "value": "-10%",
+            "positive": "Negative"
+          }
+        ],
+        "FULL_BODY_SUIT": [
+          {
+            "type": "ProtectionBurn",
+            "value": "20%",
+            "positive": "Positive"
+          },
+          {
+            "type": "ProtectionShock",
+            "value": "-10%",
+            "positive": "Negative"
+          }
+        ]
+      }
+    },
+    "CONDUCTIVE_MESH": {
+      "name": "Conductive Mesh",
+      "cost": {
+        "HELMET": 1600,
+        "SUIT": 2800,
+        "FULL_BODY_SUIT": 4000
+      },
+      "effects": {
+        "HELMET": [
+          {
+            "type": "ProtectionShock",
+            "value": "10%",
+            "positive": "Positive"
+          },
+          {
+            "type": "ProtectionBurn",
+            "value": "-5%",
+            "positive": "Negative"
+          }
+        ],
+        "SUIT": [
+          {
+            "type": "ProtectionShock",
+            "value": "15%",
+            "positive": "Positive"
+          },
+          {
+            "type": "ProtectionBurn",
+            "value": "-10%",
+            "positive": "Negative"
+          }
+        ],
+        "FULL_BODY_SUIT": [
+          {
+            "type": "ProtectionShock",
+            "value": "20%",
+            "positive": "Positive"
+          },
+          {
+            "type": "ProtectionBurn",
+            "value": "-10%",
+            "positive": "Negative"
+          }
+        ]
+      }
+    },
+    "CHEMICAL_SEALING": {
+      "name": "Chemical Sealing",
+      "cost": {
+        "HELMET": 1800,
+        "SUIT": 3000,
+        "FULL_BODY_SUIT": 4300
+      },
+      "effects": {
+        "HELMET": [
+          {
+            "type": "ProtectionChemical",
+            "value": "10%",
+            "positive": "Positive"
+          },
+          {
+            "type": "RegenStamina",
+            "value": "-5%",
+            "positive": "Negative"
+          }
+        ],
+        "SUIT": [
+          {
+            "type": "ProtectionChemical",
+            "value": "15%",
+            "positive": "Positive"
+          },
+          {
+            "type": "RegenStamina",
+            "value": "-10%",
+            "positive": "Negative"
+          }
+        ],
+        "FULL_BODY_SUIT": [
+          {
+            "type": "ProtectionChemical",
+            "value": "20%",
+            "positive": "Positive"
+          },
+          {
+            "type": "RegenStamina",
+            "value": "-10%",
+            "positive": "Negative"
+          }
+        ]
+      }
+    },
+    "RADIATION_LINING": {
+      "name": "Radiation Lining",
+      "cost": {
+        "HELMET": 1800,
+        "SUIT": 3000,
+        "FULL_BODY_SUIT": 4300
+      },
+      "effects": {
+        "HELMET": [
+          {
+            "type": "ProtectionRadiation",
+            "value": "10%",
+            "positive": "Positive"
+          },
+          {
+            "type": "ArmorItemWeight",
+            "value": 0.25,
+            "positive": "Negative"
+          }
+        ],
+        "SUIT": [
+          {
+            "type": "ProtectionRadiation",
+            "value": "15%",
+            "positive": "Positive"
+          },
+          {
+            "type": "ArmorItemWeight",
+            "value": 0.75,
+            "positive": "Negative"
+          }
+        ],
+        "FULL_BODY_SUIT": [
+          {
+            "type": "ProtectionRadiation",
+            "value": "20%",
+            "positive": "Positive"
+          },
+          {
+            "type": "ArmorItemWeight",
+            "value": 1,
+            "positive": "Negative"
+          }
+        ]
+      }
+    }
+  }
+}
