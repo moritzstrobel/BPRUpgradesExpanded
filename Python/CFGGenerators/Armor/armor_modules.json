@@ -44,7 +44,8 @@
             "positive": "Negative"
           }
         ]
-      }
+      },
+      "group": "CONSTRUCTION"
     },
     "LIGHTWEIGHT_MATERIALS": {
       "name": "Lightweight Materials",
@@ -105,7 +106,8 @@
             "positive": "Negative"
           }
         ]
-      }
+      },
+      "group": "CONSTRUCTION"
     },
     "LOAD_BEARING_SYSTEM": {
       "name": "Load-Bearing System",
@@ -163,7 +165,8 @@
             "positive": "Negative"
           }
         ]
-      }
+      },
+      "group": "UTILITY"
     },
     "HARDENED_COMPONENTS": {
       "name": "Hardened Components",
@@ -209,7 +212,8 @@
             "positive": "Negative"
           }
         ]
-      }
+      },
+      "group": "CONSTRUCTION"
     },
     "THERMAL_INSULATION": {
       "name": "Thermal Insulation",
@@ -255,7 +259,8 @@
             "positive": "Negative"
           }
         ]
-      }
+      },
+      "group": "ENVIRONMENTAL"
     },
     "CONDUCTIVE_MESH": {
       "name": "Conductive Mesh",
@@ -301,7 +306,8 @@
             "positive": "Negative"
           }
         ]
-      }
+      },
+      "group": "ENVIRONMENTAL"
     },
     "CHEMICAL_SEALING": {
       "name": "Chemical Sealing",
@@ -347,7 +353,8 @@
             "positive": "Negative"
           }
         ]
-      }
+      },
+      "group": "ENVIRONMENTAL"
     },
     "RADIATION_LINING": {
       "name": "Radiation Lining",
@@ -393,7 +400,8 @@
             "positive": "Negative"
           }
         ]
-      }
+      },
+      "group": "UTILITY"
     }
   }
 }
