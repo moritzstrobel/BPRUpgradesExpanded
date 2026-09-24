@@ -3,6 +3,7 @@ from __future__ import annotations
 from technician_support import (
     dlc_technician_general_setups,
     technician_upgrade_assignments,
+    vanilla_technician_upgrade_owners,
     vanilla_technician_direct_upgrade_indices,
 )
 from upgrade_build_model import UpgradeBuildModel, UpgradeDefinition
@@ -35,6 +36,7 @@ GROUP_ICON_FALLBACKS = {
 # the target caliber. This matters especially for 9x19, whose trade-offs differ
 # depending on the source weapon's original caliber.
 CALIBER_HINT_EFFECT_MARKERS = (
+    (("BPRUE_ChangeCaliber762x39Effect", "BPRUE_DamagePos15Effect", "BPRUE_RecoilPenalty15Effect", "BPRUE_Shared_FlatnessPenalty10Effect"), "sid_bprue_caliber_762x39_tradeoff_description"),
     (("BPRUE_DamagePos15Effect", "BPRUE_ArmorPiercingPos15Effect", "BPRUE_RecoilPenalty25Effect"), "sid_bprue_caliber_762_eastern_tradeoff_description"),
     (("BPRUE_DamagePos10Effect", "BPRUE_ArmorPiercingPos15Effect", "BPRUE_RecoilPenalty20Effect", "BPRUE_DurabilityPerShotNeg15Effect"), "sid_bprue_caliber_762_nato_tradeoff_description"),
     (("BPRUE_SMG_DamagePos10Effect", "BPRUE_SMG_EffectiveRangePos10Effect", "BPRUE_SMG_RecoilPenalty10Effect"), "sid_bprue_smg_caliber_918_to_919_description"),
@@ -47,6 +49,8 @@ CALIBER_HINT_EFFECT_MARKERS = (
 
 
 def semantic_upgrade_icon(upgrade: UpgradeDefinition) -> str:
+    if upgrade.preserve_icon:
+        return upgrade.icon
     for needles, icon_name in EFFECT_ICON_RULES:
         if any(needle in effect for effect in upgrade.effects for needle in needles): return _vanilla_icon(icon_name)
     fallback = GROUP_ICON_FALLBACKS.get(upgrade.group)
@@ -54,7 +58,7 @@ def semantic_upgrade_icon(upgrade: UpgradeDefinition) -> str:
 
 
 def semantic_upgrade_hint(upgrade: UpgradeDefinition) -> str:
-    if upgrade.group != "Caliber": return upgrade.hint_sid
+    if upgrade.group not in ("Caliber", "AdditionalCaliber"): return upgrade.hint_sid
     effect_set = set(upgrade.effects)
     for markers, hint_sid in CALIBER_HINT_EFFECT_MARKERS:
         if all(marker in effect_set for marker in markers): return hint_sid
@@ -62,6 +66,8 @@ def semantic_upgrade_hint(upgrade: UpgradeDefinition) -> str:
 
 
 def upgrade_module_image(upgrade: UpgradeDefinition) -> str:
+    if upgrade.module_image:
+        return upgrade.module_image
     return BPRUE_UNIQUE_MODULE_IMAGE if upgrade.group == "Signature" else BPRUE_MODULE_IMAGE
 
 
@@ -74,6 +80,8 @@ def _render_upgrade(upgrade: UpgradeDefinition, fallback_template: str | None = 
     lines.append(f"   UpgradeTargetPart = EUpgradeTargetPartType::{upgrade.target_part}")
     if upgrade.effects:
         lines.append("   EffectPrototypeSIDs : struct.begin"); lines += [f"      [{i}] = {effect}" for i, effect in enumerate(upgrade.effects)]; lines.append("   struct.end")
+    if upgrade.required_upgrade_sids:
+        lines.append("   RequiredUpgradePrototypeSIDs : struct.begin"); lines += [f"      [{i}] = {sid}" for i, sid in enumerate(upgrade.required_upgrade_sids)]; lines.append("   struct.end")
     if upgrade.blocking_sids:
         lines.append("   BlockingUpgradePrototypeSIDs : struct.begin"); lines += [f"      [{i}] = {sid}" for i, sid in enumerate(upgrade.blocking_sids)]; lines.append("   struct.end")
     return lines + ["struct.end", ""]
@@ -128,16 +136,13 @@ def render_technician_patch(
     dlc_models: dict[str, UpgradeBuildModel] | None = None,
 ) -> str:
     assignments = technician_upgrade_assignments(model)
-    direct_owners = vanilla_technician_direct_upgrade_indices()
 
     # DLC upgrades live in separate models, but technician capability still lives
-    # in BaseGame NPCPrototypes. Merge them into the same indexed NPC patch.
+    # in BaseGame NPCPrototypes. Merge them into the same per-technician list.
     for content_pack, dlc_model in sorted((dlc_models or {}).items()):
         support = dlc_technician_general_setups(content_pack)
         candidates = dlc_model.technician_upgrades()
         for technician_sid, supported_setups in support.items():
-            if technician_sid not in direct_owners:
-                continue
             additions = [
                 upgrade
                 for upgrade in candidates
@@ -145,22 +150,44 @@ def render_technician_patch(
             ]
             assignments.setdefault(technician_sid, []).extend(additions)
 
+    # UpgradeAway demonstrates a useful CFG pattern for inherited technicians:
+    # materialize the concrete NPC's Upgrades node and give it an explicit
+    # refkey to a standalone named upgrade-list struct. This avoids relying on
+    # a bpatch against an Upgrades node that only exists through NPC refkey
+    # inheritance.
     lines = [
         "// AUTO-GENERATED - BPRUE upgrades follow each technician's effective Vanilla/DLC weapon support.",
-        "// Only technicians that directly own a Vanilla Upgrades array are patched.",
-        "// Entries continue after Vanilla numeric indices; wildcard append is intentionally avoided.",
+        "// Each technician gets a standalone BPRUE upgrade-list struct and explicitly references it",
+        "// from Upgrades via {bpatch;refkey=...}, following the proven UpgradeAway CFG pattern.",
+        "// Lists remain technician-specific: BPRUE does not grant every upgrade to every technician.",
         "",
     ]
+
+    rendered: list[tuple[str, str]] = []
     for technician_sid, upgrades in assignments.items():
         if not upgrades:
             continue
-        # Keep one occurrence per SID while preserving BaseGame -> DLC order.
         upgrades = list({upgrade.sid: upgrade for upgrade in upgrades}.values())
-        next_index = direct_owners[technician_sid] + 1
-        lines += [f"{technician_sid} : struct.begin {{bpatch}}", "   Upgrades : struct.begin {bpatch}"]
-        for offset, upgrade in enumerate(upgrades):
-            lines += [f"      [{next_index + offset}] : struct.begin", f"         UpgradePrototypeSID = {upgrade.sid}", "         Enabled = true", "      struct.end"]
-        lines += ["   struct.end", "struct.end", ""]
+        list_sid = f"BPRUE_{technician_sid}_UpgradeList"
+        rendered.append((technician_sid, list_sid))
+
+        lines += [f"{list_sid} : struct.begin"]
+        for upgrade in upgrades:
+            lines += [
+                f"   {upgrade.sid} : struct.begin",
+                f"      UpgradePrototypeSID = {upgrade.sid}",
+                "      Enabled = true",
+                "   struct.end",
+            ]
+        lines += ["struct.end", ""]
+
+    for technician_sid, list_sid in rendered:
+        lines += [
+            f"{technician_sid} : struct.begin {{bpatch}}",
+            f"   Upgrades : struct.begin {{bpatch;refkey={list_sid}}}",
+            "   struct.end",
+            "struct.end",
+            "",
+        ]
+
     return "\n".join(lines).rstrip() + "\n"
-
-

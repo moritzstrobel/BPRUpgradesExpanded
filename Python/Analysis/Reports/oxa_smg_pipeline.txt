@@ -1,0 +1,708 @@
+BPRUE <-> OXA SMG pipeline
+==========================
+SMGs=11 groups=22 findings=0 severity={}
+Compat property changes=0 suspicious=0
+
+GunAKU_PP: hashes V=185bea7a2d84 O=ca49ebc93c02 B=a2f39a3d4620 F=a2f39a3d4620 | changes=18 compat=0 suspicious=0
+GunBucket_PP: hashes V=1748ab7408a0 O=347b04614d53 B=f150dc894565 F=f150dc894565 | changes=10 compat=0 suspicious=0
+GunFora230_PP_GS: hashes V=34a6c79fe516 O=0da6d28331b4 B=0da6d28331b4 F=0da6d28331b4 | changes=13 compat=0 suspicious=0
+GunIntegral_PP: hashes V=47269c571681 O=bd6226efa5ba B=475d5c7c4480 F=475d5c7c4480 | changes=13 compat=0 suspicious=0
+GunViper_PP: hashes V=4714ab5bcb23 O=9d71ea62395a B=e30d322f264b F=e30d322f264b | changes=14 compat=0 suspicious=0
+GunZubr_PP: hashes V=4c33ad6ee665 O=f41e33447275 B=f41e33447275 F=f41e33447275 | changes=15 compat=0 suspicious=0
+Gun_RatKiller_SMG_GS: hashes V=d6459192fa75 O=b9fd898c0479 B=b9fd898c0479 F=b9fd898c0479 | changes=12 compat=0 suspicious=0
+Gun_Shakh_SMG_GS: hashes V=1e33fde61756 O=4f0dba3a2ed3 B=4f0dba3a2ed3 F=4f0dba3a2ed3 | changes=25 compat=0 suspicious=0
+Gun_Silence_SMG_GS: hashes V=16d2905c3ddc O=9a4ca645e829 B=9a4ca645e829 F=9a4ca645e829 | changes=31 compat=0 suspicious=0
+Gun_Spitfire_SMG_GS: hashes V=23df9bb5830d O=728ef31b612e B=728ef31b612e F=728ef31b612e | changes=37 compat=0 suspicious=0
+Gun_Spitter_SMG_GS: hashes V=1d1eaedb160e O=d77ae28ac796 B=d77ae28ac796 F=d77ae28ac796 | changes=26 compat=0 suspicious=0
+
+PROPERTY DIFFS
+==============
+
+=== GunAKU_PP ===
+leaf counts: {'vanilla': 123, 'oxa': 136, 'after_bprue': 136, 'final': 136}
+hashes: {'vanilla': '185bea7a2d84', 'oxa': 'ca49ebc93c02', 'after_bprue': 'a2f39a3d4620', 'final': 'a2f39a3d4620'}
+ Icon | changed=oxa | final_source=vanilla
+    V=Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/... | O=Texture2D'/Standard/Icons/Weapons/AKS74U/Body/T_inv_aks74u.T_inv_aks74u'
+    B=Texture2D'/Standard/Icons/Weapons/AKS74U/Body/T_inv_aks74u.T_inv_aks74u' | F=Texture2D'/Standard/Icons/Weapons/AKS74U/Body/T_inv_aks74u.T_inv_aks74u'
+ ItemGridHeight | changed=oxa | final_source=vanilla
+    V=<missing> | O=2
+    B=2 | F=2
+ ItemGridWidth | changed=oxa | final_source=vanilla
+    V=<missing> | O=5
+    B=5 | F=5
+ MaxJamChance | changed=oxa | final_source=vanilla
+    V=<missing> | O=15.0
+    B=15.0 | F=15.0
+ MaxJamDurabilityThreshold | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.1
+    B=0.1 | F=0.1
+ MinJamChance | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.0
+    B=0.0 | F=0.0
+ MinJamDurabilityThreshold | changed=oxa | final_source=vanilla
+    V=0.7 | O=0.6
+    B=0.6 | F=0.6
+ OffsetAimingConditionSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=ConstTrue
+    B=ConstTrue | F=ConstTrue
+ PreinstalledAttachmentsItemPrototypeSIDs.[0].AttachSID | changed=oxa | final_source=vanilla
+    V=GunAKU_MagDefault | O=AKU_DefaultMuz
+    B=AKU_DefaultMuz | F=AKU_DefaultMuz
+ PreinstalledAttachmentsItemPrototypeSIDs.[1].AttachSID | changed=oxa | final_source=vanilla
+    V=AKU_DefaultMuz | O=GunAKU_MagDefault
+    B=GunAKU_MagDefault | F=GunAKU_MagDefault
+ SectionSettings.[3].SectionIsEnabled | changed=after_bprue | final_source=vanilla
+    V=false | O=false
+    B=true | F=true
+ ToggleOffsetAimingConditionSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=ConstTrue
+    B=ConstTrue | F=ConstTrue
+ ! WeaponReloadTimePerAttachment.[2].AttachPrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=GunAK74_MagIncreased
+    B=GunAK74_MagIncreased | F=GunAK74_MagIncreased
+ ! WeaponReloadTimePerAttachment.[2].FullReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+ ! WeaponReloadTimePerAttachment.[2].TacticalReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+ ! WeaponReloadTimePerAttachment.[3].AttachPrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=GunAK74_MagIncreased2
+    B=GunAK74_MagIncreased2 | F=GunAK74_MagIncreased2
+ ! WeaponReloadTimePerAttachment.[3].FullReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+ ! WeaponReloadTimePerAttachment.[3].TacticalReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+
+=== GunBucket_PP ===
+leaf counts: {'vanilla': 116, 'oxa': 124, 'after_bprue': 124, 'final': 124}
+hashes: {'vanilla': '1748ab7408a0', 'oxa': '347b04614d53', 'after_bprue': 'f150dc894565', 'final': 'f150dc894565'}
+ ! AmmoTypeProjectiles.[2].AmmoType | changed=oxa | final_source=vanilla
+    V=<missing> | O=EAmmoType::Expanding
+    B=EAmmoType::Expanding | F=EAmmoType::Expanding
+ ! AmmoTypeProjectiles.[2].ProjectilePrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=P918
+    B=P918 | F=P918
+ Icon | changed=oxa | final_source=vanilla
+    V=Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/... | O=Texture2D'/Standard/Icons/Weapons/Kiparis/Body/T_inv_kiparis.T_inv_kiparis'
+    B=Texture2D'/Standard/Icons/Weapons/Kiparis/Body/T_inv_kiparis.T_inv_kiparis' | F=Texture2D'/Standard/Icons/Weapons/Kiparis/Body/T_inv_kiparis.T_inv_kiparis'
+ MaxJamChance | changed=oxa | final_source=vanilla
+    V=<missing> | O=15.0
+    B=15.0 | F=15.0
+ MaxJamDurabilityThreshold | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.15
+    B=0.15 | F=0.15
+ MinJamChance | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.0
+    B=0.0 | F=0.0
+ MinJamDurabilityThreshold | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.65
+    B=0.65 | F=0.65
+ OffsetAimingConditionSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=ConstTrue
+    B=ConstTrue | F=ConstTrue
+ SectionSettings.[1].SectionIsEnabled | changed=after_bprue | final_source=vanilla
+    V=false | O=false
+    B=true | F=true
+ ToggleOffsetAimingConditionSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=ConstTrue
+    B=ConstTrue | F=ConstTrue
+
+=== GunFora230_PP_GS ===
+leaf counts: {'vanilla': 74, 'oxa': 82, 'after_bprue': 82, 'final': 82}
+hashes: {'vanilla': '34a6c79fe516', 'oxa': '0da6d28331b4', 'after_bprue': '0da6d28331b4', 'final': '0da6d28331b4'}
+ ! AmmoTypeProjectiles.[2].AmmoType | changed=oxa | final_source=vanilla
+    V=<missing> | O=EAmmoType::Expanding
+    B=EAmmoType::Expanding | F=EAmmoType::Expanding
+ ! AmmoTypeProjectiles.[2].ProjectilePrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=P919
+    B=P919 | F=P919
+ MaxJamChance | changed=oxa | final_source=vanilla
+    V=<missing> | O=15.0
+    B=15.0 | F=15.0
+ MaxJamDurabilityThreshold | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.2
+    B=0.2 | F=0.2
+ MinJamChance | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.0
+    B=0.0 | F=0.0
+ MinJamDurabilityThreshold | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.7
+    B=0.7 | F=0.7
+ OffsetAimingConditionSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=ConstTrue
+    B=ConstTrue | F=ConstTrue
+ PreinstalledAttachmentsItemPrototypeSIDs.[0].AttachSID | changed=oxa | final_source=vanilla
+    V=GunFora230_DefaultMuz | O=Ironsights_02
+    B=Ironsights_02 | F=Ironsights_02
+ PreinstalledAttachmentsItemPrototypeSIDs.[1].AttachSID | changed=oxa | final_source=vanilla
+    V=Ironsights_02 | O=GunFora230_DefaultMuz
+    B=GunFora230_DefaultMuz | F=GunFora230_DefaultMuz
+ ToggleOffsetAimingConditionSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=ConstTrue
+    B=ConstTrue | F=ConstTrue
+ WeaponJamParams.[0].FullJamTime | changed=oxa | final_source=vanilla
+    V=3.87 | O=5.0
+    B=5.0 | F=5.0
+ WeaponJamParams.[1].FullJamTime | changed=oxa | final_source=vanilla
+    V=3.87 | O=5.0
+    B=5.0 | F=5.0
+ WeaponJamParams.[2].FullJamTime | changed=oxa | final_source=vanilla
+    V=3.87 | O=5.0
+    B=5.0 | F=5.0
+
+=== GunIntegral_PP ===
+leaf counts: {'vanilla': 126, 'oxa': 135, 'after_bprue': 135, 'final': 135}
+hashes: {'vanilla': '47269c571681', 'oxa': 'bd6226efa5ba', 'after_bprue': '475d5c7c4480', 'final': '475d5c7c4480'}
+ ! AmmoTypeProjectiles.[2].AmmoType | changed=oxa | final_source=vanilla
+    V=<missing> | O=EAmmoType::Expanding
+    B=EAmmoType::Expanding | F=EAmmoType::Expanding
+ ! AmmoTypeProjectiles.[2].ProjectilePrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=P919
+    B=P919 | F=P919
+ Icon | changed=oxa | final_source=vanilla
+    V=Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/... | O=Texture2D'/Standard/Icons/Weapons/Vector/Body/T_inv_vector.T_inv_vector'
+    B=Texture2D'/Standard/Icons/Weapons/Vector/Body/T_inv_vector.T_inv_vector' | F=Texture2D'/Standard/Icons/Weapons/Vector/Body/T_inv_vector.T_inv_vector'
+ ItemGridHeight | changed=oxa | final_source=vanilla
+    V=<missing> | O=2
+    B=2 | F=2
+ ItemGridWidth | changed=oxa | final_source=vanilla
+    V=<missing> | O=4
+    B=4 | F=4
+ MaxJamChance | changed=oxa | final_source=vanilla
+    V=5.0 | O=15.0
+    B=15.0 | F=15.0
+ MaxJamDurabilityThreshold | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.2
+    B=0.2 | F=0.2
+ MinJamChance | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.0
+    B=0.0 | F=0.0
+ MinJamDurabilityThreshold | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.7
+    B=0.7 | F=0.7
+ OffsetAimingConditionSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=ConstTrue
+    B=ConstTrue | F=ConstTrue
+ SectionSettings.[1].SectionIsEnabled | changed=after_bprue | final_source=vanilla
+    V=false | O=false
+    B=true | F=true
+ SectionSettings.[3].SectionIsEnabled | changed=after_bprue | final_source=vanilla
+    V=false | O=false
+    B=true | F=true
+ ToggleOffsetAimingConditionSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=ConstTrue
+    B=ConstTrue | F=ConstTrue
+
+=== GunViper_PP ===
+leaf counts: {'vanilla': 120, 'oxa': 130, 'after_bprue': 130, 'final': 130}
+hashes: {'vanilla': '4714ab5bcb23', 'oxa': '9d71ea62395a', 'after_bprue': 'e30d322f264b', 'final': 'e30d322f264b'}
+ ! AmmoTypeProjectiles.[2].AmmoType | changed=oxa | final_source=vanilla
+    V=<missing> | O=EAmmoType::Expanding
+    B=EAmmoType::Expanding | F=EAmmoType::Expanding
+ ! AmmoTypeProjectiles.[2].ProjectilePrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=P919
+    B=P919 | F=P919
+ Icon | changed=oxa | final_source=vanilla
+    V=Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/... | O=Texture2D'/Standard/Icons/Weapons/MP5/Body/T_inv_mp5.T_inv_mp5'
+    B=Texture2D'/Standard/Icons/Weapons/MP5/Body/T_inv_mp5.T_inv_mp5' | F=Texture2D'/Standard/Icons/Weapons/MP5/Body/T_inv_mp5.T_inv_mp5'
+ ItemGridHeight | changed=oxa | final_source=vanilla
+    V=<missing> | O=2
+    B=2 | F=2
+ ItemGridWidth | changed=oxa | final_source=vanilla
+    V=<missing> | O=5
+    B=5 | F=5
+ MaxJamChance | changed=oxa | final_source=vanilla
+    V=<missing> | O=15.0
+    B=15.0 | F=15.0
+ MaxJamDurabilityThreshold | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.2
+    B=0.2 | F=0.2
+ MinJamChance | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.0
+    B=0.0 | F=0.0
+ MinJamDurabilityThreshold | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.7
+    B=0.7 | F=0.7
+ OffsetAimingConditionSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=ConstTrue
+    B=ConstTrue | F=ConstTrue
+ SectionSettings.[1].LeftPosition | changed=after_bprue | final_source=vanilla
+    V=-1.661914 | O=-1.661914
+    B=18.338086 | F=18.338086
+ SectionSettings.[1].SectionIsEnabled | changed=after_bprue | final_source=vanilla
+    V=false | O=false
+    B=true | F=true
+ SectionSettings.[3].SectionIsEnabled | changed=after_bprue | final_source=vanilla
+    V=false | O=false
+    B=true | F=true
+ ToggleOffsetAimingConditionSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=ConstTrue
+    B=ConstTrue | F=ConstTrue
+
+=== GunZubr_PP ===
+leaf counts: {'vanilla': 118, 'oxa': 129, 'after_bprue': 129, 'final': 129}
+hashes: {'vanilla': '4c33ad6ee665', 'oxa': 'f41e33447275', 'after_bprue': 'f41e33447275', 'final': 'f41e33447275'}
+ ! AmmoTypeProjectiles.[2].AmmoType | changed=oxa | final_source=vanilla
+    V=<missing> | O=EAmmoType::Expanding
+    B=EAmmoType::Expanding | F=EAmmoType::Expanding
+ ! AmmoTypeProjectiles.[2].ProjectilePrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=P919
+    B=P919 | F=P919
+ Icon | changed=oxa | final_source=vanilla
+    V=Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/... | O=Texture2D'/Standard/Icons/Weapons/Bizon/Body/T_inv_bizon.T_inv_bizon'
+    B=Texture2D'/Standard/Icons/Weapons/Bizon/Body/T_inv_bizon.T_inv_bizon' | F=Texture2D'/Standard/Icons/Weapons/Bizon/Body/T_inv_bizon.T_inv_bizon'
+ ItemGridHeight | changed=oxa | final_source=vanilla
+    V=<missing> | O=2
+    B=2 | F=2
+ ItemGridWidth | changed=oxa | final_source=vanilla
+    V=<missing> | O=5
+    B=5 | F=5
+ MaxJamChance | changed=oxa | final_source=vanilla
+    V=4.0 | O=15.0
+    B=15.0 | F=15.0
+ MaxJamDurabilityThreshold | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.15
+    B=0.15 | F=0.15
+ MinJamChance | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.0
+    B=0.0 | F=0.0
+ MinJamDurabilityThreshold | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.65
+    B=0.65 | F=0.65
+ OffsetAimingConditionSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=ConstTrue
+    B=ConstTrue | F=ConstTrue
+ PreinstalledAttachmentsItemPrototypeSIDs.[0].AttachSID | changed=oxa | final_source=vanilla
+    V=GunZubr_MagDefault | O=IronsightEnabler
+    B=IronsightEnabler | F=IronsightEnabler
+ PreinstalledAttachmentsItemPrototypeSIDs.[0].bHiddenInInventory | changed=oxa | final_source=vanilla
+    V=true | O=false
+    B=false | F=false
+ PreinstalledAttachmentsItemPrototypeSIDs.[1].AttachSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=GunZubr_MagDefault
+    B=GunZubr_MagDefault | F=GunZubr_MagDefault
+ PreinstalledAttachmentsItemPrototypeSIDs.[1].bHiddenInInventory | changed=oxa | final_source=vanilla
+    V=<missing> | O=true
+    B=true | F=true
+ ToggleOffsetAimingConditionSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=ConstTrue
+    B=ConstTrue | F=ConstTrue
+
+=== Gun_RatKiller_SMG_GS ===
+leaf counts: {'vanilla': 46, 'oxa': 52, 'after_bprue': 52, 'final': 52}
+hashes: {'vanilla': 'd6459192fa75', 'oxa': 'b9fd898c0479', 'after_bprue': 'b9fd898c0479', 'final': 'b9fd898c0479'}
+ ! AmmoCaliber | changed=oxa | final_source=vanilla
+    V=EAmmoCaliber::A918 | O=EAmmoCaliber::A919
+    B=EAmmoCaliber::A919 | F=EAmmoCaliber::A919
+ ! AmmoTypeProjectiles.[0].ProjectilePrototypeSID | changed=oxa | final_source=vanilla
+    V=P918 | O=P919
+    B=P919 | F=P919
+ ! AmmoTypeProjectiles.[1].ProjectilePrototypeSID | changed=oxa | final_source=vanilla
+    V=P918 | O=P919
+    B=P919 | F=P919
+ ! AmmoTypeProjectiles.[2].AmmoType | changed=oxa | final_source=vanilla
+    V=<missing> | O=EAmmoType::Expanding
+    B=EAmmoType::Expanding | F=EAmmoType::Expanding
+ ! AmmoTypeProjectiles.[2].ProjectilePrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=P919
+    B=P919 | F=P919
+ OffsetAimingConditionSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=ConstTrue
+    B=ConstTrue | F=ConstTrue
+ PreinstalledAttachmentsItemPrototypeSIDs.[1].AttachSID | changed=oxa | final_source=vanilla
+    V=Zubr_SinMuz | O=OXABalancedVent_9mm
+    B=OXABalancedVent_9mm | F=OXABalancedVent_9mm
+ PreinstalledAttachmentsItemPrototypeSIDs.[1].bHiddenInInventory | changed=oxa | final_source=vanilla
+    V=true | O=false
+    B=false | F=false
+ PreinstalledAttachmentsItemPrototypeSIDs.[2].AttachSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=OXA_Rail_Scope
+    B=OXA_Rail_Scope | F=OXA_Rail_Scope
+ PreinstalledAttachmentsItemPrototypeSIDs.[2].bHiddenInInventory | changed=oxa | final_source=vanilla
+    V=<missing> | O=true
+    B=true | F=true
+ ToggleOffsetAimingConditionSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=ConstTrue
+    B=ConstTrue | F=ConstTrue
+ ! WeaponStaticMeshParts.[0].MeshPath | changed=oxa | final_source=vanilla
+    V=StaticMesh'/Game/_Stalker_2/weapons/pistol_mashine_gun/pp_zubr0/AnimMesh/SM_wpn_zubr0_S... | O=StaticMesh'/Standard/Weapons/Bizon/Meshes/SM_bizon_ratkiller.SM_bizon_ratkiller'
+    B=StaticMesh'/Standard/Weapons/Bizon/Meshes/SM_bizon_ratkiller.SM_bizon_ratkiller' | F=StaticMesh'/Standard/Weapons/Bizon/Meshes/SM_bizon_ratkiller.SM_bizon_ratkiller'
+
+=== Gun_Shakh_SMG_GS ===
+leaf counts: {'vanilla': 43, 'oxa': 66, 'after_bprue': 66, 'final': 66}
+hashes: {'vanilla': '1e33fde61756', 'oxa': '4f0dba3a2ed3', 'after_bprue': '4f0dba3a2ed3', 'final': '4f0dba3a2ed3'}
+ ! AmmoTypeProjectiles.[0].AmmoType | changed=oxa | final_source=vanilla
+    V=<missing> | O=EAmmoType::Default
+    B=EAmmoType::Default | F=EAmmoType::Default
+ ! AmmoTypeProjectiles.[0].ProjectilePrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=P919
+    B=P919 | F=P919
+ ! AmmoTypeProjectiles.[1].AmmoType | changed=oxa | final_source=vanilla
+    V=<missing> | O=EAmmoType::ArmorPiercing
+    B=EAmmoType::ArmorPiercing | F=EAmmoType::ArmorPiercing
+ ! AmmoTypeProjectiles.[1].ProjectilePrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=P919
+    B=P919 | F=P919
+ ! AmmoTypeProjectiles.[2].AmmoType | changed=oxa | final_source=vanilla
+    V=<missing> | O=EAmmoType::Expanding
+    B=EAmmoType::Expanding | F=EAmmoType::Expanding
+ ! AmmoTypeProjectiles.[2].ProjectilePrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=P919
+    B=P919 | F=P919
+ MaxJamChance | changed=oxa | final_source=vanilla
+    V=<missing> | O=15.0
+    B=15.0 | F=15.0
+ MaxJamDurabilityThreshold | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.2
+    B=0.2 | F=0.2
+ MinJamChance | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.0
+    B=0.0 | F=0.0
+ MinJamDurabilityThreshold | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.7
+    B=0.7 | F=0.7
+ OffsetAimingConditionSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=ConstTrue
+    B=ConstTrue | F=ConstTrue
+ PreinstalledAttachmentsItemPrototypeSIDs.[0].AttachSID | changed=oxa | final_source=vanilla
+    V=Gun_Shakh_MagIncreased | O=GunViper_MagDefault
+    B=GunViper_MagDefault | F=GunViper_MagDefault
+ PreinstalledAttachmentsItemPrototypeSIDs.[1].AttachSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=GunViper_MagIncreased
+    B=GunViper_MagIncreased | F=GunViper_MagIncreased
+ PreinstalledAttachmentsItemPrototypeSIDs.[1].bHiddenInInventory | changed=oxa | final_source=vanilla
+    V=<missing> | O=false
+    B=false | F=false
+ ToggleOffsetAimingConditionSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=ConstTrue
+    B=ConstTrue | F=ConstTrue
+ WeaponJamParams.[0].FullJamTime | changed=oxa | final_source=vanilla
+    V=<missing> | O=3.97
+    B=3.97 | F=3.97
+ WeaponJamParams.[0].JamChanceCoef | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.7
+    B=1.7 | F=1.7
+ WeaponJamParams.[1].FullJamTime | changed=oxa | final_source=vanilla
+    V=<missing> | O=3.97
+    B=3.97 | F=3.97
+ WeaponJamParams.[1].JamChanceCoef | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.7
+    B=1.7 | F=1.7
+ WeaponJamParams.[2].FullJamTime | changed=oxa | final_source=vanilla
+    V=<missing> | O=3.97
+    B=3.97 | F=3.97
+ WeaponJamParams.[2].JamChanceCoef | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.7
+    B=1.7 | F=1.7
+ ! WeaponReloadTimePerAttachment.[0].AttachPrototypeSID | changed=oxa | final_source=vanilla
+    V=Gun_Shakh_MagIncreased | O=GunViper_MagDefault
+    B=GunViper_MagDefault | F=GunViper_MagDefault
+ ! WeaponReloadTimePerAttachment.[1].AttachPrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=GunViper_MagIncreased
+    B=GunViper_MagIncreased | F=GunViper_MagIncreased
+ ! WeaponReloadTimePerAttachment.[1].FullReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+ ! WeaponReloadTimePerAttachment.[1].TacticalReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+
+=== Gun_Silence_SMG_GS ===
+leaf counts: {'vanilla': 47, 'oxa': 71, 'after_bprue': 71, 'final': 71}
+hashes: {'vanilla': '16d2905c3ddc', 'oxa': '9a4ca645e829', 'after_bprue': '9a4ca645e829', 'final': '9a4ca645e829'}
+ ! AmmoTypeProjectiles.[0].AmmoType | changed=oxa | final_source=vanilla
+    V=<missing> | O=EAmmoType::Default
+    B=EAmmoType::Default | F=EAmmoType::Default
+ ! AmmoTypeProjectiles.[0].ProjectilePrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=P545
+    B=P545 | F=P545
+ ! AmmoTypeProjectiles.[1].AmmoType | changed=oxa | final_source=vanilla
+    V=<missing> | O=EAmmoType::ArmorPiercing
+    B=EAmmoType::ArmorPiercing | F=EAmmoType::ArmorPiercing
+ ! AmmoTypeProjectiles.[1].ProjectilePrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=P545
+    B=P545 | F=P545
+ ! AmmoTypeProjectiles.[2].AmmoType | changed=oxa | final_source=vanilla
+    V=<missing> | O=EAmmoType::Expanding
+    B=EAmmoType::Expanding | F=EAmmoType::Expanding
+ ! AmmoTypeProjectiles.[2].ProjectilePrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=P545
+    B=P545 | F=P545
+ MaxJamChance | changed=oxa | final_source=vanilla
+    V=<missing> | O=15.0
+    B=15.0 | F=15.0
+ MaxJamDurabilityThreshold | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.1
+    B=0.1 | F=0.1
+ MinJamChance | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.0
+    B=0.0 | F=0.0
+ MinJamDurabilityThreshold | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.6
+    B=0.6 | F=0.6
+ OffsetAimingConditionSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=ConstTrue
+    B=ConstTrue | F=ConstTrue
+ PreinstalledAttachmentsItemPrototypeSIDs.[0].AttachSID | changed=oxa | final_source=vanilla
+    V=GunAKU_Silence_MagDefault | O=AKU_DefaultMuz
+    B=AKU_DefaultMuz | F=AKU_DefaultMuz
+ PreinstalledAttachmentsItemPrototypeSIDs.[1].AttachSID | changed=oxa | final_source=vanilla
+    V=TopRailAKU | O=GunAKU_Silence_MagDefault
+    B=GunAKU_Silence_MagDefault | F=GunAKU_Silence_MagDefault
+ PreinstalledAttachmentsItemPrototypeSIDs.[2].AttachSID | changed=oxa | final_source=vanilla
+    V=Gun_Silence_Silen | O=OXA_Silen_M6
+    B=OXA_Silen_M6 | F=OXA_Silen_M6
+ PreinstalledAttachmentsItemPrototypeSIDs.[2].bHiddenInInventory | changed=oxa | final_source=vanilla
+    V=true | O=false
+    B=false | F=false
+ PreinstalledAttachmentsItemPrototypeSIDs.[3].AttachSID | changed=oxa | final_source=vanilla
+    V=Gun_Silence_ColimScope | O=RU_ColimScope_1
+    B=RU_ColimScope_1 | F=RU_ColimScope_1
+ PreinstalledAttachmentsItemPrototypeSIDs.[3].bHiddenInInventory | changed=oxa | final_source=vanilla
+    V=true | O=false
+    B=false | F=false
+ ToggleOffsetAimingConditionSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=ConstTrue
+    B=ConstTrue | F=ConstTrue
+ WeaponJamParams.[0].FullJamTime | changed=oxa | final_source=vanilla
+    V=<missing> | O=5.13
+    B=5.13 | F=5.13
+ WeaponJamParams.[0].JamChanceCoef | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.7
+    B=1.7 | F=1.7
+ WeaponJamParams.[1].FullJamTime | changed=oxa | final_source=vanilla
+    V=<missing> | O=5.13
+    B=5.13 | F=5.13
+ WeaponJamParams.[1].JamChanceCoef | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.7
+    B=1.7 | F=1.7
+ WeaponJamParams.[2].FullJamTime | changed=oxa | final_source=vanilla
+    V=<missing> | O=5.13
+    B=5.13 | F=5.13
+ WeaponJamParams.[2].JamChanceCoef | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.7
+    B=1.7 | F=1.7
+ ! WeaponReloadTimePerAttachment.[0].AttachPrototypeSID | changed=oxa | final_source=vanilla
+    V=GunAKU_Silence_MagDefault | O=GunAKU_MagDefault
+    B=GunAKU_MagDefault | F=GunAKU_MagDefault
+ ! WeaponReloadTimePerAttachment.[2].AttachPrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=GunAK74_MagIncreased
+    B=GunAK74_MagIncreased | F=GunAK74_MagIncreased
+ ! WeaponReloadTimePerAttachment.[2].FullReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+ ! WeaponReloadTimePerAttachment.[2].TacticalReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+ ! WeaponReloadTimePerAttachment.[3].AttachPrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=GunAK74_MagIncreased2
+    B=GunAK74_MagIncreased2 | F=GunAK74_MagIncreased2
+ ! WeaponReloadTimePerAttachment.[3].FullReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+ ! WeaponReloadTimePerAttachment.[3].TacticalReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+
+=== Gun_Spitfire_SMG_GS ===
+leaf counts: {'vanilla': 37, 'oxa': 72, 'after_bprue': 72, 'final': 72}
+hashes: {'vanilla': '23df9bb5830d', 'oxa': '728ef31b612e', 'after_bprue': '728ef31b612e', 'final': '728ef31b612e'}
+ ! AmmoTypeProjectiles.[0].AmmoType | changed=oxa | final_source=vanilla
+    V=<missing> | O=EAmmoType::Default
+    B=EAmmoType::Default | F=EAmmoType::Default
+ ! AmmoTypeProjectiles.[0].ProjectilePrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=P545
+    B=P545 | F=P545
+ ! AmmoTypeProjectiles.[1].AmmoType | changed=oxa | final_source=vanilla
+    V=<missing> | O=EAmmoType::ArmorPiercing
+    B=EAmmoType::ArmorPiercing | F=EAmmoType::ArmorPiercing
+ ! AmmoTypeProjectiles.[1].ProjectilePrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=P545
+    B=P545 | F=P545
+ ! AmmoTypeProjectiles.[2].AmmoType | changed=oxa | final_source=vanilla
+    V=<missing> | O=EAmmoType::Expanding
+    B=EAmmoType::Expanding | F=EAmmoType::Expanding
+ ! AmmoTypeProjectiles.[2].ProjectilePrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=P545
+    B=P545 | F=P545
+ MaxJamChance | changed=oxa | final_source=vanilla
+    V=<missing> | O=15.0
+    B=15.0 | F=15.0
+ MaxJamDurabilityThreshold | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.1
+    B=0.1 | F=0.1
+ MinJamChance | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.0
+    B=0.0 | F=0.0
+ MinJamDurabilityThreshold | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.6
+    B=0.6 | F=0.6
+ OffsetAimingConditionSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=ConstTrue
+    B=ConstTrue | F=ConstTrue
+ PreinstalledAttachmentsItemPrototypeSIDs.[0].AttachSID | changed=oxa | final_source=vanilla
+    V=GunSpitfire_MagDefault | O=AKU_DefaultMuz
+    B=AKU_DefaultMuz | F=AKU_DefaultMuz
+ PreinstalledAttachmentsItemPrototypeSIDs.[1].AttachSID | changed=oxa | final_source=vanilla
+    V=AKU_DefaultMuz | O=GunAKU_MagDefault
+    B=GunAKU_MagDefault | F=GunAKU_MagDefault
+ PreinstalledAttachmentsItemPrototypeSIDs.[2].AttachSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=GunAK74_MagIncreased2
+    B=GunAK74_MagIncreased2 | F=GunAK74_MagIncreased2
+ PreinstalledAttachmentsItemPrototypeSIDs.[2].bHiddenInInventory | changed=oxa | final_source=vanilla
+    V=<missing> | O=false
+    B=false | F=false
+ ToggleOffsetAimingConditionSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=ConstTrue
+    B=ConstTrue | F=ConstTrue
+ WeaponJamParams.[0].FullJamTime | changed=oxa | final_source=vanilla
+    V=<missing> | O=5.13
+    B=5.13 | F=5.13
+ WeaponJamParams.[0].JamChanceCoef | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.7
+    B=1.7 | F=1.7
+ WeaponJamParams.[1].FullJamTime | changed=oxa | final_source=vanilla
+    V=<missing> | O=5.13
+    B=5.13 | F=5.13
+ WeaponJamParams.[1].JamChanceCoef | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.7
+    B=1.7 | F=1.7
+ WeaponJamParams.[2].FullJamTime | changed=oxa | final_source=vanilla
+    V=<missing> | O=5.13
+    B=5.13 | F=5.13
+ WeaponJamParams.[2].JamChanceCoef | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.7
+    B=1.7 | F=1.7
+ ! WeaponReloadTimePerAttachment.[0].AttachPrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=GunAKU_MagDefault
+    B=GunAKU_MagDefault | F=GunAKU_MagDefault
+ ! WeaponReloadTimePerAttachment.[0].FullReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+ ! WeaponReloadTimePerAttachment.[0].TacticalReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+ ! WeaponReloadTimePerAttachment.[0].UnloadTime | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.0
+    B=0.0 | F=0.0
+ ! WeaponReloadTimePerAttachment.[1].AttachPrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=GunAK_MagPaired
+    B=GunAK_MagPaired | F=GunAK_MagPaired
+ ! WeaponReloadTimePerAttachment.[1].TwinAuxReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+ ! WeaponReloadTimePerAttachment.[1].TwinReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+ ! WeaponReloadTimePerAttachment.[1].TwinTacticalAuxReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+ ! WeaponReloadTimePerAttachment.[1].TwinTacticalReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+ ! WeaponReloadTimePerAttachment.[2].AttachPrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=GunAK74_MagIncreased
+    B=GunAK74_MagIncreased | F=GunAK74_MagIncreased
+ ! WeaponReloadTimePerAttachment.[2].FullReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+ ! WeaponReloadTimePerAttachment.[2].TacticalReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+ ! WeaponReloadTimePerAttachment.[3].AttachPrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=GunAK74_MagIncreased2
+    B=GunAK74_MagIncreased2 | F=GunAK74_MagIncreased2
+ ! WeaponReloadTimePerAttachment.[3].FullReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+ ! WeaponReloadTimePerAttachment.[3].TacticalReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+
+=== Gun_Spitter_SMG_GS ===
+leaf counts: {'vanilla': 30, 'oxa': 55, 'after_bprue': 55, 'final': 55}
+hashes: {'vanilla': '1d1eaedb160e', 'oxa': 'd77ae28ac796', 'after_bprue': 'd77ae28ac796', 'final': 'd77ae28ac796'}
+ ! AmmoTypeProjectiles.[0].AmmoType | changed=oxa | final_source=vanilla
+    V=<missing> | O=EAmmoType::Default
+    B=EAmmoType::Default | F=EAmmoType::Default
+ ! AmmoTypeProjectiles.[0].ProjectilePrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=P918
+    B=P918 | F=P918
+ ! AmmoTypeProjectiles.[1].AmmoType | changed=oxa | final_source=vanilla
+    V=<missing> | O=EAmmoType::ArmorPiercing
+    B=EAmmoType::ArmorPiercing | F=EAmmoType::ArmorPiercing
+ ! AmmoTypeProjectiles.[1].ProjectilePrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=P918
+    B=P918 | F=P918
+ ! AmmoTypeProjectiles.[2].AmmoType | changed=oxa | final_source=vanilla
+    V=<missing> | O=EAmmoType::Expanding
+    B=EAmmoType::Expanding | F=EAmmoType::Expanding
+ ! AmmoTypeProjectiles.[2].ProjectilePrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=P918
+    B=P918 | F=P918
+ MaxJamChance | changed=oxa | final_source=vanilla
+    V=<missing> | O=15.0
+    B=15.0 | F=15.0
+ MaxJamDurabilityThreshold | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.15
+    B=0.15 | F=0.15
+ MinJamChance | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.0
+    B=0.0 | F=0.0
+ MinJamDurabilityThreshold | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.65
+    B=0.65 | F=0.65
+ OffsetAimingConditionSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=ConstTrue
+    B=ConstTrue | F=ConstTrue
+ PreinstalledAttachmentsItemPrototypeSIDs.[1].AttachSID | changed=oxa | final_source=vanilla
+    V=RU_AutMuz_1 | O=Spitter_DefaultMuz
+    B=Spitter_DefaultMuz | F=Spitter_DefaultMuz
+ ToggleOffsetAimingConditionSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=ConstTrue
+    B=ConstTrue | F=ConstTrue
+ WeaponJamParams.[0].FullJamTime | changed=oxa | final_source=vanilla
+    V=<missing> | O=4.1
+    B=4.1 | F=4.1
+ WeaponJamParams.[0].JamChanceCoef | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.7
+    B=1.7 | F=1.7
+ WeaponJamParams.[1].FullJamTime | changed=oxa | final_source=vanilla
+    V=<missing> | O=4.1
+    B=4.1 | F=4.1
+ WeaponJamParams.[1].JamChanceCoef | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.7
+    B=1.7 | F=1.7
+ WeaponJamParams.[2].FullJamTime | changed=oxa | final_source=vanilla
+    V=<missing> | O=4.1
+    B=4.1 | F=4.1
+ WeaponJamParams.[2].JamChanceCoef | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.7
+    B=1.7 | F=1.7
+ ! WeaponReloadTimePerAttachment.[0].AttachPrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=GunBucket_MagDefault
+    B=GunBucket_MagDefault | F=GunBucket_MagDefault
+ ! WeaponReloadTimePerAttachment.[0].FullReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+ ! WeaponReloadTimePerAttachment.[0].TacticalReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+ ! WeaponReloadTimePerAttachment.[0].UnloadTime | changed=oxa | final_source=vanilla
+    V=<missing> | O=0.0
+    B=0.0 | F=0.0
+ ! WeaponReloadTimePerAttachment.[1].AttachPrototypeSID | changed=oxa | final_source=vanilla
+    V=<missing> | O=GunBucket_MagIncreased
+    B=GunBucket_MagIncreased | F=GunBucket_MagIncreased
+ ! WeaponReloadTimePerAttachment.[1].FullReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+ ! WeaponReloadTimePerAttachment.[1].TacticalReloadTimeMultiplier | changed=oxa | final_source=vanilla
+    V=<missing> | O=1.0
+    B=1.0 | F=1.0
+
+ARRAY FINDINGS
+==============

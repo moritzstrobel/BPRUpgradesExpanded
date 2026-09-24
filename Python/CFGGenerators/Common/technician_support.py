@@ -89,6 +89,20 @@ def _effective_scalar(blocks: dict[str, list[str]], sid: str, name: str) -> str 
     return None
 
 
+def _effective_upgrade_owner(blocks: dict[str, list[str]], sid: str) -> str | None:
+    """Resolve the refkey-chain owner that directly defines Upgrades."""
+    seen: set[str] = set()
+    current = sid
+    while current and current not in seen:
+        seen.add(current)
+        block = blocks.get(current)
+        if not block:
+            return None
+        if _direct_child(block, "Upgrades") is not None:
+            return current
+        current = _refkey(block)
+    return None
+
 def _effective_upgrade_entries(blocks: dict[str, list[str]], sid: str) -> list[tuple[str, bool]]:
     """Resolve the first Upgrades array in the NPC refkey chain.
 
@@ -187,17 +201,36 @@ def dlc_technician_general_setups(content_pack: str) -> dict[str, frozenset[str]
 
 
 def technician_upgrade_assignments(model: UpgradeBuildModel) -> dict[str, list[UpgradeDefinition]]:
-    """Select BPRUE upgrades only for weapons supported by each Vanilla technician."""
+    """Select BPRUE upgrades for every weapon supported by each effective Vanilla technician.
+
+    Technician weapon support is inherited through the Vanilla refkey chain. A
+    concrete technician therefore does not need to own an Upgrades struct
+    directly in order to receive BPRUE additions.
+    """
     support = vanilla_technician_general_setups()
-    direct_owners = vanilla_technician_direct_upgrade_indices()
     candidates = model.technician_upgrades()
     assignments: dict[str, list[UpgradeDefinition]] = {}
     for technician_sid, supported_setups in support.items():
-        if technician_sid not in direct_owners:
-            continue
         assignments[technician_sid] = [
             upgrade
             for upgrade in candidates
             if any(setup_sid in supported_setups for setup_sid in upgrade.general_setup_sids)
         ]
     return assignments
+ 
+@lru_cache(maxsize=1)
+def vanilla_technician_upgrade_owners() -> dict[str, str]:
+    """Map each concrete Vanilla technician to the refkey-chain node owning Upgrades."""
+    if not VANILLA_NPCS.exists():
+        raise FileNotFoundError(VANILLA_NPCS)
+    blocks = _read_blocks(VANILLA_NPCS)
+    result: dict[str, str] = {}
+    for sid in blocks:
+        if sid in TECHNICIAN_TEMPLATE_SIDS:
+            continue
+        if _effective_scalar(blocks, sid, "NPCType") != "ENPCType::Technician":
+            continue
+        owner = _effective_upgrade_owner(blocks, sid)
+        if owner and owner not in TECHNICIAN_TEMPLATE_SIDS:
+            result[sid] = owner
+    return result

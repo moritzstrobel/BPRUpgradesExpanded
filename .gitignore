@@ -17,6 +17,7 @@ Thumbs.db
 *.pak
 *.ucas
 *.utoc
+*.zip
 
 # Python
 __pycache__/
