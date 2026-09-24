@@ -1064,6 +1064,20 @@
         "English": "Radiation Lining improves radiation protection at the cost of extra weight on this full-body suit.",
         "Russian": "Противорадиационная подкладка повышает радиационную защиту ценой увеличения веса для этого предмета (цельный костюм)."
       }
+    },
+    {
+      "sid": "sid_bprue_armor_generic_enhanced_filtration_name",
+      "languages": {
+        "English": "Enhanced Filtration",
+        "Russian": "Улучшенная фильтрация"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_generic_enhanced_filtration_helmet_description",
+      "languages": {
+        "English": "Enhanced filtration improves chemical and radiation protection at the cost of helmet durability.",
+        "Russian": "Улучшенная фильтрация повышает химическую и радиационную защиту ценой прочности шлема."
+      }
     }
   ]
 }
