@@ -68,6 +68,7 @@ class ArmorUpgradeDefinition:
     tier_index: int
     family: str
     image: str | None = None
+    blocking_sids: tuple[str, ...] = ()
     required_upgrade_sid: str | None = None
     horizontal_position: int | None = None
     vertical_position: str | None = None
@@ -150,9 +151,27 @@ def build_upgrades(config: dict | None = None, classification: dict | None = Non
                 cost=int(module_cfg["cost"][category]),
                 effects=tuple(effect_sids),
                 tier_index=0,
-                family=f"GENERIC:{module_id}",
+                family="GENERIC_ARMOR_MODULE",
                 image=DEFAULT_ICON,
             ))
+
+    # Every generic module on the same armor is one mutually-exclusive choice group.
+    from dataclasses import replace
+    generic_by_armor: dict[str, list[ArmorUpgradeDefinition]] = {}
+    for upgrade in result:
+        if upgrade.family == "GENERIC_ARMOR_MODULE":
+            generic_by_armor.setdefault(upgrade.armor_sid, []).append(upgrade)
+    blocked_result: list[ArmorUpgradeDefinition] = []
+    for upgrade in result:
+        if upgrade.family == "GENERIC_ARMOR_MODULE":
+            siblings = tuple(
+                sibling.sid
+                for sibling in generic_by_armor[upgrade.armor_sid]
+                if sibling.sid != upgrade.sid
+            )
+            upgrade = replace(upgrade, blocking_sids=siblings)
+        blocked_result.append(upgrade)
+    result = blocked_result
 
     result = apply_layout(result)
     validate(result)
@@ -280,6 +299,11 @@ def render_upgrade_fragment(upgrades: list[ArmorUpgradeDefinition]) -> str:
             "   EffectPrototypeSIDs : struct.begin",
             *(f"      [{i}] = {effect}" for i, effect in enumerate(upgrade.effects)),
             "   struct.end",
+            *([
+                "   BlockingUpgradePrototypeSIDs : struct.begin",
+                *(f"      [{i}] = {sid}" for i, sid in enumerate(upgrade.blocking_sids)),
+                "   struct.end",
+            ] if upgrade.blocking_sids else []),
             "struct.end",
             "",
         ]
