@@ -1,5 +1,5 @@
 {
-  "localization_sid_count": 376,
+  "localization_sid_count": 472,
   "required_languages": [
     "English",
     "Russian"
@@ -3592,8 +3592,8 @@
   },
   "asset_snapshot": {
     "available": true,
-    "asset_entry_count": 376,
-    "source_entry_count": 376,
+    "asset_entry_count": 472,
+    "source_entry_count": 472,
     "missing_count": 0,
     "missing_sids": [],
     "asset_only_count": 0,
@@ -3606,7 +3606,7 @@
     "errors": []
   },
   "generated_cfg": {
-    "referenced_sid_count": 301,
+    "referenced_sid_count": 382,
     "missing_count": 0,
     "missing": [],
     "case_mismatch_count": 0,
