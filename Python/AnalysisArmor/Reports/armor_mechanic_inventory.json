@@ -1,0 +1,5446 @@
+[
+  {
+    "type": "EEffectType::ProtectionBurn",
+    "upgrade_count": 96,
+    "effect_count": 88,
+    "armor_count": 47,
+    "effect_sids": [
+      "Anomaly_Scientific_Armor_protectionThermal",
+      "Anomaly_Scientific_Armor_protectionThermal2",
+      "BattleExoskeleton_Varta_Armor_protectionThermal",
+      "BattleExoskeleton_Varta_Armor_protectionThermal2",
+      "Battle_Dolg_Armor_protectionThermal",
+      "Battle_Dolg_Armor_protectionThermal1",
+      "Battle_Dolg_Armor_protectionThermal2",
+      "Battle_Military_Helmet_protectionThermal",
+      "Battle_Military_Helmet_protectionThermal1",
+      "Battle_Monolith_Armor_protectionThermal",
+      "Battle_Monolith_Armor_protectionThermal1",
+      "Battle_Monolith_Armor_protectionThermal2",
+      "Battle_Spark_Armor_protectionThermal",
+      "Battle_Spark_Armor_protectionThermal1",
+      "Battle_Spark_Armor_protectionThermal2",
+      "Battle_Svoboda_Armor_protectionThermal",
+      "Battle_Svoboda_Armor_protectionThermal1",
+      "Battle_Svoboda_Armor_protectionThermal2",
+      "Battle_Varta_Armor_protectionThermal",
+      "Default_Military_Armor_protectionThermal",
+      "Exoskeleton_Dolg_Armor_protectionThermal",
+      "Exoskeleton_Dolg_Armor_protectionThermal1",
+      "Exoskeleton_Mercenaries_Armor_protectionThermal",
+      "Exoskeleton_Mercenaries_Armor_protectionThermal1",
+      "Exoskeleton_Monolith_Armor_protectionThermal1",
+      "Exoskeleton_Neutral_Armor_protectionThermal",
+      "Exoskeleton_Neutral_Armor_protectionThermal1",
+      "Exoskeleton_Svoboda_Armor_protectionThermal",
+      "Exoskeleton_Svoboda_Armor_protectionThermal1",
+      "Heavy2_Military_Armor_protectionThermal",
+      "HeavyAnomaly_Monolith_Armor_protectionThermal",
+      "HeavyAnomaly_Monolith_Armor_protectionThermal1",
+      "HeavyAnomaly_Monolith_Armor_protectionThermal2",
+      "HeavyAnomaly_Scientific_Armor_protectionThermal",
+      "HeavyAnomaly_Scientific_Armor_protectionThermal1",
+      "HeavyAnomaly_Scientific_Armor_protectionThermal2",
+      "HeavyAnomaly_Spark_Armor_protectionThermal",
+      "HeavyAnomaly_Spark_Armor_protectionThermal1",
+      "HeavyAnomaly_Spark_Armor_protectionThermal2",
+      "HeavyBattle_Spark_Armor_protectionThermal",
+      "HeavyBattle_Spark_Armor_protectionThermal1",
+      "HeavyBattle_Spark_Armor_protectionThermal2",
+      "HeavyExoskeleton_Dolg_Armor_protectionThermal",
+      "HeavyExoskeleton_Dolg_Armor_protectionThermal2",
+      "HeavyExoskeleton_Monolith_Armor_protectionThermal",
+      "HeavyExoskeleton_Monolith_Armor_protectionThermal1",
+      "HeavyExoskeleton_Svoboda_Armor_protectionThermal",
+      "Heavy_Dolg_Armor_protectionThermal",
+      "Heavy_Duty_Helmet_protectionThermal",
+      "Heavy_Mercenaries_Armor_protectionThermal",
+      "Heavy_Mercenaries_Armor_protectionThermal1",
+      "Heavy_Military_Helmet_protectionThermal",
+      "Heavy_Military_Helmet_protectionThermal1",
+      "Heavy_Svoboda_Armor_protectionThermal",
+      "Heavy_Svoboda_Armor_protectionThermal1",
+      "Heavy_Svoboda_Helmet_protectionThermal",
+      "Heavy_Svoboda_Helmet_protectionThermal1",
+      "Heavy_Varta_Helmet_protectionThermal",
+      "Jacket_Bandit_Armor_protectionThermal",
+      "Jemmy_Neutral_Armor_protectionThermal",
+      "Light_Bandit_Helmet_Armor_protectionThermal",
+      "Light_Mercenaries_Armor_protectionThermal",
+      "Light_Mercenaries_Armor_protectionThermal1",
+      "Light_Mercenaries_Helmet_Armor_protectionThermal",
+      "Light_Neutral_Helmet_Armor_protectionThermal",
+      "Middle_Bandit_Armor_protectionThermal",
+      "Nasos_Neutral_Armor_protectionThermal",
+      "Nasos_Neutral_Armor_protectionThermal2",
+      "Newbie_Neutral_Armor_protectionThermal",
+      "Rook_Dolg_Armor_protectionThermal",
+      "Rook_Svoboda_Armor_protectionThermal",
+      "SEVA_Dolg_Armor_protectionThermal",
+      "SEVA_Spark_Armor_protectionThermal",
+      "SEVA_Spark_Armor_protectionThermal1",
+      "SEVA_Spark_Armor_protectionThermal2",
+      "SEVA_Svoboda_Armor_protectionThermal",
+      "SEVA_Svoboda_Armor_protectionThermal1",
+      "SEVA_Svoboda_Armor_protectionThermal2",
+      "SciSEVA_Scientific_Armor_protectionThermal",
+      "SciSEVA_Scientific_Armor_protectionThermal1",
+      "SciSEVA_Scientific_Armor_protectionThermal2",
+      "Seva_Neutral_Armor_protectionThermal",
+      "Seva_Neutral_Armor_protectionThermal1",
+      "Seva_Neutral_Armor_protectionThermal2",
+      "Skin_Jacket_Bandit_Armor_protectionThermal",
+      "Zorya_Neutral_Armor_protectionThermal",
+      "Zorya_Neutral_Armor_protectionThermal2",
+      "Zorya_Neutral_Armor_protectionThermal3"
+    ],
+    "root_effect_sids": [
+      "Anomaly_Scientific_Armor_protectionThermal",
+      "Anomaly_Scientific_Armor_protectionThermal2",
+      "BattleExoskeleton_Varta_Armor_protectionThermal",
+      "BattleExoskeleton_Varta_Armor_protectionThermal2",
+      "Battle_Dolg_Armor_protectionThermal",
+      "Battle_Dolg_Armor_protectionThermal1",
+      "Battle_Dolg_Armor_protectionThermal2",
+      "Battle_Military_Helmet_protectionThermal",
+      "Battle_Military_Helmet_protectionThermal1",
+      "Battle_Monolith_Armor_protectionThermal",
+      "Battle_Monolith_Armor_protectionThermal1",
+      "Battle_Monolith_Armor_protectionThermal2",
+      "Battle_Spark_Armor_protectionThermal",
+      "Battle_Spark_Armor_protectionThermal1",
+      "Battle_Spark_Armor_protectionThermal2",
+      "Battle_Svoboda_Armor_protectionThermal",
+      "Battle_Svoboda_Armor_protectionThermal1",
+      "Battle_Svoboda_Armor_protectionThermal2",
+      "Battle_Varta_Armor_protectionThermal",
+      "Default_Military_Armor_protectionThermal",
+      "Exoskeleton_Dolg_Armor_protectionThermal",
+      "Exoskeleton_Dolg_Armor_protectionThermal1",
+      "Exoskeleton_Mercenaries_Armor_protectionThermal",
+      "Exoskeleton_Mercenaries_Armor_protectionThermal1",
+      "Exoskeleton_Monolith_Armor_protectionThermal1",
+      "Exoskeleton_Neutral_Armor_protectionThermal",
+      "Exoskeleton_Neutral_Armor_protectionThermal1",
+      "Exoskeleton_Svoboda_Armor_protectionThermal",
+      "Exoskeleton_Svoboda_Armor_protectionThermal1",
+      "Heavy2_Military_Armor_protectionThermal",
+      "HeavyAnomaly_Monolith_Armor_protectionThermal",
+      "HeavyAnomaly_Monolith_Armor_protectionThermal1",
+      "HeavyAnomaly_Monolith_Armor_protectionThermal2",
+      "HeavyAnomaly_Scientific_Armor_protectionThermal",
+      "HeavyAnomaly_Scientific_Armor_protectionThermal1",
+      "HeavyAnomaly_Scientific_Armor_protectionThermal2",
+      "HeavyAnomaly_Spark_Armor_protectionThermal",
+      "HeavyAnomaly_Spark_Armor_protectionThermal1",
+      "HeavyAnomaly_Spark_Armor_protectionThermal2",
+      "HeavyBattle_Spark_Armor_protectionThermal",
+      "HeavyBattle_Spark_Armor_protectionThermal1",
+      "HeavyBattle_Spark_Armor_protectionThermal2",
+      "HeavyExoskeleton_Dolg_Armor_protectionThermal",
+      "HeavyExoskeleton_Dolg_Armor_protectionThermal2",
+      "HeavyExoskeleton_Monolith_Armor_protectionThermal",
+      "HeavyExoskeleton_Monolith_Armor_protectionThermal1",
+      "HeavyExoskeleton_Svoboda_Armor_protectionThermal",
+      "Heavy_Dolg_Armor_protectionThermal",
+      "Heavy_Duty_Helmet_protectionThermal",
+      "Heavy_Mercenaries_Armor_protectionThermal",
+      "Heavy_Mercenaries_Armor_protectionThermal1",
+      "Heavy_Military_Helmet_protectionThermal",
+      "Heavy_Military_Helmet_protectionThermal1",
+      "Heavy_Svoboda_Armor_protectionThermal",
+      "Heavy_Svoboda_Armor_protectionThermal1",
+      "Heavy_Svoboda_Helmet_protectionThermal",
+      "Heavy_Svoboda_Helmet_protectionThermal1",
+      "Heavy_Varta_Helmet_protectionThermal",
+      "Jacket_Bandit_Armor_protectionThermal",
+      "Jemmy_Neutral_Armor_protectionThermal",
+      "Light_Bandit_Helmet_Armor_protectionThermal",
+      "Light_Mercenaries_Armor_protectionThermal",
+      "Light_Mercenaries_Armor_protectionThermal1",
+      "Light_Mercenaries_Helmet_Armor_protectionThermal",
+      "Light_Neutral_Helmet_Armor_protectionThermal",
+      "Middle_Bandit_Armor_protectionThermal",
+      "Nasos_Neutral_Armor_protectionThermal",
+      "Nasos_Neutral_Armor_protectionThermal2",
+      "Newbie_Neutral_Armor_protectionThermal",
+      "Rook_Dolg_Armor_protectionThermal",
+      "Rook_Svoboda_Armor_protectionThermal",
+      "SEVA_Dolg_Armor_protectionThermal",
+      "SEVA_Spark_Armor_protectionThermal",
+      "SEVA_Spark_Armor_protectionThermal1",
+      "SEVA_Spark_Armor_protectionThermal2",
+      "SEVA_Svoboda_Armor_protectionThermal",
+      "SEVA_Svoboda_Armor_protectionThermal1",
+      "SEVA_Svoboda_Armor_protectionThermal2",
+      "SciSEVA_Scientific_Armor_protectionThermal",
+      "SciSEVA_Scientific_Armor_protectionThermal1",
+      "SciSEVA_Scientific_Armor_protectionThermal2",
+      "Seva_Neutral_Armor_protectionThermal",
+      "Seva_Neutral_Armor_protectionThermal1",
+      "Seva_Neutral_Armor_protectionThermal2",
+      "Skin_Jacket_Bandit_Armor_protectionThermal",
+      "Zorya_Neutral_Armor_protectionThermal",
+      "Zorya_Neutral_Armor_protectionThermal2",
+      "Zorya_Neutral_Armor_protectionThermal3"
+    ],
+    "armor_sids": [
+      "Anomaly_Scientific_Armor",
+      "BattleExoskeleton_Varta_Armor",
+      "Battle_Dolg_Armor",
+      "Battle_Military_Helmet",
+      "Battle_Monolith_Armor",
+      "Battle_Spark_Armor",
+      "Battle_Svoboda_Armor",
+      "Battle_Varta_Armor",
+      "Default_Military_Armor",
+      "Exoskeleton_Dolg_Armor",
+      "Exoskeleton_Mercenaries_Armor",
+      "Exoskeleton_Monolith_Armor",
+      "Exoskeleton_Neutral_Armor",
+      "Exoskeleton_Svoboda_Armor",
+      "Heavy2_Military_Armor",
+      "HeavyAnomaly_Monolith_Armor",
+      "HeavyAnomaly_Scientific_Armor",
+      "HeavyAnomaly_Spark_Armor",
+      "HeavyBattle_Spark_Armor",
+      "HeavyExoskeleton_Dolg_Armor",
+      "HeavyExoskeleton_Monolith_Armor",
+      "HeavyExoskeleton_Svoboda_Armor",
+      "Heavy_Dolg_Armor",
+      "Heavy_Duty_Helmet",
+      "Heavy_Mercenaries_Armor",
+      "Heavy_Military_Helmet",
+      "Heavy_Svoboda_Armor",
+      "Heavy_Svoboda_Helmet",
+      "Heavy_Varta_Helmet",
+      "Jacket_Bandit_Armor",
+      "Jemmy_Neutral_Armor",
+      "Light_Bandit_Helmet",
+      "Light_Mercenaries_Armor",
+      "Light_Mercenaries_Helmet",
+      "Light_Neutral_Helmet",
+      "Middle_Bandit_Armor",
+      "Nasos_Neutral_Armor",
+      "Newbee_Neutral_Armor",
+      "Rook_Dolg_Armor",
+      "Rook_Svoboda_Armor",
+      "SEVA_Dolg_Armor",
+      "SEVA_Neutral_Armor",
+      "SEVA_Spark_Armor",
+      "SEVA_Svoboda_Armor",
+      "SciSEVA_Scientific_Armor",
+      "SkinJacket_Bandit_Armor",
+      "Zorya_Neutral_Armor"
+    ],
+    "categories": [
+      "FULL_BODY_SUIT",
+      "HELMET",
+      "SUIT"
+    ],
+    "factions": [
+      "BANDIT",
+      "DUTY",
+      "ECOLOGIST",
+      "FREEDOM",
+      "FREE_STALKER",
+      "MERCENARY",
+      "MILITARY",
+      "MONOLITH",
+      "SPARK",
+      "WARD"
+    ],
+    "texts": [
+      "Thermal protection"
+    ],
+    "localization_sids": [
+      "armor_protectionThermal"
+    ],
+    "value_min_counts": {
+      "20.0%": 40,
+      "15.0%": 30,
+      "30.0%": 20,
+      "5.0%": 5,
+      "10.0%": 1
+    },
+    "value_max_counts": {
+      "20.0%": 40,
+      "15.0%": 30,
+      "30.0%": 20,
+      "5.0%": 5,
+      "10.0%": 1
+    },
+    "positive_counts": {
+      "EBeneficial::Positive": 96
+    },
+    "effect_level_counts": {
+      "EEffectLevel::Low": 26,
+      "EEffectLevel::Medium": 17,
+      "EEffectLevel::Strong": 1
+    },
+    "examples": [
+      {
+        "upgrade_sid": "Anomaly_Scientific_Armor_protectionThermal_Left_1_1",
+        "root_effect_sid": "Anomaly_Scientific_Armor_protectionThermal",
+        "effect_sid": "Anomaly_Scientific_Armor_protectionThermal",
+        "armor_sids": [
+          "Anomaly_Scientific_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Anomaly_Scientific_Armor_protectionThermal_protectionChemica_Left_3_1",
+        "root_effect_sid": "Anomaly_Scientific_Armor_protectionThermal2",
+        "effect_sid": "Anomaly_Scientific_Armor_protectionThermal2",
+        "armor_sids": [
+          "Anomaly_Scientific_Armor"
+        ],
+        "value_min": [
+          "20.0%"
+        ],
+        "value_max": [
+          "20.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_protectionThermal_Left_2_2",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_protectionThermal",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_protectionThermal",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_protectionThermal_Left_3_2",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_protectionThermal2",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_protectionThermal2",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "20.0%"
+        ],
+        "value_max": [
+          "20.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Dolg_Armor_protectionThermal_Left_1_2",
+        "root_effect_sid": "Battle_Dolg_Armor_protectionThermal",
+        "effect_sid": "Battle_Dolg_Armor_protectionThermal",
+        "armor_sids": [
+          "Battle_Dolg_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Dolg_Armor_protectionThermal_Left_2_1",
+        "root_effect_sid": "Battle_Dolg_Armor_protectionThermal1",
+        "effect_sid": "Battle_Dolg_Armor_protectionThermal1",
+        "armor_sids": [
+          "Battle_Dolg_Armor"
+        ],
+        "value_min": [
+          "20.0%"
+        ],
+        "value_max": [
+          "20.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Dolg_Armor_protectionThermal_protectionElectrical_Left_2_2",
+        "root_effect_sid": "Battle_Dolg_Armor_protectionThermal2",
+        "effect_sid": "Battle_Dolg_Armor_protectionThermal2",
+        "armor_sids": [
+          "Battle_Dolg_Armor"
+        ],
+        "value_min": [
+          "20.0%"
+        ],
+        "value_max": [
+          "20.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Military_Helmet_protectionChemical_protectionTherma_Left_2_1",
+        "root_effect_sid": "Battle_Military_Helmet_protectionThermal",
+        "effect_sid": "Battle_Military_Helmet_protectionThermal",
+        "armor_sids": [
+          "Battle_Military_Helmet"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Military_Helmet_protectionThermal_Left_3_1",
+        "root_effect_sid": "Battle_Military_Helmet_protectionThermal1",
+        "effect_sid": "Battle_Military_Helmet_protectionThermal1",
+        "armor_sids": [
+          "Battle_Military_Helmet"
+        ],
+        "value_min": [
+          "20.0%"
+        ],
+        "value_max": [
+          "20.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_protectionThermal_Left_2_2",
+        "root_effect_sid": "Battle_Monolith_Armor_protectionThermal2",
+        "effect_sid": "Battle_Monolith_Armor_protectionThermal2",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [
+          "20.0%"
+        ],
+        "value_max": [
+          "20.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_protectionThermal_protectionChemical_Left_1_1",
+        "root_effect_sid": "Battle_Monolith_Armor_protectionThermal1",
+        "effect_sid": "Battle_Monolith_Armor_protectionThermal1",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [
+          "20.0%"
+        ],
+        "value_max": [
+          "20.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_protectionThermal_protectionElectrical_Left_1_2",
+        "root_effect_sid": "Battle_Monolith_Armor_protectionThermal",
+        "effect_sid": "Battle_Monolith_Armor_protectionThermal",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "EEffectType::MaxDurability",
+    "upgrade_count": 87,
+    "effect_count": 85,
+    "armor_count": 48,
+    "effect_sids": [
+      "Anomaly_Scientific_Armor_wearing",
+      "Anomaly_Scientific_Armor_wearing2",
+      "BattleExoskeleton_Varta_Armor_wearing",
+      "BattleExoskeleton_Varta_Armor_wearing2",
+      "BattleExoskeleton_Varta_Armor_wearing3",
+      "BattleExoskeleton_Varta_Armor_wearing4",
+      "Battle_Dolg_Armor_wearing",
+      "Battle_Military_Helmet_wearing",
+      "Battle_Monolith_Armor_wearing",
+      "Battle_Spark_Armor_wearing",
+      "Battle_Svoboda_Armor_wearing",
+      "Battle_Varta_Armor_wearing",
+      "Battle_Varta_Armor_wearing2",
+      "Battle_Varta_Armor_wearing3",
+      "Default_Military_Armor_wearing",
+      "Default_Military_Armor_wearing2",
+      "Exoskeleton_Dolg_Armor_wearing",
+      "Exoskeleton_Dolg_Armor_wearing1",
+      "Exoskeleton_Dolg_Armor_wearing2",
+      "Exoskeleton_Dolg_Armor_wearing4",
+      "Exoskeleton_Mercenaries_Armor_wearing",
+      "Exoskeleton_Mercenaries_Armor_wearing2",
+      "Exoskeleton_Mercenaries_Armor_wearing3",
+      "Exoskeleton_Monolith_Armor_wearing",
+      "Exoskeleton_Monolith_Armor_wearing1",
+      "Exoskeleton_Monolith_Armor_wearing2",
+      "Exoskeleton_Neutral_Armor_wearing",
+      "Exoskeleton_Neutral_Armor_wearing1",
+      "Exoskeleton_Neutral_Armor_wearing3",
+      "Exoskeleton_Neutral_Armor_wearing4",
+      "Exoskeleton_Svoboda_Armor_wearing",
+      "Exoskeleton_Svoboda_Armor_wearing2",
+      "Exoskeleton_Svoboda_Armor_wearing3",
+      "Heavy2_Military_Armor_wearing",
+      "HeavyAnomaly_Monolith_Armor_wearing",
+      "HeavyAnomaly_Scientific_Armor_wearing1",
+      "HeavyAnomaly_Spark_Armor_wearing",
+      "HeavyBattle_Spark_Armor_wearing",
+      "HeavyBattle_Spark_Armor_wearing1",
+      "HeavyExoskeleton_Dolg_Armor_wearing",
+      "HeavyExoskeleton_Dolg_Armor_wearing1",
+      "HeavyExoskeleton_Dolg_Armor_wearing2",
+      "HeavyExoskeleton_Monolith_Armor_wearing",
+      "HeavyExoskeleton_Monolith_Armor_wearing1",
+      "HeavyExoskeleton_Monolith_Armor_wearing3",
+      "HeavyExoskeleton_Svoboda_Armor_wearing",
+      "HeavyExoskeleton_Svoboda_Armor_wearing2",
+      "HeavyExoskeleton_Svoboda_Armor_wearing3",
+      "Heavy_Dolg_Armor_wearing",
+      "Heavy_Dolg_Armor_wearing1",
+      "Heavy_Duty_Helmet_wearing",
+      "Heavy_Duty_Helmet_wearing1",
+      "Heavy_Mercenaries_Armor_wearing",
+      "Heavy_Military_Helmet_wearing",
+      "Heavy_Military_Helmet_wearing1",
+      "Heavy_Svoboda_Armor_wearing",
+      "Heavy_Svoboda_Armor_wearing1",
+      "Heavy_Svoboda_Helmet_wearing",
+      "Jacket_Bandit_Armor_wearing",
+      "Jemmy_Neutral_Armor_wearing",
+      "Jemmy_Neutral_Armor_wearing2",
+      "Light_Bandit_Helmet_Armor_wearing",
+      "Light_Duty_Helmet_Armor_wearing",
+      "Light_Mercenaries_Armor_wearing",
+      "Light_Mercenaries_Helmet_Armor_wearing",
+      "Light_Military_Helmet_Armor_wearing",
+      "Light_Neutral_Helmet_Armor_wearing",
+      "Middle_Bandit_Armor_wearing",
+      "Middle_Bandit_Armor_wearing1",
+      "Nasos_Neutral_Armor_wearing",
+      "Nasos_Neutral_Armor_wearing2",
+      "Newbie_Neutral_Armor_wearing",
+      "Rook_Dolg_Armor_wearing",
+      "SEVA_Dolg_Armor_wearing",
+      "SEVA_Dolg_Armor_wearing1",
+      "SEVA_Spark_Armor_wearing",
+      "SEVA_Svoboda_Armor_wearing",
+      "SEVA_Svoboda_Armor_wearing1",
+      "SciSEVA_Scientific_Armor_wearing",
+      "SciSEVA_Scientific_Armor_wearing1",
+      "Seva_Neutral_Armor_wearing",
+      "Seva_Neutral_Armor_wearing1",
+      "Skin_Jacket_Bandit_Armor_wearing",
+      "Zorya_Neutral_Armor_wearing",
+      "Zorya_Neutral_Armor_wearing2"
+    ],
+    "root_effect_sids": [
+      "Anomaly_Scientific_Armor_wearing",
+      "Anomaly_Scientific_Armor_wearing2",
+      "BattleExoskeleton_Varta_Armor_wearing",
+      "BattleExoskeleton_Varta_Armor_wearing2",
+      "BattleExoskeleton_Varta_Armor_wearing3",
+      "BattleExoskeleton_Varta_Armor_wearing4",
+      "Battle_Dolg_Armor_wearing",
+      "Battle_Military_Helmet_wearing",
+      "Battle_Monolith_Armor_wearing",
+      "Battle_Spark_Armor_wearing",
+      "Battle_Svoboda_Armor_wearing",
+      "Battle_Varta_Armor_wearing",
+      "Battle_Varta_Armor_wearing2",
+      "Battle_Varta_Armor_wearing3",
+      "Default_Military_Armor_wearing",
+      "Default_Military_Armor_wearing2",
+      "Exoskeleton_Dolg_Armor_wearing",
+      "Exoskeleton_Dolg_Armor_wearing1",
+      "Exoskeleton_Dolg_Armor_wearing2",
+      "Exoskeleton_Dolg_Armor_wearing4",
+      "Exoskeleton_Mercenaries_Armor_wearing",
+      "Exoskeleton_Mercenaries_Armor_wearing2",
+      "Exoskeleton_Mercenaries_Armor_wearing3",
+      "Exoskeleton_Monolith_Armor_wearing",
+      "Exoskeleton_Monolith_Armor_wearing1",
+      "Exoskeleton_Monolith_Armor_wearing2",
+      "Exoskeleton_Neutral_Armor_wearing",
+      "Exoskeleton_Neutral_Armor_wearing1",
+      "Exoskeleton_Neutral_Armor_wearing3",
+      "Exoskeleton_Neutral_Armor_wearing4",
+      "Exoskeleton_Svoboda_Armor_wearing",
+      "Exoskeleton_Svoboda_Armor_wearing2",
+      "Exoskeleton_Svoboda_Armor_wearing3",
+      "Heavy2_Military_Armor_wearing",
+      "HeavyAnomaly_Monolith_Armor_wearing",
+      "HeavyAnomaly_Scientific_Armor_wearing1",
+      "HeavyAnomaly_Spark_Armor_wearing",
+      "HeavyBattle_Spark_Armor_wearing",
+      "HeavyBattle_Spark_Armor_wearing1",
+      "HeavyExoskeleton_Dolg_Armor_wearing",
+      "HeavyExoskeleton_Dolg_Armor_wearing1",
+      "HeavyExoskeleton_Dolg_Armor_wearing2",
+      "HeavyExoskeleton_Monolith_Armor_wearing",
+      "HeavyExoskeleton_Monolith_Armor_wearing1",
+      "HeavyExoskeleton_Monolith_Armor_wearing3",
+      "HeavyExoskeleton_Svoboda_Armor_wearing",
+      "HeavyExoskeleton_Svoboda_Armor_wearing2",
+      "HeavyExoskeleton_Svoboda_Armor_wearing3",
+      "Heavy_Dolg_Armor_wearing",
+      "Heavy_Dolg_Armor_wearing1",
+      "Heavy_Duty_Helmet_wearing",
+      "Heavy_Duty_Helmet_wearing1",
+      "Heavy_Mercenaries_Armor_wearing",
+      "Heavy_Military_Helmet_wearing",
+      "Heavy_Military_Helmet_wearing1",
+      "Heavy_Svoboda_Armor_wearing",
+      "Heavy_Svoboda_Armor_wearing1",
+      "Heavy_Svoboda_Helmet_wearing",
+      "Jacket_Bandit_Armor_wearing",
+      "Jemmy_Neutral_Armor_wearing",
+      "Jemmy_Neutral_Armor_wearing2",
+      "Light_Bandit_Helmet_Armor_wearing",
+      "Light_Duty_Helmet_Armor_wearing",
+      "Light_Mercenaries_Armor_wearing",
+      "Light_Mercenaries_Helmet_Armor_wearing",
+      "Light_Military_Helmet_Armor_wearing",
+      "Light_Neutral_Helmet_Armor_wearing",
+      "Middle_Bandit_Armor_wearing",
+      "Middle_Bandit_Armor_wearing1",
+      "Nasos_Neutral_Armor_wearing",
+      "Nasos_Neutral_Armor_wearing2",
+      "Newbie_Neutral_Armor_wearing",
+      "Rook_Dolg_Armor_wearing",
+      "SEVA_Dolg_Armor_wearing",
+      "SEVA_Dolg_Armor_wearing1",
+      "SEVA_Spark_Armor_wearing",
+      "SEVA_Svoboda_Armor_wearing",
+      "SEVA_Svoboda_Armor_wearing1",
+      "SciSEVA_Scientific_Armor_wearing",
+      "SciSEVA_Scientific_Armor_wearing1",
+      "Seva_Neutral_Armor_wearing",
+      "Seva_Neutral_Armor_wearing1",
+      "Skin_Jacket_Bandit_Armor_wearing",
+      "Zorya_Neutral_Armor_wearing",
+      "Zorya_Neutral_Armor_wearing2"
+    ],
+    "armor_sids": [
+      "Anomaly_Scientific_Armor",
+      "BattleExoskeleton_Varta_Armor",
+      "Battle_Dolg_Armor",
+      "Battle_Military_Helmet",
+      "Battle_Monolith_Armor",
+      "Battle_Spark_Armor",
+      "Battle_Svoboda_Armor",
+      "Battle_Varta_Armor",
+      "Default_Military_Armor",
+      "Exoskeleton_Dolg_Armor",
+      "Exoskeleton_Mercenaries_Armor",
+      "Exoskeleton_Monolith_Armor",
+      "Exoskeleton_Neutral_Armor",
+      "Exoskeleton_Svoboda_Armor",
+      "Heavy2_Military_Armor",
+      "HeavyAnomaly_Monolith_Armor",
+      "HeavyAnomaly_Scientific_Armor",
+      "HeavyAnomaly_Spark_Armor",
+      "HeavyBattle_Spark_Armor",
+      "HeavyExoskeleton_Dolg_Armor",
+      "HeavyExoskeleton_Monolith_Armor",
+      "HeavyExoskeleton_Svoboda_Armor",
+      "Heavy_Dolg_Armor",
+      "Heavy_Duty_Helmet",
+      "Heavy_Mercenaries_Armor",
+      "Heavy_Military_Helmet",
+      "Heavy_Svoboda_Armor",
+      "Heavy_Svoboda_Helmet",
+      "Jacket_Bandit_Armor",
+      "Jemmy_Neutral_Armor",
+      "Light_Bandit_Helmet",
+      "Light_Duty_Helmet",
+      "Light_Mercenaries_Armor",
+      "Light_Mercenaries_Helmet",
+      "Light_Military_Helmet",
+      "Light_Neutral_Helmet",
+      "Middle_Bandit_Armor",
+      "Nasos_Neutral_Armor",
+      "Newbee_Neutral_Armor",
+      "Rook_Dolg_Armor",
+      "Rook_Svoboda_Armor",
+      "SEVA_Dolg_Armor",
+      "SEVA_Neutral_Armor",
+      "SEVA_Spark_Armor",
+      "SEVA_Svoboda_Armor",
+      "SciSEVA_Scientific_Armor",
+      "SkinJacket_Bandit_Armor",
+      "Zorya_Neutral_Armor"
+    ],
+    "categories": [
+      "FULL_BODY_SUIT",
+      "HELMET",
+      "SUIT"
+    ],
+    "factions": [
+      "BANDIT",
+      "DUTY",
+      "ECOLOGIST",
+      "FREEDOM",
+      "FREE_STALKER",
+      "MERCENARY",
+      "MILITARY",
+      "MONOLITH",
+      "SPARK",
+      "WARD"
+    ],
+    "texts": [
+      "Max Durability"
+    ],
+    "localization_sids": [
+      "armor_wearing"
+    ],
+    "value_min_counts": {
+      "15.0%": 28,
+      "20.0%": 27,
+      "25.0%": 22,
+      "10.0%": 6,
+      "5.0%": 2,
+      "30.0%": 2
+    },
+    "value_max_counts": {
+      "15.0%": 28,
+      "20.0%": 27,
+      "25.0%": 22,
+      "10.0%": 6,
+      "5.0%": 2,
+      "30.0%": 2
+    },
+    "positive_counts": {
+      "EBeneficial::Positive": 87
+    },
+    "effect_level_counts": {
+      "EEffectLevel::Low": 16,
+      "EEffectLevel::Medium": 13,
+      "EEffectLevel::Strong": 7,
+      "EEffectLevel::Max": 3
+    },
+    "examples": [
+      {
+        "upgrade_sid": "Anomaly_Scientific_Armor_MaxDurability_Left_1_1",
+        "root_effect_sid": "Anomaly_Scientific_Armor_wearing",
+        "effect_sid": "Anomaly_Scientific_Armor_wearing",
+        "armor_sids": [
+          "Anomaly_Scientific_Armor"
+        ],
+        "value_min": [
+          "5.0%"
+        ],
+        "value_max": [
+          "5.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Anomaly_Scientific_Armor_MaxDurability_Left_2_2",
+        "root_effect_sid": "Anomaly_Scientific_Armor_wearing2",
+        "effect_sid": "Anomaly_Scientific_Armor_wearing2",
+        "armor_sids": [
+          "Anomaly_Scientific_Armor"
+        ],
+        "value_min": [
+          "5.0%"
+        ],
+        "value_max": [
+          "5.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_EXOMaxDurability_Left_2_1",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_wearing3",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_wearing3",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_EXOMaxDurability_Left_2_2",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_wearing4",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_wearing4",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_EXOprotectionPhysical_Left_2_2",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_wearing",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_wearing",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_EXOprotectionPhysical_Left_3_1",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_wearing2",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_wearing2",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Dolg_Armor_MaxDurability_Left_1_1",
+        "root_effect_sid": "Battle_Dolg_Armor_wearing",
+        "effect_sid": "Battle_Dolg_Armor_wearing",
+        "armor_sids": [
+          "Battle_Dolg_Armor"
+        ],
+        "value_min": [
+          "25.0%"
+        ],
+        "value_max": [
+          "25.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Military_Helmet_MaxDurability_Left_2_1",
+        "root_effect_sid": "Battle_Military_Helmet_wearing",
+        "effect_sid": "Battle_Military_Helmet_wearing",
+        "armor_sids": [
+          "Battle_Military_Helmet"
+        ],
+        "value_min": [
+          "20.0%"
+        ],
+        "value_max": [
+          "20.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_MaxDurability_Left_2_2",
+        "root_effect_sid": "Battle_Monolith_Armor_wearing",
+        "effect_sid": "Battle_Monolith_Armor_wearing",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [
+          "25.0%"
+        ],
+        "value_max": [
+          "25.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Spark_Armor_MaxDurability_Left_1_1",
+        "root_effect_sid": "Battle_Spark_Armor_wearing",
+        "effect_sid": "Battle_Spark_Armor_wearing",
+        "armor_sids": [
+          "Battle_Spark_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Svoboda_Armor_MaxDurability_Left_1_1",
+        "root_effect_sid": "Battle_Svoboda_Armor_wearing",
+        "effect_sid": "Battle_Svoboda_Armor_wearing",
+        "armor_sids": [
+          "Battle_Svoboda_Armor"
+        ],
+        "value_min": [
+          "25.0%"
+        ],
+        "value_max": [
+          "25.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Varta_Armor_wearing2_Left_2_2",
+        "root_effect_sid": "Battle_Varta_Armor_wearing2",
+        "effect_sid": "Battle_Varta_Armor_wearing2",
+        "armor_sids": [
+          "Battle_Varta_Armor"
+        ],
+        "value_min": [
+          "20.0%"
+        ],
+        "value_max": [
+          "20.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "EEffectType::ProtectionChemical",
+    "upgrade_count": 84,
+    "effect_count": 78,
+    "armor_count": 45,
+    "effect_sids": [
+      "Anomaly_Scientific_Armor_protectionChemical",
+      "Anomaly_Scientific_Armor_protectionChemical2",
+      "Anomaly_Scientific_Armor_protectionChemical3",
+      "BattleExoskeleton_Varta_Armor_protectionChemical",
+      "BattleExoskeleton_Varta_Armor_protectionChemical1",
+      "Battle_Dolg_Armor_protectionChemical",
+      "Battle_Dolg_Armor_protectionChemical1",
+      "Battle_Military_Helmet_protectionChemical",
+      "Battle_Military_Helmet_protectionChemical1",
+      "Battle_Military_Helmet_protectionChemical2",
+      "Battle_Monolith_Armor_protectionChemical",
+      "Battle_Monolith_Armor_protectionChemical1",
+      "Battle_Spark_Armor_protectionChemical",
+      "Battle_Spark_Armor_protectionChemical1",
+      "Battle_Svoboda_Armor_protectionChemical",
+      "Battle_Varta_Armor_protectionChemical",
+      "Default_Military_Armor_protectionChemical",
+      "Exoskeleton_Dolg_Armor_protectionChemical",
+      "Exoskeleton_Dolg_Armor_protectionChemical1",
+      "Exoskeleton_Mercenaries_Armor_protectionChemical",
+      "Exoskeleton_Mercenaries_Armor_protectionChemical1",
+      "Exoskeleton_Mercenaries_Armor_protectionChemical2",
+      "Exoskeleton_Monolith_Armor_protectionChemical1",
+      "Exoskeleton_Monolith_Armor_protectionChemical2",
+      "Exoskeleton_Neutral_Armor_protectionChemical1",
+      "Exoskeleton_Svoboda_Armor_protectionChemical",
+      "Exoskeleton_Svoboda_Armor_protectionChemical1",
+      "Exoskeleton_Svoboda_Armor_protectionChemical2",
+      "Heavy2_Military_Armor_protectionChemical",
+      "HeavyAnomaly_Monolith_Armor_protectionChemical",
+      "HeavyAnomaly_Scientific_Armor_protectionChemical",
+      "HeavyAnomaly_Scientific_Armor_protectionChemical1",
+      "HeavyAnomaly_Scientific_Armor_protectionChemical2",
+      "HeavyAnomaly_Spark_Armor_protectionChemical",
+      "HeavyAnomaly_Spark_Armor_protectionChemical1",
+      "HeavyAnomaly_Spark_Armor_protectionChemical2",
+      "HeavyBattle_Spark_Armor_protectionChemical",
+      "HeavyBattle_Spark_Armor_protectionChemical1",
+      "HeavyExoskeleton_Dolg_Armor_protectionChemical1",
+      "HeavyExoskeleton_Dolg_Armor_protectionChemical2",
+      "HeavyExoskeleton_Monolith_Armor_protectionChemical",
+      "HeavyExoskeleton_Monolith_Armor_protectionChemical1",
+      "HeavyExoskeleton_Monolith_Armor_protectionChemical2",
+      "HeavyExoskeleton_Svoboda_Armor_protectionChemical1",
+      "Heavy_Dolg_Armor_protectionChemical",
+      "Heavy_Dolg_Armor_protectionChemical1",
+      "Heavy_Duty_Helmet_protectionChemical",
+      "Heavy_Mercenaries_Armor_protectionChemical",
+      "Heavy_Mercenaries_Armor_protectionChemical2",
+      "Heavy_Military_Helmet_protectionChemical",
+      "Heavy_Military_Helmet_protectionChemical1",
+      "Heavy_Svoboda_Armor_protectionChemical",
+      "Heavy_Svoboda_Armor_protectionChemical1",
+      "Heavy_Svoboda_Helmet_protectionChemical",
+      "Heavy_Svoboda_Helmet_protectionChemical1",
+      "Heavy_Svoboda_Helmet_protectionChemical2",
+      "Heavy_Varta_Helmet_protectionChemical",
+      "Jemmy_Neutral_Armor_protectionChemical",
+      "Light_Mercenaries_Armor_protectionChemical2",
+      "Light_Mercenaries_Helmet_Armor_protectionChemical",
+      "Middle_Bandit_Armor_protectionChemical",
+      "Nasos_Neutral_Armor_protectionChemical",
+      "Nasos_Neutral_Armor_protectionChemical2",
+      "Newbie_Neutral_Armor_protectionChemical",
+      "Rook_Dolg_Armor_protectionChemical",
+      "Rook_Svoboda_Armor_protectionChemical",
+      "SEVA_Dolg_Armor_protectionChemical",
+      "SEVA_Spark_Armor_protectionChemical",
+      "SEVA_Spark_Armor_protectionChemical1",
+      "SEVA_Svoboda_Armor_protectionChemical",
+      "SEVA_Svoboda_Armor_protectionChemical1",
+      "SciSEVA_Scientific_Armor_protectionChemical",
+      "SciSEVA_Scientific_Armor_protectionChemical1",
+      "Seva_Neutral_Armor_protectionChemical",
+      "Seva_Neutral_Armor_protectionChemical2",
+      "Skin_Jacket_Bandit_Armor_protectionChemical",
+      "Zorya_Neutral_Armor_protectionChemical",
+      "Zorya_Neutral_Armor_protectionChemical2"
+    ],
+    "root_effect_sids": [
+      "Anomaly_Scientific_Armor_protectionChemical",
+      "Anomaly_Scientific_Armor_protectionChemical2",
+      "Anomaly_Scientific_Armor_protectionChemical3",
+      "BattleExoskeleton_Varta_Armor_protectionChemical",
+      "BattleExoskeleton_Varta_Armor_protectionChemical1",
+      "Battle_Dolg_Armor_protectionChemical",
+      "Battle_Dolg_Armor_protectionChemical1",
+      "Battle_Military_Helmet_protectionChemical",
+      "Battle_Military_Helmet_protectionChemical1",
+      "Battle_Military_Helmet_protectionChemical2",
+      "Battle_Monolith_Armor_protectionChemical",
+      "Battle_Monolith_Armor_protectionChemical1",
+      "Battle_Spark_Armor_protectionChemical",
+      "Battle_Spark_Armor_protectionChemical1",
+      "Battle_Svoboda_Armor_protectionChemical",
+      "Battle_Varta_Armor_protectionChemical",
+      "Default_Military_Armor_protectionChemical",
+      "Exoskeleton_Dolg_Armor_protectionChemical",
+      "Exoskeleton_Dolg_Armor_protectionChemical1",
+      "Exoskeleton_Mercenaries_Armor_protectionChemical",
+      "Exoskeleton_Mercenaries_Armor_protectionChemical1",
+      "Exoskeleton_Mercenaries_Armor_protectionChemical2",
+      "Exoskeleton_Monolith_Armor_protectionChemical1",
+      "Exoskeleton_Monolith_Armor_protectionChemical2",
+      "Exoskeleton_Neutral_Armor_protectionChemical1",
+      "Exoskeleton_Svoboda_Armor_protectionChemical",
+      "Exoskeleton_Svoboda_Armor_protectionChemical1",
+      "Exoskeleton_Svoboda_Armor_protectionChemical2",
+      "Heavy2_Military_Armor_protectionChemical",
+      "HeavyAnomaly_Monolith_Armor_protectionChemical",
+      "HeavyAnomaly_Scientific_Armor_protectionChemical",
+      "HeavyAnomaly_Scientific_Armor_protectionChemical1",
+      "HeavyAnomaly_Scientific_Armor_protectionChemical2",
+      "HeavyAnomaly_Spark_Armor_protectionChemical",
+      "HeavyAnomaly_Spark_Armor_protectionChemical1",
+      "HeavyAnomaly_Spark_Armor_protectionChemical2",
+      "HeavyBattle_Spark_Armor_protectionChemical",
+      "HeavyBattle_Spark_Armor_protectionChemical1",
+      "HeavyExoskeleton_Dolg_Armor_protectionChemical1",
+      "HeavyExoskeleton_Dolg_Armor_protectionChemical2",
+      "HeavyExoskeleton_Monolith_Armor_protectionChemical",
+      "HeavyExoskeleton_Monolith_Armor_protectionChemical1",
+      "HeavyExoskeleton_Monolith_Armor_protectionChemical2",
+      "HeavyExoskeleton_Svoboda_Armor_protectionChemical1",
+      "Heavy_Dolg_Armor_protectionChemical",
+      "Heavy_Dolg_Armor_protectionChemical1",
+      "Heavy_Duty_Helmet_protectionChemical",
+      "Heavy_Mercenaries_Armor_protectionChemical",
+      "Heavy_Mercenaries_Armor_protectionChemical2",
+      "Heavy_Military_Helmet_protectionChemical",
+      "Heavy_Military_Helmet_protectionChemical1",
+      "Heavy_Svoboda_Armor_protectionChemical",
+      "Heavy_Svoboda_Armor_protectionChemical1",
+      "Heavy_Svoboda_Helmet_protectionChemical",
+      "Heavy_Svoboda_Helmet_protectionChemical1",
+      "Heavy_Svoboda_Helmet_protectionChemical2",
+      "Heavy_Varta_Helmet_protectionChemical",
+      "Jemmy_Neutral_Armor_protectionChemical",
+      "Light_Mercenaries_Armor_protectionChemical2",
+      "Light_Mercenaries_Helmet_Armor_protectionChemical",
+      "Middle_Bandit_Armor_protectionChemical",
+      "Nasos_Neutral_Armor_protectionChemical",
+      "Nasos_Neutral_Armor_protectionChemical2",
+      "Newbie_Neutral_Armor_protectionChemical",
+      "Rook_Dolg_Armor_protectionChemical",
+      "Rook_Svoboda_Armor_protectionChemical",
+      "SEVA_Dolg_Armor_protectionChemical",
+      "SEVA_Spark_Armor_protectionChemical",
+      "SEVA_Spark_Armor_protectionChemical1",
+      "SEVA_Svoboda_Armor_protectionChemical",
+      "SEVA_Svoboda_Armor_protectionChemical1",
+      "SciSEVA_Scientific_Armor_protectionChemical",
+      "SciSEVA_Scientific_Armor_protectionChemical1",
+      "Seva_Neutral_Armor_protectionChemical",
+      "Seva_Neutral_Armor_protectionChemical2",
+      "Skin_Jacket_Bandit_Armor_protectionChemical",
+      "Zorya_Neutral_Armor_protectionChemical",
+      "Zorya_Neutral_Armor_protectionChemical2"
+    ],
+    "armor_sids": [
+      "Anomaly_Scientific_Armor",
+      "BattleExoskeleton_Varta_Armor",
+      "Battle_Dolg_Armor",
+      "Battle_Military_Helmet",
+      "Battle_Monolith_Armor",
+      "Battle_Spark_Armor",
+      "Battle_Svoboda_Armor",
+      "Battle_Varta_Armor",
+      "Default_Military_Armor",
+      "Exoskeleton_Dolg_Armor",
+      "Exoskeleton_Mercenaries_Armor",
+      "Exoskeleton_Monolith_Armor",
+      "Exoskeleton_Neutral_Armor",
+      "Exoskeleton_Svoboda_Armor",
+      "Heavy2_Military_Armor",
+      "HeavyAnomaly_Monolith_Armor",
+      "HeavyAnomaly_Scientific_Armor",
+      "HeavyAnomaly_Spark_Armor",
+      "HeavyBattle_Spark_Armor",
+      "HeavyExoskeleton_Dolg_Armor",
+      "HeavyExoskeleton_Monolith_Armor",
+      "HeavyExoskeleton_Svoboda_Armor",
+      "Heavy_Dolg_Armor",
+      "Heavy_Duty_Helmet",
+      "Heavy_Mercenaries_Armor",
+      "Heavy_Military_Helmet",
+      "Heavy_Svoboda_Armor",
+      "Heavy_Svoboda_Helmet",
+      "Heavy_Varta_Helmet",
+      "Jacket_Bandit_Armor",
+      "Jemmy_Neutral_Armor",
+      "Light_Mercenaries_Armor",
+      "Light_Mercenaries_Helmet",
+      "Middle_Bandit_Armor",
+      "Nasos_Neutral_Armor",
+      "Newbee_Neutral_Armor",
+      "Rook_Dolg_Armor",
+      "Rook_Svoboda_Armor",
+      "SEVA_Dolg_Armor",
+      "SEVA_Neutral_Armor",
+      "SEVA_Spark_Armor",
+      "SEVA_Svoboda_Armor",
+      "SciSEVA_Scientific_Armor",
+      "SkinJacket_Bandit_Armor",
+      "Zorya_Neutral_Armor"
+    ],
+    "categories": [
+      "FULL_BODY_SUIT",
+      "HELMET",
+      "SUIT"
+    ],
+    "factions": [
+      "BANDIT",
+      "DUTY",
+      "ECOLOGIST",
+      "FREEDOM",
+      "FREE_STALKER",
+      "MERCENARY",
+      "MILITARY",
+      "MONOLITH",
+      "SPARK",
+      "WARD"
+    ],
+    "texts": [
+      "Chemical protection"
+    ],
+    "localization_sids": [
+      "armor_protectionChemical"
+    ],
+    "value_min_counts": {
+      "20.0%": 38,
+      "15.0%": 25,
+      "30.0%": 17,
+      "5.0%": 4
+    },
+    "value_max_counts": {
+      "20.0%": 38,
+      "15.0%": 25,
+      "30.0%": 17,
+      "5.0%": 4
+    },
+    "positive_counts": {
+      "EBeneficial::Positive": 84
+    },
+    "effect_level_counts": {
+      "EEffectLevel::Low": 25,
+      "EEffectLevel::Medium": 15,
+      "EEffectLevel::Strong": 1
+    },
+    "examples": [
+      {
+        "upgrade_sid": "Anomaly_Scientific_Armor_protectionChemical_Left_2_1",
+        "root_effect_sid": "Anomaly_Scientific_Armor_protectionChemical",
+        "effect_sid": "Anomaly_Scientific_Armor_protectionChemical",
+        "armor_sids": [
+          "Anomaly_Scientific_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Anomaly_Scientific_Armor_protectionChemical_protectionElectrical_Left_3_2",
+        "root_effect_sid": "Anomaly_Scientific_Armor_protectionChemical3",
+        "effect_sid": "Anomaly_Scientific_Armor_protectionChemical3",
+        "armor_sids": [
+          "Anomaly_Scientific_Armor"
+        ],
+        "value_min": [
+          "20.0%"
+        ],
+        "value_max": [
+          "20.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Anomaly_Scientific_Armor_protectionThermal_protectionChemica_Left_3_1",
+        "root_effect_sid": "Anomaly_Scientific_Armor_protectionChemical2",
+        "effect_sid": "Anomaly_Scientific_Armor_protectionChemical2",
+        "armor_sids": [
+          "Anomaly_Scientific_Armor"
+        ],
+        "value_min": [
+          "20.0%"
+        ],
+        "value_max": [
+          "20.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_protectionChemical_Left_2_1",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_protectionChemical",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_protectionChemical",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_protectionChemical_protectionElectrical_Left_3_1",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_protectionChemical1",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_protectionChemical1",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "20.0%"
+        ],
+        "value_max": [
+          "20.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Dolg_Armor_protectionChemical_Left_1_1",
+        "root_effect_sid": "Battle_Dolg_Armor_protectionChemical",
+        "effect_sid": "Battle_Dolg_Armor_protectionChemical",
+        "armor_sids": [
+          "Battle_Dolg_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Dolg_Armor_protectionChemical_Left_3_2",
+        "root_effect_sid": "Battle_Dolg_Armor_protectionChemical1",
+        "effect_sid": "Battle_Dolg_Armor_protectionChemical1",
+        "armor_sids": [
+          "Battle_Dolg_Armor"
+        ],
+        "value_min": [
+          "20.0%"
+        ],
+        "value_max": [
+          "20.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Military_Helmet_protectionChemical_Left_1_1",
+        "root_effect_sid": "Battle_Military_Helmet_protectionChemical",
+        "effect_sid": "Battle_Military_Helmet_protectionChemical",
+        "armor_sids": [
+          "Battle_Military_Helmet"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Military_Helmet_protectionChemical_protectionElectrical_Left_2_2",
+        "root_effect_sid": "Battle_Military_Helmet_protectionChemical1",
+        "effect_sid": "Battle_Military_Helmet_protectionChemical1",
+        "armor_sids": [
+          "Battle_Military_Helmet"
+        ],
+        "value_min": [
+          "20.0%"
+        ],
+        "value_max": [
+          "20.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Military_Helmet_protectionChemical_protectionTherma_Left_2_1",
+        "root_effect_sid": "Battle_Military_Helmet_protectionChemical2",
+        "effect_sid": "Battle_Military_Helmet_protectionChemical2",
+        "armor_sids": [
+          "Battle_Military_Helmet"
+        ],
+        "value_min": [
+          "20.0%"
+        ],
+        "value_max": [
+          "20.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_protectionChemical_Left_3_1",
+        "root_effect_sid": "Battle_Monolith_Armor_protectionChemical1",
+        "effect_sid": "Battle_Monolith_Armor_protectionChemical1",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [
+          "20.0%"
+        ],
+        "value_max": [
+          "20.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_protectionThermal_protectionChemical_Left_1_1",
+        "root_effect_sid": "Battle_Monolith_Armor_protectionChemical",
+        "effect_sid": "Battle_Monolith_Armor_protectionChemical",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "EEffectType::ProtectionShock",
+    "upgrade_count": 84,
+    "effect_count": 82,
+    "armor_count": 44,
+    "effect_sids": [
+      "Anomaly_Scientific_Armor_protectionElectrical",
+      "Anomaly_Scientific_Armor_protectionElectrical2",
+      "BattleExoskeleton_Varta_Armor_protectionElectrical",
+      "BattleExoskeleton_Varta_Armor_protectionElectrical1",
+      "Battle_Dolg_Armor_protectionElectrical",
+      "Battle_Dolg_Armor_protectionElectrical1",
+      "Battle_Military_Helmet_protectionElectrical",
+      "Battle_Military_Helmet_protectionElectrical1",
+      "Battle_Monolith_Armor_protectionElectrical",
+      "Battle_Monolith_Armor_protectionElectrical1",
+      "Battle_Spark_Armor_protectionElectrical",
+      "Battle_Spark_Armor_protectionElectrical1",
+      "Battle_Spark_Armor_protectionElectrical2",
+      "Battle_Svoboda_Armor_protectionElectrical",
+      "Battle_Svoboda_Armor_protectionElectrical1",
+      "Battle_Varta_Armor_protectionElectrical",
+      "Default_Military_Armor_protectionElectrical",
+      "Exoskeleton_Dolg_Armor_protectionElectrical",
+      "Exoskeleton_Dolg_Armor_protectionElectrical1",
+      "Exoskeleton_Mercenaries_Armor_protectionElectrical",
+      "Exoskeleton_Mercenaries_Armor_protectionElectrical1",
+      "Exoskeleton_Monolith_Armor_protectionElectrical",
+      "Exoskeleton_Monolith_Armor_protectionElectrical1",
+      "Exoskeleton_Neutral_Armor_protectionElectrical",
+      "Exoskeleton_Svoboda_Armor_protectionElectrical",
+      "Exoskeleton_Svoboda_Armor_protectionElectrical1",
+      "Heavy2_Military_Armor_protectionElectrical",
+      "HeavyAnomaly_Monolith_Armor_protectionElectrical",
+      "HeavyAnomaly_Monolith_Armor_protectionElectrical1",
+      "HeavyAnomaly_Scientific_Armor_protectionElectrical",
+      "HeavyAnomaly_Scientific_Armor_protectionElectrical1",
+      "HeavyAnomaly_Spark_Armor_protectionElectrical",
+      "HeavyAnomaly_Spark_Armor_protectionElectrical1",
+      "HeavyBattle_Spark_Armor_protectionElectrical",
+      "HeavyBattle_Spark_Armor_protectionElectrical1",
+      "HeavyExoskeleton_Dolg_Armor_protectionElectrical",
+      "HeavyExoskeleton_Dolg_Armor_protectionElectrical1",
+      "HeavyExoskeleton_Monolith_Armor_protectionElectrical",
+      "HeavyExoskeleton_Monolith_Armor_protectionElectrical1",
+      "HeavyExoskeleton_Svoboda_Armor_protectionElectrical",
+      "HeavyExoskeleton_Svoboda_Armor_protectionElectrical1",
+      "Heavy_Dolg_Armor_protectionElectrical",
+      "Heavy_Dolg_Armor_protectionElectrical1",
+      "Heavy_Duty_Helmet_protectionElectrical",
+      "Heavy_Mercenaries_Armor_protectionElectrical",
+      "Heavy_Mercenaries_Armor_protectionElectrical1",
+      "Heavy_Mercenaries_Armor_protectionElectrical2",
+      "Heavy_Military_Helmet_protectionElectrical",
+      "Heavy_Svoboda_Armor_protectionElectrical",
+      "Heavy_Svoboda_Armor_protectionElectrical1",
+      "Heavy_Svoboda_Helmet_protectionElectrical",
+      "Heavy_Svoboda_Helmet_protectionElectrical1",
+      "Heavy_Varta_Helmet_protectionElectrical",
+      "Jemmy_Neutral_Armor_protectionElectrical",
+      "Light_Mercenaries_Armor_protectionElectrical1",
+      "Light_Neutral_Helmet_Armor_protectionElectrical",
+      "Middle_Bandit_Armor_protectionElectrical",
+      "Middle_Bandit_Armor_protectionElectrical1",
+      "Nasos_Neutral_Armor_protectionElectrical",
+      "Nasos_Neutral_Armor_protectionElectrical2",
+      "Newbie_Neutral_Armor_protectionElectrical",
+      "Rook_Dolg_Armor_protectionElectrical",
+      "Rook_Svoboda_Armor_protectionElectrical",
+      "SEVA_Dolg_Armor_protectionElectrical",
+      "SEVA_Spark_Armor_protectionElectrical",
+      "SEVA_Spark_Armor_protectionElectrical1",
+      "SEVA_Spark_Armor_protectionElectrical2",
+      "SEVA_Spark_Armor_protectionElectrical3",
+      "SEVA_Svoboda_Armor_protectionElectrical",
+      "SEVA_Svoboda_Armor_protectionElectrical1",
+      "SEVA_Svoboda_Armor_protectionElectrical2",
+      "SEVA_Svoboda_Armor_protectionElectrical3",
+      "SciSEVA_Scientific_Armor_protectionElectrical",
+      "SciSEVA_Scientific_Armor_protectionElectrical1",
+      "SciSEVA_Scientific_Armor_protectionElectrical2",
+      "SciSEVA_Scientific_Armor_protectionElectrical3",
+      "Seva_Neutral_Armor_protectionElectrical",
+      "Seva_Neutral_Armor_protectionElectrical1",
+      "Seva_Neutral_Armor_protectionElectrical2",
+      "Seva_Neutral_Armor_protectionElectrical3",
+      "Skin_Jacket_Bandit_Armor_protectionElectrical",
+      "Zorya_Neutral_Armor_protectionElectrical"
+    ],
+    "root_effect_sids": [
+      "Anomaly_Scientific_Armor_protectionElectrical",
+      "Anomaly_Scientific_Armor_protectionElectrical2",
+      "BattleExoskeleton_Varta_Armor_protectionElectrical",
+      "BattleExoskeleton_Varta_Armor_protectionElectrical1",
+      "Battle_Dolg_Armor_protectionElectrical",
+      "Battle_Dolg_Armor_protectionElectrical1",
+      "Battle_Military_Helmet_protectionElectrical",
+      "Battle_Military_Helmet_protectionElectrical1",
+      "Battle_Monolith_Armor_protectionElectrical",
+      "Battle_Monolith_Armor_protectionElectrical1",
+      "Battle_Spark_Armor_protectionElectrical",
+      "Battle_Spark_Armor_protectionElectrical1",
+      "Battle_Spark_Armor_protectionElectrical2",
+      "Battle_Svoboda_Armor_protectionElectrical",
+      "Battle_Svoboda_Armor_protectionElectrical1",
+      "Battle_Varta_Armor_protectionElectrical",
+      "Default_Military_Armor_protectionElectrical",
+      "Exoskeleton_Dolg_Armor_protectionElectrical",
+      "Exoskeleton_Dolg_Armor_protectionElectrical1",
+      "Exoskeleton_Mercenaries_Armor_protectionElectrical",
+      "Exoskeleton_Mercenaries_Armor_protectionElectrical1",
+      "Exoskeleton_Monolith_Armor_protectionElectrical",
+      "Exoskeleton_Monolith_Armor_protectionElectrical1",
+      "Exoskeleton_Neutral_Armor_protectionElectrical",
+      "Exoskeleton_Svoboda_Armor_protectionElectrical",
+      "Exoskeleton_Svoboda_Armor_protectionElectrical1",
+      "Heavy2_Military_Armor_protectionElectrical",
+      "HeavyAnomaly_Monolith_Armor_protectionElectrical",
+      "HeavyAnomaly_Monolith_Armor_protectionElectrical1",
+      "HeavyAnomaly_Scientific_Armor_protectionElectrical",
+      "HeavyAnomaly_Scientific_Armor_protectionElectrical1",
+      "HeavyAnomaly_Spark_Armor_protectionElectrical",
+      "HeavyAnomaly_Spark_Armor_protectionElectrical1",
+      "HeavyBattle_Spark_Armor_protectionElectrical",
+      "HeavyBattle_Spark_Armor_protectionElectrical1",
+      "HeavyExoskeleton_Dolg_Armor_protectionElectrical",
+      "HeavyExoskeleton_Dolg_Armor_protectionElectrical1",
+      "HeavyExoskeleton_Monolith_Armor_protectionElectrical",
+      "HeavyExoskeleton_Monolith_Armor_protectionElectrical1",
+      "HeavyExoskeleton_Svoboda_Armor_protectionElectrical",
+      "HeavyExoskeleton_Svoboda_Armor_protectionElectrical1",
+      "Heavy_Dolg_Armor_protectionElectrical",
+      "Heavy_Dolg_Armor_protectionElectrical1",
+      "Heavy_Duty_Helmet_protectionElectrical",
+      "Heavy_Mercenaries_Armor_protectionElectrical",
+      "Heavy_Mercenaries_Armor_protectionElectrical1",
+      "Heavy_Mercenaries_Armor_protectionElectrical2",
+      "Heavy_Military_Helmet_protectionElectrical",
+      "Heavy_Svoboda_Armor_protectionElectrical",
+      "Heavy_Svoboda_Armor_protectionElectrical1",
+      "Heavy_Svoboda_Helmet_protectionElectrical",
+      "Heavy_Svoboda_Helmet_protectionElectrical1",
+      "Heavy_Varta_Helmet_protectionElectrical",
+      "Jemmy_Neutral_Armor_protectionElectrical",
+      "Light_Mercenaries_Armor_protectionElectrical1",
+      "Light_Neutral_Helmet_Armor_protectionElectrical",
+      "Middle_Bandit_Armor_protectionElectrical",
+      "Middle_Bandit_Armor_protectionElectrical1",
+      "Nasos_Neutral_Armor_protectionElectrical",
+      "Nasos_Neutral_Armor_protectionElectrical2",
+      "Newbie_Neutral_Armor_protectionElectrical",
+      "Rook_Dolg_Armor_protectionElectrical",
+      "Rook_Svoboda_Armor_protectionElectrical",
+      "SEVA_Dolg_Armor_protectionElectrical",
+      "SEVA_Spark_Armor_protectionElectrical",
+      "SEVA_Spark_Armor_protectionElectrical1",
+      "SEVA_Spark_Armor_protectionElectrical2",
+      "SEVA_Spark_Armor_protectionElectrical3",
+      "SEVA_Svoboda_Armor_protectionElectrical",
+      "SEVA_Svoboda_Armor_protectionElectrical1",
+      "SEVA_Svoboda_Armor_protectionElectrical2",
+      "SEVA_Svoboda_Armor_protectionElectrical3",
+      "SciSEVA_Scientific_Armor_protectionElectrical",
+      "SciSEVA_Scientific_Armor_protectionElectrical1",
+      "SciSEVA_Scientific_Armor_protectionElectrical2",
+      "SciSEVA_Scientific_Armor_protectionElectrical3",
+      "Seva_Neutral_Armor_protectionElectrical",
+      "Seva_Neutral_Armor_protectionElectrical1",
+      "Seva_Neutral_Armor_protectionElectrical2",
+      "Seva_Neutral_Armor_protectionElectrical3",
+      "Skin_Jacket_Bandit_Armor_protectionElectrical",
+      "Zorya_Neutral_Armor_protectionElectrical"
+    ],
+    "armor_sids": [
+      "Anomaly_Scientific_Armor",
+      "BattleExoskeleton_Varta_Armor",
+      "Battle_Dolg_Armor",
+      "Battle_Military_Helmet",
+      "Battle_Monolith_Armor",
+      "Battle_Spark_Armor",
+      "Battle_Svoboda_Armor",
+      "Battle_Varta_Armor",
+      "Default_Military_Armor",
+      "Exoskeleton_Dolg_Armor",
+      "Exoskeleton_Mercenaries_Armor",
+      "Exoskeleton_Monolith_Armor",
+      "Exoskeleton_Neutral_Armor",
+      "Exoskeleton_Svoboda_Armor",
+      "Heavy2_Military_Armor",
+      "HeavyAnomaly_Monolith_Armor",
+      "HeavyAnomaly_Scientific_Armor",
+      "HeavyAnomaly_Spark_Armor",
+      "HeavyBattle_Spark_Armor",
+      "HeavyExoskeleton_Dolg_Armor",
+      "HeavyExoskeleton_Monolith_Armor",
+      "HeavyExoskeleton_Svoboda_Armor",
+      "Heavy_Dolg_Armor",
+      "Heavy_Duty_Helmet",
+      "Heavy_Mercenaries_Armor",
+      "Heavy_Military_Helmet",
+      "Heavy_Svoboda_Armor",
+      "Heavy_Svoboda_Helmet",
+      "Heavy_Varta_Helmet",
+      "Jemmy_Neutral_Armor",
+      "Light_Mercenaries_Armor",
+      "Light_Neutral_Helmet",
+      "Middle_Bandit_Armor",
+      "Nasos_Neutral_Armor",
+      "Newbee_Neutral_Armor",
+      "Rook_Dolg_Armor",
+      "Rook_Svoboda_Armor",
+      "SEVA_Dolg_Armor",
+      "SEVA_Neutral_Armor",
+      "SEVA_Spark_Armor",
+      "SEVA_Svoboda_Armor",
+      "SciSEVA_Scientific_Armor",
+      "SkinJacket_Bandit_Armor",
+      "Zorya_Neutral_Armor"
+    ],
+    "categories": [
+      "FULL_BODY_SUIT",
+      "HELMET",
+      "SUIT"
+    ],
+    "factions": [
+      "BANDIT",
+      "DUTY",
+      "ECOLOGIST",
+      "FREEDOM",
+      "FREE_STALKER",
+      "MERCENARY",
+      "MILITARY",
+      "MONOLITH",
+      "SPARK",
+      "WARD"
+    ],
+    "texts": [
+      "Electro Defence"
+    ],
+    "localization_sids": [
+      "armor_protectionElectrical"
+    ],
+    "value_min_counts": {
+      "20.0%": 33,
+      "15.0%": 30,
+      "30.0%": 14,
+      "5.0%": 4,
+      "10.0%": 3
+    },
+    "value_max_counts": {
+      "20.0%": 33,
+      "15.0%": 30,
+      "30.0%": 14,
+      "5.0%": 4,
+      "10.0%": 3
+    },
+    "positive_counts": {
+      "EBeneficial::Positive": 84
+    },
+    "effect_level_counts": {
+      "EEffectLevel::Low": 27,
+      "EEffectLevel::Medium": 8,
+      "EEffectLevel::Strong": 4
+    },
+    "examples": [
+      {
+        "upgrade_sid": "Anomaly_Scientific_Armor_protectionChemical_protectionElectrical_Left_3_2",
+        "root_effect_sid": "Anomaly_Scientific_Armor_protectionElectrical2",
+        "effect_sid": "Anomaly_Scientific_Armor_protectionElectrical2",
+        "armor_sids": [
+          "Anomaly_Scientific_Armor"
+        ],
+        "value_min": [
+          "20.0%"
+        ],
+        "value_max": [
+          "20.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Anomaly_Scientific_Armor_protectionElectrical_Left_2_2",
+        "root_effect_sid": "Anomaly_Scientific_Armor_protectionElectrical",
+        "effect_sid": "Anomaly_Scientific_Armor_protectionElectrical",
+        "armor_sids": [
+          "Anomaly_Scientific_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_protectionChemical_protectionElectrical_Left_3_1",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_protectionElectrical1",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_protectionElectrical1",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "20.0%"
+        ],
+        "value_max": [
+          "20.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_protectionElectrical_Left_1_1",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_protectionElectrical",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_protectionElectrical",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Dolg_Armor_protectionElectrical_Left_3_1",
+        "root_effect_sid": "Battle_Dolg_Armor_protectionElectrical1",
+        "effect_sid": "Battle_Dolg_Armor_protectionElectrical1",
+        "armor_sids": [
+          "Battle_Dolg_Armor"
+        ],
+        "value_min": [
+          "20.0%"
+        ],
+        "value_max": [
+          "20.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Dolg_Armor_protectionThermal_protectionElectrical_Left_2_2",
+        "root_effect_sid": "Battle_Dolg_Armor_protectionElectrical",
+        "effect_sid": "Battle_Dolg_Armor_protectionElectrical",
+        "armor_sids": [
+          "Battle_Dolg_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Military_Helmet_protectionChemical_protectionElectrical_Left_2_2",
+        "root_effect_sid": "Battle_Military_Helmet_protectionElectrical1",
+        "effect_sid": "Battle_Military_Helmet_protectionElectrical1",
+        "armor_sids": [
+          "Battle_Military_Helmet"
+        ],
+        "value_min": [
+          "20.0%"
+        ],
+        "value_max": [
+          "20.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Military_Helmet_protectionElectrical_Left_1_2",
+        "root_effect_sid": "Battle_Military_Helmet_protectionElectrical",
+        "effect_sid": "Battle_Military_Helmet_protectionElectrical",
+        "armor_sids": [
+          "Battle_Military_Helmet"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_protectionElectrical_Left_2_1",
+        "root_effect_sid": "Battle_Monolith_Armor_protectionElectrical1",
+        "effect_sid": "Battle_Monolith_Armor_protectionElectrical1",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [
+          "20.0%"
+        ],
+        "value_max": [
+          "20.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_protectionThermal_protectionElectrical_Left_1_2",
+        "root_effect_sid": "Battle_Monolith_Armor_protectionElectrical",
+        "effect_sid": "Battle_Monolith_Armor_protectionElectrical",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Spark_Armor_protectionChemical_protectionElectrical_Left_3_2",
+        "root_effect_sid": "Battle_Spark_Armor_protectionElectrical2",
+        "effect_sid": "Battle_Spark_Armor_protectionElectrical2",
+        "armor_sids": [
+          "Battle_Spark_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Spark_Armor_protectionThermal_protectionElectrical_Left_2_1",
+        "root_effect_sid": "Battle_Spark_Armor_protectionElectrical",
+        "effect_sid": "Battle_Spark_Armor_protectionElectrical",
+        "armor_sids": [
+          "Battle_Spark_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "EEffectType::ProtectionStrike",
+    "upgrade_count": 81,
+    "effect_count": 79,
+    "armor_count": 44,
+    "effect_sids": [
+      "BattleExoskeleton_Varta_Armor_protectionPhysical",
+      "BattleExoskeleton_Varta_Armor_protectionPhysical2",
+      "Battle_Dolg_Armor_protectionPhysical",
+      "Battle_Dolg_Armor_protectionPhysical1",
+      "Battle_Military_Helmet_protectionPhysical",
+      "Battle_Military_Helmet_protectionPhysical1",
+      "Battle_Military_Helmet_protectionPhysical2",
+      "Battle_Monolith_Armor_protectionPhysical",
+      "Battle_Monolith_Armor_protectionPhysical1",
+      "Battle_Spark_Armor_protectionPhysical",
+      "Battle_Svoboda_Armor_protectionPhysical",
+      "Battle_Varta_Armor_protectionPhysical",
+      "Battle_Varta_Armor_protectionPhysical2",
+      "Default_Military_Armor_protectionPhysical",
+      "Exoskeleton_Dolg_Armor_protectionPhysical",
+      "Exoskeleton_Dolg_Armor_protectionPhysical2",
+      "Exoskeleton_Mercenaries_Armor_protectionPhysical",
+      "Exoskeleton_Mercenaries_Armor_protectionPhysical2",
+      "Exoskeleton_Monolith_Armor_protectionPhysical",
+      "Exoskeleton_Monolith_Armor_protectionPhysical2",
+      "Exoskeleton_Neutral_Armor_protectionPhysical",
+      "Exoskeleton_Neutral_Armor_protectionPhysical1",
+      "Exoskeleton_Svoboda_Armor_protectionPhysical",
+      "Exoskeleton_Svoboda_Armor_protectionPhysical2",
+      "Heavy2_Military_Armor_protectionPhysical",
+      "Heavy2_Military_Armor_protectionPhysical1",
+      "HeavyAnomaly_Monolith_Armor_protectionPhysical",
+      "HeavyAnomaly_Monolith_Armor_protectionPhysical1",
+      "HeavyAnomaly_Scientific_Armor_protectionPhysical",
+      "HeavyAnomaly_Spark_Armor_protectionPhysical",
+      "HeavyBattle_Spark_Armor_protectionPhysical",
+      "HeavyBattle_Spark_Armor_protectionPhysical1",
+      "HeavyExoskeleton_Dolg_Armor_protectionPhysical",
+      "HeavyExoskeleton_Monolith_Armor_protectionPhysical",
+      "HeavyExoskeleton_Monolith_Armor_protectionPhysical1",
+      "HeavyExoskeleton_Svoboda_Armor_protectionPhysical",
+      "HeavyExoskeleton_Svoboda_Armor_protectionPhysical2",
+      "Heavy_Dolg_Armor_protectionPhysical",
+      "Heavy_Dolg_Armor_protectionPhysical1",
+      "Heavy_Duty_Helmet_protectionPhysical",
+      "Heavy_Duty_Helmet_protectionPhysical1",
+      "Heavy_Duty_Helmet_protectionPhysical2",
+      "Heavy_Mercenaries_Armor_protectionPhysical",
+      "Heavy_Mercenaries_Armor_protectionPhysical1",
+      "Heavy_Military_Helmet_protectionPhysical",
+      "Heavy_Military_Helmet_protectionPhysical1",
+      "Heavy_Svoboda_Armor_protectionPhysical",
+      "Heavy_Svoboda_Armor_protectionPhysical1",
+      "Heavy_Svoboda_Helmet_protectionPhysical",
+      "Heavy_Svoboda_Helmet_protectionPhysical1",
+      "Heavy_Svoboda_Helmet_protectionPhysical2",
+      "Heavy_Varta_Helmet_protectionPhysical",
+      "Jacket_Bandit_Armor_protectionPhysical",
+      "Jacket_Bandit_Armor_protectionPhysical2",
+      "Jemmy_Neutral_Armor_protectionPhysical",
+      "Jemmy_Neutral_Armor_protectionPhysical2",
+      "Light_Duty_Helmet_Armor_protectionPhysical",
+      "Light_Mercenaries_Armor_protectionPhysical",
+      "Light_Mercenaries_Armor_protectionPhysical1",
+      "Light_Military_Helmet_Armor_protectionPhysical",
+      "Middle_Bandit_Armor_protectionPhysical",
+      "Middle_Bandit_Armor_protectionPhysical1",
+      "Nasos_Neutral_Armor_protectionPhysical",
+      "Newbie_Neutral_Armor_protectionPhysical",
+      "Newbie_Neutral_Armor_protectionPhysical2",
+      "Rook_Dolg_Armor_protectionPhysical",
+      "Rook_Dolg_Armor_protectionPhysical1",
+      "Rook_Svoboda_Armor_protectionPhysical",
+      "Rook_Svoboda_Armor_protectionPhysical1",
+      "SEVA_Dolg_Armor_protectionPhysical",
+      "SEVA_Dolg_Armor_protectionPhysical2",
+      "SEVA_Spark_Armor_protectionPhysical",
+      "SEVA_Spark_Armor_protectionPhysical1",
+      "SEVA_Svoboda_Armor_protectionPhysical",
+      "Seva_Neutral_Armor_protectionPhysical",
+      "Seva_Neutral_Armor_protectionPhysical1",
+      "Skin_Jacket_Bandit_Armor_protectionPhysical",
+      "Zorya_Neutral_Armor_protectionPhysical",
+      "Zorya_Neutral_Armor_protectionPhysical1"
+    ],
+    "root_effect_sids": [
+      "BattleExoskeleton_Varta_Armor_protectionPhysical",
+      "BattleExoskeleton_Varta_Armor_protectionPhysical2",
+      "Battle_Dolg_Armor_protectionPhysical",
+      "Battle_Dolg_Armor_protectionPhysical1",
+      "Battle_Military_Helmet_protectionPhysical",
+      "Battle_Military_Helmet_protectionPhysical1",
+      "Battle_Military_Helmet_protectionPhysical2",
+      "Battle_Monolith_Armor_protectionPhysical",
+      "Battle_Monolith_Armor_protectionPhysical1",
+      "Battle_Spark_Armor_protectionPhysical",
+      "Battle_Svoboda_Armor_protectionPhysical",
+      "Battle_Varta_Armor_protectionPhysical",
+      "Battle_Varta_Armor_protectionPhysical2",
+      "Default_Military_Armor_protectionPhysical",
+      "Exoskeleton_Dolg_Armor_protectionPhysical",
+      "Exoskeleton_Dolg_Armor_protectionPhysical2",
+      "Exoskeleton_Mercenaries_Armor_protectionPhysical",
+      "Exoskeleton_Mercenaries_Armor_protectionPhysical2",
+      "Exoskeleton_Monolith_Armor_protectionPhysical",
+      "Exoskeleton_Monolith_Armor_protectionPhysical2",
+      "Exoskeleton_Neutral_Armor_protectionPhysical",
+      "Exoskeleton_Neutral_Armor_protectionPhysical1",
+      "Exoskeleton_Svoboda_Armor_protectionPhysical",
+      "Exoskeleton_Svoboda_Armor_protectionPhysical2",
+      "Heavy2_Military_Armor_protectionPhysical",
+      "Heavy2_Military_Armor_protectionPhysical1",
+      "HeavyAnomaly_Monolith_Armor_protectionPhysical",
+      "HeavyAnomaly_Monolith_Armor_protectionPhysical1",
+      "HeavyAnomaly_Scientific_Armor_protectionPhysical",
+      "HeavyAnomaly_Spark_Armor_protectionPhysical",
+      "HeavyBattle_Spark_Armor_protectionPhysical",
+      "HeavyBattle_Spark_Armor_protectionPhysical1",
+      "HeavyExoskeleton_Dolg_Armor_protectionPhysical",
+      "HeavyExoskeleton_Monolith_Armor_protectionPhysical",
+      "HeavyExoskeleton_Monolith_Armor_protectionPhysical1",
+      "HeavyExoskeleton_Svoboda_Armor_protectionPhysical",
+      "HeavyExoskeleton_Svoboda_Armor_protectionPhysical2",
+      "Heavy_Dolg_Armor_protectionPhysical",
+      "Heavy_Dolg_Armor_protectionPhysical1",
+      "Heavy_Duty_Helmet_protectionPhysical",
+      "Heavy_Duty_Helmet_protectionPhysical1",
+      "Heavy_Duty_Helmet_protectionPhysical2",
+      "Heavy_Mercenaries_Armor_protectionPhysical",
+      "Heavy_Mercenaries_Armor_protectionPhysical1",
+      "Heavy_Military_Helmet_protectionPhysical",
+      "Heavy_Military_Helmet_protectionPhysical1",
+      "Heavy_Svoboda_Armor_protectionPhysical",
+      "Heavy_Svoboda_Armor_protectionPhysical1",
+      "Heavy_Svoboda_Helmet_protectionPhysical",
+      "Heavy_Svoboda_Helmet_protectionPhysical1",
+      "Heavy_Svoboda_Helmet_protectionPhysical2",
+      "Heavy_Varta_Helmet_protectionPhysical",
+      "Jacket_Bandit_Armor_protectionPhysical",
+      "Jacket_Bandit_Armor_protectionPhysical2",
+      "Jemmy_Neutral_Armor_protectionPhysical",
+      "Jemmy_Neutral_Armor_protectionPhysical2",
+      "Light_Duty_Helmet_Armor_protectionPhysical",
+      "Light_Mercenaries_Armor_protectionPhysical",
+      "Light_Mercenaries_Armor_protectionPhysical1",
+      "Light_Military_Helmet_Armor_protectionPhysical",
+      "Middle_Bandit_Armor_protectionPhysical",
+      "Middle_Bandit_Armor_protectionPhysical1",
+      "Nasos_Neutral_Armor_protectionPhysical",
+      "Newbie_Neutral_Armor_protectionPhysical",
+      "Newbie_Neutral_Armor_protectionPhysical2",
+      "Rook_Dolg_Armor_protectionPhysical",
+      "Rook_Dolg_Armor_protectionPhysical1",
+      "Rook_Svoboda_Armor_protectionPhysical",
+      "Rook_Svoboda_Armor_protectionPhysical1",
+      "SEVA_Dolg_Armor_protectionPhysical",
+      "SEVA_Dolg_Armor_protectionPhysical2",
+      "SEVA_Spark_Armor_protectionPhysical",
+      "SEVA_Spark_Armor_protectionPhysical1",
+      "SEVA_Svoboda_Armor_protectionPhysical",
+      "Seva_Neutral_Armor_protectionPhysical",
+      "Seva_Neutral_Armor_protectionPhysical1",
+      "Skin_Jacket_Bandit_Armor_protectionPhysical",
+      "Zorya_Neutral_Armor_protectionPhysical",
+      "Zorya_Neutral_Armor_protectionPhysical1"
+    ],
+    "armor_sids": [
+      "BattleExoskeleton_Varta_Armor",
+      "Battle_Dolg_Armor",
+      "Battle_Military_Helmet",
+      "Battle_Monolith_Armor",
+      "Battle_Spark_Armor",
+      "Battle_Svoboda_Armor",
+      "Battle_Varta_Armor",
+      "Default_Military_Armor",
+      "Exoskeleton_Dolg_Armor",
+      "Exoskeleton_Mercenaries_Armor",
+      "Exoskeleton_Monolith_Armor",
+      "Exoskeleton_Neutral_Armor",
+      "Exoskeleton_Svoboda_Armor",
+      "Heavy2_Military_Armor",
+      "HeavyAnomaly_Monolith_Armor",
+      "HeavyAnomaly_Scientific_Armor",
+      "HeavyAnomaly_Spark_Armor",
+      "HeavyBattle_Spark_Armor",
+      "HeavyExoskeleton_Dolg_Armor",
+      "HeavyExoskeleton_Monolith_Armor",
+      "HeavyExoskeleton_Svoboda_Armor",
+      "Heavy_Dolg_Armor",
+      "Heavy_Duty_Helmet",
+      "Heavy_Mercenaries_Armor",
+      "Heavy_Military_Helmet",
+      "Heavy_Svoboda_Armor",
+      "Heavy_Svoboda_Helmet",
+      "Heavy_Varta_Helmet",
+      "Jacket_Bandit_Armor",
+      "Jemmy_Neutral_Armor",
+      "Light_Duty_Helmet",
+      "Light_Mercenaries_Armor",
+      "Light_Military_Helmet",
+      "Middle_Bandit_Armor",
+      "Nasos_Neutral_Armor",
+      "Newbee_Neutral_Armor",
+      "Rook_Dolg_Armor",
+      "Rook_Svoboda_Armor",
+      "SEVA_Dolg_Armor",
+      "SEVA_Neutral_Armor",
+      "SEVA_Spark_Armor",
+      "SEVA_Svoboda_Armor",
+      "SkinJacket_Bandit_Armor",
+      "Zorya_Neutral_Armor"
+    ],
+    "categories": [
+      "FULL_BODY_SUIT",
+      "HELMET",
+      "SUIT"
+    ],
+    "factions": [
+      "BANDIT",
+      "DUTY",
+      "ECOLOGIST",
+      "FREEDOM",
+      "FREE_STALKER",
+      "MERCENARY",
+      "MILITARY",
+      "MONOLITH",
+      "SPARK",
+      "WARD"
+    ],
+    "texts": [
+      "Strike Protection"
+    ],
+    "localization_sids": [
+      "armor_protectionPhysical"
+    ],
+    "value_min_counts": {
+      "20.0%": 32,
+      "15.0%": 20,
+      "10.0%": 10,
+      "30.0%": 9,
+      "40.0%": 9,
+      "35.0%": 1
+    },
+    "value_max_counts": {
+      "20.0%": 32,
+      "15.0%": 20,
+      "10.0%": 10,
+      "30.0%": 9,
+      "40.0%": 9,
+      "35.0%": 1
+    },
+    "positive_counts": {
+      "EBeneficial::Positive": 81
+    },
+    "effect_level_counts": {
+      "EEffectLevel::Low": 21,
+      "EEffectLevel::Medium": 15
+    },
+    "examples": [
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_EXOprotectionPhysical_Left_2_2",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_protectionPhysical",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_protectionPhysical",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_EXOprotectionPhysical_Left_3_1",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_protectionPhysical2",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_protectionPhysical2",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Dolg_Armor_protectionPhysical_Left_2_1",
+        "root_effect_sid": "Battle_Dolg_Armor_protectionPhysical",
+        "effect_sid": "Battle_Dolg_Armor_protectionPhysical",
+        "armor_sids": [
+          "Battle_Dolg_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Dolg_Armor_protectionPhysical_Left_2_2",
+        "root_effect_sid": "Battle_Dolg_Armor_protectionPhysical1",
+        "effect_sid": "Battle_Dolg_Armor_protectionPhysical1",
+        "armor_sids": [
+          "Battle_Dolg_Armor"
+        ],
+        "value_min": [
+          "20.0%"
+        ],
+        "value_max": [
+          "20.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Military_Helmet_protectionPhysical_Left_1_1",
+        "root_effect_sid": "Battle_Military_Helmet_protectionPhysical",
+        "effect_sid": "Battle_Military_Helmet_protectionPhysical",
+        "armor_sids": [
+          "Battle_Military_Helmet"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Military_Helmet_protectionPhysical_Left_2_2",
+        "root_effect_sid": "Battle_Military_Helmet_protectionPhysical1",
+        "effect_sid": "Battle_Military_Helmet_protectionPhysical1",
+        "armor_sids": [
+          "Battle_Military_Helmet"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Military_Helmet_protectionPhysical_Left_3_1",
+        "root_effect_sid": "Battle_Military_Helmet_protectionPhysical2",
+        "effect_sid": "Battle_Military_Helmet_protectionPhysical2",
+        "armor_sids": [
+          "Battle_Military_Helmet"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_protectionPhysical_Left_1_1",
+        "root_effect_sid": "Battle_Monolith_Armor_protectionPhysical",
+        "effect_sid": "Battle_Monolith_Armor_protectionPhysical",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_protectionPhysical_Left_3_1",
+        "root_effect_sid": "Battle_Monolith_Armor_protectionPhysical1",
+        "effect_sid": "Battle_Monolith_Armor_protectionPhysical1",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Spark_Armor_protectionPhysical_Left_2_1",
+        "root_effect_sid": "Battle_Spark_Armor_protectionPhysical",
+        "effect_sid": "Battle_Spark_Armor_protectionPhysical",
+        "armor_sids": [
+          "Battle_Spark_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Svoboda_Armor_protectionPhysical_Left_2_1",
+        "root_effect_sid": "Battle_Svoboda_Armor_protectionPhysical",
+        "effect_sid": "Battle_Svoboda_Armor_protectionPhysical",
+        "armor_sids": [
+          "Battle_Svoboda_Armor"
+        ],
+        "value_min": [
+          "35.0%"
+        ],
+        "value_max": [
+          "35.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Varta_Armor_protectionPhysical2_Left_3_2",
+        "root_effect_sid": "Battle_Varta_Armor_protectionPhysical2",
+        "effect_sid": "Battle_Varta_Armor_protectionPhysical2",
+        "armor_sids": [
+          "Battle_Varta_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "EEffectType::ProtectionRadiation",
+    "upgrade_count": 80,
+    "effect_count": 77,
+    "armor_count": 44,
+    "effect_sids": [
+      "Anomaly_Scientific_Armor_protectionRadiation",
+      "Anomaly_Scientific_Armor_protectionRadiation2",
+      "BattleExoskeleton_Varta_Armor_protectionRadiation",
+      "BattleExoskeleton_Varta_Armor_protectionRadiation2",
+      "Battle_Dolg_Armor_protectionRadiation",
+      "Battle_Monolith_Armor_protectionRadiation",
+      "Battle_Spark_Armor_protectionRadiation",
+      "Battle_Spark_Armor_protectionRadiation1",
+      "Battle_Svoboda_Armor_protectionRadiation",
+      "Battle_Svoboda_Armor_protectionRadiation1",
+      "Battle_Varta_Armor_protectionRadiation",
+      "Battle_Varta_Armor_protectionRadiation2",
+      "Exoskeleton_Dolg_Armor_protectionRadiation",
+      "Exoskeleton_Dolg_Armor_protectionRadiation1",
+      "Exoskeleton_Mercenaries_Armor_protectionRadiation",
+      "Exoskeleton_Mercenaries_Armor_protectionRadiation1",
+      "Exoskeleton_Monolith_Armor_protectionRadiation",
+      "Exoskeleton_Neutral_Armor_protectionRadiation",
+      "Exoskeleton_Neutral_Armor_protectionRadiation2",
+      "Exoskeleton_Svoboda_Armor_protectionRadiation",
+      "Exoskeleton_Svoboda_Armor_protectionRadiation1",
+      "Exoskeleton_Svoboda_Armor_protectionRadiation2",
+      "Heavy2_Military_Armor_protectionRadiation",
+      "HeavyAnomaly_Monolith_Armor_protectionRadiation",
+      "HeavyAnomaly_Monolith_Armor_protectionRadiation1",
+      "HeavyAnomaly_Scientific_Armor_protectionRadiation",
+      "HeavyAnomaly_Spark_Armor_protectionRadiation",
+      "HeavyAnomaly_Spark_Armor_protectionRadiation1",
+      "HeavyBattle_Spark_Armor_protectionRadiation",
+      "HeavyBattle_Spark_Armor_protectionRadiation1",
+      "HeavyExoskeleton_Dolg_Armor_protectionRadiation",
+      "HeavyExoskeleton_Dolg_Armor_protectionRadiation1",
+      "HeavyExoskeleton_Monolith_Armor_protectionRadiation1",
+      "HeavyExoskeleton_Monolith_Armor_protectionRadiation2",
+      "HeavyExoskeleton_Svoboda_Armor_protectionRadiation1",
+      "HeavyExoskeleton_Svoboda_Armor_protectionRadiation2",
+      "Heavy_Dolg_Armor_protectionRadiation",
+      "Heavy_Dolg_Armor_protectionRadiation1",
+      "Heavy_Duty_Helmet_protectionRadiation",
+      "Heavy_Duty_Helmet_protectionRadiation1",
+      "Heavy_Mercenaries_Armor_protectionRadiation",
+      "Heavy_Military_Helmet_protectionRadiation",
+      "Heavy_Military_Helmet_protectionRadiation1",
+      "Heavy_Military_Helmet_protectionRadiation2",
+      "Heavy_Svoboda_Armor_protectionRadiation",
+      "Heavy_Svoboda_Armor_protectionRadiation1",
+      "Heavy_Svoboda_Helmet_protectionRadiation",
+      "Heavy_Svoboda_Helmet_protectionRadiation1",
+      "Heavy_Varta_Helmet_protectionRadiation",
+      "Heavy_Varta_Helmet_protectionRadiation1",
+      "Jacket_Bandit_Armor_protectionRadiation",
+      "Light_Bandit_Helmet_Armor_protectionRadiation",
+      "Light_Duty_Helmet_Armor_protectionRadiation",
+      "Light_Duty_Helmet_Armor_protectionRadiation2",
+      "Light_Mercenaries_Armor_protectionRadiation",
+      "Light_Mercenaries_Helmet_Armor_protectionRadiation",
+      "Light_Mercenaries_Helmet_Armor_protectionRadiation2",
+      "Light_Military_Helmet_Armor_protectionRadiation",
+      "Light_Military_Helmet_Armor_protectionRadiation2",
+      "Light_Neutral_Helmet_Armor_protectionRadiation",
+      "Middle_Bandit_Armor_protectionRadiation",
+      "Nasos_Neutral_Armor_protectionRadiation",
+      "Nasos_Neutral_Armor_protectionRadiation2",
+      "Rook_Dolg_Armor_protectionRadiation",
+      "Rook_Svoboda_Armor_protectionRadiation",
+      "SEVA_Dolg_Armor_protectionRadiation",
+      "SEVA_Dolg_Armor_protectionRadiation1",
+      "SEVA_Spark_Armor_protectionRadiation",
+      "SEVA_Spark_Armor_protectionRadiation1",
+      "SEVA_Svoboda_Armor_protectionRadiation",
+      "SEVA_Svoboda_Armor_protectionRadiation1",
+      "SciSEVA_Scientific_Armor_protectionRadiation",
+      "SciSEVA_Scientific_Armor_protectionRadiation1",
+      "Seva_Neutral_Armor_protectionRadiation",
+      "Seva_Neutral_Armor_protectionRadiation1",
+      "Zorya_Neutral_Armor_protectionRadiation",
+      "Zorya_Neutral_Armor_protectionRadiation2"
+    ],
+    "root_effect_sids": [
+      "Anomaly_Scientific_Armor_protectionRadiation",
+      "Anomaly_Scientific_Armor_protectionRadiation2",
+      "BattleExoskeleton_Varta_Armor_protectionRadiation",
+      "BattleExoskeleton_Varta_Armor_protectionRadiation2",
+      "Battle_Dolg_Armor_protectionRadiation",
+      "Battle_Monolith_Armor_protectionRadiation",
+      "Battle_Spark_Armor_protectionRadiation",
+      "Battle_Spark_Armor_protectionRadiation1",
+      "Battle_Svoboda_Armor_protectionRadiation",
+      "Battle_Svoboda_Armor_protectionRadiation1",
+      "Battle_Varta_Armor_protectionRadiation",
+      "Battle_Varta_Armor_protectionRadiation2",
+      "Exoskeleton_Dolg_Armor_protectionRadiation",
+      "Exoskeleton_Dolg_Armor_protectionRadiation1",
+      "Exoskeleton_Mercenaries_Armor_protectionRadiation",
+      "Exoskeleton_Mercenaries_Armor_protectionRadiation1",
+      "Exoskeleton_Monolith_Armor_protectionRadiation",
+      "Exoskeleton_Neutral_Armor_protectionRadiation",
+      "Exoskeleton_Neutral_Armor_protectionRadiation2",
+      "Exoskeleton_Svoboda_Armor_protectionRadiation",
+      "Exoskeleton_Svoboda_Armor_protectionRadiation1",
+      "Exoskeleton_Svoboda_Armor_protectionRadiation2",
+      "Heavy2_Military_Armor_protectionRadiation",
+      "HeavyAnomaly_Monolith_Armor_protectionRadiation",
+      "HeavyAnomaly_Monolith_Armor_protectionRadiation1",
+      "HeavyAnomaly_Scientific_Armor_protectionRadiation",
+      "HeavyAnomaly_Spark_Armor_protectionRadiation",
+      "HeavyAnomaly_Spark_Armor_protectionRadiation1",
+      "HeavyBattle_Spark_Armor_protectionRadiation",
+      "HeavyBattle_Spark_Armor_protectionRadiation1",
+      "HeavyExoskeleton_Dolg_Armor_protectionRadiation",
+      "HeavyExoskeleton_Dolg_Armor_protectionRadiation1",
+      "HeavyExoskeleton_Monolith_Armor_protectionRadiation1",
+      "HeavyExoskeleton_Monolith_Armor_protectionRadiation2",
+      "HeavyExoskeleton_Svoboda_Armor_protectionRadiation1",
+      "HeavyExoskeleton_Svoboda_Armor_protectionRadiation2",
+      "Heavy_Dolg_Armor_protectionRadiation",
+      "Heavy_Dolg_Armor_protectionRadiation1",
+      "Heavy_Duty_Helmet_protectionRadiation",
+      "Heavy_Duty_Helmet_protectionRadiation1",
+      "Heavy_Mercenaries_Armor_protectionRadiation",
+      "Heavy_Military_Helmet_protectionRadiation",
+      "Heavy_Military_Helmet_protectionRadiation1",
+      "Heavy_Military_Helmet_protectionRadiation2",
+      "Heavy_Svoboda_Armor_protectionRadiation",
+      "Heavy_Svoboda_Armor_protectionRadiation1",
+      "Heavy_Svoboda_Helmet_protectionRadiation",
+      "Heavy_Svoboda_Helmet_protectionRadiation1",
+      "Heavy_Varta_Helmet_protectionRadiation",
+      "Heavy_Varta_Helmet_protectionRadiation1",
+      "Jacket_Bandit_Armor_protectionRadiation",
+      "Light_Bandit_Helmet_Armor_protectionRadiation",
+      "Light_Duty_Helmet_Armor_protectionRadiation",
+      "Light_Duty_Helmet_Armor_protectionRadiation2",
+      "Light_Mercenaries_Armor_protectionRadiation",
+      "Light_Mercenaries_Helmet_Armor_protectionRadiation",
+      "Light_Mercenaries_Helmet_Armor_protectionRadiation2",
+      "Light_Military_Helmet_Armor_protectionRadiation",
+      "Light_Military_Helmet_Armor_protectionRadiation2",
+      "Light_Neutral_Helmet_Armor_protectionRadiation",
+      "Middle_Bandit_Armor_protectionRadiation",
+      "Nasos_Neutral_Armor_protectionRadiation",
+      "Nasos_Neutral_Armor_protectionRadiation2",
+      "Rook_Dolg_Armor_protectionRadiation",
+      "Rook_Svoboda_Armor_protectionRadiation",
+      "SEVA_Dolg_Armor_protectionRadiation",
+      "SEVA_Dolg_Armor_protectionRadiation1",
+      "SEVA_Spark_Armor_protectionRadiation",
+      "SEVA_Spark_Armor_protectionRadiation1",
+      "SEVA_Svoboda_Armor_protectionRadiation",
+      "SEVA_Svoboda_Armor_protectionRadiation1",
+      "SciSEVA_Scientific_Armor_protectionRadiation",
+      "SciSEVA_Scientific_Armor_protectionRadiation1",
+      "Seva_Neutral_Armor_protectionRadiation",
+      "Seva_Neutral_Armor_protectionRadiation1",
+      "Zorya_Neutral_Armor_protectionRadiation",
+      "Zorya_Neutral_Armor_protectionRadiation2"
+    ],
+    "armor_sids": [
+      "Anomaly_Scientific_Armor",
+      "BattleExoskeleton_Varta_Armor",
+      "Battle_Dolg_Armor",
+      "Battle_Monolith_Armor",
+      "Battle_Spark_Armor",
+      "Battle_Svoboda_Armor",
+      "Battle_Varta_Armor",
+      "Exoskeleton_Dolg_Armor",
+      "Exoskeleton_Mercenaries_Armor",
+      "Exoskeleton_Monolith_Armor",
+      "Exoskeleton_Neutral_Armor",
+      "Exoskeleton_Svoboda_Armor",
+      "Heavy2_Military_Armor",
+      "HeavyAnomaly_Monolith_Armor",
+      "HeavyAnomaly_Scientific_Armor",
+      "HeavyAnomaly_Spark_Armor",
+      "HeavyBattle_Spark_Armor",
+      "HeavyExoskeleton_Dolg_Armor",
+      "HeavyExoskeleton_Monolith_Armor",
+      "HeavyExoskeleton_Svoboda_Armor",
+      "Heavy_Dolg_Armor",
+      "Heavy_Duty_Helmet",
+      "Heavy_Mercenaries_Armor",
+      "Heavy_Military_Helmet",
+      "Heavy_Svoboda_Armor",
+      "Heavy_Svoboda_Helmet",
+      "Heavy_Varta_Helmet",
+      "Jacket_Bandit_Armor",
+      "Light_Bandit_Helmet",
+      "Light_Duty_Helmet",
+      "Light_Mercenaries_Armor",
+      "Light_Mercenaries_Helmet",
+      "Light_Military_Helmet",
+      "Light_Neutral_Helmet",
+      "Middle_Bandit_Armor",
+      "Nasos_Neutral_Armor",
+      "Rook_Dolg_Armor",
+      "Rook_Svoboda_Armor",
+      "SEVA_Dolg_Armor",
+      "SEVA_Neutral_Armor",
+      "SEVA_Spark_Armor",
+      "SEVA_Svoboda_Armor",
+      "SciSEVA_Scientific_Armor",
+      "Zorya_Neutral_Armor"
+    ],
+    "categories": [
+      "FULL_BODY_SUIT",
+      "HELMET",
+      "SUIT"
+    ],
+    "factions": [
+      "BANDIT",
+      "DUTY",
+      "ECOLOGIST",
+      "FREEDOM",
+      "FREE_STALKER",
+      "MERCENARY",
+      "MILITARY",
+      "MONOLITH",
+      "SPARK",
+      "WARD"
+    ],
+    "texts": [
+      "protection Radiation"
+    ],
+    "localization_sids": [
+      "armor_protectionRadiation"
+    ],
+    "value_min_counts": {
+      "15.0%": 74,
+      "5.0%": 5,
+      "10.0%": 1
+    },
+    "value_max_counts": {
+      "15.0%": 74,
+      "5.0%": 5,
+      "10.0%": 1
+    },
+    "positive_counts": {
+      "EBeneficial::Positive": 80
+    },
+    "effect_level_counts": {
+      "EEffectLevel::Low": 22,
+      "EEffectLevel::Medium": 13
+    },
+    "examples": [
+      {
+        "upgrade_sid": "Anomaly_Scientific_Armor_protectionRadiation_Left_1_1",
+        "root_effect_sid": "Anomaly_Scientific_Armor_protectionRadiation",
+        "effect_sid": "Anomaly_Scientific_Armor_protectionRadiation",
+        "armor_sids": [
+          "Anomaly_Scientific_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Anomaly_Scientific_Armor_protectionRadiation_Left_2_1",
+        "root_effect_sid": "Anomaly_Scientific_Armor_protectionRadiation2",
+        "effect_sid": "Anomaly_Scientific_Armor_protectionRadiation2",
+        "armor_sids": [
+          "Anomaly_Scientific_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_protectionRadiation_Right_1_1",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_protectionRadiation",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_protectionRadiation",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_protectionRadiation_Right_2_1",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_protectionRadiation2",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_protectionRadiation2",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Dolg_Armor_protectionRadiation_Left_1_1",
+        "root_effect_sid": "Battle_Dolg_Armor_protectionRadiation",
+        "effect_sid": "Battle_Dolg_Armor_protectionRadiation",
+        "armor_sids": [
+          "Battle_Dolg_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_protectionRadiation_Left_1_1",
+        "root_effect_sid": "Battle_Monolith_Armor_protectionRadiation",
+        "effect_sid": "Battle_Monolith_Armor_protectionRadiation",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_protectionRadiation_Left_2_1",
+        "root_effect_sid": "Battle_Dolg_Armor_protectionRadiation",
+        "effect_sid": "Battle_Dolg_Armor_protectionRadiation",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Spark_Armor_protectionRadiation_Left_3_1",
+        "root_effect_sid": "Battle_Spark_Armor_protectionRadiation",
+        "effect_sid": "Battle_Spark_Armor_protectionRadiation",
+        "armor_sids": [
+          "Battle_Spark_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Spark_Armor_protectionRadiation_Left_3_2",
+        "root_effect_sid": "Battle_Spark_Armor_protectionRadiation1",
+        "effect_sid": "Battle_Spark_Armor_protectionRadiation1",
+        "armor_sids": [
+          "Battle_Spark_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Svoboda_Armor_protectionRadiation_Left_2_1",
+        "root_effect_sid": "Battle_Svoboda_Armor_protectionRadiation1",
+        "effect_sid": "Battle_Svoboda_Armor_protectionRadiation1",
+        "armor_sids": [
+          "Battle_Svoboda_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Svoboda_Armor_protectionRadiation_Left_3_1",
+        "root_effect_sid": "Battle_Svoboda_Armor_protectionRadiation",
+        "effect_sid": "Battle_Svoboda_Armor_protectionRadiation",
+        "armor_sids": [
+          "Battle_Svoboda_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Varta_Armor_protectionRadiation2_Left_3_1",
+        "root_effect_sid": "Battle_Varta_Armor_protectionRadiation2",
+        "effect_sid": "Battle_Varta_Armor_protectionRadiation2",
+        "armor_sids": [
+          "Battle_Varta_Armor"
+        ],
+        "value_min": [
+          "15.0%"
+        ],
+        "value_max": [
+          "15.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "EEffectType::ArmorItemWeight",
+    "upgrade_count": 73,
+    "effect_count": 66,
+    "armor_count": 42,
+    "effect_sids": [
+      "Anomaly_Scientific_Armor_reductionWeight",
+      "BattleExoskeleton_Varta_Armor_reductionWeight",
+      "BattleExoskeleton_Varta_Armor_reductionWeight2",
+      "BattleExoskeleton_Varta_Armor_reductionWeight3",
+      "BattleExoskeleton_Varta_Armor_reductionWeight4",
+      "Battle_Military_Helmet_reductionWeight",
+      "Battle_Monolith_Armor_reductionWeight",
+      "Battle_Monolith_Armor_reductionWeight1",
+      "Battle_Spark_Armor_reductionWeight",
+      "Battle_Svoboda_Armor_reductionWeight",
+      "Battle_Varta_Armor_reductionWeight",
+      "Default_Military_Armor_reductionWeight",
+      "Exoskeleton_Dolg_Armor_reductionWeight",
+      "Exoskeleton_Dolg_Armor_reductionWeight3",
+      "Exoskeleton_Dolg_Armor_reductionWeight4",
+      "Exoskeleton_Dolg_Armor_reductionWeight5",
+      "Exoskeleton_Mercenaries_Armor_reductionWeight",
+      "Exoskeleton_Mercenaries_Armor_reductionWeight2",
+      "Exoskeleton_Monolith_Armor_reductionWeight",
+      "Exoskeleton_Monolith_Armor_reductionWeight2",
+      "Exoskeleton_Neutral_Armor_reductionWeight",
+      "Exoskeleton_Neutral_Armor_reductionWeight2",
+      "Exoskeleton_Neutral_Armor_reductionWeight3",
+      "Exoskeleton_Svoboda_Armor_reductionWeight",
+      "Exoskeleton_Svoboda_Armor_reductionWeight2",
+      "Exoskeleton_Svoboda_Armor_reductionWeight3",
+      "Exoskeleton_Svoboda_Armor_reductionWeight4",
+      "Heavy2_Military_Armor_reductionWeight",
+      "HeavyAnomaly_Monolith_Armor_reductionWeight",
+      "HeavyAnomaly_Scientific_Armor_reductionWeight",
+      "HeavyAnomaly_Spark_Armor_reductionWeight",
+      "HeavyBattle_Spark_Armor_reductionWeight",
+      "HeavyExoskeleton_Dolg_Armor_reductionWeight",
+      "HeavyExoskeleton_Dolg_Armor_reductionWeight1",
+      "HeavyExoskeleton_Dolg_Armor_reductionWeight2",
+      "HeavyExoskeleton_Dolg_Armor_reductionWeight3",
+      "HeavyExoskeleton_Dolg_Armor_reductionWeight4",
+      "HeavyExoskeleton_Monolith_Armor_reductionWeight",
+      "HeavyExoskeleton_Monolith_Armor_reductionWeight1",
+      "HeavyExoskeleton_Monolith_Armor_reductionWeight2",
+      "HeavyExoskeleton_Svoboda_Armor_reductionWeight1",
+      "HeavyExoskeleton_Svoboda_Armor_reductionWeight2",
+      "Heavy_Dolg_Armor_reductionWeight",
+      "Heavy_Dolg_Armor_reductionWeight1",
+      "Heavy_Duty_Helmet_reductionWeight",
+      "Heavy_Mercenaries_Armor_reductionWeight",
+      "Heavy_Military_Helmet_reductionWeight",
+      "Heavy_Svoboda_Armor_reductionWeight",
+      "Heavy_Svoboda_Helmet_reductionWeight",
+      "Heavy_Varta_Helmet_reductionWeight",
+      "Jacket_Bandit_Armor_reductionWeight",
+      "Light_Mercenaries_Armor_reductionWeight",
+      "Light_Mercenaries_Armor_reductionWeight1",
+      "Middle_Bandit_Armor_reductionWeight",
+      "Nasos_Neutral_Armor_reductionWeight",
+      "Newbie_Neutral_Armor_reductionWeight",
+      "Rook_Dolg_Armor_reductionWeight",
+      "Rook_Svoboda_Armor_reductionWeight",
+      "SEVA_Dolg_Armor_reductionWeight",
+      "SEVA_Spark_Armor_reductionWeight",
+      "SEVA_Svoboda_Armor_reductionWeight",
+      "SEVA_Svoboda_Armor_reductionWeight1",
+      "SciSEVA_Scientific_Armor_reductionWeight",
+      "Seva_Neutral_Armor_reductionWeight",
+      "Skin_Jacket_Bandit_Armor_reductionWeight",
+      "Zorya_Neutral_Armor_reductionWeight"
+    ],
+    "root_effect_sids": [
+      "Anomaly_Scientific_Armor_reductionWeight",
+      "BattleExoskeleton_Varta_Armor_reductionWeight",
+      "BattleExoskeleton_Varta_Armor_reductionWeight2",
+      "BattleExoskeleton_Varta_Armor_reductionWeight3",
+      "BattleExoskeleton_Varta_Armor_reductionWeight4",
+      "Battle_Military_Helmet_reductionWeight",
+      "Battle_Monolith_Armor_reductionWeight",
+      "Battle_Monolith_Armor_reductionWeight1",
+      "Battle_Spark_Armor_reductionWeight",
+      "Battle_Svoboda_Armor_reductionWeight",
+      "Battle_Varta_Armor_reductionWeight",
+      "Default_Military_Armor_reductionWeight",
+      "Exoskeleton_Dolg_Armor_reductionWeight",
+      "Exoskeleton_Dolg_Armor_reductionWeight3",
+      "Exoskeleton_Dolg_Armor_reductionWeight4",
+      "Exoskeleton_Dolg_Armor_reductionWeight5",
+      "Exoskeleton_Mercenaries_Armor_reductionWeight",
+      "Exoskeleton_Mercenaries_Armor_reductionWeight2",
+      "Exoskeleton_Monolith_Armor_reductionWeight",
+      "Exoskeleton_Monolith_Armor_reductionWeight2",
+      "Exoskeleton_Neutral_Armor_reductionWeight",
+      "Exoskeleton_Neutral_Armor_reductionWeight2",
+      "Exoskeleton_Neutral_Armor_reductionWeight3",
+      "Exoskeleton_Svoboda_Armor_reductionWeight",
+      "Exoskeleton_Svoboda_Armor_reductionWeight2",
+      "Exoskeleton_Svoboda_Armor_reductionWeight3",
+      "Exoskeleton_Svoboda_Armor_reductionWeight4",
+      "Heavy2_Military_Armor_reductionWeight",
+      "HeavyAnomaly_Monolith_Armor_reductionWeight",
+      "HeavyAnomaly_Scientific_Armor_reductionWeight",
+      "HeavyAnomaly_Spark_Armor_reductionWeight",
+      "HeavyBattle_Spark_Armor_reductionWeight",
+      "HeavyExoskeleton_Dolg_Armor_reductionWeight",
+      "HeavyExoskeleton_Dolg_Armor_reductionWeight1",
+      "HeavyExoskeleton_Dolg_Armor_reductionWeight2",
+      "HeavyExoskeleton_Dolg_Armor_reductionWeight3",
+      "HeavyExoskeleton_Dolg_Armor_reductionWeight4",
+      "HeavyExoskeleton_Monolith_Armor_reductionWeight",
+      "HeavyExoskeleton_Monolith_Armor_reductionWeight1",
+      "HeavyExoskeleton_Monolith_Armor_reductionWeight2",
+      "HeavyExoskeleton_Svoboda_Armor_reductionWeight1",
+      "HeavyExoskeleton_Svoboda_Armor_reductionWeight2",
+      "Heavy_Dolg_Armor_reductionWeight",
+      "Heavy_Dolg_Armor_reductionWeight1",
+      "Heavy_Duty_Helmet_reductionWeight",
+      "Heavy_Mercenaries_Armor_reductionWeight",
+      "Heavy_Military_Helmet_reductionWeight",
+      "Heavy_Svoboda_Armor_reductionWeight",
+      "Heavy_Svoboda_Helmet_reductionWeight",
+      "Heavy_Varta_Helmet_reductionWeight",
+      "Jacket_Bandit_Armor_reductionWeight",
+      "Light_Mercenaries_Armor_reductionWeight",
+      "Light_Mercenaries_Armor_reductionWeight1",
+      "Middle_Bandit_Armor_reductionWeight",
+      "Nasos_Neutral_Armor_reductionWeight",
+      "Newbie_Neutral_Armor_reductionWeight",
+      "Rook_Dolg_Armor_reductionWeight",
+      "Rook_Svoboda_Armor_reductionWeight",
+      "SEVA_Dolg_Armor_reductionWeight",
+      "SEVA_Spark_Armor_reductionWeight",
+      "SEVA_Svoboda_Armor_reductionWeight",
+      "SEVA_Svoboda_Armor_reductionWeight1",
+      "SciSEVA_Scientific_Armor_reductionWeight",
+      "Seva_Neutral_Armor_reductionWeight",
+      "Skin_Jacket_Bandit_Armor_reductionWeight",
+      "Zorya_Neutral_Armor_reductionWeight"
+    ],
+    "armor_sids": [
+      "Anomaly_Scientific_Armor",
+      "BattleExoskeleton_Varta_Armor",
+      "Battle_Military_Helmet",
+      "Battle_Monolith_Armor",
+      "Battle_Spark_Armor",
+      "Battle_Svoboda_Armor",
+      "Battle_Varta_Armor",
+      "Default_Military_Armor",
+      "Exoskeleton_Dolg_Armor",
+      "Exoskeleton_Mercenaries_Armor",
+      "Exoskeleton_Monolith_Armor",
+      "Exoskeleton_Neutral_Armor",
+      "Exoskeleton_Svoboda_Armor",
+      "Heavy2_Military_Armor",
+      "HeavyAnomaly_Monolith_Armor",
+      "HeavyAnomaly_Scientific_Armor",
+      "HeavyAnomaly_Spark_Armor",
+      "HeavyBattle_Spark_Armor",
+      "HeavyExoskeleton_Dolg_Armor",
+      "HeavyExoskeleton_Monolith_Armor",
+      "HeavyExoskeleton_Svoboda_Armor",
+      "Heavy_Dolg_Armor",
+      "Heavy_Duty_Helmet",
+      "Heavy_Mercenaries_Armor",
+      "Heavy_Military_Helmet",
+      "Heavy_Svoboda_Armor",
+      "Heavy_Svoboda_Helmet",
+      "Heavy_Varta_Helmet",
+      "Jacket_Bandit_Armor",
+      "Light_Mercenaries_Armor",
+      "Middle_Bandit_Armor",
+      "Nasos_Neutral_Armor",
+      "Newbee_Neutral_Armor",
+      "Rook_Dolg_Armor",
+      "Rook_Svoboda_Armor",
+      "SEVA_Dolg_Armor",
+      "SEVA_Neutral_Armor",
+      "SEVA_Spark_Armor",
+      "SEVA_Svoboda_Armor",
+      "SciSEVA_Scientific_Armor",
+      "SkinJacket_Bandit_Armor",
+      "Zorya_Neutral_Armor"
+    ],
+    "categories": [
+      "FULL_BODY_SUIT",
+      "HELMET",
+      "SUIT"
+    ],
+    "factions": [
+      "BANDIT",
+      "DUTY",
+      "ECOLOGIST",
+      "FREEDOM",
+      "FREE_STALKER",
+      "MERCENARY",
+      "MILITARY",
+      "MONOLITH",
+      "SPARK",
+      "WARD"
+    ],
+    "texts": [
+      "Item Weight"
+    ],
+    "localization_sids": [
+      "armor_reductionWeight"
+    ],
+    "value_min_counts": {
+      "-1": 69,
+      "-2": 2,
+      "-0.5": 1,
+      "-0.25": 1
+    },
+    "value_max_counts": {
+      "-1": 69,
+      "-2": 2,
+      "-0.5": 1,
+      "-0.25": 1
+    },
+    "positive_counts": {
+      "EBeneficial::Positive": 73
+    },
+    "effect_level_counts": {
+      "EEffectLevel::Medium": 8,
+      "EEffectLevel::Low": 8,
+      "EEffectLevel::Strong": 5,
+      "EEffectLevel::Max": 4,
+      "EEffectLevel::VeryLow": 1
+    },
+    "examples": [
+      {
+        "upgrade_sid": "Anomaly_Scientific_Armor_reductionWeight_Left_2_1",
+        "root_effect_sid": "Anomaly_Scientific_Armor_reductionWeight",
+        "effect_sid": "Anomaly_Scientific_Armor_reductionWeight",
+        "armor_sids": [
+          "Anomaly_Scientific_Armor"
+        ],
+        "value_min": [
+          "-1"
+        ],
+        "value_max": [
+          "-1"
+        ]
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_EXOMaxDurability_Left_2_1",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_reductionWeight2",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_reductionWeight2",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "-1"
+        ],
+        "value_max": [
+          "-1"
+        ]
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_EXOMaxDurability_Left_2_2",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_reductionWeight4",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_reductionWeight4",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "-1"
+        ],
+        "value_max": [
+          "-1"
+        ]
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_EXOregenerationStamina_Left_2_1",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_reductionWeight3",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_reductionWeight3",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "-1"
+        ],
+        "value_max": [
+          "-1"
+        ]
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_reductionWeight_Left_1_1",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_reductionWeight",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_reductionWeight",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "-1"
+        ],
+        "value_max": [
+          "-1"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Military_Helmet_reductionWeight_Left_1_2",
+        "root_effect_sid": "Battle_Military_Helmet_reductionWeight",
+        "effect_sid": "Battle_Military_Helmet_reductionWeight",
+        "armor_sids": [
+          "Battle_Military_Helmet"
+        ],
+        "value_min": [
+          "-1"
+        ],
+        "value_max": [
+          "-1"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_Backpack_Left_3_2",
+        "root_effect_sid": "Battle_Monolith_Armor_reductionWeight1",
+        "effect_sid": "Battle_Monolith_Armor_reductionWeight1",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [
+          "-1"
+        ],
+        "value_max": [
+          "-1"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_reductionWeight_Left_2_1",
+        "root_effect_sid": "Battle_Monolith_Armor_reductionWeight",
+        "effect_sid": "Battle_Monolith_Armor_reductionWeight",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [
+          "-1"
+        ],
+        "value_max": [
+          "-1"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_reductionWeight_Left_2_2",
+        "root_effect_sid": "Battle_Monolith_Armor_reductionWeight1",
+        "effect_sid": "Battle_Monolith_Armor_reductionWeight1",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [
+          "-1"
+        ],
+        "value_max": [
+          "-1"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Spark_Armor_reductionWeight_Left_2_2",
+        "root_effect_sid": "Battle_Spark_Armor_reductionWeight",
+        "effect_sid": "Battle_Spark_Armor_reductionWeight",
+        "armor_sids": [
+          "Battle_Spark_Armor"
+        ],
+        "value_min": [
+          "-1"
+        ],
+        "value_max": [
+          "-1"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Svoboda_Armor_reductionWeight_Left_2_2",
+        "root_effect_sid": "Battle_Svoboda_Armor_reductionWeight",
+        "effect_sid": "Battle_Svoboda_Armor_reductionWeight",
+        "armor_sids": [
+          "Battle_Svoboda_Armor"
+        ],
+        "value_min": [
+          "-1"
+        ],
+        "value_max": [
+          "-1"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Varta_Armor_reductionWeight_Left_1_2",
+        "root_effect_sid": "Battle_Varta_Armor_reductionWeight",
+        "effect_sid": "Battle_Varta_Armor_reductionWeight",
+        "armor_sids": [
+          "Battle_Varta_Armor"
+        ],
+        "value_min": [
+          "-1"
+        ],
+        "value_max": [
+          "-1"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "EEffectType::ArtifactSlotBlock",
+    "upgrade_count": 68,
+    "effect_count": 5,
+    "armor_count": 30,
+    "effect_sids": [
+      "ArtifactSlotBlockEffect3_Slot1",
+      "ArtifactSlotBlockEffect3_Slot2",
+      "ArtifactSlotBlockEffect3_Slot3",
+      "ArtifactSlotBlockEffect3_Slot4",
+      "ArtifactSlotBlockEffect3_Slot5"
+    ],
+    "root_effect_sids": [
+      "ArtifactSlotBlockEffect3_Slot1",
+      "ArtifactSlotBlockEffect3_Slot2",
+      "ArtifactSlotBlockEffect3_Slot3",
+      "ArtifactSlotBlockEffect3_Slot4",
+      "ArtifactSlotBlockEffect3_Slot5"
+    ],
+    "armor_sids": [
+      "Anomaly_Scientific_Armor",
+      "BattleExoskeleton_Varta_Armor",
+      "Battle_Dolg_Armor",
+      "Battle_Monolith_Armor",
+      "Battle_Spark_Armor",
+      "Battle_Svoboda_Armor",
+      "Exoskeleton_Dolg_Armor",
+      "Exoskeleton_Mercenaries_Armor",
+      "Exoskeleton_Monolith_Armor",
+      "Exoskeleton_Neutral_Armor",
+      "Exoskeleton_Svoboda_Armor",
+      "Heavy2_Military_Armor",
+      "HeavyAnomaly_Monolith_Armor",
+      "HeavyAnomaly_Scientific_Armor",
+      "HeavyAnomaly_Spark_Armor",
+      "HeavyBattle_Spark_Armor",
+      "HeavyExoskeleton_Dolg_Armor",
+      "HeavyExoskeleton_Monolith_Armor",
+      "HeavyExoskeleton_Svoboda_Armor",
+      "Heavy_Dolg_Armor",
+      "Heavy_Mercenaries_Armor",
+      "Heavy_Svoboda_Armor",
+      "Middle_Bandit_Armor",
+      "Rook_Svoboda_Armor",
+      "SEVA_Dolg_Armor",
+      "SEVA_Neutral_Armor",
+      "SEVA_Spark_Armor",
+      "SEVA_Svoboda_Armor",
+      "SciSEVA_Scientific_Armor",
+      "Zorya_Neutral_Armor"
+    ],
+    "categories": [
+      "FULL_BODY_SUIT",
+      "SUIT"
+    ],
+    "factions": [
+      "BANDIT",
+      "DUTY",
+      "ECOLOGIST",
+      "FREEDOM",
+      "FREE_STALKER",
+      "MERCENARY",
+      "MILITARY",
+      "MONOLITH",
+      "SPARK",
+      "WARD"
+    ],
+    "texts": [
+      "Blocking radiation from artefact"
+    ],
+    "localization_sids": [
+      "ArtifactProtectionRadiation4"
+    ],
+    "value_min_counts": {},
+    "value_max_counts": {},
+    "positive_counts": {},
+    "effect_level_counts": {
+      "EEffectLevel::Low": 30,
+      "EEffectLevel::Medium": 23,
+      "EEffectLevel::Strong": 8,
+      "EEffectLevel::Max": 6,
+      "EEffectLevel::VeryLow": 1
+    },
+    "examples": [
+      {
+        "upgrade_sid": "Anomaly_Scientific_Armor_rad_container_Left_2_1",
+        "root_effect_sid": "ArtifactSlotBlockEffect3_Slot1",
+        "effect_sid": "ArtifactSlotBlockEffect3_Slot1",
+        "armor_sids": [
+          "Anomaly_Scientific_Armor"
+        ],
+        "value_min": [],
+        "value_max": []
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_rad_container_Left_1_1",
+        "root_effect_sid": "ArtifactSlotBlockEffect3_Slot2",
+        "effect_sid": "ArtifactSlotBlockEffect3_Slot2",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [],
+        "value_max": []
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_rad_container_Left_1_2",
+        "root_effect_sid": "ArtifactSlotBlockEffect3_Slot1",
+        "effect_sid": "ArtifactSlotBlockEffect3_Slot1",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [],
+        "value_max": []
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_rad_container_Left_2_1",
+        "root_effect_sid": "ArtifactSlotBlockEffect3_Slot4",
+        "effect_sid": "ArtifactSlotBlockEffect3_Slot4",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [],
+        "value_max": []
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_rad_container_Left_2_2",
+        "root_effect_sid": "ArtifactSlotBlockEffect3_Slot3",
+        "effect_sid": "ArtifactSlotBlockEffect3_Slot3",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [],
+        "value_max": []
+      },
+      {
+        "upgrade_sid": "Battle_Dolg_Armor_radiationAbsorption_Left_2_1",
+        "root_effect_sid": "ArtifactSlotBlockEffect3_Slot1",
+        "effect_sid": "ArtifactSlotBlockEffect3_Slot1",
+        "armor_sids": [
+          "Battle_Dolg_Armor"
+        ],
+        "value_min": [],
+        "value_max": []
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_rad_container_Left_3_1",
+        "root_effect_sid": "ArtifactSlotBlockEffect3_Slot1",
+        "effect_sid": "ArtifactSlotBlockEffect3_Slot1",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [],
+        "value_max": []
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_radiationAbsorption_Left_3_2",
+        "root_effect_sid": "ArtifactSlotBlockEffect3_Slot2",
+        "effect_sid": "ArtifactSlotBlockEffect3_Slot2",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [],
+        "value_max": []
+      },
+      {
+        "upgrade_sid": "Battle_Spark_Armor_radiationAbsorption_Left_1_1",
+        "root_effect_sid": "ArtifactSlotBlockEffect3_Slot1",
+        "effect_sid": "ArtifactSlotBlockEffect3_Slot1",
+        "armor_sids": [
+          "Battle_Spark_Armor"
+        ],
+        "value_min": [],
+        "value_max": []
+      },
+      {
+        "upgrade_sid": "Battle_Spark_Armor_radiationAbsorption_Left_2_2",
+        "root_effect_sid": "ArtifactSlotBlockEffect3_Slot2",
+        "effect_sid": "ArtifactSlotBlockEffect3_Slot2",
+        "armor_sids": [
+          "Battle_Spark_Armor"
+        ],
+        "value_min": [],
+        "value_max": []
+      },
+      {
+        "upgrade_sid": "Battle_Svoboda_Armor_radiationAbsorption_Left_2_2",
+        "root_effect_sid": "ArtifactSlotBlockEffect3_Slot1",
+        "effect_sid": "ArtifactSlotBlockEffect3_Slot1",
+        "armor_sids": [
+          "Battle_Svoboda_Armor"
+        ],
+        "value_min": [],
+        "value_max": []
+      },
+      {
+        "upgrade_sid": "Battle_Svoboda_Armor_radiationAbsorption_Left_3_1",
+        "root_effect_sid": "ArtifactSlotBlockEffect3_Slot2",
+        "effect_sid": "ArtifactSlotBlockEffect3_Slot2",
+        "armor_sids": [
+          "Battle_Svoboda_Armor"
+        ],
+        "value_min": [],
+        "value_max": []
+      }
+    ]
+  },
+  {
+    "type": "EEffectType::ArtifactSlots",
+    "upgrade_count": 55,
+    "effect_count": 55,
+    "armor_count": 36,
+    "effect_sids": [
+      "Anomaly_Scientific_Armor_container",
+      "Anomaly_Scientific_Armor_container2",
+      "Anomaly_Scientific_Armor_container4",
+      "BattleExoskeleton_Varta_Armor_container5",
+      "Battle_Dolg_Armor_container",
+      "Battle_Monolith_Armor_container",
+      "Battle_Monolith_Armor_container1",
+      "Battle_Spark_Armor_container",
+      "Battle_Spark_Armor_container2",
+      "Battle_Svoboda_Armor_container",
+      "Battle_Svoboda_Armor_container2",
+      "Battle_Varta_Armor_container",
+      "Default_Military_Armor_container",
+      "Exoskeleton_Dolg_Armor_container",
+      "Exoskeleton_Dolg_Armor_container1",
+      "Exoskeleton_Mercenaries_Armor_container4",
+      "Exoskeleton_Neutral_Armor_container4",
+      "Heavy2_Military_Armor_container",
+      "Heavy2_Military_Armor_container1",
+      "HeavyAnomaly_Monolith_Armor_container",
+      "HeavyAnomaly_Monolith_Armor_container1",
+      "HeavyAnomaly_Scientific_Armor_container",
+      "HeavyAnomaly_Scientific_Armor_container1",
+      "HeavyAnomaly_Spark_Armor_container",
+      "HeavyBattle_Spark_Armor_container",
+      "HeavyBattle_Spark_Armor_container1",
+      "HeavyExoskeleton_Dolg_Armor_container",
+      "HeavyExoskeleton_Dolg_Armor_container1",
+      "HeavyExoskeleton_Svoboda_Armor_container",
+      "HeavyExoskeleton_Svoboda_Armor_container1",
+      "Heavy_Dolg_Armor_container",
+      "Heavy_Dolg_Armor_container2",
+      "Heavy_Mercenaries_Armor_container",
+      "Heavy_Svoboda_Armor_container",
+      "Jacket_Bandit_Armor_container",
+      "Jemmy_Neutral_Armor_container",
+      "Light_Mercenaries_Armor_container",
+      "Light_Mercenaries_Armor_container1",
+      "Middle_Bandit_Armor_container",
+      "Nasos_Neutral_Armor_container",
+      "Nasos_Neutral_Armor_container2",
+      "Newbie_Neutral_Armor_container",
+      "Rook_Dolg_Armor_container",
+      "Rook_Svoboda_Armor_container",
+      "SEVA_Dolg_Armor_container",
+      "SEVA_Dolg_Armor_container1",
+      "SEVA_Spark_Armor_container",
+      "SEVA_Spark_Armor_container1",
+      "SEVA_Svoboda_Armor_container",
+      "SciSEVA_Scientific_Armor_container",
+      "Seva_Neutral_Armor_container",
+      "Seva_Neutral_Armor_container1",
+      "Skin_Jacket_Bandit_Armor_container",
+      "Zorya_Neutral_Armor_container",
+      "Zorya_Neutral_Armor_container2"
+    ],
+    "root_effect_sids": [
+      "Anomaly_Scientific_Armor_container",
+      "Anomaly_Scientific_Armor_container2",
+      "Anomaly_Scientific_Armor_container4",
+      "BattleExoskeleton_Varta_Armor_container5",
+      "Battle_Dolg_Armor_container",
+      "Battle_Monolith_Armor_container",
+      "Battle_Monolith_Armor_container1",
+      "Battle_Spark_Armor_container",
+      "Battle_Spark_Armor_container2",
+      "Battle_Svoboda_Armor_container",
+      "Battle_Svoboda_Armor_container2",
+      "Battle_Varta_Armor_container",
+      "Default_Military_Armor_container",
+      "Exoskeleton_Dolg_Armor_container",
+      "Exoskeleton_Dolg_Armor_container1",
+      "Exoskeleton_Mercenaries_Armor_container4",
+      "Exoskeleton_Neutral_Armor_container4",
+      "Heavy2_Military_Armor_container",
+      "Heavy2_Military_Armor_container1",
+      "HeavyAnomaly_Monolith_Armor_container",
+      "HeavyAnomaly_Monolith_Armor_container1",
+      "HeavyAnomaly_Scientific_Armor_container",
+      "HeavyAnomaly_Scientific_Armor_container1",
+      "HeavyAnomaly_Spark_Armor_container",
+      "HeavyBattle_Spark_Armor_container",
+      "HeavyBattle_Spark_Armor_container1",
+      "HeavyExoskeleton_Dolg_Armor_container",
+      "HeavyExoskeleton_Dolg_Armor_container1",
+      "HeavyExoskeleton_Svoboda_Armor_container",
+      "HeavyExoskeleton_Svoboda_Armor_container1",
+      "Heavy_Dolg_Armor_container",
+      "Heavy_Dolg_Armor_container2",
+      "Heavy_Mercenaries_Armor_container",
+      "Heavy_Svoboda_Armor_container",
+      "Jacket_Bandit_Armor_container",
+      "Jemmy_Neutral_Armor_container",
+      "Light_Mercenaries_Armor_container",
+      "Light_Mercenaries_Armor_container1",
+      "Middle_Bandit_Armor_container",
+      "Nasos_Neutral_Armor_container",
+      "Nasos_Neutral_Armor_container2",
+      "Newbie_Neutral_Armor_container",
+      "Rook_Dolg_Armor_container",
+      "Rook_Svoboda_Armor_container",
+      "SEVA_Dolg_Armor_container",
+      "SEVA_Dolg_Armor_container1",
+      "SEVA_Spark_Armor_container",
+      "SEVA_Spark_Armor_container1",
+      "SEVA_Svoboda_Armor_container",
+      "SciSEVA_Scientific_Armor_container",
+      "Seva_Neutral_Armor_container",
+      "Seva_Neutral_Armor_container1",
+      "Skin_Jacket_Bandit_Armor_container",
+      "Zorya_Neutral_Armor_container",
+      "Zorya_Neutral_Armor_container2"
+    ],
+    "armor_sids": [
+      "Anomaly_Scientific_Armor",
+      "BattleExoskeleton_Varta_Armor",
+      "Battle_Dolg_Armor",
+      "Battle_Monolith_Armor",
+      "Battle_Spark_Armor",
+      "Battle_Svoboda_Armor",
+      "Battle_Varta_Armor",
+      "Default_Military_Armor",
+      "Exoskeleton_Dolg_Armor",
+      "Exoskeleton_Mercenaries_Armor",
+      "Exoskeleton_Neutral_Armor",
+      "Heavy2_Military_Armor",
+      "HeavyAnomaly_Monolith_Armor",
+      "HeavyAnomaly_Scientific_Armor",
+      "HeavyAnomaly_Spark_Armor",
+      "HeavyBattle_Spark_Armor",
+      "HeavyExoskeleton_Dolg_Armor",
+      "HeavyExoskeleton_Svoboda_Armor",
+      "Heavy_Dolg_Armor",
+      "Heavy_Mercenaries_Armor",
+      "Heavy_Svoboda_Armor",
+      "Jacket_Bandit_Armor",
+      "Jemmy_Neutral_Armor",
+      "Light_Mercenaries_Armor",
+      "Middle_Bandit_Armor",
+      "Nasos_Neutral_Armor",
+      "Newbee_Neutral_Armor",
+      "Rook_Dolg_Armor",
+      "Rook_Svoboda_Armor",
+      "SEVA_Dolg_Armor",
+      "SEVA_Neutral_Armor",
+      "SEVA_Spark_Armor",
+      "SEVA_Svoboda_Armor",
+      "SciSEVA_Scientific_Armor",
+      "SkinJacket_Bandit_Armor",
+      "Zorya_Neutral_Armor"
+    ],
+    "categories": [
+      "FULL_BODY_SUIT",
+      "SUIT"
+    ],
+    "factions": [
+      "BANDIT",
+      "DUTY",
+      "ECOLOGIST",
+      "FREEDOM",
+      "FREE_STALKER",
+      "MERCENARY",
+      "MILITARY",
+      "MONOLITH",
+      "SPARK",
+      "WARD"
+    ],
+    "texts": [
+      "Increase artifact slots",
+      "container"
+    ],
+    "localization_sids": [
+      "armor_container"
+    ],
+    "value_min_counts": {
+      "1": 55
+    },
+    "value_max_counts": {
+      "1": 55
+    },
+    "positive_counts": {
+      "EBeneficial::Positive": 55
+    },
+    "effect_level_counts": {
+      "EEffectLevel::Low": 12,
+      "EEffectLevel::Medium": 6,
+      "EEffectLevel::Max": 3,
+      "EEffectLevel::VeryLow": 1
+    },
+    "examples": [
+      {
+        "upgrade_sid": "Anomaly_Scientific_Armor_container_Left_1_1",
+        "root_effect_sid": "Anomaly_Scientific_Armor_container",
+        "effect_sid": "Anomaly_Scientific_Armor_container",
+        "armor_sids": [
+          "Anomaly_Scientific_Armor"
+        ],
+        "value_min": [
+          "1"
+        ],
+        "value_max": [
+          "1"
+        ]
+      },
+      {
+        "upgrade_sid": "Anomaly_Scientific_Armor_container_Left_1_2",
+        "root_effect_sid": "Anomaly_Scientific_Armor_container2",
+        "effect_sid": "Anomaly_Scientific_Armor_container2",
+        "armor_sids": [
+          "Anomaly_Scientific_Armor"
+        ],
+        "value_min": [
+          "1"
+        ],
+        "value_max": [
+          "1"
+        ]
+      },
+      {
+        "upgrade_sid": "Anomaly_Scientific_Armor_container_Left_3_1",
+        "root_effect_sid": "Anomaly_Scientific_Armor_container4",
+        "effect_sid": "Anomaly_Scientific_Armor_container4",
+        "armor_sids": [
+          "Anomaly_Scientific_Armor"
+        ],
+        "value_min": [
+          "1"
+        ],
+        "value_max": [
+          "1"
+        ]
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_container_Left_3_1",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_container5",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_container5",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "1"
+        ],
+        "value_max": [
+          "1"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Dolg_Armor_container_Left_1_2",
+        "root_effect_sid": "Battle_Dolg_Armor_container",
+        "effect_sid": "Battle_Dolg_Armor_container",
+        "armor_sids": [
+          "Battle_Dolg_Armor"
+        ],
+        "value_min": [
+          "1"
+        ],
+        "value_max": [
+          "1"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_container_Left_1_1",
+        "root_effect_sid": "Battle_Monolith_Armor_container",
+        "effect_sid": "Battle_Monolith_Armor_container",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [
+          "1"
+        ],
+        "value_max": [
+          "1"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_container_Left_1_2",
+        "root_effect_sid": "Battle_Monolith_Armor_container1",
+        "effect_sid": "Battle_Monolith_Armor_container1",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [
+          "1"
+        ],
+        "value_max": [
+          "1"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Spark_Armor_container_Left_1_2",
+        "root_effect_sid": "Battle_Spark_Armor_container",
+        "effect_sid": "Battle_Spark_Armor_container",
+        "armor_sids": [
+          "Battle_Spark_Armor"
+        ],
+        "value_min": [
+          "1"
+        ],
+        "value_max": [
+          "1"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Spark_Armor_container_Left_2_1",
+        "root_effect_sid": "Battle_Spark_Armor_container2",
+        "effect_sid": "Battle_Spark_Armor_container2",
+        "armor_sids": [
+          "Battle_Spark_Armor"
+        ],
+        "value_min": [
+          "1"
+        ],
+        "value_max": [
+          "1"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Svoboda_Armor_container_Left_1_1",
+        "root_effect_sid": "Battle_Svoboda_Armor_container2",
+        "effect_sid": "Battle_Svoboda_Armor_container2",
+        "armor_sids": [
+          "Battle_Svoboda_Armor"
+        ],
+        "value_min": [
+          "1"
+        ],
+        "value_max": [
+          "1"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Svoboda_Armor_container_Left_1_2",
+        "root_effect_sid": "Battle_Svoboda_Armor_container",
+        "effect_sid": "Battle_Svoboda_Armor_container",
+        "armor_sids": [
+          "Battle_Svoboda_Armor"
+        ],
+        "value_min": [
+          "1"
+        ],
+        "value_max": [
+          "1"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Varta_Armor_container_Left_1_1",
+        "root_effect_sid": "Battle_Varta_Armor_container",
+        "effect_sid": "Battle_Varta_Armor_container",
+        "armor_sids": [
+          "Battle_Varta_Armor"
+        ],
+        "value_min": [
+          "1"
+        ],
+        "value_max": [
+          "1"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "EEffectType::ProtectionPSY",
+    "upgrade_count": 35,
+    "effect_count": 36,
+    "armor_count": 33,
+    "effect_sids": [
+      "Anomaly_Scientific_Armor_protectionPsi",
+      "Exoskeleton_Dolg_Armor_ProtectionPSY",
+      "Exoskeleton_Mercenaries_Armor_ProtectionPSY",
+      "Exoskeleton_Monolith_Armor_ProtectionPSY",
+      "Exoskeleton_Monolith_Armor_ProtectionPSY1",
+      "Exoskeleton_Neutral_Armor_ProtectionPSY",
+      "Exoskeleton_Neutral_Armor_ProtectionPSY2",
+      "Exoskeleton_Svoboda_Armor_ProtectionPSY",
+      "Exoskeleton_Svoboda_Armor_ProtectionPSY1",
+      "HeavyAnomaly_Monolith_Armor_ProtectionPSY",
+      "HeavyAnomaly_Spark_Armor_ProtectionPSY",
+      "HeavyAnomaly_Spark_Armor_ProtectionPSY1",
+      "HeavyBattle_Spark_Armor_ProtectionPSY",
+      "HeavyBattle_Spark_Armor_ProtectionPSY1",
+      "HeavyExoskeleton_Dolg_Armor_ProtectionPSY",
+      "HeavyExoskeleton_Monolith_Armor_ProtectionPSY",
+      "HeavyExoskeleton_Monolith_Armor_ProtectionPSY1",
+      "HeavyExoskeleton_Svoboda_Armor_ProtectionPSY",
+      "HeavyExoskeleton_Svoboda_Armor_ProtectionPSY1",
+      "Heavy_Military_Helmet_ProtectionPSY",
+      "Heavy_Military_Helmet_ProtectionPSY1",
+      "Heavy_Military_Helmet_ProtectionPSY2",
+      "Heavy_Svoboda_Helmet_ProtectionPSY",
+      "Heavy_Varta_Helmet_ProtectionPSY",
+      "Heavy_Varta_Helmet_ProtectionPSY1",
+      "Light_Military_Helmet_armor_protectionPsi",
+      "SEVA_Dolg_Armor_ProtectionPSY",
+      "SEVA_Spark_Armor_ProtectionPSY",
+      "SEVA_Spark_Armor_ProtectionPSY1",
+      "SEVA_Svoboda_Armor_ProtectionPSY",
+      "SciSEVA_Scientific_Armor_ProtectionPSY",
+      "SciSEVA_Scientific_Armor_ProtectionPSY1",
+      "Seva_Neutral_Armor_ProtectionPSY",
+      "Seva_Neutral_Armor_ProtectionPSY1",
+      "Supressor_protectionPsiPerc",
+      "Supressor_protectionPsiVal"
+    ],
+    "root_effect_sids": [
+      "Anomaly_Scientific_Armor_protectionPsi",
+      "Exoskeleton_Dolg_Armor_ProtectionPSY",
+      "Exoskeleton_Mercenaries_Armor_ProtectionPSY",
+      "Exoskeleton_Monolith_Armor_ProtectionPSY",
+      "Exoskeleton_Monolith_Armor_ProtectionPSY1",
+      "Exoskeleton_Neutral_Armor_ProtectionPSY",
+      "Exoskeleton_Neutral_Armor_ProtectionPSY2",
+      "Exoskeleton_Svoboda_Armor_ProtectionPSY",
+      "Exoskeleton_Svoboda_Armor_ProtectionPSY1",
+      "HeavyAnomaly_Monolith_Armor_ProtectionPSY",
+      "HeavyAnomaly_Spark_Armor_ProtectionPSY",
+      "HeavyAnomaly_Spark_Armor_ProtectionPSY1",
+      "HeavyBattle_Spark_Armor_ProtectionPSY",
+      "HeavyBattle_Spark_Armor_ProtectionPSY1",
+      "HeavyExoskeleton_Dolg_Armor_ProtectionPSY",
+      "HeavyExoskeleton_Monolith_Armor_ProtectionPSY",
+      "HeavyExoskeleton_Monolith_Armor_ProtectionPSY1",
+      "HeavyExoskeleton_Svoboda_Armor_ProtectionPSY",
+      "HeavyExoskeleton_Svoboda_Armor_ProtectionPSY1",
+      "Heavy_Military_Helmet_ProtectionPSY",
+      "Heavy_Military_Helmet_ProtectionPSY1",
+      "Heavy_Military_Helmet_ProtectionPSY2",
+      "Heavy_Svoboda_Helmet_ProtectionPSY",
+      "Heavy_Varta_Helmet_ProtectionPSY",
+      "Heavy_Varta_Helmet_ProtectionPSY1",
+      "Light_Military_Helmet_armor_protectionPsi",
+      "SEVA_Dolg_Armor_ProtectionPSY",
+      "SEVA_Spark_Armor_ProtectionPSY",
+      "SEVA_Spark_Armor_ProtectionPSY1",
+      "SEVA_Svoboda_Armor_ProtectionPSY",
+      "SciSEVA_Scientific_Armor_ProtectionPSY",
+      "SciSEVA_Scientific_Armor_ProtectionPSY1",
+      "Seva_Neutral_Armor_ProtectionPSY",
+      "Seva_Neutral_Armor_ProtectionPSY1",
+      "Supressor_protectionPsiPerc",
+      "Supressor_protectionPsiVal"
+    ],
+    "armor_sids": [
+      "Anomaly_Scientific_Armor",
+      "BattleExoskeleton_Varta_Armor",
+      "Battle_Military_Helmet",
+      "Exoskeleton_Dolg_Armor",
+      "Exoskeleton_Mercenaries_Armor",
+      "Exoskeleton_Monolith_Armor",
+      "Exoskeleton_Neutral_Armor",
+      "Exoskeleton_Svoboda_Armor",
+      "Heavy2_Military_Armor",
+      "HeavyAnomaly_Monolith_Armor",
+      "HeavyAnomaly_Scientific_Armor",
+      "HeavyAnomaly_Spark_Armor",
+      "HeavyBattle_Spark_Armor",
+      "HeavyExoskeleton_Dolg_Armor",
+      "HeavyExoskeleton_Monolith_Armor",
+      "HeavyExoskeleton_Svoboda_Armor",
+      "Heavy_Dolg_Armor",
+      "Heavy_Duty_Helmet",
+      "Heavy_Mercenaries_Armor",
+      "Heavy_Military_Helmet",
+      "Heavy_Svoboda_Armor",
+      "Heavy_Svoboda_Helmet",
+      "Heavy_Varta_Helmet",
+      "Light_Bandit_Helmet",
+      "Light_Duty_Helmet",
+      "Light_Mercenaries_Helmet",
+      "Light_Military_Helmet",
+      "Light_Neutral_Helmet",
+      "SEVA_Dolg_Armor",
+      "SEVA_Neutral_Armor",
+      "SEVA_Spark_Armor",
+      "SEVA_Svoboda_Armor",
+      "SciSEVA_Scientific_Armor"
+    ],
+    "categories": [
+      "FULL_BODY_SUIT",
+      "HELMET"
+    ],
+    "factions": [
+      "BANDIT",
+      "DUTY",
+      "ECOLOGIST",
+      "FREEDOM",
+      "FREE_STALKER",
+      "MERCENARY",
+      "MILITARY",
+      "MONOLITH",
+      "SPARK",
+      "WARD"
+    ],
+    "texts": [
+      "Protection PSY",
+      "Psy defence"
+    ],
+    "localization_sids": [
+      "armor_protectionPsi"
+    ],
+    "value_min_counts": {
+      "10.0%": 31,
+      "5.0%": 3,
+      "20": 1,
+      "5.0": 1
+    },
+    "value_max_counts": {
+      "10.0%": 31,
+      "5.0%": 3,
+      "20": 1,
+      "5.0": 1
+    },
+    "positive_counts": {
+      "EBeneficial::Positive": 36
+    },
+    "effect_level_counts": {
+      "EEffectLevel::Low": 11,
+      "EEffectLevel::Medium": 2
+    },
+    "examples": [
+      {
+        "upgrade_sid": "Anomaly_Scientific_Armor_protectionPsi_Left_3_1",
+        "root_effect_sid": "Anomaly_Scientific_Armor_protectionPsi",
+        "effect_sid": "Anomaly_Scientific_Armor_protectionPsi",
+        "armor_sids": [
+          "Anomaly_Scientific_Armor"
+        ],
+        "value_min": [
+          "20"
+        ],
+        "value_max": [
+          "20"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Dolg_Armor_PSY_Left_3_2",
+        "root_effect_sid": "Exoskeleton_Dolg_Armor_ProtectionPSY",
+        "effect_sid": "Exoskeleton_Dolg_Armor_ProtectionPSY",
+        "armor_sids": [
+          "Exoskeleton_Dolg_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Mercenaries_Armor_PSY_Left_2_2",
+        "root_effect_sid": "Exoskeleton_Mercenaries_Armor_ProtectionPSY",
+        "effect_sid": "Exoskeleton_Mercenaries_Armor_ProtectionPSY",
+        "armor_sids": [
+          "Exoskeleton_Mercenaries_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Monolith_Armor_PSY_Left_2_2",
+        "root_effect_sid": "Exoskeleton_Monolith_Armor_ProtectionPSY",
+        "effect_sid": "Exoskeleton_Monolith_Armor_ProtectionPSY",
+        "armor_sids": [
+          "Exoskeleton_Monolith_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Monolith_Armor_PSY_Left_3_1",
+        "root_effect_sid": "Exoskeleton_Monolith_Armor_ProtectionPSY1",
+        "effect_sid": "Exoskeleton_Monolith_Armor_ProtectionPSY1",
+        "armor_sids": [
+          "Exoskeleton_Monolith_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Neutral_Armor_PSY_Left_2_3",
+        "root_effect_sid": "Exoskeleton_Neutral_Armor_ProtectionPSY",
+        "effect_sid": "Exoskeleton_Neutral_Armor_ProtectionPSY",
+        "armor_sids": [
+          "Exoskeleton_Neutral_Armor"
+        ],
+        "value_min": [
+          "5.0%"
+        ],
+        "value_max": [
+          "5.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Neutral_Armor_PSY_Left_3_1",
+        "root_effect_sid": "Exoskeleton_Neutral_Armor_ProtectionPSY2",
+        "effect_sid": "Exoskeleton_Neutral_Armor_ProtectionPSY2",
+        "armor_sids": [
+          "Exoskeleton_Neutral_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Svoboda_Armor_PSY_Left_2_3",
+        "root_effect_sid": "Exoskeleton_Svoboda_Armor_ProtectionPSY",
+        "effect_sid": "Exoskeleton_Svoboda_Armor_ProtectionPSY",
+        "armor_sids": [
+          "Exoskeleton_Svoboda_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Svoboda_Armor_PSY_Left_3_2",
+        "root_effect_sid": "Exoskeleton_Svoboda_Armor_ProtectionPSY1",
+        "effect_sid": "Exoskeleton_Svoboda_Armor_ProtectionPSY1",
+        "armor_sids": [
+          "Exoskeleton_Svoboda_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "FaustPsyResist_Quest_1_1",
+        "root_effect_sid": "Supressor_protectionPsiPerc",
+        "effect_sid": "Supressor_protectionPsiPerc",
+        "armor_sids": [
+          "Anomaly_Scientific_Armor",
+          "BattleExoskeleton_Varta_Armor",
+          "Battle_Military_Helmet",
+          "Exoskeleton_Dolg_Armor",
+          "Exoskeleton_Mercenaries_Armor",
+          "Exoskeleton_Monolith_Armor",
+          "Exoskeleton_Neutral_Armor",
+          "Exoskeleton_Svoboda_Armor",
+          "Heavy2_Military_Armor",
+          "HeavyAnomaly_Monolith_Armor",
+          "HeavyAnomaly_Scientific_Armor",
+          "HeavyAnomaly_Spark_Armor",
+          "HeavyBattle_Spark_Armor",
+          "HeavyExoskeleton_Dolg_Armor",
+          "HeavyExoskeleton_Monolith_Armor",
+          "HeavyExoskeleton_Svoboda_Armor",
+          "Heavy_Dolg_Armor",
+          "Heavy_Duty_Helmet",
+          "Heavy_Mercenaries_Armor",
+          "Heavy_Military_Helmet",
+          "Heavy_Svoboda_Armor",
+          "Heavy_Svoboda_Helmet",
+          "Heavy_Varta_Helmet",
+          "Light_Bandit_Helmet",
+          "Light_Duty_Helmet",
+          "Light_Mercenaries_Helmet",
+          "Light_Military_Helmet",
+          "Light_Neutral_Helmet",
+          "SEVA_Dolg_Armor",
+          "SEVA_Neutral_Armor",
+          "SEVA_Spark_Armor",
+          "SEVA_Svoboda_Armor"
+        ],
+        "value_min": [
+          "5.0%"
+        ],
+        "value_max": [
+          "5.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "FaustPsyResist_Quest_1_1",
+        "root_effect_sid": "Supressor_protectionPsiVal",
+        "effect_sid": "Supressor_protectionPsiVal",
+        "armor_sids": [
+          "Anomaly_Scientific_Armor",
+          "BattleExoskeleton_Varta_Armor",
+          "Battle_Military_Helmet",
+          "Exoskeleton_Dolg_Armor",
+          "Exoskeleton_Mercenaries_Armor",
+          "Exoskeleton_Monolith_Armor",
+          "Exoskeleton_Neutral_Armor",
+          "Exoskeleton_Svoboda_Armor",
+          "Heavy2_Military_Armor",
+          "HeavyAnomaly_Monolith_Armor",
+          "HeavyAnomaly_Scientific_Armor",
+          "HeavyAnomaly_Spark_Armor",
+          "HeavyBattle_Spark_Armor",
+          "HeavyExoskeleton_Dolg_Armor",
+          "HeavyExoskeleton_Monolith_Armor",
+          "HeavyExoskeleton_Svoboda_Armor",
+          "Heavy_Dolg_Armor",
+          "Heavy_Duty_Helmet",
+          "Heavy_Mercenaries_Armor",
+          "Heavy_Military_Helmet",
+          "Heavy_Svoboda_Armor",
+          "Heavy_Svoboda_Helmet",
+          "Heavy_Varta_Helmet",
+          "Light_Bandit_Helmet",
+          "Light_Duty_Helmet",
+          "Light_Mercenaries_Helmet",
+          "Light_Military_Helmet",
+          "Light_Neutral_Helmet",
+          "SEVA_Dolg_Armor",
+          "SEVA_Neutral_Armor",
+          "SEVA_Spark_Armor",
+          "SEVA_Svoboda_Armor"
+        ],
+        "value_min": [
+          "5.0"
+        ],
+        "value_max": [
+          "5.0"
+        ]
+      },
+      {
+        "upgrade_sid": "HeavyAnomaly_Monolith_Armor_PSY_Left_3_1",
+        "root_effect_sid": "HeavyAnomaly_Monolith_Armor_ProtectionPSY",
+        "effect_sid": "HeavyAnomaly_Monolith_Armor_ProtectionPSY",
+        "armor_sids": [
+          "HeavyAnomaly_Monolith_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "EEffectType::Composite",
+    "upgrade_count": 28,
+    "effect_count": 28,
+    "armor_count": 26,
+    "effect_sids": [
+      "BattleExoskeleton_Varta_Armor_accuracy",
+      "BattleExoskeleton_Varta_Armor_carryingCapacity",
+      "Battle_Monolith_Armor_carryingCapacity",
+      "Default_Military_Armor_carryingCapacity",
+      "Exoskeleton_Dolg_Armor_carryingCapacity",
+      "Exoskeleton_Mercenaries_Armor_carryingCapacity",
+      "Exoskeleton_Monolith_Armor_carryingCapacity",
+      "Exoskeleton_Neutral_Armor_carryingCapacity",
+      "Exoskeleton_Svoboda_Armor_carryingCapacity",
+      "Heavy2_Military_Armor_carryingCapacity",
+      "HeavyAnomaly_Monolith_Armor_carryingCapacity",
+      "HeavyAnomaly_Spark_Armor_carryingCapacity",
+      "HeavyBattle_Spark_Armor_carryingCapacity",
+      "HeavyExoskeleton_Dolg_Armor_carryingCapacity",
+      "HeavyExoskeleton_Monolith_Armor_accuracy",
+      "HeavyExoskeleton_Monolith_Armor_carryingCapacity",
+      "HeavyExoskeleton_Svoboda_Armor_carryingCapacity",
+      "Heavy_Dolg_Armor_carryingCapacity",
+      "Heavy_Mercenaries_Armor_carryingCapacity",
+      "Heavy_Svoboda_Armor_carryingCapacity",
+      "Light_Mercenaries_Armor_carryingCapacity",
+      "Middle_Bandit_Armor_carryingCapacity",
+      "Nasos_Neutral_Armor_carryingCapacity",
+      "SEVA_Dolg_Armor_carryingCapacity",
+      "SEVA_Spark_Armor_carryingCapacity",
+      "SEVA_Svoboda_Armor_carryingCapacity",
+      "SciSEVA_Scientific_Armor_carryingCapacity",
+      "Seva_Neutral_Armor_carryingCapacity"
+    ],
+    "root_effect_sids": [
+      "BattleExoskeleton_Varta_Armor_accuracy",
+      "BattleExoskeleton_Varta_Armor_carryingCapacity",
+      "Battle_Monolith_Armor_carryingCapacity",
+      "Default_Military_Armor_carryingCapacity",
+      "Exoskeleton_Dolg_Armor_carryingCapacity",
+      "Exoskeleton_Mercenaries_Armor_carryingCapacity",
+      "Exoskeleton_Monolith_Armor_carryingCapacity",
+      "Exoskeleton_Neutral_Armor_carryingCapacity",
+      "Exoskeleton_Svoboda_Armor_carryingCapacity",
+      "Heavy2_Military_Armor_carryingCapacity",
+      "HeavyAnomaly_Monolith_Armor_carryingCapacity",
+      "HeavyAnomaly_Spark_Armor_carryingCapacity",
+      "HeavyBattle_Spark_Armor_carryingCapacity",
+      "HeavyExoskeleton_Dolg_Armor_carryingCapacity",
+      "HeavyExoskeleton_Monolith_Armor_accuracy",
+      "HeavyExoskeleton_Monolith_Armor_carryingCapacity",
+      "HeavyExoskeleton_Svoboda_Armor_carryingCapacity",
+      "Heavy_Dolg_Armor_carryingCapacity",
+      "Heavy_Mercenaries_Armor_carryingCapacity",
+      "Heavy_Svoboda_Armor_carryingCapacity",
+      "Light_Mercenaries_Armor_carryingCapacity",
+      "Middle_Bandit_Armor_carryingCapacity",
+      "Nasos_Neutral_Armor_carryingCapacity",
+      "SEVA_Dolg_Armor_carryingCapacity",
+      "SEVA_Spark_Armor_carryingCapacity",
+      "SEVA_Svoboda_Armor_carryingCapacity",
+      "SciSEVA_Scientific_Armor_carryingCapacity",
+      "Seva_Neutral_Armor_carryingCapacity"
+    ],
+    "armor_sids": [
+      "BattleExoskeleton_Varta_Armor",
+      "Battle_Monolith_Armor",
+      "Default_Military_Armor",
+      "Exoskeleton_Dolg_Armor",
+      "Exoskeleton_Mercenaries_Armor",
+      "Exoskeleton_Monolith_Armor",
+      "Exoskeleton_Neutral_Armor",
+      "Exoskeleton_Svoboda_Armor",
+      "Heavy2_Military_Armor",
+      "HeavyAnomaly_Monolith_Armor",
+      "HeavyAnomaly_Spark_Armor",
+      "HeavyBattle_Spark_Armor",
+      "HeavyExoskeleton_Dolg_Armor",
+      "HeavyExoskeleton_Monolith_Armor",
+      "HeavyExoskeleton_Svoboda_Armor",
+      "Heavy_Dolg_Armor",
+      "Heavy_Mercenaries_Armor",
+      "Heavy_Svoboda_Armor",
+      "Light_Mercenaries_Armor",
+      "Middle_Bandit_Armor",
+      "Nasos_Neutral_Armor",
+      "SEVA_Dolg_Armor",
+      "SEVA_Neutral_Armor",
+      "SEVA_Spark_Armor",
+      "SEVA_Svoboda_Armor",
+      "SciSEVA_Scientific_Armor"
+    ],
+    "categories": [
+      "FULL_BODY_SUIT",
+      "SUIT"
+    ],
+    "factions": [
+      "BANDIT",
+      "DUTY",
+      "ECOLOGIST",
+      "FREEDOM",
+      "FREE_STALKER",
+      "MERCENARY",
+      "MILITARY",
+      "MONOLITH",
+      "SPARK",
+      "WARD"
+    ],
+    "texts": [
+      "Accuracy"
+    ],
+    "localization_sids": [
+      "Armor_carryingCapacity",
+      "armor_accuracy"
+    ],
+    "value_min_counts": {
+      "10.0%": 25,
+      "20%": 2
+    },
+    "value_max_counts": {
+      "10.0%": 25,
+      "20%": 2
+    },
+    "positive_counts": {},
+    "effect_level_counts": {},
+    "examples": [
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_accuracy_Left_3_1",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_accuracy",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_accuracy",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "20%"
+        ],
+        "value_max": [
+          "20%"
+        ]
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_carryingCapacity_Left_3_2",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_carryingCapacity",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_carryingCapacity",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_Backpack_Left_3_2",
+        "root_effect_sid": "Battle_Monolith_Armor_carryingCapacity",
+        "effect_sid": "Battle_Monolith_Armor_carryingCapacity",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Default_Military_Armor_carryingCapacity_Left_3_1",
+        "root_effect_sid": "Default_Military_Armor_carryingCapacity",
+        "effect_sid": "Default_Military_Armor_carryingCapacity",
+        "armor_sids": [
+          "Default_Military_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Dolg_Armor_Backpack_Right_2_1",
+        "root_effect_sid": "Exoskeleton_Dolg_Armor_carryingCapacity",
+        "effect_sid": "Exoskeleton_Dolg_Armor_carryingCapacity",
+        "armor_sids": [
+          "Exoskeleton_Dolg_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Mercenaries_Armor_carryingCapacity_Left_3_2",
+        "root_effect_sid": "Exoskeleton_Mercenaries_Armor_carryingCapacity",
+        "effect_sid": "Exoskeleton_Mercenaries_Armor_carryingCapacity",
+        "armor_sids": [
+          "Exoskeleton_Mercenaries_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Monolith_Armor_carryingCapacity_Right_1_1",
+        "root_effect_sid": "Exoskeleton_Monolith_Armor_carryingCapacity",
+        "effect_sid": "Exoskeleton_Monolith_Armor_carryingCapacity",
+        "armor_sids": [
+          "Exoskeleton_Monolith_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Neutral_Armor_carryingCapacity_Left_3_2",
+        "root_effect_sid": "Exoskeleton_Neutral_Armor_carryingCapacity",
+        "effect_sid": "Exoskeleton_Neutral_Armor_carryingCapacity",
+        "armor_sids": [
+          "Exoskeleton_Neutral_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Svoboda_Armor_Backpack_Left_3_2",
+        "root_effect_sid": "Exoskeleton_Svoboda_Armor_carryingCapacity",
+        "effect_sid": "Exoskeleton_Svoboda_Armor_carryingCapacity",
+        "armor_sids": [
+          "Exoskeleton_Svoboda_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Heavy2_Military_Armor_carryingCapacity_Left_1_1",
+        "root_effect_sid": "Heavy2_Military_Armor_carryingCapacity",
+        "effect_sid": "Heavy2_Military_Armor_carryingCapacity",
+        "armor_sids": [
+          "Heavy2_Military_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "HeavyAnomaly_Monolith_Armor_carryingCapacity_Left_2_2",
+        "root_effect_sid": "HeavyAnomaly_Monolith_Armor_carryingCapacity",
+        "effect_sid": "HeavyAnomaly_Monolith_Armor_carryingCapacity",
+        "armor_sids": [
+          "HeavyAnomaly_Monolith_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "HeavyAnomaly_Spark_Armor_carryingCapacity_Left_2_1",
+        "root_effect_sid": "HeavyAnomaly_Spark_Armor_carryingCapacity",
+        "effect_sid": "HeavyAnomaly_Spark_Armor_carryingCapacity",
+        "armor_sids": [
+          "HeavyAnomaly_Spark_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "EEffectType::AdditionalInventoryWeight",
+    "upgrade_count": 26,
+    "effect_count": 26,
+    "armor_count": 26,
+    "effect_sids": [
+      "BattleExoskeleton_Varta_Armor_AdditionalInventoryWeight",
+      "Battle_Monolith_Armor_AdditionalInventoryWeight",
+      "Default_Military_Armor_AdditionalInventoryWeight",
+      "Exoskeleton_Dolg_Armor_AdditionalInventoryWeight",
+      "Exoskeleton_Mercenaries_Armor_AdditionalInventoryWeight",
+      "Exoskeleton_Monolith_Armor_AdditionalInventoryWeight",
+      "Exoskeleton_Neutral_Armor_AdditionalInventoryWeight",
+      "Exoskeleton_Svoboda_Armor_AdditionalInventoryWeight",
+      "Heavy2_Military_Armor_AdditionalInventoryWeight",
+      "HeavyAnomaly_Monolith_Armor_AdditionalInventoryWeight",
+      "HeavyAnomaly_Spark_Armor_AdditionalInventoryWeight",
+      "HeavyBattle_Spark_Armor_AdditionalInventoryWeight",
+      "HeavyExoskeleton_Dolg_Armor_AdditionalInventoryWeight",
+      "HeavyExoskeleton_Monolith_Armor_AdditionalInventoryWeight",
+      "HeavyExoskeleton_Svoboda_Armor_AdditionalInventoryWeight",
+      "Heavy_Dolg_Armor_AdditionalInventoryWeight",
+      "Heavy_Mercenaries_Armor_AdditionalInventoryWeight",
+      "Heavy_Svoboda_Armor_AdditionalInventoryWeight",
+      "Light_Mercenaries_Armor_AdditionalInventoryWeight",
+      "Middle_Bandit_Armor_AdditionalInventoryWeight",
+      "Nasos_Neutral_Armor_AdditionalInventoryWeight",
+      "SEVA_Dolg_Armor_AdditionalInventoryWeight",
+      "SEVA_Spark_Armor_AdditionalInventoryWeight",
+      "SEVA_Svoboda_Armor_AdditionalInventoryWeight",
+      "SciSEVA_Scientific_Armor_AdditionalInventoryWeight",
+      "Seva_Neutral_Armor_AdditionalInventoryWeight"
+    ],
+    "root_effect_sids": [
+      "BattleExoskeleton_Varta_Armor_carryingCapacity",
+      "Battle_Monolith_Armor_carryingCapacity",
+      "Default_Military_Armor_carryingCapacity",
+      "Exoskeleton_Dolg_Armor_carryingCapacity",
+      "Exoskeleton_Mercenaries_Armor_carryingCapacity",
+      "Exoskeleton_Monolith_Armor_carryingCapacity",
+      "Exoskeleton_Neutral_Armor_carryingCapacity",
+      "Exoskeleton_Svoboda_Armor_carryingCapacity",
+      "Heavy2_Military_Armor_carryingCapacity",
+      "HeavyAnomaly_Monolith_Armor_carryingCapacity",
+      "HeavyAnomaly_Spark_Armor_carryingCapacity",
+      "HeavyBattle_Spark_Armor_carryingCapacity",
+      "HeavyExoskeleton_Dolg_Armor_carryingCapacity",
+      "HeavyExoskeleton_Monolith_Armor_carryingCapacity",
+      "HeavyExoskeleton_Svoboda_Armor_carryingCapacity",
+      "Heavy_Dolg_Armor_carryingCapacity",
+      "Heavy_Mercenaries_Armor_carryingCapacity",
+      "Heavy_Svoboda_Armor_carryingCapacity",
+      "Light_Mercenaries_Armor_carryingCapacity",
+      "Middle_Bandit_Armor_carryingCapacity",
+      "Nasos_Neutral_Armor_carryingCapacity",
+      "SEVA_Dolg_Armor_carryingCapacity",
+      "SEVA_Spark_Armor_carryingCapacity",
+      "SEVA_Svoboda_Armor_carryingCapacity",
+      "SciSEVA_Scientific_Armor_carryingCapacity",
+      "Seva_Neutral_Armor_carryingCapacity"
+    ],
+    "armor_sids": [
+      "BattleExoskeleton_Varta_Armor",
+      "Battle_Monolith_Armor",
+      "Default_Military_Armor",
+      "Exoskeleton_Dolg_Armor",
+      "Exoskeleton_Mercenaries_Armor",
+      "Exoskeleton_Monolith_Armor",
+      "Exoskeleton_Neutral_Armor",
+      "Exoskeleton_Svoboda_Armor",
+      "Heavy2_Military_Armor",
+      "HeavyAnomaly_Monolith_Armor",
+      "HeavyAnomaly_Spark_Armor",
+      "HeavyBattle_Spark_Armor",
+      "HeavyExoskeleton_Dolg_Armor",
+      "HeavyExoskeleton_Monolith_Armor",
+      "HeavyExoskeleton_Svoboda_Armor",
+      "Heavy_Dolg_Armor",
+      "Heavy_Mercenaries_Armor",
+      "Heavy_Svoboda_Armor",
+      "Light_Mercenaries_Armor",
+      "Middle_Bandit_Armor",
+      "Nasos_Neutral_Armor",
+      "SEVA_Dolg_Armor",
+      "SEVA_Neutral_Armor",
+      "SEVA_Spark_Armor",
+      "SEVA_Svoboda_Armor",
+      "SciSEVA_Scientific_Armor"
+    ],
+    "categories": [
+      "FULL_BODY_SUIT",
+      "SUIT"
+    ],
+    "factions": [
+      "BANDIT",
+      "DUTY",
+      "ECOLOGIST",
+      "FREEDOM",
+      "FREE_STALKER",
+      "MERCENARY",
+      "MILITARY",
+      "MONOLITH",
+      "SPARK",
+      "WARD"
+    ],
+    "texts": [
+      "Additional Inventory Weight"
+    ],
+    "localization_sids": [
+      "increase_max_inventory_weight"
+    ],
+    "value_min_counts": {
+      "10.0%": 26
+    },
+    "value_max_counts": {
+      "10.0%": 26
+    },
+    "positive_counts": {
+      "EBeneficial::Positive": 26
+    },
+    "effect_level_counts": {},
+    "examples": [
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_carryingCapacity_Left_3_2",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_carryingCapacity",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_AdditionalInventoryWeight",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_Backpack_Left_3_2",
+        "root_effect_sid": "Battle_Monolith_Armor_carryingCapacity",
+        "effect_sid": "Battle_Monolith_Armor_AdditionalInventoryWeight",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Default_Military_Armor_carryingCapacity_Left_3_1",
+        "root_effect_sid": "Default_Military_Armor_carryingCapacity",
+        "effect_sid": "Default_Military_Armor_AdditionalInventoryWeight",
+        "armor_sids": [
+          "Default_Military_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Dolg_Armor_Backpack_Right_2_1",
+        "root_effect_sid": "Exoskeleton_Dolg_Armor_carryingCapacity",
+        "effect_sid": "Exoskeleton_Dolg_Armor_AdditionalInventoryWeight",
+        "armor_sids": [
+          "Exoskeleton_Dolg_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Mercenaries_Armor_carryingCapacity_Left_3_2",
+        "root_effect_sid": "Exoskeleton_Mercenaries_Armor_carryingCapacity",
+        "effect_sid": "Exoskeleton_Mercenaries_Armor_AdditionalInventoryWeight",
+        "armor_sids": [
+          "Exoskeleton_Mercenaries_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Monolith_Armor_carryingCapacity_Right_1_1",
+        "root_effect_sid": "Exoskeleton_Monolith_Armor_carryingCapacity",
+        "effect_sid": "Exoskeleton_Monolith_Armor_AdditionalInventoryWeight",
+        "armor_sids": [
+          "Exoskeleton_Monolith_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Neutral_Armor_carryingCapacity_Left_3_2",
+        "root_effect_sid": "Exoskeleton_Neutral_Armor_carryingCapacity",
+        "effect_sid": "Exoskeleton_Neutral_Armor_AdditionalInventoryWeight",
+        "armor_sids": [
+          "Exoskeleton_Neutral_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Svoboda_Armor_Backpack_Left_3_2",
+        "root_effect_sid": "Exoskeleton_Svoboda_Armor_carryingCapacity",
+        "effect_sid": "Exoskeleton_Svoboda_Armor_AdditionalInventoryWeight",
+        "armor_sids": [
+          "Exoskeleton_Svoboda_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Heavy2_Military_Armor_carryingCapacity_Left_1_1",
+        "root_effect_sid": "Heavy2_Military_Armor_carryingCapacity",
+        "effect_sid": "Heavy2_Military_Armor_AdditionalInventoryWeight",
+        "armor_sids": [
+          "Heavy2_Military_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "HeavyAnomaly_Monolith_Armor_carryingCapacity_Left_2_2",
+        "root_effect_sid": "HeavyAnomaly_Monolith_Armor_carryingCapacity",
+        "effect_sid": "HeavyAnomaly_Monolith_Armor_AdditionalInventoryWeight",
+        "armor_sids": [
+          "HeavyAnomaly_Monolith_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "HeavyAnomaly_Spark_Armor_carryingCapacity_Left_2_1",
+        "root_effect_sid": "HeavyAnomaly_Spark_Armor_carryingCapacity",
+        "effect_sid": "HeavyAnomaly_Spark_Armor_AdditionalInventoryWeight",
+        "armor_sids": [
+          "HeavyAnomaly_Spark_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "HeavyBattle_Spark_Armor_carryingCapacity_Left_3_1",
+        "root_effect_sid": "HeavyBattle_Spark_Armor_carryingCapacity",
+        "effect_sid": "HeavyBattle_Spark_Armor_AdditionalInventoryWeight",
+        "armor_sids": [
+          "HeavyBattle_Spark_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "EEffectType::PenaltyLessWeight",
+    "upgrade_count": 26,
+    "effect_count": 26,
+    "armor_count": 26,
+    "effect_sids": [
+      "BattleExoskeleton_Varta_Armor_PenaltyLessWeight",
+      "Battle_Monolith_Armor_PenaltyLessWeight",
+      "Default_Military_Armor_PenaltyLessWeight",
+      "Exoskeleton_Dolg_Armor_PenaltyLessWeight",
+      "Exoskeleton_Mercenaries_Armor_PenaltyLessWeight",
+      "Exoskeleton_Monolith_Armor_PenaltyLessWeight",
+      "Exoskeleton_Neutral_Armor_PenaltyLessWeight",
+      "Exoskeleton_Svoboda_Armor_PenaltyLessWeight",
+      "Heavy2_Military_Armor_PenaltyLessWeight",
+      "HeavyAnomaly_Monolith_Armor_PenaltyLessWeight",
+      "HeavyAnomaly_Spark_Armor_PenaltyLessWeight",
+      "HeavyBattle_Spark_Armor_PenaltyLessWeight",
+      "HeavyExoskeleton_Dolg_Armor_PenaltyLessWeight",
+      "HeavyExoskeleton_Monolith_Armor_PenaltyLessWeight",
+      "HeavyExoskeleton_Svoboda_Armor_PenaltyLessWeight",
+      "Heavy_Dolg_Armor_PenaltyLessWeight",
+      "Heavy_Mercenaries_Armor_PenaltyLessWeight",
+      "Heavy_Svoboda_Armor_PenaltyLessWeight",
+      "Light_Mercenaries_Armor_PenaltyLessWeight",
+      "Middle_Bandit_Armor_PenaltyLessWeight",
+      "Nasos_Neutral_Armor_PenaltyLessWeight",
+      "SEVA_Dolg_Armor_PenaltyLessWeight",
+      "SEVA_Spark_Armor_PenaltyLessWeight",
+      "SEVA_Svoboda_Armor_PenaltyLessWeight",
+      "SciSEVA_Scientific_Armor_PenaltyLessWeight",
+      "Seva_Neutral_Armor_PenaltyLessWeight"
+    ],
+    "root_effect_sids": [
+      "BattleExoskeleton_Varta_Armor_carryingCapacity",
+      "Battle_Monolith_Armor_carryingCapacity",
+      "Default_Military_Armor_carryingCapacity",
+      "Exoskeleton_Dolg_Armor_carryingCapacity",
+      "Exoskeleton_Mercenaries_Armor_carryingCapacity",
+      "Exoskeleton_Monolith_Armor_carryingCapacity",
+      "Exoskeleton_Neutral_Armor_carryingCapacity",
+      "Exoskeleton_Svoboda_Armor_carryingCapacity",
+      "Heavy2_Military_Armor_carryingCapacity",
+      "HeavyAnomaly_Monolith_Armor_carryingCapacity",
+      "HeavyAnomaly_Spark_Armor_carryingCapacity",
+      "HeavyBattle_Spark_Armor_carryingCapacity",
+      "HeavyExoskeleton_Dolg_Armor_carryingCapacity",
+      "HeavyExoskeleton_Monolith_Armor_carryingCapacity",
+      "HeavyExoskeleton_Svoboda_Armor_carryingCapacity",
+      "Heavy_Dolg_Armor_carryingCapacity",
+      "Heavy_Mercenaries_Armor_carryingCapacity",
+      "Heavy_Svoboda_Armor_carryingCapacity",
+      "Light_Mercenaries_Armor_carryingCapacity",
+      "Middle_Bandit_Armor_carryingCapacity",
+      "Nasos_Neutral_Armor_carryingCapacity",
+      "SEVA_Dolg_Armor_carryingCapacity",
+      "SEVA_Spark_Armor_carryingCapacity",
+      "SEVA_Svoboda_Armor_carryingCapacity",
+      "SciSEVA_Scientific_Armor_carryingCapacity",
+      "Seva_Neutral_Armor_carryingCapacity"
+    ],
+    "armor_sids": [
+      "BattleExoskeleton_Varta_Armor",
+      "Battle_Monolith_Armor",
+      "Default_Military_Armor",
+      "Exoskeleton_Dolg_Armor",
+      "Exoskeleton_Mercenaries_Armor",
+      "Exoskeleton_Monolith_Armor",
+      "Exoskeleton_Neutral_Armor",
+      "Exoskeleton_Svoboda_Armor",
+      "Heavy2_Military_Armor",
+      "HeavyAnomaly_Monolith_Armor",
+      "HeavyAnomaly_Spark_Armor",
+      "HeavyBattle_Spark_Armor",
+      "HeavyExoskeleton_Dolg_Armor",
+      "HeavyExoskeleton_Monolith_Armor",
+      "HeavyExoskeleton_Svoboda_Armor",
+      "Heavy_Dolg_Armor",
+      "Heavy_Mercenaries_Armor",
+      "Heavy_Svoboda_Armor",
+      "Light_Mercenaries_Armor",
+      "Middle_Bandit_Armor",
+      "Nasos_Neutral_Armor",
+      "SEVA_Dolg_Armor",
+      "SEVA_Neutral_Armor",
+      "SEVA_Spark_Armor",
+      "SEVA_Svoboda_Armor",
+      "SciSEVA_Scientific_Armor"
+    ],
+    "categories": [
+      "FULL_BODY_SUIT",
+      "SUIT"
+    ],
+    "factions": [
+      "BANDIT",
+      "DUTY",
+      "ECOLOGIST",
+      "FREEDOM",
+      "FREE_STALKER",
+      "MERCENARY",
+      "MILITARY",
+      "MONOLITH",
+      "SPARK",
+      "WARD"
+    ],
+    "texts": [
+      "Additional Inventory Weight"
+    ],
+    "localization_sids": [],
+    "value_min_counts": {
+      "10.0%": 26
+    },
+    "value_max_counts": {
+      "10.0%": 26
+    },
+    "positive_counts": {
+      "EBeneficial::Positive": 26
+    },
+    "effect_level_counts": {},
+    "examples": [
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_carryingCapacity_Left_3_2",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_carryingCapacity",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_PenaltyLessWeight",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_Backpack_Left_3_2",
+        "root_effect_sid": "Battle_Monolith_Armor_carryingCapacity",
+        "effect_sid": "Battle_Monolith_Armor_PenaltyLessWeight",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Default_Military_Armor_carryingCapacity_Left_3_1",
+        "root_effect_sid": "Default_Military_Armor_carryingCapacity",
+        "effect_sid": "Default_Military_Armor_PenaltyLessWeight",
+        "armor_sids": [
+          "Default_Military_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Dolg_Armor_Backpack_Right_2_1",
+        "root_effect_sid": "Exoskeleton_Dolg_Armor_carryingCapacity",
+        "effect_sid": "Exoskeleton_Dolg_Armor_PenaltyLessWeight",
+        "armor_sids": [
+          "Exoskeleton_Dolg_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Mercenaries_Armor_carryingCapacity_Left_3_2",
+        "root_effect_sid": "Exoskeleton_Mercenaries_Armor_carryingCapacity",
+        "effect_sid": "Exoskeleton_Mercenaries_Armor_PenaltyLessWeight",
+        "armor_sids": [
+          "Exoskeleton_Mercenaries_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Monolith_Armor_carryingCapacity_Right_1_1",
+        "root_effect_sid": "Exoskeleton_Monolith_Armor_carryingCapacity",
+        "effect_sid": "Exoskeleton_Monolith_Armor_PenaltyLessWeight",
+        "armor_sids": [
+          "Exoskeleton_Monolith_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Neutral_Armor_carryingCapacity_Left_3_2",
+        "root_effect_sid": "Exoskeleton_Neutral_Armor_carryingCapacity",
+        "effect_sid": "Exoskeleton_Neutral_Armor_PenaltyLessWeight",
+        "armor_sids": [
+          "Exoskeleton_Neutral_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Svoboda_Armor_Backpack_Left_3_2",
+        "root_effect_sid": "Exoskeleton_Svoboda_Armor_carryingCapacity",
+        "effect_sid": "Exoskeleton_Svoboda_Armor_PenaltyLessWeight",
+        "armor_sids": [
+          "Exoskeleton_Svoboda_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Heavy2_Military_Armor_carryingCapacity_Left_1_1",
+        "root_effect_sid": "Heavy2_Military_Armor_carryingCapacity",
+        "effect_sid": "Heavy2_Military_Armor_PenaltyLessWeight",
+        "armor_sids": [
+          "Heavy2_Military_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "HeavyAnomaly_Monolith_Armor_carryingCapacity_Left_2_2",
+        "root_effect_sid": "HeavyAnomaly_Monolith_Armor_carryingCapacity",
+        "effect_sid": "HeavyAnomaly_Monolith_Armor_PenaltyLessWeight",
+        "armor_sids": [
+          "HeavyAnomaly_Monolith_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "HeavyAnomaly_Spark_Armor_carryingCapacity_Left_2_1",
+        "root_effect_sid": "HeavyAnomaly_Spark_Armor_carryingCapacity",
+        "effect_sid": "HeavyAnomaly_Spark_Armor_PenaltyLessWeight",
+        "armor_sids": [
+          "HeavyAnomaly_Spark_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "HeavyBattle_Spark_Armor_carryingCapacity_Left_3_1",
+        "root_effect_sid": "HeavyBattle_Spark_Armor_carryingCapacity",
+        "effect_sid": "HeavyBattle_Spark_Armor_PenaltyLessWeight",
+        "armor_sids": [
+          "HeavyBattle_Spark_Armor"
+        ],
+        "value_min": [
+          "10.0%"
+        ],
+        "value_max": [
+          "10.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "EEffectType::RegenStamina",
+    "upgrade_count": 24,
+    "effect_count": 24,
+    "armor_count": 23,
+    "effect_sids": [
+      "Anomaly_Scientific_Armor_regenerationStamina",
+      "BattleExoskeleton_Varta_Armor_regenerationStamina",
+      "Battle_Dolg_Armor_regenerationStamina",
+      "Battle_Dolg_Armor_regenerationStamina1",
+      "Battle_Monolith_Armor_regenerationStamina",
+      "Battle_Spark_Armor_regenerationStamina",
+      "Battle_Varta_Armor_regenerationStamina",
+      "Default_Military_Armor_regenerationStamina",
+      "Exoskeleton_Dolg_Armor_regenerationStamina",
+      "Exoskeleton_Monolith_Armor_regenerationStamina",
+      "Exoskeleton_Neutral_Armor_regenerationStamina",
+      "Exoskeleton_Svoboda_Armor_regenerationStamina",
+      "Heavy2_Military_Armor_regenerationStamina",
+      "HeavyAnomaly_Monolith_Armor_regenerationStamina",
+      "HeavyAnomaly_Spark_Armor_regenerationStamina",
+      "HeavyExoskeleton_Dolg_Armor_regenerationStamina",
+      "HeavyExoskeleton_Monolith_Armor_regenerationStamina",
+      "HeavyExoskeleton_Svoboda_Armor_regenerationStamina",
+      "Heavy_Dolg_Armor_regenerationStamina",
+      "Heavy_Svoboda_Armor_regenerationStamina",
+      "Rook_Dolg_Armor_regenerationStamina",
+      "SEVA_Dolg_Armor_regenerationStamina",
+      "Seva_Neutral_Armor_regenerationStamina",
+      "Zorya_Neutral_Armor_regenerationStamina"
+    ],
+    "root_effect_sids": [
+      "Anomaly_Scientific_Armor_regenerationStamina",
+      "BattleExoskeleton_Varta_Armor_regenerationStamina",
+      "Battle_Dolg_Armor_regenerationStamina",
+      "Battle_Dolg_Armor_regenerationStamina1",
+      "Battle_Monolith_Armor_regenerationStamina",
+      "Battle_Spark_Armor_regenerationStamina",
+      "Battle_Varta_Armor_regenerationStamina",
+      "Default_Military_Armor_regenerationStamina",
+      "Exoskeleton_Dolg_Armor_regenerationStamina",
+      "Exoskeleton_Monolith_Armor_regenerationStamina",
+      "Exoskeleton_Neutral_Armor_regenerationStamina",
+      "Exoskeleton_Svoboda_Armor_regenerationStamina",
+      "Heavy2_Military_Armor_regenerationStamina",
+      "HeavyAnomaly_Monolith_Armor_regenerationStamina",
+      "HeavyAnomaly_Spark_Armor_regenerationStamina",
+      "HeavyExoskeleton_Dolg_Armor_regenerationStamina",
+      "HeavyExoskeleton_Monolith_Armor_regenerationStamina",
+      "HeavyExoskeleton_Svoboda_Armor_regenerationStamina",
+      "Heavy_Dolg_Armor_regenerationStamina",
+      "Heavy_Svoboda_Armor_regenerationStamina",
+      "Rook_Dolg_Armor_regenerationStamina",
+      "SEVA_Dolg_Armor_regenerationStamina",
+      "Seva_Neutral_Armor_regenerationStamina",
+      "Zorya_Neutral_Armor_regenerationStamina"
+    ],
+    "armor_sids": [
+      "Anomaly_Scientific_Armor",
+      "BattleExoskeleton_Varta_Armor",
+      "Battle_Dolg_Armor",
+      "Battle_Monolith_Armor",
+      "Battle_Spark_Armor",
+      "Battle_Varta_Armor",
+      "Default_Military_Armor",
+      "Exoskeleton_Dolg_Armor",
+      "Exoskeleton_Monolith_Armor",
+      "Exoskeleton_Neutral_Armor",
+      "Exoskeleton_Svoboda_Armor",
+      "Heavy2_Military_Armor",
+      "HeavyAnomaly_Monolith_Armor",
+      "HeavyAnomaly_Spark_Armor",
+      "HeavyExoskeleton_Dolg_Armor",
+      "HeavyExoskeleton_Monolith_Armor",
+      "HeavyExoskeleton_Svoboda_Armor",
+      "Heavy_Dolg_Armor",
+      "Heavy_Svoboda_Armor",
+      "Rook_Dolg_Armor",
+      "SEVA_Dolg_Armor",
+      "SEVA_Neutral_Armor",
+      "Zorya_Neutral_Armor"
+    ],
+    "categories": [
+      "FULL_BODY_SUIT",
+      "SUIT"
+    ],
+    "factions": [
+      "DUTY",
+      "ECOLOGIST",
+      "FREEDOM",
+      "FREE_STALKER",
+      "MILITARY",
+      "MONOLITH",
+      "SPARK",
+      "WARD"
+    ],
+    "texts": [
+      "Regen Stamina"
+    ],
+    "localization_sids": [
+      "Armor_regenerationStamina"
+    ],
+    "value_min_counts": {
+      "5.0%": 24
+    },
+    "value_max_counts": {
+      "5.0%": 24
+    },
+    "positive_counts": {
+      "EBeneficial::Positive": 24
+    },
+    "effect_level_counts": {
+      "EEffectLevel::Low": 1
+    },
+    "examples": [
+      {
+        "upgrade_sid": "Anomaly_Scientific_Armor_regenerationStamina_Left_3_1",
+        "root_effect_sid": "Anomaly_Scientific_Armor_regenerationStamina",
+        "effect_sid": "Anomaly_Scientific_Armor_regenerationStamina",
+        "armor_sids": [
+          "Anomaly_Scientific_Armor"
+        ],
+        "value_min": [
+          "5.0%"
+        ],
+        "value_max": [
+          "5.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_EXOregenerationStamina_Left_2_1",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_regenerationStamina",
+        "effect_sid": "BattleExoskeleton_Varta_Armor_regenerationStamina",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "5.0%"
+        ],
+        "value_max": [
+          "5.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Dolg_Armor_regenerationStamina_Left_3_1",
+        "root_effect_sid": "Battle_Dolg_Armor_regenerationStamina",
+        "effect_sid": "Battle_Dolg_Armor_regenerationStamina",
+        "armor_sids": [
+          "Battle_Dolg_Armor"
+        ],
+        "value_min": [
+          "5.0%"
+        ],
+        "value_max": [
+          "5.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Dolg_Armor_regenerationStamina_Left_3_2",
+        "root_effect_sid": "Battle_Dolg_Armor_regenerationStamina1",
+        "effect_sid": "Battle_Dolg_Armor_regenerationStamina1",
+        "armor_sids": [
+          "Battle_Dolg_Armor"
+        ],
+        "value_min": [
+          "5.0%"
+        ],
+        "value_max": [
+          "5.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Monolith_Armor_regenerationStamina_Left_3_1",
+        "root_effect_sid": "Battle_Monolith_Armor_regenerationStamina",
+        "effect_sid": "Battle_Monolith_Armor_regenerationStamina",
+        "armor_sids": [
+          "Battle_Monolith_Armor"
+        ],
+        "value_min": [
+          "5.0%"
+        ],
+        "value_max": [
+          "5.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Spark_Armor_regenerationStamina_Left_3_1",
+        "root_effect_sid": "Battle_Spark_Armor_regenerationStamina",
+        "effect_sid": "Battle_Spark_Armor_regenerationStamina",
+        "armor_sids": [
+          "Battle_Spark_Armor"
+        ],
+        "value_min": [
+          "5.0%"
+        ],
+        "value_max": [
+          "5.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Battle_Varta_Armor_regenerationStamina_Left_1_1",
+        "root_effect_sid": "Battle_Varta_Armor_regenerationStamina",
+        "effect_sid": "Battle_Varta_Armor_regenerationStamina",
+        "armor_sids": [
+          "Battle_Varta_Armor"
+        ],
+        "value_min": [
+          "5.0%"
+        ],
+        "value_max": [
+          "5.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Default_Military_Armor_regenerationStamina_Left_1_1",
+        "root_effect_sid": "Default_Military_Armor_regenerationStamina",
+        "effect_sid": "Default_Military_Armor_regenerationStamina",
+        "armor_sids": [
+          "Default_Military_Armor"
+        ],
+        "value_min": [
+          "5.0%"
+        ],
+        "value_max": [
+          "5.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Dolg_Armor_EXOregenerationStamina_Right_1_1",
+        "root_effect_sid": "Exoskeleton_Dolg_Armor_regenerationStamina",
+        "effect_sid": "Exoskeleton_Dolg_Armor_regenerationStamina",
+        "armor_sids": [
+          "Exoskeleton_Dolg_Armor"
+        ],
+        "value_min": [
+          "5.0%"
+        ],
+        "value_max": [
+          "5.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Monolith_Armor_EXOregenerationStamina_Left_3_2",
+        "root_effect_sid": "Exoskeleton_Monolith_Armor_regenerationStamina",
+        "effect_sid": "Exoskeleton_Monolith_Armor_regenerationStamina",
+        "armor_sids": [
+          "Exoskeleton_Monolith_Armor"
+        ],
+        "value_min": [
+          "5.0%"
+        ],
+        "value_max": [
+          "5.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Neutral_Armor_EXOregenerationStamina_Right_1_1",
+        "root_effect_sid": "Exoskeleton_Neutral_Armor_regenerationStamina",
+        "effect_sid": "Exoskeleton_Neutral_Armor_regenerationStamina",
+        "armor_sids": [
+          "Exoskeleton_Neutral_Armor"
+        ],
+        "value_min": [
+          "5.0%"
+        ],
+        "value_max": [
+          "5.0%"
+        ]
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Svoboda_Armor_EXOregenerationStamina_Right_1_1",
+        "root_effect_sid": "Exoskeleton_Svoboda_Armor_regenerationStamina",
+        "effect_sid": "Exoskeleton_Svoboda_Armor_regenerationStamina",
+        "armor_sids": [
+          "Exoskeleton_Svoboda_Armor"
+        ],
+        "value_min": [
+          "5.0%"
+        ],
+        "value_max": [
+          "5.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "EEffectType::FlagEffect",
+    "upgrade_count": 7,
+    "effect_count": 2,
+    "armor_count": 32,
+    "effect_sids": [
+      "AddSprintEffect",
+      "FaustPsyResist"
+    ],
+    "root_effect_sids": [
+      "AddSprintEffect",
+      "FaustPsyResist"
+    ],
+    "armor_sids": [
+      "Anomaly_Scientific_Armor",
+      "BattleExoskeleton_Varta_Armor",
+      "Battle_Military_Helmet",
+      "Exoskeleton_Dolg_Armor",
+      "Exoskeleton_Mercenaries_Armor",
+      "Exoskeleton_Monolith_Armor",
+      "Exoskeleton_Neutral_Armor",
+      "Exoskeleton_Svoboda_Armor",
+      "Heavy2_Military_Armor",
+      "HeavyAnomaly_Monolith_Armor",
+      "HeavyAnomaly_Scientific_Armor",
+      "HeavyAnomaly_Spark_Armor",
+      "HeavyBattle_Spark_Armor",
+      "HeavyExoskeleton_Dolg_Armor",
+      "HeavyExoskeleton_Monolith_Armor",
+      "HeavyExoskeleton_Svoboda_Armor",
+      "Heavy_Dolg_Armor",
+      "Heavy_Duty_Helmet",
+      "Heavy_Mercenaries_Armor",
+      "Heavy_Military_Helmet",
+      "Heavy_Svoboda_Armor",
+      "Heavy_Svoboda_Helmet",
+      "Heavy_Varta_Helmet",
+      "Light_Bandit_Helmet",
+      "Light_Duty_Helmet",
+      "Light_Mercenaries_Helmet",
+      "Light_Military_Helmet",
+      "Light_Neutral_Helmet",
+      "SEVA_Dolg_Armor",
+      "SEVA_Neutral_Armor",
+      "SEVA_Spark_Armor",
+      "SEVA_Svoboda_Armor"
+    ],
+    "categories": [
+      "FULL_BODY_SUIT",
+      "HELMET"
+    ],
+    "factions": [
+      "BANDIT",
+      "DUTY",
+      "ECOLOGIST",
+      "FREEDOM",
+      "FREE_STALKER",
+      "MERCENARY",
+      "MILITARY",
+      "MONOLITH",
+      "SPARK",
+      "WARD"
+    ],
+    "texts": [
+      "Add Sprint",
+      "FaustPsyResist"
+    ],
+    "localization_sids": [
+      "armor_protectionPsi",
+      "armor_sprint"
+    ],
+    "value_min_counts": {},
+    "value_max_counts": {},
+    "positive_counts": {
+      "EBeneficial::Positive": 7
+    },
+    "effect_level_counts": {},
+    "examples": [
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_AddRunEffect_Left_1_1",
+        "root_effect_sid": "AddSprintEffect",
+        "effect_sid": "AddSprintEffect",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [],
+        "value_max": []
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Mercenaries_Armor_AddRunEffect_Right_1_1",
+        "root_effect_sid": "AddSprintEffect",
+        "effect_sid": "AddSprintEffect",
+        "armor_sids": [
+          "Exoskeleton_Mercenaries_Armor"
+        ],
+        "value_min": [],
+        "value_max": []
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Monolith_Armor_AddRunEffect_Right_2_1",
+        "root_effect_sid": "AddSprintEffect",
+        "effect_sid": "AddSprintEffect",
+        "armor_sids": [
+          "Exoskeleton_Monolith_Armor"
+        ],
+        "value_min": [],
+        "value_max": []
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Neutral_Armor_AddRunEffect_Right_2_1",
+        "root_effect_sid": "AddSprintEffect",
+        "effect_sid": "AddSprintEffect",
+        "armor_sids": [
+          "Exoskeleton_Neutral_Armor"
+        ],
+        "value_min": [],
+        "value_max": []
+      },
+      {
+        "upgrade_sid": "Exoskeleton_Svoboda_Armor_AddRunEffect_Right_2_1",
+        "root_effect_sid": "AddSprintEffect",
+        "effect_sid": "AddSprintEffect",
+        "armor_sids": [
+          "Exoskeleton_Svoboda_Armor"
+        ],
+        "value_min": [],
+        "value_max": []
+      },
+      {
+        "upgrade_sid": "FaustPsyResist_Quest_1_1",
+        "root_effect_sid": "FaustPsyResist",
+        "effect_sid": "FaustPsyResist",
+        "armor_sids": [
+          "Anomaly_Scientific_Armor",
+          "BattleExoskeleton_Varta_Armor",
+          "Battle_Military_Helmet",
+          "Exoskeleton_Dolg_Armor",
+          "Exoskeleton_Mercenaries_Armor",
+          "Exoskeleton_Monolith_Armor",
+          "Exoskeleton_Neutral_Armor",
+          "Exoskeleton_Svoboda_Armor",
+          "Heavy2_Military_Armor",
+          "HeavyAnomaly_Monolith_Armor",
+          "HeavyAnomaly_Scientific_Armor",
+          "HeavyAnomaly_Spark_Armor",
+          "HeavyBattle_Spark_Armor",
+          "HeavyExoskeleton_Dolg_Armor",
+          "HeavyExoskeleton_Monolith_Armor",
+          "HeavyExoskeleton_Svoboda_Armor",
+          "Heavy_Dolg_Armor",
+          "Heavy_Duty_Helmet",
+          "Heavy_Mercenaries_Armor",
+          "Heavy_Military_Helmet",
+          "Heavy_Svoboda_Armor",
+          "Heavy_Svoboda_Helmet",
+          "Heavy_Varta_Helmet",
+          "Light_Bandit_Helmet",
+          "Light_Duty_Helmet",
+          "Light_Mercenaries_Helmet",
+          "Light_Military_Helmet",
+          "Light_Neutral_Helmet",
+          "SEVA_Dolg_Armor",
+          "SEVA_Neutral_Armor",
+          "SEVA_Spark_Armor",
+          "SEVA_Svoboda_Armor"
+        ],
+        "value_min": [],
+        "value_max": []
+      },
+      {
+        "upgrade_sid": "HeavyExoskeleton_Monolith_Armor_AddRunEffect_Right_2_1",
+        "root_effect_sid": "AddSprintEffect",
+        "effect_sid": "AddSprintEffect",
+        "armor_sids": [
+          "HeavyExoskeleton_Monolith_Armor"
+        ],
+        "value_min": [],
+        "value_max": []
+      }
+    ]
+  },
+  {
+    "type": "<missing>",
+    "upgrade_count": 2,
+    "effect_count": 5,
+    "armor_count": 2,
+    "effect_sids": [
+      "DispersionPos15Effect",
+      "IdleSwayXPos15Effect",
+      "IdleSwayXPos20Effect",
+      "IdleSwayYPos15Effect",
+      "IdleSwayYPos20Effect"
+    ],
+    "root_effect_sids": [
+      "BattleExoskeleton_Varta_Armor_accuracy",
+      "HeavyExoskeleton_Monolith_Armor_accuracy"
+    ],
+    "armor_sids": [
+      "BattleExoskeleton_Varta_Armor",
+      "HeavyExoskeleton_Monolith_Armor"
+    ],
+    "categories": [
+      "FULL_BODY_SUIT"
+    ],
+    "factions": [
+      "MONOLITH",
+      "WARD"
+    ],
+    "texts": [],
+    "localization_sids": [],
+    "value_min_counts": {
+      "-15%": 4,
+      "-20%": 2
+    },
+    "value_max_counts": {
+      "-15%": 4,
+      "-20%": 2
+    },
+    "positive_counts": {},
+    "effect_level_counts": {},
+    "examples": [
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_accuracy_Left_3_1",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_accuracy",
+        "effect_sid": "IdleSwayXPos20Effect",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "-20%"
+        ],
+        "value_max": [
+          "-20%"
+        ]
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_accuracy_Left_3_1",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_accuracy",
+        "effect_sid": "IdleSwayYPos20Effect",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "-20%"
+        ],
+        "value_max": [
+          "-20%"
+        ]
+      },
+      {
+        "upgrade_sid": "BattleExoskeleton_Varta_Armor_accuracy_Left_3_1",
+        "root_effect_sid": "BattleExoskeleton_Varta_Armor_accuracy",
+        "effect_sid": "DispersionPos15Effect",
+        "armor_sids": [
+          "BattleExoskeleton_Varta_Armor"
+        ],
+        "value_min": [
+          "-15%"
+        ],
+        "value_max": [
+          "-15%"
+        ]
+      },
+      {
+        "upgrade_sid": "HeavyExoskeleton_Monolith_Armor_accuracy_Right_3_1",
+        "root_effect_sid": "HeavyExoskeleton_Monolith_Armor_accuracy",
+        "effect_sid": "IdleSwayXPos15Effect",
+        "armor_sids": [
+          "HeavyExoskeleton_Monolith_Armor"
+        ],
+        "value_min": [
+          "-15%"
+        ],
+        "value_max": [
+          "-15%"
+        ]
+      },
+      {
+        "upgrade_sid": "HeavyExoskeleton_Monolith_Armor_accuracy_Right_3_1",
+        "root_effect_sid": "HeavyExoskeleton_Monolith_Armor_accuracy",
+        "effect_sid": "IdleSwayYPos15Effect",
+        "armor_sids": [
+          "HeavyExoskeleton_Monolith_Armor"
+        ],
+        "value_min": [
+          "-15%"
+        ],
+        "value_max": [
+          "-15%"
+        ]
+      },
+      {
+        "upgrade_sid": "HeavyExoskeleton_Monolith_Armor_accuracy_Right_3_1",
+        "root_effect_sid": "HeavyExoskeleton_Monolith_Armor_accuracy",
+        "effect_sid": "DispersionPos15Effect",
+        "armor_sids": [
+          "HeavyExoskeleton_Monolith_Armor"
+        ],
+        "value_min": [
+          "-15%"
+        ],
+        "value_max": [
+          "-15%"
+        ]
+      }
+    ]
+  }
+]

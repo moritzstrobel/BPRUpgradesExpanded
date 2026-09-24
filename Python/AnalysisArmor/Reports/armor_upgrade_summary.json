@@ -13,5 +13,6 @@
   "missing_effect_sids": 1,
   "effect_structural_groups": 9,
   "effect_type_count": 13,
-  "extra_effect_root_count": 28
+  "extra_effect_root_count": 28,
+  "flattened_mechanic_type_count": 16
 }
