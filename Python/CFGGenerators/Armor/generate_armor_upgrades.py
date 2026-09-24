@@ -54,6 +54,20 @@ BPRUE_MODULE_IMAGE = "Texture2D'/BPRUpgradesExpanded/GameLite/FPS_Game/UIRemaste
 DEFAULT_ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/Armor/T_PDA_Upgrades_Icon_AttachmentSystem.T_PDA_Upgrades_Icon_AttachmentSystem'"
 
 
+ARMOR_EFFECT_UI = {
+    "ProtectionStrike": ("armor_protectionPhysical", "Strike Protection"),
+    "ProtectionBurn": ("armor_protectionThermal", "Thermal Protection"),
+    "ProtectionShock": ("armor_protectionElectrical", "Electrical Protection"),
+    "ProtectionChemical": ("armor_protectionChemical", "Chemical Protection"),
+    "ProtectionRadiation": ("armor_protectionRadiation", "Radiation Protection"),
+    "ArmorItemWeight": ("armor_reductionWeight", "Item Weight"),
+    "MaxDurability": ("armor_wearing", "Max Durability"),
+    "RegenStamina": ("Armor_regenerationStamina", "Regen Stamina"),
+    "Composite": ("Armor_carryingCapacity", "Carrying Capacity"),
+    "AdditionalInventoryWeight": ("increase_max_inventory_weight", "Increase max inventory weight"),
+}
+
+
 @dataclass(frozen=True)
 class ArmorUpgradeDefinition:
     sid: str
@@ -370,10 +384,15 @@ def _render_effect(sid: str, spec: dict) -> list[str]:
         f"{sid} : struct.begin {{refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}}",
         f"   SID = {sid}",
     ]
-    if spec.get("localization_sid"):
-        lines.append(f"   LocalizationSID = {spec['localization_sid']}")
-    if spec.get("text"):
-        lines.append(f"   Text = {spec['text']}")
+    localization_sid = spec.get("localization_sid")
+    text = spec.get("text")
+    if not localization_sid and effect_type in ARMOR_EFFECT_UI:
+        localization_sid, default_text = ARMOR_EFFECT_UI[effect_type]
+        text = text or default_text
+    if localization_sid:
+        lines.append(f"   LocalizationSID = {localization_sid}")
+    if text:
+        lines.append(f"   Text = {text}")
     lines += [
         f"   Type = EEffectType::{effect_type}",
         f"   ValueMin = {value}",
