@@ -126,7 +126,8 @@ def build_upgrades(config: dict | None = None, classification: dict | None = Non
                 previous_sid = sid
 
     # Generic faction-agnostic modules: one independent trade-off upgrade per armor.
-    for armor in classification["armors"]:
+    generic_armors = [armor for faction_armors in classification["factions"].values() for armor in faction_armors]
+    for armor in generic_armors:
         category = armor["category"]
         armor_sid = armor["sid"]
         for module_id, module_cfg in config.get("generic_modules", {}).items():
