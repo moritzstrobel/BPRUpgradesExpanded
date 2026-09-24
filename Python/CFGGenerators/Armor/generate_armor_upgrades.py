@@ -20,6 +20,8 @@ ARMOR_TARGET_ORDER = ("Body", "Barrel", "Handguard", "PistolGrip", "Stock")
 ARMOR_PATCH_PATH = ARMOR_GAME_ROOT / "GameData/ItemPrototypes/ArmorPrototypes/ArmorPrototypes_patch_BPRUE_Armor.cfg"
 UPGRADE_OUTPUT_PATH = ARMOR_GAME_ROOT / "ModGameData/BPRUpgradesExpandedArmor/UpgradePrototypes/BPRUE_ArmorUpgradePrototypes.cfg"
 EFFECT_OUTPUT_PATH = ARMOR_GAME_ROOT / "ModGameData/BPRUpgradesExpandedArmor/EffectPrototypes/BPRUE_ArmorEffectPrototypes.cfg"
+NPC_OUTPUT_PATH = ARMOR_GAME_ROOT / "GameData/NPCPrototypes/NPCPrototypes_patch_BPRUE_Armor.cfg"
+VANILLA_NPC_PATH = PYTHON_ROOT / "VanillaReference" / "NPCPrototypes.cfg"
 
 MODULE_TEMPLATE_SID = "BPRUE_ArmorModuleTemplate"
 FACTION_IMAGES = {
@@ -535,18 +537,162 @@ struct.end
 """
 
 
+
+def _parse_npc_blocks(text: str) -> dict[str, list[str]]:
+    """Parse top-level NPC structs; sufficient for resolving refkey + Upgrades ownership."""
+    import re
+    lines = text.splitlines()
+    starts: list[tuple[int, str]] = []
+    root_re = re.compile(r"^([A-Za-z0-9_.-]+)\s*:\s*struct\.begin(?:\s*\{[^}]*\})?\s*$")
+    for index, line in enumerate(lines):
+        match = root_re.match(line)
+        if match:
+            starts.append((index, match.group(1)))
+    result: dict[str, list[str]] = {}
+    for pos, (start, sid) in enumerate(starts):
+        end = starts[pos + 1][0] if pos + 1 < len(starts) else len(lines)
+        result[sid] = lines[start:end]
+    return result
+
+
+def _npc_refkey(block: list[str]) -> str | None:
+    import re
+    match = re.search(r"\{[^}]*refkey=([^;}]+)", block[0])
+    return match.group(1).strip() if match else None
+
+
+def _npc_type(block: list[str]) -> str | None:
+    import re
+    for line in block[1:]:
+        match = re.match(r"\s*NPCType\s*=\s*(\S+)", line)
+        if match:
+            return match.group(1)
+    return None
+
+
+def _direct_npc_upgrade_sids(block: list[str]) -> list[str] | None:
+    """Return the direct Upgrades array, or None when this NPC inherits it."""
+    import re
+    start = next((i for i, line in enumerate(block) if re.match(r"\s*Upgrades\s*:\s*struct\.begin", line)), None)
+    if start is None:
+        return None
+    depth = 0
+    result: list[str] = []
+    for line in block[start:]:
+        depth += line.count("struct.begin")
+        depth -= 1 if line.strip() == "struct.end" else 0
+        match = re.match(r"\s*UpgradePrototypeSID\s*=\s*(\S+)", line)
+        if match and match.group(1) != "empty":
+            result.append(match.group(1))
+        if depth == 0:
+            break
+    return result
+
+
+def _effective_npc_upgrade_sids(blocks: dict[str, list[str]], sid: str) -> list[str]:
+    seen: set[str] = set()
+    current = sid
+    while current and current not in seen:
+        seen.add(current)
+        block = blocks.get(current)
+        if not block:
+            return []
+        direct = _direct_npc_upgrade_sids(block)
+        if direct is not None:
+            return direct
+        current = _npc_refkey(block)
+    return []
+
+
+def _effective_npc_type(blocks: dict[str, list[str]], sid: str) -> str | None:
+    seen: set[str] = set()
+    current = sid
+    while current and current not in seen:
+        seen.add(current)
+        block = blocks.get(current)
+        if not block:
+            return None
+        direct = _npc_type(block)
+        if direct:
+            return direct
+        current = _npc_refkey(block)
+    return None
+
+
+def technician_armor_assignments(upgrades: list[ArmorUpgradeDefinition]) -> dict[str, list[ArmorUpgradeDefinition]]:
+    """Give a technician BPRUE armor upgrades when their effective Vanilla list supports that armor."""
+    if not VANILLA_NPC_PATH.exists():
+        raise FileNotFoundError(VANILLA_NPC_PATH)
+    blocks = _parse_npc_blocks(VANILLA_NPC_PATH.read_text(encoding="utf-8"))
+    vanilla_by_armor = _vanilla_upgrade_sids_by_armor()
+    vanilla_sets = {armor: set(sids) for armor, sids in vanilla_by_armor.items()}
+
+    assignments: dict[str, list[ArmorUpgradeDefinition]] = {}
+    for technician_sid in blocks:
+        if technician_sid in {"TechnicianNPC", "AllTechnicianNPC"}:
+            continue
+        if _effective_npc_type(blocks, technician_sid) != "ENPCType::Technician":
+            continue
+        supported = set(_effective_npc_upgrade_sids(blocks, technician_sid))
+        selected = [
+            upgrade for upgrade in upgrades
+            if supported.intersection(vanilla_sets.get(upgrade.armor_sid, set()))
+        ]
+        if selected:
+            assignments[technician_sid] = selected
+    return assignments
+
+
+def render_npc_patch(upgrades: list[ArmorUpgradeDefinition]) -> str:
+    assignments = technician_armor_assignments(upgrades)
+    lines = [
+        "// -----------------------------------------------------------------------------",
+        "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND",
+        "// BPRUE Armor upgrades follow each technician's effective Vanilla armor support.",
+        "// Standalone named lists use the same UpgradeAway-style pattern as BPRUE Main.",
+        "// -----------------------------------------------------------------------------",
+        "",
+    ]
+    rendered: list[tuple[str, str]] = []
+    for technician_sid, technician_upgrades in sorted(assignments.items()):
+        list_sid = f"BPRUE_Armor_{technician_sid}_UpgradeList"
+        rendered.append((technician_sid, list_sid))
+        unique = {upgrade.sid: upgrade for upgrade in technician_upgrades}
+        lines.append(f"{list_sid} : struct.begin")
+        for upgrade in sorted(unique.values(), key=lambda u: (u.armor_sid, u.tier_index)):
+            lines += [
+                f"   {upgrade.sid} : struct.begin",
+                f"      UpgradePrototypeSID = {upgrade.sid}",
+                "      Enabled = true",
+                "   struct.end",
+            ]
+        lines += ["struct.end", ""]
+
+    for technician_sid, list_sid in rendered:
+        lines += [
+            f"{technician_sid} : struct.begin {{bpatch}}",
+            f"   Upgrades : struct.begin {{bpatch;refkey={list_sid}}}",
+            "   struct.end",
+            "struct.end",
+            "",
+        ]
+    return "\n".join(lines).rstrip() + "\n"
+
+
 def main() -> None:
     upgrades = build_upgrades()
-    for path in (ARMOR_PATCH_PATH, UPGRADE_OUTPUT_PATH, EFFECT_OUTPUT_PATH):
+    for path in (ARMOR_PATCH_PATH, UPGRADE_OUTPUT_PATH, EFFECT_OUTPUT_PATH, NPC_OUTPUT_PATH):
         path.parent.mkdir(parents=True, exist_ok=True)
 
     upgrade_text = render_upgrade_fragment(upgrades)
     armor_patch_text = render_armor_patch(upgrades)
     effect_text = render_effects()
+    npc_text = render_npc_patch(upgrades)
 
     UPGRADE_OUTPUT_PATH.write_text(upgrade_text, encoding="utf-8")
     ARMOR_PATCH_PATH.write_text(armor_patch_text, encoding="utf-8")
     EFFECT_OUTPUT_PATH.write_text(effect_text, encoding="utf-8")
+    NPC_OUTPUT_PATH.write_text(npc_text, encoding="utf-8")
 
     # Guard the module boundary: this generator must never write into Main/GameLite.
     for path in (ARMOR_PATCH_PATH, UPGRADE_OUTPUT_PATH, EFFECT_OUTPUT_PATH):
@@ -558,6 +704,7 @@ def main() -> None:
     print(f"Generated {UPGRADE_OUTPUT_PATH}")
     print(f"Generated {ARMOR_PATCH_PATH}")
     print(f"Generated {EFFECT_OUTPUT_PATH}")
+    print(f"Generated {NPC_OUTPUT_PATH}")
 
 
 if __name__ == "__main__":
