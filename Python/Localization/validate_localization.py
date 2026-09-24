@@ -32,6 +32,7 @@ LOCALIZATION_FILES = (
 REQUIRED_LANGUAGES = ("English", "Russian")
 VANILLA_EFFECTS = PYTHON_ROOT / "VanillaReference" / "EffectPrototypes.cfg"
 VANILLA_UI_PATCH = REPO_ROOT / "GameLite/GameData/EffectPrototypes/EffectPrototypes_patch_BPRUE_UI.cfg"
+ARMOR_EFFECT_PATCH = REPO_ROOT / "Armor/GameLite/GameData/EffectPrototypes/EffectPrototypes_patch_BPRUE_Armor.cfg"
 BPRUE_EFFECT_DIR = REPO_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes"
 DLC_EFFECT_ROOT = REPO_ROOT / "GameLite/DLCGameData"
 ASSET_SNAPSHOT = REPORT_DIR / "localization_asset_snapshot.json"
@@ -192,6 +193,7 @@ def _effect_catalog() -> dict[str, dict]:
     for path in sorted(DLC_EFFECT_ROOT.glob("*/EffectPrototypes/*BPRUE*.cfg")):
         catalog.update(_parse_effects(path, str(path.relative_to(REPO_ROOT))))
     catalog.update(_parse_effects(VANILLA_UI_PATCH, VANILLA_UI_PATCH.name))
+    catalog.update(_parse_effects(ARMOR_EFFECT_PATCH, str(ARMOR_EFFECT_PATCH.relative_to(REPO_ROOT))))
     return catalog
 
 
@@ -216,6 +218,13 @@ def audit_referenced_effects(models: dict[str, object], localization_sids: set[s
     for scope, model in models.items():
         for upgrade in model.upgrades:
             for effect_sid in upgrade.effects: references[effect_sid].add(scope)
+
+    # Armor is an optional module and is not part of build_model(). Validate every
+    # visible generated BPRUE Armor effect so missing UI metadata cannot slip through.
+    for effect_sid, entry in catalog.items():
+        if entry["source"].startswith("Armor/") and effect_sid.startswith("BPRUE_Armor_"):
+            if entry["show"] is not False:
+                references[effect_sid].add("Armor")
 
     errors = []; rows = []
     for sid in sorted(references):
