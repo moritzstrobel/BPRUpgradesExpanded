@@ -437,6 +437,128 @@ def main() -> int:
         "effects": effect_details,
     }
 
+    # Build a design-oriented inventory of the actual Vanilla armor mechanics.
+    # Composite/root effects are flattened recursively so mechanics hidden behind
+    # ApplyExtraEffectPrototypeSIDs (carry capacity, trade-offs, etc.) become visible.
+    mechanic_groups: dict[str, dict[str, object]] = {}
+
+    def collect_effect_chain(root_sid: str, seen: set[str] | None = None) -> list[dict[str, object]]:
+        seen = set() if seen is None else set(seen)
+        if root_sid in seen:
+            return [{"sid": root_sid, "cycle": True}]
+        seen.add(root_sid)
+        block = effect_structs.get(root_sid)
+        if block is None:
+            return [{"sid": root_sid, "missing": True}]
+
+        fields = direct_fields(block)
+        node = {
+            "sid": root_sid,
+            "type": (fields.get("Type") or ["<missing>"])[-1],
+            "text": (fields.get("Text") or [None])[-1],
+            "localization_sid": (fields.get("LocalizationSID") or [None])[-1],
+            "value_min": fields.get("ValueMin", []),
+            "value_max": fields.get("ValueMax", []),
+            "positive": (fields.get("Positive") or [None])[-1],
+            "effect_level": (fields.get("EffectLevel") or [None])[-1],
+        }
+        result = [node]
+        for child in array_field_values(block, "ApplyExtraEffectPrototypeSIDs"):
+            result.extend(collect_effect_chain(child, seen))
+        return result
+
+    for upgrade_sid, upgrade in sorted(upgrade_details.items()):
+        roots = upgrade["EffectPrototypeSIDs"]
+        if not roots:
+            continue
+        for root_sid in roots:
+            chain = collect_effect_chain(root_sid)
+            for node in chain:
+                if node.get("missing") or node.get("cycle"):
+                    continue
+                mechanic_type = str(node["type"])
+                group = mechanic_groups.setdefault(mechanic_type, {
+                    "type": mechanic_type,
+                    "effect_sids": set(),
+                    "root_effect_sids": set(),
+                    "upgrade_sids": set(),
+                    "armor_sids": set(),
+                    "categories": set(),
+                    "factions": set(),
+                    "texts": set(),
+                    "localization_sids": set(),
+                    "value_min_counts": Counter(),
+                    "value_max_counts": Counter(),
+                    "positive_counts": Counter(),
+                    "effect_level_counts": Counter(),
+                    "examples": [],
+                })
+                group["effect_sids"].add(node["sid"])
+                group["root_effect_sids"].add(root_sid)
+                group["upgrade_sids"].add(upgrade_sid)
+                group["armor_sids"].update(upgrade["owners"])
+                group["categories"].update(upgrade["owner_categories"])
+                group["factions"].update(upgrade["owner_factions"])
+                if node.get("text"):
+                    group["texts"].add(node["text"])
+                if node.get("localization_sid"):
+                    group["localization_sids"].add(node["localization_sid"])
+                group["value_min_counts"].update(node.get("value_min", []))
+                group["value_max_counts"].update(node.get("value_max", []))
+                if node.get("positive"):
+                    group["positive_counts"].update([node["positive"]])
+                if node.get("effect_level"):
+                    group["effect_level_counts"].update([node["effect_level"]])
+                if len(group["examples"]) < 12:
+                    group["examples"].append({
+                        "upgrade_sid": upgrade_sid,
+                        "root_effect_sid": root_sid,
+                        "effect_sid": node["sid"],
+                        "armor_sids": upgrade["owners"],
+                        "value_min": node.get("value_min", []),
+                        "value_max": node.get("value_max", []),
+                    })
+
+    mechanic_inventory = []
+    for mechanic_type, group in sorted(
+        mechanic_groups.items(),
+        key=lambda item: (-len(item[1]["upgrade_sids"]), item[0]),
+    ):
+        mechanic_inventory.append({
+            "type": mechanic_type,
+            "upgrade_count": len(group["upgrade_sids"]),
+            "effect_count": len(group["effect_sids"]),
+            "armor_count": len(group["armor_sids"]),
+            "effect_sids": sorted(group["effect_sids"]),
+            "root_effect_sids": sorted(group["root_effect_sids"]),
+            "armor_sids": sorted(group["armor_sids"]),
+            "categories": sorted(group["categories"]),
+            "factions": sorted(group["factions"]),
+            "texts": sorted(group["texts"]),
+            "localization_sids": sorted(group["localization_sids"]),
+            "value_min_counts": dict(group["value_min_counts"].most_common()),
+            "value_max_counts": dict(group["value_max_counts"].most_common()),
+            "positive_counts": dict(group["positive_counts"].most_common()),
+            "effect_level_counts": dict(group["effect_level_counts"].most_common()),
+            "examples": group["examples"],
+        })
+
+    armor_mechanic_inventory = {
+        armor["sid"]: {
+            "category": armor["category"],
+            "faction": armor["faction"],
+            "mechanics": sorted({
+                str(node["type"])
+                for upgrade_sid in armor["upgrades"]
+                if upgrade_sid in upgrade_details
+                for root_sid in upgrade_details[upgrade_sid]["EffectPrototypeSIDs"]
+                for node in collect_effect_chain(root_sid)
+                if not node.get("missing") and not node.get("cycle")
+            }),
+        }
+        for armor in armors
+    }
+
     inventory = [
         {"field": field, "count": count, "examples": field_examples[field]}
         for field, count in field_counts.most_common()
@@ -458,6 +580,7 @@ def main() -> int:
         "effect_structural_groups": len(effect_groups),
         "effect_type_count": len(effect_type_analysis),
         "extra_effect_root_count": len(extra_effect_graph),
+        "flattened_mechanic_type_count": len(mechanic_inventory),
     }
 
     write_json("armor_upgrade_summary.json", summary)
@@ -470,6 +593,8 @@ def main() -> int:
     write_json("armor_modification_analysis.json", modification_report)
     write_json("armor_effect_analysis.json", effect_report)
     write_json("armor_effect_details.json", effect_details)
+    write_json("armor_mechanic_inventory.json", mechanic_inventory)
+    write_json("armor_mechanics_by_armor.json", armor_mechanic_inventory)
 
     print("=== BPRUE Vanilla Armor Upgrade Analysis ===")
     print(f"Armor structs selected: {len(armors)}")
@@ -486,6 +611,7 @@ def main() -> int:
     print(f"Effect structural groups: {len(effect_groups)}")
     print(f"Distinct EEffectType values: {len(effect_type_analysis)}")
     print(f"Effects with nested ApplyExtraEffectPrototypeSIDs: {len(extra_effect_graph)}")
+    print(f"Flattened armor mechanic types: {len(mechanic_inventory)}")
 
     print("\n=== Most common direct UpgradePrototype fields ===")
     for field, count in field_counts.most_common():
@@ -539,6 +665,21 @@ def main() -> int:
             print("  Extra effects: " + ", ".join(group["extra_effect_sid_counts"].keys()))
         if group["effects_without_values"]:
             print("  No numeric value: " + ", ".join(group["effects_without_values"][:10]))
+
+    print("\n=== Flattened Vanilla Armor Mechanics ===")
+    for mechanic in mechanic_inventory:
+        values = ", ".join(
+            f"{value} ({count}x)"
+            for value, count in list(mechanic["value_min_counts"].items())[:8]
+        ) or "no numeric value"
+        print(
+            f"{mechanic['upgrade_count']} upgrades / {mechanic['armor_count']} armors: "
+            f"{mechanic['type']} -> {values}"
+        )
+        if mechanic["texts"]:
+            print("  Text: " + ", ".join(mechanic["texts"][:6]))
+        print("  Categories: " + ", ".join(mechanic["categories"]))
+        print("  Factions: " + ", ".join(mechanic["factions"]))
 
     print("\n=== Nested Extra Effect Roots ===")
     if extra_effect_graph:
@@ -601,6 +742,8 @@ def main() -> int:
         "armor_modification_analysis.json",
         "armor_effect_analysis.json",
         "armor_effect_details.json",
+        "armor_mechanic_inventory.json",
+        "armor_mechanics_by_armor.json",
     ):
         print(f"  - {name}")
 
