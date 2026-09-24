@@ -50,6 +50,7 @@ def faction_module_image(faction: str) -> str:
     )
 
 
+BPRUE_MODULE_IMAGE = "Texture2D'/BPRUpgradesExpanded/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/T_Module_Base.T_Module_Base'"
 DEFAULT_ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/Armor/T_PDA_Upgrades_Icon_AttachmentSystem.T_PDA_Upgrades_Icon_AttachmentSystem'"
 
 
@@ -152,7 +153,7 @@ def build_upgrades(config: dict | None = None, classification: dict | None = Non
                 effects=tuple(effect_sids),
                 tier_index=0,
                 family="GENERIC_ARMOR_MODULE",
-                image=DEFAULT_ICON,
+                image=BPRUE_MODULE_IMAGE,
             ))
 
     # Every generic module on the same armor is one mutually-exclusive choice group.
@@ -236,6 +237,20 @@ def apply_layout(upgrades: list[ArmorUpgradeDefinition]) -> list[ArmorUpgradeDef
         for upgrade in tiers:
             families[upgrade.family].append(upgrade)
         for family, family_upgrades in families.items():
+            # Faction signatures are vertical 3-tier chains. Generic modules are
+            # mutually-exclusive alternatives and must be laid out horizontally
+            # as one row instead of stacking eight upgrades into one slot.
+            if family == "GENERIC_ARMOR_MODULE":
+                for upgrade in sorted(family_upgrades, key=lambda item: item.sid):
+                    target, horizontal = _first_free_armor_column(upgrade.target_part, occupied)
+                    occupied.add((target, horizontal))
+                    resolved.append(replace(
+                        upgrade,
+                        target_part=target,
+                        horizontal_position=None if horizontal == 0 else horizontal,
+                        vertical_position=None,
+                    ))
+                continue
             target, horizontal = _first_free_armor_column(family_upgrades[0].target_part, occupied)
             occupied.add((target, horizontal))
             for upgrade in sorted(family_upgrades, key=lambda item: item.tier_index):
