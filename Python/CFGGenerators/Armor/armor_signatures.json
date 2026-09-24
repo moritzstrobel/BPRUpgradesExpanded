@@ -1,0 +1,110 @@
+{
+  "prototype_factions": {
+    "FREEDOM": {
+      "signature": "Mobility",
+      "enabled": true,
+      "categories": {
+        "HELMET": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Lightweight",
+              "cost": 1500,
+              "text_sid": "sid_bprue_armor_freedom_lightweight_name",
+              "hint_sid": "sid_bprue_armor_freedom_helmet_lightweight_description",
+              "effects": [
+                "BPRUE_Armor_Freedom_Helmet_Weight"
+              ]
+            },
+            {
+              "id": "Endurance",
+              "cost": 2500,
+              "text_sid": "sid_bprue_armor_freedom_endurance_name",
+              "hint_sid": "sid_bprue_armor_freedom_helmet_endurance_description",
+              "effects": [
+                "BPRUE_Armor_Freedom_Helmet_Stamina"
+              ]
+            },
+            {
+              "id": "LoadBearing",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_freedom_loadbearing_name",
+              "hint_sid": "sid_bprue_armor_freedom_helmet_loadbearing_description",
+              "effects": [
+                "BPRUE_Armor_Freedom_Helmet_LoadBearing",
+                "BPRUE_Armor_Freedom_Helmet_DurabilityTradeoff"
+              ]
+            }
+          ]
+        },
+        "SUIT": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Lightweight",
+              "cost": 2500,
+              "text_sid": "sid_bprue_armor_freedom_lightweight_name",
+              "hint_sid": "sid_bprue_armor_freedom_suit_lightweight_description",
+              "effects": [
+                "BPRUE_Armor_Freedom_Suit_Weight"
+              ]
+            },
+            {
+              "id": "Endurance",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_freedom_endurance_name",
+              "hint_sid": "sid_bprue_armor_freedom_suit_endurance_description",
+              "effects": [
+                "BPRUE_Armor_Freedom_Suit_Stamina"
+              ]
+            },
+            {
+              "id": "LoadBearing",
+              "cost": 4500,
+              "text_sid": "sid_bprue_armor_freedom_loadbearing_name",
+              "hint_sid": "sid_bprue_armor_freedom_suit_loadbearing_description",
+              "effects": [
+                "BPRUE_Armor_Freedom_Suit_LoadBearing",
+                "BPRUE_Armor_Freedom_Suit_StrikeTradeoff"
+              ]
+            }
+          ]
+        },
+        "FULL_BODY_SUIT": {
+          "target_part": "Body",
+          "tiers": [
+            {
+              "id": "Lightweight",
+              "cost": 3500,
+              "text_sid": "sid_bprue_armor_freedom_lightweight_name",
+              "hint_sid": "sid_bprue_armor_freedom_fullbody_lightweight_description",
+              "effects": [
+                "BPRUE_Armor_Freedom_FullBody_Weight"
+              ]
+            },
+            {
+              "id": "Endurance",
+              "cost": 5000,
+              "text_sid": "sid_bprue_armor_freedom_endurance_name",
+              "hint_sid": "sid_bprue_armor_freedom_fullbody_endurance_description",
+              "effects": [
+                "BPRUE_Armor_Freedom_FullBody_Stamina"
+              ]
+            },
+            {
+              "id": "LoadBearing",
+              "cost": 6500,
+              "text_sid": "sid_bprue_armor_freedom_loadbearing_name",
+              "hint_sid": "sid_bprue_armor_freedom_fullbody_loadbearing_description",
+              "effects": [
+                "BPRUE_Armor_Freedom_FullBody_LoadBearing",
+                "BPRUE_Armor_Freedom_FullBody_StrikeTradeoff",
+                "BPRUE_Armor_Freedom_FullBody_DurabilityTradeoff"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
