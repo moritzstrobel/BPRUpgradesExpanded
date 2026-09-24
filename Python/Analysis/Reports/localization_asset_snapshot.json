@@ -1,6 +1,6 @@
 {
   "asset_path": "/BPRUpgradesExpanded/Localization/L_BPRUpgradesExpanded",
-  "entry_count": 352,
+  "entry_count": 376,
   "entries": [
     {
       "sid": "sid_effects_bprue_fire_rate_name",
@@ -2464,6 +2464,174 @@
       "languages": {
         "English": "Converts the weapon from 5.45x39 mm to 7.62x39 mm ammunition. Damage increases by 15%, at the cost of 15% more recoil and 10% reduced flatness. This specialization is permanent.",
         "Russian": "Переводит оружие с 5,45x39 мм на боеприпасы 7,62x39 мм. Урон увеличивается на 15%, но отдача возрастает на 15%, а настильность траектории снижается на 10%. Эта специализация является необратимой."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_lightweight_name",
+      "languages": {
+        "English": "Lightweight Frame",
+        "Russian": "Облегчённый каркас"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_helmet_lightweight_description",
+      "languages": {
+        "English": "Freedom-style weight reduction strips the helmet down to the essentials, reducing its weight by 0.5 kg.",
+        "Russian": "Облегчение в стиле «Свободы» оставляет в шлеме только необходимое, снижая его вес на 0,5 кг."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_suit_lightweight_description",
+      "languages": {
+        "English": "Lightweight components and reduced field gear cut 1.5 kg from the suit, favoring mobility over heavy construction.",
+        "Russian": "Облегчённые компоненты и сокращённое полевое снаряжение уменьшают вес костюма на 1,5 кг, отдавая приоритет мобильности."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_fullbody_lightweight_description",
+      "languages": {
+        "English": "An extensive lightweight rebuild removes 2 kg from the full-body suit, pushing the equipment toward Freedom's mobile field doctrine.",
+        "Russian": "Глубокая облегчённая переделка снижает вес цельного костюма на 2 кг, приближая его к мобильной полевой доктрине «Свободы»."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_endurance_name",
+      "languages": {
+        "English": "Field Endurance System",
+        "Russian": "Система полевой выносливости"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_helmet_endurance_description",
+      "languages": {
+        "English": "Ergonomic adjustments improve freedom of movement and stamina recovery by 5%, supporting longer movement through the Zone.",
+        "Russian": "Эргономические изменения улучшают свободу движений и восстановление выносливости на 5%, облегчая длительные переходы по Зоне."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_suit_endurance_description",
+      "languages": {
+        "English": "A mobility-focused harness and ergonomic refit improve stamina recovery by 10%, further committing the suit to Freedom's mobile field doctrine.",
+        "Russian": "Ориентированная на мобильность разгрузочная система и эргономичная переделка повышают восстановление выносливости на 10%, усиливая мобильную специализацию костюма."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_fullbody_endurance_description",
+      "languages": {
+        "English": "A full ergonomic refit improves stamina recovery by 10%, turning the heavy platform into a more mobile long-range field configuration.",
+        "Russian": "Полная эргономичная переделка повышает восстановление выносливости на 10%, превращая тяжёлую платформу в более мобильную конфигурацию для дальних вылазок."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_loadbearing_name",
+      "languages": {
+        "English": "Freedom Field Rig",
+        "Russian": "Полевая разгрузка «Свободы»"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_helmet_loadbearing_description",
+      "languages": {
+        "English": "A compact field rig improves carrying capacity and weight distribution by 5%, but sacrifices 10% durability to keep the setup light and mobile.",
+        "Russian": "Компактная полевая разгрузка улучшает грузоподъёмность и распределение веса на 5%, но ради лёгкости и мобильности снижает прочность на 10%."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_suit_loadbearing_description",
+      "languages": {
+        "English": "A Freedom field rig improves carrying capacity and weight distribution by 15%, but sacrifices 10% physical protection for unrestricted mobility.",
+        "Russian": "Полевая разгрузка «Свободы» улучшает грузоподъёмность и распределение веса на 15%, но ради свободы движений снижает физическую защиту на 10%."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_freedom_fullbody_loadbearing_description",
+      "languages": {
+        "English": "The final Freedom field conversion improves carrying capacity and weight distribution by 20%, but sacrifices 10% physical protection and 10% durability for maximum mobility.",
+        "Russian": "Финальная полевая переделка «Свободы» улучшает грузоподъёмность и распределение веса на 20%, но ради максимальной мобильности снижает физическую защиту и прочность на 10%."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_duty_reinforced_name",
+      "languages": {
+        "English": "Reinforced Plating",
+        "Russian": "Усиленная бронепластина"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_duty_helmet_reinforced_description",
+      "languages": {
+        "English": "Reinforced plating improves the helmet's physical protection by 10%, following Duty's preference for direct battlefield protection.",
+        "Russian": "Усиленная бронепластина повышает физическую защиту шлема на 10%, следуя доктрине «Долга», ориентированной на прямую боевую защиту."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_duty_suit_reinforced_description",
+      "languages": {
+        "English": "Additional armor reinforcement improves the suit's physical protection by 15%, prioritizing battlefield survivability over lighter construction.",
+        "Russian": "Дополнительное усиление брони повышает физическую защиту костюма на 15%, отдавая приоритет выживаемости в бою."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_duty_fullbody_reinforced_description",
+      "languages": {
+        "English": "Heavy reinforcement improves the full-body suit's physical protection by 20%, turning it further toward Duty's frontline doctrine.",
+        "Russian": "Тяжёлое усиление повышает физическую защиту цельного костюма на 20%, ещё сильнее ориентируя его на фронтовую доктрину «Долга»."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_duty_hardened_name",
+      "languages": {
+        "English": "Hardened Construction",
+        "Russian": "Закалённая конструкция"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_duty_helmet_hardened_description",
+      "languages": {
+        "English": "Hardened structural components increase maximum durability by 10%, making the helmet more resistant to prolonged field use.",
+        "Russian": "Закалённые элементы конструкции повышают максимальную прочность на 10%, делая шлем устойчивее к длительной эксплуатации."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_duty_suit_hardened_description",
+      "languages": {
+        "English": "A hardened frame and reinforced load points increase maximum durability by 15% for extended frontline service.",
+        "Russian": "Закалённый каркас и усиленные точки нагрузки повышают максимальную прочность на 15% для длительной службы на передовой."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_duty_fullbody_hardened_description",
+      "languages": {
+        "English": "Extensive structural hardening increases maximum durability by 20%, preparing the full-body platform for sustained heavy combat.",
+        "Russian": "Комплексное усиление конструкции повышает максимальную прочность на 20%, подготавливая цельную бронесистему к продолжительным тяжёлым боям."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_duty_fortified_name",
+      "languages": {
+        "English": "Frontline Fortification",
+        "Russian": "Фронтовое укрепление"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_duty_helmet_fortified_description",
+      "languages": {
+        "English": "Final reinforcement adds another 5% physical protection and 5% maximum durability, completing the helmet's compact defensive package.",
+        "Russian": "Финальное усиление добавляет ещё 5% физической защиты и 5% максимальной прочности, завершая компактный защитный комплекс шлема."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_duty_suit_fortified_description",
+      "languages": {
+        "English": "Final reinforcement adds another 10% physical protection and 10% maximum durability, committing the suit to Duty's heavy frontline role.",
+        "Russian": "Финальное усиление добавляет ещё 10% физической защиты и 10% максимальной прочности, окончательно закрепляя костюм в тяжёлой фронтовой роли «Долга»."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_duty_fullbody_fortified_description",
+      "languages": {
+        "English": "The final fortification adds another 10% physical protection and 10% maximum durability, completing a heavily armored frontline platform.",
+        "Russian": "Финальное укрепление добавляет ещё 10% физической защиты и 10% максимальной прочности, завершая тяжёлую фронтовую бронесистему."
       }
     }
   ]
