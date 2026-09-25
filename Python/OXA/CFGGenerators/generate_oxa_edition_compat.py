@@ -96,16 +96,22 @@ def generate() -> tuple[list[Path], list[dict]]:
         edition_vanilla = dlc_general_setup_upgrades(pack).get(target_setup, [])
         if not base_vanilla:
             raise ValueError(f"{name}: no Vanilla UpgradePrototypeSIDs found for base setup {base_setup}")
-        if edition_vanilla != base_vanilla:
-            raise ValueError(
-                f"{name}: Edition Vanilla array differs from base family {base_setup}; "
-                "automatic OXA projection would be unsafe"
-            )
-
         # The normal OXA compat array is already the validated effective
-        # OXA + (BPRUE - Vanilla) state for the base family.  Remove BPRUE's
-        # base-family clones and replace them with this Edition weapon's clones.
-        oxa_core = [sid for sid in base_compat if not sid.startswith("BPRUE")]
+        # OXA + (BPRUE - Vanilla) state for the base family. Strip BPRUE first,
+        # then project only OXA's semantic Vanilla->OXA delta onto the Edition
+        # weapon's own Vanilla array. This deliberately preserves Edition-only
+        # Vanilla upgrades instead of replacing them with the base-family list.
+        oxa_base_core = [sid for sid in base_compat if not sid.startswith("BPRUE")]
+        base_vanilla_set = set(base_vanilla)
+        oxa_core_set = set(oxa_base_core)
+        oxa_removed = [sid for sid in base_vanilla if sid not in oxa_core_set]
+        oxa_added = [sid for sid in oxa_base_core if sid not in base_vanilla_set]
+
+        removed_set = set(oxa_removed)
+        projected_vanilla = [sid for sid in edition_vanilla if sid not in removed_set]
+        projected_set = set(projected_vanilla)
+        projected_vanilla.extend(sid for sid in oxa_added if sid not in projected_set)
+
         edition_upgrades = [
             upgrade.sid
             for upgrade in edition_models[pack].by_general_setup().get(target_setup, [])
@@ -113,7 +119,7 @@ def generate() -> tuple[list[Path], list[dict]]:
         if not edition_upgrades:
             raise ValueError(f"{name}: no generated Edition BPRUE upgrades for {target_setup}")
 
-        final = oxa_core + edition_upgrades
+        final = projected_vanilla + edition_upgrades
         duplicates = sorted({sid for sid in final if final.count(sid) > 1})
         if duplicates:
             raise ValueError(f"{name}: duplicate projected upgrade SIDs: {', '.join(duplicates)}")
@@ -123,7 +129,10 @@ def generate() -> tuple[list[Path], list[dict]]:
             "target_setup": target_setup,
             "base_setup": base_setup,
             "base_vanilla": base_vanilla,
-            "oxa_core": oxa_core,
+            "oxa_base_core": oxa_base_core,
+            "oxa_removed": oxa_removed,
+            "oxa_added": oxa_added,
+            "projected_vanilla": projected_vanilla,
             "edition_upgrades": edition_upgrades,
             "final": final,
         })
@@ -143,7 +152,7 @@ def generate() -> tuple[list[Path], list[dict]]:
             "// -----------------------------------------------------------------------------",
             "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND",
             "// BPRUE Editions <-> OXA compatibility projection",
-            "// Effective state: OXA base-family state + Edition-specific BPRUE clones",
+            "// Effective state: Edition Vanilla + projected OXA delta + Edition-specific BPRUE clones",
             "// Generated only for Edition weapons whose base family requires OXA compat.",
             "// -----------------------------------------------------------------------------",
             "",
