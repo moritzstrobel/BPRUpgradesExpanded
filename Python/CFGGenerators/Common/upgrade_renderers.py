@@ -130,6 +130,53 @@ def render_dlc_general_setup_patch(model: UpgradeBuildModel, content_pack: str) 
     return _render_final_setup(model, dlc_general_setup_upgrades(content_pack), scope=f"DLCGameData/{content_pack}")
 
 
+
+def render_content_pack_technician_additions(
+    models: dict[str, UpgradeBuildModel],
+) -> str:
+    """Append optional content-pack upgrades to already materialized technician lists.
+
+    The base BPRUE package owns/materializes each concrete technician's Upgrades
+    node. Optional packages must only append entries so they compose safely with
+    one another and with later compatibility packages.
+    """
+    assignments: dict[str, list[UpgradeDefinition]] = {}
+    for content_pack, pack_model in sorted(models.items()):
+        support = dlc_technician_general_setups(content_pack)
+        candidates = pack_model.technician_upgrades()
+        for technician_sid, supported_setups in support.items():
+            additions = [
+                upgrade
+                for upgrade in candidates
+                if any(setup_sid in supported_setups for setup_sid in upgrade.general_setup_sids)
+            ]
+            assignments.setdefault(technician_sid, []).extend(additions)
+
+    lines = [
+        "// AUTO-GENERATED - Optional BPRUE content-pack technician additions.",
+        "// Requires the base BPRUE technician patch to materialize concrete Upgrades nodes.",
+        "// Entries are appended so optional/compatibility packages compose without replacing lists.",
+        "",
+    ]
+    for technician_sid, upgrades in sorted(assignments.items()):
+        unique = list({upgrade.sid: upgrade for upgrade in upgrades}.values())
+        if not unique:
+            continue
+        lines += [
+            f"{technician_sid} : struct.begin {{bpatch}}",
+            "   Upgrades : struct.begin {bpatch}",
+        ]
+        for upgrade in unique:
+            lines += [
+                "      [*] : struct.begin",
+                f"         UpgradePrototypeSID = {upgrade.sid}",
+                "         Enabled = true",
+                "      struct.end",
+            ]
+        lines += ["   struct.end", "struct.end", ""]
+
+    return "\n".join(lines).rstrip() + "\n"
+
 def render_technician_patch(
     model: UpgradeBuildModel,
     *,
