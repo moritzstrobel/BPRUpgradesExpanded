@@ -131,14 +131,16 @@ def render_dlc_general_setup_patch(model: UpgradeBuildModel, content_pack: str) 
 
 
 
-def render_content_pack_technician_additions(
+def render_content_pack_technician_patch(
     models: dict[str, UpgradeBuildModel],
+    *,
+    list_prefix: str,
 ) -> str:
-    """Append optional content-pack upgrades to already materialized technician lists.
+    """Render isolated content-pack technician lists using the normal BPRUE pattern.
 
-    The base BPRUE package owns/materializes each concrete technician's Upgrades
-    node. Optional packages must only append entries so they compose safely with
-    one another and with later compatibility packages.
+    Technician eligibility is derived from each content-pack weapon's effective
+    Vanilla upgrade roots. The resulting NPC patch can therefore live entirely
+    inside an optional package without adding its upgrade SIDs to the base build.
     """
     assignments: dict[str, list[UpgradeDefinition]] = {}
     for content_pack, pack_model in sorted(models.items()):
@@ -153,27 +155,37 @@ def render_content_pack_technician_additions(
             assignments.setdefault(technician_sid, []).extend(additions)
 
     lines = [
-        "// AUTO-GENERATED - Optional BPRUE content-pack technician additions.",
-        "// Requires the base BPRUE technician patch to materialize concrete Upgrades nodes.",
-        "// Entries are appended so optional/compatibility packages compose without replacing lists.",
+        "// AUTO-GENERATED - BPRUE optional content-pack technician registrations.",
+        "// Technician support is derived from the effective Vanilla upgrade roots",
+        "// of each content-pack weapon and uses the normal BPRUE named-list pattern.",
         "",
     ]
+
+    rendered: list[tuple[str, str]] = []
     for technician_sid, upgrades in sorted(assignments.items()):
         unique = list({upgrade.sid: upgrade for upgrade in upgrades}.values())
         if not unique:
             continue
-        lines += [
-            f"{technician_sid} : struct.begin {{bpatch}}",
-            "   Upgrades : struct.begin {bpatch}",
-        ]
+        list_sid = f"{list_prefix}_{technician_sid}_UpgradeList"
+        rendered.append((technician_sid, list_sid))
+        lines.append(f"{list_sid} : struct.begin")
         for upgrade in unique:
             lines += [
-                "      [*] : struct.begin",
-                f"         UpgradePrototypeSID = {upgrade.sid}",
-                "         Enabled = true",
-                "      struct.end",
+                f"   {upgrade.sid} : struct.begin",
+                f"      UpgradePrototypeSID = {upgrade.sid}",
+                "      Enabled = true",
+                "   struct.end",
             ]
-        lines += ["   struct.end", "struct.end", ""]
+        lines += ["struct.end", ""]
+
+    for technician_sid, list_sid in rendered:
+        lines += [
+            f"{technician_sid} : struct.begin {{bpatch}}",
+            f"   Upgrades : struct.begin {{bpatch;refkey={list_sid}}}",
+            "   struct.end",
+            "struct.end",
+            "",
+        ]
 
     return "\n".join(lines).rstrip() + "\n"
 
