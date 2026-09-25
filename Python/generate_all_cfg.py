@@ -36,6 +36,8 @@ CONTENT_ROOT = ROOT.parent
 VANILLA_ROOT = ROOT / "VanillaReference"
 VANILLA_WEAPONS = VANILLA_ROOT / "WeaponPrototypes.cfg"
 DLC_OUTPUT_ROOT = CONTENT_ROOT / "GameLite/DLCGameData"
+EDITIONS_OUTPUT_ROOT = CONTENT_ROOT / "Editions/GameLite/DLCGameData"
+EDITION_CONTENT_PACKS = frozenset({"Deluxe", "PreOrder", "Ultimate"})
 UPGRADES_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/UpgradePrototypes/BPRUE_UpgradePrototypes.cfg"
 GENERAL_SETUP_PATH = CONTENT_ROOT / "GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg"
 WEAPON_PATH = CONTENT_ROOT / "GameLite/GameData/ItemPrototypes/WeaponPrototypes/WeaponPrototypes_patch_BPRUE.cfg"
@@ -83,6 +85,16 @@ def build_model(*, apply_layout: bool = True) -> tuple[UpgradeBuildModel, dict]:
     if apply_layout:
         apply_layout_to_model(model); model.validate()
     return model, configs
+
+
+def dlc_output_root(pack: str) -> Path:
+    """Return the physical mod root for a DLCGameData content pack.
+
+    DLC1 ships with Main. Edition-owned packs are emitted into the optional
+    Editions module, while retaining their in-game DLCGameData/<pack> layout.
+    """
+    root = EDITIONS_OUTPUT_ROOT if pack in EDITION_CONTENT_PACKS else DLC_OUTPUT_ROOT
+    return root / pack
 
 
 def build_dlc_outputs(source_model: UpgradeBuildModel, configs: dict) -> dict[str, UpgradeBuildModel]:
@@ -309,7 +321,7 @@ def main():
     write(VANILLA_EFFECT_UI_PATH, render_vanilla_effect_ui_patch()); _remove_obsolete_bprue_effect_ui_patch(); _remove_independent_dlc_output()
     for pack, dlc_model in sorted(dlc_models.items()):
         dlc_upgrade_text = render_consolidated_upgrade_prototypes(dlc_model); dlc_setup_text = render_dlc_general_setup_patch(dlc_model, pack); dlc_weapon_text = render_weapon_sections_patch(dlc_model, content_pack=pack); validate_rendered_outputs(dlc_model, dlc_upgrade_text, dlc_setup_text)
-        pack_root = DLC_OUTPUT_ROOT / pack
+        pack_root = dlc_output_root(pack)
         write(pack_root / "UpgradePrototypes/UpgradePrototypes_patch_BPRUE.cfg", dlc_upgrade_text)
         write(pack_root / "WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg", dlc_setup_text)
         write(pack_root / "ItemPrototypes/ItemPrototypes_patch_BPRUE.cfg", dlc_weapon_text)
