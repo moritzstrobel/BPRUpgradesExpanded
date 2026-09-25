@@ -14,8 +14,8 @@ sys.path.insert(0, str(COMMON))
 
 from analysis_paths import REPORTS_DIR
 from generate_all_cfg import (
+    DLC_OUTPUT_ROOT,
     build_dlc_outputs,
-    dlc_output_root,
     build_model,
     render_weapon_sections_patch,
 )
@@ -58,7 +58,7 @@ def _expected_weapons_by_pack() -> dict[str, dict[str, dict]]:
 
 
 def _output_paths(pack: str) -> dict[str, Path]:
-    root = dlc_output_root(pack)
+    root = DLC_OUTPUT_ROOT / pack
     return {
         "upgrades": root / "UpgradePrototypes" / "UpgradePrototypes_patch_BPRUE.cfg",
         "general_setup": root / "WeaponData" / "WeaponGeneralSetupPrototypes" / "WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
