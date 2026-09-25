@@ -88,7 +88,11 @@ def build_content_pack_models(
     *,
     include_signatures: bool = False,
 ) -> dict[str, UpgradeBuildModel]:
-    """Clone BPRUE base-family modules into isolated DLCGameData pack models."""
+    """Clone BPRUE base-family modules into isolated DLCGameData pack models.
+
+    Physical pistol-slot conversions are baseline-only and are deliberately not
+    cloned into DLC/Edition weapons because no converted ItemPrototype exists for them.
+    """
     result: dict[str, UpgradeBuildModel] = {}
     source_by_setup = source_model.by_general_setup()
 
@@ -107,7 +111,10 @@ def build_content_pack_models(
 
         base_setup = base["general_setup_sid"]
         base_prefix = base["prototype_prefix"]
-        source_upgrades = source_by_setup.get(base_setup, [])
+        source_upgrades = [
+            upgrade for upgrade in source_by_setup.get(base_setup, [])
+            if upgrade.group != "Conversion"
+        ]
         if not source_upgrades:
             raise ValueError(f"{pack}/{name}: base family {base_name} ({base_setup}) has no BPRUE upgrades")
 
