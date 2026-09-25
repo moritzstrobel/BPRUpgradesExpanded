@@ -113,11 +113,12 @@ def main() -> None:
         for sid in sorted(expected_setups - generated_setups):
             pack_errors.append(f"{sid}: configured Edition weapon has no generated upgrades")
         for sid in sorted(generated_setups - expected_setups):
-            pack_errors.append(f"{sid}: generated setup is not registered in dlc_weapons.json")
+            pack_errors.append(f"{sid}: generated setup is not registered in edition_weapons.json")
 
         prototype_missing = 0
         registration_errors = 0
         retention_errors = 0
+        vanilla_prefix_errors = 0
         blocking_errors = 0
         effect_errors = 0
         section_errors = 0
@@ -151,6 +152,23 @@ def main() -> None:
             if missing_source:
                 retention_errors += len(missing_source)
                 pack_errors.append(f"{setup_sid}: source upgrades not retained: {', '.join(missing_source)}")
+            rendered_source_prefix = rendered[:len(source)]
+            if rendered_source_prefix != source:
+                vanilla_prefix_errors += 1
+                first_mismatch = next(
+                    (
+                        index
+                        for index, (expected_sid, actual_sid) in enumerate(zip(source, rendered_source_prefix))
+                        if expected_sid != actual_sid
+                    ),
+                    min(len(source), len(rendered_source_prefix)),
+                )
+                expected_sid = source[first_mismatch] if first_mismatch < len(source) else "<end>"
+                actual_sid = rendered_source_prefix[first_mismatch] if first_mismatch < len(rendered_source_prefix) else "<end>"
+                pack_errors.append(
+                    f"{setup_sid}: Vanilla upgrade prefix/order changed at index {first_mismatch}: "
+                    f"expected {expected_sid}, got {actual_sid}"
+                )
             missing_generated = [u.sid for u in upgrades if u.sid not in rendered]
             if missing_generated:
                 registration_errors += len(missing_generated)
@@ -180,6 +198,7 @@ def main() -> None:
             "prototype_errors": prototype_missing,
             "registration_errors": registration_errors,
             "retention_errors": retention_errors,
+            "vanilla_prefix_errors": vanilla_prefix_errors,
             "blocking_reference_errors": blocking_errors,
             "effect_reference_errors": effect_errors,
             "section_errors": section_errors,
@@ -217,7 +236,7 @@ def main() -> None:
             f"  {pack:<10} weapons={data['generated_setups']}/{data['expected_weapons']} | "
             f"upgrades={data.get('generated_upgrades', 0)} | prototype={data.get('prototype_errors', 0)} | "
             f"registration={data.get('registration_errors', 0)} | retained={data.get('retention_errors', 0)} | "
-            f"blocking={data.get('blocking_reference_errors', 0)} | effects={data.get('effect_reference_errors', 0)} | "
+            f"vanilla-prefix={data.get('vanilla_prefix_errors', 0)} | blocking={data.get('blocking_reference_errors', 0)} | effects={data.get('effect_reference_errors', 0)} | "
             f"sections={data.get('section_errors', 0)} | errors={len(data.get('errors', []))}"
         )
     print(f"Unknown/structural errors: {len(errors)}")
