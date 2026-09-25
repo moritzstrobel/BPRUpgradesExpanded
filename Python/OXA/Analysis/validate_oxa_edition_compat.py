@@ -16,12 +16,14 @@ from generate_all_cfg import build_edition_outputs, build_model
 from edition_weapon_modules import load_edition_config
 from dlc_weapon_modules import CLASS_CONFIG_KEYS
 from generate_oxa_edition_compat import BASE_COMPAT, OXA_COMPAT_ROOT, _setup_arrays
+from vanilla_upgrade_layout import dlc_general_setup_upgrades, vanilla_general_setup_upgrades
 
 def main() -> None:
     if not BASE_COMPAT.exists():
         raise FileNotFoundError(BASE_COMPAT)
 
     base_arrays = _setup_arrays(BASE_COMPAT.read_text(encoding="utf-8"))
+    base_vanilla_arrays = vanilla_general_setup_upgrades()
     source_model, configs = build_model(apply_layout=False)
     edition_models = build_edition_outputs(source_model, configs)
     weapons = load_edition_config().get("weapons", {})
@@ -59,7 +61,17 @@ def main() -> None:
             errors.append(f"{pack}/{name}: missing projected array for {target_setup}")
             continue
 
-        expected_core = [sid for sid in base_compat if not sid.startswith("BPRUE")]
+        base_vanilla = base_vanilla_arrays.get(base_setup, [])
+        edition_vanilla = dlc_general_setup_upgrades(pack).get(target_setup, [])
+        oxa_base_core = [sid for sid in base_compat if not sid.startswith("BPRUE")]
+        oxa_base_set = set(oxa_base_core)
+        base_vanilla_set = set(base_vanilla)
+        removed = {sid for sid in base_vanilla if sid not in oxa_base_set}
+        added = [sid for sid in oxa_base_core if sid not in base_vanilla_set]
+        expected_core = [sid for sid in edition_vanilla if sid not in removed]
+        expected_core_set = set(expected_core)
+        expected_core.extend(sid for sid in added if sid not in expected_core_set)
+
         expected_bprue = [
             upgrade.sid
             for upgrade in edition_models[pack].by_general_setup().get(target_setup, [])
@@ -81,7 +93,7 @@ def main() -> None:
                 + ", ".join(leaked_base_bprue)
             )
         if actual[:len(expected_core)] != expected_core:
-            errors.append(f"{pack}/{name}: OXA core order/content was not preserved")
+            errors.append(f"{pack}/{name}: projected Edition Vanilla + OXA delta order/content was not preserved")
         if actual[len(expected_core):] != expected_bprue:
             errors.append(f"{pack}/{name}: Edition BPRUE suffix order/content was not preserved")
 
