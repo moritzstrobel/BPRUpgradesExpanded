@@ -101,7 +101,11 @@ def generate() -> tuple[list[Path], list[dict]]:
         # then project only OXA's semantic Vanilla->OXA delta onto the Edition
         # weapon's own Vanilla array. This deliberately preserves Edition-only
         # Vanilla upgrades instead of replacing them with the base-family list.
-        oxa_base_core = [sid for sid in base_compat if not sid.startswith("BPRUE")]
+        base_bprue_sids = {
+            upgrade.sid
+            for upgrade in source_model.by_general_setup().get(base_setup, [])
+        }
+        oxa_base_core = [sid for sid in base_compat if sid not in base_bprue_sids]
         base_vanilla_set = set(base_vanilla)
         oxa_core_set = set(oxa_base_core)
         oxa_removed = [sid for sid in base_vanilla if sid not in oxa_core_set]
