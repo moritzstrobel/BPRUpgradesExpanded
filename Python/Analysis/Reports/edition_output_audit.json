@@ -2,7 +2,7 @@
   "summary": {
     "expected_weapons": 11,
     "generated_setups": 11,
-    "generated_upgrades": 187,
+    "generated_upgrades": 185,
     "duplicate_generated_sids": 0,
     "known_effect_sids": 2574,
     "errors": 0
@@ -11,7 +11,7 @@
     "Deluxe": {
       "expected_weapons": 6,
       "generated_setups": 6,
-      "generated_upgrades": 105,
+      "generated_upgrades": 104,
       "prototype_errors": 0,
       "registration_errors": 0,
       "retention_errors": 0,
@@ -65,7 +65,7 @@
     "Ultimate": {
       "expected_weapons": 4,
       "generated_setups": 4,
-      "generated_upgrades": 62,
+      "generated_upgrades": 61,
       "prototype_errors": 0,
       "registration_errors": 0,
       "retention_errors": 0,
