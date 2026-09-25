@@ -17,7 +17,7 @@ from upgrade_renderers import (
     render_consolidated_upgrade_prototypes,
     render_dlc_general_setup_patch,
     render_final_general_setup_patch,
-    render_content_pack_technician_additions,
+    render_content_pack_technician_patch,
     render_technician_patch,
 )
 from unique_weapon_modules import add_unique_modules, add_unique_signatures, render_unique_signature_effects
@@ -334,7 +334,10 @@ def main():
     write(VANILLA_EFFECT_UI_PATH, render_vanilla_effect_ui_patch()); _remove_obsolete_bprue_effect_ui_patch(); _remove_independent_dlc_output()
     _render_content_pack_outputs(dlc_models, DLC_OUTPUT_ROOT, signature_effects=True)
     _render_content_pack_outputs(edition_models, EDITIONS_OUTPUT_ROOT, signature_effects=False)
-    edition_npc_text = render_content_pack_technician_additions(edition_models)
+    edition_npc_text = render_content_pack_technician_patch(
+        edition_models,
+        list_prefix="BPRUE_Editions",
+    )
     for pack, pack_model in edition_models.items():
         validate_rendered_outputs(
             pack_model,
