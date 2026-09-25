@@ -12,7 +12,7 @@ LOCALIZATION_DIR = Path(__file__).resolve().parent
 REPORT_DIR = PYTHON_ROOT / "Analysis" / "Reports"
 sys.path.insert(0, str(PYTHON_ROOT))
 
-from generate_all_cfg import build_dlc_outputs, build_model
+from generate_all_cfg import build_dlc_outputs, build_edition_outputs, build_model
 
 LOCALIZATION_FILES = (
     LOCALIZATION_DIR / "Blueprint_Localization.json",
@@ -35,6 +35,7 @@ VANILLA_UI_PATCH = REPO_ROOT / "GameLite/GameData/EffectPrototypes/EffectPrototy
 ARMOR_EFFECT_PATCH = REPO_ROOT / "Armor/GameLite/GameData/EffectPrototypes/EffectPrototypes_patch_BPRUE_Armor.cfg"
 BPRUE_EFFECT_DIR = REPO_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes"
 DLC_EFFECT_ROOT = REPO_ROOT / "GameLite/DLCGameData"
+EDITION_EFFECT_ROOT = REPO_ROOT / "Editions/GameLite/DLCGameData"
 ASSET_SNAPSHOT = REPORT_DIR / "localization_asset_snapshot.json"
 
 EFFECT_SID_RE = re.compile(r"^\s*LocalizationSID\s*=\s*([A-Za-z0-9_]+)\s*$", re.MULTILINE)
@@ -149,6 +150,7 @@ def audit_generated_cfg_localization(localization_sids: set[str]) -> dict:
     cfg_roots = (
         REPO_ROOT / "GameLite",
         REPO_ROOT / "Armor" / "GameLite",
+        REPO_ROOT / "Editions" / "GameLite",
     )
     for root in cfg_roots:
         if not root.exists():
@@ -190,8 +192,9 @@ def _parse_effects(path: Path, source: str) -> dict[str, dict]:
 def _effect_catalog() -> dict[str, dict]:
     catalog = _parse_effects(VANILLA_EFFECTS, "BaseGame")
     for path in sorted(BPRUE_EFFECT_DIR.glob("*.cfg")): catalog.update(_parse_effects(path, path.name))
-    for path in sorted(DLC_EFFECT_ROOT.glob("*/EffectPrototypes/*BPRUE*.cfg")):
-        catalog.update(_parse_effects(path, str(path.relative_to(REPO_ROOT))))
+    for effect_root in (DLC_EFFECT_ROOT, EDITION_EFFECT_ROOT):
+        for path in sorted(effect_root.glob("*/EffectPrototypes/*BPRUE*.cfg")):
+            catalog.update(_parse_effects(path, str(path.relative_to(REPO_ROOT))))
     catalog.update(_parse_effects(VANILLA_UI_PATCH, VANILLA_UI_PATCH.name))
     catalog.update(_parse_effects(ARMOR_EFFECT_PATCH, str(ARMOR_EFFECT_PATCH.relative_to(REPO_ROOT))))
     return catalog
@@ -245,8 +248,8 @@ def audit_referenced_effects(models: dict[str, object], localization_sids: set[s
 
 def main() -> None:
     localization_sids, source_entries, missing_languages = load_localization()
-    base_model, configs = build_model(apply_layout=False); dlc_models = build_dlc_outputs(base_model, configs)
-    models = {"BaseGame": base_model, **dlc_models}
+    base_model, configs = build_model(apply_layout=False); dlc_models = build_dlc_outputs(base_model, configs); edition_models = build_edition_outputs(base_model, configs)
+    models = {"BaseGame": base_model, **dlc_models, **edition_models}
     scopes = {scope: audit_upgrade_model(model, localization_sids) for scope, model in models.items()}
     effects = audit_referenced_effects(models, localization_sids)
     asset_snapshot = audit_asset_snapshot(localization_sids, source_entries)

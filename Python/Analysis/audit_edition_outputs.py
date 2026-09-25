@@ -14,16 +14,16 @@ sys.path.insert(0, str(COMMON))
 
 from analysis_paths import REPORTS_DIR
 from generate_all_cfg import (
-    DLC_OUTPUT_ROOT,
-    build_dlc_outputs,
+    EDITIONS_OUTPUT_ROOT,
+    build_edition_outputs,
     build_model,
     render_weapon_sections_patch,
 )
 from upgrade_renderers import render_consolidated_upgrade_prototypes, render_dlc_general_setup_patch
 from vanilla_upgrade_layout import available_target_parts, dlc_general_setup_upgrades
-from dlc_weapon_modules import load_dlc_config
+from edition_weapon_modules import load_edition_config
 
-REPORT_PATH = REPORTS_DIR / "dlc_output_audit.json"
+REPORT_PATH = REPORTS_DIR / "edition_output_audit.json"
 BASE_EFFECT_DIR = PYTHON_ROOT.parent / "GameLite" / "ModGameData" / "BPRUpgradesExpanded" / "EffectPrototypes"
 SID_DEF_RE = re.compile(r"(?m)^([A-Za-z0-9_]+)\s*:\s*struct\.begin")
 SETUP_BLOCK_RE = re.compile(r"(?ms)^([A-Za-z0-9_]+)\s*:\s*struct\.begin\s*\{bpatch\}\s*\n(.*?)(?=^[A-Za-z0-9_]+\s*:\s*struct\.begin\s*\{bpatch\}|\Z)")
@@ -52,13 +52,13 @@ def _setup_arrays(text: str) -> dict[str, list[str]]:
 
 def _expected_weapons_by_pack() -> dict[str, dict[str, dict]]:
     result: dict[str, dict[str, dict]] = defaultdict(dict)
-    for name, entry in load_dlc_config().get("weapons", {}).items():
+    for name, entry in load_edition_config().get("weapons", {}).items():
         result[entry["content_pack"]][name] = entry
     return dict(result)
 
 
 def _output_paths(pack: str) -> dict[str, Path]:
-    root = DLC_OUTPUT_ROOT / pack
+    root = EDITIONS_OUTPUT_ROOT / pack
     return {
         "upgrades": root / "UpgradePrototypes" / "UpgradePrototypes_patch_BPRUE.cfg",
         "general_setup": root / "WeaponData" / "WeaponGeneralSetupPrototypes" / "WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
@@ -76,7 +76,7 @@ def _validate_phase2_path(path: Path, prototype_name: str) -> str | None:
 
 def main() -> None:
     source_model, configs = build_model(apply_layout=False)
-    dlc_models = build_dlc_outputs(source_model, configs)
+    dlc_models = build_edition_outputs(source_model, configs)
     expected_by_pack = _expected_weapons_by_pack()
     known_effects = _known_effect_sids()
     all_generated_sids = [u.sid for model in dlc_models.values() for u in model.upgrades]
@@ -87,9 +87,9 @@ def main() -> None:
     expected_pack_names = set(expected_by_pack)
     actual_pack_names = set(dlc_models)
     for pack in sorted(expected_pack_names - actual_pack_names):
-        errors.append(f"{pack}: expected DLC pack has no generated model")
+        errors.append(f"{pack}: expected Edition pack has no generated model")
     for pack in sorted(actual_pack_names - expected_pack_names):
-        errors.append(f"{pack}: generated DLC pack is not present in dlc_weapons.json")
+        errors.append(f"{pack}: generated Edition pack is not present in edition_weapons.json")
 
     for pack in sorted(expected_pack_names | actual_pack_names):
         model = dlc_models.get(pack)
@@ -111,7 +111,7 @@ def main() -> None:
         expected_setups = {entry["general_setup_sid"] for entry in expected_weapons.values()}
         generated_setups = set(by_setup)
         for sid in sorted(expected_setups - generated_setups):
-            pack_errors.append(f"{sid}: configured DLC weapon has no generated upgrades")
+            pack_errors.append(f"{sid}: configured Edition weapon has no generated upgrades")
         for sid in sorted(generated_setups - expected_setups):
             pack_errors.append(f"{sid}: generated setup is not registered in dlc_weapons.json")
 
@@ -189,7 +189,7 @@ def main() -> None:
         errors.extend(f"{pack}: {error}" for error in pack_errors)
 
     if duplicate_sids:
-        errors.append("duplicate generated DLC upgrade SIDs across packs: " + ", ".join(duplicate_sids))
+        errors.append("duplicate generated Edition upgrade SIDs across packs: " + ", ".join(duplicate_sids))
 
     total_expected_weapons = sum(len(entries) for entries in expected_by_pack.values())
     total_generated_setups = sum(len(model.by_general_setup()) for model in dlc_models.values())
@@ -210,7 +210,7 @@ def main() -> None:
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     REPORT_PATH.write_text(json.dumps(report, indent=2), encoding="utf-8")
 
-    print("DLC output audit")
+    print("Edition output audit")
     print(f"Weapons: {total_generated_setups}/{total_expected_weapons} | upgrades={total_upgrades} | duplicate SIDs={len(duplicate_sids)}")
     for pack, data in packs.items():
         print(
@@ -223,8 +223,8 @@ def main() -> None:
     print(f"Unknown/structural errors: {len(errors)}")
     print(f"Wrote {REPORT_PATH}")
     if errors:
-        raise ValueError("DLC output audit failed:\n  - " + "\n  - ".join(errors))
-    print("DLC output audit successful.")
+        raise ValueError("Edition output audit failed:\n  - " + "\n  - ".join(errors))
+    print("Edition output audit successful.")
 
 
 if __name__ == "__main__":
