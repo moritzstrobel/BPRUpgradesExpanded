@@ -144,37 +144,29 @@ def render_npc_patch(model: UpgradeBuildModel, source_setup_by_target: dict[str,
         "// -----------------------------------------------------------------------------",
         "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND",
         "// OXA-only BPRUE upgrades follow the technician availability of their source family.",
-        "// Standalone named lists mirror BPRUE's normal NPCPrototypes strategy.",
+        "// Append to BPRUE's already materialized technician Upgrades nodes.",
+        "// This preserves Base/DLC/Edition registrations from earlier packages.",
         "// -----------------------------------------------------------------------------",
         "",
     ]
-    rendered = []
     for technician_sid, upgrades in sorted(assignments.items()):
         unique = list({upgrade.sid: upgrade for upgrade in upgrades}.values())
         if not unique:
             continue
-        list_sid = f"BPRUE_OXA_{technician_sid}_UpgradeList"
-        rendered.append((technician_sid, list_sid))
-        lines.append(f"{list_sid} : struct.begin")
-        for upgrade in unique:
-            lines += [
-                f"   {upgrade.sid} : struct.begin",
-                f"      UpgradePrototypeSID = {upgrade.sid}",
-                "      Enabled = true",
-                "   struct.end",
-            ]
-        lines += ["struct.end", ""]
-
-    for technician_sid, list_sid in rendered:
         lines += [
             f"{technician_sid} : struct.begin {{bpatch}}",
-            f"   Upgrades : struct.begin {{bpatch;refkey={list_sid}}}",
-            "   struct.end",
-            "struct.end",
-            "",
+            "   Upgrades : struct.begin {bpatch}",
         ]
-    return "\n".join(lines).rstrip() + "\n"
+        for upgrade in unique:
+            lines += [
+                "      [*] : struct.begin",
+                f"         UpgradePrototypeSID = {upgrade.sid}",
+                "         Enabled = true",
+                "      struct.end",
+            ]
+        lines += ["   struct.end", "struct.end", ""]
 
+    return "\n".join(lines).rstrip() + "\n"
 
 def write(relative: str, content: str) -> Path:
     path = OUTPUT_ROOT / relative
