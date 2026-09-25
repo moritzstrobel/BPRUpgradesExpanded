@@ -81,16 +81,16 @@ def _add_dlc_signatures(result: dict[str, UpgradeBuildModel], weapons: dict) -> 
     return added
 
 
-def build_dlc_models(source_model: UpgradeBuildModel, configs: dict) -> dict[str, UpgradeBuildModel]:
-    """Clone BPRUE base-family modules into one isolated model per DLC content pack.
-
-    DLC modules and their signature modules stay separate from the base-game model,
-    so their UpgradePrototypes and GeneralSetup registrations are rendered only
-    below GameLite/DLCGameData/<pack>.
-    """
+def build_content_pack_models(
+    source_model: UpgradeBuildModel,
+    configs: dict,
+    weapons: dict,
+    *,
+    include_signatures: bool = False,
+) -> dict[str, UpgradeBuildModel]:
+    """Clone BPRUE base-family modules into isolated DLCGameData pack models."""
     result: dict[str, UpgradeBuildModel] = {}
     source_by_setup = source_model.by_general_setup()
-    weapons = load_dlc_config().get("weapons", {})
 
     for name, weapon in weapons.items():
         pack = weapon["content_pack"]
@@ -127,10 +127,21 @@ def build_dlc_models(source_model: UpgradeBuildModel, configs: dict) -> dict[str
                 horizontal_position=None,
             ))
 
-    _add_dlc_signatures(result, weapons)
+    if include_signatures:
+        _add_dlc_signatures(result, weapons)
     for model in result.values():
         model.validate()
     return result
+
+
+def build_dlc_models(source_model: UpgradeBuildModel, configs: dict) -> dict[str, UpgradeBuildModel]:
+    """Build story-DLC models from the dedicated DLC registry."""
+    return build_content_pack_models(
+        source_model,
+        configs,
+        load_dlc_config().get("weapons", {}),
+        include_signatures=True,
+    )
 
 
 def render_dlc_signature_effects(pack: str) -> str:
