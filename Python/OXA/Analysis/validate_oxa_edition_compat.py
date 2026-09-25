@@ -63,7 +63,11 @@ def main() -> None:
 
         base_vanilla = base_vanilla_arrays.get(base_setup, [])
         edition_vanilla = dlc_general_setup_upgrades(pack).get(target_setup, [])
-        oxa_base_core = [sid for sid in base_compat if not sid.startswith("BPRUE")]
+        base_bprue_sids = {
+            upgrade.sid
+            for upgrade in source_model.by_general_setup().get(base_setup, [])
+        }
+        oxa_base_core = [sid for sid in base_compat if sid not in base_bprue_sids]
         oxa_base_set = set(oxa_base_core)
         base_vanilla_set = set(base_vanilla)
         removed = {sid for sid in base_vanilla if sid not in oxa_base_set}
@@ -83,10 +87,7 @@ def main() -> None:
                 f"{pack}/{name}: projected array differs from expected OXA core + Edition BPRUE "
                 f"(expected {len(expected)}, got {len(actual)})"
             )
-        leaked_base_bprue = [
-            sid for sid in actual
-            if sid.startswith("BPRUE") and sid not in set(expected_bprue)
-        ]
+        leaked_base_bprue = [sid for sid in actual if sid in base_bprue_sids]
         if leaked_base_bprue:
             errors.append(
                 f"{pack}/{name}: base/non-Edition BPRUE SIDs leaked into projection: "
