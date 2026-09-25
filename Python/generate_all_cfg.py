@@ -335,13 +335,11 @@ def main():
     _render_content_pack_outputs(dlc_models, DLC_OUTPUT_ROOT, signature_effects=True)
     _render_content_pack_outputs(edition_models, EDITIONS_OUTPUT_ROOT, signature_effects=False)
     edition_npc_text = render_content_pack_technician_additions(edition_models)
-    for pack_model in edition_models.values():
+    for pack, pack_model in edition_models.items():
         validate_rendered_outputs(
             pack_model,
             render_consolidated_upgrade_prototypes(pack_model),
-            render_dlc_general_setup_patch(pack_model, next(
-                pack for pack, candidate in edition_models.items() if candidate is pack_model
-            )),
+            render_dlc_general_setup_patch(pack_model, pack),
             edition_npc_text,
         )
     write(EDITIONS_NPC_PATH, edition_npc_text)
