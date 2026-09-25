@@ -17,6 +17,7 @@ from upgrade_renderers import (
     render_consolidated_upgrade_prototypes,
     render_dlc_general_setup_patch,
     render_final_general_setup_patch,
+    render_content_pack_technician_additions,
     render_technician_patch,
 )
 from unique_weapon_modules import add_unique_modules, add_unique_signatures, render_unique_signature_effects
@@ -38,6 +39,7 @@ VANILLA_ROOT = ROOT / "VanillaReference"
 VANILLA_WEAPONS = VANILLA_ROOT / "WeaponPrototypes.cfg"
 DLC_OUTPUT_ROOT = CONTENT_ROOT / "GameLite/DLCGameData"
 EDITIONS_OUTPUT_ROOT = CONTENT_ROOT / "Editions/GameLite/DLCGameData"
+EDITIONS_NPC_PATH = CONTENT_ROOT / "Editions/GameLite/GameData/NPCPrototypes/NPCPrototypes_patch_BPRUE_Editions.cfg"
 UPGRADES_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/UpgradePrototypes/BPRUE_UpgradePrototypes.cfg"
 GENERAL_SETUP_PATH = CONTENT_ROOT / "GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg"
 WEAPON_PATH = CONTENT_ROOT / "GameLite/GameData/ItemPrototypes/WeaponPrototypes/WeaponPrototypes_patch_BPRUE.cfg"
@@ -332,6 +334,17 @@ def main():
     write(VANILLA_EFFECT_UI_PATH, render_vanilla_effect_ui_patch()); _remove_obsolete_bprue_effect_ui_patch(); _remove_independent_dlc_output()
     _render_content_pack_outputs(dlc_models, DLC_OUTPUT_ROOT, signature_effects=True)
     _render_content_pack_outputs(edition_models, EDITIONS_OUTPUT_ROOT, signature_effects=False)
+    edition_npc_text = render_content_pack_technician_additions(edition_models)
+    for pack_model in edition_models.values():
+        validate_rendered_outputs(
+            pack_model,
+            render_consolidated_upgrade_prototypes(pack_model),
+            render_dlc_general_setup_patch(pack_model, next(
+                pack for pack, candidate in edition_models.items() if candidate is pack_model
+            )),
+            edition_npc_text,
+        )
+    write(EDITIONS_NPC_PATH, edition_npc_text)
     write(ar.EFFECT_OUTPUT_PATH, ar.render_effect_patch(configs["ar"])); write(smg.EFFECT_OUTPUT_PATH, smg.render_effects()); write(shotgun.EFFECT_OUTPUT, shotgun.render_effects()); write(pistol.EFFECT_OUTPUT, pistol.render_effects()); write(sniper.EFFECT_OUTPUT, sniper.render_effects()); write(MACHINE_GUN_EFFECT_PATH, machine_gun.render_effects()); write(SHARED_EFFECT_PATH, render_shared_effects()); write(UNIQUE_SIGNATURE_EFFECT_PATH, render_unique_signature_effects())
     print(f"Validated and rendered {len(model.upgrades)} base/Unique upgrades plus {sum(len(m.upgrades) for m in dlc_models.values())} DLC upgrades plus {sum(len(m.upgrades) for m in edition_models.values())} Edition upgrades.")
 
