@@ -78,6 +78,603 @@
     "RegenHealthModifier": 1,
     "WeirdKettleEffect": 1
   },
+  "effect_type_values": {
+    "EEffectType::AdditionalInventoryWeight": {
+      "unique_effects": 4,
+      "values": [
+        {
+          "sid": "ArtifactAdditionalInventoryWeight05",
+          "value_min": "2",
+          "value_max": "2",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_weight",
+          "text": "ArtifactAdditionalInventoryWeight05",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactAdditionalInventoryWeight1",
+          "value_min": "3",
+          "value_max": "3",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_weight",
+          "text": "ArtifactAdditionalInventoryWeight1",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactAdditionalInventoryWeight2",
+          "value_min": "6",
+          "value_max": "6",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_weight",
+          "text": "ArtifactAdditionalInventoryWeight2",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactAdditionalInventoryWeight3",
+          "value_min": "9",
+          "value_max": "9",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_weight",
+          "text": "ArtifactAdditionalInventoryWeight3",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        }
+      ]
+    },
+    "EEffectType::Composite": {
+      "unique_effects": 1,
+      "values": [
+        {
+          "sid": "WeirdWaterWeightChangeCompositeEffect",
+          "value_min": null,
+          "value_max": null,
+          "positive": null,
+          "localization_sid": null,
+          "text": null,
+          "permanent": null,
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        }
+      ]
+    },
+    "EEffectType::DegenBleeding": {
+      "unique_effects": 6,
+      "values": [
+        {
+          "sid": "ArtifactDegenBleeding05",
+          "value_min": "0.3",
+          "value_max": "0.3",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_protectionBleed",
+          "text": "ArtifactDegenBleeding05",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactDegenBleeding1",
+          "value_min": "0.5",
+          "value_max": "0.5",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_protectionBleed",
+          "text": "ArtifactDegenBleeding1",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactDegenBleeding2",
+          "value_min": "1",
+          "value_max": "1",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_protectionBleed",
+          "text": "ArtifactDegenBleeding2",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactDegenBleeding3",
+          "value_min": "2",
+          "value_max": "2",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_protectionBleed",
+          "text": "ArtifactDegenBleeding3",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactDegenBleeding4",
+          "value_min": "4",
+          "value_max": "4",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_protectionBleed",
+          "text": "ArtifactDegenBleeding4",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "DegenBleeding10",
+          "value_min": "2000.0%",
+          "value_max": "2000.0%",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "decrease_bleeding",
+          "text": "Degen Bleeding10",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        }
+      ]
+    },
+    "EEffectType::DegenRadiation": {
+      "unique_effects": 9,
+      "values": [
+        {
+          "sid": "AddRadiation1",
+          "value_min": "-5",
+          "value_max": "-5",
+          "positive": null,
+          "localization_sid": null,
+          "text": "Degen Radiation",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactAddRadiation1",
+          "value_min": "-0.1",
+          "value_max": "-0.1",
+          "positive": "EBeneficial::Negative",
+          "localization_sid": "general_radiation",
+          "text": "Degen Radiation",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactAddRadiation2",
+          "value_min": "-0.15",
+          "value_max": "-0.15",
+          "positive": "EBeneficial::Negative",
+          "localization_sid": "general_radiation",
+          "text": "Degen Radiation",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactAddRadiation3",
+          "value_min": "-0.25",
+          "value_max": "-0.25",
+          "positive": "EBeneficial::Negative",
+          "localization_sid": "general_radiation",
+          "text": "Degen Radiation",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactAddRadiation4",
+          "value_min": "-0.5",
+          "value_max": "-0.5",
+          "positive": "EBeneficial::Negative",
+          "localization_sid": "general_radiation",
+          "text": "Degen Radiation",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactProtectionRadiation1",
+          "value_min": "0.1",
+          "value_max": "0.1",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_protectionRadiation",
+          "text": "ArtifactProtectionRadiation1",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactProtectionRadiation2",
+          "value_min": "0.15",
+          "value_max": "0.15",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_protectionRadiation",
+          "text": "ArtifactProtectionRadiation2",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactProtectionRadiation3",
+          "value_min": "0.25",
+          "value_max": "0.25",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_protectionRadiation",
+          "text": "ArtifactProtectionRadiation3",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactProtectionRadiation4",
+          "value_min": "0.5",
+          "value_max": "0.5",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_protectionRadiation",
+          "text": "ArtifactProtectionRadiation4",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        }
+      ]
+    },
+    "EEffectType::FlagEffect": {
+      "unique_effects": 1,
+      "values": [
+        {
+          "sid": "WeirdKettleEffect",
+          "value_min": null,
+          "value_max": null,
+          "positive": "EBeneficial::Positive",
+          "localization_sid": null,
+          "text": null,
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        }
+      ]
+    },
+    "EEffectType::MaxDurability": {
+      "unique_effects": 4,
+      "values": [
+        {
+          "sid": "ArtifactDurabilityIncrease1",
+          "value_min": "5.0%",
+          "value_max": "5.0%",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "ArtifactMoreDurability",
+          "text": "Equipment durability",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactDurabilityIncrease2",
+          "value_min": "10.0%",
+          "value_max": "10.0%",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "ArtifactMoreDurability",
+          "text": "Equipment durability",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactDurabilityIncrease3",
+          "value_min": "15.0%",
+          "value_max": "15.0%",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "ArtifactMoreDurability",
+          "text": "Equipment durability",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactDurabilityIncrease4",
+          "value_min": "20.0%",
+          "value_max": "20.0%",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "ArtifactMoreDurability",
+          "text": "Equipment durability",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        }
+      ]
+    },
+    "EEffectType::PenaltyLessWeight": {
+      "unique_effects": 4,
+      "values": [
+        {
+          "sid": "ArtifactPenaltyLessWeightEffect05",
+          "value_min": "2",
+          "value_max": "2",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": null,
+          "text": null,
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactPenaltyLessWeightEffect1",
+          "value_min": "3",
+          "value_max": "3",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": null,
+          "text": null,
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactPenaltyLessWeightEffect2",
+          "value_min": "6",
+          "value_max": "6",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": null,
+          "text": null,
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactPenaltyLessWeightEffect3",
+          "value_min": "9",
+          "value_max": "9",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": null,
+          "text": null,
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        }
+      ]
+    },
+    "EEffectType::ProtectionBurn": {
+      "unique_effects": 4,
+      "values": [
+        {
+          "sid": "ArtifactProtectionBurn1",
+          "value_min": "10",
+          "value_max": "10",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_protectionThermal",
+          "text": "ArtifactProtectionBurn1",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactProtectionBurn2",
+          "value_min": "15",
+          "value_max": "15",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_protectionThermal",
+          "text": "ArtifactProtectionBurn2",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactProtectionBurn3",
+          "value_min": "20",
+          "value_max": "20",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_protectionThermal",
+          "text": "ArtifactProtectionBurn3",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactProtectionBurn4",
+          "value_min": "35",
+          "value_max": "35",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_protectionThermal",
+          "text": "ArtifactProtectionBurn4",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        }
+      ]
+    },
+    "EEffectType::ProtectionChemical": {
+      "unique_effects": 4,
+      "values": [
+        {
+          "sid": "ArtifactProtectionChemicalBurn1",
+          "value_min": "10",
+          "value_max": "10",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_protectionChemical",
+          "text": "ArtifactProtectionChemicalBurn1",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactProtectionChemicalBurn2",
+          "value_min": "15",
+          "value_max": "15",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_protectionChemical",
+          "text": "ArtifactProtectionChemicalBurn2",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactProtectionChemicalBurn3",
+          "value_min": "20",
+          "value_max": "20",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_protectionChemical",
+          "text": "ArtifactProtectionChemicalBurn3",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactProtectionChemicalBurn4",
+          "value_min": "35",
+          "value_max": "35",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_protectionChemical",
+          "text": "ArtifactProtectionChemicalBurn4",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        }
+      ]
+    },
+    "EEffectType::ProtectionShock": {
+      "unique_effects": 5,
+      "values": [
+        {
+          "sid": "ArtifactProtectionShock05",
+          "value_min": "7",
+          "value_max": "7",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "ArtifactProtectionShock2",
+          "text": "ArtifactProtectionShock2",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactProtectionShock1",
+          "value_min": "10",
+          "value_max": "10",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "ArtifactProtectionShock2",
+          "text": "ArtifactProtectionShock2",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactProtectionShock2",
+          "value_min": "15",
+          "value_max": "15",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "ArtifactProtectionShock2",
+          "text": "ArtifactProtectionShock2",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactProtectionShock3",
+          "value_min": "20",
+          "value_max": "20",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "ArtifactProtectionShock2",
+          "text": "ArtifactProtectionShock2",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ProtectionShock1",
+          "value_min": "5.0%",
+          "value_max": "5.0%",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": null,
+          "text": "ProtectionShock1",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        }
+      ]
+    },
+    "EEffectType::ProtectionStrike": {
+      "unique_effects": 5,
+      "values": [
+        {
+          "sid": "ArtifactProtectionStrike05",
+          "value_min": "0.07",
+          "value_max": "0.07",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_protectionBullet",
+          "text": "ArtifactProtectionStrike05",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactProtectionStrike1",
+          "value_min": "0.1",
+          "value_max": "0.1",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_protectionBullet",
+          "text": "ArtifactProtectionStrike1",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactProtectionStrike2",
+          "value_min": "0.25",
+          "value_max": "0.25",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_protectionBullet",
+          "text": "ArtifactProtectionStrike2",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactProtectionStrike3",
+          "value_min": "0.5",
+          "value_max": "0.5",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_protectionBullet",
+          "text": "ArtifactProtectionStrike3",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactProtectionStrike4",
+          "value_min": "1",
+          "value_max": "1",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_protectionBullet",
+          "text": "ArtifactProtectionStrike4",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        }
+      ]
+    },
+    "EEffectType::RegenHealthModifier": {
+      "unique_effects": 1,
+      "values": [
+        {
+          "sid": "RegenHealthModifier",
+          "value_min": "-0.75",
+          "value_max": "-0.75",
+          "positive": "EBeneficial::Negative",
+          "localization_sid": null,
+          "text": null,
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        }
+      ]
+    },
+    "EEffectType::RegenStamina": {
+      "unique_effects": 5,
+      "values": [
+        {
+          "sid": "ArtifactIncreaseRegenStamina05",
+          "value_min": "1.5",
+          "value_max": "1.5",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_regenerationStamina",
+          "text": "ArtifactIncreaseRegenStamina05",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactIncreaseRegenStamina1",
+          "value_min": "2.5f",
+          "value_max": "2.5f",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_regenerationStamina",
+          "text": "ArtifactIncreaseRegenStamina1",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactIncreaseRegenStamina2",
+          "value_min": "5",
+          "value_max": "5",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_regenerationStamina",
+          "text": "ArtifactIncreaseRegenStamina2",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactIncreaseRegenStamina3",
+          "value_min": "7.5f",
+          "value_max": "7.5f",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_regenerationStamina",
+          "text": "ArtifactIncreaseRegenStamina3",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        },
+        {
+          "sid": "ArtifactIncreaseRegenStamina4",
+          "value_min": "12.5f",
+          "value_max": "12.5f",
+          "positive": "EBeneficial::Positive",
+          "localization_sid": "general_regenerationStamina",
+          "text": "ArtifactIncreaseRegenStamina4",
+          "permanent": "true",
+          "source": "Python/VanillaReference/EffectPrototypes.cfg"
+        }
+      ]
+    }
+  },
   "unresolved_effects": {},
   "artifacts": [
     {
