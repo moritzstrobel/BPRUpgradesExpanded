@@ -25,7 +25,7 @@ def load_entries_from_zip(zip_path: Path) -> dict[str, dict]:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Merge one contributed language into current BPRUE localization sources by SID.")
     parser.add_argument("zip", type=Path, help="Contributor localization ZIP")
-    parser.add_argument("--language", default="Chinese")
+    parser.add_argument("--language", default="ChineseSimplified")
     parser.add_argument("--write", action="store_true", help="Write matching translations into the current JSON sources")
     args = parser.parse_args()
 
