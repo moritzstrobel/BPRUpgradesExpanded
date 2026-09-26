@@ -412,6 +412,147 @@
         ]
       },
       "group": "UTILITY"
+    },
+    "HEMOSTATIC_THERMAL": {
+      "name": "Hemostatic Lining - Thermal Trade-off",
+      "cost": {
+        "HELMET": 1800,
+        "SUIT": 3000,
+        "FULL_BODY_SUIT": 4300
+      },
+      "effects": {
+        "HELMET": [
+          {
+            "type": "DegenBleeding",
+            "value": 0.5,
+            "positive": "Positive"
+          },
+          {
+            "type": "ProtectionBurn",
+            "value": "-10%",
+            "positive": "Negative"
+          }
+        ],
+        "SUIT": [
+          {
+            "type": "DegenBleeding",
+            "value": 1,
+            "positive": "Positive"
+          },
+          {
+            "type": "ProtectionBurn",
+            "value": "-15%",
+            "positive": "Negative"
+          }
+        ],
+        "FULL_BODY_SUIT": [
+          {
+            "type": "DegenBleeding",
+            "value": 2,
+            "positive": "Positive"
+          },
+          {
+            "type": "ProtectionBurn",
+            "value": "-20%",
+            "positive": "Negative"
+          }
+        ]
+      },
+      "group": "HEMOSTATIC"
+    },
+    "HEMOSTATIC_CHEMICAL": {
+      "name": "Hemostatic Lining - Chemical Trade-off",
+      "cost": {
+        "HELMET": 1800,
+        "SUIT": 3000,
+        "FULL_BODY_SUIT": 4300
+      },
+      "effects": {
+        "HELMET": [
+          {
+            "type": "DegenBleeding",
+            "value": 0.5,
+            "positive": "Positive"
+          },
+          {
+            "type": "ProtectionChemical",
+            "value": "-10%",
+            "positive": "Negative"
+          }
+        ],
+        "SUIT": [
+          {
+            "type": "DegenBleeding",
+            "value": 1,
+            "positive": "Positive"
+          },
+          {
+            "type": "ProtectionChemical",
+            "value": "-15%",
+            "positive": "Negative"
+          }
+        ],
+        "FULL_BODY_SUIT": [
+          {
+            "type": "DegenBleeding",
+            "value": 2,
+            "positive": "Positive"
+          },
+          {
+            "type": "ProtectionChemical",
+            "value": "-20%",
+            "positive": "Negative"
+          }
+        ]
+      },
+      "group": "HEMOSTATIC"
+    },
+    "HEMOSTATIC_ELECTRICAL": {
+      "name": "Hemostatic Lining - Electrical Trade-off",
+      "cost": {
+        "HELMET": 1800,
+        "SUIT": 3000,
+        "FULL_BODY_SUIT": 4300
+      },
+      "effects": {
+        "HELMET": [
+          {
+            "type": "DegenBleeding",
+            "value": 0.5,
+            "positive": "Positive"
+          },
+          {
+            "type": "ProtectionShock",
+            "value": "-10%",
+            "positive": "Negative"
+          }
+        ],
+        "SUIT": [
+          {
+            "type": "DegenBleeding",
+            "value": 1,
+            "positive": "Positive"
+          },
+          {
+            "type": "ProtectionShock",
+            "value": "-15%",
+            "positive": "Negative"
+          }
+        ],
+        "FULL_BODY_SUIT": [
+          {
+            "type": "DegenBleeding",
+            "value": 2,
+            "positive": "Positive"
+          },
+          {
+            "type": "ProtectionShock",
+            "value": "-20%",
+            "positive": "Negative"
+          }
+        ]
+      },
+      "group": "HEMOSTATIC"
     }
   }
 }
