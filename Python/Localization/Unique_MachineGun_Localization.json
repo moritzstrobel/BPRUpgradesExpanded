@@ -6,7 +6,7 @@
       "languages": {
         "English": "Commander's Assault Package",
         "Russian": "Штурмовой комплект командира",
-        "Chinese": "指挥官突击组件"
+        "ChineseSimplified": "指挥官突击组件"
       }
     },
     {
@@ -14,7 +14,7 @@
       "languages": {
         "English": "Reworks Korshunov's PKP for aggressive mobile assaults with faster aiming, better movement while aiming, quicker reloads and a higher rate of fire, at the cost of increased weapon wear.",
         "Russian": "Перерабатывает ПКП Коршунова для агрессивного мобильного штурма: ускоряет прицеливание, улучшает движение в прицеле, перезарядку и темп стрельбы ценой повышенного износа оружия.",
-        "Chinese": "将科尔舒诺夫的 PKP 改造为激进的机动突击配置：加快瞄准、改善瞄准时移动、加快装填并提升射速，但武器磨损增加。"
+        "ChineseSimplified": "将科尔舒诺夫的 PKP 改造为激进的机动突击配置：加快瞄准、改善瞄准时移动、加快装填并提升射速，但武器磨损增加。"
       }
     },
     {
@@ -22,7 +22,7 @@
       "languages": {
         "English": "Heavy-Duty Fire System",
         "Russian": "Усиленная система непрерывного огня",
-        "Chinese": "重型持续火力系统"
+        "ChineseSimplified": "重型持续火力系统"
       }
     },
     {
@@ -30,7 +30,7 @@
       "languages": {
         "English": "Reinforces Tank for sustained heavy fire with reduced weapon wear, lower recoil, quicker shot recovery and a higher rate of fire, at the cost of substantially increased weight.",
         "Russian": "Усиливает Tank для продолжительного интенсивного огня: снижает износ и отдачу, ускоряет возврат после выстрела и повышает темп стрельбы ценой значительно увеличенной массы.",
-        "Chinese": "强化 Tank 以支持持续重火力：降低武器磨损与后坐力，加快射击恢复并提升射速，但重量大幅增加。"
+        "ChineseSimplified": "强化 Tank 以支持持续重火力：降低武器磨损与后坐力，加快射击恢复并提升射速，但重量大幅增加。"
       }
     }
   ]
