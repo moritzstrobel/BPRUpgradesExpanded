@@ -11,6 +11,8 @@ ARMOR_ROOT = CONTENT_ROOT / "Armor"
 ARMOR_GAME_ROOT = ARMOR_ROOT / "GameLite"
 CONFIG_PATH = SCRIPT_DIR / "armor_signatures.json"
 MODULE_CONFIG_PATH = SCRIPT_DIR / "armor_modules.json"
+CONTENT_PACK_CONFIG_PATH = SCRIPT_DIR / "armor_content_packs.json"
+DLC_REFERENCE_ROOT = PYTHON_ROOT / "VanillaReference" / "DLCGameData"
 CLASSIFICATION_PATH = PYTHON_ROOT / "AnalysisArmor" / "Reports" / "armor_classification.json"
 UPGRADE_MAPPING_PATH = PYTHON_ROOT / "AnalysisArmor" / "Reports" / "armor_upgrade_mapping.json"
 UPGRADE_DETAILS_PATH = PYTHON_ROOT / "AnalysisArmor" / "Reports" / "armor_upgrade_details.json"
@@ -88,6 +90,8 @@ class ArmorUpgradeDefinition:
     required_upgrade_sid: str | None = None
     horizontal_position: int | None = None
     vertical_position: str | None = None
+    content_pack: str | None = None
+    base_armor_sid: str | None = None
 
 
 def load_config() -> dict:
@@ -104,6 +108,37 @@ def load_classification() -> dict:
         )
     return json.loads(CLASSIFICATION_PATH.read_text(encoding="utf-8"))
 
+
+
+def load_content_pack_armors() -> list[dict]:
+    """Load explicitly mapped Edition armors and their authored Vanilla upgrade arrays."""
+    import re
+    config = json.loads(CONTENT_PACK_CONFIG_PATH.read_text(encoding="utf-8"))
+    result: list[dict] = []
+    for pack, armors in config["packs"].items():
+        source = DLC_REFERENCE_ROOT / pack / "ItemPrototypes.cfg"
+        text = source.read_text(encoding="utf-8")
+        for armor in armors:
+            sid = armor["sid"]
+            start_match = re.search(rf"(?m)^\s*{re.escape(sid)}\s*:\s*struct\.begin[^\n]*$", text)
+            if not start_match:
+                raise ValueError(f"{pack}: armor prototype {sid} not found in {source}")
+            start = start_match.start(); depth = 0; end = None
+            for match in re.finditer(r"struct\.begin|struct\.end", text[start:]):
+                depth += 1 if match.group(0) == "struct.begin" else -1
+                if depth == 0:
+                    end = start + match.end(); break
+            if end is None:
+                raise ValueError(f"{pack}: unterminated armor prototype {sid}")
+            block = text[start:end]
+            array = re.search(r"UpgradePrototypeSIDs\s*:\s*struct\.begin(.*?)struct\.end", block, re.S)
+            if not array:
+                raise ValueError(f"{pack}: {sid} has no UpgradePrototypeSIDs array")
+            upgrades = re.findall(r"(?m)^\s*\[\d+\]\s*=\s*(\S+)\s*$", array.group(1))
+            if not upgrades:
+                raise ValueError(f"{pack}: {sid} has an empty UpgradePrototypeSIDs array")
+            result.append({**armor, "pack": pack, "upgrades": upgrades})
+    return result
 
 def build_upgrades(config: dict | None = None, classification: dict | None = None) -> list[ArmorUpgradeDefinition]:
     config = config or load_config()
@@ -142,8 +177,30 @@ def build_upgrades(config: dict | None = None, classification: dict | None = Non
                 ))
                 previous_sid = sid
 
+    content_pack_armors = load_content_pack_armors()
+    for armor in content_pack_armors:
+        faction = armor["faction"]
+        faction_cfg = config["prototype_factions"][faction]
+        category = armor["category"]
+        category_cfg = faction_cfg["categories"].get(category)
+        if category_cfg is None:
+            continue
+        previous_sid: str | None = None
+        for tier_index, tier_cfg in enumerate(category_cfg["tiers"]):
+            sid = f'{armor["sid"]}_Upgrade_BPRUE_{faction}_{tier_cfg["id"]}'
+            result.append(ArmorUpgradeDefinition(
+                sid=sid, armor_sid=armor["sid"], faction=faction, category=category,
+                signature=faction_cfg["signature"], target_part=category_cfg["target_part"],
+                text_sid=tier_cfg["text_sid"], hint_sid=tier_cfg["hint_sid"], cost=int(tier_cfg["cost"]),
+                effects=tuple(tier_cfg["effects"]), tier_index=tier_index, family=f"FACTION:{faction}",
+                image=faction_module_image(faction), required_upgrade_sid=previous_sid,
+                content_pack=armor["pack"], base_armor_sid=armor["base_armor_sid"],
+            ))
+            previous_sid = sid
+
     # Generic faction-agnostic modules: one independent trade-off upgrade per armor.
     generic_armors = [armor for faction_armors in classification["factions"].values() for armor in faction_armors]
+    generic_armors += load_content_pack_armors()
     for armor in generic_armors:
         category = armor["category"]
         armor_sid = armor["sid"]
@@ -169,6 +226,8 @@ def build_upgrades(config: dict | None = None, classification: dict | None = Non
                 tier_index=0,
                 family=f"GENERIC:{module_cfg['group']}",
                 image=BPRUE_MODULE_IMAGE,
+                content_pack=armor.get("pack"),
+                base_armor_sid=armor.get("base_armor_sid"),
             ))
 
     # Generic modules are mutually exclusive only inside their authored trade-off group.
@@ -237,6 +296,7 @@ def apply_layout(upgrades: list[ArmorUpgradeDefinition]) -> list[ArmorUpgradeDef
     from collections import defaultdict
 
     vanilla_by_armor = _vanilla_upgrade_sids_by_armor()
+    vanilla_by_armor.update({armor["sid"]: armor["upgrades"] for armor in load_content_pack_armors()})
     details = _upgrade_details()
     by_armor: dict[str, list[ArmorUpgradeDefinition]] = defaultdict(list)
     for upgrade in upgrades:
@@ -341,11 +401,14 @@ def _vanilla_upgrade_sids_by_armor() -> dict[str, list[str]]:
     return {row["sid"]: list(row["upgrades"]) for row in rows}
 
 
-def render_armor_patch(upgrades: list[ArmorUpgradeDefinition]) -> str:
+def render_armor_patch(upgrades: list[ArmorUpgradeDefinition], content_pack: str | None = None) -> str:
     by_armor: dict[str, list[ArmorUpgradeDefinition]] = {}
+    vanilla_by_armor = _vanilla_upgrade_sids_by_armor()
+    vanilla_by_armor.update({armor["sid"]: armor["upgrades"] for armor in load_content_pack_armors()})
     for upgrade in upgrades:
+        if upgrade.content_pack != content_pack:
+            continue
         by_armor.setdefault(upgrade.armor_sid, []).append(upgrade)
-        vanilla_by_armor = _vanilla_upgrade_sids_by_armor()
     lines = [
         "// -----------------------------------------------------------------------------",
         "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND",
@@ -583,6 +646,9 @@ def technician_armor_assignments(upgrades: list[ArmorUpgradeDefinition]) -> dict
         raise FileNotFoundError(VANILLA_NPC_PATH)
     blocks = _parse_npc_blocks(VANILLA_NPC_PATH.read_text(encoding="utf-8"))
     vanilla_by_armor = _vanilla_upgrade_sids_by_armor()
+    content_pack_armors = load_content_pack_armors()
+    vanilla_by_armor.update({armor["sid"]: armor["upgrades"] for armor in content_pack_armors})
+    base_by_armor = {armor["sid"]: armor["base_armor_sid"] for armor in content_pack_armors}
     vanilla_sets = {armor: set(sids) for armor, sids in vanilla_by_armor.items()}
 
     assignments: dict[str, list[ArmorUpgradeDefinition]] = {}
@@ -600,7 +666,7 @@ def technician_armor_assignments(upgrades: list[ArmorUpgradeDefinition]) -> dict
             # Vanilla SID instead.
             if supported.intersection(
                 sid for sid in vanilla_sets.get(upgrade.armor_sid, set())
-                if sid.startswith(f"{upgrade.armor_sid}_")
+                if sid.lower().startswith(f"{base_by_armor.get(upgrade.armor_sid, upgrade.armor_sid)}_".lower())
             )
         ]
         if selected:
@@ -646,21 +712,23 @@ def render_npc_patch(upgrades: list[ArmorUpgradeDefinition]) -> str:
 
 def main() -> None:
     upgrades = build_upgrades()
-    for path in (ARMOR_PATCH_PATH, UPGRADE_OUTPUT_PATH, EFFECT_OUTPUT_PATH, NPC_OUTPUT_PATH):
+    content_pack_paths = {
+        pack: ARMOR_GAME_ROOT / f"DLCGameData/{pack}/ItemPrototypes/ItemPrototypes_patch_BPRUE_Armor.cfg"
+        for pack in json.loads(CONTENT_PACK_CONFIG_PATH.read_text(encoding="utf-8"))["packs"]
+    }
+    output_paths = (ARMOR_PATCH_PATH, UPGRADE_OUTPUT_PATH, EFFECT_OUTPUT_PATH, NPC_OUTPUT_PATH, *content_pack_paths.values())
+    for path in output_paths:
         path.parent.mkdir(parents=True, exist_ok=True)
 
-    upgrade_text = render_upgrade_fragment(upgrades)
-    armor_patch_text = render_armor_patch(upgrades)
-    effect_text = render_effects(load_config())
-    npc_text = render_npc_patch(upgrades)
-
-    UPGRADE_OUTPUT_PATH.write_text(upgrade_text, encoding="utf-8")
-    ARMOR_PATCH_PATH.write_text(armor_patch_text, encoding="utf-8")
-    EFFECT_OUTPUT_PATH.write_text(effect_text, encoding="utf-8")
-    NPC_OUTPUT_PATH.write_text(npc_text, encoding="utf-8")
+    UPGRADE_OUTPUT_PATH.write_text(render_upgrade_fragment(upgrades), encoding="utf-8")
+    ARMOR_PATCH_PATH.write_text(render_armor_patch(upgrades), encoding="utf-8")
+    EFFECT_OUTPUT_PATH.write_text(render_effects(load_config()), encoding="utf-8")
+    NPC_OUTPUT_PATH.write_text(render_npc_patch(upgrades), encoding="utf-8")
+    for pack, path in content_pack_paths.items():
+        path.write_text(render_armor_patch(upgrades, content_pack=pack), encoding="utf-8")
 
     # Guard the module boundary: this generator must never write into Main/GameLite.
-    for path in (ARMOR_PATCH_PATH, UPGRADE_OUTPUT_PATH, EFFECT_OUTPUT_PATH, NPC_OUTPUT_PATH):
+    for path in output_paths:
         if ARMOR_ROOT not in path.parents:
             raise ValueError(f"Armor generator attempted to write outside Armor/: {path}")
 
@@ -670,6 +738,8 @@ def main() -> None:
     print(f"Generated {ARMOR_PATCH_PATH}")
     print(f"Generated {EFFECT_OUTPUT_PATH}")
     print(f"Generated {NPC_OUTPUT_PATH}")
+    for path in content_pack_paths.values():
+        print(f"Generated {path}")
 
 
 if __name__ == "__main__":
