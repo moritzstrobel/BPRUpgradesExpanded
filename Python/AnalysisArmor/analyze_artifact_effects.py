@@ -122,6 +122,40 @@ def effect_summary(proto: dict | None) -> dict | None:
     }
 
 
+def build_effect_type_values(real_artifacts: list[dict]) -> dict[str, dict]:
+    """Aggregate distinct artifact effect prototypes by EffectType.
+
+    This intentionally ignores which artifact uses an effect. The purpose is to
+    expose Vanilla's available value tiers for mechanics that may be reused by
+    armor upgrades.
+    """
+    by_type: defaultdict[str, dict[str, dict]] = defaultdict(dict)
+    for artifact in real_artifacts:
+        for effect in artifact["effects"]:
+            effect_type = effect.get("type")
+            if not effect_type:
+                continue
+            sid = effect["sid"]
+            by_type[effect_type][sid] = {
+                "sid": sid,
+                "value_min": effect.get("value_min"),
+                "value_max": effect.get("value_max"),
+                "positive": effect.get("positive"),
+                "localization_sid": effect.get("localization_sid"),
+                "text": effect.get("text"),
+                "permanent": effect.get("permanent"),
+                "source": effect.get("source"),
+            }
+
+    return {
+        effect_type: {
+            "unique_effects": len(rows),
+            "values": sorted(rows.values(), key=lambda row: row["sid"].lower()),
+        }
+        for effect_type, rows in sorted(by_type.items())
+    }
+
+
 def discover_effect_files(root: Path, explicit: list[Path]) -> list[Path]:
     files = [p for p in explicit if p.exists()]
     if root.exists():
@@ -227,6 +261,8 @@ def main() -> int:
         effect["type"] for artifact in real_artifacts for effect in artifact["effects"] if effect["type"]
     )
 
+    effect_type_values = build_effect_type_values(real_artifacts)
+
     report = {
         "summary": {
             "artifact_prototypes": len(artifact_prototypes),
@@ -239,6 +275,7 @@ def main() -> int:
         },
         "effect_type_usage_real_artifacts": dict(real_effect_types.most_common()),
         "effect_sid_usage_real_artifacts": dict(real_effect_sids.most_common()),
+        "effect_type_values": effect_type_values,
         "unresolved_effects": {
             sid: {"uses": count, "artifacts": usage[sid]}
             for sid, count in unresolved.most_common()
@@ -255,10 +292,19 @@ def main() -> int:
         f"Artifacts: {len(real_artifacts)} | unique effects: {len(real_effect_sids)} | "
         f"effect prototypes loaded: {len(effects)} | unresolved: {report['summary']['unresolved_effect_sids']}"
     )
-    print("\nEffect types:")
-    if real_effect_types:
-        for effect_type, count in real_effect_types.most_common():
-            print(f"  {effect_type}: {count}")
+    print("\nEffect type / value tiers:")
+    if effect_type_values:
+        for effect_type, group in effect_type_values.items():
+            print(f"\n  {effect_type} ({group['unique_effects']} unique effects)")
+            for effect in group["values"]:
+                value = effect["value_min"]
+                if effect["value_max"] and effect["value_max"] != value:
+                    value = f"{value} .. {effect['value_max']}"
+                print(
+                    f"    {effect['sid']}: {value}"
+                    f" | {effect['positive'] or '-'}"
+                    f" | loc={effect['localization_sid'] or '-'}"
+                )
     else:
         print("  (no EffectPrototype definitions resolved yet)")
 
