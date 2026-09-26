@@ -137,6 +137,7 @@ def build_content_pack_models(
     if include_signatures:
         _add_dlc_signatures(result, weapons)
     for model in result.values():
+        model.configure_general_setups_for_effect("BPRUE_AddBurstFireModeEffect", FireQueueCount=3)
         model.validate()
     return result
 
