@@ -120,21 +120,21 @@ def load_content_pack_armors() -> list[dict]:
         text = source.read_text(encoding="utf-8")
         for armor in armors:
             sid = armor["sid"]
-            start_match = re.search(rf"(?m)^\\s*{re.escape(sid)}\\s*:\\s*struct\\.begin[^\\n]*$", text)
+            start_match = re.search(rf"(?m)^\s*{re.escape(sid)}\s*:\s*struct\.begin[^\n]*$", text)
             if not start_match:
                 raise ValueError(f"{pack}: armor prototype {sid} not found in {source}")
             start = start_match.start(); depth = 0; end = None
-            for match in re.finditer(r"struct\\.begin|struct\\.end", text[start:]):
+            for match in re.finditer(r"struct\.begin|struct\.end", text[start:]):
                 depth += 1 if match.group(0) == "struct.begin" else -1
                 if depth == 0:
                     end = start + match.end(); break
             if end is None:
                 raise ValueError(f"{pack}: unterminated armor prototype {sid}")
             block = text[start:end]
-            array = re.search(r"UpgradePrototypeSIDs\\s*:\\s*struct\\.begin(.*?)struct\\.end", block, re.S)
+            array = re.search(r"UpgradePrototypeSIDs\s*:\s*struct\.begin(.*?)struct\.end", block, re.S)
             if not array:
                 raise ValueError(f"{pack}: {sid} has no UpgradePrototypeSIDs array")
-            upgrades = re.findall(r"(?m)^\\s*\\[\\d+\\]\\s*=\\s*(\\S+)\\s*$", array.group(1))
+            upgrades = re.findall(r"(?m)^\s*\[\d+\]\s*=\s*(\S+)\s*$", array.group(1))
             if not upgrades:
                 raise ValueError(f"{pack}: {sid} has an empty UpgradePrototypeSIDs array")
             result.append({**armor, "pack": pack, "upgrades": upgrades})
@@ -403,12 +403,12 @@ def _vanilla_upgrade_sids_by_armor() -> dict[str, list[str]]:
 
 def render_armor_patch(upgrades: list[ArmorUpgradeDefinition], content_pack: str | None = None) -> str:
     by_armor: dict[str, list[ArmorUpgradeDefinition]] = {}
+    vanilla_by_armor = _vanilla_upgrade_sids_by_armor()
+    vanilla_by_armor.update({armor["sid"]: armor["upgrades"] for armor in load_content_pack_armors()})
     for upgrade in upgrades:
         if upgrade.content_pack != content_pack:
             continue
         by_armor.setdefault(upgrade.armor_sid, []).append(upgrade)
-        vanilla_by_armor = _vanilla_upgrade_sids_by_armor()
-        vanilla_by_armor.update({armor["sid"]: armor["upgrades"] for armor in load_content_pack_armors()})
     lines = [
         "// -----------------------------------------------------------------------------",
         "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND",
