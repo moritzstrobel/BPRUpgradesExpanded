@@ -1,24 +1,133 @@
 {
   "_comment": "Machine-gun specialization module names and descriptions.",
   "entries": [
-    {"sid":"sid_bprue_mg_high_output_name","languages":{"English":"High-Output System","Russian":"Система высокой производительности"}},
-    {"sid":"sid_bprue_mg_high_output_description","languages":{"English":"Increases cyclic rate for greater sustained fire output, at the cost of stronger recoil and increased weapon wear.","Russian":"Повышает темп стрельбы для большей плотности длительного огня ценой усиленной отдачи и повышенного износа оружия."}},
-    {"sid":"sid_bprue_mg_controlled_fire_name","languages":{"English":"Controlled Fire System","Russian":"Система контролируемого огня"}},
-    {"sid":"sid_bprue_mg_controlled_fire_description","languages":{"English":"Slows the firing cycle in exchange for improved recoil control and tighter dispersion during sustained fire.","Russian":"Снижает темп стрельбы в обмен на лучший контроль отдачи и меньший разброс при длительном огне."}},
-
-    {"sid":"sid_bprue_mg_reinforced_barrel_name","languages":{"English":"Reinforced Barrel","Russian":"Усиленный ствол"}},
-    {"sid":"sid_bprue_mg_reinforced_barrel_description","languages":{"English":"Reinforces the barrel assembly for greater durability and improved precision, at the cost of additional weight.","Russian":"Усиливает конструкцию ствола, повышая долговечность и точность ценой дополнительного веса."}},
-    {"sid":"sid_bprue_mg_stabilized_barrel_name","languages":{"English":"Stabilized Barrel","Russian":"Стабилизированный ствол"}},
-    {"sid":"sid_bprue_mg_stabilized_barrel_description","languages":{"English":"Adds a heavier stabilized barrel assembly for improved recoil control and faster recovery between shots.","Russian":"Устанавливает более тяжёлый стабилизированный ствол для лучшего контроля отдачи и более быстрого восстановления между выстрелами."}},
-
-    {"sid":"sid_bprue_mg_quick_change_feed_name","languages":{"English":"Quick-Change Feed","Russian":"Система быстрой подачи"}},
-    {"sid":"sid_bprue_mg_quick_change_feed_description","languages":{"English":"Optimizes the feed system for faster reloads, sacrificing component service life for rapid ammunition changes.","Russian":"Оптимизирует систему подачи для более быстрой перезарядки, сокращая ресурс компонентов ради быстрой смены боекомплекта."}},
-    {"sid":"sid_bprue_mg_reinforced_feed_name","languages":{"English":"Reinforced Feed System","Russian":"Усиленная система подачи"}},
-    {"sid":"sid_bprue_mg_reinforced_feed_description","languages":{"English":"Reinforces the feed mechanism to reduce wear during sustained firing, at the cost of slower reloads.","Russian":"Усиливает механизм подачи, снижая износ при длительной стрельбе ценой более медленной перезарядки."}},
-
-    {"sid":"sid_bprue_mg_mobile_gunner_name","languages":{"English":"Mobile Gunner Configuration","Russian":"Мобильная пулемётная компоновка"}},
-    {"sid":"sid_bprue_mg_mobile_gunner_description","languages":{"English":"Reduces weight and improves aiming speed for mobile operation, at the cost of increased recoil.","Russian":"Снижает вес и ускоряет прицеливание для мобильного применения ценой повышенной отдачи."}},
-    {"sid":"sid_bprue_mg_supported_fire_name","languages":{"English":"Supported Fire Configuration","Russian":"Компоновка опорного огня"}},
-    {"sid":"sid_bprue_mg_supported_fire_description","languages":{"English":"Prioritizes stability and precision during sustained fire with a heavier support-oriented configuration.","Russian":"Отдаёт приоритет стабильности и точности при длительном огне за счёт более тяжёлой компоновки для огневой поддержки."}}
+    {
+      "sid": "sid_bprue_mg_high_output_name",
+      "languages": {
+        "English": "High-Output System",
+        "Russian": "Система высокой производительности",
+        "Chinese": "高输出系统"
+      }
+    },
+    {
+      "sid": "sid_bprue_mg_high_output_description",
+      "languages": {
+        "English": "Increases cyclic rate for greater sustained fire output, at the cost of stronger recoil and increased weapon wear.",
+        "Russian": "Повышает темп стрельбы для большей плотности длительного огня ценой усиленной отдачи и повышенного износа оружия.",
+        "Chinese": "提升射速以增强持续火力输出，但后坐力增强、武器磨损增加。"
+      }
+    },
+    {
+      "sid": "sid_bprue_mg_controlled_fire_name",
+      "languages": {
+        "English": "Controlled Fire System",
+        "Russian": "Система контролируемого огня",
+        "Chinese": "可控射击系统"
+      }
+    },
+    {
+      "sid": "sid_bprue_mg_controlled_fire_description",
+      "languages": {
+        "English": "Slows the firing cycle in exchange for improved recoil control and tighter dispersion during sustained fire.",
+        "Russian": "Снижает темп стрельбы в обмен на лучший контроль отдачи и меньший разброс при длительном огне.",
+        "Chinese": "降低射击循环速度，以换取更好的后坐力控制与持续射击时更小的散布。"
+      }
+    },
+    {
+      "sid": "sid_bprue_mg_reinforced_barrel_name",
+      "languages": {
+        "English": "Reinforced Barrel",
+        "Russian": "Усиленный ствол",
+        "Chinese": "强化枪管"
+      }
+    },
+    {
+      "sid": "sid_bprue_mg_reinforced_barrel_description",
+      "languages": {
+        "English": "Reinforces the barrel assembly for greater durability and improved precision, at the cost of additional weight.",
+        "Russian": "Усиливает конструкцию ствола, повышая долговечность и точность ценой дополнительного веса.",
+        "Chinese": "强化枪管组件，提升耐久度与精度，但重量增加。"
+      }
+    },
+    {
+      "sid": "sid_bprue_mg_stabilized_barrel_name",
+      "languages": {
+        "English": "Stabilized Barrel",
+        "Russian": "Стабилизированный ствол",
+        "Chinese": "稳定化枪管"
+      }
+    },
+    {
+      "sid": "sid_bprue_mg_stabilized_barrel_description",
+      "languages": {
+        "English": "Adds a heavier stabilized barrel assembly for improved recoil control and faster recovery between shots.",
+        "Russian": "Устанавливает более тяжёлый стабилизированный ствол для лучшего контроля отдачи и более быстрого восстановления между выстрелами.",
+        "Chinese": "换装更重的稳定化枪管组件，提升后坐力控制并加快射击间的恢复。"
+      }
+    },
+    {
+      "sid": "sid_bprue_mg_quick_change_feed_name",
+      "languages": {
+        "English": "Quick-Change Feed",
+        "Russian": "Система быстрой подачи",
+        "Chinese": "快速更换供弹系统"
+      }
+    },
+    {
+      "sid": "sid_bprue_mg_quick_change_feed_description",
+      "languages": {
+        "English": "Optimizes the feed system for faster reloads, sacrificing component service life for rapid ammunition changes.",
+        "Russian": "Оптимизирует систему подачи для более быстрой перезарядки, сокращая ресурс компонентов ради быстрой смены боекомплекта.",
+        "Chinese": "优化供弹系统以加快装填，但牺牲部件寿命以换取快速换弹。"
+      }
+    },
+    {
+      "sid": "sid_bprue_mg_reinforced_feed_name",
+      "languages": {
+        "English": "Reinforced Feed System",
+        "Russian": "Усиленная система подачи",
+        "Chinese": "强化供弹系统"
+      }
+    },
+    {
+      "sid": "sid_bprue_mg_reinforced_feed_description",
+      "languages": {
+        "English": "Reinforces the feed mechanism to reduce wear during sustained firing, at the cost of slower reloads.",
+        "Russian": "Усиливает механизм подачи, снижая износ при длительной стрельбе ценой более медленной перезарядки.",
+        "Chinese": "强化供弹机构，降低持续射击时的磨损，但装填变慢。"
+      }
+    },
+    {
+      "sid": "sid_bprue_mg_mobile_gunner_name",
+      "languages": {
+        "English": "Mobile Gunner Configuration",
+        "Russian": "Мобильная пулемётная компоновка",
+        "Chinese": "机动机枪手配置"
+      }
+    },
+    {
+      "sid": "sid_bprue_mg_mobile_gunner_description",
+      "languages": {
+        "English": "Reduces weight and improves aiming speed for mobile operation, at the cost of increased recoil.",
+        "Russian": "Снижает вес и ускоряет прицеливание для мобильного применения ценой повышенной отдачи.",
+        "Chinese": "降低重量并提升瞄准速度以适应机动作战，但后坐力增加。"
+      }
+    },
+    {
+      "sid": "sid_bprue_mg_supported_fire_name",
+      "languages": {
+        "English": "Supported Fire Configuration",
+        "Russian": "Компоновка опорного огня",
+        "Chinese": "支援射击配置"
+      }
+    },
+    {
+      "sid": "sid_bprue_mg_supported_fire_description",
+      "languages": {
+        "English": "Prioritizes stability and precision during sustained fire with a heavier support-oriented configuration.",
+        "Russian": "Отдаёт приоритет стабильности и точности при длительном огне за счёт более тяжёлой компоновки для огневой поддержки.",
+        "Chinese": "采用更重的支援型配置，优先提升持续射击时的稳定性与精度。"
+      }
+    }
   ]
 }

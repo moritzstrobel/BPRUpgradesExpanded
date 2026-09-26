@@ -1,7 +1,21 @@
 {
   "_comment": "Kora pistol family signature module localization.",
   "entries": [
-    {"sid":"sid_bprue_pistol_heavy_slide_name","languages":{"English":"Heavy Slide Assembly","Russian":"Утяжелённый затвор"}},
-    {"sid":"sid_bprue_pistol_heavy_slide_description","languages":{"English":"A reinforced heavy-slide package that improves recoil control, recoil recovery and durability at the cost of slower aiming.","Russian":"Усиленный комплект с тяжелым затвором, улучшающий контроль отдачи, скорость возврата на линию прицеливания и долговечность, но замедляющий процесс прицеливания."}}
+    {
+      "sid": "sid_bprue_pistol_heavy_slide_name",
+      "languages": {
+        "English": "Heavy Slide Assembly",
+        "Russian": "Утяжелённый затвор",
+        "Chinese": "重型套筒组件"
+      }
+    },
+    {
+      "sid": "sid_bprue_pistol_heavy_slide_description",
+      "languages": {
+        "English": "A reinforced heavy-slide package that improves recoil control, recoil recovery and durability at the cost of slower aiming.",
+        "Russian": "Усиленный комплект с тяжелым затвором, улучшающий контроль отдачи, скорость возврата на линию прицеливания и долговечность, но замедляющий процесс прицеливания.",
+        "Chinese": "强化重型套筒组件，提升后坐力控制、后坐力恢复与耐久度，但瞄准速度变慢。"
+      }
+    }
   ]
 }

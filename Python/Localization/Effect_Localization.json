@@ -1,21 +1,133 @@
 {
   "_comment": "Shared UI labels for BPRUE EffectPrototypes. LocalizationSID values in CFG omit the sid_effects_ prefix and _name suffix used by the localization asset.",
   "entries": [
-    {"sid":"sid_effects_bprue_recoil_name","languages":{"English":"Recoil","Russian":"Отдача"}},
-    {"sid":"sid_effects_bprue_aiming_speed_name","languages":{"English":"Aiming speed","Russian":"Скорость прицеливания"}},
-    {"sid":"sid_effects_bprue_aiming_movement_name","languages":{"English":"Aiming movement speed","Russian":"Скорость движения в прицеле"}},
-    {"sid":"sid_effects_bprue_weight_name","languages":{"English":"Weapon weight","Russian":"Вес оружия"}},
-    {"sid":"sid_effects_bprue_accuracy_name","languages":{"English":"Accuracy","Russian":"Точность"}},
-    {"sid":"sid_effects_bprue_dispersion_name","languages":{"English":"Dispersion","Russian":"Разброс"}},
-    {"sid":"sid_effects_bprue_recoil_recovery_name","languages":{"English":"Recoil recovery","Russian":"Восстановление после отдачи"}},
-    {"sid":"sid_effects_bprue_aiming_stability_name","languages":{"English":"Aiming stability","Russian":"Стабильность прицеливания"}},
-    {"sid":"sid_effects_bprue_weapon_wear_name","languages":{"English":"Weapon wear","Russian":"Износ оружия"}},
-    {"sid":"sid_effects_bprue_pellet_count_name","languages":{"English":"Pellet count","Russian":"Количество дробин"}},
-    {"sid":"sid_effects_bprue_effective_range_name","languages":{"English":"Effective range","Russian":"Эффективная дальность"}},
-    {"sid":"sid_effects_bprue_damage_name","languages":{"English":"Damage","Russian":"Урон"}},
-    {"sid":"sid_effects_bprue_armor_piercing_name","languages":{"English":"Armor penetration","Russian":"Бронепробиваемость"}},
-    {"sid":"sid_effects_bprue_durability_name","languages":{"English":"Durability","Russian":"Прочность"}},
-    {"sid":"sid_effects_bprue_fire_modes_burst_auto_name","languages":{"English":"Fire modes: Burst / Automatic","Russian":"Режимы огня: очередь / автоматический"}},
-    {"sid":"sid_effects_bprue_fire_modes_semi_auto_name","languages":{"English":"Fire mode: Semi-Automatic","Russian":"Режим огня: одиночный"}}
+    {
+      "sid": "sid_effects_bprue_recoil_name",
+      "languages": {
+        "English": "Recoil",
+        "Russian": "Отдача",
+        "Chinese": "后坐力"
+      }
+    },
+    {
+      "sid": "sid_effects_bprue_aiming_speed_name",
+      "languages": {
+        "English": "Aiming speed",
+        "Russian": "Скорость прицеливания",
+        "Chinese": "瞄准速度"
+      }
+    },
+    {
+      "sid": "sid_effects_bprue_aiming_movement_name",
+      "languages": {
+        "English": "Aiming movement speed",
+        "Russian": "Скорость движения в прицеле",
+        "Chinese": "瞄准时移动速度"
+      }
+    },
+    {
+      "sid": "sid_effects_bprue_weight_name",
+      "languages": {
+        "English": "Weapon weight",
+        "Russian": "Вес оружия",
+        "Chinese": "武器重量"
+      }
+    },
+    {
+      "sid": "sid_effects_bprue_accuracy_name",
+      "languages": {
+        "English": "Accuracy",
+        "Russian": "Точность",
+        "Chinese": "精度"
+      }
+    },
+    {
+      "sid": "sid_effects_bprue_dispersion_name",
+      "languages": {
+        "English": "Dispersion",
+        "Russian": "Разброс",
+        "Chinese": "散布"
+      }
+    },
+    {
+      "sid": "sid_effects_bprue_recoil_recovery_name",
+      "languages": {
+        "English": "Recoil recovery",
+        "Russian": "Восстановление после отдачи",
+        "Chinese": "后坐力恢复"
+      }
+    },
+    {
+      "sid": "sid_effects_bprue_aiming_stability_name",
+      "languages": {
+        "English": "Aiming stability",
+        "Russian": "Стабильность прицеливания",
+        "Chinese": "瞄准稳定性"
+      }
+    },
+    {
+      "sid": "sid_effects_bprue_weapon_wear_name",
+      "languages": {
+        "English": "Weapon wear",
+        "Russian": "Износ оружия",
+        "Chinese": "武器磨损"
+      }
+    },
+    {
+      "sid": "sid_effects_bprue_pellet_count_name",
+      "languages": {
+        "English": "Pellet count",
+        "Russian": "Количество дробин",
+        "Chinese": "弹丸数量"
+      }
+    },
+    {
+      "sid": "sid_effects_bprue_effective_range_name",
+      "languages": {
+        "English": "Effective range",
+        "Russian": "Эффективная дальность",
+        "Chinese": "有效射程"
+      }
+    },
+    {
+      "sid": "sid_effects_bprue_damage_name",
+      "languages": {
+        "English": "Damage",
+        "Russian": "Урон",
+        "Chinese": "伤害"
+      }
+    },
+    {
+      "sid": "sid_effects_bprue_armor_piercing_name",
+      "languages": {
+        "English": "Armor penetration",
+        "Russian": "Бронепробиваемость",
+        "Chinese": "护甲穿透"
+      }
+    },
+    {
+      "sid": "sid_effects_bprue_durability_name",
+      "languages": {
+        "English": "Durability",
+        "Russian": "Прочность",
+        "Chinese": "耐久度"
+      }
+    },
+    {
+      "sid": "sid_effects_bprue_fire_modes_burst_auto_name",
+      "languages": {
+        "English": "Fire modes: Burst / Automatic",
+        "Russian": "Режимы огня: очередь / автоматический",
+        "Chinese": "射击模式：点射 / 全自动"
+      }
+    },
+    {
+      "sid": "sid_effects_bprue_fire_modes_semi_auto_name",
+      "languages": {
+        "English": "Fire mode: Semi-Automatic",
+        "Russian": "Режим огня: одиночный",
+        "Chinese": "射击模式：半自动"
+      }
+    }
   ]
 }
