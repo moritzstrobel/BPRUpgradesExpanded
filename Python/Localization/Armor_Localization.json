@@ -1078,6 +1078,90 @@
         "English": "Enhanced filtration improves chemical and radiation protection at the cost of helmet durability.",
         "Russian": "Улучшенная фильтрация повышает химическую и радиационную защиту ценой прочности шлема."
       }
+    },
+    {
+      "sid": "sid_bprue_armor_generic_hemostatic_thermal_name",
+      "languages": {
+        "English": "Hemostatic Lining - Thermal Trade-off",
+        "Russian": "Гемостатическая подкладка — термозащита"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_generic_hemostatic_thermal_helmet_description",
+      "languages": {
+        "English": "Hemostatic lining improves bleeding recovery at the cost of thermal protection on this helmet.",
+        "Russian": "Гемостатическая подкладка улучшает остановку кровотечения ценой снижения термозащиты для этого предмета."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_generic_hemostatic_thermal_suit_description",
+      "languages": {
+        "English": "Hemostatic lining improves bleeding recovery at the cost of thermal protection on this suit.",
+        "Russian": "Гемостатическая подкладка улучшает остановку кровотечения ценой снижения термозащиты для этого предмета."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_generic_hemostatic_thermal_full_body_suit_description",
+      "languages": {
+        "English": "Hemostatic lining improves bleeding recovery at the cost of thermal protection on this full-body suit.",
+        "Russian": "Гемостатическая подкладка улучшает остановку кровотечения ценой снижения термозащиты для этого предмета."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_generic_hemostatic_chemical_name",
+      "languages": {
+        "English": "Hemostatic Lining - Chemical Trade-off",
+        "Russian": "Гемостатическая подкладка — химзащита"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_generic_hemostatic_chemical_helmet_description",
+      "languages": {
+        "English": "Hemostatic lining improves bleeding recovery at the cost of chemical protection on this helmet.",
+        "Russian": "Гемостатическая подкладка улучшает остановку кровотечения ценой снижения химической защиты для этого предмета."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_generic_hemostatic_chemical_suit_description",
+      "languages": {
+        "English": "Hemostatic lining improves bleeding recovery at the cost of chemical protection on this suit.",
+        "Russian": "Гемостатическая подкладка улучшает остановку кровотечения ценой снижения химической защиты для этого предмета."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_generic_hemostatic_chemical_full_body_suit_description",
+      "languages": {
+        "English": "Hemostatic lining improves bleeding recovery at the cost of chemical protection on this full-body suit.",
+        "Russian": "Гемостатическая подкладка улучшает остановку кровотечения ценой снижения химической защиты для этого предмета."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_generic_hemostatic_electrical_name",
+      "languages": {
+        "English": "Hemostatic Lining - Electrical Trade-off",
+        "Russian": "Гемостатическая подкладка — электрозащита"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_generic_hemostatic_electrical_helmet_description",
+      "languages": {
+        "English": "Hemostatic lining improves bleeding recovery at the cost of electrical protection on this helmet.",
+        "Russian": "Гемостатическая подкладка улучшает остановку кровотечения ценой снижения электрозащиты для этого предмета."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_generic_hemostatic_electrical_suit_description",
+      "languages": {
+        "English": "Hemostatic lining improves bleeding recovery at the cost of electrical protection on this suit.",
+        "Russian": "Гемостатическая подкладка улучшает остановку кровотечения ценой снижения электрозащиты для этого предмета."
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_generic_hemostatic_electrical_full_body_suit_description",
+      "languages": {
+        "English": "Hemostatic lining improves bleeding recovery at the cost of electrical protection on this full-body suit.",
+        "Russian": "Гемостатическая подкладка улучшает остановку кровотечения ценой снижения электрозащиты для этого предмета."
+      }
     }
   ]
 }
