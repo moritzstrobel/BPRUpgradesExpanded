@@ -6,7 +6,7 @@
       "languages": {
         "English": "7.62 mm Power Conversion",
         "Russian": "Перевод на калибр 7,62х54 мм",
-        "Chinese": "7.62 毫米强力转换"
+        "ChineseSimplified": "7.62 毫米强力转换"
       }
     },
     {
@@ -14,7 +14,7 @@
       "languages": {
         "English": "Converts the weapon to the game's 7.62 mm sniper cartridge. Increases damage, recoil and weapon wear. This specialization is permanent.",
         "Russian": "Переводит оружие на боеприпасы 7,62х54 мм. Увеличивает урон, отдачу и износ оружия. Эта специализация является постоянной.",
-        "Chinese": "将武器转换为游戏中的 7.62 毫米狙击弹。提升伤害、后坐力与武器磨损。此专精为永久性。"
+        "ChineseSimplified": "将武器转换为游戏中的 7.62 毫米狙击弹。提升伤害、后坐力与武器磨损。此专精为永久性。"
       }
     },
     {
@@ -22,7 +22,7 @@
       "languages": {
         "English": "7.62x39 Assault Conversion",
         "Russian": "Переделка под патрон 7,62x39 мм",
-        "Chinese": "7.62x39 突击转换"
+        "ChineseSimplified": "7.62x39 突击转换"
       }
     },
     {
@@ -30,7 +30,7 @@
       "languages": {
         "English": "Converts the weapon to 7.62x39 mm ammunition for greater close- to mid-range stopping power, at the cost of increased recoil and a less effective trajectory. This specialization is permanent.",
         "Russian": "Переводит оружие на боеприпасы 7,62x39 мм для повышения останавливающего действия на ближней и средней дистанции ценой большей отдачи и менее настильной траектории. Эта специализация является постоянной.",
-        "Chinese": "将武器转换为 7.62x39 毫米弹药，提升中近距离的停止作用，但后坐力增加、弹道表现下降。此专精为永久性。"
+        "ChineseSimplified": "将武器转换为 7.62x39 毫米弹药，提升中近距离的停止作用，但后坐力增加、弹道表现下降。此专精为永久性。"
       }
     },
     {
@@ -38,7 +38,7 @@
       "languages": {
         "English": "7.62x51 mm NATO Conversion",
         "Russian": "Перевод на калибр 7,62x51 мм НАТО",
-        "Chinese": "7.62x51 毫米北约转换"
+        "ChineseSimplified": "7.62x51 毫米北约转换"
       }
     },
     {
@@ -46,7 +46,7 @@
       "languages": {
         "English": "Converts the weapon to 7.62x51 mm NATO ammunition. Increases damage, recoil and weapon wear. This specialization is permanent.",
         "Russian": "Переводит оружие на боеприпасы 7,62x51 мм НАТО. Увеличивает урон, отдачу и износ оружия. Эта специализация является постоянной.",
-        "Chinese": "将武器转换为 7.62x51 毫米北约弹药。提升伤害、后坐力与武器磨损。此专精为永久性。"
+        "ChineseSimplified": "将武器转换为 7.62x51 毫米北约弹药。提升伤害、后坐力与武器磨损。此专精为永久性。"
       }
     },
     {
@@ -54,7 +54,7 @@
       "languages": {
         "English": "Permanently converts the weapon from the game's 7.62 mm sniper cartridge to 7.62x51 mm NATO ammunition. Recoil is reduced by 10%, but damage is reduced by 10%. This specialization cannot be combined with another caliber conversion.",
         "Russian": "Навсегда переводит оружие с снайперского патрона 7,62х54 мм на боеприпасы 7,62x51 мм НАТО. Отдача снижается на 10%, но урон также снижается на 10%. Эту специализацию нельзя совместить с другой конверсией калибра.",
-        "Chinese": "将武器从游戏中的 7.62 毫米狙击弹永久转换为 7.62x51 毫米北约弹药。后坐力降低 10%，但伤害降低 10%。此专精无法与其他口径转换叠加。"
+        "ChineseSimplified": "将武器从游戏中的 7.62 毫米狙击弹永久转换为 7.62x51 毫米北约弹药。后坐力降低 10%，但伤害降低 10%。此专精无法与其他口径转换叠加。"
       }
     },
     {
@@ -62,7 +62,7 @@
       "languages": {
         "English": "Permanently converts the weapon from 7.62x51 mm NATO to the game's 7.62 mm sniper cartridge. Damage increases by 10% and armor penetration by 15%, but recoil and weapon wear increase by 15%. This specialization cannot be combined with another caliber conversion.",
         "Russian": "Навсегда переводит оружие с 7,62x51 мм НАТО на снайперский патрон 7,62х54 мм. Урон увеличивается на 10%, бронепробиваемость — на 15%, но отдача и износ оружия также увеличиваются на 15%. Эту специализацию нельзя совместить с другой конверсией калибра.",
-        "Chinese": "将武器从 7.62x51 毫米北约永久转换为游戏中的 7.62 毫米狙击弹。伤害提升 10%、护甲穿透提升 15%，但后坐力与武器磨损增加 15%。此专精无法与其他口径转换叠加。"
+        "ChineseSimplified": "将武器从 7.62x51 毫米北约永久转换为游戏中的 7.62 毫米狙击弹。伤害提升 10%、护甲穿透提升 15%，但后坐力与武器磨损增加 15%。此专精无法与其他口径转换叠加。"
       }
     },
     {
@@ -70,7 +70,7 @@
       "languages": {
         "English": "Competition Reload System",
         "Russian": "Спортивная система перезарядки",
-        "Chinese": "竞技装填系统"
+        "ChineseSimplified": "竞技装填系统"
       }
     },
     {
@@ -78,7 +78,7 @@
       "languages": {
         "English": "Optimizes magazine handling for 20% faster reloads, at the cost of 15% increased recoil. Choosing this reload specialization is permanent.",
         "Russian": "Оптимизирует работу с магазином, ускоряя перезарядку на 20%, но увеличивая отдачу на 15%. Выбор этой специализации перезарядки необратим.",
-        "Chinese": "优化弹匣操作，使装填速度提升 20%，但后坐力增加 15%。选择此装填专精为永久性。"
+        "ChineseSimplified": "优化弹匣操作，使装填速度提升 20%，但后坐力增加 15%。选择此装填专精为永久性。"
       }
     },
     {
@@ -86,7 +86,7 @@
       "languages": {
         "English": "Reinforced Feed System",
         "Russian": "Усиленная система подачи",
-        "Chinese": "强化供弹系统"
+        "ChineseSimplified": "强化供弹系统"
       }
     },
     {
@@ -94,7 +94,7 @@
       "languages": {
         "English": "A reinforced feed setup provides 10% faster reloads and reduces weapon wear by 20%, but slows the firing cycle by 5%. Choosing this reload specialization is permanent.",
         "Russian": "Усиленная система подачи ускоряет перезарядку на 10% и снижает износ оружия на 20%, но замедляет цикл стрельбы на 5%. Выбор этой специализации перезарядки необратим.",
-        "Chinese": "强化供弹配置使装填速度提升 10%、武器磨损降低 20%，但射击循环速度降低 5%。选择此装填专精为永久性。"
+        "ChineseSimplified": "强化供弹配置使装填速度提升 10%、武器磨损降低 20%，但射击循环速度降低 5%。选择此装填专精为永久性。"
       }
     },
     {
@@ -102,7 +102,7 @@
       "languages": {
         "English": "High-Speed Operating System",
         "Russian": "Высокоскоростная автоматика",
-        "Chinese": "高速操作系统"
+        "ChineseSimplified": "高速操作系统"
       }
     },
     {
@@ -110,7 +110,7 @@
       "languages": {
         "English": "Pushes the action for 20% faster fire rate, but increases recoil by 15% and weapon wear by 20%. Choosing this fire-rate specialization is permanent.",
         "Russian": "Ускоряет работу автоматики, повышая темп стрельбы на 20%, но увеличивая отдачу на 15% и износ оружия на 20%. Выбор этой специализации на скорострельность необратим.",
-        "Chinese": "强化自动机，使射速提升 20%，但后坐力增加 15%、武器磨损增加 20%。选择此射速专精为永久性。"
+        "ChineseSimplified": "强化自动机，使射速提升 20%，但后坐力增加 15%、武器磨损增加 20%。选择此射速专精为永久性。"
       }
     },
     {
@@ -118,7 +118,7 @@
       "languages": {
         "English": "Tuned Gas System",
         "Russian": "Настроенная газоотводная система",
-        "Chinese": "调校导气系统"
+        "ChineseSimplified": "调校导气系统"
       }
     },
     {
@@ -126,7 +126,7 @@
       "languages": {
         "English": "Provides 10% faster fire rate, 10% lower recoil and 20% faster recoil recovery, at the cost of 10% increased weapon wear. Choosing this fire-rate specialization is permanent.",
         "Russian": "Повышает темп стрельбы на 10%, снижает отдачу на 10% и ускоряет восстановление после отдачи на 20%, но увеличивает износ оружия на 10%. Выбор этой специализации на скорострельность необратим.",
-        "Chinese": "射速提升 10%、后坐力降低 10%、后坐力恢复加快 20%，但武器磨损增加 10%。选择此射速专精为永久性。"
+        "ChineseSimplified": "射速提升 10%、后坐力降低 10%、后坐力恢复加快 20%，但武器磨损增加 10%。选择此射速专精为永久性。"
       }
     },
     {
@@ -134,7 +134,7 @@
       "languages": {
         "English": "Burst Fire Control",
         "Russian": "Управление стрельбой очередями",
-        "Chinese": "点射击发控制"
+        "ChineseSimplified": "点射击发控制"
       }
     },
     {
@@ -142,7 +142,7 @@
       "languages": {
         "English": "Adds a three-round burst mode while retaining semi-automatic and automatic fire. Recoil is reduced by 5%, but weapon wear increases by 10%. Choosing this fire-control specialization is permanent.",
         "Russian": "Добавляет режим отсечки по три выстрела, сохраняя одиночный и автоматический огонь. Отдача снижается на 5%, но износ оружия увеличивается на 10%. Выбор этой специализации по управлению огнем является необратимым.",
-        "Chinese": "在保留半自动与全自动射击的同时加入三发点射模式。后坐力降低 5%，但武器磨损增加 10%。选择此击发控制专精为永久性。"
+        "ChineseSimplified": "在保留半自动与全自动射击的同时加入三发点射模式。后坐力降低 5%，但武器磨损增加 10%。选择此击发控制专精为永久性。"
       }
     },
     {
@@ -150,7 +150,7 @@
       "languages": {
         "English": "Precision Fire Control",
         "Russian": "Точный ударно-спусковой механизм",
-        "Chinese": "精准击发控制"
+        "ChineseSimplified": "精准击发控制"
       }
     },
     {
@@ -158,7 +158,7 @@
       "languages": {
         "English": "Reconfigures the fire-control group for semi-automatic fire only, removing automatic and burst modes. In exchange, damage is increased by 10% and armor penetration by 15%, while weapon wear increases by 20%. Choosing this fire-control specialization is permanent.",
         "Russian": "Перенастраивает ударно-спусковой механизм только на одиночный огонь, отключая автоматический режим и отсечку очереди. Взамен урон увеличивается на 10%, бронепробиваемость — на 15%, а износ оружия — на 20%. Выбор этой специализации по управлению огнем является необратимым.",
-        "Chinese": "将击发机构重新配置为仅支持半自动射击，移除全自动与点射模式。作为交换，伤害提升 10%、护甲穿透提升 15%，但武器磨损增加 20%。选择此击发控制专精为永久性。"
+        "ChineseSimplified": "将击发机构重新配置为仅支持半自动射击，移除全自动与点射模式。作为交换，伤害提升 10%、护甲穿透提升 15%，但武器磨损增加 20%。选择此击发控制专精为永久性。"
       }
     },
     {
@@ -166,7 +166,7 @@
       "languages": {
         "English": "Lightweight Stock",
         "Russian": "Облегчённый приклад",
-        "Chinese": "轻量化枪托"
+        "ChineseSimplified": "轻量化枪托"
       }
     },
     {
@@ -174,7 +174,7 @@
       "languages": {
         "English": "Optimizes the stock for fast handling: aiming is 15% faster and movement while aiming is 10% faster, at the cost of 15% increased recoil. Choosing this stock specialization is permanent.",
         "Russian": "Облегчает и ускоряет обращение с оружием: прицеливание ускоряется на 15%, а скорость движения при прицеливании — на 10%, но отдача увеличивается на 15%. Выбор этой специализации приклада является необратимым.",
-        "Chinese": "优化枪托以提升操作速度：瞄准速度提升 15%、瞄准时移动速度提升 10%，但后坐力增加 15%。选择此枪托专精为永久性。"
+        "ChineseSimplified": "优化枪托以提升操作速度：瞄准速度提升 15%、瞄准时移动速度提升 10%，但后坐力增加 15%。选择此枪托专精为永久性。"
       }
     },
     {
@@ -182,7 +182,7 @@
       "languages": {
         "English": "Stabilized Stock",
         "Russian": "Стабилизированный приклад",
-        "Chinese": "稳定化枪托"
+        "ChineseSimplified": "稳定化枪托"
       }
     },
     {
@@ -190,7 +190,7 @@
       "languages": {
         "English": "Improves firing control with 15% lower recoil and 20% faster recoil recovery, but aiming is 10% slower. Choosing this stock specialization is permanent.",
         "Russian": "Улучшает контроль при стрельбе: отдача снижается на 15%, восстановление после отдачи ускоряется на 20%, но прицеливание становится на 10% медленнее. Выбор этой специализации приклада является необратимым.",
-        "Chinese": "提升射击控制：后坐力降低 15%、后坐力恢复加快 20%，但瞄准速度降低 10%。选择此枪托专精为永久性。"
+        "ChineseSimplified": "提升射击控制：后坐力降低 15%、后坐力恢复加快 20%，但瞄准速度降低 10%。选择此枪托专精为永久性。"
       }
     },
     {
@@ -198,7 +198,7 @@
       "languages": {
         "English": "Marksman Stock",
         "Russian": "Снайперский приклад",
-        "Chinese": "精确射手枪托"
+        "ChineseSimplified": "精确射手枪托"
       }
     },
     {
@@ -206,7 +206,7 @@
       "languages": {
         "English": "Provides a steadier precision stance with 20% less horizontal and vertical idle sway and 15% lower maximum dispersion, but aiming is 15% slower. Choosing this stock specialization is permanent.",
         "Russian": "Обеспечивает более устойчивое прицеливание: горизонтальное и вертикальное покачивание снижается на 20%, а максимальный разброс — на 15%, но прицеливание становится на 15% медленнее. Выбор этой специализации приклада является необратимым.",
-        "Chinese": "提供更稳定的精准射击姿态：水平与垂直待机晃动降低 20%、最大散布降低 15%，但瞄准速度降低 15%。选择此枪托专精为永久性。"
+        "ChineseSimplified": "提供更稳定的精准射击姿态：水平与垂直待机晃动降低 20%、最大散布降低 15%，但瞄准速度降低 15%。选择此枪托专精为永久性。"
       }
     },
     {
@@ -214,7 +214,7 @@
       "languages": {
         "English": "Compact Weapon Conversion",
         "Russian": "Переделка оружия в компактный вариант",
-        "Chinese": "武器紧凑化转换"
+        "ChineseSimplified": "武器紧凑化转换"
       }
     },
     {
@@ -222,7 +222,7 @@
       "languages": {
         "English": "To make the Viper compact conversion possible, much of the original weapon has to go — including its installed upgrades. The conversion replaces the old gun with a new compact Viper that can be carried in the pistol slot. Say goodbye to the old one, and hello to the new.",
         "Russian": "Чтобы выполнить компактную переделку Viper, от исходного оружия придётся отказаться от многого — включая установленные улучшения. Переделка заменяет старое оружие новой компактной версией Viper, которую можно носить в слоте пистолета. Попрощайтесь со старой пушкой и познакомьтесь с новой.",
-        "Chinese": "为实现 Viper 的紧凑化转换，原武器的许多部件都必须舍弃——包括已安装的升级。转换会用一把可放入手枪槽位的全新紧凑型 Viper 替换旧枪。向旧的告别，迎接新的。"
+        "ChineseSimplified": "为实现 Viper 的紧凑化转换，原武器的许多部件都必须舍弃——包括已安装的升级。转换会用一把可放入手枪槽位的全新紧凑型 Viper 替换旧枪。向旧的告别，迎接新的。"
       }
     },
     {
@@ -230,7 +230,7 @@
       "languages": {
         "English": "Compact Weapon Conversion",
         "Russian": "Переделка оружия в компактный вариант",
-        "Chinese": "武器紧凑化转换"
+        "ChineseSimplified": "武器紧凑化转换"
       }
     },
     {
@@ -238,7 +238,7 @@
       "languages": {
         "English": "To make this compact conversion possible, much of the original weapon has to go — including its installed upgrades. The conversion replaces the old gun with a new compact version that can be carried in the pistol slot. Say goodbye to the old one, and hello to the new.",
         "Russian": "Чтобы выполнить эту компактную переделку, от исходного оружия придётся отказаться от многого — включая установленные улучшения. Переделка заменяет старое оружие новой компактной версией, которую можно носить в слоте пистолета. Попрощайтесь со старой пушкой и познакомьтесь с новой.",
-        "Chinese": "为实现此紧凑化转换，原武器的许多部件都必须舍弃——包括已安装的升级。转换会用一把可放入手枪槽位的全新紧凑型武器替换旧枪。向旧的告别，迎接新的。"
+        "ChineseSimplified": "为实现此紧凑化转换，原武器的许多部件都必须舍弃——包括已安装的升级。转换会用一把可放入手枪槽位的全新紧凑型武器替换旧枪。向旧的告别，迎接新的。"
       }
     },
     {
@@ -246,7 +246,7 @@
       "languages": {
         "English": "Quick-Draw Setup",
         "Russian": "Компоновка быстрого извлечения",
-        "Chinese": "快速拔枪配置"
+        "ChineseSimplified": "快速拔枪配置"
       }
     },
     {
@@ -254,7 +254,7 @@
       "languages": {
         "English": "Optimizes the SMG for immediate close-range readiness: aiming is 15% faster and movement while aiming improves by 10%, but reloads take 10% longer. Choosing this readiness specialization is permanent.",
         "Russian": "Оптимизирует пистолет-пулемёт для мгновенной готовности в ближнем бою: прицеливание ускоряется на 15%, скорость движения при прицеливании повышается на 10%, но перезарядка занимает на 10% больше времени. Выбор этой специализации готовности является необратимым.",
-        "Chinese": "将冲锋枪优化为即时近距应战状态：瞄准速度提升 15%、瞄准时移动速度提升 10%，但装填时间延长 10%。选择此备战专精为永久性。"
+        "ChineseSimplified": "将冲锋枪优化为即时近距应战状态：瞄准速度提升 15%、瞄准时移动速度提升 10%，但装填时间延长 10%。选择此备战专精为永久性。"
       }
     },
     {
@@ -262,7 +262,7 @@
       "languages": {
         "English": "Stabilized Setup",
         "Russian": "Стабилизированная компоновка",
-        "Chinese": "稳定化配置"
+        "ChineseSimplified": "稳定化配置"
       }
     },
     {
@@ -270,7 +270,7 @@
       "languages": {
         "English": "Prioritizes firing stability with 15% lower recoil and 20% faster recoil recovery, but aiming is 10% slower. Choosing this readiness specialization is permanent.",
         "Russian": "Повышает устойчивость при стрельбе: отдача снижается на 15%, восстановление после отдачи ускоряется на 20%, но прицеливание становится на 10% медленнее. Выбор этой специализации готовности является необратимым.",
-        "Chinese": "优先提升射击稳定性：后坐力降低 15%、后坐力恢复加快 20%，但瞄准速度降低 10%。选择此备战专精为永久性。"
+        "ChineseSimplified": "优先提升射击稳定性：后坐力降低 15%、后坐力恢复加快 20%，但瞄准速度降低 10%。选择此备战专精为永久性。"
       }
     },
     {
@@ -278,7 +278,7 @@
       "languages": {
         "English": "Competition Reload",
         "Russian": "Спортивная перезарядка",
-        "Chinese": "竞技装填"
+        "ChineseSimplified": "竞技装填"
       }
     },
     {
@@ -286,7 +286,7 @@
       "languages": {
         "English": "Maximizes magazine-change speed for 20% faster reloads, but the optimized setup makes aiming 10% slower. Choosing this reload specialization is permanent.",
         "Russian": "Максимально ускоряет смену магазина: перезарядка становится на 20% быстрее, но оптимизированная компоновка замедляет прицеливание на 10%. Выбор этой специализации перезарядки является необратимым.",
-        "Chinese": "最大化换弹速度，使装填提升 20%，但优化后的配置使瞄准速度降低 10%。选择此装填专精为永久性。"
+        "ChineseSimplified": "最大化换弹速度，使装填提升 20%，但优化后的配置使瞄准速度降低 10%。选择此装填专精为永久性。"
       }
     },
     {
@@ -294,7 +294,7 @@
       "languages": {
         "English": "Tactical Reload Setup",
         "Russian": "Тактическая система перезарядки",
-        "Chinese": "战术装填配置"
+        "ChineseSimplified": "战术装填配置"
       }
     },
     {
@@ -302,7 +302,7 @@
       "languages": {
         "English": "Balances reload speed and weapon handling: reloads are 10% faster and aiming is 15% faster, at the cost of 10% increased weapon wear per shot. Choosing this reload specialization is permanent.",
         "Russian": "Сочетает скорость перезарядки и удобство обращения: перезарядка ускоряется на 10%, прицеливание — на 15%, но износ оружия за выстрел увеличивается на 10%. Выбор этой специализации перезарядки является необратимым.",
-        "Chinese": "平衡装填速度与武器操作：装填提升 10%、瞄准速度提升 15%，但每发武器磨损增加 10%。选择此装填专精为永久性。"
+        "ChineseSimplified": "平衡装填速度与武器操作：装填提升 10%、瞄准速度提升 15%，但每发武器磨损增加 10%。选择此装填专精为永久性。"
       }
     },
     {
@@ -310,7 +310,7 @@
       "languages": {
         "English": "High-Speed Action",
         "Russian": "Высокоскоростная автоматика",
-        "Chinese": "高速自动机"
+        "ChineseSimplified": "高速自动机"
       }
     },
     {
@@ -318,7 +318,7 @@
       "languages": {
         "English": "Tunes the action for a 20% shorter firing cycle. The aggressive setup increases recoil by 15%, weapon wear by 20%, and reload time by 10%. Choosing this action specialization is permanent.",
         "Russian": "Настраивает автоматику на цикл стрельбы короче на 20%. Агрессивная настройка увеличивает отдачу на 15%, износ оружия на 20% и время перезарядки на 10%. Выбор этой специализации автоматики является необратимым.",
-        "Chinese": "将自动机调校为缩短 20% 的射击循环。激进配置使后坐力增加 15%、武器磨损增加 20%、装填时间增加 10%。选择此自动机专精为永久性。"
+        "ChineseSimplified": "将自动机调校为缩短 20% 的射击循环。激进配置使后坐力增加 15%、武器磨损增加 20%、装填时间增加 10%。选择此自动机专精为永久性。"
       }
     },
     {
@@ -326,7 +326,7 @@
       "languages": {
         "English": "Controlled Action",
         "Russian": "Контролируемая автоматика",
-        "Chinese": "可控自动机"
+        "ChineseSimplified": "可控自动机"
       }
     },
     {
@@ -334,7 +334,7 @@
       "languages": {
         "English": "Lengthens the firing cycle by 5% in exchange for 15% lower recoil, 20% faster recoil recovery and 10% faster reloads. Choosing this action specialization is permanent.",
         "Russian": "Удлиняет цикл стрельбы на 5%, взамен снижая отдачу на 15%, ускоряя восстановление после отдачи на 20% и перезарядку на 10%. Выбор этой специализации автоматики является необратимым.",
-        "Chinese": "射击循环延长 5%，以换取后坐力降低 15%、后坐力恢复加快 20%、装填提升 10%。选择此自动机专精为永久性。"
+        "ChineseSimplified": "射击循环延长 5%，以换取后坐力降低 15%、后坐力恢复加快 20%、装填提升 10%。选择此自动机专精为永久性。"
       }
     },
     {
@@ -342,7 +342,7 @@
       "languages": {
         "English": "9x18 mm Conversion",
         "Russian": "Переделка под патрон 9×18 мм",
-        "Chinese": "9x18 毫米转换"
+        "ChineseSimplified": "9x18 毫米转换"
       }
     },
     {
@@ -350,7 +350,7 @@
       "languages": {
         "English": "Permanently converts the weapon to 9x18 mm ammunition and replaces its compatible ammunition set. This caliber specialization cannot be combined with another caliber conversion.",
         "Russian": "Навсегда переводит оружие на боеприпасы 9x18 мм и заменяет набор совместимых боеприпасов. Эту специализацию калибра нельзя совместить с другой конверсией калибра.",
-        "Chinese": "将武器永久转换为 9x18 毫米弹药，并替换其兼容弹药组。此口径专精无法与其他口径转换叠加。"
+        "ChineseSimplified": "将武器永久转换为 9x18 毫米弹药，并替换其兼容弹药组。此口径专精无法与其他口径转换叠加。"
       }
     },
     {
@@ -358,7 +358,7 @@
       "languages": {
         "English": "9x19 mm Conversion",
         "Russian": "Переделка под патрон 9×19 мм",
-        "Chinese": "9x19 毫米转换"
+        "ChineseSimplified": "9x19 毫米转换"
       }
     },
     {
@@ -366,7 +366,7 @@
       "languages": {
         "English": "Permanently converts the weapon to 9x19 mm ammunition and replaces its compatible ammunition set. This caliber specialization cannot be combined with another caliber conversion.",
         "Russian": "Навсегда переводит оружие на боеприпасы 9x19 мм и заменяет набор совместимых боеприпасов. Эту специализацию калибра нельзя совместить с другой конверсией калибра.",
-        "Chinese": "将武器永久转换为 9x19 毫米弹药，并替换其兼容弹药组。此口径专精无法与其他口径转换叠加。"
+        "ChineseSimplified": "将武器永久转换为 9x19 毫米弹药，并替换其兼容弹药组。此口径专精无法与其他口径转换叠加。"
       }
     },
     {
@@ -374,7 +374,7 @@
       "languages": {
         "English": ".45 ACP Conversion",
         "Russian": "Переделка под патрон .45 ACP",
-        "Chinese": ".45 ACP 转换"
+        "ChineseSimplified": ".45 ACP 转换"
       }
     },
     {
@@ -382,7 +382,7 @@
       "languages": {
         "English": "Permanently converts the weapon to .45 ACP ammunition and replaces its compatible ammunition set. This caliber specialization cannot be combined with another caliber conversion.",
         "Russian": "Навсегда переводит оружие на боеприпасы .45 ACP и заменяет набор совместимых боеприпасов. Эту специализацию калибра нельзя совместить с другой конверсией калибра.",
-        "Chinese": "将武器永久转换为 .45 ACP 弹药，并替换其兼容弹药组。此口径专精无法与其他口径转换叠加。"
+        "ChineseSimplified": "将武器永久转换为 .45 ACP 弹药，并替换其兼容弹药组。此口径专精无法与其他口径转换叠加。"
       }
     },
     {
@@ -390,7 +390,7 @@
       "languages": {
         "English": "Fire rate",
         "Russian": "Темп стрельбы",
-        "Chinese": "射速"
+        "ChineseSimplified": "射速"
       }
     },
     {
@@ -398,7 +398,7 @@
       "languages": {
         "English": "Reload speed",
         "Russian": "Скорость перезарядки",
-        "Chinese": "装填速度"
+        "ChineseSimplified": "装填速度"
       }
     },
     {
@@ -406,7 +406,7 @@
       "languages": {
         "English": "Fire mode",
         "Russian": "Режим огня",
-        "Chinese": "射击模式"
+        "ChineseSimplified": "射击模式"
       }
     },
     {
@@ -414,7 +414,7 @@
       "languages": {
         "English": "Semi-automatic fire only",
         "Russian": "Только одиночный огонь",
-        "Chinese": "仅半自动射击"
+        "ChineseSimplified": "仅半自动射击"
       }
     },
     {
@@ -422,7 +422,7 @@
       "languages": {
         "English": "7.62x39 AP Feed Upgrade",
         "Russian": "Доработка подачи БП 7,62×39 мм",
-        "Chinese": "7.62x39 穿甲供弹升级"
+        "ChineseSimplified": "7.62x39 穿甲供弹升级"
       }
     },
     {
@@ -430,7 +430,7 @@
       "languages": {
         "English": "Adapts the converted 7.62x39 mm feed system for armor-piercing ammunition in addition to standard rounds. Requires the 7.62x39 mm caliber conversion.",
         "Russian": "Адаптирует систему подачи после переделки под 7,62×39 мм для бронебойных боеприпасов в дополнение к стандартным патронам. Требуется переделка под калибр 7,62×39 мм.",
-        "Chinese": "在标准弹药之外，使已转换的 7.62x39 毫米供弹系统兼容穿甲弹药。需要先完成 7.62x39 毫米口径转换。"
+        "ChineseSimplified": "在标准弹药之外，使已转换的 7.62x39 毫米供弹系统兼容穿甲弹药。需要先完成 7.62x39 毫米口径转换。"
       }
     },
     {
@@ -438,7 +438,7 @@
       "languages": {
         "English": "7.62x39 Expanding Feed Upgrade",
         "Russian": "Доработка подачи экспансивных 7,62×39 мм",
-        "Chinese": "7.62x39 扩张供弹升级"
+        "ChineseSimplified": "7.62x39 扩张供弹升级"
       }
     },
     {
@@ -446,7 +446,7 @@
       "languages": {
         "English": "Adapts the converted 7.62x39 mm feed system for expanding ammunition in addition to standard rounds. Requires the 7.62x39 mm caliber conversion.",
         "Russian": "Адаптирует систему подачи после переделки под 7,62×39 мм для экспансивных боеприпасов в дополнение к стандартным патронам. Требуется переделка под калибр 7,62×39 мм.",
-        "Chinese": "在标准弹药之外，使已转换的 7.62x39 毫米供弹系统兼容扩张弹药。需要先完成 7.62x39 毫米口径转换。"
+        "ChineseSimplified": "在标准弹药之外，使已转换的 7.62x39 毫米供弹系统兼容扩张弹药。需要先完成 7.62x39 毫米口径转换。"
       }
     },
     {
@@ -454,7 +454,7 @@
       "languages": {
         "English": "7.62x39 AP Conversion",
         "Russian": "Переделка 7,62×39 мм с БП",
-        "Chinese": "7.62x39 穿甲转换"
+        "ChineseSimplified": "7.62x39 穿甲转换"
       }
     },
     {
@@ -462,7 +462,7 @@
       "languages": {
         "English": "Converts the weapon to 7.62x39 mm ammunition and supports standard and armor-piercing rounds. This specialization is permanent.",
         "Russian": "Переводит оружие на боеприпасы 7,62×39 мм с поддержкой стандартных и бронебойных патронов. Эта специализация является постоянной.",
-        "Chinese": "将武器转换为 7.62x39 毫米弹药，支持标准与穿甲弹。此专精为永久性。"
+        "ChineseSimplified": "将武器转换为 7.62x39 毫米弹药，支持标准与穿甲弹。此专精为永久性。"
       }
     },
     {
@@ -470,7 +470,7 @@
       "languages": {
         "English": "7.62x39 Expanding Conversion",
         "Russian": "Переделка 7,62×39 мм с экспансивными",
-        "Chinese": "7.62x39 扩张转换"
+        "ChineseSimplified": "7.62x39 扩张转换"
       }
     },
     {
@@ -478,7 +478,7 @@
       "languages": {
         "English": "Converts the weapon to 7.62x39 mm ammunition and supports standard and expanding rounds. This specialization is permanent.",
         "Russian": "Переводит оружие на боеприпасы 7,62×39 мм с поддержкой стандартных и экспансивных патронов. Эта специализация является постоянной.",
-        "Chinese": "将武器转换为 7.62x39 毫米弹药，支持标准与扩张弹。此专精为永久性。"
+        "ChineseSimplified": "将武器转换为 7.62x39 毫米弹药，支持标准与扩张弹。此专精为永久性。"
       }
     },
     {
@@ -486,7 +486,7 @@
       "languages": {
         "English": "7.62x39 Universal Conversion",
         "Russian": "Универсальная переделка 7,62×39 мм",
-        "Chinese": "7.62x39 通用转换"
+        "ChineseSimplified": "7.62x39 通用转换"
       }
     },
     {
@@ -494,7 +494,7 @@
       "languages": {
         "English": "Converts the weapon to 7.62x39 mm ammunition and supports standard, armor-piercing and expanding rounds. This specialization is permanent.",
         "Russian": "Переводит оружие на боеприпасы 7,62×39 мм с поддержкой стандартных, бронебойных и экспансивных патронов. Эта специализация является постоянной.",
-        "Chinese": "将武器转换为 7.62x39 毫米弹药，支持标准、穿甲与扩张弹。此专精为永久性。"
+        "ChineseSimplified": "将武器转换为 7.62x39 毫米弹药，支持标准、穿甲与扩张弹。此专精为永久性。"
       }
     },
     {
@@ -502,7 +502,7 @@
       "languages": {
         "English": "7.62x51 mm NATO AP Conversion",
         "Russian": "Перевод на 7,62x51 мм НАТО БП",
-        "Chinese": "7.62x51 毫米北约穿甲转换"
+        "ChineseSimplified": "7.62x51 毫米北约穿甲转换"
       }
     },
     {
@@ -510,7 +510,7 @@
       "languages": {
         "English": "Converts the weapon to 7.62x51 mm NATO armor-piercing ammunition only. Prioritizes armor penetration at the cost of increased recoil and weapon wear. This specialization is permanent.",
         "Russian": "Переводит оружие исключительно на бронебойные боеприпасы 7,62x51 мм НАТО. Повышает бронепробиваемость ценой большей отдачи и износа оружия. Эта специализация является постоянной.",
-        "Chinese": "将武器仅转换为 7.62x51 毫米北约穿甲弹药。优先提升护甲穿透，但后坐力与武器磨损增加。此专精为永久性。"
+        "ChineseSimplified": "将武器仅转换为 7.62x51 毫米北约穿甲弹药。优先提升护甲穿透，但后坐力与武器磨损增加。此专精为永久性。"
       }
     },
     {
@@ -518,7 +518,7 @@
       "languages": {
         "English": "7.62x51 mm NATO Supersonic Conversion",
         "Russian": "Перевод на сверхзвуковой 7,62x51 мм НАТО",
-        "Chinese": "7.62x51 毫米北约超音速转换"
+        "ChineseSimplified": "7.62x51 毫米北约超音速转换"
       }
     },
     {
@@ -526,7 +526,7 @@
       "languages": {
         "English": "Converts the weapon to 7.62x51 mm NATO supersonic ammunition only. Provides a flatter, more effective trajectory while retaining increased damage, recoil and weapon wear. This specialization is permanent.",
         "Russian": "Переводит оружие исключительно на сверхзвуковые боеприпасы 7,62x51 мм НАТО. Обеспечивает более настильную и эффективную траекторию, сохраняя повышенные урон, отдачу и износ оружия. Эта специализация является постоянной.",
-        "Chinese": "将武器仅转换为 7.62x51 毫米北约超音速弹药。提供更平直、更有效的弹道，同时保留提升的伤害、后坐力与武器磨损。此专精为永久性。"
+        "ChineseSimplified": "将武器仅转换为 7.62x51 毫米北约超音速弹药。提供更平直、更有效的弹道，同时保留提升的伤害、后坐力与武器磨损。此专精为永久性。"
       }
     },
     {
@@ -534,7 +534,7 @@
       "languages": {
         "English": "7.62x54 mm AP Conversion",
         "Russian": "Перевод на 7,62x54 мм БП",
-        "Chinese": "7.62x54 毫米穿甲转换"
+        "ChineseSimplified": "7.62x54 毫米穿甲转换"
       }
     },
     {
@@ -542,7 +542,7 @@
       "languages": {
         "English": "Converts the weapon to 7.62x54 mm armor-piercing ammunition only. Prioritizes armor penetration at the cost of increased recoil and weapon wear. This specialization is permanent.",
         "Russian": "Переводит оружие исключительно на бронебойные боеприпасы 7,62x54 мм. Повышает бронепробиваемость ценой большей отдачи и износа оружия. Эта специализация является постоянной.",
-        "Chinese": "将武器仅转换为 7.62x54 毫米穿甲弹药。优先提升护甲穿透，但后坐力与武器磨损增加。此专精为永久性。"
+        "ChineseSimplified": "将武器仅转换为 7.62x54 毫米穿甲弹药。优先提升护甲穿透，但后坐力与武器磨损增加。此专精为永久性。"
       }
     },
     {
@@ -550,7 +550,7 @@
       "languages": {
         "English": "7.62x54 mm Supersonic Conversion",
         "Russian": "Перевод на сверхзвуковой 7,62x54 мм",
-        "Chinese": "7.62x54 毫米超音速转换"
+        "ChineseSimplified": "7.62x54 毫米超音速转换"
       }
     },
     {
@@ -558,7 +558,7 @@
       "languages": {
         "English": "Converts the weapon to 7.62x54 mm supersonic ammunition only. Provides a flatter, more effective trajectory while retaining increased damage, recoil and weapon wear. This specialization is permanent.",
         "Russian": "Переводит оружие исключительно на сверхзвуковые боеприпасы 7,62x54 мм. Обеспечивает более настильную и эффективную траекторию, сохраняя повышенные урон, отдачу и износ оружия. Эта специализация является постоянной.",
-        "Chinese": "将武器仅转换为 7.62x54 毫米超音速弹药。提供更平直、更有效的弹道，同时保留提升的伤害、后坐力与武器磨损。此专精为永久性。"
+        "ChineseSimplified": "将武器仅转换为 7.62x54 毫米超音速弹药。提供更平直、更有效的弹道，同时保留提升的伤害、后坐力与武器磨损。此专精为永久性。"
       }
     },
     {
@@ -566,7 +566,7 @@
       "languages": {
         "English": "9x19 mm AP Conversion",
         "Russian": "Перевод на 9x19 мм БП",
-        "Chinese": "9x19 毫米穿甲转换"
+        "ChineseSimplified": "9x19 毫米穿甲转换"
       }
     },
     {
@@ -574,7 +574,7 @@
       "languages": {
         "English": "Converts the weapon to 9x19 mm armor-piercing ammunition only. Improves armor penetration and weapon control, but reduces damage and provides less effective range than the standard 9x19 mm conversion. This specialization is permanent.",
         "Russian": "Переводит оружие исключительно на бронебойные боеприпасы 9x19 мм. Повышает бронепробиваемость и управляемость оружия, но снижает урон и дает меньшую эффективную дальность по сравнению со стандартной конверсией на 9x19 мм. Эта специализация является постоянной.",
-        "Chinese": "将武器仅转换为 9x19 毫米穿甲弹药。提升护甲穿透与武器操控，但伤害降低，且有效射程不如标准 9x19 毫米转换。此专精为永久性。"
+        "ChineseSimplified": "将武器仅转换为 9x19 毫米穿甲弹药。提升护甲穿透与武器操控，但伤害降低，且有效射程不如标准 9x19 毫米转换。此专精为永久性。"
       }
     },
     {
@@ -582,7 +582,7 @@
       "languages": {
         "English": "9x18 mm AP Conversion",
         "Russian": "Перевод на 9x18 мм БП",
-        "Chinese": "9x18 毫米穿甲转换"
+        "ChineseSimplified": "9x18 毫米穿甲转换"
       }
     },
     {
@@ -590,7 +590,7 @@
       "languages": {
         "English": "Converts the weapon to 9x18 mm armor-piercing ammunition only. Improves armor penetration and weapon control, but further reduces damage and provides less effective range than the standard 9x18 mm conversion. This specialization is permanent.",
         "Russian": "Переводит оружие исключительно на бронебойные боеприпасы 9x18 мм. Повышает бронепробиваемость и управляемость оружия, но дополнительно снижает урон и дает меньшую эффективную дальность по сравнению со стандартной конверсией на 9x18 мм. Эта специализация является постоянной.",
-        "Chinese": "将武器仅转换为 9x18 毫米穿甲弹药。提升护甲穿透与武器操控，但伤害进一步降低，且有效射程不如标准 9x18 毫米转换。此专精为永久性。"
+        "ChineseSimplified": "将武器仅转换为 9x18 毫米穿甲弹药。提升护甲穿透与武器操控，但伤害进一步降低，且有效射程不如标准 9x18 毫米转换。此专精为永久性。"
       }
     },
     {
@@ -598,7 +598,7 @@
       "languages": {
         "English": ".45 ACP AP Conversion",
         "Russian": "Перевод на .45 ACP БП",
-        "Chinese": ".45 ACP 穿甲转换"
+        "ChineseSimplified": ".45 ACP 穿甲转换"
       }
     },
     {
@@ -606,7 +606,7 @@
       "languages": {
         "English": "Converts the weapon to .45 ACP armor-piercing ammunition only. Improves armor penetration while retaining increased damage, at the cost of heavier recoil and reduced effective range. This specialization is permanent.",
         "Russian": "Переводит оружие исключительно на бронебойные боеприпасы .45 ACP. Повышает бронепробиваемость и сохраняет повышенный урон ценой более сильной отдачи и меньшей эффективной дальности. Эта специализация является постоянной.",
-        "Chinese": "将武器仅转换为 .45 ACP 穿甲弹药。提升护甲穿透并保留提升的伤害，但后坐力更强、有效射程下降。此专精为永久性。"
+        "ChineseSimplified": "将武器仅转换为 .45 ACP 穿甲弹药。提升护甲穿透并保留提升的伤害，但后坐力更强、有效射程下降。此专精为永久性。"
       }
     },
     {
@@ -614,7 +614,7 @@
       "languages": {
         "English": ".45 ACP Expanding Conversion",
         "Russian": "Перевод на экспансивный .45 ACP",
-        "Chinese": ".45 ACP 扩张转换"
+        "ChineseSimplified": ".45 ACP 扩张转换"
       }
     },
     {
@@ -622,7 +622,7 @@
       "languages": {
         "English": "Converts the weapon to .45 ACP expanding ammunition only. Maximizes damage at the cost of heavier recoil and substantially reduced effective range. This specialization is permanent.",
         "Russian": "Переводит оружие исключительно на экспансивные боеприпасы .45 ACP. Максимизирует урон ценой более сильной отдачи и значительно меньшей эффективной дальности. Эта специализация является постоянной.",
-        "Chinese": "将武器仅转换为 .45 ACP 扩张弹药。最大化伤害，但后坐力更强、有效射程大幅下降。此专精为永久性。"
+        "ChineseSimplified": "将武器仅转换为 .45 ACP 扩张弹药。最大化伤害，但后坐力更强、有效射程大幅下降。此专精为永久性。"
       }
     },
     {
@@ -630,7 +630,7 @@
       "languages": {
         "English": "7.62x51 mm NATO AP Conversion",
         "Russian": "Перевод на 7,62x51 мм НАТО БП",
-        "Chinese": "7.62x51 毫米北约穿甲转换"
+        "ChineseSimplified": "7.62x51 毫米北约穿甲转换"
       }
     },
     {
@@ -638,7 +638,7 @@
       "languages": {
         "English": "Converts the weapon to 7.62x51 mm NATO armor-piercing ammunition only. Improves armor penetration and retains some recoil control at the cost of reduced damage. This specialization is permanent.",
         "Russian": "Переводит оружие исключительно на бронебойные боеприпасы 7,62x51 мм НАТО. Повышает бронепробиваемость и сохраняет часть преимущества в контроле отдачи ценой снижения урона. Эта специализация является постоянной.",
-        "Chinese": "将武器仅转换为 7.62x51 毫米北约穿甲弹药。提升护甲穿透并保留部分后坐力控制优势，但伤害降低。此专精为永久性。"
+        "ChineseSimplified": "将武器仅转换为 7.62x51 毫米北约穿甲弹药。提升护甲穿透并保留部分后坐力控制优势，但伤害降低。此专精为永久性。"
       }
     },
     {
@@ -646,7 +646,7 @@
       "languages": {
         "English": "7.62x51 mm NATO Supersonic Conversion",
         "Russian": "Перевод на сверхзвуковой 7,62x51 мм НАТО",
-        "Chinese": "7.62x51 毫米北约超音速转换"
+        "ChineseSimplified": "7.62x51 毫米北约超音速转换"
       }
     },
     {
@@ -654,7 +654,7 @@
       "languages": {
         "English": "Converts the weapon to 7.62x51 mm NATO supersonic ammunition only. Retains improved recoil control and provides a flatter, more effective trajectory at the cost of reduced damage. This specialization is permanent.",
         "Russian": "Переводит оружие исключительно на сверхзвуковые боеприпасы 7,62x51 мм НАТО. Сохраняет улучшенный контроль отдачи и обеспечивает более настильную и эффективную траекторию ценой снижения урона. Эта специализация является постоянной.",
-        "Chinese": "将武器仅转换为 7.62x51 毫米北约超音速弹药。保留改善的后坐力控制，并提供更平直、更有效的弹道，但伤害降低。此专精为永久性。"
+        "ChineseSimplified": "将武器仅转换为 7.62x51 毫米北约超音速弹药。保留改善的后坐力控制，并提供更平直、更有效的弹道，但伤害降低。此专精为永久性。"
       }
     },
     {
@@ -662,7 +662,7 @@
       "languages": {
         "English": "7.62x54 mm AP Conversion",
         "Russian": "Перевод на 7,62x54 мм БП",
-        "Chinese": "7.62x54 毫米穿甲转换"
+        "ChineseSimplified": "7.62x54 毫米穿甲转换"
       }
     },
     {
@@ -670,7 +670,7 @@
       "languages": {
         "English": "Converts the weapon to 7.62x54 mm armor-piercing ammunition only. Prioritizes armor penetration while retaining increased damage, at the cost of increased recoil and weapon wear. This specialization is permanent.",
         "Russian": "Переводит оружие исключительно на бронебойные боеприпасы 7,62x54 мм. Повышает бронепробиваемость и сохраняет повышенный урон ценой большей отдачи и износа оружия. Эта специализация является постоянной.",
-        "Chinese": "将武器仅转换为 7.62x54 毫米穿甲弹药。优先提升护甲穿透并保留提升的伤害，但后坐力与武器磨损增加。此专精为永久性。"
+        "ChineseSimplified": "将武器仅转换为 7.62x54 毫米穿甲弹药。优先提升护甲穿透并保留提升的伤害，但后坐力与武器磨损增加。此专精为永久性。"
       }
     },
     {
@@ -678,7 +678,7 @@
       "languages": {
         "English": "7.62x54 mm Supersonic Conversion",
         "Russian": "Перевод на сверхзвуковой 7,62x54 мм",
-        "Chinese": "7.62x54 毫米超音速转换"
+        "ChineseSimplified": "7.62x54 毫米超音速转换"
       }
     },
     {
@@ -686,7 +686,7 @@
       "languages": {
         "English": "Converts the weapon to 7.62x54 mm supersonic ammunition only. Provides a flatter, more effective trajectory while retaining increased damage, at the cost of increased recoil and weapon wear. This specialization is permanent.",
         "Russian": "Переводит оружие исключительно на сверхзвуковые боеприпасы 7,62x54 мм. Обеспечивает более настильную и эффективную траекторию и сохраняет повышенный урон ценой большей отдачи и износа оружия. Эта специализация является постоянной.",
-        "Chinese": "将武器仅转换为 7.62x54 毫米超音速弹药。提供更平直、更有效的弹道并保留提升的伤害，但后坐力与武器磨损增加。此专精为永久性。"
+        "ChineseSimplified": "将武器仅转换为 7.62x54 毫米超音速弹药。提供更平直、更有效的弹道并保留提升的伤害，但后坐力与武器磨损增加。此专精为永久性。"
       }
     }
   ]
