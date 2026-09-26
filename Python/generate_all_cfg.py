@@ -83,7 +83,9 @@ def build_model(*, apply_layout: bool = True) -> tuple[UpgradeBuildModel, dict]:
     for upgrades in (ar.build_upgrades(configs["ar"]), smg.build_upgrades(configs["smg"]), shotgun.build_upgrades(configs["shotgun"]), pistol.build_upgrades(configs["pistol"]), sniper.build_upgrades(configs["sniper"]), machine_gun.build_upgrades(configs["machine_gun"]), _shared_upgrades(configs)): model.extend(upgrades)
     unique_count = add_unique_modules(model, configs); print(f"Added {unique_count} Unique weapon module instances from central registry")
     signature_count = add_unique_signatures(model); print(f"Added {signature_count} Unique signature modules")
-    ar.configure_general_setups(configs["ar"], model); model.validate()
+    burst_setup_count = model.configure_general_setups_for_effect("BPRUE_AddBurstFireModeEffect", FireQueueCount=3)
+    print(f"Configured 3-round burst queue for {burst_setup_count} Base/Unique GeneralSetups")
+    model.validate()
     if apply_layout:
         apply_layout_to_model(model); model.validate()
     return model, configs
