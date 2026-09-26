@@ -6,7 +6,7 @@
       "languages": {
         "English": "High-Speed Action",
         "Russian": "Высокоскоростная автоматика",
-        "Chinese": "高速自动机"
+        "ChineseSimplified": "高速自动机"
       }
     },
     {
@@ -14,7 +14,7 @@
       "languages": {
         "English": "Speeds up the firing cycle for rapid follow-up shots, at the cost of increased recoil and weapon wear.",
         "Russian": "Ускоряет цикл стрельбы для быстрых повторных выстрелов ценой повышенной отдачи и износа оружия.",
-        "Chinese": "加快射击循环以支持快速补射，但后坐力与武器磨损增加。"
+        "ChineseSimplified": "加快射击循环以支持快速补射，但后坐力与武器磨损增加。"
       }
     },
     {
@@ -22,7 +22,7 @@
       "languages": {
         "English": "Balanced Action",
         "Russian": "Сбалансированная автоматика",
-        "Chinese": "平衡自动机"
+        "ChineseSimplified": "平衡自动机"
       }
     },
     {
@@ -30,7 +30,7 @@
       "languages": {
         "English": "Balances a faster firing cycle with improved recoil control and recovery, while moderately increasing weapon wear.",
         "Russian": "Сочетает ускоренный цикл стрельбы с улучшенным контролем и восстановлением отдачи, умеренно повышая износ оружия.",
-        "Chinese": "兼顾更快的射击循环与改善的后坐力控制及恢复，但武器磨损适度增加。"
+        "ChineseSimplified": "兼顾更快的射击循环与改善的后坐力控制及恢复，但武器磨损适度增加。"
       }
     },
     {
@@ -38,7 +38,7 @@
       "languages": {
         "English": "Controlled Action",
         "Russian": "Контролируемая автоматика",
-        "Chinese": "可控自动机"
+        "ChineseSimplified": "可控自动机"
       }
     },
     {
@@ -46,7 +46,7 @@
       "languages": {
         "English": "Slows the firing cycle slightly in exchange for lower recoil and faster recoil recovery.",
         "Russian": "Немного замедляет цикл стрельбы в обмен на меньшую отдачу и более быстрое восстановление после неё.",
-        "Chinese": "略微降低射击循环速度，以换取更低的后坐力与更快的后坐力恢复。"
+        "ChineseSimplified": "略微降低射击循环速度，以换取更低的后坐力与更快的后坐力恢复。"
       }
     },
     {
@@ -54,7 +54,7 @@
       "languages": {
         "English": "Quick-Draw Setup",
         "Russian": "Компоновка быстрого извлечения",
-        "Chinese": "快速拔枪配置"
+        "ChineseSimplified": "快速拔枪配置"
       }
     },
     {
@@ -62,7 +62,7 @@
       "languages": {
         "English": "Reduces weapon weight and speeds up aiming for faster handling, at the cost of increased recoil.",
         "Russian": "Снижает вес оружия и ускоряет прицеливание для более быстрого обращения ценой повышенной отдачи.",
-        "Chinese": "降低武器重量并加快瞄准以提升操作速度，但后坐力增加。"
+        "ChineseSimplified": "降低武器重量并加快瞄准以提升操作速度，但后坐力增加。"
       }
     },
     {
@@ -70,7 +70,7 @@
       "languages": {
         "English": "Tactical Handling",
         "Russian": "Тактическая эргономика",
-        "Chinese": "战术操控"
+        "ChineseSimplified": "战术操控"
       }
     },
     {
@@ -78,7 +78,7 @@
       "languages": {
         "English": "Improves aiming speed, movement while aiming and recoil recovery for responsive combat handling.",
         "Russian": "Улучшает скорость прицеливания, движение при прицеливании и восстановление после отдачи для более отзывчивого обращения.",
-        "Chinese": "提升瞄准速度、瞄准时移动与后坐力恢复，带来更灵敏的战斗操控。"
+        "ChineseSimplified": "提升瞄准速度、瞄准时移动与后坐力恢复，带来更灵敏的战斗操控。"
       }
     },
     {
@@ -86,7 +86,7 @@
       "languages": {
         "English": "Stabilized Handling",
         "Russian": "Стабилизированная эргономика",
-        "Chinese": "稳定化操控"
+        "ChineseSimplified": "稳定化操控"
       }
     },
     {
@@ -94,7 +94,7 @@
       "languages": {
         "English": "Improves recoil control and recovery at the cost of slower aiming.",
         "Russian": "Улучшает контроль и восстановление отдачи ценой более медленного прицеливания.",
-        "Chinese": "提升后坐力控制与恢复，但瞄准速度变慢。"
+        "ChineseSimplified": "提升后坐力控制与恢复，但瞄准速度变慢。"
       }
     },
     {
@@ -102,7 +102,7 @@
       "languages": {
         "English": "Quick-Response Package",
         "Russian": "Комплект быстрого реагирования",
-        "Chinese": "快速响应组件"
+        "ChineseSimplified": "快速响应组件"
       }
     },
     {
@@ -110,7 +110,7 @@
       "languages": {
         "English": "A lightweight emergency-sidearm package with faster aiming and reloads, trading stability and durability for speed.",
         "Russian": "Облегчённый комплект для запасного оружия с быстрым прицеливанием и перезарядкой, жертвующий стабильностью и долговечностью ради скорости.",
-        "Chinese": "轻量化应急副武器组件，加快瞄准与装填，以稳定性与耐久度换取速度。"
+        "ChineseSimplified": "轻量化应急副武器组件，加快瞄准与装填，以稳定性与耐久度换取速度。"
       }
     },
     {
@@ -118,7 +118,7 @@
       "languages": {
         "English": "Match Barrel Assembly",
         "Russian": "Матчевый ствол",
-        "Chinese": "竞赛枪管组件"
+        "ChineseSimplified": "竞赛枪管组件"
       }
     },
     {
@@ -126,7 +126,7 @@
       "languages": {
         "English": "A precision barrel package with tighter dispersion, improved effective range and higher projectile velocity, at the cost of slower aiming.",
         "Russian": "Высокоточный ствол с меньшим разбросом, увеличенной эффективной дальностью и скоростью пули ценой более медленного прицеливания.",
-        "Chinese": "精准枪管组件，散布更小、有效射程与弹速更高，但瞄准速度变慢。"
+        "ChineseSimplified": "精准枪管组件，散布更小、有效射程与弹速更高，但瞄准速度变慢。"
       }
     },
     {
@@ -134,7 +134,7 @@
       "languages": {
         "English": "Automatic Sear",
         "Russian": "Автоматический шептало",
-        "Chinese": "自动阻铁"
+        "ChineseSimplified": "自动阻铁"
       }
     },
     {
@@ -142,7 +142,7 @@
       "languages": {
         "English": "Adds automatic fire to the pistol's fire-control system, at the cost of increased recoil and weapon wear.",
         "Russian": "Добавляет автоматический огонь в ударно-спусковой механизм пистолета ценой повышенной отдачи и износа оружия.",
-        "Chinese": "为手枪击发机构加入全自动射击，但后坐力与武器磨损增加。"
+        "ChineseSimplified": "为手枪击发机构加入全自动射击，但后坐力与武器磨损增加。"
       }
     },
     {
@@ -150,7 +150,7 @@
       "languages": {
         "English": "Hunting Cylinder",
         "Russian": "Охотничий барабан",
-        "Chinese": "狩猎转轮"
+        "ChineseSimplified": "狩猎转轮"
       }
     },
     {
@@ -158,7 +158,7 @@
       "languages": {
         "English": "A heavy hunting setup with improved armor penetration and projectile velocity, at the cost of a slower firing cycle.",
         "Russian": "Тяжёлая охотничья конфигурация с повышенным бронепробитием и скоростью пули ценой более медленного цикла стрельбы.",
-        "Chinese": "重型狩猎配置，提升护甲穿透与弹速，但射击循环变慢。"
+        "ChineseSimplified": "重型狩猎配置，提升护甲穿透与弹速，但射击循环变慢。"
       }
     },
     {
@@ -166,7 +166,7 @@
       "languages": {
         "English": "Selectable Fire Control",
         "Russian": "Переключаемый режим огня",
-        "Chinese": "可选击发控制"
+        "ChineseSimplified": "可选击发控制"
       }
     },
     {
@@ -174,7 +174,7 @@
       "languages": {
         "English": "Adds a selectable semi-automatic mode while retaining the weapon's native automatic fire and improving recoil control.",
         "Russian": "Добавляет выбираемый одиночный режим, сохраняя штатный автоматический огонь и улучшая контроль отдачи.",
-        "Chinese": "在保留武器原生全自动射击的同时加入可选半自动模式，并改善后坐力控制。"
+        "ChineseSimplified": "在保留武器原生全自动射击的同时加入可选半自动模式，并改善后坐力控制。"
       }
     },
     {
@@ -182,7 +182,7 @@
       "languages": {
         "English": "Breacher Pattern",
         "Russian": "Штурмовой чок",
-        "Chinese": "破门散布"
+        "ChineseSimplified": "破门散布"
       }
     },
     {
@@ -190,7 +190,7 @@
       "languages": {
         "English": "Optimizes the shotgun for close-range breaching with a wider, aggressive shot pattern.",
         "Russian": "Оптимизирует дробовик для штурмового применения на ближней дистанции, обеспечивая более широкую и агрессивную осыпь дроби.",
-        "Chinese": "将霰弹枪优化为近距离破门用途，提供更宽、更激进的弹丸散布。"
+        "ChineseSimplified": "将霰弹枪优化为近距离破门用途，提供更宽、更激进的弹丸散布。"
       }
     },
     {
@@ -198,7 +198,7 @@
       "languages": {
         "English": "Field Choke",
         "Russian": "Полевой чок",
-        "Chinese": "野战喉缩"
+        "ChineseSimplified": "野战喉缩"
       }
     },
     {
@@ -206,7 +206,7 @@
       "languages": {
         "English": "Balances shot spread and practical range for versatile field use.",
         "Russian": "Балансирует разброс дроби и практическую дальность для универсального применения.",
-        "Chinese": "平衡弹丸散布与实用射程，适应多用途野战需求。"
+        "ChineseSimplified": "平衡弹丸散布与实用射程，适应多用途野战需求。"
       }
     },
     {
@@ -214,7 +214,7 @@
       "languages": {
         "English": "Full Choke",
         "Russian": "Полный чок",
-        "Chinese": "全喉缩"
+        "ChineseSimplified": "全喉缩"
       }
     },
     {
@@ -222,7 +222,7 @@
       "languages": {
         "English": "Tightens the shot pattern for greater precision and effective range.",
         "Russian": "Сужает осыпь дроби для большей точности и эффективной дальности.",
-        "Chinese": "收拢弹丸散布，提升精度与有效射程。"
+        "ChineseSimplified": "收拢弹丸散布，提升精度与有效射程。"
       }
     },
     {
@@ -230,7 +230,7 @@
       "languages": {
         "English": "High-Speed Action",
         "Russian": "Высокоскоростная автоматика",
-        "Chinese": "高速自动机"
+        "ChineseSimplified": "高速自动机"
       }
     },
     {
@@ -238,7 +238,7 @@
       "languages": {
         "English": "Tunes the action for faster follow-up shots, sacrificing recoil control and durability for speed.",
         "Russian": "Настраивает механизм для более быстрых повторных выстрелов, жертвуя контролем отдачи и долговечностью ради скорости.",
-        "Chinese": "调校自动机以加快补射，以后坐力控制与耐久度换取速度。"
+        "ChineseSimplified": "调校自动机以加快补射，以后坐力控制与耐久度换取速度。"
       }
     },
     {
@@ -246,7 +246,7 @@
       "languages": {
         "English": "Tuned Action",
         "Russian": "Настроенная автоматика",
-        "Chinese": "调校自动机"
+        "ChineseSimplified": "调校自动机"
       }
     },
     {
@@ -254,7 +254,7 @@
       "languages": {
         "English": "A balanced action tune combining faster cycling with improved control.",
         "Russian": "Сбалансированная настройка механизма, сочетающая более быстрый цикл с улучшенным контролем.",
-        "Chinese": "平衡的自动机调校，兼顾更快的循环与更好的控制。"
+        "ChineseSimplified": "平衡的自动机调校，兼顾更快的循环与更好的控制。"
       }
     },
     {
@@ -262,7 +262,7 @@
       "languages": {
         "English": "Reinforced Action",
         "Russian": "Усиленная автоматика",
-        "Chinese": "强化自动机"
+        "ChineseSimplified": "强化自动机"
       }
     },
     {
@@ -270,7 +270,7 @@
       "languages": {
         "English": "Reinforces the action for reliability and control, accepting a slower firing cycle.",
         "Russian": "Усиливает механизм ради надёжности и контроля ценой более медленного цикла стрельбы.",
-        "Chinese": "强化自动机以提升可靠性与控制，但射击循环变慢。"
+        "ChineseSimplified": "强化自动机以提升可靠性与控制，但射击循环变慢。"
       }
     },
     {
@@ -278,7 +278,7 @@
       "languages": {
         "English": "Lightweight Furniture",
         "Russian": "Облегчённая фурнитура",
-        "Chinese": "轻量化枪身配件"
+        "ChineseSimplified": "轻量化枪身配件"
       }
     },
     {
@@ -286,7 +286,7 @@
       "languages": {
         "English": "Reduces weight and improves handling speed, at the cost of increased recoil.",
         "Russian": "Снижает вес и ускоряет обращение с оружием ценой повышенной отдачи.",
-        "Chinese": "降低重量并提升操作速度，但后坐力增加。"
+        "ChineseSimplified": "降低重量并提升操作速度，但后坐力增加。"
       }
     },
     {
@@ -294,7 +294,7 @@
       "languages": {
         "English": "Combat Furniture",
         "Russian": "Боевая фурнитура",
-        "Chinese": "战斗枪身配件"
+        "ChineseSimplified": "战斗枪身配件"
       }
     },
     {
@@ -302,7 +302,7 @@
       "languages": {
         "English": "A practical combat setup balancing aiming, movement and recoil recovery.",
         "Russian": "Практичная боевая конфигурация, обеспечивающая баланс между прицеливанием, перемещением и восстановлением после отдачи.",
-        "Chinese": "实用的战斗配置，平衡瞄准、移动与后坐力恢复。"
+        "ChineseSimplified": "实用的战斗配置，平衡瞄准、移动与后坐力恢复。"
       }
     },
     {
@@ -310,7 +310,7 @@
       "languages": {
         "English": "Stabilized Furniture",
         "Russian": "Стабилизированная фурнитура",
-        "Chinese": "稳定化枪身配件"
+        "ChineseSimplified": "稳定化枪身配件"
       }
     },
     {
@@ -318,7 +318,7 @@
       "languages": {
         "English": "Prioritizes stability and recoil control over fast handling.",
         "Russian": "Отдаёт приоритет стабильности и контролю отдачи перед скоростью обращения.",
-        "Chinese": "优先提升稳定性与后坐力控制，而非快速操作。"
+        "ChineseSimplified": "优先提升稳定性与后坐力控制，而非快速操作。"
       }
     },
     {
@@ -326,7 +326,7 @@
       "languages": {
         "English": "High-Velocity Ballistics",
         "Russian": "Высокоскоростная баллистика",
-        "Chinese": "高速弹道"
+        "ChineseSimplified": "高速弹道"
       }
     },
     {
@@ -334,7 +334,7 @@
       "languages": {
         "English": "Optimizes projectile velocity and long-range performance for flatter, faster shots.",
         "Russian": "Оптимизирует скорость пули и дальнобойность для более настильной и быстрой стрельбы.",
-        "Chinese": "优化弹速与远距离表现，实现更平直、更快速的射击。"
+        "ChineseSimplified": "优化弹速与远距离表现，实现更平直、更快速的射击。"
       }
     },
     {
@@ -342,7 +342,7 @@
       "languages": {
         "English": "Match Barrel",
         "Russian": "Матчевый ствол",
-        "Chinese": "竞赛枪管"
+        "ChineseSimplified": "竞赛枪管"
       }
     },
     {
@@ -350,7 +350,7 @@
       "languages": {
         "English": "A precision barrel tuned for tighter dispersion and consistent long-range accuracy.",
         "Russian": "Высокоточный ствол, настроенный на меньший разброс и стабильную точность на дальней дистанции.",
-        "Chinese": "精准枪管，调校为更小的散布与稳定的远距离精度。"
+        "ChineseSimplified": "精准枪管，调校为更小的散布与稳定的远距离精度。"
       }
     },
     {
@@ -358,7 +358,7 @@
       "languages": {
         "English": "Heavy Barrel",
         "Russian": "Тяжёлый ствол",
-        "Chinese": "重型枪管"
+        "ChineseSimplified": "重型枪管"
       }
     },
     {
@@ -366,7 +366,7 @@
       "languages": {
         "English": "A heavy-profile barrel prioritizing stability and sustained precision at the cost of handling speed.",
         "Russian": "Тяжёлый ствол, повышающий стабильность и устойчивую точность ценой скорости обращения.",
-        "Chinese": "重型枪管，优先提升稳定性与持续精度，但操作速度下降。"
+        "ChineseSimplified": "重型枪管，优先提升稳定性与持续精度，但操作速度下降。"
       }
     },
     {
@@ -374,7 +374,7 @@
       "languages": {
         "English": "Rapid Action",
         "Russian": "Скоростная автоматика",
-        "Chinese": "速射自动机"
+        "ChineseSimplified": "速射自动机"
       }
     },
     {
@@ -382,7 +382,7 @@
       "languages": {
         "English": "Speeds up the firing cycle for rapid follow-up shots, trading some control and durability for rate of fire.",
         "Russian": "Ускоряет цикл стрельбы, позволяя быстрее производить повторные выстрелы, но жертвуя частью контроля и скоростью износа ради скорострельности.",
-        "Chinese": "加快射击循环以支持快速补射，以部分控制与耐久度换取射速。"
+        "ChineseSimplified": "加快射击循环以支持快速补射，以部分控制与耐久度换取射速。"
       }
     },
     {
@@ -390,7 +390,7 @@
       "languages": {
         "English": "Precision Action",
         "Russian": "Точная автоматика",
-        "Chinese": "精准自动机"
+        "ChineseSimplified": "精准自动机"
       }
     },
     {
@@ -398,7 +398,7 @@
       "languages": {
         "English": "Tunes the action for deliberate precision and improved shot control rather than maximum firing speed.",
         "Russian": "Настраивает механизм на выверенную точность и лучший контроль выстрела вместо максимального темпа огня.",
-        "Chinese": "将自动机调校为精确瞄准与更好的射击控制，而非追求最大射速。"
+        "ChineseSimplified": "将自动机调校为精确瞄准与更好的射击控制，而非追求最大射速。"
       }
     },
     {
@@ -406,7 +406,7 @@
       "languages": {
         "English": "Reinforced Action",
         "Russian": "Усиленная автоматика",
-        "Chinese": "强化自动机"
+        "ChineseSimplified": "强化自动机"
       }
     },
     {
@@ -414,7 +414,7 @@
       "languages": {
         "English": "Reinforces the action for durability and dependable operation under sustained use.",
         "Russian": "Усиливает механизм для большей долговечности и надёжной работы при интенсивном использовании.",
-        "Chinese": "强化自动机，提升耐久度并在持续使用下保持可靠运作。"
+        "ChineseSimplified": "强化自动机，提升耐久度并在持续使用下保持可靠运作。"
       }
     },
     {
@@ -422,7 +422,7 @@
       "languages": {
         "English": "Snap Shooter",
         "Russian": "Быстрый стрелок",
-        "Chinese": "快速射手"
+        "ChineseSimplified": "快速射手"
       }
     },
     {
@@ -430,7 +430,7 @@
       "languages": {
         "English": "Prioritizes fast target acquisition and responsive aiming for mobile marksman work.",
         "Russian": "Отдаёт приоритет быстрому захвату цели и отзывчивому прицеливанию для мобильного стрелка.",
-        "Chinese": "优先快速捕捉目标与灵敏瞄准，适合机动精确射手。"
+        "ChineseSimplified": "优先快速捕捉目标与灵敏瞄准，适合机动精确射手。"
       }
     },
     {
@@ -438,7 +438,7 @@
       "languages": {
         "English": "Field Marksman",
         "Russian": "Полевой стрелок",
-        "Chinese": "野战精确射手"
+        "ChineseSimplified": "野战精确射手"
       }
     },
     {
@@ -446,7 +446,7 @@
       "languages": {
         "English": "Balances aiming speed, stability and practical accuracy for general marksman use.",
         "Russian": "Балансирует скорость прицеливания, стабильность и практическую точность для универсального стрелка.",
-        "Chinese": "平衡瞄准速度、稳定性与实用精度，适合通用精确射手用途。"
+        "ChineseSimplified": "平衡瞄准速度、稳定性与实用精度，适合通用精确射手用途。"
       }
     },
     {
@@ -454,7 +454,7 @@
       "languages": {
         "English": "Benchrest Setup",
         "Russian": "Стендовая настройка",
-        "Chinese": "靶架配置"
+        "ChineseSimplified": "靶架配置"
       }
     },
     {
@@ -462,7 +462,7 @@
       "languages": {
         "English": "Maximizes aiming stability and precision for deliberate long-range fire, at the cost of responsiveness.",
         "Russian": "Максимизирует стабильность прицеливания и точность для выверенной дальней стрельбы ценой отзывчивости.",
-        "Chinese": "最大化瞄准稳定性与精度，适合精确远距离射击，但响应速度下降。"
+        "ChineseSimplified": "最大化瞄准稳定性与精度，适合精确远距离射击，但响应速度下降。"
       }
     },
     {
@@ -470,7 +470,7 @@
       "languages": {
         "English": "Rapid Marksman Package",
         "Russian": "Комплект скоростного стрелка",
-        "Chinese": "速射精确射手组件"
+        "ChineseSimplified": "速射精确射手组件"
       }
     },
     {
@@ -478,7 +478,7 @@
       "languages": {
         "English": "A rapid-fire marksman package tuned for quick follow-up shots and aggressive precision shooting.",
         "Russian": "Комплект скоростного стрелка для быстрых повторных выстрелов и агрессивной точной стрельбы.",
-        "Chinese": "速射精确射手组件，调校为快速补射与激进的精准射击。"
+        "ChineseSimplified": "速射精确射手组件，调校为快速补射与激进的精准射击。"
       }
     },
     {
@@ -486,7 +486,7 @@
       "languages": {
         "English": "Recon Marksman Package",
         "Russian": "Комплект разведчика-стрелка",
-        "Chinese": "侦察精确射手组件"
+        "ChineseSimplified": "侦察精确射手组件"
       }
     },
     {
@@ -494,7 +494,7 @@
       "languages": {
         "English": "A mobile reconnaissance setup emphasizing quick handling, target acquisition and controlled precision.",
         "Russian": "Мобильная разведывательная компоновка с упором на быстрое обращение, захват цели и контролируемую точность.",
-        "Chinese": "机动侦察配置，强调快速操作、目标捕捉与可控精准度。"
+        "ChineseSimplified": "机动侦察配置，强调快速操作、目标捕捉与可控精准度。"
       }
     },
     {
@@ -502,7 +502,7 @@
       "languages": {
         "English": "Match Trigger",
         "Russian": "Матчевый спуск",
-        "Chinese": "竞赛扳机"
+        "ChineseSimplified": "竞赛扳机"
       }
     },
     {
@@ -510,7 +510,7 @@
       "languages": {
         "English": "A precision trigger package for cleaner shot release and improved control during deliberate fire.",
         "Russian": "Высокоточный спусковой механизм для более чистого срыва выстрела и лучшего контроля при выверенной стрельбе.",
-        "Chinese": "精准扳机组件，带来更干净的击发与精确射击时更好的控制。"
+        "ChineseSimplified": "精准扳机组件，带来更干净的击发与精确射击时更好的控制。"
       }
     },
     {
@@ -518,7 +518,7 @@
       "languages": {
         "English": "Anti-Materiel Package",
         "Russian": "Противоматериальный комплект",
-        "Chinese": "反器材组件"
+        "ChineseSimplified": "反器材组件"
       }
     },
     {
@@ -526,7 +526,7 @@
       "languages": {
         "English": "A heavy long-range package emphasizing damage, penetration and ballistic performance against hardened targets.",
         "Russian": "Тяжёлый дальнобойный комплект с упором на урон, пробитие и баллистику против защищённых целей.",
-        "Chinese": "重型远距离组件，针对坚固目标强调伤害、穿透与弹道表现。"
+        "ChineseSimplified": "重型远距离组件，针对坚固目标强调伤害、穿透与弹道表现。"
       }
     },
     {
@@ -534,7 +534,7 @@
       "languages": {
         "English": "Battle Rifle Package",
         "Russian": "Комплект боевой винтовки",
-        "Chinese": "战斗步枪组件"
+        "ChineseSimplified": "战斗步枪组件"
       }
     },
     {
@@ -542,7 +542,7 @@
       "languages": {
         "English": "Adapts the rifle for flexible combat use with a balance of handling, rate of fire and precision.",
         "Russian": "Адаптирует винтовку для универсального боя, балансируя управляемость, темп огня и точность.",
-        "Chinese": "将步枪改造为灵活的战斗用途，平衡操控、射速与精度。"
+        "ChineseSimplified": "将步枪改造为灵活的战斗用途，平衡操控、射速与精度。"
       }
     },
     {
@@ -550,7 +550,7 @@
       "languages": {
         "English": "Mad Minute Package",
         "Russian": "Комплект «Бешеная минута»",
-        "Chinese": "疯狂一分钟组件"
+        "ChineseSimplified": "疯狂一分钟组件"
       }
     },
     {
@@ -558,7 +558,7 @@
       "languages": {
         "English": "Tunes the rifle for exceptionally rapid aimed follow-up shots while preserving its marksman character.",
         "Russian": "Настраивает винтовку для исключительно быстрых прицельных повторных выстрелов, сохраняя её снайперский характер.",
-        "Chinese": "将步枪调校为极快速的瞄准补射，同时保留其精确射手特性。"
+        "ChineseSimplified": "将步枪调校为极快速的瞄准补射，同时保留其精确射手特性。"
       }
     }
   ]
