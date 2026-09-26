@@ -6,7 +6,7 @@
       "languages": {
         "English": "Lightweight Frame",
         "Russian": "Облегчённый каркас",
-        "Chinese": "轻量化框架"
+        "ChineseSimplified": "轻量化框架"
       }
     },
     {
@@ -14,7 +14,7 @@
       "languages": {
         "English": "Freedom-style weight reduction strips the helmet down to the essentials, reducing its weight by 0.5 kg.",
         "Russian": "Облегчение в стиле «Свободы» оставляет в шлеме только необходимое, снижая его вес на 0,5 кг.",
-        "Chinese": "自由团风格的减重改装将头盔精简至必要部件，重量降低0.5千克。"
+        "ChineseSimplified": "自由团风格的减重改装将头盔精简至必要部件，重量降低0.5千克。"
       }
     },
     {
@@ -22,7 +22,7 @@
       "languages": {
         "English": "Lightweight components and reduced field gear cut 1.5 kg from the suit, favoring mobility over heavy construction.",
         "Russian": "Облегчённые компоненты и сокращённое полевое снаряжение уменьшают вес костюма на 1,5 кг, отдавая приоритет мобильности.",
-        "Chinese": "轻量化组件与精简的野外装备使护甲减重1.5千克，以机动性取代厚重结构。"
+        "ChineseSimplified": "轻量化组件与精简的野外装备使护甲减重1.5千克，以机动性取代厚重结构。"
       }
     },
     {
@@ -30,7 +30,7 @@
       "languages": {
         "English": "An extensive lightweight rebuild removes 2 kg from the full-body suit, pushing the equipment toward Freedom's mobile field doctrine.",
         "Russian": "Глубокая облегчённая переделка снижает вес цельного костюма на 2 кг, приближая его к мобильной полевой доктрине «Свободы».",
-        "Chinese": "大规模轻量化改装使全身护甲减重2千克，使装备更符合自由团的机动野战理念。"
+        "ChineseSimplified": "大规模轻量化改装使全身护甲减重2千克，使装备更符合自由团的机动野战理念。"
       }
     },
     {
@@ -38,7 +38,7 @@
       "languages": {
         "English": "Field Endurance System",
         "Russian": "Система полевой выносливости",
-        "Chinese": "野外耐力系统"
+        "ChineseSimplified": "野外耐力系统"
       }
     },
     {
@@ -46,7 +46,7 @@
       "languages": {
         "English": "Ergonomic adjustments improve freedom of movement and stamina recovery by 5%, supporting longer movement through the Zone.",
         "Russian": "Эргономические изменения улучшают свободу движений и восстановление выносливости на 5%, облегчая длительные переходы по Зоне.",
-        "Chinese": "人体工学调整改善活动自由度，并使耐力恢复提高5%，有助于在区域中进行更长时间的移动。"
+        "ChineseSimplified": "人体工学调整改善活动自由度，并使耐力恢复提高5%，有助于在区域中进行更长时间的移动。"
       }
     },
     {
@@ -54,7 +54,7 @@
       "languages": {
         "English": "A mobility-focused harness and ergonomic refit improve stamina recovery by 10%, further committing the suit to Freedom's mobile field doctrine.",
         "Russian": "Ориентированная на мобильность разгрузочная система и эргономичная переделка повышают восстановление выносливости на 10%, усиливая мобильную специализацию костюма.",
-        "Chinese": "以机动性为核心的背带与人体工学改装使耐力恢复提高10%，进一步强化自由团的机动野战理念。"
+        "ChineseSimplified": "以机动性为核心的背带与人体工学改装使耐力恢复提高10%，进一步强化自由团的机动野战理念。"
       }
     },
     {
@@ -62,7 +62,7 @@
       "languages": {
         "English": "A full ergonomic refit improves stamina recovery by 10%, turning the heavy platform into a more mobile long-range field configuration.",
         "Russian": "Полная эргономичная переделка повышает восстановление выносливости на 10%, превращая тяжёлую платформу в более мобильную конфигурацию для дальних вылазок.",
-        "Chinese": "全面的人体工学改装使耐力恢复提高10%，将重型平台转变为更适合远距离行动的机动配置。"
+        "ChineseSimplified": "全面的人体工学改装使耐力恢复提高10%，将重型平台转变为更适合远距离行动的机动配置。"
       }
     },
     {
@@ -70,7 +70,7 @@
       "languages": {
         "English": "Freedom Field Rig",
         "Russian": "Полевая разгрузка «Свободы»",
-        "Chinese": "自由团野战携行具"
+        "ChineseSimplified": "自由团野战携行具"
       }
     },
     {
@@ -78,7 +78,7 @@
       "languages": {
         "English": "A compact field rig improves carrying capacity and weight distribution by 5%, but sacrifices 10% durability to keep the setup light and mobile.",
         "Russian": "Компактная полевая разгрузка улучшает грузоподъёмность и распределение веса на 5%, но ради лёгкости и мобильности снижает прочность на 10%.",
-        "Chinese": "紧凑型野战携行具使负重能力与重量分配提高5%，但为保持轻便机动会牺牲10%耐久度。"
+        "ChineseSimplified": "紧凑型野战携行具使负重能力与重量分配提高5%，但为保持轻便机动会牺牲10%耐久度。"
       }
     },
     {
@@ -86,7 +86,7 @@
       "languages": {
         "English": "A Freedom field rig improves carrying capacity and weight distribution by 15%, but sacrifices 10% physical protection for unrestricted mobility.",
         "Russian": "Полевая разгрузка «Свободы» улучшает грузоподъёмность и распределение веса на 15%, но ради свободы движений снижает физическую защиту на 10%.",
-        "Chinese": "自由团野战携行具使负重能力与重量分配提高15%，但为不受限制的机动性牺牲10%物理防护。"
+        "ChineseSimplified": "自由团野战携行具使负重能力与重量分配提高15%，但为不受限制的机动性牺牲10%物理防护。"
       }
     },
     {
@@ -94,7 +94,7 @@
       "languages": {
         "English": "The final Freedom field conversion improves carrying capacity and weight distribution by 20%, but sacrifices 10% physical protection and 10% durability for maximum mobility.",
         "Russian": "Финальная полевая переделка «Свободы» улучшает грузоподъёмность и распределение веса на 20%, но ради максимальной мобильности снижает физическую защиту и прочность на 10%.",
-        "Chinese": "最终的自由团野战改装使负重能力与重量分配提高20%，但为获得最大机动性牺牲10%物理防护与10%耐久度。"
+        "ChineseSimplified": "最终的自由团野战改装使负重能力与重量分配提高20%，但为获得最大机动性牺牲10%物理防护与10%耐久度。"
       }
     },
     {
@@ -102,7 +102,7 @@
       "languages": {
         "English": "Reinforced Plating",
         "Russian": "Усиленная бронепластина",
-        "Chinese": "强化装甲板"
+        "ChineseSimplified": "强化装甲板"
       }
     },
     {
@@ -110,7 +110,7 @@
       "languages": {
         "English": "Reinforced plating improves the helmet's physical protection by 10%, following Duty's preference for direct battlefield protection.",
         "Russian": "Усиленная бронепластина повышает физическую защиту шлема на 10%, следуя доктрине «Долга», ориентированной на прямую боевую защиту.",
-        "Chinese": "强化装甲板使头盔的物理防护提高10%，进一步贯彻纪律团偏重正面战场防护的理念。"
+        "ChineseSimplified": "强化装甲板使头盔的物理防护提高10%，进一步贯彻纪律团偏重正面战场防护的理念。"
       }
     },
     {
@@ -118,7 +118,7 @@
       "languages": {
         "English": "Additional armor reinforcement improves the suit's physical protection by 15%, prioritizing battlefield survivability over lighter construction.",
         "Russian": "Дополнительное усиление брони повышает физическую защиту костюма на 15%, отдавая приоритет выживаемости в бою.",
-        "Chinese": "额外装甲强化使护甲的物理防护提高15%，进一步贯彻纪律团偏重正面战场防护的理念。"
+        "ChineseSimplified": "额外装甲强化使护甲的物理防护提高15%，进一步贯彻纪律团偏重正面战场防护的理念。"
       }
     },
     {
@@ -126,7 +126,7 @@
       "languages": {
         "English": "Heavy reinforcement improves the full-body suit's physical protection by 20%, turning it further toward Duty's frontline doctrine.",
         "Russian": "Тяжёлое усиление повышает физическую защиту цельного костюма на 20%, ещё сильнее ориентируя его на фронтовую доктрину «Долга».",
-        "Chinese": "重型强化使全身护甲的物理防护提高20%，进一步贯彻纪律团偏重正面战场防护的理念。"
+        "ChineseSimplified": "重型强化使全身护甲的物理防护提高20%，进一步贯彻纪律团偏重正面战场防护的理念。"
       }
     },
     {
@@ -134,7 +134,7 @@
       "languages": {
         "English": "Hardened Construction",
         "Russian": "Закалённая конструкция",
-        "Chinese": "强化结构"
+        "ChineseSimplified": "强化结构"
       }
     },
     {
@@ -142,7 +142,7 @@
       "languages": {
         "English": "Hardened structural components increase maximum durability by 10%, making the helmet more resistant to prolonged field use.",
         "Russian": "Закалённые элементы конструкции повышают максимальную прочность на 10%, делая шлем устойчивее к длительной эксплуатации.",
-        "Chinese": "强化结构组件使最大耐久度提高10%，令头盔更能承受长期野外使用。"
+        "ChineseSimplified": "强化结构组件使最大耐久度提高10%，令头盔更能承受长期野外使用。"
       }
     },
     {
@@ -150,7 +150,7 @@
       "languages": {
         "English": "A hardened frame and reinforced load points increase maximum durability by 15% for extended frontline service.",
         "Russian": "Закалённый каркас и усиленные точки нагрузки повышают максимальную прочность на 15% для длительной службы на передовой.",
-        "Chinese": "强化框架与承重点使最大耐久度提高15%，适合长时间前线服役。"
+        "ChineseSimplified": "强化框架与承重点使最大耐久度提高15%，适合长时间前线服役。"
       }
     },
     {
@@ -158,7 +158,7 @@
       "languages": {
         "English": "Extensive structural hardening increases maximum durability by 20%, preparing the full-body platform for sustained heavy combat.",
         "Russian": "Комплексное усиление конструкции повышает максимальную прочность на 20%, подготавливая цельную бронесистему к продолжительным тяжёлым боям.",
-        "Chinese": "全面结构强化使最大耐久度提高20%，使全身护甲能够承受持续的高强度战斗。"
+        "ChineseSimplified": "全面结构强化使最大耐久度提高20%，使全身护甲能够承受持续的高强度战斗。"
       }
     },
     {
@@ -166,7 +166,7 @@
       "languages": {
         "English": "Frontline Fortification",
         "Russian": "Фронтовое укрепление",
-        "Chinese": "前线强化"
+        "ChineseSimplified": "前线强化"
       }
     },
     {
@@ -174,7 +174,7 @@
       "languages": {
         "English": "Final reinforcement adds another 5% physical protection and 5% maximum durability, completing the helmet's compact defensive package.",
         "Russian": "Финальное усиление добавляет ещё 5% физической защиты и 5% максимальной прочности, завершая компактный защитный комплекс шлема.",
-        "Chinese": "最终强化额外提高5%物理防护和5%最大耐久度，完成头盔的紧凑防护方案。"
+        "ChineseSimplified": "最终强化额外提高5%物理防护和5%最大耐久度，完成头盔的紧凑防护方案。"
       }
     },
     {
@@ -182,7 +182,7 @@
       "languages": {
         "English": "Final reinforcement adds another 10% physical protection and 10% maximum durability, committing the suit to Duty's heavy frontline role.",
         "Russian": "Финальное усиление добавляет ещё 10% физической защиты и 10% максимальной прочности, окончательно закрепляя костюм в тяжёлой фронтовой роли «Долга».",
-        "Chinese": "最终强化额外提高10%物理防护和10%最大耐久度，使护甲彻底转向纪律团的重型前线定位。"
+        "ChineseSimplified": "最终强化额外提高10%物理防护和10%最大耐久度，使护甲彻底转向纪律团的重型前线定位。"
       }
     },
     {
@@ -190,7 +190,7 @@
       "languages": {
         "English": "The final fortification adds another 10% physical protection and 10% maximum durability, completing a heavily armored frontline platform.",
         "Russian": "Финальное укрепление добавляет ещё 10% физической защиты и 10% максимальной прочности, завершая тяжёлую фронтовую бронесистему.",
-        "Chinese": "最终强化额外提高10%物理防护和10%最大耐久度，完成这一重装前线平台的构筑。"
+        "ChineseSimplified": "最终强化额外提高10%物理防护和10%最大耐久度，完成这一重装前线平台的构筑。"
       }
     },
     {
@@ -198,7 +198,7 @@
       "languages": {
         "English": "Insulated Layer",
         "Russian": "Insulated Layer",
-        "Chinese": "绝缘层"
+        "ChineseSimplified": "绝缘层"
       }
     },
     {
@@ -206,7 +206,7 @@
       "languages": {
         "English": "Sealed Assembly",
         "Russian": "Sealed Assembly",
-        "Chinese": "密封组件"
+        "ChineseSimplified": "密封组件"
       }
     },
     {
@@ -214,7 +214,7 @@
       "languages": {
         "English": "Zone Shielding",
         "Russian": "Zone Shielding",
-        "Chinese": "区域防护"
+        "ChineseSimplified": "区域防护"
       }
     },
     {
@@ -222,7 +222,7 @@
       "languages": {
         "English": "Insulated Layer gives the helmet thermal insulation, reinforcing the anomaly exploration role.",
         "Russian": "The Insulated Layer upgrade reinforces this helmet's anomaly exploration role.",
-        "Chinese": "该改装为头盔提供绝缘层，进一步强化其异常探索定位。"
+        "ChineseSimplified": "该改装为头盔提供绝缘层，进一步强化其异常探索定位。"
       }
     },
     {
@@ -230,7 +230,7 @@
       "languages": {
         "English": "Sealed Assembly gives the helmet chemical sealing, reinforcing the anomaly exploration role.",
         "Russian": "The Sealed Assembly upgrade reinforces this helmet's anomaly exploration role.",
-        "Chinese": "该改装为头盔提供化学密封，进一步强化其异常探索定位。"
+        "ChineseSimplified": "该改装为头盔提供化学密封，进一步强化其异常探索定位。"
       }
     },
     {
@@ -238,7 +238,7 @@
       "languages": {
         "English": "Zone Shielding gives the helmet electrical shielding, reinforcing the anomaly exploration role.",
         "Russian": "The Zone Shielding upgrade reinforces this helmet's anomaly exploration role.",
-        "Chinese": "该改装为头盔提供电气防护，进一步强化其异常探索定位。"
+        "ChineseSimplified": "该改装为头盔提供电气防护，进一步强化其异常探索定位。"
       }
     },
     {
@@ -246,7 +246,7 @@
       "languages": {
         "English": "Insulated Layer gives the suit thermal insulation, reinforcing the anomaly exploration role.",
         "Russian": "The Insulated Layer upgrade reinforces this suit's anomaly exploration role.",
-        "Chinese": "该改装为护甲提供绝缘层，进一步强化其异常探索定位。"
+        "ChineseSimplified": "该改装为护甲提供绝缘层，进一步强化其异常探索定位。"
       }
     },
     {
@@ -254,7 +254,7 @@
       "languages": {
         "English": "Sealed Assembly gives the suit chemical sealing, reinforcing the anomaly exploration role.",
         "Russian": "The Sealed Assembly upgrade reinforces this suit's anomaly exploration role.",
-        "Chinese": "该改装为护甲提供化学密封，进一步强化其异常探索定位。"
+        "ChineseSimplified": "该改装为护甲提供化学密封，进一步强化其异常探索定位。"
       }
     },
     {
@@ -262,7 +262,7 @@
       "languages": {
         "English": "Zone Shielding gives the suit electrical shielding, reinforcing the anomaly exploration role.",
         "Russian": "The Zone Shielding upgrade reinforces this suit's anomaly exploration role.",
-        "Chinese": "该改装为护甲提供电气防护，进一步强化其异常探索定位。"
+        "ChineseSimplified": "该改装为护甲提供电气防护，进一步强化其异常探索定位。"
       }
     },
     {
@@ -270,7 +270,7 @@
       "languages": {
         "English": "Insulated Layer gives the full-body suit thermal insulation, reinforcing the anomaly exploration role.",
         "Russian": "The Insulated Layer upgrade reinforces this full-body suit's anomaly exploration role.",
-        "Chinese": "该改装为全身护甲提供绝缘层，进一步强化其异常探索定位。"
+        "ChineseSimplified": "该改装为全身护甲提供绝缘层，进一步强化其异常探索定位。"
       }
     },
     {
@@ -278,7 +278,7 @@
       "languages": {
         "English": "Sealed Assembly gives the full-body suit chemical sealing, reinforcing the anomaly exploration role.",
         "Russian": "The Sealed Assembly upgrade reinforces this full-body suit's anomaly exploration role.",
-        "Chinese": "该改装为全身护甲提供化学密封，进一步强化其异常探索定位。"
+        "ChineseSimplified": "该改装为全身护甲提供化学密封，进一步强化其异常探索定位。"
       }
     },
     {
@@ -286,7 +286,7 @@
       "languages": {
         "English": "Zone Shielding gives the full-body suit electrical shielding, reinforcing the anomaly exploration role.",
         "Russian": "The Zone Shielding upgrade reinforces this full-body suit's anomaly exploration role.",
-        "Chinese": "该改装为全身护甲提供电气防护，进一步强化其异常探索定位。"
+        "ChineseSimplified": "该改装为全身护甲提供电气防护，进一步强化其异常探索定位。"
       }
     },
     {
@@ -294,7 +294,7 @@
       "languages": {
         "English": "Lightweight Kit",
         "Russian": "Lightweight Kit",
-        "Chinese": "轻量化组件"
+        "ChineseSimplified": "轻量化组件"
       }
     },
     {
@@ -302,7 +302,7 @@
       "languages": {
         "English": "Load-Bearing Rig",
         "Russian": "Load-Bearing Rig",
-        "Chinese": "承载携行具"
+        "ChineseSimplified": "承载携行具"
       }
     },
     {
@@ -310,7 +310,7 @@
       "languages": {
         "English": "Trail-Ready Harness",
         "Russian": "Trail-Ready Harness",
-        "Chinese": "长途行军背带"
+        "ChineseSimplified": "长途行军背带"
       }
     },
     {
@@ -318,7 +318,7 @@
       "languages": {
         "English": "Lightweight Kit gives the helmet reduced equipment weight, reinforcing the scavenging role.",
         "Russian": "The Lightweight Kit upgrade reinforces this helmet's scavenging role.",
-        "Chinese": "该改装为头盔提供降低装备重量，进一步强化其拾荒定位。"
+        "ChineseSimplified": "该改装为头盔提供降低装备重量，进一步强化其拾荒定位。"
       }
     },
     {
@@ -326,7 +326,7 @@
       "languages": {
         "English": "Load-Bearing Rig gives the helmet improved carrying capacity, reinforcing the scavenging role.",
         "Russian": "The Load-Bearing Rig upgrade reinforces this helmet's scavenging role.",
-        "Chinese": "该改装为头盔提供提高负重能力，进一步强化其拾荒定位。"
+        "ChineseSimplified": "该改装为头盔提供提高负重能力，进一步强化其拾荒定位。"
       }
     },
     {
@@ -334,7 +334,7 @@
       "languages": {
         "English": "Trail-Ready Harness gives the helmet field endurance, reinforcing the scavenging role.",
         "Russian": "The Trail-Ready Harness upgrade reinforces this helmet's scavenging role.",
-        "Chinese": "该改装为头盔提供野外耐力，进一步强化其拾荒定位。"
+        "ChineseSimplified": "该改装为头盔提供野外耐力，进一步强化其拾荒定位。"
       }
     },
     {
@@ -342,7 +342,7 @@
       "languages": {
         "English": "Lightweight Kit gives the suit reduced equipment weight, reinforcing the scavenging role.",
         "Russian": "The Lightweight Kit upgrade reinforces this suit's scavenging role.",
-        "Chinese": "该改装为护甲提供降低装备重量，进一步强化其拾荒定位。"
+        "ChineseSimplified": "该改装为护甲提供降低装备重量，进一步强化其拾荒定位。"
       }
     },
     {
@@ -350,7 +350,7 @@
       "languages": {
         "English": "Load-Bearing Rig gives the suit improved carrying capacity, reinforcing the scavenging role.",
         "Russian": "The Load-Bearing Rig upgrade reinforces this suit's scavenging role.",
-        "Chinese": "该改装为护甲提供提高负重能力，进一步强化其拾荒定位。"
+        "ChineseSimplified": "该改装为护甲提供提高负重能力，进一步强化其拾荒定位。"
       }
     },
     {
@@ -358,7 +358,7 @@
       "languages": {
         "English": "Trail-Ready Harness gives the suit field endurance, reinforcing the scavenging role.",
         "Russian": "The Trail-Ready Harness upgrade reinforces this suit's scavenging role.",
-        "Chinese": "该改装为护甲提供野外耐力，进一步强化其拾荒定位。"
+        "ChineseSimplified": "该改装为护甲提供野外耐力，进一步强化其拾荒定位。"
       }
     },
     {
@@ -366,7 +366,7 @@
       "languages": {
         "English": "Lightweight Kit gives the full-body suit reduced equipment weight, reinforcing the scavenging role.",
         "Russian": "The Lightweight Kit upgrade reinforces this full-body suit's scavenging role.",
-        "Chinese": "该改装为全身护甲提供降低装备重量，进一步强化其拾荒定位。"
+        "ChineseSimplified": "该改装为全身护甲提供降低装备重量，进一步强化其拾荒定位。"
       }
     },
     {
@@ -374,7 +374,7 @@
       "languages": {
         "English": "Load-Bearing Rig gives the full-body suit improved carrying capacity, reinforcing the scavenging role.",
         "Russian": "The Load-Bearing Rig upgrade reinforces this full-body suit's scavenging role.",
-        "Chinese": "该改装为全身护甲提供提高负重能力，进一步强化其拾荒定位。"
+        "ChineseSimplified": "该改装为全身护甲提供提高负重能力，进一步强化其拾荒定位。"
       }
     },
     {
@@ -382,7 +382,7 @@
       "languages": {
         "English": "Trail-Ready Harness gives the full-body suit field endurance, reinforcing the scavenging role.",
         "Russian": "The Trail-Ready Harness upgrade reinforces this full-body suit's scavenging role.",
-        "Chinese": "该改装为全身护甲提供野外耐力，进一步强化其拾荒定位。"
+        "ChineseSimplified": "该改装为全身护甲提供野外耐力，进一步强化其拾荒定位。"
       }
     },
     {
@@ -390,7 +390,7 @@
       "languages": {
         "English": "Scavenged Components",
         "Russian": "Scavenged Components",
-        "Chinese": "拾荒组件"
+        "ChineseSimplified": "拾荒组件"
       }
     },
     {
@@ -398,7 +398,7 @@
       "languages": {
         "English": "Improvised Reinforcement",
         "Russian": "Improvised Reinforcement",
-        "Chinese": "简易强化"
+        "ChineseSimplified": "简易强化"
       }
     },
     {
@@ -406,7 +406,7 @@
       "languages": {
         "English": "Makeshift Pack Rig",
         "Russian": "Makeshift Pack Rig",
-        "Chinese": "临时背负系统"
+        "ChineseSimplified": "临时背负系统"
       }
     },
     {
@@ -414,7 +414,7 @@
       "languages": {
         "English": "Scavenged Components gives the helmet scavenged lightweight components, reinforcing the improvised hybrid role.",
         "Russian": "The Scavenged Components upgrade reinforces this helmet's improvised hybrid role.",
-        "Chinese": "该改装为头盔提供拾来的轻量化组件，进一步强化其临时混合定位。"
+        "ChineseSimplified": "该改装为头盔提供拾来的轻量化组件，进一步强化其临时混合定位。"
       }
     },
     {
@@ -422,7 +422,7 @@
       "languages": {
         "English": "Improvised Reinforcement gives the helmet improvised physical reinforcement, reinforcing the improvised hybrid role.",
         "Russian": "The Improvised Reinforcement upgrade reinforces this helmet's improvised hybrid role.",
-        "Chinese": "该改装为头盔提供简易物理强化，进一步强化其临时混合定位。"
+        "ChineseSimplified": "该改装为头盔提供简易物理强化，进一步强化其临时混合定位。"
       }
     },
     {
@@ -430,7 +430,7 @@
       "languages": {
         "English": "Makeshift Pack Rig gives the helmet a makeshift load-bearing rig, reinforcing the improvised hybrid role.",
         "Russian": "The Makeshift Pack Rig upgrade reinforces this helmet's improvised hybrid role.",
-        "Chinese": "该改装为头盔提供临时承载携行具，进一步强化其临时混合定位。"
+        "ChineseSimplified": "该改装为头盔提供临时承载携行具，进一步强化其临时混合定位。"
       }
     },
     {
@@ -438,7 +438,7 @@
       "languages": {
         "English": "Scavenged Components gives the suit scavenged lightweight components, reinforcing the improvised hybrid role.",
         "Russian": "The Scavenged Components upgrade reinforces this suit's improvised hybrid role.",
-        "Chinese": "该改装为护甲提供拾来的轻量化组件，进一步强化其临时混合定位。"
+        "ChineseSimplified": "该改装为护甲提供拾来的轻量化组件，进一步强化其临时混合定位。"
       }
     },
     {
@@ -446,7 +446,7 @@
       "languages": {
         "English": "Improvised Reinforcement gives the suit improvised physical reinforcement, reinforcing the improvised hybrid role.",
         "Russian": "The Improvised Reinforcement upgrade reinforces this suit's improvised hybrid role.",
-        "Chinese": "该改装为护甲提供简易物理强化，进一步强化其临时混合定位。"
+        "ChineseSimplified": "该改装为护甲提供简易物理强化，进一步强化其临时混合定位。"
       }
     },
     {
@@ -454,7 +454,7 @@
       "languages": {
         "English": "Makeshift Pack Rig gives the suit a makeshift load-bearing rig, reinforcing the improvised hybrid role.",
         "Russian": "The Makeshift Pack Rig upgrade reinforces this suit's improvised hybrid role.",
-        "Chinese": "该改装为护甲提供临时承载携行具，进一步强化其临时混合定位。"
+        "ChineseSimplified": "该改装为护甲提供临时承载携行具，进一步强化其临时混合定位。"
       }
     },
     {
@@ -462,7 +462,7 @@
       "languages": {
         "English": "Scavenged Components gives the full-body suit scavenged lightweight components, reinforcing the improvised hybrid role.",
         "Russian": "The Scavenged Components upgrade reinforces this full-body suit's improvised hybrid role.",
-        "Chinese": "该改装为全身护甲提供拾来的轻量化组件，进一步强化其临时混合定位。"
+        "ChineseSimplified": "该改装为全身护甲提供拾来的轻量化组件，进一步强化其临时混合定位。"
       }
     },
     {
@@ -470,7 +470,7 @@
       "languages": {
         "English": "Improvised Reinforcement gives the full-body suit improvised physical reinforcement, reinforcing the improvised hybrid role.",
         "Russian": "The Improvised Reinforcement upgrade reinforces this full-body suit's improvised hybrid role.",
-        "Chinese": "该改装为全身护甲提供简易物理强化，进一步强化其临时混合定位。"
+        "ChineseSimplified": "该改装为全身护甲提供简易物理强化，进一步强化其临时混合定位。"
       }
     },
     {
@@ -478,7 +478,7 @@
       "languages": {
         "English": "Makeshift Pack Rig gives the full-body suit a makeshift load-bearing rig, reinforcing the improvised hybrid role.",
         "Russian": "The Makeshift Pack Rig upgrade reinforces this full-body suit's improvised hybrid role.",
-        "Chinese": "该改装为全身护甲提供临时承载携行具，进一步强化其临时混合定位。"
+        "ChineseSimplified": "该改装为全身护甲提供临时承载携行具，进一步强化其临时混合定位。"
       }
     },
     {
@@ -486,7 +486,7 @@
       "languages": {
         "English": "Ballistic Reinforcement",
         "Russian": "Ballistic Reinforcement",
-        "Chinese": "弹道强化"
+        "ChineseSimplified": "弹道强化"
       }
     },
     {
@@ -494,7 +494,7 @@
       "languages": {
         "English": "Service-Hardened Construction",
         "Russian": "Service-Hardened Construction",
-        "Chinese": "军用强化结构"
+        "ChineseSimplified": "军用强化结构"
       }
     },
     {
@@ -502,7 +502,7 @@
       "languages": {
         "English": "Combat Conditioning",
         "Russian": "Combat Conditioning",
-        "Chinese": "战斗适应改装"
+        "ChineseSimplified": "战斗适应改装"
       }
     },
     {
@@ -510,7 +510,7 @@
       "languages": {
         "English": "Ballistic Reinforcement gives the helmet ballistic reinforcement, reinforcing the combat loadout role.",
         "Russian": "The Ballistic Reinforcement upgrade reinforces this helmet's combat loadout role.",
-        "Chinese": "该改装为头盔提供弹道强化，进一步强化其战斗装备定位。"
+        "ChineseSimplified": "该改装为头盔提供弹道强化，进一步强化其战斗装备定位。"
       }
     },
     {
@@ -518,7 +518,7 @@
       "languages": {
         "English": "Service-Hardened Construction gives the helmet service-grade durability, reinforcing the combat loadout role.",
         "Russian": "The Service-Hardened Construction upgrade reinforces this helmet's combat loadout role.",
-        "Chinese": "该改装为头盔提供军用级耐久度，进一步强化其战斗装备定位。"
+        "ChineseSimplified": "该改装为头盔提供军用级耐久度，进一步强化其战斗装备定位。"
       }
     },
     {
@@ -526,7 +526,7 @@
       "languages": {
         "English": "Combat Conditioning gives the helmet combat conditioning, reinforcing the combat loadout role.",
         "Russian": "The Combat Conditioning upgrade reinforces this helmet's combat loadout role.",
-        "Chinese": "该改装为头盔提供战斗适应性，进一步强化其战斗装备定位。"
+        "ChineseSimplified": "该改装为头盔提供战斗适应性，进一步强化其战斗装备定位。"
       }
     },
     {
@@ -534,7 +534,7 @@
       "languages": {
         "English": "Ballistic Reinforcement gives the suit ballistic reinforcement, reinforcing the combat loadout role.",
         "Russian": "The Ballistic Reinforcement upgrade reinforces this suit's combat loadout role.",
-        "Chinese": "该改装为护甲提供弹道强化，进一步强化其战斗装备定位。"
+        "ChineseSimplified": "该改装为护甲提供弹道强化，进一步强化其战斗装备定位。"
       }
     },
     {
@@ -542,7 +542,7 @@
       "languages": {
         "English": "Service-Hardened Construction gives the suit service-grade durability, reinforcing the combat loadout role.",
         "Russian": "The Service-Hardened Construction upgrade reinforces this suit's combat loadout role.",
-        "Chinese": "该改装为护甲提供军用级耐久度，进一步强化其战斗装备定位。"
+        "ChineseSimplified": "该改装为护甲提供军用级耐久度，进一步强化其战斗装备定位。"
       }
     },
     {
@@ -550,7 +550,7 @@
       "languages": {
         "English": "Combat Conditioning gives the suit combat conditioning, reinforcing the combat loadout role.",
         "Russian": "The Combat Conditioning upgrade reinforces this suit's combat loadout role.",
-        "Chinese": "该改装为护甲提供战斗适应性，进一步强化其战斗装备定位。"
+        "ChineseSimplified": "该改装为护甲提供战斗适应性，进一步强化其战斗装备定位。"
       }
     },
     {
@@ -558,7 +558,7 @@
       "languages": {
         "English": "Ballistic Reinforcement gives the full-body suit ballistic reinforcement, reinforcing the combat loadout role.",
         "Russian": "The Ballistic Reinforcement upgrade reinforces this full-body suit's combat loadout role.",
-        "Chinese": "该改装为全身护甲提供弹道强化，进一步强化其战斗装备定位。"
+        "ChineseSimplified": "该改装为全身护甲提供弹道强化，进一步强化其战斗装备定位。"
       }
     },
     {
@@ -566,7 +566,7 @@
       "languages": {
         "English": "Service-Hardened Construction gives the full-body suit service-grade durability, reinforcing the combat loadout role.",
         "Russian": "The Service-Hardened Construction upgrade reinforces this full-body suit's combat loadout role.",
-        "Chinese": "该改装为全身护甲提供军用级耐久度，进一步强化其战斗装备定位。"
+        "ChineseSimplified": "该改装为全身护甲提供军用级耐久度，进一步强化其战斗装备定位。"
       }
     },
     {
@@ -574,7 +574,7 @@
       "languages": {
         "English": "Combat Conditioning gives the full-body suit combat conditioning, reinforcing the combat loadout role.",
         "Russian": "The Combat Conditioning upgrade reinforces this full-body suit's combat loadout role.",
-        "Chinese": "该改装为全身护甲提供战斗适应性，进一步强化其战斗装备定位。"
+        "ChineseSimplified": "该改装为全身护甲提供战斗适应性，进一步强化其战斗装备定位。"
       }
     },
     {
@@ -582,7 +582,7 @@
       "languages": {
         "English": "Lightweight Kit",
         "Russian": "Lightweight Kit",
-        "Chinese": "轻量化组件"
+        "ChineseSimplified": "轻量化组件"
       }
     },
     {
@@ -590,7 +590,7 @@
       "languages": {
         "English": "Ballistic Reinforcement",
         "Russian": "Ballistic Reinforcement",
-        "Chinese": "弹道强化"
+        "ChineseSimplified": "弹道强化"
       }
     },
     {
@@ -598,7 +598,7 @@
       "languages": {
         "English": "Tactical Endurance",
         "Russian": "Tactical Endurance",
-        "Chinese": "战术耐力"
+        "ChineseSimplified": "战术耐力"
       }
     },
     {
@@ -606,7 +606,7 @@
       "languages": {
         "English": "Lightweight Kit gives the helmet weight-conscious tactical components, reinforcing the tactical mobility role.",
         "Russian": "The Lightweight Kit upgrade reinforces this helmet's tactical mobility role.",
-        "Chinese": "该改装为头盔提供注重重量的战术组件，进一步强化其战术机动定位。"
+        "ChineseSimplified": "该改装为头盔提供注重重量的战术组件，进一步强化其战术机动定位。"
       }
     },
     {
@@ -614,7 +614,7 @@
       "languages": {
         "English": "Ballistic Reinforcement gives the helmet selective ballistic reinforcement, reinforcing the tactical mobility role.",
         "Russian": "The Ballistic Reinforcement upgrade reinforces this helmet's tactical mobility role.",
-        "Chinese": "该改装为头盔提供选择性弹道强化，进一步强化其战术机动定位。"
+        "ChineseSimplified": "该改装为头盔提供选择性弹道强化，进一步强化其战术机动定位。"
       }
     },
     {
@@ -622,7 +622,7 @@
       "languages": {
         "English": "Tactical Endurance gives the helmet field endurance, reinforcing the tactical mobility role.",
         "Russian": "The Tactical Endurance upgrade reinforces this helmet's tactical mobility role.",
-        "Chinese": "该改装为头盔提供野外耐力，进一步强化其战术机动定位。"
+        "ChineseSimplified": "该改装为头盔提供野外耐力，进一步强化其战术机动定位。"
       }
     },
     {
@@ -630,7 +630,7 @@
       "languages": {
         "English": "Lightweight Kit gives the suit weight-conscious tactical components, reinforcing the tactical mobility role.",
         "Russian": "The Lightweight Kit upgrade reinforces this suit's tactical mobility role.",
-        "Chinese": "该改装为护甲提供注重重量的战术组件，进一步强化其战术机动定位。"
+        "ChineseSimplified": "该改装为护甲提供注重重量的战术组件，进一步强化其战术机动定位。"
       }
     },
     {
@@ -638,7 +638,7 @@
       "languages": {
         "English": "Ballistic Reinforcement gives the suit selective ballistic reinforcement, reinforcing the tactical mobility role.",
         "Russian": "The Ballistic Reinforcement upgrade reinforces this suit's tactical mobility role.",
-        "Chinese": "该改装为护甲提供选择性弹道强化，进一步强化其战术机动定位。"
+        "ChineseSimplified": "该改装为护甲提供选择性弹道强化，进一步强化其战术机动定位。"
       }
     },
     {
@@ -646,7 +646,7 @@
       "languages": {
         "English": "Tactical Endurance gives the suit field endurance, reinforcing the tactical mobility role.",
         "Russian": "The Tactical Endurance upgrade reinforces this suit's tactical mobility role.",
-        "Chinese": "该改装为护甲提供野外耐力，进一步强化其战术机动定位。"
+        "ChineseSimplified": "该改装为护甲提供野外耐力，进一步强化其战术机动定位。"
       }
     },
     {
@@ -654,7 +654,7 @@
       "languages": {
         "English": "Lightweight Kit gives the full-body suit weight-conscious tactical components, reinforcing the tactical mobility role.",
         "Russian": "The Lightweight Kit upgrade reinforces this full-body suit's tactical mobility role.",
-        "Chinese": "该改装为全身护甲提供注重重量的战术组件，进一步强化其战术机动定位。"
+        "ChineseSimplified": "该改装为全身护甲提供注重重量的战术组件，进一步强化其战术机动定位。"
       }
     },
     {
@@ -662,7 +662,7 @@
       "languages": {
         "English": "Ballistic Reinforcement gives the full-body suit selective ballistic reinforcement, reinforcing the tactical mobility role.",
         "Russian": "The Ballistic Reinforcement upgrade reinforces this full-body suit's tactical mobility role.",
-        "Chinese": "该改装为全身护甲提供选择性弹道强化，进一步强化其战术机动定位。"
+        "ChineseSimplified": "该改装为全身护甲提供选择性弹道强化，进一步强化其战术机动定位。"
       }
     },
     {
@@ -670,7 +670,7 @@
       "languages": {
         "English": "Tactical Endurance gives the full-body suit field endurance, reinforcing the tactical mobility role.",
         "Russian": "The Tactical Endurance upgrade reinforces this full-body suit's tactical mobility role.",
-        "Chinese": "该改装为全身护甲提供野外耐力，进一步强化其战术机动定位。"
+        "ChineseSimplified": "该改装为全身护甲提供野外耐力，进一步强化其战术机动定位。"
       }
     },
     {
@@ -678,7 +678,7 @@
       "languages": {
         "English": "Ballistic Reinforcement",
         "Russian": "Ballistic Reinforcement",
-        "Chinese": "弹道强化"
+        "ChineseSimplified": "弹道强化"
       }
     },
     {
@@ -686,7 +686,7 @@
       "languages": {
         "English": "Hardened Construction",
         "Russian": "Hardened Construction",
-        "Chinese": "强化结构"
+        "ChineseSimplified": "强化结构"
       }
     },
     {
@@ -694,7 +694,7 @@
       "languages": {
         "English": "Psy Shielding",
         "Russian": "Psy Shielding",
-        "Chinese": "心灵防护"
+        "ChineseSimplified": "心灵防护"
       }
     },
     {
@@ -702,7 +702,7 @@
       "languages": {
         "English": "Ballistic Reinforcement gives the helmet advanced ballistic reinforcement, reinforcing the advanced protection role.",
         "Russian": "The Ballistic Reinforcement upgrade reinforces this helmet's advanced protection role.",
-        "Chinese": "该改装为头盔提供先进弹道强化，进一步强化其先进防护定位。"
+        "ChineseSimplified": "该改装为头盔提供先进弹道强化，进一步强化其先进防护定位。"
       }
     },
     {
@@ -710,7 +710,7 @@
       "languages": {
         "English": "Hardened Construction gives the helmet hardened construction, reinforcing the advanced protection role.",
         "Russian": "The Hardened Construction upgrade reinforces this helmet's advanced protection role.",
-        "Chinese": "该改装为头盔提供强化结构，进一步强化其先进防护定位。"
+        "ChineseSimplified": "该改装为头盔提供强化结构，进一步强化其先进防护定位。"
       }
     },
     {
@@ -718,7 +718,7 @@
       "languages": {
         "English": "Psy Shielding gives the helmet integrated psy shielding, reinforcing the advanced protection role.",
         "Russian": "The Psy Shielding upgrade reinforces this helmet's advanced protection role.",
-        "Chinese": "该改装为头盔提供集成式心灵防护，进一步强化其先进防护定位。"
+        "ChineseSimplified": "该改装为头盔提供集成式心灵防护，进一步强化其先进防护定位。"
       }
     },
     {
@@ -726,7 +726,7 @@
       "languages": {
         "English": "Ballistic Reinforcement gives the suit advanced ballistic reinforcement, reinforcing the advanced protection role.",
         "Russian": "The Ballistic Reinforcement upgrade reinforces this suit's advanced protection role.",
-        "Chinese": "该改装为护甲提供先进弹道强化，进一步强化其先进防护定位。"
+        "ChineseSimplified": "该改装为护甲提供先进弹道强化，进一步强化其先进防护定位。"
       }
     },
     {
@@ -734,7 +734,7 @@
       "languages": {
         "English": "Hardened Construction gives the suit hardened construction, reinforcing the advanced protection role.",
         "Russian": "The Hardened Construction upgrade reinforces this suit's advanced protection role.",
-        "Chinese": "该改装为护甲提供强化结构，进一步强化其先进防护定位。"
+        "ChineseSimplified": "该改装为护甲提供强化结构，进一步强化其先进防护定位。"
       }
     },
     {
@@ -742,7 +742,7 @@
       "languages": {
         "English": "Psy Shielding gives the suit integrated psy shielding, reinforcing the advanced protection role.",
         "Russian": "The Psy Shielding upgrade reinforces this suit's advanced protection role.",
-        "Chinese": "该改装为护甲提供集成式心灵防护，进一步强化其先进防护定位。"
+        "ChineseSimplified": "该改装为护甲提供集成式心灵防护，进一步强化其先进防护定位。"
       }
     },
     {
@@ -750,7 +750,7 @@
       "languages": {
         "English": "Ballistic Reinforcement gives the full-body suit advanced ballistic reinforcement, reinforcing the advanced protection role.",
         "Russian": "The Ballistic Reinforcement upgrade reinforces this full-body suit's advanced protection role.",
-        "Chinese": "该改装为全身护甲提供先进弹道强化，进一步强化其先进防护定位。"
+        "ChineseSimplified": "该改装为全身护甲提供先进弹道强化，进一步强化其先进防护定位。"
       }
     },
     {
@@ -758,7 +758,7 @@
       "languages": {
         "English": "Hardened Construction gives the full-body suit hardened construction, reinforcing the advanced protection role.",
         "Russian": "The Hardened Construction upgrade reinforces this full-body suit's advanced protection role.",
-        "Chinese": "该改装为全身护甲提供强化结构，进一步强化其先进防护定位。"
+        "ChineseSimplified": "该改装为全身护甲提供强化结构，进一步强化其先进防护定位。"
       }
     },
     {
@@ -766,7 +766,7 @@
       "languages": {
         "English": "Psy Shielding gives the full-body suit integrated psy shielding, reinforcing the advanced protection role.",
         "Russian": "The Psy Shielding upgrade reinforces this full-body suit's advanced protection role.",
-        "Chinese": "该改装为全身护甲提供集成式心灵防护，进一步强化其先进防护定位。"
+        "ChineseSimplified": "该改装为全身护甲提供集成式心灵防护，进一步强化其先进防护定位。"
       }
     },
     {
@@ -774,7 +774,7 @@
       "languages": {
         "English": "Insulated Layer",
         "Russian": "Insulated Layer",
-        "Chinese": "绝缘层"
+        "ChineseSimplified": "绝缘层"
       }
     },
     {
@@ -782,7 +782,7 @@
       "languages": {
         "English": "Radiation Shielding",
         "Russian": "Radiation Shielding",
-        "Chinese": "辐射防护"
+        "ChineseSimplified": "辐射防护"
       }
     },
     {
@@ -790,7 +790,7 @@
       "languages": {
         "English": "Psy Conditioning",
         "Russian": "Psy Conditioning",
-        "Chinese": "心灵适应"
+        "ChineseSimplified": "心灵适应"
       }
     },
     {
@@ -798,7 +798,7 @@
       "languages": {
         "English": "Insulated Layer gives the helmet electrical insulation, reinforcing the zone combat role.",
         "Russian": "The Insulated Layer upgrade reinforces this helmet's zone combat role.",
-        "Chinese": "该改装为头盔提供电气绝缘，进一步强化其区域战斗定位。"
+        "ChineseSimplified": "该改装为头盔提供电气绝缘，进一步强化其区域战斗定位。"
       }
     },
     {
@@ -806,7 +806,7 @@
       "languages": {
         "English": "Radiation Shielding gives the helmet radiation shielding, reinforcing the zone combat role.",
         "Russian": "The Radiation Shielding upgrade reinforces this helmet's zone combat role.",
-        "Chinese": "该改装为头盔提供辐射防护，进一步强化其区域战斗定位。"
+        "ChineseSimplified": "该改装为头盔提供辐射防护，进一步强化其区域战斗定位。"
       }
     },
     {
@@ -814,7 +814,7 @@
       "languages": {
         "English": "Psy Conditioning gives the helmet psy protection, reinforcing the zone combat role.",
         "Russian": "The Psy Conditioning upgrade reinforces this helmet's zone combat role.",
-        "Chinese": "该改装为头盔提供心灵防护，进一步强化其区域战斗定位。"
+        "ChineseSimplified": "该改装为头盔提供心灵防护，进一步强化其区域战斗定位。"
       }
     },
     {
@@ -822,7 +822,7 @@
       "languages": {
         "English": "Insulated Layer gives the suit electrical insulation, reinforcing the zone combat role.",
         "Russian": "The Insulated Layer upgrade reinforces this suit's zone combat role.",
-        "Chinese": "该改装为护甲提供电气绝缘，进一步强化其区域战斗定位。"
+        "ChineseSimplified": "该改装为护甲提供电气绝缘，进一步强化其区域战斗定位。"
       }
     },
     {
@@ -830,7 +830,7 @@
       "languages": {
         "English": "Radiation Shielding gives the suit radiation shielding, reinforcing the zone combat role.",
         "Russian": "The Radiation Shielding upgrade reinforces this suit's zone combat role.",
-        "Chinese": "该改装为护甲提供辐射防护，进一步强化其区域战斗定位。"
+        "ChineseSimplified": "该改装为护甲提供辐射防护，进一步强化其区域战斗定位。"
       }
     },
     {
@@ -838,7 +838,7 @@
       "languages": {
         "English": "Psy Conditioning gives the suit psy protection, reinforcing the zone combat role.",
         "Russian": "The Psy Conditioning upgrade reinforces this suit's zone combat role.",
-        "Chinese": "该改装为护甲提供心灵防护，进一步强化其区域战斗定位。"
+        "ChineseSimplified": "该改装为护甲提供心灵防护，进一步强化其区域战斗定位。"
       }
     },
     {
@@ -846,7 +846,7 @@
       "languages": {
         "English": "Insulated Layer gives the full-body suit electrical insulation, reinforcing the zone combat role.",
         "Russian": "The Insulated Layer upgrade reinforces this full-body suit's zone combat role.",
-        "Chinese": "该改装为全身护甲提供电气绝缘，进一步强化其区域战斗定位。"
+        "ChineseSimplified": "该改装为全身护甲提供电气绝缘，进一步强化其区域战斗定位。"
       }
     },
     {
@@ -854,7 +854,7 @@
       "languages": {
         "English": "Radiation Shielding gives the full-body suit radiation shielding, reinforcing the zone combat role.",
         "Russian": "The Radiation Shielding upgrade reinforces this full-body suit's zone combat role.",
-        "Chinese": "该改装为全身护甲提供辐射防护，进一步强化其区域战斗定位。"
+        "ChineseSimplified": "该改装为全身护甲提供辐射防护，进一步强化其区域战斗定位。"
       }
     },
     {
@@ -862,7 +862,7 @@
       "languages": {
         "English": "Psy Conditioning gives the full-body suit psy protection, reinforcing the zone combat role.",
         "Russian": "The Psy Conditioning upgrade reinforces this full-body suit's zone combat role.",
-        "Chinese": "该改装为全身护甲提供心灵防护，进一步强化其区域战斗定位。"
+        "ChineseSimplified": "该改装为全身护甲提供心灵防护，进一步强化其区域战斗定位。"
       }
     },
     {
@@ -870,7 +870,7 @@
       "languages": {
         "English": "Hardened Construction",
         "Russian": "Hardened Construction",
-        "Chinese": "强化结构"
+        "ChineseSimplified": "强化结构"
       }
     },
     {
@@ -878,7 +878,7 @@
       "languages": {
         "English": "Ballistic Reinforcement",
         "Russian": "Ballistic Reinforcement",
-        "Chinese": "弹道强化"
+        "ChineseSimplified": "弹道强化"
       }
     },
     {
@@ -886,7 +886,7 @@
       "languages": {
         "English": "Psy Shielding",
         "Russian": "Psy Shielding",
-        "Chinese": "心灵防护"
+        "ChineseSimplified": "心灵防护"
       }
     },
     {
@@ -894,7 +894,7 @@
       "languages": {
         "English": "Hardened Construction gives the helmet exceptional structural durability, reinforcing the resilience role.",
         "Russian": "The Hardened Construction upgrade reinforces this helmet's resilience role.",
-        "Chinese": "该改装为头盔提供卓越的结构耐久度，进一步强化其坚韧定位。"
+        "ChineseSimplified": "该改装为头盔提供卓越的结构耐久度，进一步强化其坚韧定位。"
       }
     },
     {
@@ -902,7 +902,7 @@
       "languages": {
         "English": "Ballistic Reinforcement gives the helmet heavy physical protection, reinforcing the resilience role.",
         "Russian": "The Ballistic Reinforcement upgrade reinforces this helmet's resilience role.",
-        "Chinese": "该改装为头盔提供重型物理防护，进一步强化其坚韧定位。"
+        "ChineseSimplified": "该改装为头盔提供重型物理防护，进一步强化其坚韧定位。"
       }
     },
     {
@@ -910,7 +910,7 @@
       "languages": {
         "English": "Psy Shielding gives the helmet psy resistance, reinforcing the resilience role.",
         "Russian": "The Psy Shielding upgrade reinforces this helmet's resilience role.",
-        "Chinese": "该改装为头盔提供心灵抗性，进一步强化其坚韧定位。"
+        "ChineseSimplified": "该改装为头盔提供心灵抗性，进一步强化其坚韧定位。"
       }
     },
     {
@@ -918,7 +918,7 @@
       "languages": {
         "English": "Hardened Construction gives the suit exceptional structural durability, reinforcing the resilience role.",
         "Russian": "The Hardened Construction upgrade reinforces this suit's resilience role.",
-        "Chinese": "该改装为护甲提供卓越的结构耐久度，进一步强化其坚韧定位。"
+        "ChineseSimplified": "该改装为护甲提供卓越的结构耐久度，进一步强化其坚韧定位。"
       }
     },
     {
@@ -926,7 +926,7 @@
       "languages": {
         "English": "Ballistic Reinforcement gives the suit heavy physical protection, reinforcing the resilience role.",
         "Russian": "The Ballistic Reinforcement upgrade reinforces this suit's resilience role.",
-        "Chinese": "该改装为护甲提供重型物理防护，进一步强化其坚韧定位。"
+        "ChineseSimplified": "该改装为护甲提供重型物理防护，进一步强化其坚韧定位。"
       }
     },
     {
@@ -934,7 +934,7 @@
       "languages": {
         "English": "Psy Shielding gives the suit psy resistance, reinforcing the resilience role.",
         "Russian": "The Psy Shielding upgrade reinforces this suit's resilience role.",
-        "Chinese": "该改装为护甲提供心灵抗性，进一步强化其坚韧定位。"
+        "ChineseSimplified": "该改装为护甲提供心灵抗性，进一步强化其坚韧定位。"
       }
     },
     {
@@ -942,7 +942,7 @@
       "languages": {
         "English": "Hardened Construction gives the full-body suit exceptional structural durability, reinforcing the resilience role.",
         "Russian": "The Hardened Construction upgrade reinforces this full-body suit's resilience role.",
-        "Chinese": "该改装为全身护甲提供卓越的结构耐久度，进一步强化其坚韧定位。"
+        "ChineseSimplified": "该改装为全身护甲提供卓越的结构耐久度，进一步强化其坚韧定位。"
       }
     },
     {
@@ -950,7 +950,7 @@
       "languages": {
         "English": "Ballistic Reinforcement gives the full-body suit heavy physical protection, reinforcing the resilience role.",
         "Russian": "The Ballistic Reinforcement upgrade reinforces this full-body suit's resilience role.",
-        "Chinese": "该改装为全身护甲提供重型物理防护，进一步强化其坚韧定位。"
+        "ChineseSimplified": "该改装为全身护甲提供重型物理防护，进一步强化其坚韧定位。"
       }
     },
     {
@@ -958,7 +958,7 @@
       "languages": {
         "English": "Psy Shielding gives the full-body suit psy resistance, reinforcing the resilience role.",
         "Russian": "The Psy Shielding upgrade reinforces this full-body suit's resilience role.",
-        "Chinese": "该改装为全身护甲提供心灵抗性，进一步强化其坚韧定位。"
+        "ChineseSimplified": "该改装为全身护甲提供心灵抗性，进一步强化其坚韧定位。"
       }
     },
     {
@@ -966,7 +966,7 @@
       "languages": {
         "English": "Reinforced Plating",
         "Russian": "Усиленные пластины",
-        "Chinese": "强化装甲板"
+        "ChineseSimplified": "强化装甲板"
       }
     },
     {
@@ -974,7 +974,7 @@
       "languages": {
         "English": "Reinforced Plating adds additional ballistic reinforcement at the cost of extra weight on this helmet.",
         "Russian": "Усиленные пластины добавляет баллистическое усиление ценой увеличения веса для этого предмета (шлем).",
-        "Chinese": "强化装甲板为头盔增加额外弹道防护，但代价是重量增加。"
+        "ChineseSimplified": "强化装甲板为头盔增加额外弹道防护，但代价是重量增加。"
       }
     },
     {
@@ -982,7 +982,7 @@
       "languages": {
         "English": "Reinforced Plating adds additional ballistic reinforcement at the cost of extra weight on this suit.",
         "Russian": "Усиленные пластины добавляет баллистическое усиление ценой увеличения веса для этого предмета (костюм).",
-        "Chinese": "强化装甲板为护甲增加额外弹道防护，但代价是重量增加。"
+        "ChineseSimplified": "强化装甲板为护甲增加额外弹道防护，但代价是重量增加。"
       }
     },
     {
@@ -990,7 +990,7 @@
       "languages": {
         "English": "Reinforced Plating adds additional ballistic reinforcement at the cost of extra weight on this full-body suit.",
         "Russian": "Усиленные пластины добавляет баллистическое усиление ценой увеличения веса для этого предмета (цельный костюм).",
-        "Chinese": "强化装甲板为全身护甲增加额外弹道防护，但代价是重量增加。"
+        "ChineseSimplified": "强化装甲板为全身护甲增加额外弹道防护，但代价是重量增加。"
       }
     },
     {
@@ -998,7 +998,7 @@
       "languages": {
         "English": "Lightweight Materials",
         "Russian": "Облегчённые материалы",
-        "Chinese": "轻量化材料"
+        "ChineseSimplified": "轻量化材料"
       }
     },
     {
@@ -1006,7 +1006,7 @@
       "languages": {
         "English": "Lightweight Materials reduces weight and improves mobility at the cost of durability on this helmet.",
         "Russian": "Облегчённые материалы снижает вес и повышает мобильность ценой прочности для этого предмета (шлем).",
-        "Chinese": "轻量化材料降低头盔重量并提升机动性，但会牺牲耐久度。"
+        "ChineseSimplified": "轻量化材料降低头盔重量并提升机动性，但会牺牲耐久度。"
       }
     },
     {
@@ -1014,7 +1014,7 @@
       "languages": {
         "English": "Lightweight Materials reduces weight and improves mobility at the cost of durability on this suit.",
         "Russian": "Облегчённые материалы снижает вес и повышает мобильность ценой прочности для этого предмета (костюм).",
-        "Chinese": "轻量化材料降低护甲重量并提升机动性，但会牺牲耐久度。"
+        "ChineseSimplified": "轻量化材料降低护甲重量并提升机动性，但会牺牲耐久度。"
       }
     },
     {
@@ -1022,7 +1022,7 @@
       "languages": {
         "English": "Lightweight Materials reduces weight and improves mobility at the cost of durability on this full-body suit.",
         "Russian": "Облегчённые материалы снижает вес и повышает мобильность ценой прочности для этого предмета (цельный костюм).",
-        "Chinese": "轻量化材料降低全身护甲重量并提升机动性，但会牺牲耐久度。"
+        "ChineseSimplified": "轻量化材料降低全身护甲重量并提升机动性，但会牺牲耐久度。"
       }
     },
     {
@@ -1030,7 +1030,7 @@
       "languages": {
         "English": "Load-Bearing System",
         "Russian": "Разгрузочная система",
-        "Chinese": "承载系统"
+        "ChineseSimplified": "承载系统"
       }
     },
     {
@@ -1038,7 +1038,7 @@
       "languages": {
         "English": "Load-Bearing System increases carrying capacity at the cost of stamina recovery on this helmet.",
         "Russian": "Разгрузочная система увеличивает переносимый вес ценой восстановления выносливости для этого предмета (шлем).",
-        "Chinese": "承载系统提高头盔的负重能力，但会牺牲耐力恢复。"
+        "ChineseSimplified": "承载系统提高头盔的负重能力，但会牺牲耐力恢复。"
       }
     },
     {
@@ -1046,7 +1046,7 @@
       "languages": {
         "English": "Load-Bearing System increases carrying capacity at the cost of stamina recovery on this suit.",
         "Russian": "Разгрузочная система увеличивает переносимый вес ценой восстановления выносливости для этого предмета (костюм).",
-        "Chinese": "承载系统提高护甲的负重能力，但会牺牲耐力恢复。"
+        "ChineseSimplified": "承载系统提高护甲的负重能力，但会牺牲耐力恢复。"
       }
     },
     {
@@ -1054,7 +1054,7 @@
       "languages": {
         "English": "Load-Bearing System increases carrying capacity at the cost of stamina recovery on this full-body suit.",
         "Russian": "Разгрузочная система увеличивает переносимый вес ценой восстановления выносливости для этого предмета (цельный костюм).",
-        "Chinese": "承载系统提高全身护甲的负重能力，但会牺牲耐力恢复。"
+        "ChineseSimplified": "承载系统提高全身护甲的负重能力，但会牺牲耐力恢复。"
       }
     },
     {
@@ -1062,7 +1062,7 @@
       "languages": {
         "English": "Hardened Components",
         "Russian": "Упрочнённые компоненты",
-        "Chinese": "强化组件"
+        "ChineseSimplified": "强化组件"
       }
     },
     {
@@ -1070,7 +1070,7 @@
       "languages": {
         "English": "Hardened Components improves durability at the cost of extra weight on this helmet.",
         "Russian": "Упрочнённые компоненты повышает прочность ценой увеличения веса для этого предмета (шлем).",
-        "Chinese": "强化组件提高头盔耐久度，但代价是重量增加。"
+        "ChineseSimplified": "强化组件提高头盔耐久度，但代价是重量增加。"
       }
     },
     {
@@ -1078,7 +1078,7 @@
       "languages": {
         "English": "Hardened Components improves durability at the cost of extra weight on this suit.",
         "Russian": "Упрочнённые компоненты повышает прочность ценой увеличения веса для этого предмета (костюм).",
-        "Chinese": "强化组件提高护甲耐久度，但代价是重量增加。"
+        "ChineseSimplified": "强化组件提高护甲耐久度，但代价是重量增加。"
       }
     },
     {
@@ -1086,7 +1086,7 @@
       "languages": {
         "English": "Hardened Components improves durability at the cost of extra weight on this full-body suit.",
         "Russian": "Упрочнённые компоненты повышает прочность ценой увеличения веса для этого предмета (цельный костюм).",
-        "Chinese": "强化组件提高全身护甲耐久度，但代价是重量增加。"
+        "ChineseSimplified": "强化组件提高全身护甲耐久度，但代价是重量增加。"
       }
     },
     {
@@ -1094,7 +1094,7 @@
       "languages": {
         "English": "Thermal Insulation",
         "Russian": "Теплоизоляция",
-        "Chinese": "隔热层"
+        "ChineseSimplified": "隔热层"
       }
     },
     {
@@ -1102,7 +1102,7 @@
       "languages": {
         "English": "Thermal Insulation improves thermal protection at the cost of electrical protection on this helmet.",
         "Russian": "Теплоизоляция повышает термозащиту ценой электрозащиты для этого предмета (шлем).",
-        "Chinese": "隔热层提高头盔的热防护，但会牺牲电气防护。"
+        "ChineseSimplified": "隔热层提高头盔的热防护，但会牺牲电气防护。"
       }
     },
     {
@@ -1110,7 +1110,7 @@
       "languages": {
         "English": "Thermal Insulation improves thermal protection at the cost of electrical protection on this suit.",
         "Russian": "Теплоизоляция повышает термозащиту ценой электрозащиты для этого предмета (костюм).",
-        "Chinese": "隔热层提高护甲的热防护，但会牺牲电气防护。"
+        "ChineseSimplified": "隔热层提高护甲的热防护，但会牺牲电气防护。"
       }
     },
     {
@@ -1118,7 +1118,7 @@
       "languages": {
         "English": "Thermal Insulation improves thermal protection at the cost of electrical protection on this full-body suit.",
         "Russian": "Теплоизоляция повышает термозащиту ценой электрозащиты для этого предмета (цельный костюм).",
-        "Chinese": "隔热层提高全身护甲的热防护，但会牺牲电气防护。"
+        "ChineseSimplified": "隔热层提高全身护甲的热防护，但会牺牲电气防护。"
       }
     },
     {
@@ -1126,7 +1126,7 @@
       "languages": {
         "English": "Conductive Mesh",
         "Russian": "Проводящая сетка",
-        "Chinese": "导电网"
+        "ChineseSimplified": "导电网"
       }
     },
     {
@@ -1134,7 +1134,7 @@
       "languages": {
         "English": "Conductive Mesh improves electrical protection at the cost of thermal protection on this helmet.",
         "Russian": "Проводящая сетка повышает электрозащиту ценой термозащиты для этого предмета (шлем).",
-        "Chinese": "导电网提高头盔的电气防护，但会牺牲热防护。"
+        "ChineseSimplified": "导电网提高头盔的电气防护，但会牺牲热防护。"
       }
     },
     {
@@ -1142,7 +1142,7 @@
       "languages": {
         "English": "Conductive Mesh improves electrical protection at the cost of thermal protection on this suit.",
         "Russian": "Проводящая сетка повышает электрозащиту ценой термозащиты для этого предмета (костюм).",
-        "Chinese": "导电网提高护甲的电气防护，但会牺牲热防护。"
+        "ChineseSimplified": "导电网提高护甲的电气防护，但会牺牲热防护。"
       }
     },
     {
@@ -1150,7 +1150,7 @@
       "languages": {
         "English": "Conductive Mesh improves electrical protection at the cost of thermal protection on this full-body suit.",
         "Russian": "Проводящая сетка повышает электрозащиту ценой термозащиты для этого предмета (цельный костюм).",
-        "Chinese": "导电网提高全身护甲的电气防护，但会牺牲热防护。"
+        "ChineseSimplified": "导电网提高全身护甲的电气防护，但会牺牲热防护。"
       }
     },
     {
@@ -1158,7 +1158,7 @@
       "languages": {
         "English": "Chemical Sealing",
         "Russian": "Химическая герметизация",
-        "Chinese": "化学密封"
+        "ChineseSimplified": "化学密封"
       }
     },
     {
@@ -1166,7 +1166,7 @@
       "languages": {
         "English": "Chemical Sealing improves chemical protection at the cost of stamina recovery on this helmet.",
         "Russian": "Химическая герметизация повышает химзащиту ценой восстановления выносливости для этого предмета (шлем).",
-        "Chinese": "化学密封提高头盔的化学防护，但会牺牲耐力恢复。"
+        "ChineseSimplified": "化学密封提高头盔的化学防护，但会牺牲耐力恢复。"
       }
     },
     {
@@ -1174,7 +1174,7 @@
       "languages": {
         "English": "Chemical Sealing improves chemical protection at the cost of stamina recovery on this suit.",
         "Russian": "Химическая герметизация повышает химзащиту ценой восстановления выносливости для этого предмета (костюм).",
-        "Chinese": "化学密封提高护甲的化学防护，但会牺牲耐力恢复。"
+        "ChineseSimplified": "化学密封提高护甲的化学防护，但会牺牲耐力恢复。"
       }
     },
     {
@@ -1182,7 +1182,7 @@
       "languages": {
         "English": "Chemical Sealing improves chemical protection at the cost of stamina recovery on this full-body suit.",
         "Russian": "Химическая герметизация повышает химзащиту ценой восстановления выносливости для этого предмета (цельный костюм).",
-        "Chinese": "化学密封提高全身护甲的化学防护，但会牺牲耐力恢复。"
+        "ChineseSimplified": "化学密封提高全身护甲的化学防护，但会牺牲耐力恢复。"
       }
     },
     {
@@ -1190,7 +1190,7 @@
       "languages": {
         "English": "Radiation Lining",
         "Russian": "Противорадиационная подкладка",
-        "Chinese": "防辐射衬层"
+        "ChineseSimplified": "防辐射衬层"
       }
     },
     {
@@ -1198,7 +1198,7 @@
       "languages": {
         "English": "Radiation Lining improves radiation protection at the cost of extra weight on this helmet.",
         "Russian": "Противорадиационная подкладка повышает радиационную защиту ценой увеличения веса для этого предмета (шлем).",
-        "Chinese": "防辐射衬层提高头盔的辐射防护，但代价是重量增加。"
+        "ChineseSimplified": "防辐射衬层提高头盔的辐射防护，但代价是重量增加。"
       }
     },
     {
@@ -1206,7 +1206,7 @@
       "languages": {
         "English": "Radiation Lining improves radiation protection at the cost of extra weight on this suit.",
         "Russian": "Противорадиационная подкладка повышает радиационную защиту ценой увеличения веса для этого предмета (костюм).",
-        "Chinese": "防辐射衬层提高护甲的辐射防护，但代价是重量增加。"
+        "ChineseSimplified": "防辐射衬层提高护甲的辐射防护，但代价是重量增加。"
       }
     },
     {
@@ -1214,7 +1214,7 @@
       "languages": {
         "English": "Radiation Lining improves radiation protection at the cost of extra weight on this full-body suit.",
         "Russian": "Противорадиационная подкладка повышает радиационную защиту ценой увеличения веса для этого предмета (цельный костюм).",
-        "Chinese": "防辐射衬层提高全身护甲的辐射防护，但代价是重量增加。"
+        "ChineseSimplified": "防辐射衬层提高全身护甲的辐射防护，但代价是重量增加。"
       }
     },
     {
@@ -1222,7 +1222,7 @@
       "languages": {
         "English": "Enhanced Filtration",
         "Russian": "Улучшенная фильтрация",
-        "Chinese": "增强过滤系统"
+        "ChineseSimplified": "增强过滤系统"
       }
     },
     {
@@ -1230,7 +1230,7 @@
       "languages": {
         "English": "Enhanced filtration improves chemical and radiation protection at the cost of helmet durability.",
         "Russian": "Улучшенная фильтрация повышает химическую и радиационную защиту ценой прочности шлема.",
-        "Chinese": "增强过滤系统提高头盔的化学与辐射防护，但会牺牲头盔耐久度。"
+        "ChineseSimplified": "增强过滤系统提高头盔的化学与辐射防护，但会牺牲头盔耐久度。"
       }
     },
     {
@@ -1238,7 +1238,7 @@
       "languages": {
         "English": "Hemostatic Lining - Thermal Trade-off",
         "Russian": "Гемостатическая подкладка — термозащита",
-        "Chinese": "止血衬层 - 牺牲热防护"
+        "ChineseSimplified": "止血衬层 - 牺牲热防护"
       }
     },
     {
@@ -1246,7 +1246,7 @@
       "languages": {
         "English": "Hemostatic lining improves bleeding recovery at the cost of thermal protection on this helmet.",
         "Russian": "Гемостатическая подкладка улучшает остановку кровотечения ценой снижения термозащиты для этого предмета.",
-        "Chinese": "止血衬层改善头盔的止血恢复能力，但会牺牲热防护。"
+        "ChineseSimplified": "止血衬层改善头盔的止血恢复能力，但会牺牲热防护。"
       }
     },
     {
@@ -1254,7 +1254,7 @@
       "languages": {
         "English": "Hemostatic lining improves bleeding recovery at the cost of thermal protection on this suit.",
         "Russian": "Гемостатическая подкладка улучшает остановку кровотечения ценой снижения термозащиты для этого предмета.",
-        "Chinese": "止血衬层改善护甲的止血恢复能力，但会牺牲热防护。"
+        "ChineseSimplified": "止血衬层改善护甲的止血恢复能力，但会牺牲热防护。"
       }
     },
     {
@@ -1262,7 +1262,7 @@
       "languages": {
         "English": "Hemostatic lining improves bleeding recovery at the cost of thermal protection on this full-body suit.",
         "Russian": "Гемостатическая подкладка улучшает остановку кровотечения ценой снижения термозащиты для этого предмета.",
-        "Chinese": "止血衬层改善全身护甲的止血恢复能力，但会牺牲热防护。"
+        "ChineseSimplified": "止血衬层改善全身护甲的止血恢复能力，但会牺牲热防护。"
       }
     },
     {
@@ -1270,7 +1270,7 @@
       "languages": {
         "English": "Hemostatic Lining - Chemical Trade-off",
         "Russian": "Гемостатическая подкладка — химзащита",
-        "Chinese": "止血衬层 - 牺牲化学防护"
+        "ChineseSimplified": "止血衬层 - 牺牲化学防护"
       }
     },
     {
@@ -1278,7 +1278,7 @@
       "languages": {
         "English": "Hemostatic lining improves bleeding recovery at the cost of chemical protection on this helmet.",
         "Russian": "Гемостатическая подкладка улучшает остановку кровотечения ценой снижения химической защиты для этого предмета.",
-        "Chinese": "止血衬层改善头盔的止血恢复能力，但会牺牲化学防护。"
+        "ChineseSimplified": "止血衬层改善头盔的止血恢复能力，但会牺牲化学防护。"
       }
     },
     {
@@ -1286,7 +1286,7 @@
       "languages": {
         "English": "Hemostatic lining improves bleeding recovery at the cost of chemical protection on this suit.",
         "Russian": "Гемостатическая подкладка улучшает остановку кровотечения ценой снижения химической защиты для этого предмета.",
-        "Chinese": "止血衬层改善护甲的止血恢复能力，但会牺牲化学防护。"
+        "ChineseSimplified": "止血衬层改善护甲的止血恢复能力，但会牺牲化学防护。"
       }
     },
     {
@@ -1294,7 +1294,7 @@
       "languages": {
         "English": "Hemostatic lining improves bleeding recovery at the cost of chemical protection on this full-body suit.",
         "Russian": "Гемостатическая подкладка улучшает остановку кровотечения ценой снижения химической защиты для этого предмета.",
-        "Chinese": "止血衬层改善全身护甲的止血恢复能力，但会牺牲化学防护。"
+        "ChineseSimplified": "止血衬层改善全身护甲的止血恢复能力，但会牺牲化学防护。"
       }
     },
     {
@@ -1302,7 +1302,7 @@
       "languages": {
         "English": "Hemostatic Lining - Electrical Trade-off",
         "Russian": "Гемостатическая подкладка — электрозащита",
-        "Chinese": "止血衬层 - 牺牲电气防护"
+        "ChineseSimplified": "止血衬层 - 牺牲电气防护"
       }
     },
     {
@@ -1310,7 +1310,7 @@
       "languages": {
         "English": "Hemostatic lining improves bleeding recovery at the cost of electrical protection on this helmet.",
         "Russian": "Гемостатическая подкладка улучшает остановку кровотечения ценой снижения электрозащиты для этого предмета.",
-        "Chinese": "止血衬层改善头盔的止血恢复能力，但会牺牲电气防护。"
+        "ChineseSimplified": "止血衬层改善头盔的止血恢复能力，但会牺牲电气防护。"
       }
     },
     {
@@ -1318,7 +1318,7 @@
       "languages": {
         "English": "Hemostatic lining improves bleeding recovery at the cost of electrical protection on this suit.",
         "Russian": "Гемостатическая подкладка улучшает остановку кровотечения ценой снижения электрозащиты для этого предмета.",
-        "Chinese": "止血衬层改善护甲的止血恢复能力，但会牺牲电气防护。"
+        "ChineseSimplified": "止血衬层改善护甲的止血恢复能力，但会牺牲电气防护。"
       }
     },
     {
@@ -1326,7 +1326,7 @@
       "languages": {
         "English": "Hemostatic lining improves bleeding recovery at the cost of electrical protection on this full-body suit.",
         "Russian": "Гемостатическая подкладка улучшает остановку кровотечения ценой снижения электрозащиты для этого предмета.",
-        "Chinese": "止血衬层改善全身护甲的止血恢复能力，但会牺牲电气防护。"
+        "ChineseSimplified": "止血衬层改善全身护甲的止血恢复能力，但会牺牲电气防护。"
       }
     }
   ]
