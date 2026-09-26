@@ -11,7 +11,7 @@ PYTHON_ROOT = SCRIPT_DIR.parent
 sys.path.insert(0, str(PYTHON_ROOT))
 
 from analysis_paths import BPRUE_UPGRADE_MAP, ensure_reports_dir  # noqa: E402
-from generate_all_cfg import build_dlc_outputs, build_model  # noqa: E402
+from generate_all_cfg import build_dlc_outputs, build_edition_outputs, build_model  # noqa: E402
 from CFGGenerators.Common.apply_module_layout import apply_layout_to_model  # noqa: E402
 
 OUTPUT_PATH = BPRUE_UPGRADE_MAP
@@ -34,13 +34,14 @@ def _weapon_map(model, *, content_pack: str | None) -> dict[str, object]:
 def build_map() -> dict[str, object]:
     model, configs = build_model(apply_layout=False)
     dlc_models = build_dlc_outputs(model, configs)
+    edition_models = build_edition_outputs(model, configs)
     apply_layout_to_model(model); model.validate()
     weapons = _weapon_map(model, content_pack=None); pack_counts = {"BaseGame": len(weapons)}; total_upgrades = len(model.upgrades)
-    for pack, dlc_model in sorted(dlc_models.items()):
-        mapped = _weapon_map(dlc_model, content_pack=pack); duplicates = set(weapons) & set(mapped)
+    for pack, pack_model in sorted({**dlc_models, **edition_models}.items()):
+        mapped = _weapon_map(pack_model, content_pack=pack); duplicates = set(weapons) & set(mapped)
         if duplicates: raise ValueError(f"Duplicate GeneralSetup SIDs across output scopes: {', '.join(sorted(duplicates))}")
-        weapons.update(mapped); pack_counts[pack] = len(mapped); total_upgrades += len(dlc_model.upgrades)
-    return {"source": "base/Unique plus DLC UpgradeBuildModels, each allocated from the same pre-layout source model", "weapon_count": len(weapons), "upgrade_count": total_upgrades, "content_pack_counts": pack_counts, "weapons": dict(sorted(weapons.items()))}
+        weapons.update(mapped); pack_counts[pack] = len(mapped); total_upgrades += len(pack_model.upgrades)
+    return {"source": "base/Unique plus story-DLC and Edition UpgradeBuildModels, each allocated from the same pre-layout source model", "weapon_count": len(weapons), "upgrade_count": total_upgrades, "content_pack_counts": pack_counts, "weapons": dict(sorted(weapons.items()))}
 
 
 def print_weapon(data: dict[str, object], setup_sid: str) -> None:

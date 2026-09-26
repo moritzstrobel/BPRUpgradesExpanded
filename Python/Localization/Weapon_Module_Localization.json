@@ -1,77 +1,565 @@
 {
   "_comment": "Upgrade names and descriptions for pistol, shotgun and sniper/DMR specialization modules.",
   "entries": [
-    {"sid":"sid_bprue_pistol_high_speed_name","languages":{"English":"High-Speed Action","Russian":"Высокоскоростная автоматика"}},
-    {"sid":"sid_bprue_pistol_high_speed_description","languages":{"English":"Speeds up the firing cycle for rapid follow-up shots, at the cost of increased recoil and weapon wear.","Russian":"Ускоряет цикл стрельбы для быстрых повторных выстрелов ценой повышенной отдачи и износа оружия."}},
-    {"sid":"sid_bprue_pistol_balanced_name","languages":{"English":"Balanced Action","Russian":"Сбалансированная автоматика"}},
-    {"sid":"sid_bprue_pistol_balanced_description","languages":{"English":"Balances a faster firing cycle with improved recoil control and recovery, while moderately increasing weapon wear.","Russian":"Сочетает ускоренный цикл стрельбы с улучшенным контролем и восстановлением отдачи, умеренно повышая износ оружия."}},
-    {"sid":"sid_bprue_pistol_controlled_name","languages":{"English":"Controlled Action","Russian":"Контролируемая автоматика"}},
-    {"sid":"sid_bprue_pistol_controlled_description","languages":{"English":"Slows the firing cycle slightly in exchange for lower recoil and faster recoil recovery.","Russian":"Немного замедляет цикл стрельбы в обмен на меньшую отдачу и более быстрое восстановление после неё."}},
-    {"sid":"sid_bprue_pistol_quick_draw_name","languages":{"English":"Quick-Draw Setup","Russian":"Компоновка быстрого извлечения"}},
-    {"sid":"sid_bprue_pistol_quick_draw_description","languages":{"English":"Reduces weapon weight and speeds up aiming for faster handling, at the cost of increased recoil.","Russian":"Снижает вес оружия и ускоряет прицеливание для более быстрого обращения ценой повышенной отдачи."}},
-    {"sid":"sid_bprue_pistol_tactical_name","languages":{"English":"Tactical Handling","Russian":"Тактическая эргономика"}},
-    {"sid":"sid_bprue_pistol_tactical_description","languages":{"English":"Improves aiming speed, movement while aiming and recoil recovery for responsive combat handling.","Russian":"Улучшает скорость прицеливания, движение при прицеливании и восстановление после отдачи для более отзывчивого обращения."}},
-    {"sid":"sid_bprue_pistol_stabilized_name","languages":{"English":"Stabilized Handling","Russian":"Стабилизированная эргономика"}},
-    {"sid":"sid_bprue_pistol_stabilized_description","languages":{"English":"Improves recoil control and recovery at the cost of slower aiming.","Russian":"Улучшает контроль и восстановление отдачи ценой более медленного прицеливания."}},
-    {"sid":"sid_bprue_pistol_quick_response_name","languages":{"English":"Quick-Response Package","Russian":"Комплект быстрого реагирования"}},
-    {"sid":"sid_bprue_pistol_quick_response_description","languages":{"English":"A lightweight emergency-sidearm package with faster aiming and reloads, trading stability and durability for speed.","Russian":"Облегчённый комплект для запасного оружия с быстрым прицеливанием и перезарядкой, жертвующий стабильностью и долговечностью ради скорости."}},
-    {"sid":"sid_bprue_pistol_match_barrel_name","languages":{"English":"Match Barrel Assembly","Russian":"Матчевый ствол"}},
-    {"sid":"sid_bprue_pistol_match_barrel_description","languages":{"English":"A precision barrel package with tighter dispersion, improved effective range and higher projectile velocity, at the cost of slower aiming.","Russian":"Высокоточный ствол с меньшим разбросом, увеличенной эффективной дальностью и скоростью пули ценой более медленного прицеливания."}},
-    {"sid":"sid_bprue_pistol_automatic_sear_name","languages":{"English":"Automatic Sear","Russian":"Автоматический шептало"}},
-    {"sid":"sid_bprue_pistol_automatic_sear_description","languages":{"English":"Adds automatic fire to the pistol's fire-control system, at the cost of increased recoil and weapon wear.","Russian":"Добавляет автоматический огонь в ударно-спусковой механизм пистолета ценой повышенной отдачи и износа оружия."}},
-    {"sid":"sid_bprue_pistol_hunting_cylinder_name","languages":{"English":"Hunting Cylinder","Russian":"Охотничий барабан"}},
-    {"sid":"sid_bprue_pistol_hunting_cylinder_description","languages":{"English":"A heavy hunting setup with improved armor penetration and projectile velocity, at the cost of a slower firing cycle.","Russian":"Тяжёлая охотничья конфигурация с повышенным бронепробитием и скоростью пули ценой более медленного цикла стрельбы."}},
-    {"sid":"sid_bprue_pistol_selectable_fire_control_name","languages":{"English":"Selectable Fire Control","Russian":"Переключаемый режим огня"}},
-    {"sid":"sid_bprue_pistol_selectable_fire_control_description","languages":{"English":"Adds a selectable semi-automatic mode while retaining the weapon's native automatic fire and improving recoil control.","Russian":"Добавляет выбираемый одиночный режим, сохраняя штатный автоматический огонь и улучшая контроль отдачи."}},
-
-    {"sid":"sid_bprue_sg_pattern_breacher_name","languages":{"English":"Breacher Pattern","Russian":"Штурмовой чок"}},
-    {"sid":"sid_bprue_sg_pattern_breacher_description","languages":{"English":"Optimizes the shotgun for close-range breaching with a wider, aggressive shot pattern.","Russian":"Оптимизирует дробовик для штурмового применения на ближней дистанции, обеспечивая более широкую и агрессивную осыпь дроби."}},
-    {"sid":"sid_bprue_sg_pattern_field_choke_name","languages":{"English":"Field Choke","Russian":"Полевой чок"}},
-    {"sid":"sid_bprue_sg_pattern_field_choke_description","languages":{"English":"Balances shot spread and practical range for versatile field use.","Russian":"Балансирует разброс дроби и практическую дальность для универсального применения."}},
-    {"sid":"sid_bprue_sg_pattern_full_choke_name","languages":{"English":"Full Choke","Russian":"Полный чок"}},
-    {"sid":"sid_bprue_sg_pattern_full_choke_description","languages":{"English":"Tightens the shot pattern for greater precision and effective range.","Russian":"Сужает осыпь дроби для большей точности и эффективной дальности."}},
-    {"sid":"sid_bprue_sg_action_high_speed_name","languages":{"English":"High-Speed Action","Russian":"Высокоскоростная автоматика"}},
-    {"sid":"sid_bprue_sg_action_high_speed_description","languages":{"English":"Tunes the action for faster follow-up shots, sacrificing recoil control and durability for speed.","Russian":"Настраивает механизм для более быстрых повторных выстрелов, жертвуя контролем отдачи и долговечностью ради скорости."}},
-    {"sid":"sid_bprue_sg_action_tuned_name","languages":{"English":"Tuned Action","Russian":"Настроенная автоматика"}},
-    {"sid":"sid_bprue_sg_action_tuned_description","languages":{"English":"A balanced action tune combining faster cycling with improved control.","Russian":"Сбалансированная настройка механизма, сочетающая более быстрый цикл с улучшенным контролем."}},
-    {"sid":"sid_bprue_sg_action_reinforced_name","languages":{"English":"Reinforced Action","Russian":"Усиленная автоматика"}},
-    {"sid":"sid_bprue_sg_action_reinforced_description","languages":{"English":"Reinforces the action for reliability and control, accepting a slower firing cycle.","Russian":"Усиливает механизм ради надёжности и контроля ценой более медленного цикла стрельбы."}},
-    {"sid":"sid_bprue_sg_handling_lightweight_name","languages":{"English":"Lightweight Furniture","Russian":"Облегчённая фурнитура"}},
-    {"sid":"sid_bprue_sg_handling_lightweight_description","languages":{"English":"Reduces weight and improves handling speed, at the cost of increased recoil.","Russian":"Снижает вес и ускоряет обращение с оружием ценой повышенной отдачи."}},
-    {"sid":"sid_bprue_sg_handling_combat_name","languages":{"English":"Combat Furniture","Russian":"Боевая фурнитура"}},
-    {"sid":"sid_bprue_sg_handling_combat_description","languages":{"English":"A practical combat setup balancing aiming, movement and recoil recovery.","Russian":"Практичная боевая конфигурация, обеспечивающая баланс между прицеливанием, перемещением и восстановлением после отдачи."}},
-    {"sid":"sid_bprue_sg_handling_stabilized_name","languages":{"English":"Stabilized Furniture","Russian":"Стабилизированная фурнитура"}},
-    {"sid":"sid_bprue_sg_handling_stabilized_description","languages":{"English":"Prioritizes stability and recoil control over fast handling.","Russian":"Отдаёт приоритет стабильности и контролю отдачи перед скоростью обращения."}},
-
-    {"sid":"sid_bprue_sniper_high_velocity_name","languages":{"English":"High-Velocity Ballistics","Russian":"Высокоскоростная баллистика"}},
-    {"sid":"sid_bprue_sniper_high_velocity_description","languages":{"English":"Optimizes projectile velocity and long-range performance for flatter, faster shots.","Russian":"Оптимизирует скорость пули и дальнобойность для более настильной и быстрой стрельбы."}},
-    {"sid":"sid_bprue_sniper_match_barrel_name","languages":{"English":"Match Barrel","Russian":"Матчевый ствол"}},
-    {"sid":"sid_bprue_sniper_match_barrel_description","languages":{"English":"A precision barrel tuned for tighter dispersion and consistent long-range accuracy.","Russian":"Высокоточный ствол, настроенный на меньший разброс и стабильную точность на дальней дистанции."}},
-    {"sid":"sid_bprue_sniper_heavy_barrel_name","languages":{"English":"Heavy Barrel","Russian":"Тяжёлый ствол"}},
-    {"sid":"sid_bprue_sniper_heavy_barrel_description","languages":{"English":"A heavy-profile barrel prioritizing stability and sustained precision at the cost of handling speed.","Russian":"Тяжёлый ствол, повышающий стабильность и устойчивую точность ценой скорости обращения."}},
-    {"sid":"sid_bprue_sniper_rapid_name","languages":{"English":"Rapid Action","Russian":"Скоростная автоматика"}},
-    {"sid":"sid_bprue_sniper_rapid_description","languages":{"English":"Speeds up the firing cycle for rapid follow-up shots, trading some control and durability for rate of fire.","Russian":"Ускоряет цикл стрельбы, позволяя быстрее производить повторные выстрелы, но жертвуя частью контроля и скоростью износа ради скорострельности."}},
-    {"sid":"sid_bprue_sniper_precision_name","languages":{"English":"Precision Action","Russian":"Точная автоматика"}},
-    {"sid":"sid_bprue_sniper_precision_description","languages":{"English":"Tunes the action for deliberate precision and improved shot control rather than maximum firing speed.","Russian":"Настраивает механизм на выверенную точность и лучший контроль выстрела вместо максимального темпа огня."}},
-    {"sid":"sid_bprue_sniper_reinforced_name","languages":{"English":"Reinforced Action","Russian":"Усиленная автоматика"}},
-    {"sid":"sid_bprue_sniper_reinforced_description","languages":{"English":"Reinforces the action for durability and dependable operation under sustained use.","Russian":"Усиливает механизм для большей долговечности и надёжной работы при интенсивном использовании."}},
-    {"sid":"sid_bprue_sniper_snap_shooter_name","languages":{"English":"Snap Shooter","Russian":"Быстрый стрелок"}},
-    {"sid":"sid_bprue_sniper_snap_shooter_description","languages":{"English":"Prioritizes fast target acquisition and responsive aiming for mobile marksman work.","Russian":"Отдаёт приоритет быстрому захвату цели и отзывчивому прицеливанию для мобильного стрелка."}},
-    {"sid":"sid_bprue_sniper_field_marksman_name","languages":{"English":"Field Marksman","Russian":"Полевой стрелок"}},
-    {"sid":"sid_bprue_sniper_field_marksman_description","languages":{"English":"Balances aiming speed, stability and practical accuracy for general marksman use.","Russian":"Балансирует скорость прицеливания, стабильность и практическую точность для универсального стрелка."}},
-    {"sid":"sid_bprue_sniper_benchrest_name","languages":{"English":"Benchrest Setup","Russian":"Стендовая настройка"}},
-    {"sid":"sid_bprue_sniper_benchrest_description","languages":{"English":"Maximizes aiming stability and precision for deliberate long-range fire, at the cost of responsiveness.","Russian":"Максимизирует стабильность прицеливания и точность для выверенной дальней стрельбы ценой отзывчивости."}},
-    {"sid":"sid_bprue_sniper_rapid_marksman_name","languages":{"English":"Rapid Marksman Package","Russian":"Комплект скоростного стрелка"}},
-    {"sid":"sid_bprue_sniper_rapid_marksman_description","languages":{"English":"A rapid-fire marksman package tuned for quick follow-up shots and aggressive precision shooting.","Russian":"Комплект скоростного стрелка для быстрых повторных выстрелов и агрессивной точной стрельбы."}},
-    {"sid":"sid_bprue_sniper_recon_marksman_name","languages":{"English":"Recon Marksman Package","Russian":"Комплект разведчика-стрелка"}},
-    {"sid":"sid_bprue_sniper_recon_marksman_description","languages":{"English":"A mobile reconnaissance setup emphasizing quick handling, target acquisition and controlled precision.","Russian":"Мобильная разведывательная компоновка с упором на быстрое обращение, захват цели и контролируемую точность."}},
-    {"sid":"sid_bprue_sniper_match_trigger_name","languages":{"English":"Match Trigger","Russian":"Матчевый спуск"}},
-    {"sid":"sid_bprue_sniper_match_trigger_description","languages":{"English":"A precision trigger package for cleaner shot release and improved control during deliberate fire.","Russian":"Высокоточный спусковой механизм для более чистого срыва выстрела и лучшего контроля при выверенной стрельбе."}},
-    {"sid":"sid_bprue_sniper_anti_materiel_name","languages":{"English":"Anti-Materiel Package","Russian":"Противоматериальный комплект"}},
-    {"sid":"sid_bprue_sniper_anti_materiel_description","languages":{"English":"A heavy long-range package emphasizing damage, penetration and ballistic performance against hardened targets.","Russian":"Тяжёлый дальнобойный комплект с упором на урон, пробитие и баллистику против защищённых целей."}},
-    {"sid":"sid_bprue_sniper_battle_rifle_name","languages":{"English":"Battle Rifle Package","Russian":"Комплект боевой винтовки"}},
-    {"sid":"sid_bprue_sniper_battle_rifle_description","languages":{"English":"Adapts the rifle for flexible combat use with a balance of handling, rate of fire and precision.","Russian":"Адаптирует винтовку для универсального боя, балансируя управляемость, темп огня и точность."}},
-    {"sid":"sid_bprue_sniper_mad_minute_name","languages":{"English":"Mad Minute Package","Russian":"Комплект «Бешеная минута»"}},
-    {"sid":"sid_bprue_sniper_mad_minute_description","languages":{"English":"Tunes the rifle for exceptionally rapid aimed follow-up shots while preserving its marksman character.","Russian":"Настраивает винтовку для исключительно быстрых прицельных повторных выстрелов, сохраняя её снайперский характер."}}
+    {
+      "sid": "sid_bprue_pistol_high_speed_name",
+      "languages": {
+        "English": "High-Speed Action",
+        "Russian": "Высокоскоростная автоматика",
+        "ChineseSimplified": "高速自动机"
+      }
+    },
+    {
+      "sid": "sid_bprue_pistol_high_speed_description",
+      "languages": {
+        "English": "Speeds up the firing cycle for rapid follow-up shots, at the cost of increased recoil and weapon wear.",
+        "Russian": "Ускоряет цикл стрельбы для быстрых повторных выстрелов ценой повышенной отдачи и износа оружия.",
+        "ChineseSimplified": "加快射击循环以支持快速补射，但后坐力与武器磨损增加。"
+      }
+    },
+    {
+      "sid": "sid_bprue_pistol_balanced_name",
+      "languages": {
+        "English": "Balanced Action",
+        "Russian": "Сбалансированная автоматика",
+        "ChineseSimplified": "平衡自动机"
+      }
+    },
+    {
+      "sid": "sid_bprue_pistol_balanced_description",
+      "languages": {
+        "English": "Balances a faster firing cycle with improved recoil control and recovery, while moderately increasing weapon wear.",
+        "Russian": "Сочетает ускоренный цикл стрельбы с улучшенным контролем и восстановлением отдачи, умеренно повышая износ оружия.",
+        "ChineseSimplified": "兼顾更快的射击循环与改善的后坐力控制及恢复，但武器磨损适度增加。"
+      }
+    },
+    {
+      "sid": "sid_bprue_pistol_controlled_name",
+      "languages": {
+        "English": "Controlled Action",
+        "Russian": "Контролируемая автоматика",
+        "ChineseSimplified": "可控自动机"
+      }
+    },
+    {
+      "sid": "sid_bprue_pistol_controlled_description",
+      "languages": {
+        "English": "Slows the firing cycle slightly in exchange for lower recoil and faster recoil recovery.",
+        "Russian": "Немного замедляет цикл стрельбы в обмен на меньшую отдачу и более быстрое восстановление после неё.",
+        "ChineseSimplified": "略微降低射击循环速度，以换取更低的后坐力与更快的后坐力恢复。"
+      }
+    },
+    {
+      "sid": "sid_bprue_pistol_quick_draw_name",
+      "languages": {
+        "English": "Quick-Draw Setup",
+        "Russian": "Компоновка быстрого извлечения",
+        "ChineseSimplified": "快速拔枪配置"
+      }
+    },
+    {
+      "sid": "sid_bprue_pistol_quick_draw_description",
+      "languages": {
+        "English": "Reduces weapon weight and speeds up aiming for faster handling, at the cost of increased recoil.",
+        "Russian": "Снижает вес оружия и ускоряет прицеливание для более быстрого обращения ценой повышенной отдачи.",
+        "ChineseSimplified": "降低武器重量并加快瞄准以提升操作速度，但后坐力增加。"
+      }
+    },
+    {
+      "sid": "sid_bprue_pistol_tactical_name",
+      "languages": {
+        "English": "Tactical Handling",
+        "Russian": "Тактическая эргономика",
+        "ChineseSimplified": "战术操控"
+      }
+    },
+    {
+      "sid": "sid_bprue_pistol_tactical_description",
+      "languages": {
+        "English": "Improves aiming speed, movement while aiming and recoil recovery for responsive combat handling.",
+        "Russian": "Улучшает скорость прицеливания, движение при прицеливании и восстановление после отдачи для более отзывчивого обращения.",
+        "ChineseSimplified": "提升瞄准速度、瞄准时移动与后坐力恢复，带来更灵敏的战斗操控。"
+      }
+    },
+    {
+      "sid": "sid_bprue_pistol_stabilized_name",
+      "languages": {
+        "English": "Stabilized Handling",
+        "Russian": "Стабилизированная эргономика",
+        "ChineseSimplified": "稳定化操控"
+      }
+    },
+    {
+      "sid": "sid_bprue_pistol_stabilized_description",
+      "languages": {
+        "English": "Improves recoil control and recovery at the cost of slower aiming.",
+        "Russian": "Улучшает контроль и восстановление отдачи ценой более медленного прицеливания.",
+        "ChineseSimplified": "提升后坐力控制与恢复，但瞄准速度变慢。"
+      }
+    },
+    {
+      "sid": "sid_bprue_pistol_quick_response_name",
+      "languages": {
+        "English": "Quick-Response Package",
+        "Russian": "Комплект быстрого реагирования",
+        "ChineseSimplified": "快速响应组件"
+      }
+    },
+    {
+      "sid": "sid_bprue_pistol_quick_response_description",
+      "languages": {
+        "English": "A lightweight emergency-sidearm package with faster aiming and reloads, trading stability and durability for speed.",
+        "Russian": "Облегчённый комплект для запасного оружия с быстрым прицеливанием и перезарядкой, жертвующий стабильностью и долговечностью ради скорости.",
+        "ChineseSimplified": "轻量化应急副武器组件，加快瞄准与装填，以稳定性与耐久度换取速度。"
+      }
+    },
+    {
+      "sid": "sid_bprue_pistol_match_barrel_name",
+      "languages": {
+        "English": "Match Barrel Assembly",
+        "Russian": "Матчевый ствол",
+        "ChineseSimplified": "竞赛枪管组件"
+      }
+    },
+    {
+      "sid": "sid_bprue_pistol_match_barrel_description",
+      "languages": {
+        "English": "A precision barrel package with tighter dispersion, improved effective range and higher projectile velocity, at the cost of slower aiming.",
+        "Russian": "Высокоточный ствол с меньшим разбросом, увеличенной эффективной дальностью и скоростью пули ценой более медленного прицеливания.",
+        "ChineseSimplified": "精准枪管组件，散布更小、有效射程与弹速更高，但瞄准速度变慢。"
+      }
+    },
+    {
+      "sid": "sid_bprue_pistol_automatic_sear_name",
+      "languages": {
+        "English": "Automatic Sear",
+        "Russian": "Автоматический шептало",
+        "ChineseSimplified": "自动阻铁"
+      }
+    },
+    {
+      "sid": "sid_bprue_pistol_automatic_sear_description",
+      "languages": {
+        "English": "Adds automatic fire to the pistol's fire-control system, at the cost of increased recoil and weapon wear.",
+        "Russian": "Добавляет автоматический огонь в ударно-спусковой механизм пистолета ценой повышенной отдачи и износа оружия.",
+        "ChineseSimplified": "为手枪击发机构加入全自动射击，但后坐力与武器磨损增加。"
+      }
+    },
+    {
+      "sid": "sid_bprue_pistol_hunting_cylinder_name",
+      "languages": {
+        "English": "Hunting Cylinder",
+        "Russian": "Охотничий барабан",
+        "ChineseSimplified": "狩猎转轮"
+      }
+    },
+    {
+      "sid": "sid_bprue_pistol_hunting_cylinder_description",
+      "languages": {
+        "English": "A heavy hunting setup with improved armor penetration and projectile velocity, at the cost of a slower firing cycle.",
+        "Russian": "Тяжёлая охотничья конфигурация с повышенным бронепробитием и скоростью пули ценой более медленного цикла стрельбы.",
+        "ChineseSimplified": "重型狩猎配置，提升护甲穿透与弹速，但射击循环变慢。"
+      }
+    },
+    {
+      "sid": "sid_bprue_pistol_selectable_fire_control_name",
+      "languages": {
+        "English": "Selectable Fire Control",
+        "Russian": "Переключаемый режим огня",
+        "ChineseSimplified": "可选击发控制"
+      }
+    },
+    {
+      "sid": "sid_bprue_pistol_selectable_fire_control_description",
+      "languages": {
+        "English": "Adds a selectable semi-automatic mode while retaining the weapon's native automatic fire and improving recoil control.",
+        "Russian": "Добавляет выбираемый одиночный режим, сохраняя штатный автоматический огонь и улучшая контроль отдачи.",
+        "ChineseSimplified": "在保留武器原生全自动射击的同时加入可选半自动模式，并改善后坐力控制。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sg_pattern_breacher_name",
+      "languages": {
+        "English": "Breacher Pattern",
+        "Russian": "Штурмовой чок",
+        "ChineseSimplified": "破门散布"
+      }
+    },
+    {
+      "sid": "sid_bprue_sg_pattern_breacher_description",
+      "languages": {
+        "English": "Optimizes the shotgun for close-range breaching with a wider, aggressive shot pattern.",
+        "Russian": "Оптимизирует дробовик для штурмового применения на ближней дистанции, обеспечивая более широкую и агрессивную осыпь дроби.",
+        "ChineseSimplified": "将霰弹枪优化为近距离破门用途，提供更宽、更激进的弹丸散布。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sg_pattern_field_choke_name",
+      "languages": {
+        "English": "Field Choke",
+        "Russian": "Полевой чок",
+        "ChineseSimplified": "野战喉缩"
+      }
+    },
+    {
+      "sid": "sid_bprue_sg_pattern_field_choke_description",
+      "languages": {
+        "English": "Balances shot spread and practical range for versatile field use.",
+        "Russian": "Балансирует разброс дроби и практическую дальность для универсального применения.",
+        "ChineseSimplified": "平衡弹丸散布与实用射程，适应多用途野战需求。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sg_pattern_full_choke_name",
+      "languages": {
+        "English": "Full Choke",
+        "Russian": "Полный чок",
+        "ChineseSimplified": "全喉缩"
+      }
+    },
+    {
+      "sid": "sid_bprue_sg_pattern_full_choke_description",
+      "languages": {
+        "English": "Tightens the shot pattern for greater precision and effective range.",
+        "Russian": "Сужает осыпь дроби для большей точности и эффективной дальности.",
+        "ChineseSimplified": "收拢弹丸散布，提升精度与有效射程。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sg_action_high_speed_name",
+      "languages": {
+        "English": "High-Speed Action",
+        "Russian": "Высокоскоростная автоматика",
+        "ChineseSimplified": "高速自动机"
+      }
+    },
+    {
+      "sid": "sid_bprue_sg_action_high_speed_description",
+      "languages": {
+        "English": "Tunes the action for faster follow-up shots, sacrificing recoil control and durability for speed.",
+        "Russian": "Настраивает механизм для более быстрых повторных выстрелов, жертвуя контролем отдачи и долговечностью ради скорости.",
+        "ChineseSimplified": "调校自动机以加快补射，以后坐力控制与耐久度换取速度。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sg_action_tuned_name",
+      "languages": {
+        "English": "Tuned Action",
+        "Russian": "Настроенная автоматика",
+        "ChineseSimplified": "调校自动机"
+      }
+    },
+    {
+      "sid": "sid_bprue_sg_action_tuned_description",
+      "languages": {
+        "English": "A balanced action tune combining faster cycling with improved control.",
+        "Russian": "Сбалансированная настройка механизма, сочетающая более быстрый цикл с улучшенным контролем.",
+        "ChineseSimplified": "平衡的自动机调校，兼顾更快的循环与更好的控制。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sg_action_reinforced_name",
+      "languages": {
+        "English": "Reinforced Action",
+        "Russian": "Усиленная автоматика",
+        "ChineseSimplified": "强化自动机"
+      }
+    },
+    {
+      "sid": "sid_bprue_sg_action_reinforced_description",
+      "languages": {
+        "English": "Reinforces the action for reliability and control, accepting a slower firing cycle.",
+        "Russian": "Усиливает механизм ради надёжности и контроля ценой более медленного цикла стрельбы.",
+        "ChineseSimplified": "强化自动机以提升可靠性与控制，但射击循环变慢。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sg_handling_lightweight_name",
+      "languages": {
+        "English": "Lightweight Furniture",
+        "Russian": "Облегчённая фурнитура",
+        "ChineseSimplified": "轻量化枪身配件"
+      }
+    },
+    {
+      "sid": "sid_bprue_sg_handling_lightweight_description",
+      "languages": {
+        "English": "Reduces weight and improves handling speed, at the cost of increased recoil.",
+        "Russian": "Снижает вес и ускоряет обращение с оружием ценой повышенной отдачи.",
+        "ChineseSimplified": "降低重量并提升操作速度，但后坐力增加。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sg_handling_combat_name",
+      "languages": {
+        "English": "Combat Furniture",
+        "Russian": "Боевая фурнитура",
+        "ChineseSimplified": "战斗枪身配件"
+      }
+    },
+    {
+      "sid": "sid_bprue_sg_handling_combat_description",
+      "languages": {
+        "English": "A practical combat setup balancing aiming, movement and recoil recovery.",
+        "Russian": "Практичная боевая конфигурация, обеспечивающая баланс между прицеливанием, перемещением и восстановлением после отдачи.",
+        "ChineseSimplified": "实用的战斗配置，平衡瞄准、移动与后坐力恢复。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sg_handling_stabilized_name",
+      "languages": {
+        "English": "Stabilized Furniture",
+        "Russian": "Стабилизированная фурнитура",
+        "ChineseSimplified": "稳定化枪身配件"
+      }
+    },
+    {
+      "sid": "sid_bprue_sg_handling_stabilized_description",
+      "languages": {
+        "English": "Prioritizes stability and recoil control over fast handling.",
+        "Russian": "Отдаёт приоритет стабильности и контролю отдачи перед скоростью обращения.",
+        "ChineseSimplified": "优先提升稳定性与后坐力控制，而非快速操作。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_high_velocity_name",
+      "languages": {
+        "English": "High-Velocity Ballistics",
+        "Russian": "Высокоскоростная баллистика",
+        "ChineseSimplified": "高速弹道"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_high_velocity_description",
+      "languages": {
+        "English": "Optimizes projectile velocity and long-range performance for flatter, faster shots.",
+        "Russian": "Оптимизирует скорость пули и дальнобойность для более настильной и быстрой стрельбы.",
+        "ChineseSimplified": "优化弹速与远距离表现，实现更平直、更快速的射击。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_match_barrel_name",
+      "languages": {
+        "English": "Match Barrel",
+        "Russian": "Матчевый ствол",
+        "ChineseSimplified": "竞赛枪管"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_match_barrel_description",
+      "languages": {
+        "English": "A precision barrel tuned for tighter dispersion and consistent long-range accuracy.",
+        "Russian": "Высокоточный ствол, настроенный на меньший разброс и стабильную точность на дальней дистанции.",
+        "ChineseSimplified": "精准枪管，调校为更小的散布与稳定的远距离精度。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_heavy_barrel_name",
+      "languages": {
+        "English": "Heavy Barrel",
+        "Russian": "Тяжёлый ствол",
+        "ChineseSimplified": "重型枪管"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_heavy_barrel_description",
+      "languages": {
+        "English": "A heavy-profile barrel prioritizing stability and sustained precision at the cost of handling speed.",
+        "Russian": "Тяжёлый ствол, повышающий стабильность и устойчивую точность ценой скорости обращения.",
+        "ChineseSimplified": "重型枪管，优先提升稳定性与持续精度，但操作速度下降。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_rapid_name",
+      "languages": {
+        "English": "Rapid Action",
+        "Russian": "Скоростная автоматика",
+        "ChineseSimplified": "速射自动机"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_rapid_description",
+      "languages": {
+        "English": "Speeds up the firing cycle for rapid follow-up shots, trading some control and durability for rate of fire.",
+        "Russian": "Ускоряет цикл стрельбы, позволяя быстрее производить повторные выстрелы, но жертвуя частью контроля и скоростью износа ради скорострельности.",
+        "ChineseSimplified": "加快射击循环以支持快速补射，以部分控制与耐久度换取射速。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_precision_name",
+      "languages": {
+        "English": "Precision Action",
+        "Russian": "Точная автоматика",
+        "ChineseSimplified": "精准自动机"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_precision_description",
+      "languages": {
+        "English": "Tunes the action for deliberate precision and improved shot control rather than maximum firing speed.",
+        "Russian": "Настраивает механизм на выверенную точность и лучший контроль выстрела вместо максимального темпа огня.",
+        "ChineseSimplified": "将自动机调校为精确瞄准与更好的射击控制，而非追求最大射速。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_reinforced_name",
+      "languages": {
+        "English": "Reinforced Action",
+        "Russian": "Усиленная автоматика",
+        "ChineseSimplified": "强化自动机"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_reinforced_description",
+      "languages": {
+        "English": "Reinforces the action for durability and dependable operation under sustained use.",
+        "Russian": "Усиливает механизм для большей долговечности и надёжной работы при интенсивном использовании.",
+        "ChineseSimplified": "强化自动机，提升耐久度并在持续使用下保持可靠运作。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_snap_shooter_name",
+      "languages": {
+        "English": "Snap Shooter",
+        "Russian": "Быстрый стрелок",
+        "ChineseSimplified": "快速射手"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_snap_shooter_description",
+      "languages": {
+        "English": "Prioritizes fast target acquisition and responsive aiming for mobile marksman work.",
+        "Russian": "Отдаёт приоритет быстрому захвату цели и отзывчивому прицеливанию для мобильного стрелка.",
+        "ChineseSimplified": "优先快速捕捉目标与灵敏瞄准，适合机动精确射手。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_field_marksman_name",
+      "languages": {
+        "English": "Field Marksman",
+        "Russian": "Полевой стрелок",
+        "ChineseSimplified": "野战精确射手"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_field_marksman_description",
+      "languages": {
+        "English": "Balances aiming speed, stability and practical accuracy for general marksman use.",
+        "Russian": "Балансирует скорость прицеливания, стабильность и практическую точность для универсального стрелка.",
+        "ChineseSimplified": "平衡瞄准速度、稳定性与实用精度，适合通用精确射手用途。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_benchrest_name",
+      "languages": {
+        "English": "Benchrest Setup",
+        "Russian": "Стендовая настройка",
+        "ChineseSimplified": "靶架配置"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_benchrest_description",
+      "languages": {
+        "English": "Maximizes aiming stability and precision for deliberate long-range fire, at the cost of responsiveness.",
+        "Russian": "Максимизирует стабильность прицеливания и точность для выверенной дальней стрельбы ценой отзывчивости.",
+        "ChineseSimplified": "最大化瞄准稳定性与精度，适合精确远距离射击，但响应速度下降。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_rapid_marksman_name",
+      "languages": {
+        "English": "Rapid Marksman Package",
+        "Russian": "Комплект скоростного стрелка",
+        "ChineseSimplified": "速射精确射手组件"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_rapid_marksman_description",
+      "languages": {
+        "English": "A rapid-fire marksman package tuned for quick follow-up shots and aggressive precision shooting.",
+        "Russian": "Комплект скоростного стрелка для быстрых повторных выстрелов и агрессивной точной стрельбы.",
+        "ChineseSimplified": "速射精确射手组件，调校为快速补射与激进的精准射击。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_recon_marksman_name",
+      "languages": {
+        "English": "Recon Marksman Package",
+        "Russian": "Комплект разведчика-стрелка",
+        "ChineseSimplified": "侦察精确射手组件"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_recon_marksman_description",
+      "languages": {
+        "English": "A mobile reconnaissance setup emphasizing quick handling, target acquisition and controlled precision.",
+        "Russian": "Мобильная разведывательная компоновка с упором на быстрое обращение, захват цели и контролируемую точность.",
+        "ChineseSimplified": "机动侦察配置，强调快速操作、目标捕捉与可控精准度。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_match_trigger_name",
+      "languages": {
+        "English": "Match Trigger",
+        "Russian": "Матчевый спуск",
+        "ChineseSimplified": "竞赛扳机"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_match_trigger_description",
+      "languages": {
+        "English": "A precision trigger package for cleaner shot release and improved control during deliberate fire.",
+        "Russian": "Высокоточный спусковой механизм для более чистого срыва выстрела и лучшего контроля при выверенной стрельбе.",
+        "ChineseSimplified": "精准扳机组件，带来更干净的击发与精确射击时更好的控制。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_anti_materiel_name",
+      "languages": {
+        "English": "Anti-Materiel Package",
+        "Russian": "Противоматериальный комплект",
+        "ChineseSimplified": "反器材组件"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_anti_materiel_description",
+      "languages": {
+        "English": "A heavy long-range package emphasizing damage, penetration and ballistic performance against hardened targets.",
+        "Russian": "Тяжёлый дальнобойный комплект с упором на урон, пробитие и баллистику против защищённых целей.",
+        "ChineseSimplified": "重型远距离组件，针对坚固目标强调伤害、穿透与弹道表现。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_battle_rifle_name",
+      "languages": {
+        "English": "Battle Rifle Package",
+        "Russian": "Комплект боевой винтовки",
+        "ChineseSimplified": "战斗步枪组件"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_battle_rifle_description",
+      "languages": {
+        "English": "Adapts the rifle for flexible combat use with a balance of handling, rate of fire and precision.",
+        "Russian": "Адаптирует винтовку для универсального боя, балансируя управляемость, темп огня и точность.",
+        "ChineseSimplified": "将步枪改造为灵活的战斗用途，平衡操控、射速与精度。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_mad_minute_name",
+      "languages": {
+        "English": "Mad Minute Package",
+        "Russian": "Комплект «Бешеная минута»",
+        "ChineseSimplified": "疯狂一分钟组件"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_mad_minute_description",
+      "languages": {
+        "English": "Tunes the rifle for exceptionally rapid aimed follow-up shots while preserving its marksman character.",
+        "Russian": "Настраивает винтовку для исключительно быстрых прицельных повторных выстрелов, сохраняя её снайперский характер.",
+        "ChineseSimplified": "将步枪调校为极快速的瞄准补射，同时保留其精确射手特性。"
+      }
+    }
   ]
 }

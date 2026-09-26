@@ -1,14 +1,15 @@
 {
-  "localization_sid_count": 352,
+  "localization_sid_count": 518,
   "required_languages": [
     "English",
-    "Russian"
+    "Russian",
+    "ChineseSimplified"
   ],
   "missing_language_entry_count": 0,
   "missing_languages": [],
   "scopes": {
     "BaseGame": {
-      "upgrade_count": 1357,
+      "upgrade_count": 1352,
       "text_sid_count": 124,
       "hint_sid_count": 126,
       "missing_count": 0,
@@ -20,6 +21,33 @@
       "upgrade_count": 246,
       "text_sid_count": 67,
       "hint_sid_count": 69,
+      "missing_count": 0,
+      "missing_sids": [],
+      "incomplete_upgrade_count": 0,
+      "incomplete_upgrades": []
+    },
+    "Deluxe": {
+      "upgrade_count": 104,
+      "text_sid_count": 63,
+      "hint_sid_count": 63,
+      "missing_count": 0,
+      "missing_sids": [],
+      "incomplete_upgrade_count": 0,
+      "incomplete_upgrades": []
+    },
+    "PreOrder": {
+      "upgrade_count": 20,
+      "text_sid_count": 20,
+      "hint_sid_count": 20,
+      "missing_count": 0,
+      "missing_sids": [],
+      "incomplete_upgrade_count": 0,
+      "incomplete_upgrades": []
+    },
+    "Ultimate": {
+      "upgrade_count": 61,
+      "text_sid_count": 45,
+      "hint_sid_count": 45,
       "missing_count": 0,
       "missing_sids": [],
       "incomplete_upgrade_count": 0,
@@ -37,7 +65,10 @@
         "sid": "AimingMovementPos10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_aimMovement",
@@ -55,7 +86,8 @@
         "sid": "AimingMovementPos15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "weapon_aimMovement",
@@ -90,7 +122,10 @@
         "sid": "AimingTimeNeg10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_aimRocking",
@@ -108,7 +143,10 @@
         "sid": "AimingTimeNeg15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_aimRocking",
@@ -126,7 +164,9 @@
         "sid": "AimingTimePos10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_aimRocking",
@@ -144,7 +184,10 @@
         "sid": "AimingTimePos15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_aimRocking",
@@ -162,7 +205,10 @@
         "sid": "ArmorPiercingPos15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_armorPiercing",
@@ -180,7 +226,10 @@
         "sid": "ArmorPiercingPos25Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_armorPiercing",
@@ -198,7 +247,10 @@
         "sid": "BPRUE_AddBurstFireModeEffect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_fire_modes_burst_auto",
@@ -214,7 +266,8 @@
         "sid": "BPRUE_ArmorPiercingPos10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "bprue_armor_piercing",
@@ -230,7 +283,9 @@
         "sid": "BPRUE_ArmorPiercingPos15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder"
         ],
         "visible": true,
         "localization_sid": "bprue_armor_piercing",
@@ -246,7 +301,8 @@
         "sid": "BPRUE_ArmorPiercingPos25Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "bprue_armor_piercing",
@@ -262,7 +318,8 @@
         "sid": "BPRUE_ChangeAmmoTypes762NATOAPEffect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": false,
         "localization_sid": "weapon_caliberChange",
@@ -280,7 +337,8 @@
         "sid": "BPRUE_ChangeAmmoTypes762NATOEffect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": false,
         "localization_sid": "weapon_caliberChange",
@@ -298,7 +356,8 @@
         "sid": "BPRUE_ChangeAmmoTypes762NATOSupersonicEffect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": false,
         "localization_sid": "weapon_caliberChange",
@@ -352,7 +411,8 @@
         "sid": "BPRUE_ChangeAmmoTypes762x39APEffect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "PreOrder"
         ],
         "visible": false,
         "localization_sid": "weapon_caliberChange",
@@ -370,7 +430,8 @@
         "sid": "BPRUE_ChangeAmmoTypes762x39Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "PreOrder"
         ],
         "visible": false,
         "localization_sid": "weapon_caliberChange",
@@ -388,7 +449,8 @@
         "sid": "BPRUE_ChangeAmmoTypes762x39ExpandingEffect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "PreOrder"
         ],
         "visible": false,
         "localization_sid": "weapon_caliberChange",
@@ -406,7 +468,9 @@
         "sid": "BPRUE_ChangeAmmoTypesNo762Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder"
         ],
         "visible": false,
         "localization_sid": "weapon_caliberChange",
@@ -424,7 +488,9 @@
         "sid": "BPRUE_ChangeAmmoTypesNo762NATOEffect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder"
         ],
         "visible": false,
         "localization_sid": "weapon_caliberChange",
@@ -442,7 +508,8 @@
         "sid": "BPRUE_ChangeCaliber762NATOEffect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": false,
         "localization_sid": "weapon_caliberChange",
@@ -460,7 +527,8 @@
         "sid": "BPRUE_ChangeCaliber762x39Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "PreOrder"
         ],
         "visible": false,
         "localization_sid": "weapon_caliberChange",
@@ -859,7 +927,10 @@
         "sid": "BPRUE_DamagePos10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_damage",
@@ -877,7 +948,8 @@
         "sid": "BPRUE_DamagePos15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "PreOrder"
         ],
         "visible": true,
         "localization_sid": "bprue_damage",
@@ -895,7 +967,8 @@
         "sid": "BPRUE_DamagePos20Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "PreOrder"
         ],
         "visible": true,
         "localization_sid": "bprue_damage",
@@ -913,7 +986,8 @@
         "sid": "BPRUE_DamagePos5Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "bprue_damage",
@@ -931,7 +1005,10 @@
         "sid": "BPRUE_DurabilityPerShotNeg10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_weapon_wear",
@@ -949,7 +1026,8 @@
         "sid": "BPRUE_DurabilityPerShotNeg15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "bprue_weapon_wear",
@@ -965,7 +1043,10 @@
         "sid": "BPRUE_DurabilityPerShotNeg20Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_weapon_wear",
@@ -983,7 +1064,10 @@
         "sid": "BPRUE_FireIntervalNeg10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_fire_rate",
@@ -999,7 +1083,10 @@
         "sid": "BPRUE_FireIntervalNeg20Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_fire_rate",
@@ -1015,7 +1102,10 @@
         "sid": "BPRUE_FireIntervalPos5Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_fire_rate",
@@ -1090,7 +1180,9 @@
       {
         "sid": "BPRUE_Pistol_FireIntervalPos10Effect",
         "scopes": [
-          "BaseGame"
+          "BaseGame",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_fire_rate",
@@ -1105,7 +1197,9 @@
       {
         "sid": "BPRUE_Pistol_RecoilPenalty10Effect",
         "scopes": [
-          "BaseGame"
+          "BaseGame",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_recoil",
@@ -1120,7 +1214,9 @@
       {
         "sid": "BPRUE_Pistol_RecoilPenalty15Effect",
         "scopes": [
-          "BaseGame"
+          "BaseGame",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_recoil",
@@ -1138,7 +1234,8 @@
         "sid": "BPRUE_RecoilPenalty15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "PreOrder"
         ],
         "visible": true,
         "localization_sid": "bprue_recoil",
@@ -1156,7 +1253,9 @@
         "sid": "BPRUE_RecoilPenalty20Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder"
         ],
         "visible": true,
         "localization_sid": "bprue_recoil",
@@ -1174,7 +1273,8 @@
         "sid": "BPRUE_RecoilPenalty25Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "bprue_recoil",
@@ -1210,7 +1310,10 @@
         "sid": "BPRUE_ReloadingTimeNeg10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_reload_speed",
@@ -1226,7 +1329,10 @@
         "sid": "BPRUE_ReloadingTimeNeg20Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_reload_speed",
@@ -1242,7 +1348,9 @@
         "sid": "BPRUE_SG_DistanceDropOffNeg15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_effective_range",
@@ -1260,7 +1368,9 @@
         "sid": "BPRUE_SG_FireIntervalPos10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_fire_rate",
@@ -1276,7 +1386,9 @@
         "sid": "BPRUE_SG_FractionCount10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_pellet_count",
@@ -1294,7 +1406,9 @@
         "sid": "BPRUE_SG_FractionCount12Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_pellet_count",
@@ -1312,7 +1426,9 @@
         "sid": "BPRUE_SG_FractionCount16Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_pellet_count",
@@ -1328,7 +1444,9 @@
         "sid": "BPRUE_SG_RecoilPenalty15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_recoil",
@@ -1344,7 +1462,9 @@
         "sid": "BPRUE_SG_WeightPos5Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_weight",
@@ -1791,7 +1911,9 @@
       {
         "sid": "BPRUE_SMG_ReloadingTimePos10Effect",
         "scopes": [
-          "BaseGame"
+          "BaseGame",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_reload_speed",
@@ -1807,7 +1929,10 @@
         "sid": "BPRUE_SemiAutoOnlyEffect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_fire_modes_semi_auto",
@@ -1823,7 +1948,9 @@
         "sid": "BPRUE_Shared_AimingTimePenalty10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_aiming_speed",
@@ -1839,7 +1966,10 @@
         "sid": "BPRUE_Shared_AimingTimePos8Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_aiming_speed",
@@ -1855,7 +1985,10 @@
         "sid": "BPRUE_Shared_ArmorPiercingPenalty20Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_armor_piercing",
@@ -1871,7 +2004,10 @@
         "sid": "BPRUE_Shared_DamagePenalty10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_damage",
@@ -1887,7 +2023,10 @@
         "sid": "BPRUE_Shared_DispersionPenalty5Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_accuracy",
@@ -1903,7 +2042,10 @@
         "sid": "BPRUE_Shared_DurabilityPenalty15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_durability",
@@ -1919,7 +2061,10 @@
         "sid": "BPRUE_Shared_DurabilityPerShotPenalty8Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_weapon_wear",
@@ -1935,7 +2080,10 @@
         "sid": "BPRUE_Shared_FireIntervalNeg12Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_fire_rate",
@@ -1951,7 +2099,10 @@
         "sid": "BPRUE_Shared_FireIntervalPenalty10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_fire_rate",
@@ -1967,7 +2118,10 @@
         "sid": "BPRUE_Shared_FlatnessPenalty10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_effective_range",
@@ -1983,7 +2137,8 @@
         "sid": "BPRUE_Shared_FlatnessPenalty15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "PreOrder"
         ],
         "visible": true,
         "localization_sid": "bprue_effective_range",
@@ -1999,7 +2154,8 @@
         "sid": "BPRUE_Shared_FlatnessPos15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "bprue_effective_range",
@@ -2015,7 +2171,10 @@
         "sid": "BPRUE_Shared_RecoilPenalty10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_recoil",
@@ -2031,7 +2190,10 @@
         "sid": "BPRUE_Shared_RecoilPenalty8Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_recoil",
@@ -2047,7 +2209,10 @@
         "sid": "BPRUE_Shared_WeightDown12Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_weight",
@@ -2063,7 +2228,9 @@
         "sid": "BPRUE_Shared_WeightPenalty10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_weight",
@@ -2079,7 +2246,10 @@
         "sid": "BPRUE_Shared_WeightPenalty5Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_weight",
@@ -2095,7 +2265,8 @@
         "sid": "BPRUE_Sniper_AimingTimePenalty10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "bprue_aiming_speed",
@@ -2111,7 +2282,8 @@
         "sid": "BPRUE_Sniper_AimingTimePenalty15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "bprue_aiming_speed",
@@ -2127,7 +2299,8 @@
         "sid": "BPRUE_Sniper_AimingTimePos20Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "bprue_aiming_speed",
@@ -2143,7 +2316,8 @@
         "sid": "BPRUE_Sniper_ArmorPiercingPos10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "bprue_armor_piercing",
@@ -2175,7 +2349,8 @@
         "sid": "BPRUE_Sniper_ArmorPiercingPos25Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "bprue_armor_piercing",
@@ -2227,7 +2402,8 @@
         "sid": "BPRUE_Sniper_ChangeAmmoTypes762SniperAPEffect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": false,
         "localization_sid": "weapon_caliberChange",
@@ -2245,7 +2421,8 @@
         "sid": "BPRUE_Sniper_ChangeAmmoTypes762SniperSupersonicEffect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": false,
         "localization_sid": "weapon_caliberChange",
@@ -2279,7 +2456,8 @@
         "sid": "BPRUE_Sniper_DamagePos5Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "bprue_damage",
@@ -2295,7 +2473,8 @@
         "sid": "BPRUE_Sniper_FireIntervalPenalty10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "bprue_fire_rate",
@@ -2311,7 +2490,8 @@
         "sid": "BPRUE_Sniper_FlatnessPos15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "bprue_effective_range",
@@ -2327,7 +2507,8 @@
         "sid": "BPRUE_Sniper_IdleSwayXPos30Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "bprue_aiming_stability",
@@ -2343,7 +2524,8 @@
         "sid": "BPRUE_Sniper_IdleSwayYPos30Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "bprue_aiming_stability",
@@ -2359,7 +2541,8 @@
         "sid": "BPRUE_Sniper_RecoilPenalty10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "bprue_recoil",
@@ -2375,7 +2558,8 @@
         "sid": "BPRUE_Sniper_RecoilPenalty15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "bprue_recoil",
@@ -2391,7 +2575,8 @@
         "sid": "BPRUE_Sniper_RecoilPenalty20Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "bprue_recoil",
@@ -2423,7 +2608,8 @@
         "sid": "BPRUE_Sniper_ShotRecoveryPos30Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "bprue_recoil_recovery",
@@ -2439,7 +2625,9 @@
         "sid": "BPRUE_Sniper_WeightPenalty10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_weight",
@@ -2776,7 +2964,8 @@
         "sid": "ChangeAmmoTypes762Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": false,
         "localization_sid": "weapon_caliberChange",
@@ -2828,7 +3017,9 @@
         "sid": "ChangeAmmoTypesNo545Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder"
         ],
         "visible": false,
         "localization_sid": "weapon_caliberChange",
@@ -2846,7 +3037,9 @@
         "sid": "ChangeAmmoTypesNo556Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder"
         ],
         "visible": false,
         "localization_sid": "weapon_caliberChange",
@@ -2881,7 +3074,9 @@
         "sid": "ChangeAmmoTypesNo939Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder"
         ],
         "visible": false,
         "localization_sid": "weapon_caliberChange",
@@ -2914,7 +3109,8 @@
         "sid": "ChangeCaliber762Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": false,
         "localization_sid": null,
@@ -2960,7 +3156,10 @@
         "sid": "CoverPiercingPos20Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": false,
         "localization_sid": null,
@@ -2978,7 +3177,10 @@
         "sid": "DamagePos15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": false,
         "localization_sid": "weapon_damage",
@@ -2996,7 +3198,9 @@
         "sid": "DispersionNeg40Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_reductionSpread",
@@ -3014,7 +3218,10 @@
         "sid": "DispersionPos10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_reductionSpread",
@@ -3032,7 +3239,10 @@
         "sid": "DispersionPos15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_reductionSpread",
@@ -3067,7 +3277,8 @@
         "sid": "DispersionPos25Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "weapon_reductionSpread",
@@ -3085,7 +3296,9 @@
         "sid": "DispersionPos30Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_reductionSpread",
@@ -3103,7 +3316,9 @@
         "sid": "DistanceDropOffLengthPos10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_flatness",
@@ -3121,7 +3336,9 @@
         "sid": "DistanceDropOffLengthPos20Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_effective_range",
@@ -3137,7 +3354,10 @@
         "sid": "DurabilityPerShotPos20Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_wearingExternal",
@@ -3155,7 +3375,9 @@
         "sid": "DurabilityPos10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_wearing",
@@ -3190,7 +3412,10 @@
         "sid": "DurabilityPos20Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_wearing",
@@ -3208,7 +3433,8 @@
         "sid": "FireDistancePos15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "weapon_range",
@@ -3226,7 +3452,10 @@
         "sid": "FlatnessUp10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_effective_range",
@@ -3242,7 +3471,9 @@
         "sid": "FlatnessUp15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_effective_range",
@@ -3258,7 +3489,8 @@
         "sid": "IdleSwayXPos15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "weapon_aimAccuracy",
@@ -3276,7 +3508,10 @@
         "sid": "IdleSwayXPos20Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_aimAccuracy",
@@ -3294,7 +3529,8 @@
         "sid": "IdleSwayYPos15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": false,
         "localization_sid": "weapon_aimAccuracy",
@@ -3312,7 +3548,10 @@
         "sid": "IdleSwayYPos20Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": false,
         "localization_sid": "weapon_aimAccuracy",
@@ -3330,7 +3569,10 @@
         "sid": "MaxDispersionPos15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_reductionSpread",
@@ -3348,7 +3590,10 @@
         "sid": "ProjectileSpeedPos10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_velocity",
@@ -3383,7 +3628,8 @@
         "sid": "ProjectileSpeedPos20Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "weapon_velocity",
@@ -3401,7 +3647,9 @@
         "sid": "RecoilDown10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_recoil",
@@ -3417,7 +3665,9 @@
         "sid": "RecoilDown15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_recoil",
@@ -3433,7 +3683,10 @@
         "sid": "RecoilNeg15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_reductionImpact",
@@ -3451,7 +3704,10 @@
         "sid": "RecoilPos10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_reductionImpact",
@@ -3469,7 +3725,10 @@
         "sid": "RecoilPos15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_reductionImpact",
@@ -3487,7 +3746,9 @@
         "sid": "RecoilPos20Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_reductionImpact",
@@ -3505,7 +3766,10 @@
         "sid": "RecoilPos5Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_reductionImpact",
@@ -3523,7 +3787,9 @@
         "sid": "ShotRecoveryPos10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_aimReturn",
@@ -3541,7 +3807,10 @@
         "sid": "ShotRecoveryPos20Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_aimReturn",
@@ -3559,7 +3828,9 @@
         "sid": "WeightDown15Effect",
         "scopes": [
           "BaseGame",
-          "DLC1"
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_weight",
@@ -3574,7 +3845,9 @@
       {
         "sid": "WeightPos15Effect",
         "scopes": [
-          "BaseGame"
+          "BaseGame",
+          "Deluxe",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_reductionWeight",
@@ -3592,8 +3865,8 @@
   },
   "asset_snapshot": {
     "available": true,
-    "asset_entry_count": 352,
-    "source_entry_count": 352,
+    "asset_entry_count": 518,
+    "source_entry_count": 518,
     "missing_count": 0,
     "missing_sids": [],
     "asset_only_count": 0,
@@ -3606,7 +3879,7 @@
     "errors": []
   },
   "generated_cfg": {
-    "referenced_sid_count": 0,
+    "referenced_sid_count": 427,
     "missing_count": 0,
     "missing": [],
     "case_mismatch_count": 0,

@@ -1,0 +1,854 @@
+{
+  "Jemmy_Neutral_Armor": {
+    "category": "SUIT",
+    "faction": "FREE_STALKER",
+    "mechanics": [
+      "EEffectType::ArtifactSlots",
+      "EEffectType::MaxDurability",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike"
+    ]
+  },
+  "Newbee_Neutral_Armor": {
+    "category": "SUIT",
+    "faction": "FREE_STALKER",
+    "mechanics": [
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::MaxDurability",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike"
+    ]
+  },
+  "Nasos_Neutral_Armor": {
+    "category": "SUIT",
+    "faction": "FREE_STALKER",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike"
+    ]
+  },
+  "Zorya_Neutral_Armor": {
+    "category": "SUIT",
+    "faction": "FREE_STALKER",
+    "mechanics": [
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::MaxDurability",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "SEVA_Neutral_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "FREE_STALKER",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "Exoskeleton_Neutral_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "FREE_STALKER",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "SkinJacket_Bandit_Armor": {
+    "category": "SUIT",
+    "faction": "BANDIT",
+    "mechanics": [
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::MaxDurability",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike"
+    ]
+  },
+  "Jacket_Bandit_Armor": {
+    "category": "SUIT",
+    "faction": "BANDIT",
+    "mechanics": [
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::MaxDurability",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionStrike"
+    ]
+  },
+  "Middle_Bandit_Armor": {
+    "category": "SUIT",
+    "faction": "BANDIT",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike"
+    ]
+  },
+  "Light_Mercenaries_Armor": {
+    "category": "SUIT",
+    "faction": "MERCENARY",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike"
+    ]
+  },
+  "Exoskeleton_Mercenaries_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "MERCENARY",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike"
+    ]
+  },
+  "Heavy_Mercenaries_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "MERCENARY",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike"
+    ]
+  },
+  "Default_Military_Armor": {
+    "category": "SUIT",
+    "faction": "MILITARY",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "Heavy2_Military_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "MILITARY",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "Anomaly_Scientific_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "ECOLOGIST",
+    "mechanics": [
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "HeavyAnomaly_Scientific_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "ECOLOGIST",
+    "mechanics": [
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike"
+    ]
+  },
+  "SciSEVA_Scientific_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "ECOLOGIST",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock"
+    ]
+  },
+  "Rook_Svoboda_Armor": {
+    "category": "SUIT",
+    "faction": "FREEDOM",
+    "mechanics": [
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::MaxDurability",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike"
+    ]
+  },
+  "Battle_Svoboda_Armor": {
+    "category": "SUIT",
+    "faction": "FREEDOM",
+    "mechanics": [
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::MaxDurability",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike"
+    ]
+  },
+  "SEVA_Svoboda_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "FREEDOM",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike"
+    ]
+  },
+  "Heavy_Svoboda_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "FREEDOM",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "HeavyExoskeleton_Svoboda_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "FREEDOM",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "Exoskeleton_Svoboda_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "FREEDOM",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::Composite",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "Rook_Dolg_Armor": {
+    "category": "SUIT",
+    "faction": "DUTY",
+    "mechanics": [
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::MaxDurability",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "Battle_Dolg_Armor": {
+    "category": "SUIT",
+    "faction": "DUTY",
+    "mechanics": [
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::MaxDurability",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "SEVA_Dolg_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "DUTY",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "Heavy_Dolg_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "DUTY",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "HeavyExoskeleton_Dolg_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "DUTY",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "Exoskeleton_Dolg_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "DUTY",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "Battle_Monolith_Armor": {
+    "category": "SUIT",
+    "faction": "MONOLITH",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "HeavyAnomaly_Monolith_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "MONOLITH",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "HeavyExoskeleton_Monolith_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "MONOLITH",
+    "mechanics": [
+      "<missing>",
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::Composite",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "Exoskeleton_Monolith_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "MONOLITH",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::Composite",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "Battle_Varta_Armor": {
+    "category": "SUIT",
+    "faction": "WARD",
+    "mechanics": [
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::MaxDurability",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "BattleExoskeleton_Varta_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "WARD",
+    "mechanics": [
+      "<missing>",
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "Battle_Spark_Armor": {
+    "category": "SUIT",
+    "faction": "SPARK",
+    "mechanics": [
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::MaxDurability",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "HeavyAnomaly_Spark_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "SPARK",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike",
+      "EEffectType::RegenStamina"
+    ]
+  },
+  "SEVA_Spark_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "SPARK",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike"
+    ]
+  },
+  "HeavyBattle_Spark_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "SPARK",
+    "mechanics": [
+      "EEffectType::AdditionalInventoryWeight",
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::ArtifactSlotBlock",
+      "EEffectType::ArtifactSlots",
+      "EEffectType::Composite",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::PenaltyLessWeight",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike"
+    ]
+  },
+  "Battle_Dolg_End_Armor": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "DUTY",
+    "mechanics": []
+  },
+  "Light_Duty_Helmet": {
+    "category": "HELMET",
+    "faction": "DUTY",
+    "mechanics": [
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionStrike"
+    ]
+  },
+  "Heavy_Duty_Helmet": {
+    "category": "HELMET",
+    "faction": "DUTY",
+    "mechanics": [
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike"
+    ]
+  },
+  "Heavy_Svoboda_Helmet": {
+    "category": "HELMET",
+    "faction": "FREEDOM",
+    "mechanics": [
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike"
+    ]
+  },
+  "Heavy_Varta_Helmet": {
+    "category": "HELMET",
+    "faction": "WARD",
+    "mechanics": [
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::FlagEffect",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike"
+    ]
+  },
+  "Heavy_Military_Helmet": {
+    "category": "HELMET",
+    "faction": "MILITARY",
+    "mechanics": [
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike"
+    ]
+  },
+  "Light_Mercenaries_Helmet": {
+    "category": "HELMET",
+    "faction": "MERCENARY",
+    "mechanics": [
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation"
+    ]
+  },
+  "Light_Military_Helmet": {
+    "category": "HELMET",
+    "faction": "MILITARY",
+    "mechanics": [
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionStrike"
+    ]
+  },
+  "Battle_Military_Helmet": {
+    "category": "HELMET",
+    "faction": "MILITARY",
+    "mechanics": [
+      "EEffectType::ArmorItemWeight",
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionChemical",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionShock",
+      "EEffectType::ProtectionStrike"
+    ]
+  },
+  "Light_Bandit_Helmet": {
+    "category": "HELMET",
+    "faction": "BANDIT",
+    "mechanics": [
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation"
+    ]
+  },
+  "Light_Neutral_Helmet": {
+    "category": "HELMET",
+    "faction": "FREE_STALKER",
+    "mechanics": [
+      "EEffectType::FlagEffect",
+      "EEffectType::MaxDurability",
+      "EEffectType::ProtectionBurn",
+      "EEffectType::ProtectionPSY",
+      "EEffectType::ProtectionRadiation",
+      "EEffectType::ProtectionShock"
+    ]
+  },
+  "Anomaly_Scientific_Armor_PSY_preinstalled": {
+    "category": "FULL_BODY_SUIT",
+    "faction": "ECOLOGIST",
+    "mechanics": []
+  }
+}

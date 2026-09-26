@@ -130,6 +130,65 @@ def render_dlc_general_setup_patch(model: UpgradeBuildModel, content_pack: str) 
     return _render_final_setup(model, dlc_general_setup_upgrades(content_pack), scope=f"DLCGameData/{content_pack}")
 
 
+
+def render_content_pack_technician_patch(
+    models: dict[str, UpgradeBuildModel],
+    *,
+    list_prefix: str,
+) -> str:
+    """Render isolated content-pack technician lists using the normal BPRUE pattern.
+
+    Technician eligibility is derived from each content-pack weapon's effective
+    Vanilla upgrade roots. The resulting NPC patch can therefore live entirely
+    inside an optional package without adding its upgrade SIDs to the base build.
+    """
+    assignments: dict[str, list[UpgradeDefinition]] = {}
+    for content_pack, pack_model in sorted(models.items()):
+        support = dlc_technician_general_setups(content_pack)
+        candidates = pack_model.technician_upgrades()
+        for technician_sid, supported_setups in support.items():
+            additions = [
+                upgrade
+                for upgrade in candidates
+                if any(setup_sid in supported_setups for setup_sid in upgrade.general_setup_sids)
+            ]
+            assignments.setdefault(technician_sid, []).extend(additions)
+
+    lines = [
+        "// AUTO-GENERATED - BPRUE optional content-pack technician registrations.",
+        "// Technician support is derived from the effective Vanilla upgrade roots",
+        "// of each content-pack weapon and uses the normal BPRUE named-list pattern.",
+        "",
+    ]
+
+    rendered: list[tuple[str, str]] = []
+    for technician_sid, upgrades in sorted(assignments.items()):
+        unique = list({upgrade.sid: upgrade for upgrade in upgrades}.values())
+        if not unique:
+            continue
+        list_sid = f"{list_prefix}_{technician_sid}_UpgradeList"
+        rendered.append((technician_sid, list_sid))
+        lines.append(f"{list_sid} : struct.begin")
+        for upgrade in unique:
+            lines += [
+                f"   {upgrade.sid} : struct.begin",
+                f"      UpgradePrototypeSID = {upgrade.sid}",
+                "      Enabled = true",
+                "   struct.end",
+            ]
+        lines += ["struct.end", ""]
+
+    for technician_sid, list_sid in rendered:
+        lines += [
+            f"{technician_sid} : struct.begin {{bpatch}}",
+            f"   Upgrades : struct.begin {{bpatch;refkey={list_sid}}}",
+            "   struct.end",
+            "struct.end",
+            "",
+        ]
+
+    return "\n".join(lines).rstrip() + "\n"
+
 def render_technician_patch(
     model: UpgradeBuildModel,
     *,

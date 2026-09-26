@@ -130,6 +130,18 @@ class UpgradeBuildModel:
         definition = self.general_setups.get(sid)
         return definition.properties if definition else ()
 
+    def configure_general_setups_for_effect(self, effect_sid: str, **properties: object) -> int:
+        """Configure every GeneralSetup that owns an upgrade using the given effect."""
+        matching_setups = {
+            setup_sid
+            for upgrade in self.upgrades
+            if effect_sid in upgrade.effects
+            for setup_sid in upgrade.general_setup_sids
+        }
+        for setup_sid in sorted(matching_setups):
+            self.configure_general_setup(setup_sid, **properties)
+        return len(matching_setups)
+
     def technician_upgrades(self) -> list[UpgradeDefinition]:
         return [upgrade for upgrade in self.upgrades if upgrade.technician]
 
