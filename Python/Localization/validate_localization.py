@@ -14,22 +14,10 @@ sys.path.insert(0, str(PYTHON_ROOT))
 
 from generate_all_cfg import build_dlc_outputs, build_edition_outputs, build_model
 
-LOCALIZATION_FILES = (
-    LOCALIZATION_DIR / "Blueprint_Localization.json",
-    LOCALIZATION_DIR / "Conversion_Localization.json",
-    LOCALIZATION_DIR / "Weapon_Module_Localization.json",
-    LOCALIZATION_DIR / "Kora_Localization.json",
-    LOCALIZATION_DIR / "MachineGun_Localization.json",
-    LOCALIZATION_DIR / "Shared_Specialization_Localization.json",
-    LOCALIZATION_DIR / "Stock_Localization.json",
-    LOCALIZATION_DIR / "Effect_Localization.json",
-    LOCALIZATION_DIR / "Unique_Localization.json",
-    LOCALIZATION_DIR / "Unique_Sniper_Localization.json",
-    LOCALIZATION_DIR / "Unique_MachineGun_Localization.json",
-    LOCALIZATION_DIR / "DLC1_Localization.json",
-    LOCALIZATION_DIR / "Armor_Localization.json",
-)
-REQUIRED_LANGUAGES = ("English", "Russian")
+def localization_files() -> tuple[Path, ...]:
+    return tuple(sorted(LOCALIZATION_DIR.glob("*_Localization.json")))
+
+REQUIRED_LANGUAGES = ("English", "Russian", "Chinese")
 VANILLA_EFFECTS = PYTHON_ROOT / "VanillaReference" / "EffectPrototypes.cfg"
 VANILLA_UI_PATCH = REPO_ROOT / "GameLite/GameData/EffectPrototypes/EffectPrototypes_patch_BPRUE_UI.cfg"
 ARMOR_EFFECT_PATCH = REPO_ROOT / "Armor/GameLite/GameData/EffectPrototypes/EffectPrototypes_patch_BPRUE_Armor.cfg"
@@ -47,7 +35,7 @@ PROTOTYPE_RE = re.compile(r"(?ms)^([A-Za-z0-9_]+)\s*:\s*struct\.begin([^\n]*)\n(
 
 def load_localization() -> tuple[set[str], dict[str, dict[str, str]], list[dict]]:
     result: set[str] = set(); source_entries: dict[str, dict[str, str]] = {}; duplicates: set[str] = set(); missing_languages: list[dict] = []
-    for path in LOCALIZATION_FILES:
+    for path in localization_files():
         data = json.loads(path.read_text(encoding="utf-8"))
         for entry in data.get("entries", []):
             sid = entry["sid"]
