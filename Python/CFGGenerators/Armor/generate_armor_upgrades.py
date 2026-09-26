@@ -65,6 +65,7 @@ ARMOR_EFFECT_UI = {
     "RegenStamina": ("Armor_regenerationStamina", "Regen Stamina"),
     "Composite": ("Armor_carryingCapacity", "Carrying Capacity"),
     "AdditionalInventoryWeight": ("increase_max_inventory_weight", "Increase max inventory weight"),
+    "DegenBleeding": ("general_protectionBleed", "Bleeding Protection"),
 }
 
 
