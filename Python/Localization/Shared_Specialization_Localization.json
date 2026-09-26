@@ -6,7 +6,7 @@
       "languages": {
         "English": "Lightweight Assembly",
         "Russian": "Облегчённая сборка",
-        "Chinese": "轻量化组件"
+        "ChineseSimplified": "轻量化组件"
       }
     },
     {
@@ -14,7 +14,7 @@
       "languages": {
         "English": "Reduces weapon weight and improves aiming speed, at the cost of increased recoil.",
         "Russian": "Снижает массу оружия и ускоряет прицеливание ценой повышенной отдачи.",
-        "Chinese": "降低武器重量并提升瞄准速度，但后坐力增加。"
+        "ChineseSimplified": "降低武器重量并提升瞄准速度，但后坐力增加。"
       }
     },
     {
@@ -22,7 +22,7 @@
       "languages": {
         "English": "Reinforced Assembly",
         "Russian": "Усиленная сборка",
-        "Chinese": "强化组件"
+        "ChineseSimplified": "强化组件"
       }
     },
     {
@@ -30,7 +30,7 @@
       "languages": {
         "English": "Improves recoil control and durability at the cost of additional weight.",
         "Russian": "Улучшает контроль отдачи и долговечность ценой дополнительной массы.",
-        "Chinese": "提升后坐力控制与耐久度，但重量增加。"
+        "ChineseSimplified": "提升后坐力控制与耐久度，但重量增加。"
       }
     },
     {
@@ -38,7 +38,7 @@
       "languages": {
         "English": "Recoil Control",
         "Russian": "Контроль отдачи",
-        "Chinese": "后坐力控制"
+        "ChineseSimplified": "后坐力控制"
       }
     },
     {
@@ -46,7 +46,7 @@
       "languages": {
         "English": "Prioritizes recoil control during repeated fire while slightly reducing intrinsic precision.",
         "Russian": "Улучшает контроль отдачи при повторных выстрелах, немного снижая базовую точность.",
-        "Chinese": "优先提升连续射击时的后坐力控制，但略微降低基础精度。"
+        "ChineseSimplified": "优先提升连续射击时的后坐力控制，但略微降低基础精度。"
       }
     },
     {
@@ -54,7 +54,7 @@
       "languages": {
         "English": "Precision Tuning",
         "Russian": "Точная настройка",
-        "Chinese": "精准调校"
+        "ChineseSimplified": "精准调校"
       }
     },
     {
@@ -62,7 +62,7 @@
       "languages": {
         "English": "Tightens shot dispersion for precision fire at the cost of stronger recoil.",
         "Russian": "Уменьшает разброс для более точной стрельбы ценой усиленной отдачи.",
-        "Chinese": "收拢射击散布以提升精准度，但后坐力增强。"
+        "ChineseSimplified": "收拢射击散布以提升精准度，但后坐力增强。"
       }
     },
     {
@@ -70,7 +70,7 @@
       "languages": {
         "English": "High-Cyclic System",
         "Russian": "Высокоскоростная автоматика",
-        "Chinese": "高循环系统"
+        "ChineseSimplified": "高循环系统"
       }
     },
     {
@@ -78,7 +78,7 @@
       "languages": {
         "English": "Increases cyclic rate for aggressive fire at the cost of recoil control and weapon wear.",
         "Russian": "Повышает темп стрельбы для агрессивного ведения огня ценой ухудшения контроля отдачи и повышенного износа оружия.",
-        "Chinese": "提升射速以支持激进射击，但后坐力控制变差、武器磨损增加。"
+        "ChineseSimplified": "提升射速以支持激进射击，但后坐力控制变差、武器磨损增加。"
       }
     },
     {
@@ -86,7 +86,7 @@
       "languages": {
         "English": "Controlled Action",
         "Russian": "Контролируемая автоматика",
-        "Chinese": "可控自动机"
+        "ChineseSimplified": "可控自动机"
       }
     },
     {
@@ -94,7 +94,7 @@
       "languages": {
         "English": "Slows the firing cycle in exchange for improved recoil control and precision.",
         "Russian": "Замедляет цикл стрельбы в обмен на улучшенный контроль отдачи и точность.",
-        "Chinese": "降低射击循环速度，以换取更好的后坐力控制与精度。"
+        "ChineseSimplified": "降低射击循环速度，以换取更好的后坐力控制与精度。"
       }
     },
     {
@@ -102,7 +102,7 @@
       "languages": {
         "English": "Soft-Target Module",
         "Russian": "Модуль для лёгких целей",
-        "Chinese": "软目标模块"
+        "ChineseSimplified": "软目标模块"
       }
     },
     {
@@ -110,7 +110,7 @@
       "languages": {
         "English": "Increases damage and improves projectile velocity and flatness against lightly protected targets, sacrificing armor penetration.",
         "Russian": "Повышает урон, скорость пули и настильность траектории против слабо защищённых целей ценой снижения бронепробиваемости.",
-        "Chinese": "对轻防护目标提升伤害、弹速与弹道平直度，但牺牲护甲穿透。"
+        "ChineseSimplified": "对轻防护目标提升伤害、弹速与弹道平直度，但牺牲护甲穿透。"
       }
     },
     {
@@ -118,7 +118,7 @@
       "languages": {
         "English": "Armor-Piercing Module",
         "Russian": "Бронебойный модуль",
-        "Chinese": "穿甲模块"
+        "ChineseSimplified": "穿甲模块"
       }
     },
     {
@@ -126,7 +126,7 @@
       "languages": {
         "English": "Improves armor and cover penetration at the cost of raw weapon damage.",
         "Russian": "Повышает пробитие брони и укрытий ценой снижения базового урона оружия.",
-        "Chinese": "提升对护甲与掩体的穿透，但降低武器基础伤害。"
+        "ChineseSimplified": "提升对护甲与掩体的穿透，但降低武器基础伤害。"
       }
     },
     {
@@ -134,7 +134,7 @@
       "languages": {
         "English": "Hardened Components",
         "Russian": "Усиленные компоненты",
-        "Chinese": "硬化部件"
+        "ChineseSimplified": "硬化部件"
       }
     },
     {
@@ -142,7 +142,7 @@
       "languages": {
         "English": "Improves weapon durability at the cost of a small weight increase.",
         "Russian": "Повышает долговечность оружия ценой небольшого увеличения массы.",
-        "Chinese": "提升武器耐久度，但重量略微增加。"
+        "ChineseSimplified": "提升武器耐久度，但重量略微增加。"
       }
     },
     {
@@ -150,7 +150,7 @@
       "languages": {
         "English": "Lightweight Components",
         "Russian": "Облегчённые компоненты",
-        "Chinese": "轻量化部件"
+        "ChineseSimplified": "轻量化部件"
       }
     },
     {
@@ -158,7 +158,7 @@
       "languages": {
         "English": "Reduces weight and improves aiming speed at the cost of weapon durability.",
         "Russian": "Снижает массу и ускоряет прицеливание ценой долговечности оружия.",
-        "Chinese": "降低重量并提升瞄准速度，但牺牲武器耐久度。"
+        "ChineseSimplified": "降低重量并提升瞄准速度，但牺牲武器耐久度。"
       }
     },
     {
@@ -166,7 +166,7 @@
       "languages": {
         "English": "CQB Configuration",
         "Russian": "Конфигурация для ближнего боя",
-        "Chinese": "近战配置"
+        "ChineseSimplified": "近战配置"
       }
     },
     {
@@ -174,7 +174,7 @@
       "languages": {
         "English": "Optimizes fast close-range handling and practical accuracy while reducing long-range ballistic performance.",
         "Russian": "Оптимизирует быстрое обращение и практическую точность на ближней дистанции, снижая баллистическую эффективность на дальних дистанциях.",
-        "Chinese": "优化近距离快速操作与实用精度，但降低远距离弹道表现。"
+        "ChineseSimplified": "优化近距离快速操作与实用精度，但降低远距离弹道表现。"
       }
     },
     {
@@ -182,7 +182,7 @@
       "languages": {
         "English": "Range Configuration",
         "Russian": "Дальнобойная конфигурация",
-        "Chinese": "射程配置"
+        "ChineseSimplified": "射程配置"
       }
     },
     {
@@ -190,7 +190,7 @@
       "languages": {
         "English": "Improves flatness and precision for longer-range fire at the cost of slower aiming.",
         "Russian": "Улучшает настильность траектории и точность для стрельбы на дальних дистанциях ценой более медленного прицеливания.",
-        "Chinese": "提升远距离射击的弹道平直度与精度，但瞄准速度变慢。"
+        "ChineseSimplified": "提升远距离射击的弹道平直度与精度，但瞄准速度变慢。"
       }
     }
   ]
