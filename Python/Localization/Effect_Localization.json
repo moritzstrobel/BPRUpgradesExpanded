@@ -6,7 +6,7 @@
       "languages": {
         "English": "Recoil",
         "Russian": "Отдача",
-        "Chinese": "后坐力"
+        "ChineseSimplified": "后坐力"
       }
     },
     {
@@ -14,7 +14,7 @@
       "languages": {
         "English": "Aiming speed",
         "Russian": "Скорость прицеливания",
-        "Chinese": "瞄准速度"
+        "ChineseSimplified": "瞄准速度"
       }
     },
     {
@@ -22,7 +22,7 @@
       "languages": {
         "English": "Aiming movement speed",
         "Russian": "Скорость движения в прицеле",
-        "Chinese": "瞄准时移动速度"
+        "ChineseSimplified": "瞄准时移动速度"
       }
     },
     {
@@ -30,7 +30,7 @@
       "languages": {
         "English": "Weapon weight",
         "Russian": "Вес оружия",
-        "Chinese": "武器重量"
+        "ChineseSimplified": "武器重量"
       }
     },
     {
@@ -38,7 +38,7 @@
       "languages": {
         "English": "Accuracy",
         "Russian": "Точность",
-        "Chinese": "精度"
+        "ChineseSimplified": "精度"
       }
     },
     {
@@ -46,7 +46,7 @@
       "languages": {
         "English": "Dispersion",
         "Russian": "Разброс",
-        "Chinese": "散布"
+        "ChineseSimplified": "散布"
       }
     },
     {
@@ -54,7 +54,7 @@
       "languages": {
         "English": "Recoil recovery",
         "Russian": "Восстановление после отдачи",
-        "Chinese": "后坐力恢复"
+        "ChineseSimplified": "后坐力恢复"
       }
     },
     {
@@ -62,7 +62,7 @@
       "languages": {
         "English": "Aiming stability",
         "Russian": "Стабильность прицеливания",
-        "Chinese": "瞄准稳定性"
+        "ChineseSimplified": "瞄准稳定性"
       }
     },
     {
@@ -70,7 +70,7 @@
       "languages": {
         "English": "Weapon wear",
         "Russian": "Износ оружия",
-        "Chinese": "武器磨损"
+        "ChineseSimplified": "武器磨损"
       }
     },
     {
@@ -78,7 +78,7 @@
       "languages": {
         "English": "Pellet count",
         "Russian": "Количество дробин",
-        "Chinese": "弹丸数量"
+        "ChineseSimplified": "弹丸数量"
       }
     },
     {
@@ -86,7 +86,7 @@
       "languages": {
         "English": "Effective range",
         "Russian": "Эффективная дальность",
-        "Chinese": "有效射程"
+        "ChineseSimplified": "有效射程"
       }
     },
     {
@@ -94,7 +94,7 @@
       "languages": {
         "English": "Damage",
         "Russian": "Урон",
-        "Chinese": "伤害"
+        "ChineseSimplified": "伤害"
       }
     },
     {
@@ -102,7 +102,7 @@
       "languages": {
         "English": "Armor penetration",
         "Russian": "Бронепробиваемость",
-        "Chinese": "护甲穿透"
+        "ChineseSimplified": "护甲穿透"
       }
     },
     {
@@ -110,7 +110,7 @@
       "languages": {
         "English": "Durability",
         "Russian": "Прочность",
-        "Chinese": "耐久度"
+        "ChineseSimplified": "耐久度"
       }
     },
     {
@@ -118,7 +118,7 @@
       "languages": {
         "English": "Fire modes: Burst / Automatic",
         "Russian": "Режимы огня: очередь / автоматический",
-        "Chinese": "射击模式：点射 / 全自动"
+        "ChineseSimplified": "射击模式：点射 / 全自动"
       }
     },
     {
@@ -126,7 +126,7 @@
       "languages": {
         "English": "Fire mode: Semi-Automatic",
         "Russian": "Режим огня: одиночный",
-        "Chinese": "射击模式：半自动"
+        "ChineseSimplified": "射击模式：半自动"
       }
     }
   ]
