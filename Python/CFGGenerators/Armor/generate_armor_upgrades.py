@@ -666,7 +666,7 @@ def technician_armor_assignments(upgrades: list[ArmorUpgradeDefinition]) -> dict
             # Vanilla SID instead.
             if supported.intersection(
                 sid for sid in vanilla_sets.get(upgrade.armor_sid, set())
-                if sid.startswith(f"{base_by_armor.get(upgrade.armor_sid, upgrade.armor_sid)}_")
+                if sid.lower().startswith(f"{base_by_armor.get(upgrade.armor_sid, upgrade.armor_sid)}_".lower())
             )
         ]
         if selected:
