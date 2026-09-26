@@ -401,9 +401,11 @@ def _vanilla_upgrade_sids_by_armor() -> dict[str, list[str]]:
     return {row["sid"]: list(row["upgrades"]) for row in rows}
 
 
-def render_armor_patch(upgrades: list[ArmorUpgradeDefinition]) -> str:
+def render_armor_patch(upgrades: list[ArmorUpgradeDefinition], content_pack: str | None = None) -> str:
     by_armor: dict[str, list[ArmorUpgradeDefinition]] = {}
     for upgrade in upgrades:
+        if upgrade.content_pack != content_pack:
+            continue
         by_armor.setdefault(upgrade.armor_sid, []).append(upgrade)
         vanilla_by_armor = _vanilla_upgrade_sids_by_armor()
         vanilla_by_armor.update({armor["sid"]: armor["upgrades"] for armor in load_content_pack_armors()})
@@ -710,21 +712,23 @@ def render_npc_patch(upgrades: list[ArmorUpgradeDefinition]) -> str:
 
 def main() -> None:
     upgrades = build_upgrades()
-    for path in (ARMOR_PATCH_PATH, UPGRADE_OUTPUT_PATH, EFFECT_OUTPUT_PATH, NPC_OUTPUT_PATH):
+    content_pack_paths = {
+        pack: ARMOR_GAME_ROOT / f"DLCGameData/{pack}/ItemPrototypes/ItemPrototypes_patch_BPRUE_Armor.cfg"
+        for pack in json.loads(CONTENT_PACK_CONFIG_PATH.read_text(encoding="utf-8"))["packs"]
+    }
+    output_paths = (ARMOR_PATCH_PATH, UPGRADE_OUTPUT_PATH, EFFECT_OUTPUT_PATH, NPC_OUTPUT_PATH, *content_pack_paths.values())
+    for path in output_paths:
         path.parent.mkdir(parents=True, exist_ok=True)
 
-    upgrade_text = render_upgrade_fragment(upgrades)
-    armor_patch_text = render_armor_patch(upgrades)
-    effect_text = render_effects(load_config())
-    npc_text = render_npc_patch(upgrades)
-
-    UPGRADE_OUTPUT_PATH.write_text(upgrade_text, encoding="utf-8")
-    ARMOR_PATCH_PATH.write_text(armor_patch_text, encoding="utf-8")
-    EFFECT_OUTPUT_PATH.write_text(effect_text, encoding="utf-8")
-    NPC_OUTPUT_PATH.write_text(npc_text, encoding="utf-8")
+    UPGRADE_OUTPUT_PATH.write_text(render_upgrade_fragment(upgrades), encoding="utf-8")
+    ARMOR_PATCH_PATH.write_text(render_armor_patch(upgrades), encoding="utf-8")
+    EFFECT_OUTPUT_PATH.write_text(render_effects(load_config()), encoding="utf-8")
+    NPC_OUTPUT_PATH.write_text(render_npc_patch(upgrades), encoding="utf-8")
+    for pack, path in content_pack_paths.items():
+        path.write_text(render_armor_patch(upgrades, content_pack=pack), encoding="utf-8")
 
     # Guard the module boundary: this generator must never write into Main/GameLite.
-    for path in (ARMOR_PATCH_PATH, UPGRADE_OUTPUT_PATH, EFFECT_OUTPUT_PATH, NPC_OUTPUT_PATH):
+    for path in output_paths:
         if ARMOR_ROOT not in path.parents:
             raise ValueError(f"Armor generator attempted to write outside Armor/: {path}")
 
@@ -734,6 +738,8 @@ def main() -> None:
     print(f"Generated {ARMOR_PATCH_PATH}")
     print(f"Generated {EFFECT_OUTPUT_PATH}")
     print(f"Generated {NPC_OUTPUT_PATH}")
+    for path in content_pack_paths.values():
+        print(f"Generated {path}")
 
 
 if __name__ == "__main__":
