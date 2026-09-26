@@ -6,7 +6,7 @@
       "languages": {
         "English": "Ghost Mechanism",
         "Russian": "Призрачный механизм",
-        "Chinese": "幽灵机构"
+        "ChineseSimplified": "幽灵机构"
       }
     },
     {
@@ -14,7 +14,7 @@
       "languages": {
         "English": "Strips the Phantom down for extreme mobility: lower weight, faster aiming and faster movement while aiming, at the cost of increased weapon wear.",
         "Russian": "Облегчает Phantom ради максимальной мобильности: снижает массу, ускоряет прицеливание и движение в прицеле ценой повышенного износа оружия.",
-        "Chinese": "将 Phantom 精简至极致机动：降低重量、加快瞄准与瞄准时移动，但武器磨损增加。"
+        "ChineseSimplified": "将 Phantom 精简至极致机动：降低重量、加快瞄准与瞄准时移动，但武器磨损增加。"
       }
     },
     {
@@ -22,7 +22,7 @@
       "languages": {
         "English": "Strelok's Refinement",
         "Russian": "Доработка Стрелка",
-        "Chinese": "潜行者调校"
+        "ChineseSimplified": "潜行者调校"
       }
     },
     {
@@ -30,7 +30,7 @@
       "languages": {
         "English": "A veteran's handling tune that improves mobility, aiming and reload speed while accepting increased weapon wear.",
         "Russian": "Ветеранская настройка, улучшающая мобильность, скорость прицеливания и перезарядки ценой повышенного износа оружия.",
-        "Chinese": "老兵的操控调校，提升机动性、瞄准与装填速度，但武器磨损增加。"
+        "ChineseSimplified": "老兵的操控调校，提升机动性、瞄准与装填速度，但武器磨损增加。"
       }
     },
     {
@@ -38,7 +38,7 @@
       "languages": {
         "English": "Precision Conversion",
         "Russian": "Высокоточная переделка",
-        "Chinese": "精准转换"
+        "ChineseSimplified": "精准转换"
       }
     },
     {
@@ -46,7 +46,7 @@
       "languages": {
         "English": "Turns the weapon into a dedicated semi-automatic precision rifle with tighter dispersion, lower recoil and higher projectile velocity.",
         "Russian": "Превращает оружие в специализированную самозарядную точную винтовку с меньшим разбросом и отдачей и повышенной скоростью пули.",
-        "Chinese": "将武器改造为专用半自动精准步枪：散布更小、后坐力更低、弹速更高。"
+        "ChineseSimplified": "将武器改造为专用半自动精准步枪：散布更小、后坐力更低、弹速更高。"
       }
     },
     {
@@ -54,7 +54,7 @@
       "languages": {
         "English": "Burst Optimizer",
         "Russian": "Оптимизатор очереди",
-        "Chinese": "点射优化器"
+        "ChineseSimplified": "点射优化器"
       }
     },
     {
@@ -62,7 +62,7 @@
       "languages": {
         "English": "Tunes the V2 around controlled semi-automatic and burst fire with lower recoil and dispersion and faster magazine handling.",
         "Russian": "Настраивает V2 для контролируемого одиночного огня и очередей: снижает отдачу и разброс и ускоряет работу с магазином.",
-        "Chinese": "将 V2 调校为可控的半自动与点射：降低后坐力与散布，并加快弹匣操作。"
+        "ChineseSimplified": "将 V2 调校为可控的半自动与点射：降低后坐力与散布，并加快弹匣操作。"
       }
     },
     {
@@ -70,7 +70,7 @@
       "languages": {
         "English": "Combat Handling Package",
         "Russian": "Комплект боевой эргономики",
-        "Chinese": "战斗操控组件"
+        "ChineseSimplified": "战斗操控组件"
       }
     },
     {
@@ -78,7 +78,7 @@
       "languages": {
         "English": "Pushes the Combatant's aggressive handling further with faster aiming, better movement while aiming and lower recoil, at the cost of increased wear.",
         "Russian": "Ещё сильнее развивает агрессивную эргономику Combatant: ускоряет прицеливание и движение в прицеле, снижает отдачу ценой повышенного износа.",
-        "Chinese": "进一步强化 Combatant 的激进操控：加快瞄准、改善瞄准时移动并降低后坐力，但磨损增加。"
+        "ChineseSimplified": "进一步强化 Combatant 的激进操控：加快瞄准、改善瞄准时移动并降低后坐力，但磨损增加。"
       }
     },
     {
@@ -86,7 +86,7 @@
       "languages": {
         "English": "Overpressure System",
         "Russian": "Система повышенного давления",
-        "Chinese": "超压系统"
+        "ChineseSimplified": "超压系统"
       }
     },
     {
@@ -94,7 +94,7 @@
       "languages": {
         "English": "Runs the Decider hard for increased damage, armor penetration and projectile velocity, with substantially higher recoil and weapon wear.",
         "Russian": "Форсирует Decider ради большего урона, бронепробития и скорости пули ценой заметно большей отдачи и износа.",
-        "Chinese": "对 Decider 进行高压运作，提升伤害、护甲穿透与弹速，但后坐力与武器磨损显著增加。"
+        "ChineseSimplified": "对 Decider 进行高压运作，提升伤害、护甲穿透与弹速，但后坐力与武器磨损显著增加。"
       }
     },
     {
@@ -102,7 +102,7 @@
       "languages": {
         "English": "Field-Rigged Feed",
         "Russian": "Полевая доработка подачи",
-        "Chinese": "野战改装供弹"
+        "ChineseSimplified": "野战改装供弹"
       }
     },
     {
@@ -110,7 +110,7 @@
       "languages": {
         "English": "Optimizes the Drowned's improvised feed setup for much faster reloads, at the cost of additional weapon weight.",
         "Russian": "Оптимизирует импровизированную систему подачи Drowned для значительно более быстрой перезарядки ценой дополнительной массы.",
-        "Chinese": "优化 Drowned 的临时供弹配置，大幅加快装填，但武器重量增加。"
+        "ChineseSimplified": "优化 Drowned 的临时供弹配置，大幅加快装填，但武器重量增加。"
       }
     },
     {
@@ -118,7 +118,7 @@
       "languages": {
         "English": "Jury-Rigged Action",
         "Russian": "Кустарно форсированная автоматика",
-        "Chinese": "应急改装自动机"
+        "ChineseSimplified": "应急改装自动机"
       }
     },
     {
@@ -126,7 +126,7 @@
       "languages": {
         "English": "Pushes the already abused action beyond sensible limits for faster fire, lower recoil and quicker reloads. Weapon wear increases sharply.",
         "Russian": "Форсирует уже изношенную автоматику сверх разумных пределов ради темпа стрельбы, меньшей отдачи и быстрой перезарядки. Износ резко возрастает.",
-        "Chinese": "将已过度使用的自动机推至不合理极限，以换取更快射速、更低后坐力与更快装填。武器磨损急剧增加。"
+        "ChineseSimplified": "将已过度使用的自动机推至不合理极限，以换取更快射速、更低后坐力与更快装填。武器磨损急剧增加。"
       }
     },
     {
@@ -134,7 +134,7 @@
       "languages": {
         "English": "Contractor Package",
         "Russian": "Комплект контрактника",
-        "Chinese": "承包商组件"
+        "ChineseSimplified": "承包商组件"
       }
     },
     {
@@ -142,7 +142,7 @@
       "languages": {
         "English": "A professional combat tune combining tighter dispersion, lower recoil and faster aiming at the cost of increased wear.",
         "Russian": "Профессиональная боевая настройка: меньший разброс и отдача, более быстрое прицеливание ценой повышенного износа.",
-        "Chinese": "专业战斗调校：散布更小、后坐力更低、瞄准更快，但磨损增加。"
+        "ChineseSimplified": "专业战斗调校：散布更小、后坐力更低、瞄准更快，但磨损增加。"
       }
     },
     {
@@ -150,7 +150,7 @@
       "languages": {
         "English": "High-Velocity 5.45 System",
         "Russian": "Высокоскоростная система 5,45",
-        "Chinese": "高速 5.45 系统"
+        "ChineseSimplified": "高速 5.45 系统"
       }
     },
     {
@@ -158,7 +158,7 @@
       "languages": {
         "English": "Exploits the S15's unusual 5.45 conversion for higher projectile velocity, armor penetration and accuracy, at the cost of increased recoil.",
         "Russian": "Развивает необычную конверсию S15 под 5,45: повышает скорость пули, бронепробитие и точность ценой увеличенной отдачи.",
-        "Chinese": "发挥 S15 特殊的 5.45 转换潜力：提升弹速、护甲穿透与精度，但后坐力增加。"
+        "ChineseSimplified": "发挥 S15 特殊的 5.45 转换潜力：提升弹速、护甲穿透与精度，但后坐力增加。"
       }
     },
     {
@@ -166,7 +166,7 @@
       "languages": {
         "English": "Special Operations Package",
         "Russian": "Комплект специальных операций",
-        "Chinese": "特种作战组件"
+        "ChineseSimplified": "特种作战组件"
       }
     },
     {
@@ -174,7 +174,7 @@
       "languages": {
         "English": "Integrates the SOFMOD's extensive equipment into a fast-handling tactical package with quicker aiming, better aimed movement and lower recoil, at the cost of weight.",
         "Russian": "Объединяет оснащение SOFMOD в тактический комплект с быстрым прицеливанием, лучшей подвижностью в прицеле и меньшей отдачей ценой массы.",
-        "Chinese": "将 SOFMOD 的丰富装备整合为快速操控的战术组件：加快瞄准、改善瞄准时移动并降低后坐力，但重量增加。"
+        "ChineseSimplified": "将 SOFMOD 的丰富装备整合为快速操控的战术组件：加快瞄准、改善瞄准时移动并降低后坐力，但重量增加。"
       }
     },
     {
@@ -182,7 +182,7 @@
       "languages": {
         "English": "Match Fire-Control Group",
         "Russian": "Матчевый ударно-спусковой механизм",
-        "Chinese": "竞赛级击发机构"
+        "ChineseSimplified": "竞赛级击发机构"
       }
     },
     {
@@ -190,7 +190,7 @@
       "languages": {
         "English": "Refines the Sharpshooter around semi-automatic and burst precision fire with tighter dispersion, lower recoil and higher projectile velocity.",
         "Russian": "Дорабатывает Sharpshooter для точного одиночного огня и очередей: уменьшает разброс и отдачу и повышает скорость пули.",
-        "Chinese": "将 Sharpshooter 调校为半自动与点射精准射击：散布更小、后坐力更低、弹速更高。"
+        "ChineseSimplified": "将 Sharpshooter 调校为半自动与点射精准射击：散布更小、后坐力更低、弹速更高。"
       }
     },
     {
@@ -198,7 +198,7 @@
       "languages": {
         "English": "Master Gunsmith Tuning",
         "Russian": "Настройка мастера-оружейника",
-        "Chinese": "枪匠大师调校"
+        "ChineseSimplified": "枪匠大师调校"
       }
     },
     {
@@ -206,7 +206,7 @@
       "languages": {
         "English": "A final hand-fitted tune for the already extensively modified Sotnyk: lower recoil and dispersion, faster reloads and aiming, with increased wear.",
         "Russian": "Финальная ручная доводка уже глубоко модифицированного Sotnyk: меньше отдача и разброс, быстрее перезарядка и прицеливание ценой повышенного износа.",
-        "Chinese": "为已深度改装的 Sotnyk 进行最终手工调校：后坐力与散布更低、装填与瞄准更快，但磨损增加。"
+        "ChineseSimplified": "为已深度改装的 Sotnyk 进行最终手工调校：后坐力与散布更低、装填与瞄准更快，但磨损增加。"
       }
     },
     {
@@ -214,7 +214,7 @@
       "languages": {
         "English": "Zone-Hardened Internals",
         "Russian": "Усиленная для Зоны механика",
-        "Chinese": "特区强化内部机构"
+        "ChineseSimplified": "特区强化内部机构"
       }
     },
     {
@@ -222,7 +222,7 @@
       "languages": {
         "English": "Reinforces the Trophy into an exceptionally durable field rifle with reduced wear per shot, at the cost of additional weight.",
         "Russian": "Усиливает Trophy до исключительно живучей полевой винтовки со сниженным износом за выстрел ценой дополнительной массы.",
-        "Chinese": "将 Trophy 强化为极其耐用的野战步枪，降低每发磨损，但重量增加。"
+        "ChineseSimplified": "将 Trophy 强化为极其耐用的野战步枪，降低每发磨损，但重量增加。"
       }
     },
     {
@@ -230,7 +230,7 @@
       "languages": {
         "English": "Experimental Gas System",
         "Russian": "Экспериментальная газовая система",
-        "Chinese": "实验性导气系统"
+        "ChineseSimplified": "实验性导气系统"
       }
     },
     {
@@ -238,7 +238,7 @@
       "languages": {
         "English": "An experimental tune increases fire rate and projectile velocity while controlling recoil, but greatly accelerates weapon wear.",
         "Russian": "Экспериментальная настройка повышает темп стрельбы и скорость пули при контролируемой отдаче, но значительно ускоряет износ оружия.",
-        "Chinese": "实验性调校提升射速与弹速并控制后坐力，但大幅加快武器磨损。"
+        "ChineseSimplified": "实验性调校提升射速与弹速并控制后坐力，但大幅加快武器磨损。"
       }
     },
     {
@@ -246,7 +246,7 @@
       "languages": {
         "English": "High-Capacity Conversion",
         "Russian": "Конверсия повышенной ёмкости",
-        "Chinese": "高容量转换"
+        "ChineseSimplified": "高容量转换"
       }
     },
     {
@@ -254,7 +254,7 @@
       "languages": {
         "English": "Refines the Night Stalker's 9mm high-capacity setup for faster reloads, lower recoil and better aimed mobility, at the cost of stopping power.",
         "Russian": "Дорабатывает 9-мм конфигурацию Night Stalker с увеличенной ёмкостью: ускоряет перезарядку, снижает отдачу и улучшает подвижность в прицеле ценой убойной силы.",
-        "Chinese": "优化 Night Stalker 的 9 毫米高容量配置：加快装填、降低后坐力并改善瞄准时机动，但停止作用下降。"
+        "ChineseSimplified": "优化 Night Stalker 的 9 毫米高容量配置：加快装填、降低后坐力并改善瞄准时机动，但停止作用下降。"
       }
     },
     {
@@ -262,7 +262,7 @@
       "languages": {
         "English": "Hair Trigger",
         "Russian": "Чувствительный спуск",
-        "Chinese": "微力扳机"
+        "ChineseSimplified": "微力扳机"
       }
     },
     {
@@ -270,7 +270,7 @@
       "languages": {
         "English": "Built for the first shot: dramatically faster aiming, tighter dispersion and quicker reloads, at the cost of increased recoil.",
         "Russian": "Настройка для первого выстрела: значительно ускоряет прицеливание, уменьшает разброс и ускоряет перезарядку ценой повышенной отдачи.",
-        "Chinese": "为第一发而生：大幅加快瞄准、收拢散布并加快装填，但后坐力增加。"
+        "ChineseSimplified": "为第一发而生：大幅加快瞄准、收拢散布并加快装填，但后坐力增加。"
       }
     },
     {
@@ -278,7 +278,7 @@
       "languages": {
         "English": "Competition Fire Control",
         "Russian": "Спортивная автоматика",
-        "Chinese": "竞技击发机构"
+        "ChineseSimplified": "竞技击发机构"
       }
     },
     {
@@ -286,7 +286,7 @@
       "languages": {
         "English": "Tunes Encourage for rapid, controlled follow-up shots with tighter dispersion, lower recoil and a higher fire rate, at the cost of increased wear.",
         "Russian": "Настраивает Encourage для быстрых контролируемых повторных выстрелов: уменьшает разброс и отдачу и повышает темп стрельбы ценой ускоренного износа.",
-        "Chinese": "将 Encourage 调校为快速可控的补射：散布更小、后坐力更低、射速更高，但磨损加快。"
+        "ChineseSimplified": "将 Encourage 调校为快速可控的补射：散布更小、后坐力更低、射速更高，但磨损加快。"
       }
     },
     {
@@ -294,7 +294,7 @@
       "languages": {
         "English": "Street Sweeper",
         "Russian": "Уличный чистильщик",
-        "Chinese": "街头清扫者"
+        "ChineseSimplified": "街头清扫者"
       }
     },
     {
@@ -302,7 +302,7 @@
       "languages": {
         "English": "Pushes GStreet into machine-pistol territory with faster fire, lower recoil and quicker reloads. The overworked mechanism wears much faster.",
         "Russian": "Превращает GStreet почти в пистолет-пулемёт: повышает темп стрельбы, снижает отдачу и ускоряет перезарядку. Форсированная механика изнашивается значительно быстрее.",
-        "Chinese": "将 GStreet 推向冲锋手枪领域：射速更快、后坐力更低、装填更快。过度运作的机构磨损显著加快。"
+        "ChineseSimplified": "将 GStreet 推向冲锋手枪领域：射速更快、后坐力更低、装填更快。过度运作的机构磨损显著加快。"
       }
     },
     {
@@ -310,7 +310,7 @@
       "languages": {
         "English": "Balanced Action",
         "Russian": "Сбалансированная автоматика",
-        "Chinese": "平衡自动机"
+        "ChineseSimplified": "平衡自动机"
       }
     },
     {
@@ -318,7 +318,7 @@
       "languages": {
         "English": "Turns Kaimanov into an exceptionally smooth precision sidearm with lower recoil, faster recovery and quicker aiming, at the cost of damage.",
         "Russian": "Превращает Kaimanov в исключительно мягкий и точный пистолет: снижает отдачу, ускоряет возврат на цель и прицеливание ценой урона.",
-        "Chinese": "将 Kaimanov 改造为极其平顺的精准副武器：后坐力更低、恢复更快、瞄准更快，但伤害下降。"
+        "ChineseSimplified": "将 Kaimanov 改造为极其平顺的精准副武器：后坐力更低、恢复更快、瞄准更快，但伤害下降。"
       }
     },
     {
@@ -326,7 +326,7 @@
       "languages": {
         "English": "9mm Match Conversion",
         "Russian": "Матчевая конверсия 9 мм",
-        "Chinese": "9 毫米竞赛转换"
+        "ChineseSimplified": "9 毫米竞赛转换"
       }
     },
     {
@@ -334,7 +334,7 @@
       "languages": {
         "English": "Exploits Krivenko's 9mm conversion for match-grade control: lower recoil and dispersion with higher projectile velocity, at the cost of damage.",
         "Russian": "Развивает 9-мм конверсию Krivenko до матчевого уровня: снижает отдачу и разброс и повышает скорость пули ценой урона.",
-        "Chinese": "发挥 Krivenko 的 9 毫米转换至竞赛级控制：后坐力与散布更低、弹速更高，但伤害下降。"
+        "ChineseSimplified": "发挥 Krivenko 的 9 毫米转换至竞赛级控制：后坐力与散布更低、弹速更高，但伤害下降。"
       }
     },
     {
@@ -342,7 +342,7 @@
       "languages": {
         "English": "Service Weapon Overhaul",
         "Russian": "Глубокая модернизация табельного оружия",
-        "Chinese": "制式武器大修"
+        "ChineseSimplified": "制式武器大修"
       }
     },
     {
@@ -350,7 +350,7 @@
       "languages": {
         "English": "Reworks Star into a hard-hitting, durable service pistol with increased damage and armor penetration, at the cost of substantially stronger recoil.",
         "Russian": "Превращает Star в мощный и надёжный табельный пистолет с повышенным уроном и бронепробитием ценой значительно более сильной отдачи.",
-        "Chinese": "将 Star 改造为威力强劲、经久耐用的制式手枪：伤害与护甲穿透提升，但后坐力显著增强。"
+        "ChineseSimplified": "将 Star 改造为威力强劲、经久耐用的制式手枪：伤害与护甲穿透提升，但后坐力显著增强。"
       }
     },
     {
@@ -358,7 +358,7 @@
       "languages": {
         "English": "Close-Quarters Conversion",
         "Russian": "Конверсия для ближнего боя",
-        "Chinese": "近距转换"
+        "ChineseSimplified": "近距转换"
       }
     },
     {
@@ -366,7 +366,7 @@
       "languages": {
         "English": "Refines Rat Killer into an aggressive close-quarters weapon with lower recoil and dispersion and much better aimed mobility, at the cost of damage.",
         "Russian": "Дорабатывает Rat Killer для агрессивного ближнего боя: снижает отдачу и разброс и значительно улучшает подвижность в прицеле ценой урона.",
-        "Chinese": "将 Rat Killer 调校为激进的近距武器：后坐力与散布更低、瞄准时机动大幅提升，但伤害下降。"
+        "ChineseSimplified": "将 Rat Killer 调校为激进的近距武器：后坐力与散布更低、瞄准时机动大幅提升，但伤害下降。"
       }
     },
     {
@@ -374,7 +374,7 @@
       "languages": {
         "English": "Extended Assault Feed",
         "Russian": "Штурмовая система подачи",
-        "Chinese": "延伸突击供弹"
+        "ChineseSimplified": "延伸突击供弹"
       }
     },
     {
@@ -382,7 +382,7 @@
       "languages": {
         "English": "Tunes Shakh's extended-feed setup for faster fire, quicker reloads and better recoil control, at the cost of substantially increased weapon wear.",
         "Russian": "Настраивает увеличенную систему подачи Shakh для более высокого темпа огня, быстрой перезарядки и лучшего контроля отдачи ценой значительно повышенного износа.",
-        "Chinese": "调校 Shakh 的延伸供弹配置：射速更快、装填更快、后坐力控制更好，但武器磨损显著增加。"
+        "ChineseSimplified": "调校 Shakh 的延伸供弹配置：射速更快、装填更快、后坐力控制更好，但武器磨损显著增加。"
       }
     },
     {
@@ -390,7 +390,7 @@
       "languages": {
         "English": "Silent Entry Package",
         "Russian": "Комплект скрытого проникновения",
-        "Chinese": "静默突入组件"
+        "ChineseSimplified": "静默突入组件"
       }
     },
     {
@@ -398,7 +398,7 @@
       "languages": {
         "English": "Strips Silence down for infiltration and mobility with much faster aiming, faster aimed movement and lower weight, at the cost of damage.",
         "Russian": "Облегчает Silence для скрытого проникновения и мобильности: значительно ускоряет прицеливание и движение в прицеле и снижает массу ценой урона.",
-        "Chinese": "将 Silence 精简以利于渗透与机动：大幅加快瞄准与瞄准时移动并降低重量，但伤害下降。"
+        "ChineseSimplified": "将 Silence 精简以利于渗透与机动：大幅加快瞄准与瞄准时移动并降低重量，但伤害下降。"
       }
     },
     {
@@ -406,7 +406,7 @@
       "languages": {
         "English": "Overclocked Action",
         "Russian": "Форсированная автоматика",
-        "Chinese": "超频自动机"
+        "ChineseSimplified": "超频自动机"
       }
     },
     {
@@ -414,7 +414,7 @@
       "languages": {
         "English": "Pushes Spitfire's already fast action to the limit with a dramatically higher fire rate, lower recoil and quicker reloads. Weapon wear rises sharply.",
         "Russian": "Форсирует и без того быструю автоматику Spitfire до предела: резко повышает темп огня, снижает отдачу и ускоряет перезарядку. Износ оружия сильно возрастает.",
-        "Chinese": "将 Spitfire 本已快速的自动机推至极限：射速大幅提升、后坐力更低、装填更快。武器磨损急剧增加。"
+        "ChineseSimplified": "将 Spitfire 本已快速的自动机推至极限：射速大幅提升、后坐力更低、装填更快。武器磨损急剧增加。"
       }
     },
     {
@@ -422,7 +422,7 @@
       "languages": {
         "English": "Recoil Compensation System",
         "Russian": "Система компенсации отдачи",
-        "Chinese": "后坐力补偿系统"
+        "ChineseSimplified": "后坐力补偿系统"
       }
     },
     {
@@ -430,7 +430,7 @@
       "languages": {
         "English": "Adds an extensive stabilization system to Spitter for exceptionally low recoil, faster shot recovery and tighter dispersion, at the cost of additional weight.",
         "Russian": "Оснащает Spitter развитой системой стабилизации для исключительно низкой отдачи, быстрого возврата на цель и меньшего разброса ценой дополнительной массы.",
-        "Chinese": "为 Spitter 加装完善的稳定系统，带来极低后坐力、更快射击恢复与更小散布，但重量增加。"
+        "ChineseSimplified": "为 Spitter 加装完善的稳定系统，带来极低后坐力、更快射击恢复与更小散布，但重量增加。"
       }
     },
     {
@@ -438,7 +438,7 @@
       "languages": {
         "English": "Predator Choke System",
         "Russian": "Дульная система Predator",
-        "Chinese": "Predator 喉缩系统"
+        "ChineseSimplified": "Predator 喉缩系统"
       }
     },
     {
@@ -446,7 +446,7 @@
       "languages": {
         "English": "Extends Predator's precision role with a tightly controlled pattern, greater effective range and higher projectile velocity, at the cost of increased recoil.",
         "Russian": "Развивает точную специализацию Predator: сужает осыпь, увеличивает эффективную дальность и скорость снаряда ценой повышенной отдачи.",
-        "Chinese": "延伸 Predator 的精准定位：收拢散布、提升有效射程与弹速，但后坐力增加。"
+        "ChineseSimplified": "延伸 Predator 的精准定位：收拢散布、提升有效射程与弹速，但后坐力增加。"
       }
     },
     {
@@ -454,7 +454,7 @@
       "languages": {
         "English": "Gas-System Overdrive",
         "Russian": "Форсированная газовая система",
-        "Chinese": "导气系统超载"
+        "ChineseSimplified": "导气系统超载"
       }
     },
     {
@@ -462,7 +462,7 @@
       "languages": {
         "English": "Drives Sledgehammer's semi-automatic action hard for faster fire, lower recoil and quicker reloads. The overstressed system wears much faster.",
         "Russian": "Форсирует полуавтоматическую систему Sledgehammer ради более высокого темпа огня, меньшей отдачи и быстрой перезарядки. Перегруженная система изнашивается значительно быстрее.",
-        "Chinese": "强行驱动 Sledgehammer 的半自动系统以提升射速、降低后坐力并加快装填。超负荷系统磨损显著加快。"
+        "ChineseSimplified": "强行驱动 Sledgehammer 的半自动系统以提升射速、降低后坐力并加快装填。超负荷系统磨损显著加快。"
       }
     },
     {
@@ -470,7 +470,7 @@
       "languages": {
         "English": "Heavy Magnum Reinforcement",
         "Russian": "Усиление Magnum",
-        "Chinese": "重型马格南强化"
+        "ChineseSimplified": "重型马格南强化"
       }
     },
     {
@@ -478,7 +478,7 @@
       "languages": {
         "English": "Reinforces Texas into an exceptionally heavy high-power shotgun with increased damage, armor penetration and recoil control, at the cost of even more weight.",
         "Russian": "Усиливает Texas до исключительно тяжёлого и мощного дробовика с повышенным уроном, бронепробитием и контролем отдачи ценой ещё большей массы.",
-        "Chinese": "将 Texas 强化为极其沉重的强力霰弹枪：伤害、护甲穿透与后坐力控制提升，但重量进一步增加。"
+        "ChineseSimplified": "将 Texas 强化为极其沉重的强力霰弹枪：伤害、护甲穿透与后坐力控制提升，但重量进一步增加。"
       }
     },
     {
@@ -486,7 +486,7 @@
       "languages": {
         "English": "Fire modes: Semi-Automatic / Burst",
         "Russian": "Режимы огня: одиночный / очередь",
-        "Chinese": "射击模式：半自动 / 点射"
+        "ChineseSimplified": "射击模式：半自动 / 点射"
       }
     }
   ]
