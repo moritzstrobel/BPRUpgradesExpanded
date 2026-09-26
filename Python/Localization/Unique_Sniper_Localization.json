@@ -6,7 +6,7 @@
       "languages": {
         "English": "Hunter's Field Tuning",
         "Russian": "Полевая настройка охотника",
-        "Chinese": "猎手野战调校"
+        "ChineseSimplified": "猎手野战调校"
       }
     },
     {
@@ -14,7 +14,7 @@
       "languages": {
         "English": "Tunes Gonta for long-range field use with tighter dispersion, greater effective range and higher projectile velocity, at the cost of increased weapon wear.",
         "Russian": "Настраивает Gonta для дальней стрельбы в полевых условиях: уменьшает разброс, увеличивает эффективную дальность и скорость пули ценой повышенного износа оружия.",
-        "Chinese": "将 Gonta 调校为远距离野战用途：收拢散布、提升有效射程与弹速，但武器磨损增加。"
+        "ChineseSimplified": "将 Gonta 调校为远距离野战用途：收拢散布、提升有效射程与弹速，但武器磨损增加。"
       }
     },
     {
@@ -22,7 +22,7 @@
       "languages": {
         "English": "Mobile Marksman Package",
         "Russian": "Комплект мобильного стрелка",
-        "Chinese": "机动精确射手组件"
+        "ChineseSimplified": "机动精确射手组件"
       }
     },
     {
@@ -30,7 +30,7 @@
       "languages": {
         "English": "Reworks Cavalier for mobile precision shooting with much faster aiming, better movement while aiming and lower weight, at the cost of increased recoil.",
         "Russian": "Перерабатывает Cavalier для мобильной точной стрельбы: значительно ускоряет прицеливание и движение в прицеле и снижает массу ценой повышенной отдачи.",
-        "Chinese": "将 Cavalier 改造为机动精准射击配置：大幅加快瞄准、改善瞄准时移动并降低重量，但后坐力增加。"
+        "ChineseSimplified": "将 Cavalier 改造为机动精准射击配置：大幅加快瞄准、改善瞄准时移动并降低重量，但后坐力增加。"
       }
     },
     {
@@ -38,7 +38,7 @@
       "languages": {
         "English": "Match-Grade Barrel",
         "Russian": "Матчевый ствол",
-        "Chinese": "竞赛级枪管"
+        "ChineseSimplified": "竞赛级枪管"
       }
     },
     {
@@ -46,7 +46,7 @@
       "languages": {
         "English": "Fits Lynx with a match-grade barrel for exceptional precision, higher projectile velocity and increased armor penetration, at the cost of stronger recoil.",
         "Russian": "Оснащает Lynx матчевым стволом для исключительной точности, повышенной скорости пули и бронепробития ценой более сильной отдачи.",
-        "Chinese": "为 Lynx 换装竞赛级枪管，带来卓越精度、更高弹速与更强护甲穿透，但后坐力增强。"
+        "ChineseSimplified": "为 Lynx 换装竞赛级枪管，带来卓越精度、更高弹速与更强护甲穿透，但后坐力增强。"
       }
     },
     {
@@ -54,7 +54,7 @@
       "languages": {
         "English": "Expedition Reinforcement",
         "Russian": "Экспедиционное усиление",
-        "Chinese": "远征强化"
+        "ChineseSimplified": "远征强化"
       }
     },
     {
@@ -62,7 +62,7 @@
       "languages": {
         "English": "Reinforces Partner for extended expeditions with much greater durability, reduced weapon wear and lower recoil, at the cost of additional weight.",
         "Russian": "Усиливает Partner для длительных экспедиций: значительно повышает прочность, снижает износ оружия и отдачу ценой дополнительной массы.",
-        "Chinese": "强化 Partner 以支持长期远征：大幅提升耐久度，降低武器磨损与后坐力，但重量增加。"
+        "ChineseSimplified": "强化 Partner 以支持长期远征：大幅提升耐久度，降低武器磨损与后坐力，但重量增加。"
       }
     },
     {
@@ -70,7 +70,7 @@
       "languages": {
         "English": "Snap-Shot System",
         "Russian": "Система быстрого выстрела",
-        "Chinese": "快速射击系统"
+        "ChineseSimplified": "快速射击系统"
       }
     },
     {
@@ -78,7 +78,7 @@
       "languages": {
         "English": "Tunes Whip for rapid target acquisition with dramatically faster aiming, better aimed movement and quicker shot recovery, at the cost of increased recoil.",
         "Russian": "Настраивает Whip для быстрого захвата цели: резко ускоряет прицеливание, улучшает движение в прицеле и возврат после выстрела ценой повышенной отдачи.",
-        "Chinese": "将 Whip 调校为快速捕捉目标：大幅加快瞄准、改善瞄准时移动并加快射击恢复，但后坐力增加。"
+        "ChineseSimplified": "将 Whip 调校为快速捕捉目标：大幅加快瞄准、改善瞄准时移动并加快射击恢复，但后坐力增加。"
       }
     }
   ]
