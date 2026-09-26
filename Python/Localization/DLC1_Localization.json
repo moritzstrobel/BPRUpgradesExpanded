@@ -6,7 +6,7 @@
       "languages": {
         "English": "Subsonic Specialist",
         "Russian": "Специалист по дозвуковым боеприпасам",
-        "Chinese": "亚音速专精"
+        "ChineseSimplified": "亚音速专精"
       }
     },
     {
@@ -14,7 +14,7 @@
       "languages": {
         "English": "Tunes the AK9 around its heavy subsonic role with increased armor penetration and improved recoil control, at the cost of effective range.",
         "Russian": "Настраивает AK9 под тяжёлые дозвуковые боеприпасы, повышая бронепробиваемость и улучшая контроль отдачи ценой эффективной дальности.",
-        "Chinese": "围绕 AK9 的重型亚音速定位进行调校，提升护甲穿透并改善后坐力控制，但有效射程下降。"
+        "ChineseSimplified": "围绕 AK9 的重型亚音速定位进行调校，提升护甲穿透并改善后坐力控制，但有效射程下降。"
       }
     },
     {
@@ -22,7 +22,7 @@
       "languages": {
         "English": "Featherweight Assembly",
         "Russian": "Сверхлёгкая сборка",
-        "Chinese": "超轻组件"
+        "ChineseSimplified": "超轻组件"
       }
     },
     {
@@ -30,7 +30,7 @@
       "languages": {
         "English": "Pushes the Arev Light's lightweight identity further with lower weight and faster aiming, at the cost of increased recoil.",
         "Russian": "Ещё сильнее подчёркивает облегчённую конструкцию Arev Light: снижает массу и ускоряет прицеливание ценой повышенной отдачи.",
-        "Chinese": "进一步强化 Arev Light 的轻量化定位：降低重量并加快瞄准，但后坐力增加。"
+        "ChineseSimplified": "进一步强化 Arev Light 的轻量化定位：降低重量并加快瞄准，但后坐力增加。"
       }
     },
     {
@@ -38,7 +38,7 @@
       "languages": {
         "English": "Breaching Configuration",
         "Russian": "Штурмовая конфигурация",
-        "Chinese": "破门配置"
+        "ChineseSimplified": "破门配置"
       }
     },
     {
@@ -46,7 +46,7 @@
       "languages": {
         "English": "Builds the Clapper into a heavier, more controlled close-range shotgun with tighter dispersion and reduced recoil.",
         "Russian": "Превращает Clapper в более тяжёлый и контролируемый дробовик для ближнего боя с меньшим разбросом и отдачей.",
-        "Chinese": "将 Clapper 打造为更重、更可控的近距离霰弹枪，散布更小、后坐力更低。"
+        "ChineseSimplified": "将 Clapper 打造为更重、更可控的近距离霰弹枪，散布更小、后坐力更低。"
       }
     },
     {
@@ -54,7 +54,7 @@
       "languages": {
         "English": "Indestructible",
         "Russian": "Неубиваемый",
-        "Chinese": "坚不可摧"
+        "ChineseSimplified": "坚不可摧"
       }
     },
     {
@@ -62,7 +62,7 @@
       "languages": {
         "English": "Reinforces the Defender into an exceptionally durable heavy shotgun with reduced wear per shot, at the cost of even more weight.",
         "Russian": "Усиливает Defender, превращая его в исключительно долговечный тяжёлый дробовик со сниженным износом за выстрел ценой ещё большей массы.",
-        "Chinese": "强化 Defender，使其成为极其耐用的重型霰弹枪，降低每发磨损，但重量进一步增加。"
+        "ChineseSimplified": "强化 Defender，使其成为极其耐用的重型霰弹枪，降低每发磨损，但重量进一步增加。"
       }
     },
     {
@@ -70,7 +70,7 @@
       "languages": {
         "English": "Duty Service Package",
         "Russian": "Служебный комплект «Долга»",
-        "Chinese": "“责任”服役组件"
+        "ChineseSimplified": "“责任”服役组件"
       }
     },
     {
@@ -78,7 +78,7 @@
       "languages": {
         "English": "A disciplined service-rifle tune for the Dnipro Duty that improves recoil control and reduces weapon wear, at the cost of additional weight.",
         "Russian": "Служебная настройка Dnipro Duty, улучшающая контроль отдачи и снижающая износ оружия ценой дополнительной массы.",
-        "Chinese": "为 Dnipro Duty 进行规范的制式步枪调校，改善后坐力控制并降低武器磨损，但重量增加。"
+        "ChineseSimplified": "为 Dnipro Duty 进行规范的制式步枪调校，改善后坐力控制并降低武器磨损，但重量增加。"
       }
     },
     {
@@ -86,7 +86,7 @@
       "languages": {
         "English": "Airborne Marksman",
         "Russian": "Десантный стрелок",
-        "Chinese": "空降精确射手"
+        "ChineseSimplified": "空降精确射手"
       }
     },
     {
@@ -94,7 +94,7 @@
       "languages": {
         "English": "Pushes the Fallschirmjager toward mobile precision with tighter dispersion, faster aiming and lower weight, at the cost of stronger recoil.",
         "Russian": "Развивает Fallschirmjager в сторону мобильной точности: уменьшает разброс, ускоряет прицеливание и снижает массу ценой более сильной отдачи.",
-        "Chinese": "将 Fallschirmjager 推向机动精准方向：收拢散布、加快瞄准并降低重量，但后坐力增强。"
+        "ChineseSimplified": "将 Fallschirmjager 推向机动精准方向：收拢散布、加快瞄准并降低重量，但后坐力增强。"
       }
     },
     {
@@ -102,7 +102,7 @@
       "languages": {
         "English": "Match Fire-Control Group",
         "Russian": "Матчевый ударно-спусковой механизм",
-        "Chinese": "竞赛级击发机构"
+        "ChineseSimplified": "竞赛级击发机构"
       }
     },
     {
@@ -110,7 +110,7 @@
       "languages": {
         "English": "Refines the HSG72's precision identity with tighter dispersion, lower recoil and increased armor penetration.",
         "Russian": "Усиливает точную специализацию HSG72, уменьшая разброс и отдачу и повышая бронепробиваемость.",
-        "Chinese": "强化 HSG72 的精准定位：收拢散布、降低后坐力并提升护甲穿透。"
+        "ChineseSimplified": "强化 HSG72 的精准定位：收拢散布、降低后坐力并提升护甲穿透。"
       }
     },
     {
@@ -118,7 +118,7 @@
       "languages": {
         "English": "Freedom Overclock",
         "Russian": "Форсировка «Свободы»",
-        "Chinese": "“自由”超频"
+        "ChineseSimplified": "“自由”超频"
       }
     },
     {
@@ -126,7 +126,7 @@
       "languages": {
         "English": "Overdrives the Kharod Freedom for a higher fire rate, accepting stronger recoil and accelerated weapon wear.",
         "Russian": "Форсирует Kharod Freedom ради более высокого темпа стрельбы ценой усиленной отдачи и ускоренного износа оружия.",
-        "Chinese": "对 Kharod Freedom 进行超频以提升射速，但后坐力增强、武器磨损加快。"
+        "ChineseSimplified": "对 Kharod Freedom 进行超频以提升射速，但后坐力增强、武器磨损加快。"
       }
     },
     {
@@ -134,7 +134,7 @@
       "languages": {
         "English": "Flechette Specialist",
         "Russian": "Специалист по флешеттам",
-        "Chinese": "飞镖弹专精"
+        "ChineseSimplified": "飞镖弹专精"
       }
     },
     {
@@ -142,7 +142,7 @@
       "languages": {
         "English": "Pushes the SPSA Sniper toward armored targets with substantially higher armor penetration and tighter dispersion, at the cost of raw damage.",
         "Russian": "Настраивает SPSA Sniper против бронированных целей, значительно повышая бронепробиваемость и уменьшая разброс ценой базового урона.",
-        "Chinese": "将 SPSA Sniper 针对装甲目标调校：大幅提升护甲穿透并收拢散布，但基础伤害下降。"
+        "ChineseSimplified": "将 SPSA Sniper 针对装甲目标调校：大幅提升护甲穿透并收拢散布，但基础伤害下降。"
       }
     },
     {
@@ -150,7 +150,7 @@
       "languages": {
         "English": "CQB Conversion",
         "Russian": "Конверсия для ближнего боя",
-        "Chinese": "近战转换"
+        "ChineseSimplified": "近战转换"
       }
     },
     {
@@ -158,7 +158,7 @@
       "languages": {
         "English": "Commits the SVU CQB to close-range fighting with much faster aiming and lower recoil, at the cost of effective range.",
         "Russian": "Полностью настраивает SVU CQB для ближнего боя: значительно ускоряет прицеливание и снижает отдачу ценой эффективной дальности.",
-        "Chinese": "将 SVU CQB 完全定位为近距作战：大幅加快瞄准并降低后坐力，但有效射程下降。"
+        "ChineseSimplified": "将 SVU CQB 完全定位为近距作战：大幅加快瞄准并降低后坐力，但有效射程下降。"
       }
     },
     {
@@ -166,7 +166,7 @@
       "languages": {
         "English": "Lightweight Marksman Kit",
         "Russian": "Облегчённый стрелковый комплект",
-        "Chinese": "轻量化精确射手套件"
+        "ChineseSimplified": "轻量化精确射手套件"
       }
     },
     {
@@ -174,7 +174,7 @@
       "languages": {
         "English": "Further lightens the Tundra for faster handling and aiming, trading some recoil control for mobility.",
         "Russian": "Дополнительно облегчает Tundra для более быстрого обращения и прицеливания, жертвуя частью контроля отдачи ради мобильности.",
-        "Chinese": "进一步为 Tundra 减重，加快操作与瞄准，以部分后坐力控制换取机动性。"
+        "ChineseSimplified": "进一步为 Tundra 减重，加快操作与瞄准，以部分后坐力控制换取机动性。"
       }
     },
     {
@@ -182,7 +182,7 @@
       "languages": {
         "English": "Warsaw Pact Tuning",
         "Russian": "Настройка Варшавского договора",
-        "Chinese": "华约调校"
+        "ChineseSimplified": "华约调校"
       }
     },
     {
@@ -190,7 +190,7 @@
       "languages": {
         "English": "Tunes the Warszawa's 5.45 configuration for faster, more controllable automatic fire, at the cost of additional weapon weight.",
         "Russian": "Настраивает конфигурацию Warszawa под 5,45 мм для более быстрого и контролируемого автоматического огня ценой дополнительной массы оружия.",
-        "Chinese": "将 Warszawa 的 5.45 配置调校为更快、更可控的自动射击，但武器重量增加。"
+        "ChineseSimplified": "将 Warszawa 的 5.45 配置调校为更快、更可控的自动射击，但武器重量增加。"
       }
     }
   ]
