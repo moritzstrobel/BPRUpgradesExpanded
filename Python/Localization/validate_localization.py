@@ -17,7 +17,7 @@ from generate_all_cfg import build_dlc_outputs, build_edition_outputs, build_mod
 def localization_files() -> tuple[Path, ...]:
     return tuple(sorted(LOCALIZATION_DIR.glob("*_Localization.json")))
 
-REQUIRED_LANGUAGES = ("English", "Russian", "Chinese")
+REQUIRED_LANGUAGES = ("English", "Russian", "ChineseSimplified")
 VANILLA_EFFECTS = PYTHON_ROOT / "VanillaReference" / "EffectPrototypes.cfg"
 VANILLA_UI_PATCH = REPO_ROOT / "GameLite/GameData/EffectPrototypes/EffectPrototypes_patch_BPRUE_UI.cfg"
 ARMOR_EFFECT_PATCH = REPO_ROOT / "Armor/GameLite/GameData/EffectPrototypes/EffectPrototypes_patch_BPRUE_Armor.cfg"
