@@ -4,7 +4,7 @@ import unreal
 
 ASSET_PATH = "/BPRUpgradesExpanded/Localization/L_BPRUpgradesExpanded"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-REQUIRED_LANGUAGES = ("English", "Russian", "Chinese")
+REQUIRED_LANGUAGES = ("English", "Russian", "ChineseSimplified")
 
 def localization_files():
     return tuple(
