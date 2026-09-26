@@ -6,7 +6,7 @@
       "languages": {
         "English": "Lightweight Stock",
         "Russian": "Облегчённый приклад",
-        "Chinese": "轻量化枪托"
+        "ChineseSimplified": "轻量化枪托"
       }
     },
     {
@@ -14,7 +14,7 @@
       "languages": {
         "English": "Reduces the inertia of the weapon for faster aiming and better mobility, at the cost of increased recoil.",
         "Russian": "Снижает инерцию оружия для более быстрого прицеливания и лучшей подвижности ценой повышенной отдачи.",
-        "Chinese": "降低武器惯性，加快瞄准并提升机动性，但后坐力增加。"
+        "ChineseSimplified": "降低武器惯性，加快瞄准并提升机动性，但后坐力增加。"
       }
     },
     {
@@ -22,7 +22,7 @@
       "languages": {
         "English": "Tactical Stock",
         "Russian": "Тактический приклад",
-        "Chinese": "战术枪托"
+        "ChineseSimplified": "战术枪托"
       }
     },
     {
@@ -30,7 +30,7 @@
       "languages": {
         "English": "Improves recoil control and recovery for close-range bursts, trading a little aiming speed for stability.",
         "Russian": "Улучшает контроль и восстановление отдачи при стрельбе очередями на ближней дистанции, немного снижая скорость прицеливания ради стабильности.",
-        "Chinese": "提升近距离点射时的后坐力控制与恢复，略微降低瞄准速度以换取稳定性。"
+        "ChineseSimplified": "提升近距离点射时的后坐力控制与恢复，略微降低瞄准速度以换取稳定性。"
       }
     },
     {
@@ -38,7 +38,7 @@
       "languages": {
         "English": "Stabilized Stock",
         "Russian": "Стабилизированный приклад",
-        "Chinese": "稳定化枪托"
+        "ChineseSimplified": "稳定化枪托"
       }
     },
     {
@@ -46,7 +46,7 @@
       "languages": {
         "English": "Prioritizes recoil control and shot consistency for extending the SMG's practical range, at the cost of slower handling.",
         "Russian": "Отдаёт приоритет контролю отдачи и стабильности стрельбы для увеличения практической дальности ПП ценой более медленного обращения.",
-        "Chinese": "优先提升后坐力控制与射击一致性，以延长冲锋枪的有效射程，但操作速度变慢。"
+        "ChineseSimplified": "优先提升后坐力控制与射击一致性，以延长冲锋枪的有效射程，但操作速度变慢。"
       }
     },
     {
@@ -54,7 +54,7 @@
       "languages": {
         "English": "Lightweight Stock",
         "Russian": "Облегчённый приклад",
-        "Chinese": "轻量化枪托"
+        "ChineseSimplified": "轻量化枪托"
       }
     },
     {
@@ -62,7 +62,7 @@
       "languages": {
         "English": "A light stock optimized for rapid target acquisition and mobile marksman work, at the cost of recoil control.",
         "Russian": "Лёгкий приклад для быстрого захвата цели и мобильной стрелковой работы ценой контроля отдачи.",
-        "Chinese": "轻量枪托，专为快速捕捉目标和机动射击优化，但牺牲后坐力控制。"
+        "ChineseSimplified": "轻量枪托，专为快速捕捉目标和机动射击优化，但牺牲后坐力控制。"
       }
     },
     {
@@ -70,7 +70,7 @@
       "languages": {
         "English": "Adjustable Stock",
         "Russian": "Регулируемый приклад",
-        "Chinese": "可调枪托"
+        "ChineseSimplified": "可调枪托"
       }
     },
     {
@@ -78,7 +78,7 @@
       "languages": {
         "English": "An adjustable marksman stock that balances aiming stability, movement and recoil control for flexible field use.",
         "Russian": "Регулируемый стрелковый приклад, балансирующий стабильность прицеливания, движение и контроль отдачи для универсального применения.",
-        "Chinese": "可调精确射手枪托，平衡瞄准稳定性、移动与后坐力控制，适应多变的实战需求。"
+        "ChineseSimplified": "可调精确射手枪托，平衡瞄准稳定性、移动与后坐力控制，适应多变的实战需求。"
       }
     },
     {
@@ -86,7 +86,7 @@
       "languages": {
         "English": "Precision Stock",
         "Russian": "Высокоточный приклад",
-        "Chinese": "精准枪托"
+        "ChineseSimplified": "精准枪托"
       }
     },
     {
@@ -94,7 +94,7 @@
       "languages": {
         "English": "A rigid precision stock that maximizes aiming stability, recoil control and recovery for deliberate long-range fire, at the cost of aiming speed.",
         "Russian": "Жёсткий высокоточный приклад, максимально повышающий стабильность прицеливания, контроль и восстановление отдачи для выверенной дальней стрельбы ценой скорости прицеливания.",
-        "Chinese": "刚性精准枪托，最大化瞄准稳定性、后坐力控制与恢复，适合精确远距离射击，但瞄准速度变慢。"
+        "ChineseSimplified": "刚性精准枪托，最大化瞄准稳定性、后坐力控制与恢复，适合精确远距离射击，但瞄准速度变慢。"
       }
     }
   ]
