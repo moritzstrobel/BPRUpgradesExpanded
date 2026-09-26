@@ -1,0 +1,70 @@
+{
+  "weapons": {
+    "Gabion": {
+      "content_pack": "Deluxe",
+      "general_setup_sid": "Gun_Gabion_AR_GS",
+      "class": "AssaultRifles",
+      "base_family": "Lavina"
+    },
+    "Logarithm": {
+      "content_pack": "Deluxe",
+      "general_setup_sid": "Gun_Logarithm_SMG_GS",
+      "class": "SMGs",
+      "base_family": "Integral"
+    },
+    "MonolithAR": {
+      "content_pack": "Deluxe",
+      "general_setup_sid": "Gun_Monolit_AR_GS",
+      "class": "AssaultRifles",
+      "base_family": "M16"
+    },
+    "MonolithPistol": {
+      "content_pack": "Deluxe",
+      "general_setup_sid": "Gun_Monolit_HG_GS",
+      "class": "Pistols",
+      "base_family": "PTM"
+    },
+    "MonolithShotgun": {
+      "content_pack": "Deluxe",
+      "general_setup_sid": "Gun_Monolit_SG_GS",
+      "class": "Shotguns",
+      "base_family": "M860"
+    },
+    "Zvirolov": {
+      "content_pack": "Deluxe",
+      "general_setup_sid": "Gun_Zvirolov_SR_GS",
+      "class": "Snipers",
+      "base_family": "M701"
+    },
+    "Veteran": {
+      "content_pack": "PreOrder",
+      "general_setup_sid": "Gun_Veteran_AR_GS",
+      "class": "AssaultRifles",
+      "base_family": "Gvintar"
+    },
+    "Margach": {
+      "content_pack": "Ultimate",
+      "general_setup_sid": "Gun_Margach_SG_GS",
+      "class": "Shotguns",
+      "base_family": "D12"
+    },
+    "ModelSpecial": {
+      "content_pack": "Ultimate",
+      "general_setup_sid": "Gun_ModelSpecial_HG_GS",
+      "class": "Pistols",
+      "base_family": "Rhino"
+    },
+    "Novator": {
+      "content_pack": "Ultimate",
+      "general_setup_sid": "Gun_Novator_AR_GS",
+      "class": "AssaultRifles",
+      "base_family": "Fora"
+    },
+    "SMGMonolith": {
+      "content_pack": "Ultimate",
+      "general_setup_sid": "Gun_SMGMonolith_SMG_GS",
+      "class": "SMGs",
+      "base_family": "Viper"
+    }
+  }
+}

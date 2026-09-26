@@ -1,0 +1,3294 @@
+[
+  {
+    "sid": "Jemmy_Neutral_Armor",
+    "category": "SUIT",
+    "faction": "FREE_STALKER",
+    "upgrades": [
+      "Jemmy_Neutral_Armor_ProtectionStrike_Left_1_1",
+      "Jemmy_Neutral_Armor_MaxDurability_Left_1_2",
+      "Jemmy_Neutral_Armor_ProtectionStrike2_Left_2_1",
+      "Jemmy_Neutral_Armor_MaxDurability2_Left_2_2",
+      "Jemmy_Neutral_Armor_ProtectionBurn_Left_1_1",
+      "Jemmy_Neutral_Armor_ProtectionChemical_Left_1_2",
+      "Jemmy_Neutral_Armor_protectionElectrical_Left_2_1",
+      "Jemmy_Neutral_Armor_protectionElectrical_protectionThermal_Left_2_2",
+      "Jemmy_Neutral_Armor_ArtifactSlots_Left_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Jemmy_Neutral_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_STA_09.T_IFI_FOL_STA_09'"
+      ],
+      "MeshPrototypeSID": [
+        "Jemmy_Neutral_Armor"
+      ],
+      "BaseDurability": [
+        "780.0"
+      ],
+      "Weight": [
+        "2.0"
+      ],
+      "Cost": [
+        "11600.0"
+      ],
+      "ArtifactSlots": [
+        "1"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Newbee_Neutral_Armor",
+    "category": "SUIT",
+    "faction": "FREE_STALKER",
+    "upgrades": [
+      "Newbie_Neutral_Armor_ProtectionStrike_Left_1_1",
+      "Newbie_Neutral_Armor_ProtectionStrike_Left_2_1",
+      "Newbie_Neutral_Armor_ProtectionStrike_Left_2_2",
+      "Newbie_Neutral_Armor_MaxDurability_Left_1_2",
+      "Newbie_Neutral_Armor_ProtectionChemical_Left_1_1",
+      "Newbie_Neutral_Armor_ProtectionBurn_Left_1_2",
+      "Newbie_Neutral_Armor_ProtectionBurn_Left_2_1",
+      "Newbie_Neutral_Armor_protectionElectrical_Left_2_2",
+      "Newbie_Neutral_Armor_ItemWeight_Left_3_1",
+      "Newbie_Neutral_Armor_ArtifactSlots_Left_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Newbee_Neutral_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_STA_22.T_IFI_FOL_STA_22'"
+      ],
+      "MeshPrototypeSID": [
+        "Newbee_Neutral_Armor"
+      ],
+      "BaseDurability": [
+        "780.0"
+      ],
+      "Weight": [
+        "3.0"
+      ],
+      "Cost": [
+        "13500.0"
+      ],
+      "ArtifactSlots": [
+        "1"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Nasos_Neutral_Armor",
+    "category": "SUIT",
+    "faction": "FREE_STALKER",
+    "upgrades": [
+      "Nasos_Neutral_Armor_MaxDurability_Left_1_1",
+      "Nasos_Neutral_Armor_reductionWeight_Left_1_2",
+      "Nasos_Neutral_Armor_protectionRadiation_Left_2_1",
+      "Nasos_Neutral_Armor_MaxDurability2_Left_2_2",
+      "Nasos_Neutral_Armor_backpack_Left_3_1",
+      "Nasos_Neutral_Armor_protectionThermal_Left_1_1",
+      "Nasos_Neutral_Armor_protectionChemical_Left_1_2",
+      "Nasos_Neutral_Armor_protectionChemical_protectionElectrical_Left_2_1",
+      "Nasos_Neutral_Armor_protectionChemical_protectionTherma_Left_2_2",
+      "Nasos_Neutral_Armor_protectionElectrical_Left_3_1",
+      "Nasos_Neutral_Armor_protectionRadiation_Left_1_1",
+      "Nasos_Neutral_Armor_protectionPhysical_Left_2_1",
+      "Nasos_Neutral_Armor_container_Left_1_1",
+      "Nasos_Neutral_Armor_container2_Left_2_1"
+    ],
+    "fields": {
+      "SID": [
+        "Nasos_Neutral_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_STA_01.T_IFI_FOL_STA_01'"
+      ],
+      "MeshPrototypeSID": [
+        "Nasos_Neutral_Armor"
+      ],
+      "ArmorSoundType": [
+        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
+      ],
+      "BaseDurability": [
+        "910.0"
+      ],
+      "Weight": [
+        "6.0"
+      ],
+      "Cost": [
+        "21700.0"
+      ],
+      "ArtifactSlots": [
+        "2"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Zorya_Neutral_Armor",
+    "category": "SUIT",
+    "faction": "FREE_STALKER",
+    "upgrades": [
+      "Zorya_Neutral_Armor_MaxDurability_Left_1_1",
+      "Zorya_Neutral_Armor_protectionPhysical_Left_1_1",
+      "Zorya_Neutral_Armor_reductionWeight_Left_1_2",
+      "Zorya_Neutral_Armor_MaxDurability_Left_2_1",
+      "Zorya_Neutral_Armor_protectionPhysical_Left_2_2",
+      "Zorya_Neutral_Armor_protectionThermal_Left_1_1",
+      "Zorya_Neutral_Armor_protectionChemical_Left_1_2",
+      "Zorya_Neutral_Armor_protectionThermal_protectionElectrical_Left_2_1",
+      "Zorya_Neutral_Armor_protectionThermal_Left_2_2",
+      "Zorya_Neutral_Armor_protectionChemical_Left_3_1",
+      "Zorya_Neutral_Armor_protectionElectrical_Left_3_2",
+      "Zorya_Neutral_Armor_protectionRadiation_Left_1_1",
+      "Zorya_Neutral_Armor_protectionRadiation_Left_2_1",
+      "Zorya_Neutral_Armor_regenerationStamina_Left_1_1",
+      "Zorya_Neutral_Armor_container_Left_1_1",
+      "Zorya_Neutral_Armor_radiationAbsorption_Left_2_1",
+      "Zorya_Neutral_Armor_container_Left_3_1"
+    ],
+    "fields": {
+      "SID": [
+        "Zorya_Neutral_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_STA_03.T_IFI_FOL_STA_03'"
+      ],
+      "MeshPrototypeSID": [
+        "Zorya_Neutral_Armor"
+      ],
+      "BaseDurability": [
+        "910.0"
+      ],
+      "Weight": [
+        "4.0"
+      ],
+      "Cost": [
+        "36000.0"
+      ],
+      "ArtifactSlots": [
+        "2"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "SEVA_Neutral_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "FREE_STALKER",
+    "upgrades": [
+      "Seva_Neutral_Armor_protectionPhysical_Left_1_1",
+      "Seva_Neutral_Armor_MaxDurability_Left_2_1",
+      "Seva_Neutral_Armor_reductionWeight_Left_2_2",
+      "Seva_Neutral_Armor_protectionPhysical_Left_3_1",
+      "Seva_Neutral_Armor_carryingCapacity_Left_3_2",
+      "Seva_Neutral_Armor_protectionThermal_protectionElectrical_protectionChemical_Left_1_1",
+      "Seva_Neutral_Armor_protectionThermal_protectionElectrical_Left_1_2",
+      "Seva_Neutral_Armor_protectionChemical_protectionElectrical_Left_2_1",
+      "Seva_Neutral_Armor_protectionThermal_protectionElectrical_Left_2_2",
+      "Seva_Neutral_Armor_protectionRadiation_Left_3_1",
+      "Seva_Neutral_Armor_protectionRadiation_Left_3_2",
+      "Seva_Neutral_Armor_PSY_Left_1_1",
+      "Seva_Neutral_Armor_MaxDurability_Left_2_2",
+      "Seva_Neutral_Armor_regenerationStamina_Left_2_1",
+      "Seva_Neutral_Armor_PSY_Left_3_1",
+      "Seva_Neutral_Armor_container_Left_1_1",
+      "Seva_Neutral_Armor_container_Left_1_2",
+      "Seva_Neutral_Armor_container_radiationAbsorption_Left_2_1",
+      "Seva_Neutral_Armor_container_radiationAbsorption_Left_2_2",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "SEVA_Neutral_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_SEVA_Neutral_Armor.T_IFI_SEVA_Neutral_Armor'"
+      ],
+      "MeshPrototypeSID": [
+        "SEVA_Neutral_Armor"
+      ],
+      "ArmorSoundType": [
+        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
+      ],
+      "BaseDurability": [
+        "910.0"
+      ],
+      "Weight": [
+        "8.0"
+      ],
+      "Cost": [
+        "48000.0"
+      ],
+      "ArtifactSlots": [
+        "3"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "EffectPrototypeSIDs": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Exoskeleton_Neutral_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "FREE_STALKER",
+    "upgrades": [
+      "Exoskeleton_Neutral_Armor_EXOprotectionPhysical_Left_1_1",
+      "Exoskeleton_Neutral_Armor_EXOMaxDurability_Left_2_1",
+      "Exoskeleton_Neutral_Armor_reductionWeight_Left_2_2",
+      "Exoskeleton_Neutral_Armor_EXOprotectionPhysical_Left_3_1",
+      "Exoskeleton_Neutral_Armor_carryingCapacity_Left_3_2",
+      "Exoskeleton_Neutral_Armor_EXOMaxDurability_Left_1_1",
+      "Exoskeleton_Neutral_Armor_protectionThermal_Left_2_1",
+      "Exoskeleton_Neutral_Armor_protectionElectrical_Left_2_2",
+      "Exoskeleton_Neutral_Armor_protectionChemical_protectionTherma_Left_3_1",
+      "Exoskeleton_Neutral_Armor_protectionChemical_protectionTherma_Left_3_2",
+      "Exoskeleton_Neutral_Armor_EXOregenerationStamina_Right_1_1",
+      "Exoskeleton_Neutral_Armor_AddRunEffect_Right_2_1",
+      "Exoskeleton_Neutral_Armor_protectionRadiation_Left_1_2",
+      "Exoskeleton_Neutral_Armor_protectionRadiation_Left_2_2",
+      "Exoskeleton_Neutral_Armor_PSY_Left_2_3",
+      "Exoskeleton_Neutral_Armor_PSY_Left_3_1",
+      "Exoskeleton_Neutral_Armor_rad_container_Left_1_1",
+      "Exoskeleton_Neutral_Armor_rad_container_Left_2_1",
+      "Exoskeleton_Neutral_Armor_container_Left_2_2",
+      "Exoskeleton_Neutral_Armor_rad_container_Left_3_1",
+      "Exoskeleton_Neutral_Armor_rad_container_Left_3_2",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Exoskeleton_Neutral_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_Exoskeleton_Neutral_Armor.T_IFI_Exoskeleton_Neutral_Armor'"
+      ],
+      "MeshPrototypeSID": [
+        "Exoskeleton_Neutral_Armor"
+      ],
+      "BaseDurability": [
+        "845.0"
+      ],
+      "Weight": [
+        "15.0"
+      ],
+      "Cost": [
+        "65500.0"
+      ],
+      "ArtifactSlots": [
+        "4"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "bPreventFromLimping": [
+        "true"
+      ],
+      "ArmorSoundType": [
+        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Exoskeleton.ArmorType-Exoskeleton'"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "EffectPrototypeSIDs": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "SkinJacket_Bandit_Armor",
+    "category": "SUIT",
+    "faction": "BANDIT",
+    "upgrades": [
+      "Skin_Jacket_Bandit_Armor_ProtectionStrike_Left_1_1",
+      "Skin_Jacket_Bandit_Armor_MaxDurability_Left_1_2",
+      "Skin_Jacket_Bandit_Armor_ItemWeight_Left_2_1",
+      "Skin_Jacket_Bandit_Armor_ProtectionBurn_Left_1_1",
+      "Skin_Jacket_Bandit_Armor_ProtectionChemical_Left_1_2",
+      "Skin_Jacket_Bandit_Armor_protectionElectrical_Left_2_1",
+      "Skin_Jacket_Bandit_Armor_ArtifactSlots_Left_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "SkinJacket_Bandit_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_BAN_10.T_IFI_FOL_BAN_10'"
+      ],
+      "MeshPrototypeSID": [
+        "SkinJacket_Bandit_Armor"
+      ],
+      "BaseDurability": [
+        "520.0"
+      ],
+      "Weight": [
+        "3.0"
+      ],
+      "Cost": [
+        "17200.0"
+      ],
+      "ArtifactSlots": [
+        "1"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Jacket_Bandit_Armor",
+    "category": "SUIT",
+    "faction": "BANDIT",
+    "upgrades": [
+      "Jacket_Bandit_Armor_ProtectionStrike_Left_1_1",
+      "Jacket_Bandit_Armor_MaxDurability_Left_1_2",
+      "Jacket_Bandit_Armor_ProtectionStrike2_Left_2_1",
+      "Jacket_Bandit_Armor_reductionWeight_Left_2_2",
+      "Jacket_Bandit_Armor_protectionThermal_Left_1_1",
+      "Jacket_Bandit_Armor_protectionChemical_Left_1_2",
+      "Jacket_Bandit_Armor_protectionRadiation_Left_1_1",
+      "Jacket_Bandit_Armor_container_Left_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Jacket_Bandit_Armor"
+      ],
+      "Icon": [
+        "/Script/Engine.Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_BAN_01.T_IFI_FOL_BAN_01'"
+      ],
+      "MeshPrototypeSID": [
+        "Jacket_Bandit_Armor"
+      ],
+      "BaseDurability": [
+        "1040.0"
+      ],
+      "Weight": [
+        "5.0"
+      ],
+      "Cost": [
+        "17200.0"
+      ],
+      "ArtifactSlots": [
+        "1"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Middle_Bandit_Armor",
+    "category": "SUIT",
+    "faction": "BANDIT",
+    "upgrades": [
+      "Middle_Bandit_Armor_MaxDurability_Left_1_1",
+      "Middle_Bandit_Armor_protectionPhysical_Left_1_2",
+      "Middle_Bandit_Armor_reductionWeight_Left_2_1",
+      "Middle_Bandit_Armor_carryingCapacity_Left_2_2",
+      "Middle_Bandit_Armor_protectionPhysical_Left_3_1",
+      "Middle_Bandit_Armor_protectionThermal_protectionElectrical_Left_1_1",
+      "Middle_Bandit_Armor_MaxDurability_Left_1_2",
+      "Middle_Bandit_Armor_protectionChemical_protectionElectrical_Left_2_1",
+      "Middle_Bandit_Armor_protectionRadiation_Left_2_2",
+      "Middle_Bandit_Armor_container_Left_1_1",
+      "Middle_Bandit_Armor_rad_container_Left_2_1"
+    ],
+    "fields": {
+      "SID": [
+        "Middle_Bandit_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_BAN_06.T_IFI_FOL_BAN_06'"
+      ],
+      "MeshPrototypeSID": [
+        "Middle_Bandit_Armor"
+      ],
+      "ArmorSoundType": [
+        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
+      ],
+      "BaseDurability": [
+        "910.0"
+      ],
+      "Weight": [
+        "5.0"
+      ],
+      "Cost": [
+        "24000.0"
+      ],
+      "ArtifactSlots": [
+        "1"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Light_Mercenaries_Armor",
+    "category": "SUIT",
+    "faction": "MERCENARY",
+    "upgrades": [
+      "Light_Mercenaries_Armor_MaxDurability_Left_1_1",
+      "Light_Mercenaries_Armor_reductionWeight_Left_1_2",
+      "Light_Mercenaries_Armor_protectionPhysical_Left_2_1",
+      "Light_Mercenaries_Armor_protectionPhysical_Left_2_2",
+      "Light_Mercenaries_Armor_backpack_Left_3_1",
+      "Light_Mercenaries_Armor_protectionThermal_protectionElectrical_Left_1_1",
+      "Light_Mercenaries_Armor_protectionThermal_protectionElectrical_Left_2_1",
+      "Light_Mercenaries_Armor_protectionChemical_protectionTherma_Left_3_1",
+      "Light_Mercenaries_Armor_protectionRadiation_Left_1_2",
+      "Light_Mercenaries_Armor_container_Left_1_1",
+      "Light_Mercenaries_Armor_container_Left_2_1"
+    ],
+    "fields": {
+      "SID": [
+        "Light_Mercenaries_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_MER_01.T_IFI_FOL_MER_01'"
+      ],
+      "MeshPrototypeSID": [
+        "Light_Mercenaries_Armor"
+      ],
+      "BaseDurability": [
+        "910.0"
+      ],
+      "Weight": [
+        "3.0"
+      ],
+      "Cost": [
+        "20200.0"
+      ],
+      "ArtifactSlots": [
+        "1"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Exoskeleton_Mercenaries_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "MERCENARY",
+    "upgrades": [
+      "Exoskeleton_Mercenaries_Armor_EXOMaxDurability_Left_1_1",
+      "Exoskeleton_Mercenaries_Armor_reductionWeight_Left_2_2",
+      "Exoskeleton_Mercenaries_Armor_EXOprotectionPhysical_Left_2_1",
+      "Exoskeleton_Mercenaries_Armor_EXOprotectionPhysical_Left_3_1",
+      "Exoskeleton_Mercenaries_Armor_carryingCapacity_Left_3_2",
+      "Exoskeleton_Mercenaries_Armor_protectionChemical_Left_1_1",
+      "Exoskeleton_Mercenaries_Armor_protectionElectrical_Left_2_1",
+      "Exoskeleton_Mercenaries_Armor_protectionThermal_Left_2_2",
+      "Exoskeleton_Mercenaries_Armor_protectionThermal_protectionChemica_Left_3_1",
+      "Exoskeleton_Mercenaries_Armor_protectionChemical_protectionElectrical_Left_3_2",
+      "Exoskeleton_Mercenaries_Armor_AddRunEffect_Right_1_1",
+      "Exoskeleton_Mercenaries_Armor_protectionRadiation_Left_1_2",
+      "Exoskeleton_Mercenaries_Armor_protectionRadiation_Left_2_1",
+      "Exoskeleton_Mercenaries_Armor_PSY_Left_2_2",
+      "Exoskeleton_Mercenaries_Armor_rad_container_Left_2_1",
+      "Exoskeleton_Mercenaries_Armor_rad_container_Left_2_2",
+      "Exoskeleton_Mercenaries_Armor_rad_container_Left_3_2",
+      "Exoskeleton_Mercenaries_Armor_rad_container_Left_3_1",
+      "Exoskeleton_Mercenaries_Armor_rad_container_Left_1_1",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Exoskeleton_Mercenaries_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_Exoskeleton_Mercenaries_Armor.T_IFI_Exoskeleton_Mercenaries_Armor'"
+      ],
+      "MeshPrototypeSID": [
+        "Exoskeleton_Mercenaries_Armor"
+      ],
+      "BaseDurability": [
+        "845.0"
+      ],
+      "Weight": [
+        "10.5"
+      ],
+      "Cost": [
+        "63000.0"
+      ],
+      "ArtifactSlots": [
+        "4"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "bPreventFromLimping": [
+        "true"
+      ],
+      "ArmorSoundType": [
+        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Exoskeleton.ArmorType-Exoskeleton'"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "EffectPrototypeSIDs": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Heavy_Mercenaries_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "MERCENARY",
+    "upgrades": [
+      "Heavy_Mercenaries_Armor_protectionPhysical_Left_1_1",
+      "Heavy_Mercenaries_Armor_MaxDurability_Left_1_2",
+      "Heavy_Mercenaries_Armor_protectionPhysical_Left_2_1",
+      "Heavy_Mercenaries_Armor_Backpack_Left_3_1",
+      "Heavy_Mercenaries_Armor_protectionChemical_Left_1_1",
+      "Heavy_Mercenaries_Armor_protectionThermal_Left_2_1",
+      "Heavy_Mercenaries_Armor_protectionElectrical_Left_2_2",
+      "Heavy_Mercenaries_Armor_protectionThermal_protectionElectrical_Left_3_1",
+      "Heavy_Mercenaries_Armor_protectionChemical_protectionElectrical_Left_3_2",
+      "Heavy_Mercenaries_Armor_protectionRadiation_Left_1_1",
+      "Heavy_Mercenaries_Armor_MaxDurability_Left_2_1",
+      "Heavy_Mercenaries_Armor_protectionRadiation_Left_3_1",
+      "Heavy_Mercenaries_Armor_container_Left_1_1",
+      "Heavy_Mercenaries_Armor_radiationAbsorption_Left_2_1",
+      "Heavy_Mercenaries_Armor_rad_container_Left_3_1",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Heavy_Mercenaries_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_Heavy_Mercenaries_Armor.T_IFI_Heavy_Mercenaries_Armor'"
+      ],
+      "MeshPrototypeSID": [
+        "Heavy_Mercenaries_Armor"
+      ],
+      "BaseDurability": [
+        "1040.0"
+      ],
+      "ArmorSoundType": [
+        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Heavy.ArmorType-Heavy'"
+      ],
+      "Weight": [
+        "8.0"
+      ],
+      "Cost": [
+        "42500.0"
+      ],
+      "ArtifactSlots": [
+        "3"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "EffectPrototypeSIDs": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Default_Military_Armor",
+    "category": "SUIT",
+    "faction": "MILITARY",
+    "upgrades": [
+      "Default_Military_Armor_wearing_Left_1_1",
+      "Default_Military_Armor_reductionWeight_Left_1_2",
+      "Default_Military_Armor_protectionPhysical_Left_2_1",
+      "Default_Military_Armor_wearing2_Left_2_2",
+      "Default_Military_Armor_carryingCapacity_Left_3_1",
+      "Default_Military_Armor_protectionThermal_Left_1_1",
+      "Default_Military_Armor_protectionChemical_Left_1_2",
+      "Default_Military_Armor_protectionThermal_protectionElectrical_Left_2_1",
+      "Default_Military_Armor_protectionThermal_protectionChemical_Left_2_2",
+      "Default_Military_Armor_regenerationStamina_Left_1_1",
+      "Default_Military_Armor_container_Left_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Default_Military_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_MIL_03.T_IFI_FOL_MIL_03'"
+      ],
+      "MeshPrototypeSID": [
+        "Default_Military_Armor"
+      ],
+      "BaseDurability": [
+        "910.0"
+      ],
+      "ArmorSoundType": [
+        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
+      ],
+      "Weight": [
+        "7.0"
+      ],
+      "Cost": [
+        "14000.0"
+      ],
+      "ArtifactSlots": [
+        "2"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Heavy2_Military_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "MILITARY",
+    "upgrades": [
+      "Heavy2_Military_Armor_carryingCapacity_Left_1_1",
+      "Heavy2_Military_Armor_MaxDurability_Left_2_1",
+      "Heavy2_Military_Armor_protectionPhysical_Left_2_2",
+      "Heavy2_Military_Armor_protectionPhysical_Left_3_1",
+      "Heavy2_Military_Armor_reductionWeight_Left_3_2",
+      "Heavy2_Military_Armor_protectionElectrical_Left_1_1",
+      "Heavy2_Military_Armor_protectionChemical_Left_2_1",
+      "Heavy2_Military_Armor_protectionThermal_Left_2_2",
+      "Heavy2_Military_Armor_protectionRadiation_Left_1_1",
+      "Heavy2_Military_Armor_regenerationStamina_Left_2_1",
+      "Heavy2_Military_Armor_container_Left_1_1",
+      "Heavy2_Military_Armor_container_Left_1_2",
+      "Heavy2_Military_Armor_rad_container_Left_2_1",
+      "Heavy2_Military_Armor_rad_container_Left_3_1",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Heavy2_Military_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_MIL_04.T_IFI_FOL_MIL_04'"
+      ],
+      "MeshPrototypeSID": [
+        "Heavy2_Military_Armor"
+      ],
+      "BaseDurability": [
+        "1040.0"
+      ],
+      "Weight": [
+        "9.0"
+      ],
+      "Cost": [
+        "46000.0"
+      ],
+      "ArtifactSlots": [
+        "2"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "VoiceModulatorSID": [
+        "Gasmask"
+      ],
+      "ArmorSoundType": [
+        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Heavy.ArmorType-Heavy'"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Anomaly_Scientific_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "ECOLOGIST",
+    "upgrades": [
+      "Anomaly_Scientific_Armor_MaxDurability_Left_1_1",
+      "Anomaly_Scientific_Armor_MaxDurability_Left_2_2",
+      "Anomaly_Scientific_Armor_reductionWeight_Left_2_1",
+      "Anomaly_Scientific_Armor_regenerationStamina_Left_3_1",
+      "Anomaly_Scientific_Armor_protectionThermal_Left_1_1",
+      "Anomaly_Scientific_Armor_protectionChemical_Left_2_1",
+      "Anomaly_Scientific_Armor_protectionElectrical_Left_2_2",
+      "Anomaly_Scientific_Armor_protectionThermal_protectionChemica_Left_3_1",
+      "Anomaly_Scientific_Armor_protectionChemical_protectionElectrical_Left_3_2",
+      "Anomaly_Scientific_Armor_protectionRadiation_Left_1_1",
+      "Anomaly_Scientific_Armor_protectionRadiation_Left_2_1",
+      "Anomaly_Scientific_Armor_container_Left_1_1",
+      "Anomaly_Scientific_Armor_container_Left_1_2",
+      "Anomaly_Scientific_Armor_rad_container_Left_2_1",
+      "Anomaly_Scientific_Armor_container_Left_3_1",
+      "Anomaly_Scientific_Armor_protectionPsi_Left_3_1",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Anomaly_Scientific_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_SCI_17.T_IFI_FOL_SCI_17'"
+      ],
+      "MeshPrototypeSID": [
+        "Anomaly_Scientific_Armor"
+      ],
+      "BaseDurability": [
+        "910.0"
+      ],
+      "Weight": [
+        "3.0"
+      ],
+      "Cost": [
+        "39000.0"
+      ],
+      "ArtifactSlots": [
+        "2"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "EffectPrototypeSIDs": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "HeavyAnomaly_Scientific_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "ECOLOGIST",
+    "upgrades": [
+      "HeavyAnomaly_Scientific_Armor_MaxDurability_Left_1_1",
+      "HeavyAnomaly_Scientific_Armor_protectionPhysical_Left_2_1",
+      "HeavyAnomaly_Scientific_Armor_reductionWeight_Left_2_2",
+      "HeavyAnomaly_Scientific_Armor_protectionPhysical_Left_3_1",
+      "HeavyAnomaly_Scientific_Armor_ProtectionChemical_Left_1_1",
+      "HeavyAnomaly_Scientific_Armor_protectionElectrical_Left_1_2",
+      "HeavyAnomaly_Scientific_Armor_protectionChemical_protectionTherma_Left_2_1",
+      "HeavyAnomaly_Scientific_Armor_protectionThermal_protectionElectrical_Left_3_1",
+      "HeavyAnomaly_Scientific_Armor_protectionRadiation_Left_1_1",
+      "HeavyAnomaly_Scientific_Armor_protectionChemical_protectionTherma_Left_2_2",
+      "HeavyAnomaly_Scientific_Armor_radiationAbsorption_Left_3_2",
+      "HeavyAnomaly_Scientific_Armor_container_Left_1_1",
+      "HeavyAnomaly_Scientific_Armor_container_Left_2_1",
+      "HeavyAnomaly_Scientific_Armor_radiationAbsorption_Left_2_2",
+      "HeavyAnomaly_Scientific_Armor_radiationAbsorption_Left_3_1",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "HeavyAnomaly_Scientific_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_SCI_18.T_IFI_FOL_SCI_18'"
+      ],
+      "MeshPrototypeSID": [
+        "HeavyAnomaly_Scientific_Armor"
+      ],
+      "ArmorSoundType": [
+        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Heavy.ArmorType-Heavy'"
+      ],
+      "BaseDurability": [
+        "910.0"
+      ],
+      "Weight": [
+        "8.0"
+      ],
+      "Cost": [
+        "52000.0"
+      ],
+      "ArtifactSlots": [
+        "3"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "EffectPrototypeSIDs": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "SciSEVA_Scientific_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "ECOLOGIST",
+    "upgrades": [
+      "SciSEVA_Scientific_Armor_MaxDurability_Left_1_1",
+      "SciSEVA_Scientific_Armor_MaxDurability_Left_2_1",
+      "SciSEVA_Scientific_Armor_reductionWeight_Left_2_2",
+      "SciSEVA_Scientific_Armor_carryingCapacity_Left_3_1",
+      "SciSEVA_Scientific_Armor_protectionThermal_protectionElectrical_protectionChemical_Left_1_1",
+      "SciSEVA_Scientific_Armor_protectionThermal_protectionElectrical_Left_2_1",
+      "SciSEVA_Scientific_Armor_protectionChemical_protectionElectrical_Left_3_1",
+      "SciSEVA_Scientific_Armor_protectionThermal_protectionElectrical_Left_3_2",
+      "SciSEVA_Scientific_Armor_PSY_Left_1_1",
+      "SciSEVA_Scientific_Armor_protectionRadiation_Left_1_2",
+      "SciSEVA_Scientific_Armor_protectionRadiation_Left_2_1",
+      "SciSEVA_Scientific_Armor_PSY_Left_2_2",
+      "SciSEVA_Scientific_Armor_container_Left_1_1",
+      "SciSEVA_Scientific_Armor_radiationAbsorption_Left_2_1",
+      "SciSEVA_Scientific_Armor_radiationAbsorption_Left_2_2",
+      "SciSEVA_Scientific_Armor_radiationAbsorption_Left_3_1"
+    ],
+    "fields": {
+      "SID": [
+        "SciSEVA_Scientific_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_SciSeva_Scientific_Armor.T_IFI_SciSeva_Scientific_Armor'"
+      ],
+      "MeshPrototypeSID": [
+        "SciSEVA_Scientific_Armor"
+      ],
+      "ArmorSoundType": [
+        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
+      ],
+      "BaseDurability": [
+        "663.0"
+      ],
+      "Weight": [
+        "7.0"
+      ],
+      "Cost": [
+        "54000.0"
+      ],
+      "ArtifactSlots": [
+        "4"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "EffectPrototypeSIDs": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Rook_Svoboda_Armor",
+    "category": "SUIT",
+    "faction": "FREEDOM",
+    "upgrades": [
+      "Rook_Svoboda_Armor_protectionPhysical_Left_1_1",
+      "Rook_Svoboda_Armor_reductionWeight_Left_1_2",
+      "Rook_Svoboda_Armor_MaxDurability_Left_2_1",
+      "Rook_Svoboda_Armor_protectionPhysical_Left_2_2",
+      "Rook_Svoboda_Armor_protectionThermal_Left_1_1",
+      "Rook_Svoboda_Armor_protectionRadiation_Left_1_2",
+      "Rook_Svoboda_Armor_protectionElectrical_Left_2_1",
+      "Rook_Svoboda_Armor_protectionChemical_Left_2_2",
+      "Rook_Svoboda_Armor_container_Left_1_1",
+      "Rook_Svoboda_Armor_rad_container_Left_2_1"
+    ],
+    "fields": {
+      "SID": [
+        "Rook_Svoboda_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_SVO_01.T_IFI_FOL_SVO_01'"
+      ],
+      "MeshPrototypeSID": [
+        "Rook_Svoboda_Armor"
+      ],
+      "BaseDurability": [
+        "780.0"
+      ],
+      "Weight": [
+        "3.0"
+      ],
+      "Cost": [
+        "17100.0"
+      ],
+      "ArtifactSlots": [
+        "2"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Battle_Svoboda_Armor",
+    "category": "SUIT",
+    "faction": "FREEDOM",
+    "upgrades": [
+      "Battle_Svoboda_Armor_MaxDurability_Left_1_1",
+      "Battle_Svoboda_Armor_protectionPhysical_Left_2_1",
+      "Battle_Svoboda_Armor_reductionWeight_Left_2_2",
+      "Battle_Svoboda_Armor_protectionRadiation_Left_3_1",
+      "Battle_Svoboda_Armor_protectionChemical_Left_1_1",
+      "Battle_Svoboda_Armor_protectionThermal_Left_2_2",
+      "Battle_Svoboda_Armor_protectionThermal_protectionElectrical_Left_2_1",
+      "Battle_Svoboda_Armor_protectionThermal_protectionElectrical_Left_3_1",
+      "Battle_Svoboda_Armor_container_Left_1_2",
+      "Battle_Svoboda_Armor_container_Left_1_1",
+      "Battle_Svoboda_Armor_protectionRadiation_Left_2_1",
+      "Battle_Svoboda_Armor_radiationAbsorption_Left_2_2",
+      "Battle_Svoboda_Armor_radiationAbsorption_Left_3_1"
+    ],
+    "fields": {
+      "SID": [
+        "Battle_Svoboda_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_Battle_Svoboda_Armor.T_IFI_Battle_Svoboda_Armor'"
+      ],
+      "MeshPrototypeSID": [
+        "Battle_Svoboda_Armor"
+      ],
+      "ArmorSoundType": [
+        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
+      ],
+      "BaseDurability": [
+        "910.0"
+      ],
+      "Weight": [
+        "7.0"
+      ],
+      "Cost": [
+        "36000.0"
+      ],
+      "ArtifactSlots": [
+        "2"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "SEVA_Svoboda_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "FREEDOM",
+    "upgrades": [
+      "SEVA_Svoboda_Armor_carryingCapacity_Left_1_1",
+      "SEVA_Svoboda_Armor_MaxDurability_Left_2_1",
+      "SEVA_Svoboda_Armor_reductionWeight_Left_2_2",
+      "SEVA_Svoboda_Armor_protectionPhysical_Left_3_1",
+      "SEVA_Svoboda_Armor_protectionThermal_protectionElectrical_protectionChemical_Left_1_1",
+      "SEVA_Svoboda_Armor_protectionThermal_protectionElectrical_Left_1_2",
+      "SEVA_Svoboda_Armor_protectionChemical_protectionElectrical_Left_2_1",
+      "SEVA_Svoboda_Armor_protectionThermal_protectionElectrical_Left_2_2",
+      "SEVA_Svoboda_Armor_protectionRadiation_Left_3_1",
+      "SEVA_Svoboda_Armor_protectionRadiation_Left_1_1",
+      "SEVA_Svoboda_Armor_reductionWeight_Left_2_1",
+      "SEVA_Svoboda_Armor_MaxDurability_Left_2_2",
+      "SEVA_Svoboda_Armor_PSY_Left_3_1",
+      "SEVA_Svoboda_Armor_container_Left_1_1",
+      "SEVA_Svoboda_Armor_radiationAbsorption_Left_2_1",
+      "SEVA_Svoboda_Armor_radiationAbsorption_Left_3_1",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "SEVA_Svoboda_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_STA_04.T_IFI_FOL_STA_04'"
+      ],
+      "MeshPrototypeSID": [
+        "SEVA_Svoboda_Armor"
+      ],
+      "ArmorSoundType": [
+        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
+      ],
+      "BaseDurability": [
+        "910.0"
+      ],
+      "Weight": [
+        "8.0"
+      ],
+      "Cost": [
+        "53000.0"
+      ],
+      "ArtifactSlots": [
+        "4"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "EffectPrototypeSIDs": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Heavy_Svoboda_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "FREEDOM",
+    "upgrades": [
+      "Heavy_Svoboda_Armor_protectionPhysical_Left_1_1",
+      "Heavy_Svoboda_Armor_MaxDurability_Left_1_2",
+      "Heavy_Svoboda_Armor_protectionPhysical_Left_2_1",
+      "Heavy_Svoboda_Armor_reductionWeight_Left_2_2",
+      "Heavy_Svoboda_Armor_carryingCapacity_Left_3_1",
+      "Heavy_Svoboda_Armor_MaxDurability_Left_1_1",
+      "Heavy_Svoboda_Armor_protectionThermal_protectionChemical_Left_2_1",
+      "Heavy_Svoboda_Armor_protectionThermal_protectionElectrical_Left_2_2",
+      "Heavy_Svoboda_Armor_protectionChemical_protectionElectrical_Left_3_1",
+      "Heavy_Svoboda_Armor_protectionRadiation_Left_1_1",
+      "Heavy_Svoboda_Armor_protectionRadiation_Left_2_1",
+      "Heavy_Svoboda_Armor_regenerationStamina_Left_3_1",
+      "Heavy_Svoboda_Armor_container_Left_1_1",
+      "Heavy_Svoboda_Armor_container_radiationAbsorption_Left_1_2",
+      "Heavy_Svoboda_Armor_container_radiationAbsorption_Left_2_1",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Heavy_Svoboda_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_SVO_02.T_IFI_FOL_SVO_02'"
+      ],
+      "MeshPrototypeSID": [
+        "Heavy_Svoboda_Armor"
+      ],
+      "ArmorSoundType": [
+        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Heavy.ArmorType-Heavy'"
+      ],
+      "BaseDurability": [
+        "1040.0"
+      ],
+      "Weight": [
+        "9.0"
+      ],
+      "Cost": [
+        "50000.0"
+      ],
+      "ArtifactSlots": [
+        "4"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "EffectPrototypeSIDs": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "HeavyExoskeleton_Svoboda_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "FREEDOM",
+    "upgrades": [
+      "HeavyExoskeleton_Svoboda_Armor_EXOprotectionPhysical_Left_1_1",
+      "HeavyExoskeleton_Svoboda_Armor_reductionWeight_Left_2_1",
+      "HeavyExoskeleton_Svoboda_Armor_EXOprotectionPhysical_Left_3_1",
+      "HeavyExoskeleton_Svoboda_Armor_carryingCapacity_Left_3_2",
+      "HeavyExoskeleton_Svoboda_Armor_protectionElectrical_Left_1_1",
+      "HeavyExoskeleton_Svoboda_Armor_protectionThermal_Left_1_2",
+      "HeavyExoskeleton_Svoboda_Armor_protectionThermal_protectionChemica_Left_2_1",
+      "HeavyExoskeleton_Svoboda_Armor_protectionChemical_protectionElectrical_Left_3_1",
+      "HeavyExoskeleton_Svoboda_Armor_EXOregenerationStamina_Right_1_1",
+      "HeavyExoskeleton_Svoboda_Armor_EXOMaxDurability_Left_1_2",
+      "HeavyExoskeleton_Svoboda_Armor_PSY_Left_2_2",
+      "HeavyExoskeleton_Svoboda_Armor_PSY_Left_3_1",
+      "HeavyExoskeleton_Svoboda_Armor_protectionRadiation_Left_3_2",
+      "HeavyExoskeleton_Svoboda_Armor_container_Left_1_1",
+      "HeavyExoskeleton_Svoboda_Armor_container_Left_2_1",
+      "HeavyExoskeleton_Svoboda_Armor_rad_container_Left_2_2",
+      "HeavyExoskeleton_Svoboda_Armor_rad_container_Left_3_1",
+      "HeavyExoskeleton_Svoboda_Armor_protectionRadiation_Left_2_1",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "HeavyExoskeleton_Svoboda_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_HeavyExoskeleton_Svoboda_Armor.T_IFI_HeavyExoskeleton_Svoboda_Armor'"
+      ],
+      "MeshPrototypeSID": [
+        "HeavyExoskeleton_Svoboda_Armor"
+      ],
+      "BaseDurability": [
+        "1170.0"
+      ],
+      "Weight": [
+        "20.0"
+      ],
+      "Cost": [
+        "68000.0"
+      ],
+      "ArtifactSlots": [
+        "3"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "bPreventFromLimping": [
+        "true"
+      ],
+      "ArmorSoundType": [
+        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Exoskeleton.ArmorType-Exoskeleton'"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "EffectPrototypeSIDs": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Exoskeleton_Svoboda_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "FREEDOM",
+    "upgrades": [
+      "Exoskeleton_Svoboda_Armor_EXOprotectionPhysical_Left_1_1",
+      "Exoskeleton_Svoboda_Armor_EXOMaxDurability_Left_2_1",
+      "Exoskeleton_Svoboda_Armor_reductionWeight_Left_2_2",
+      "Exoskeleton_Svoboda_Armor_EXOprotectionPhysical_Left_3_1",
+      "Exoskeleton_Svoboda_Armor_Backpack_Left_3_2",
+      "Exoskeleton_Svoboda_Armor_protectionElectrical_Left_1_1",
+      "Exoskeleton_Svoboda_Armor_protectionChemical_Left_2_1",
+      "Exoskeleton_Svoboda_Armor_protectionThermal_protectionChemica_Left_3_1",
+      "Exoskeleton_Svoboda_Armor_protectionChemical_protectionElectrical_Left_3_2",
+      "Exoskeleton_Svoboda_Armor_EXOregenerationStamina_Right_1_1",
+      "Exoskeleton_Svoboda_Armor_AddRunEffect_Right_2_1",
+      "Exoskeleton_Svoboda_Armor_protectionRadiation_Left_1_2",
+      "Exoskeleton_Svoboda_Armor_protectionRadiation_Left_2_2",
+      "Exoskeleton_Svoboda_Armor_PSY_Left_2_3",
+      "Exoskeleton_Svoboda_Armor_PSY_Left_3_2",
+      "Exoskeleton_Svoboda_Armor_protectionRadiation_Left_3_1",
+      "Exoskeleton_Svoboda_Armor_rad_container_Left_1_1",
+      "Exoskeleton_Svoboda_Armor_rad_container_Left_2_1",
+      "Exoskeleton_Svoboda_Armor_rad_container_Left_2_2",
+      "Exoskeleton_Svoboda_Armor_rad_container_Left_3_1",
+      "Exoskeleton_Svoboda_Armor_protectionThermal_Left_1_2",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Exoskeleton_Svoboda_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_Exoskeleton_Svoboda_Armor.T_IFI_Exoskeleton_Svoboda_Armor'"
+      ],
+      "MeshPrototypeSID": [
+        "Exoskeleton_Svoboda_Armor"
+      ],
+      "BaseDurability": [
+        "845.0"
+      ],
+      "Weight": [
+        "10.5"
+      ],
+      "Cost": [
+        "95000.0"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "ArtifactSlots": [
+        "5"
+      ],
+      "bPreventFromLimping": [
+        "true"
+      ],
+      "ArmorSoundType": [
+        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Exoskeleton.ArmorType-Exoskeleton'"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "EffectPrototypeSIDs": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Rook_Dolg_Armor",
+    "category": "SUIT",
+    "faction": "DUTY",
+    "upgrades": [
+      "Rook_Dolg_Armor_protectionPhysical_Left_1_1",
+      "Rook_Dolg_Armor_protectionPhysical_Left_2_2",
+      "Rook_Dolg_Armor_reductionWeight_Left_1_2",
+      "Rook_Dolg_Armor_MaxDurability_Left_2_1",
+      "Rook_Dolg_Armor_protectionThermal_Left_1_1",
+      "Rook_Dolg_Armor_protectionRadiation_Left_1_2",
+      "Rook_Dolg_Armor_protectionElectrical_Left_2_1",
+      "Rook_Dolg_Armor_protectionChemical_Left_2_2",
+      "Rook_Dolg_Armor_regenerationStamina_Left_1_1",
+      "Rook_Dolg_Armor_container_Left_2_1"
+    ],
+    "fields": {
+      "SID": [
+        "Rook_Dolg_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_Rook_Dolg_Armor.T_IFI_Rook_Dolg_Armor'"
+      ],
+      "MeshPrototypeSID": [
+        "Rook_Dolg_Armor"
+      ],
+      "BaseDurability": [
+        "780.0"
+      ],
+      "Weight": [
+        "3.0"
+      ],
+      "Cost": [
+        "19100.0"
+      ],
+      "ArtifactSlots": [
+        "2"
+      ],
+      "ArmorSoundType": [
+        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Battle_Dolg_Armor",
+    "category": "SUIT",
+    "faction": "DUTY",
+    "upgrades": [
+      "Battle_Dolg_Armor_MaxDurability_Left_1_1",
+      "Battle_Dolg_Armor_protectionPhysical_Left_2_1",
+      "Battle_Dolg_Armor_protectionPhysical_Left_2_2",
+      "Battle_Dolg_Armor_regenerationStamina_Left_3_1",
+      "Battle_Dolg_Armor_protectionChemical_Left_1_1",
+      "Battle_Dolg_Armor_protectionThermal_Left_1_2",
+      "Battle_Dolg_Armor_protectionThermal_Left_2_1",
+      "Battle_Dolg_Armor_protectionThermal_protectionElectrical_Left_2_2",
+      "Battle_Dolg_Armor_protectionElectrical_Left_3_1",
+      "Battle_Dolg_Armor_protectionChemical_Left_3_2",
+      "Battle_Dolg_Armor_container_Left_1_2",
+      "Battle_Dolg_Armor_protectionRadiation_Left_1_1",
+      "Battle_Dolg_Armor_radiationAbsorption_Left_2_1",
+      "Battle_Dolg_Armor_regenerationStamina_Left_3_2"
+    ],
+    "fields": {
+      "SID": [
+        "Battle_Dolg_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_DOL_01.T_IFI_FOL_DOL_01'"
+      ],
+      "MeshPrototypeSID": [
+        "Battle_Dolg_Armor"
+      ],
+      "BaseDurability": [
+        "910.0"
+      ],
+      "Weight": [
+        "7.0"
+      ],
+      "Cost": [
+        "36500.0"
+      ],
+      "ArtifactSlots": [
+        "3"
+      ],
+      "ArmorSoundType": [
+        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "SEVA_Dolg_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "DUTY",
+    "upgrades": [
+      "SEVA_Dolg_Armor_protectionPhysical_Left_1_1",
+      "SEVA_Dolg_Armor_MaxDurability_Left_2_1",
+      "SEVA_Dolg_Armor_reductionWeight_Left_2_2",
+      "SEVA_Dolg_Armor_protectionPhysical_Left_3_1",
+      "SEVA_Dolg_Armor_protectionThermal_Left_1_1",
+      "SEVA_Dolg_Armor_protectionChemical_Left_2_1",
+      "SEVA_Dolg_Armor_protectionElectrical_Left_2_2",
+      "SEVA_Dolg_Armor_protectionRadiation_Left_3_1",
+      "SEVA_Dolg_Armor_PSY_Left_1_1",
+      "SEVA_Dolg_Armor_MaxDurability_Left_1_2",
+      "SEVA_Dolg_Armor_regenerationStamina_Left_2_1",
+      "SEVA_Dolg_Armor_Backpack_Left_2_2",
+      "SEVA_Dolg_Armor_container_Left_1_1",
+      "SEVA_Dolg_Armor_radiationAbsorption_Left_2_1",
+      "SEVA_Dolg_Armor_container_Left_3_1",
+      "SEVA_Dolg_Armor_carryingCapacity_Left_2_2",
+      "SEVA_Dolg_Armor_protectionRadiation_Left_3_2",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "SEVA_Dolg_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_SEVA_Dolg_Armor.T_IFI_SEVA_Dolg_Armor'"
+      ],
+      "MeshPrototypeSID": [
+        "SEVA_Dolg_Armor"
+      ],
+      "BaseDurability": [
+        "910.0"
+      ],
+      "Weight": [
+        "8.0"
+      ],
+      "Cost": [
+        "46000.0"
+      ],
+      "ArtifactSlots": [
+        "3"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "ArmorSoundType": [
+        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "EffectPrototypeSIDs": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Heavy_Dolg_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "DUTY",
+    "upgrades": [
+      "Heavy_Dolg_Armor_MaxDurability_Left_1_1",
+      "Heavy_Dolg_Armor_protectionPhysical_Left_2_1",
+      "Heavy_Dolg_Armor_reductionWeight_Left_2_2",
+      "Heavy_Dolg_Armor_protectionPhysical_Left_3_1",
+      "Heavy_Dolg_Armor_MaxDurability_Left_1_2",
+      "Heavy_Dolg_Armor_ProtectionChemical_Left_1_1",
+      "Heavy_Dolg_Armor_protectionThermal_Left_2_1",
+      "Heavy_Dolg_Armor_protectionElectrical_Left_2_2",
+      "Heavy_Dolg_Armor_protectionChemical_protectionElectrical_Left_3_1",
+      "Heavy_Dolg_Armor_protectionRadiation_Left_1_1",
+      "Heavy_Dolg_Armor_protectionRadiation_Left_2_1",
+      "Heavy_Dolg_Armor_regenerationStamina_Left_3_1",
+      "Heavy_Dolg_Armor_backpack_Left_3_2",
+      "Heavy_Dolg_Armor_container_Left_1_1",
+      "Heavy_Dolg_Armor_radiationAbsorption_Left_2_1",
+      "Heavy_Dolg_Armor_container_Left_3_1",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Heavy_Dolg_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_DOL_03.T_IFI_FOL_DOL_03'"
+      ],
+      "MeshPrototypeSID": [
+        "Heavy_Dolg_Armor"
+      ],
+      "BaseDurability": [
+        "1040.0"
+      ],
+      "Weight": [
+        "9.0"
+      ],
+      "Cost": [
+        "46000.0"
+      ],
+      "ArtifactSlots": [
+        "2"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "ArmorSoundType": [
+        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Heavy.ArmorType-Heavy'"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "EffectPrototypeSIDs": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "HeavyExoskeleton_Dolg_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "DUTY",
+    "upgrades": [
+      "HeavyExoskeleton_Dolg_Armor_EXOprotectionPhysical_Left_1_1",
+      "HeavyExoskeleton_Dolg_Armor_reductionWeight_Left_2_1",
+      "HeavyExoskeleton_Dolg_Armor_EXOMaxDurability_Left_3_1",
+      "HeavyExoskeleton_Dolg_Armor_Backpack_Left_3_2",
+      "HeavyExoskeleton_Dolg_Armor_protectionChemical_Left_1_1",
+      "HeavyExoskeleton_Dolg_Armor_protectionThermal_Left_1_2",
+      "HeavyExoskeleton_Dolg_Armor_protectionElectrical_Left_2_1",
+      "HeavyExoskeleton_Dolg_Armor_protectionThermal_protectionChemica_Left_3_1",
+      "HeavyExoskeleton_Dolg_Armor_protectionChemical_protectionElectrical_Left_3_2",
+      "HeavyExoskeleton_Dolg_Armor_EXOregenerationStamina_Left_1_1",
+      "HeavyExoskeleton_Dolg_Armor_protectionRadiation_Left_1_2",
+      "HeavyExoskeleton_Dolg_Armor_EXOMaxDurability_Left_2_1",
+      "HeavyExoskeleton_Dolg_Armor_protectionRadiation_Left_2_2",
+      "HeavyExoskeleton_Dolg_Armor_PSY_Left_3_2",
+      "HeavyExoskeleton_Dolg_Armor_container_Left_1_1",
+      "HeavyExoskeleton_Dolg_Armor_rad_container_Left_2_1",
+      "HeavyExoskeleton_Dolg_Armor_rad_container_Left_2_2",
+      "HeavyExoskeleton_Dolg_Armor_container_Left_3_1",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "HeavyExoskeleton_Dolg_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_HeavyExoskeleton_Dolg_Armor.T_IFI_HeavyExoskeleton_Dolg_Armor'"
+      ],
+      "MeshPrototypeSID": [
+        "HeavyExoskeleton_Dolg_Armor"
+      ],
+      "BaseDurability": [
+        "1170.0"
+      ],
+      "Weight": [
+        "20.0"
+      ],
+      "Cost": [
+        "63000.0"
+      ],
+      "ArtifactSlots": [
+        "3"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "bPreventFromLimping": [
+        "true"
+      ],
+      "ArmorSoundType": [
+        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Exoskeleton.ArmorType-Exoskeleton'"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "EffectPrototypeSIDs": [
+        "<struct>",
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Exoskeleton_Dolg_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "DUTY",
+    "upgrades": [
+      "Exoskeleton_Dolg_Armor_EXOprotectionPhysical_Left_1_1",
+      "Exoskeleton_Dolg_Armor_EXOMaxDurability_Left_2_1",
+      "Exoskeleton_Dolg_Armor_reductionWeight_Left_2_2",
+      "Exoskeleton_Dolg_Armor_EXOprotectionPhysical_Left_3_1",
+      "Exoskeleton_Dolg_Armor_protectionElectrical_Left_1_1",
+      "Exoskeleton_Dolg_Armor_protectionThermal_Left_1_2",
+      "Exoskeleton_Dolg_Armor_EXOMaxDurability_Left_2_2",
+      "Exoskeleton_Dolg_Armor_protectionThermal_protectionChemica_Left_3_1",
+      "Exoskeleton_Dolg_Armor_protectionChemical_protectionElectrical_Left_3_2",
+      "Exoskeleton_Dolg_Armor_EXOregenerationStamina_Right_1_1",
+      "Exoskeleton_Dolg_Armor_protectionRadiation_Left_1_2",
+      "Exoskeleton_Dolg_Armor_Backpack_Right_2_1",
+      "Exoskeleton_Dolg_Armor_protectionRadiation_Left_2_2",
+      "Exoskeleton_Dolg_Armor_PSY_Left_3_2",
+      "Exoskeleton_Dolg_Armor_container_Left_1_1",
+      "Exoskeleton_Dolg_Armor_container_Left_2_1",
+      "Exoskeleton_Dolg_Armor_rad_container_Left_2_2",
+      "Exoskeleton_Dolg_Armor_rad_container_Left_3_1",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Exoskeleton_Dolg_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_STA_05.T_IFI_FOL_STA_05'"
+      ],
+      "MeshPrototypeSID": [
+        "Exoskeleton_Dolg_Armor"
+      ],
+      "BaseDurability": [
+        "845.0"
+      ],
+      "Weight": [
+        "10.5"
+      ],
+      "Cost": [
+        "90000.0"
+      ],
+      "ArtifactSlots": [
+        "3"
+      ],
+      "bPreventFromLimping": [
+        "true"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "ArmorSoundType": [
+        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Exoskeleton.ArmorType-Exoskeleton'"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "EffectPrototypeSIDs": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Battle_Monolith_Armor",
+    "category": "SUIT",
+    "faction": "MONOLITH",
+    "upgrades": [
+      "Battle_Monolith_Armor_protectionPhysical_Left_1_1",
+      "Battle_Monolith_Armor_reductionWeight_Left_2_1",
+      "Battle_Monolith_Armor_MaxDurability_Left_2_2",
+      "Battle_Monolith_Armor_protectionPhysical_Left_3_1",
+      "Battle_Monolith_Armor_Backpack_Left_3_2",
+      "Battle_Monolith_Armor_protectionThermal_protectionElectrical_Left_1_2",
+      "Battle_Monolith_Armor_protectionThermal_protectionChemical_Left_1_1",
+      "Battle_Monolith_Armor_protectionElectrical_Left_2_1",
+      "Battle_Monolith_Armor_protectionThermal_Left_2_2",
+      "Battle_Monolith_Armor_protectionChemical_Left_3_1",
+      "Battle_Monolith_Armor_protectionRadiation_Left_1_1",
+      "Battle_Monolith_Armor_reductionWeight_Left_2_2",
+      "Battle_Monolith_Armor_regenerationStamina_Left_3_1",
+      "Battle_Monolith_Armor_container_Left_1_1",
+      "Battle_Monolith_Armor_container_Left_1_2",
+      "Battle_Monolith_Armor_protectionRadiation_Left_2_1",
+      "Battle_Monolith_Armor_rad_container_Left_3_1",
+      "Battle_Monolith_Armor_radiationAbsorption_Left_3_2",
+      "Battle_Monolith_Armor_rad_container_Left_3_2"
+    ],
+    "fields": {
+      "SID": [
+        "Battle_Monolith_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_MON_01.T_IFI_FOL_MON_01'"
+      ],
+      "MeshPrototypeSID": [
+        "Battle_Monolith_Armor"
+      ],
+      "ArmorSoundType": [
+        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
+      ],
+      "BaseDurability": [
+        "910.0"
+      ],
+      "Weight": [
+        "9.0"
+      ],
+      "Cost": [
+        "51000.0"
+      ],
+      "ArtifactSlots": [
+        "3"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "HeavyAnomaly_Monolith_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "MONOLITH",
+    "upgrades": [
+      "HeavyAnomaly_Monolith_Armor_protectionPhysical_Left_1_1",
+      "HeavyAnomaly_Monolith_Armor_MaxDurability_Left_2_1",
+      "HeavyAnomaly_Monolith_Armor_reductionWeight_Left_2_2",
+      "HeavyAnomaly_Monolith_Armor_protectionPhysical_Left_3_1",
+      "HeavyAnomaly_Monolith_Armor_protectionThermal_protectionElectrical_protectionChemical_Left_1_1",
+      "HeavyAnomaly_Monolith_Armor_protectionThermal_protectionChemical_Left_1_2",
+      "HeavyAnomaly_Monolith_Armor_protectionThermal_Left_2_1",
+      "HeavyAnomaly_Monolith_Armor_protectionRadiation_Left_3_1",
+      "HeavyAnomaly_Monolith_Armor_protectionRadiation_Left_1_1",
+      "HeavyAnomaly_Monolith_Armor_regenerationStamina_Left_2_1",
+      "HeavyAnomaly_Monolith_Armor_carryingCapacity_Left_2_2",
+      "HeavyAnomaly_Monolith_Armor_PSY_Left_3_1",
+      "HeavyAnomaly_Monolith_Armor_container_Left_1_1",
+      "HeavyAnomaly_Monolith_Armor_container_Left_1_2",
+      "HeavyAnomaly_Monolith_Armor_radiationAbsorption_Left_2_1",
+      "HeavyAnomaly_Monolith_Armor_radiationAbsorption_Left_2_2",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "HeavyAnomaly_Monolith_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_MON_04.T_IFI_FOL_MON_04'"
+      ],
+      "MeshPrototypeSID": [
+        "HeavyAnomaly_Monolith_Armor"
+      ],
+      "ArmorSoundType": [
+        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Heavy.ArmorType-Heavy'"
+      ],
+      "BaseDurability": [
+        "1040.0"
+      ],
+      "Weight": [
+        "10.0"
+      ],
+      "Cost": [
+        "57500.0"
+      ],
+      "ArtifactSlots": [
+        "3"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "EffectPrototypeSIDs": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "HeavyExoskeleton_Monolith_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "MONOLITH",
+    "upgrades": [
+      "HeavyExoskeleton_Monolith_Armor_pockets_Left_1_1",
+      "HeavyExoskeleton_Monolith_Armor_EXOprotectionPhysical_Left_2_1",
+      "HeavyExoskeleton_Monolith_Armor_reductionWeight_Left_2_2",
+      "HeavyExoskeleton_Monolith_Armor_EXOprotectionPhysical_Left_3_1",
+      "HeavyExoskeleton_Monolith_Armor_EXOregenerationStamina_Left_3_2",
+      "HeavyExoskeleton_Monolith_Armor_protectionChemical_Left_1_1",
+      "HeavyExoskeleton_Monolith_Armor_protectionThermal_Left_2_1",
+      "HeavyExoskeleton_Monolith_Armor_protectionElectrical_Left_2_2",
+      "HeavyExoskeleton_Monolith_Armor_protectionChemical_protectionTherma_Left_3_1",
+      "HeavyExoskeleton_Monolith_Armor_protectionChemical_protectionElectrical_Left_3_2",
+      "HeavyExoskeleton_Monolith_Armor_EXOMaxDurability_Right_1_1",
+      "HeavyExoskeleton_Monolith_Armor_protectionRadiation_Left_1_2",
+      "HeavyExoskeleton_Monolith_Armor_AddRunEffect_Right_2_1",
+      "HeavyExoskeleton_Monolith_Armor_accuracy_Right_3_1",
+      "HeavyExoskeleton_Monolith_Armor_protectionRadiation_Left_2_1",
+      "HeavyExoskeleton_Monolith_Armor_PSY_Left_2_2",
+      "HeavyExoskeleton_Monolith_Armor_PSY_Left_3_1",
+      "HeavyExoskeleton_Monolith_Armor_rad_container_Left_1_1",
+      "HeavyExoskeleton_Monolith_Armor_rad_container_Left_2_1",
+      "HeavyExoskeleton_Monolith_Armor_rad_container_Left_3_1",
+      "HeavyExoskeleton_Monolith_Armor_rad_container_Left_3_2",
+      "HeavyExoskeleton_Monolith_Armor_protectionChemical_protectionTherma_Left_3_2",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "HeavyExoskeleton_Monolith_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_HeavyExoskeleton_Monolith_Armor.T_IFI_HeavyExoskeleton_Monolith_Armor'"
+      ],
+      "MeshPrototypeSID": [
+        "HeavyExoskeleton_Monolith_Armor"
+      ],
+      "BaseDurability": [
+        "1170.0"
+      ],
+      "Weight": [
+        "20.0"
+      ],
+      "Cost": [
+        "69000.0"
+      ],
+      "ArtifactSlots": [
+        "5"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "bPreventFromLimping": [
+        "true"
+      ],
+      "ArmorSoundType": [
+        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Exoskeleton.ArmorType-Exoskeleton'"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "EffectPrototypeSIDs": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Exoskeleton_Monolith_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "MONOLITH",
+    "upgrades": [
+      "Exoskeleton_Monolith_Armor_EXOMaxDurability_Left_1_1",
+      "Exoskeleton_Monolith_Armor_EXOprotectionPhysical_Left_2_1",
+      "Exoskeleton_Monolith_Armor_reductionWeight_Left_2_2",
+      "Exoskeleton_Monolith_Armor_EXOprotectionPhysical_Left_3_1",
+      "Exoskeleton_Monolith_Armor_EXOregenerationStamina_Left_3_2",
+      "Exoskeleton_Monolith_Armor_protectionChemical_Left_1_1",
+      "Exoskeleton_Monolith_Armor_protectionThermal_Left_2_1",
+      "Exoskeleton_Monolith_Armor_protectionElectrical_Left_2_2",
+      "Exoskeleton_Monolith_Armor_protectionThermal_protectionChemica_Left_3_1",
+      "Exoskeleton_Monolith_Armor_protectionChemical_protectionElectrical_Left_3_2",
+      "Exoskeleton_Monolith_Armor_carryingCapacity_Right_1_1",
+      "Exoskeleton_Monolith_Armor_AddRunEffect_Right_2_1",
+      "Exoskeleton_Monolith_Armor_protectionRadiation_Left_1_2",
+      "Exoskeleton_Monolith_Armor_protectionRadiation_Left_2_1",
+      "Exoskeleton_Monolith_Armor_PSY_Left_2_2",
+      "Exoskeleton_Monolith_Armor_PSY_Left_3_1",
+      "Exoskeleton_Monolith_Armor_rad_container_Left_1_1",
+      "Exoskeleton_Monolith_Armor_rad_container_Left_2_1",
+      "Exoskeleton_Monolith_Armor_rad_container_Left_3_1",
+      "Exoskeleton_Monolith_Armor_rad_container_Left_3_2",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Exoskeleton_Monolith_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_Exoskeleton_Monolith_Armor.T_IFI_Exoskeleton_Monolith_Armor'"
+      ],
+      "MeshPrototypeSID": [
+        "Exoskeleton_Monolith_Armor"
+      ],
+      "BaseDurability": [
+        "845.0"
+      ],
+      "Weight": [
+        "10.5"
+      ],
+      "Cost": [
+        "68000.0"
+      ],
+      "ArtifactSlots": [
+        "5"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "bPreventFromLimping": [
+        "true"
+      ],
+      "ArmorSoundType": [
+        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Exoskeleton.ArmorType-Exoskeleton'"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "EffectPrototypeSIDs": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Battle_Varta_Armor",
+    "category": "SUIT",
+    "faction": "WARD",
+    "upgrades": [
+      "Battle_Varta_Armor_wearing_Left_1_1",
+      "Battle_Varta_Armor_reductionWeight_Left_1_2",
+      "Battle_Varta_Armor_protectionPhysical_Left_2_1",
+      "Battle_Varta_Armor_wearing2_Left_2_2",
+      "Battle_Varta_Armor_wearing3_Left_3_1",
+      "Battle_Varta_Armor_protectionThermal_Left_1_1",
+      "Battle_Varta_Armor_protectionChemical_Left_1_2",
+      "Battle_Varta_Armor_protectionThermal_protectionElectrical_Left_2_1",
+      "Battle_Varta_Armor_protectionRadiation_Left_2_2",
+      "Battle_Varta_Armor_protectionRadiation2_Left_3_1",
+      "Battle_Varta_Armor_regenerationStamina_Left_1_1",
+      "Battle_Varta_Armor_container_Left_1_1",
+      "Battle_Varta_Armor_protectionPhysical2_Left_3_2"
+    ],
+    "fields": {
+      "SID": [
+        "Battle_Varta_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_WAR_01.T_IFI_FOL_WAR_01'"
+      ],
+      "MeshPrototypeSID": [
+        "Battle_Varta_Armor"
+      ],
+      "ArmorSoundType": [
+        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
+      ],
+      "BaseDurability": [
+        "910.0"
+      ],
+      "Weight": [
+        "8.0"
+      ],
+      "Cost": [
+        "37500.0"
+      ],
+      "ArtifactSlots": [
+        "2"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "BattleExoskeleton_Varta_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "WARD",
+    "upgrades": [
+      "BattleExoskeleton_Varta_Armor_reductionWeight_Left_1_1",
+      "BattleExoskeleton_Varta_Armor_EXOprotectionPhysical_Left_2_2",
+      "BattleExoskeleton_Varta_Armor_EXOMaxDurability_Left_2_1",
+      "BattleExoskeleton_Varta_Armor_EXOprotectionPhysical_Left_3_1",
+      "BattleExoskeleton_Varta_Armor_carryingCapacity_Left_3_2",
+      "BattleExoskeleton_Varta_Armor_protectionElectrical_Left_1_1",
+      "BattleExoskeleton_Varta_Armor_protectionChemical_Left_2_1",
+      "BattleExoskeleton_Varta_Armor_protectionThermal_Left_2_2",
+      "BattleExoskeleton_Varta_Armor_protectionThermal_Left_3_2",
+      "BattleExoskeleton_Varta_Armor_protectionChemical_protectionElectrical_Left_3_1",
+      "BattleExoskeleton_Varta_Armor_AddRunEffect_Left_1_1",
+      "BattleExoskeleton_Varta_Armor_EXOregenerationStamina_Left_2_1",
+      "BattleExoskeleton_Varta_Armor_EXOMaxDurability_Left_2_2",
+      "BattleExoskeleton_Varta_Armor_accuracy_Left_3_1",
+      "BattleExoskeleton_Varta_Armor_protectionRadiation_Right_1_1",
+      "BattleExoskeleton_Varta_Armor_protectionRadiation_Right_2_1",
+      "BattleExoskeleton_Varta_Armor_rad_container_Left_1_2",
+      "BattleExoskeleton_Varta_Armor_rad_container_Left_1_1",
+      "BattleExoskeleton_Varta_Armor_rad_container_Left_2_2",
+      "BattleExoskeleton_Varta_Armor_rad_container_Left_2_1",
+      "BattleExoskeleton_Varta_Armor_container_Left_3_1",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "BattleExoskeleton_Varta_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_BattleExoskeleton_Varta_Armor.T_IFI_BattleExoskeleton_Varta_Armor'"
+      ],
+      "MeshPrototypeSID": [
+        "BattleExoskeleton_Varta_Armor"
+      ],
+      "BaseDurability": [
+        "1170.0"
+      ],
+      "Weight": [
+        "10.5"
+      ],
+      "Cost": [
+        "62500.0"
+      ],
+      "ArtifactSlots": [
+        "4"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "bPreventFromLimping": [
+        "true"
+      ],
+      "ArmorSoundType": [
+        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Exoskeleton.ArmorType-Exoskeleton'"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "EffectPrototypeSIDs": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Battle_Spark_Armor",
+    "category": "SUIT",
+    "faction": "SPARK",
+    "upgrades": [
+      "Battle_Spark_Armor_MaxDurability_Left_1_1",
+      "Battle_Spark_Armor_protectionPhysical_Left_2_1",
+      "Battle_Spark_Armor_reductionWeight_Left_2_2",
+      "Battle_Spark_Armor_protectionRadiation_Left_3_1",
+      "Battle_Spark_Armor_protectionRadiation_Left_3_2",
+      "Battle_Spark_Armor_protectionChemical_Left_1_1",
+      "Battle_Spark_Armor_protectionThermal_Left_2_2",
+      "Battle_Spark_Armor_protectionThermal_protectionElectrical_Left_2_1",
+      "Battle_Spark_Armor_protectionThermal_protectionElectrical_Left_3_1",
+      "Battle_Spark_Armor_protectionChemical_protectionElectrical_Left_3_2",
+      "Battle_Spark_Armor_container_Left_1_2",
+      "Battle_Spark_Armor_radiationAbsorption_Left_1_1",
+      "Battle_Spark_Armor_container_Left_2_1",
+      "Battle_Spark_Armor_radiationAbsorption_Left_2_2",
+      "Battle_Spark_Armor_regenerationStamina_Left_3_1"
+    ],
+    "fields": {
+      "SID": [
+        "Battle_Spark_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_Battle_Spark_Armor.T_IFI_Battle_Spark_Armor'"
+      ],
+      "MeshPrototypeSID": [
+        "Battle_Spark_Armor"
+      ],
+      "ArmorSoundType": [
+        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
+      ],
+      "BaseDurability": [
+        "910.0"
+      ],
+      "Weight": [
+        "7.0"
+      ],
+      "Cost": [
+        "41000.0"
+      ],
+      "ArtifactSlots": [
+        "2"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "HeavyAnomaly_Spark_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "SPARK",
+    "upgrades": [
+      "HeavyAnomaly_Spark_Armor_MaxDurability_Left_1_1",
+      "HeavyAnomaly_Spark_Armor_carryingCapacity_Left_2_1",
+      "HeavyAnomaly_Spark_Armor_reductionWeight_Left_2_2",
+      "HeavyAnomaly_Spark_Armor_protectionPhysical_Left_3_1",
+      "HeavyAnomaly_Spark_Armor_ProtectionChemical_Left_1_1",
+      "HeavyAnomaly_Spark_Armor_protectionElectrical_Left_1_2",
+      "HeavyAnomaly_Spark_Armor_protectionThermal_protectionChemical_Left_2_1",
+      "HeavyAnomaly_Spark_Armor_protectionThermal_protectionElectrical_Left_3_1",
+      "HeavyAnomaly_Spark_Armor_regenerationStamina_Left_3_2",
+      "HeavyAnomaly_Spark_Armor_protectionRadiation_Left_1_1",
+      "HeavyAnomaly_Spark_Armor_PSY_Left_1_2",
+      "HeavyAnomaly_Spark_Armor_rad_PSY_Left_2_1",
+      "HeavyAnomaly_Spark_Armor_protectionThermal_protectionChemical_Left_3_1",
+      "HeavyAnomaly_Spark_Armor_container_Left_1_1",
+      "HeavyAnomaly_Spark_Armor_container_radconsume_Left_2_1",
+      "HeavyAnomaly_Spark_Armor_container_radconsume_Left_3_1",
+      "HeavyAnomaly_Spark_Armor_container_radconsume_Left_3_2",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "HeavyAnomaly_Spark_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_HeavyAnomaly_Scientific_Armor.T_IFI_HeavyAnomaly_Scientific_Armor'"
+      ],
+      "MeshPrototypeSID": [
+        "HeavyAnomaly_Spark_Armor"
+      ],
+      "ArmorSoundType": [
+        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Heavy.ArmorType-Heavy'"
+      ],
+      "BaseDurability": [
+        "1170.0"
+      ],
+      "Weight": [
+        "10.0"
+      ],
+      "Cost": [
+        "42500.0"
+      ],
+      "ArtifactSlots": [
+        "4"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "EffectPrototypeSIDs": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "SEVA_Spark_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "SPARK",
+    "upgrades": [
+      "SEVA_Spark_Armor_protectionPhysical_Left_1_1",
+      "SEVA_Spark_Armor_MaxDurability_Left_2_1",
+      "SEVA_Spark_Armor_reductionWeight_Left_2_2",
+      "SEVA_Spark_Armor_carryingCapacity_Left_3_1",
+      "SEVA_Spark_Armor_protectionThermal_protectionElectrical_protectionChemical_Left_1_1",
+      "SEVA_Spark_Armor_protectionThermal_protectionElectrical_Left_1_2",
+      "SEVA_Spark_Armor_protectionChemical_protectionElectrical_Left_2_1",
+      "SEVA_Spark_Armor_protectionThermal_protectionElectrical_Left_2_2",
+      "SEVA_Spark_Armor_PSY_Left_3_1",
+      "SEVA_Spark_Armor_protectionRadiation_Left_1_1",
+      "SEVA_Spark_Armor_protectionPhysical_Left_2_1",
+      "SEVA_Spark_Armor_container_Left_2_2",
+      "SEVA_Spark_Armor_PSY_Left_3_2",
+      "SEVA_Spark_Armor_container_Left_1_1",
+      "SEVA_Spark_Armor_radiationAbsorption_Left_2_1",
+      "SEVA_Spark_Armor_protectionRadiation_Left_2_2",
+      "SEVA_Spark_Armor_radiationAbsorption_Left_3_1",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "SEVA_Spark_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_SEVA_Spark_Armor.T_IFI_SEVA_Spark_Armor'"
+      ],
+      "MeshPrototypeSID": [
+        "SEVA_Spark_Armor"
+      ],
+      "ArmorSoundType": [
+        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
+      ],
+      "BaseDurability": [
+        "910.0"
+      ],
+      "Weight": [
+        "8.0"
+      ],
+      "Cost": [
+        "50000.0"
+      ],
+      "ArtifactSlots": [
+        "3"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "EffectPrototypeSIDs": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "HeavyBattle_Spark_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "SPARK",
+    "upgrades": [
+      "HeavyBattle_Spark_Armor_protectionPhysical_Left_1_1",
+      "HeavyBattle_Spark_Armor_MaxDurability_Left_1_2",
+      "HeavyBattle_Spark_Armor_protectionPhysical_Left_2_1",
+      "HeavyBattle_Spark_Armor_reductionWeight_Left_2_2",
+      "HeavyBattle_Spark_Armor_carryingCapacity_Left_3_1",
+      "HeavyBattle_Spark_Armor_MaxDurability_Left_1_1",
+      "HeavyBattle_Spark_Armor_protectionThermal_Left_1_2",
+      "HeavyBattle_Spark_Armor_protectionChemical_protectionTherma_Left_2_1",
+      "HeavyBattle_Spark_Armor_protectionThermal_protectionElectrical_Left_2_2",
+      "HeavyBattle_Spark_Armor_protectionChemical_protectionElectrical_Left_3_1",
+      "HeavyBattle_Spark_Armor_ProtectionChemical_Left_3_2",
+      "HeavyBattle_Spark_Armor_protectionRadiation_Left_1_1",
+      "HeavyBattle_Spark_Armor_protectionRadiation_Left_2_1",
+      "HeavyBattle_Spark_Armor_PSY_Left_2_2",
+      "HeavyBattle_Spark_Armor_PSY_Left_3_1",
+      "HeavyBattle_Spark_Armor_container_Left_1_1",
+      "HeavyBattle_Spark_Armor_container_Left_2_1",
+      "HeavyBattle_Spark_Armor_rad_container_Left_2_2",
+      "HeavyBattle_Spark_Armor_radiationAbsorption_Left_3_1",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "HeavyBattle_Spark_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_HeavyBattle_Spark_Armor.T_IFI_HeavyBattle_Spark_Armor'"
+      ],
+      "MeshPrototypeSID": [
+        "HeavyBattle_Spark_Armor"
+      ],
+      "ArmorSoundType": [
+        "/Script/AkAudio.AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Heavy.ArmorType-Heavy'"
+      ],
+      "BaseDurability": [
+        "1040.0"
+      ],
+      "Weight": [
+        "9.0"
+      ],
+      "Cost": [
+        "53500.0"
+      ],
+      "ArtifactSlots": [
+        "3"
+      ],
+      "bBlockHead": [
+        "true"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "EffectPrototypeSIDs": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ],
+      "NpcMeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Battle_Dolg_End_Armor",
+    "category": "FULL_BODY_SUIT",
+    "faction": "DUTY",
+    "upgrades": [],
+    "fields": {
+      "SID": [
+        "Battle_Dolg_End_Armor"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_Battle_Dolg_End_Armor.T_IFI_Battle_Dolg_End_Armor'"
+      ],
+      "MeshPrototypeSID": [
+        "Battle_Dolg_End_Armor"
+      ],
+      "BaseDurability": [
+        "1170.0"
+      ],
+      "Weight": [
+        "4"
+      ],
+      "Cost": [
+        "80000.0"
+      ],
+      "ArtifactSlots": [
+        "2"
+      ],
+      "ArmorSoundType": [
+        "AkSwitchValue'/Game/_STALKER2/Audio/WwiseAudio/Switches/Human/ArmorType/ArmorType-Medium.ArmorType-Medium'"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ],
+      "MeshGenerator": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Light_Duty_Helmet",
+    "category": "HELMET",
+    "faction": "DUTY",
+    "upgrades": [
+      "Light_Duty_Helmet_Armor_protectionRadiation_Left_1_1",
+      "Light_Duty_Helmet_Armor_wearing_Left_1_2",
+      "Light_Duty_Helmet_Armor_protectionRadiation2_Left_1_1",
+      "Light_Duty_Helmet_Armor_protectionPhysical_Left_1_2",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Light_Duty_Helmet"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_FAC__20_00_MAS_01.T_IFI_FOL_FAC__20_00_MAS_01'"
+      ],
+      "MeshPrototypeSID": [
+        "Light_Duty_Helmet"
+      ],
+      "BaseDurability": [
+        "650.0"
+      ],
+      "Weight": [
+        "2.0"
+      ],
+      "Cost": [
+        "12300.0"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Heavy_Duty_Helmet",
+    "category": "HELMET",
+    "faction": "DUTY",
+    "upgrades": [
+      "Heavy_Duty_Helmet_protectionPhysical_Left_1_1",
+      "Heavy_Duty_Helmet_reductionWeight_Left_1_2",
+      "Heavy_Duty_Helmet_MaxDurability_Left_2_1",
+      "Heavy_Duty_Helmet_protectionPhysical_Left_2_2",
+      "Heavy_Duty_Helmet_protectionPhysical_Left_3_1",
+      "Heavy_Duty_Helmet_protectionThermal_Left_1_1",
+      "Heavy_Duty_Helmet_protectionChemical_protectionElectrical_Left_2_1",
+      "Heavy_Duty_Helmet_MaxDurability_Left_3_1",
+      "Heavy_Duty_Helmet_protectionRadiation_Left_1_1",
+      "Heavy_Duty_Helmet_protectionRadiation_Left_1_2",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Heavy_Duty_Helmet"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_Heavy_Duty_Helmet.T_IFI_Heavy_Duty_Helmet'"
+      ],
+      "MeshPrototypeSID": [
+        "Heavy_Duty_Helmet"
+      ],
+      "BaseDurability": [
+        "780.0"
+      ],
+      "Weight": [
+        "3.0"
+      ],
+      "Cost": [
+        "25800.0"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Heavy_Svoboda_Helmet",
+    "category": "HELMET",
+    "faction": "FREEDOM",
+    "upgrades": [
+      "Heavy_Svoboda_Helmet_protectionPhysical_Left_1_1",
+      "Heavy_Svoboda_Helmet_reductionWeight_Left_1_2",
+      "Heavy_Svoboda_Helmet_MaxDurability_Left_2_1",
+      "Heavy_Svoboda_Helmet_protectionPhysical_Left_2_2",
+      "Heavy_Svoboda_Helmet_protectionPhysical_Left_3_1",
+      "Heavy_Svoboda_Helmet_protectionElectrical_Left_1_1",
+      "Heavy_Svoboda_Helmet_protectionChemical_Left_2_1",
+      "Heavy_Svoboda_Helmet_protectionThermal_Left_2_2",
+      "Heavy_Svoboda_Helmet_protectionChemical_protectionTherma_Left_3_1",
+      "Heavy_Svoboda_Helmet_protectionRadiation_Left_1_1",
+      "Heavy_Svoboda_Helmet_protectionRadiation_Left_2_1",
+      "Heavy_Svoboda_Helmet_PSY_Left_2_2",
+      "Heavy_Svoboda_Helmet_protectionChemical_protectionElectrical_Left_3_1",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Heavy_Svoboda_Helmet"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_Heavy_Svoboda_Helmet.T_IFI_Heavy_Svoboda_Helmet'"
+      ],
+      "MeshPrototypeSID": [
+        "Heavy_Svoboda_Helmet"
+      ],
+      "BaseDurability": [
+        "780.0"
+      ],
+      "Weight": [
+        "3.0"
+      ],
+      "Cost": [
+        "32600.0"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Heavy_Varta_Helmet",
+    "category": "HELMET",
+    "faction": "WARD",
+    "upgrades": [
+      "Heavy_Varta_Helmet_protectionPhysical_Left_1_1",
+      "Heavy_Varta_Helmet_reductionWeight_Left_1_2",
+      "Heavy_Varta_Helmet_MaxDurability_Left_2_1",
+      "Heavy_Varta_Helmet_protectionChemical_Left_1_1",
+      "Heavy_Varta_Helmet_protectionThermal_Left_2_1",
+      "Heavy_Varta_Helmet_protectionElectrical_Left_2_2",
+      "Heavy_Varta_Helmet_protectionRadiation_Left_1_1",
+      "Heavy_Varta_Helmet_PSY_Left_1_2",
+      "Heavy_Varta_Helmet_rad_PSY_Left_2_1",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Heavy_Varta_Helmet"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_FAC_30_08_MAS_03.T_IFI_FOL_FAC_30_08_MAS_03'"
+      ],
+      "MeshPrototypeSID": [
+        "Heavy_Varta_Helmet"
+      ],
+      "BaseDurability": [
+        "780.0"
+      ],
+      "Weight": [
+        "3.0"
+      ],
+      "Cost": [
+        "18000.0"
+      ],
+      "VoiceModulatorSID": [
+        "Gasmask"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Heavy_Military_Helmet",
+    "category": "HELMET",
+    "faction": "MILITARY",
+    "upgrades": [
+      "Heavy_Military_Helmet_protectionPhysical_Left_1_1",
+      "Heavy_Military_Helmet_reductionWeight_Left_1_2",
+      "Heavy_Military_Helmet_MaxDurability_Left_2_1",
+      "Heavy_Military_Helmet_protectionPhysical_Left_2_2",
+      "Heavy_Military_Helmet_MaxDurability_Left_3_1",
+      "Heavy_Military_Helmet_protectionChemical_Left_1_1",
+      "Heavy_Military_Helmet_protectionThermal_Left_1_2",
+      "Heavy_Military_Helmet_protectionChemical_protectionTherma_Left_2_1",
+      "Heavy_Military_Helmet_protectionElectrical_Left_3_1",
+      "Heavy_Military_Helmet_protectionRadiation_Left_1_1",
+      "Heavy_Military_Helmet_PSY_Left_1_2",
+      "Heavy_Military_Helmet_protectionRadiation_Left_2_2",
+      "Heavy_Military_Helmet_PSY_Left_2_1",
+      "Heavy_Military_Helmet_rad_PSY_Left_3_1",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Heavy_Military_Helmet"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_HEA_MIL_04_b_FAC_30_04.T_IFI_FOL_HEA_MIL_04_b_FAC_30_04'"
+      ],
+      "MeshPrototypeSID": [
+        "Heavy_Military_Helmet"
+      ],
+      "BaseDurability": [
+        "780.0"
+      ],
+      "Weight": [
+        "3.0"
+      ],
+      "Cost": [
+        "36300.0"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Light_Mercenaries_Helmet",
+    "category": "HELMET",
+    "faction": "MERCENARY",
+    "upgrades": [
+      "Light_Mercenaries_Helmet_Armor_protectionRadiation_Left_1_1",
+      "Light_Mercenaries_Helmet_Armor_wearing_Left_1_2",
+      "Light_Mercenaries_Helmet_Armor_protectionThermal_Left_1_1",
+      "Light_Mercenaries_Helmet_Armor_protectionChemical_Left_1_1",
+      "Light_Mercenaries_Helmet_Armor_protectionRadiation2_Left_1_1",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Light_Mercenaries_Helmet"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_HEA_MER_01_b_FAC_30_04.T_IFI_FOL_HEA_MER_01_b_FAC_30_04'"
+      ],
+      "MeshPrototypeSID": [
+        "Light_Mercenaries_Helmet"
+      ],
+      "BaseDurability": [
+        "780.0"
+      ],
+      "Weight": [
+        "2.0"
+      ],
+      "Cost": [
+        "19800.0"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Light_Military_Helmet",
+    "category": "HELMET",
+    "faction": "MILITARY",
+    "upgrades": [
+      "Light_Military_Helmet_Armor_protectionRadiation_Left_1_1",
+      "Light_Military_Helmet_Armor_wearing_Left_1_2",
+      "Light_Military_Helmet_Armor_protectionPhysical_Left_1_2",
+      "Light_Military_Helmet_Armor_protectionRadiation2_Left_1_1",
+      "Light_Military_Helmet_armor_protectionPsi_Right_1_1",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Light_Military_Helmet"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_HEA_MIL_04_b_FAC_30_05.T_IFI_FOL_HEA_MIL_04_b_FAC_30_05'"
+      ],
+      "MeshPrototypeSID": [
+        "Light_Military_Helmet"
+      ],
+      "BaseDurability": [
+        "650.0"
+      ],
+      "Weight": [
+        "2.0"
+      ],
+      "Cost": [
+        "16100.0"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Battle_Military_Helmet",
+    "category": "HELMET",
+    "faction": "MILITARY",
+    "upgrades": [
+      "Battle_Military_Helmet_protectionPhysical_Left_1_1",
+      "Battle_Military_Helmet_reductionWeight_Left_1_2",
+      "Battle_Military_Helmet_MaxDurability_Left_2_1",
+      "Battle_Military_Helmet_protectionPhysical_Left_2_2",
+      "Battle_Military_Helmet_protectionPhysical_Left_3_1",
+      "Battle_Military_Helmet_protectionChemical_Left_1_1",
+      "Battle_Military_Helmet_protectionElectrical_Left_1_2",
+      "Battle_Military_Helmet_protectionChemical_protectionElectrical_Left_2_2",
+      "Battle_Military_Helmet_protectionChemical_protectionTherma_Left_2_1",
+      "Battle_Military_Helmet_protectionThermal_Left_3_1",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Battle_Military_Helmet"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_HEA_MIL_04_a_FAC_30_02.T_IFI_FOL_HEA_MIL_04_a_FAC_30_02'"
+      ],
+      "MeshPrototypeSID": [
+        "Battle_Military_Helmet"
+      ],
+      "BaseDurability": [
+        "780.0"
+      ],
+      "Weight": [
+        "3.0"
+      ],
+      "Cost": [
+        "24700.0"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Light_Bandit_Helmet",
+    "category": "HELMET",
+    "faction": "BANDIT",
+    "upgrades": [
+      "Light_Bandit_Helmet_Armor_protectionRadiation_Left_1_1",
+      "Light_Bandit_Helmet_Armor_wearing_Left_1_2",
+      "Light_Bandit_Helmet_Armor_protectionThermal_Left_1_2",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Light_Bandit_Helmet"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_FAC_30_08_MAS_04.T_IFI_FOL_FAC_30_08_MAS_04'"
+      ],
+      "MeshPrototypeSID": [
+        "Light_Bandit_Helmet"
+      ],
+      "BaseDurability": [
+        "650.0"
+      ],
+      "Weight": [
+        "2.0"
+      ],
+      "Cost": [
+        "7500.0"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Light_Neutral_Helmet",
+    "category": "HELMET",
+    "faction": "FREE_STALKER",
+    "upgrades": [
+      "Light_Neutral_Helmet_Armor_protectionRadiation_Left_1_1",
+      "Light_Neutral_Helmet_Armor_protectionThermal_Left_2_1",
+      "Light_Neutral_Helmet_Armor_protectionElectrical_Left_2_2",
+      "Light_Neutral_Helmet_Armor_wearing_Left_3_1",
+      "FaustPsyResist_Quest_1_1"
+    ],
+    "fields": {
+      "SID": [
+        "Light_Neutral_Helmet"
+      ],
+      "Icon": [
+        "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/Armor/T_IFI_FOL_HEA_STA_03_d_FAC_30_04.T_IFI_FOL_HEA_STA_03_d_FAC_30_04'"
+      ],
+      "MeshPrototypeSID": [
+        "Light_Neutral_Helmet"
+      ],
+      "BaseDurability": [
+        "650.0"
+      ],
+      "Weight": [
+        "2.0"
+      ],
+      "Cost": [
+        "10500.0"
+      ],
+      "Protection": [
+        "<struct>"
+      ],
+      "ProtectionNPC": [
+        "<struct>"
+      ],
+      "UpgradePrototypeSIDs": [
+        "<struct>"
+      ],
+      "SectionSettings": [
+        "<struct>"
+      ]
+    }
+  },
+  {
+    "sid": "Anomaly_Scientific_Armor_PSY_preinstalled",
+    "category": "FULL_BODY_SUIT",
+    "faction": "ECOLOGIST",
+    "upgrades": [],
+    "fields": {
+      "SID": [
+        "Anomaly_Scientific_Armor_PSY_preinstalled"
+      ],
+      "LocalizationSID": [
+        "Anomaly_Scientific_Armor"
+      ],
+      "PreinstalledUpgrades": [
+        "<struct>"
+      ]
+    }
+  }
+]

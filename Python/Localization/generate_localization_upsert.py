@@ -4,20 +4,14 @@ import unreal
 
 ASSET_PATH = "/BPRUpgradesExpanded/Localization/L_BPRUpgradesExpanded"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-LOCALIZATION_FILES = (
-    os.path.join(SCRIPT_DIR, "Blueprint_Localization.json"),
-    os.path.join(SCRIPT_DIR, "Conversion_Localization.json"),
-    os.path.join(SCRIPT_DIR, "Weapon_Module_Localization.json"),
-    os.path.join(SCRIPT_DIR, "Kora_Localization.json"),
-    os.path.join(SCRIPT_DIR, "MachineGun_Localization.json"),
-    os.path.join(SCRIPT_DIR, "Shared_Specialization_Localization.json"),
-    os.path.join(SCRIPT_DIR, "Stock_Localization.json"),
-    os.path.join(SCRIPT_DIR, "Effect_Localization.json"),
-    os.path.join(SCRIPT_DIR, "Unique_Localization.json"),
-    os.path.join(SCRIPT_DIR, "Unique_Sniper_Localization.json"),
-    os.path.join(SCRIPT_DIR, "Unique_MachineGun_Localization.json"),
-    os.path.join(SCRIPT_DIR, "DLC1_Localization.json"),
-)
+REQUIRED_LANGUAGES = ("English", "Russian", "ChineseSimplified")
+
+def localization_files():
+    return tuple(
+        os.path.join(SCRIPT_DIR, name)
+        for name in sorted(os.listdir(SCRIPT_DIR))
+        if name.endswith("_Localization.json")
+    )
 
 def log(message): unreal.log(f"[BlueprintLocalization] {message}")
 def escape_unreal_string(value): return str(value).replace("\\", "\\\\").replace('"', '\\"').replace("\r", "").replace("\n", "\\n")
@@ -36,6 +30,12 @@ def read_localization_files(paths):
             if not isinstance(languages,dict) or not languages: raise RuntimeError(f"Entry '{sid}' has no valid languages object.")
             normalized_languages={str(language).strip():str(text) for language,text in languages.items() if str(language).strip()}
             if len(normalized_languages)!=len(languages): raise RuntimeError(f"Entry '{sid}' contains an empty language key.")
+            missing_languages=[language for language in REQUIRED_LANGUAGES if not normalized_languages.get(language, "").strip()]
+            if missing_languages:
+                raise RuntimeError(
+                    f"Entry '{sid}' in {os.path.basename(path)} is missing required localization: "
+                    + ", ".join(missing_languages)
+                )
             normalized.append({"sid":sid,"languages":normalized_languages}); seen.add(sid)
         log(f"Read {len(entries)} entries from {os.path.basename(path)}")
     return normalized
@@ -114,7 +114,7 @@ def verify_saved_asset(source_entries):
     return len(saved_texts)
 
 log("========================================"); log("Starting localization UPSERT")
-entries=read_localization_files(LOCALIZATION_FILES); asset=unreal.load_asset(ASSET_PATH)
+entries=read_localization_files(localization_files()); asset=unreal.load_asset(ASSET_PATH)
 if asset is None: raise RuntimeError(f"Could not load localization asset: {ASSET_PATH}")
 localized_texts=asset.get_editor_property("LocalizedTexts"); existing_count=len(localized_texts)
 if existing_count==0: raise RuntimeError("LocalizedTexts is empty. Create one temporary localization entry manually before running the importer.")

@@ -12,31 +12,22 @@ LOCALIZATION_DIR = Path(__file__).resolve().parent
 REPORT_DIR = PYTHON_ROOT / "Analysis" / "Reports"
 sys.path.insert(0, str(PYTHON_ROOT))
 
-from generate_all_cfg import build_dlc_outputs, build_model
+from generate_all_cfg import build_dlc_outputs, build_edition_outputs, build_model
 
-LOCALIZATION_FILES = (
-    LOCALIZATION_DIR / "Blueprint_Localization.json",
-    LOCALIZATION_DIR / "Conversion_Localization.json",
-    LOCALIZATION_DIR / "Weapon_Module_Localization.json",
-    LOCALIZATION_DIR / "Kora_Localization.json",
-    LOCALIZATION_DIR / "MachineGun_Localization.json",
-    LOCALIZATION_DIR / "Shared_Specialization_Localization.json",
-    LOCALIZATION_DIR / "Stock_Localization.json",
-    LOCALIZATION_DIR / "Effect_Localization.json",
-    LOCALIZATION_DIR / "Unique_Localization.json",
-    LOCALIZATION_DIR / "Unique_Sniper_Localization.json",
-    LOCALIZATION_DIR / "Unique_MachineGun_Localization.json",
-    LOCALIZATION_DIR / "DLC1_Localization.json",
-)
-REQUIRED_LANGUAGES = ("English", "Russian")
+def localization_files() -> tuple[Path, ...]:
+    return tuple(sorted(LOCALIZATION_DIR.glob("*_Localization.json")))
+
+REQUIRED_LANGUAGES = ("English", "Russian", "ChineseSimplified")
 VANILLA_EFFECTS = PYTHON_ROOT / "VanillaReference" / "EffectPrototypes.cfg"
 VANILLA_UI_PATCH = REPO_ROOT / "GameLite/GameData/EffectPrototypes/EffectPrototypes_patch_BPRUE_UI.cfg"
+ARMOR_EFFECT_PATCH = REPO_ROOT / "Armor/GameLite/GameData/EffectPrototypes/EffectPrototypes_patch_BPRUE_Armor.cfg"
 BPRUE_EFFECT_DIR = REPO_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes"
 DLC_EFFECT_ROOT = REPO_ROOT / "GameLite/DLCGameData"
+EDITION_EFFECT_ROOT = REPO_ROOT / "Editions/GameLite/DLCGameData"
 ASSET_SNAPSHOT = REPORT_DIR / "localization_asset_snapshot.json"
 
 EFFECT_SID_RE = re.compile(r"^\s*LocalizationSID\s*=\s*([A-Za-z0-9_]+)\s*$", re.MULTILINE)
-BPRUE_TEXT_SID_RE = re.compile(r"\\b(?:sid_bprue|sid_item_bprue)_[A-Za-z0-9_]+\\b", re.IGNORECASE)
+BPRUE_TEXT_SID_RE = re.compile(r"\b(?:sid_bprue|sid_item_bprue)_[A-Za-z0-9_]+\b", re.IGNORECASE)
 SHOW_RE = re.compile(r"^\s*ShowUpgradeEffect\s*=\s*(true|false)\s*$", re.MULTILINE | re.IGNORECASE)
 REFKEY_RE = re.compile(r"\brefkey=([^}\s]+)")
 PROTOTYPE_RE = re.compile(r"(?ms)^([A-Za-z0-9_]+)\s*:\s*struct\.begin([^\n]*)\n(.*?)^struct\.end")
@@ -44,7 +35,7 @@ PROTOTYPE_RE = re.compile(r"(?ms)^([A-Za-z0-9_]+)\s*:\s*struct\.begin([^\n]*)\n(
 
 def load_localization() -> tuple[set[str], dict[str, dict[str, str]], list[dict]]:
     result: set[str] = set(); source_entries: dict[str, dict[str, str]] = {}; duplicates: set[str] = set(); missing_languages: list[dict] = []
-    for path in LOCALIZATION_FILES:
+    for path in localization_files():
         data = json.loads(path.read_text(encoding="utf-8"))
         for entry in data.get("entries", []):
             sid = entry["sid"]
@@ -144,10 +135,18 @@ def audit_upgrade_model(model, localization_sids: set[str]) -> dict:
 
 def audit_generated_cfg_localization(localization_sids: set[str]) -> dict:
     references: dict[str, set[str]] = defaultdict(set)
-    for path in sorted((REPO_ROOT / "GameLite").rglob("*.cfg")):
-        text = path.read_text(encoding="utf-8", errors="replace")
-        for match in BPRUE_TEXT_SID_RE.finditer(text):
-            references[match.group(0)].add(str(path.relative_to(REPO_ROOT)))
+    cfg_roots = (
+        REPO_ROOT / "GameLite",
+        REPO_ROOT / "Armor" / "GameLite",
+        REPO_ROOT / "Editions" / "GameLite",
+    )
+    for root in cfg_roots:
+        if not root.exists():
+            continue
+        for path in sorted(root.rglob("*.cfg")):
+            text = path.read_text(encoding="utf-8", errors="replace")
+            for match in BPRUE_TEXT_SID_RE.finditer(text):
+                references[match.group(0)].add(str(path.relative_to(REPO_ROOT)))
     missing = []
     case_mismatches = []
     by_lower = {sid.lower(): sid for sid in localization_sids}
@@ -181,9 +180,11 @@ def _parse_effects(path: Path, source: str) -> dict[str, dict]:
 def _effect_catalog() -> dict[str, dict]:
     catalog = _parse_effects(VANILLA_EFFECTS, "BaseGame")
     for path in sorted(BPRUE_EFFECT_DIR.glob("*.cfg")): catalog.update(_parse_effects(path, path.name))
-    for path in sorted(DLC_EFFECT_ROOT.glob("*/EffectPrototypes/*BPRUE*.cfg")):
-        catalog.update(_parse_effects(path, str(path.relative_to(REPO_ROOT))))
+    for effect_root in (DLC_EFFECT_ROOT, EDITION_EFFECT_ROOT):
+        for path in sorted(effect_root.glob("*/EffectPrototypes/*BPRUE*.cfg")):
+            catalog.update(_parse_effects(path, str(path.relative_to(REPO_ROOT))))
     catalog.update(_parse_effects(VANILLA_UI_PATCH, VANILLA_UI_PATCH.name))
+    catalog.update(_parse_effects(ARMOR_EFFECT_PATCH, str(ARMOR_EFFECT_PATCH.relative_to(REPO_ROOT))))
     return catalog
 
 
@@ -209,6 +210,13 @@ def audit_referenced_effects(models: dict[str, object], localization_sids: set[s
         for upgrade in model.upgrades:
             for effect_sid in upgrade.effects: references[effect_sid].add(scope)
 
+    # Armor is an optional module and is not part of build_model(). Validate every
+    # visible generated BPRUE Armor effect so missing UI metadata cannot slip through.
+    for effect_sid, entry in catalog.items():
+        if entry["source"].startswith("Armor/") and effect_sid.startswith("BPRUE_Armor_"):
+            if entry["show"] is not False:
+                references[effect_sid].add("Armor")
+
     errors = []; rows = []
     for sid in sorted(references):
         effective = _effective_effect(sid, catalog); scopes = sorted(references[sid]); status = "ok"
@@ -228,8 +236,8 @@ def audit_referenced_effects(models: dict[str, object], localization_sids: set[s
 
 def main() -> None:
     localization_sids, source_entries, missing_languages = load_localization()
-    base_model, configs = build_model(apply_layout=False); dlc_models = build_dlc_outputs(base_model, configs)
-    models = {"BaseGame": base_model, **dlc_models}
+    base_model, configs = build_model(apply_layout=False); dlc_models = build_dlc_outputs(base_model, configs); edition_models = build_edition_outputs(base_model, configs)
+    models = {"BaseGame": base_model, **dlc_models, **edition_models}
     scopes = {scope: audit_upgrade_model(model, localization_sids) for scope, model in models.items()}
     effects = audit_referenced_effects(models, localization_sids)
     asset_snapshot = audit_asset_snapshot(localization_sids, source_entries)

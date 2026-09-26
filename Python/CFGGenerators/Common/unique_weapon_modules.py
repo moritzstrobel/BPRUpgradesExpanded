@@ -48,7 +48,11 @@ def _clone_sid(source_sid: str, base_prefix: str, unique_prefix: str) -> str:
 
 
 def add_unique_modules(model: UpgradeBuildModel, configs: dict) -> int:
-    """Clone every BPRUE base-family module for every supported Unique."""
+    """Clone BPRUE base-family modules for supported Uniques.
+
+    Physical pistol-slot conversions are baseline-only: their converted ItemPrototype
+    variants exist only for explicitly supported base weapons, never for Uniques.
+    """
     unique_config = load_unique_config()
     source_by_setup = model.by_general_setup()
     added = 0
@@ -66,7 +70,10 @@ def add_unique_modules(model: UpgradeBuildModel, configs: dict) -> int:
 
         base_setup = base["general_setup_sid"]
         base_prefix = base["prototype_prefix"]
-        source_upgrades = source_by_setup.get(base_setup, [])
+        source_upgrades = [
+            upgrade for upgrade in source_by_setup.get(base_setup, [])
+            if upgrade.group != "Conversion"
+        ]
         if not source_upgrades:
             raise ValueError(f"{unique_name}: base family {base_name} ({base_setup}) has no BPRUE upgrades")
 

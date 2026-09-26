@@ -1,0 +1,1316 @@
+{
+  "vanilla": {
+    "ProtectionBurn": {
+      "upgrade_count": 96,
+      "armor_count": 47,
+      "distribution": {
+        "20.0%": 40,
+        "15.0%": 30,
+        "30.0%": 20,
+        "5.0%": 5,
+        "10.0%": 1
+      },
+      "min": 5.0,
+      "median": 20.0,
+      "p75": 20.0,
+      "max": 30.0
+    },
+    "MaxDurability": {
+      "upgrade_count": 87,
+      "armor_count": 48,
+      "distribution": {
+        "15.0%": 28,
+        "20.0%": 27,
+        "25.0%": 22,
+        "10.0%": 6,
+        "5.0%": 2,
+        "30.0%": 2
+      },
+      "min": 5.0,
+      "median": 20.0,
+      "p75": 25.0,
+      "max": 30.0
+    },
+    "ProtectionChemical": {
+      "upgrade_count": 84,
+      "armor_count": 45,
+      "distribution": {
+        "20.0%": 38,
+        "15.0%": 25,
+        "30.0%": 17,
+        "5.0%": 4
+      },
+      "min": 5.0,
+      "median": 20.0,
+      "p75": 20.0,
+      "max": 30.0
+    },
+    "ProtectionShock": {
+      "upgrade_count": 84,
+      "armor_count": 44,
+      "distribution": {
+        "20.0%": 33,
+        "15.0%": 30,
+        "30.0%": 14,
+        "5.0%": 4,
+        "10.0%": 3
+      },
+      "min": 5.0,
+      "median": 20.0,
+      "p75": 20.0,
+      "max": 30.0
+    },
+    "ProtectionStrike": {
+      "upgrade_count": 81,
+      "armor_count": 44,
+      "distribution": {
+        "20.0%": 32,
+        "15.0%": 20,
+        "10.0%": 10,
+        "30.0%": 9,
+        "40.0%": 9,
+        "35.0%": 1
+      },
+      "min": 10.0,
+      "median": 20.0,
+      "p75": 20.0,
+      "max": 40.0
+    },
+    "ProtectionRadiation": {
+      "upgrade_count": 80,
+      "armor_count": 44,
+      "distribution": {
+        "15.0%": 74,
+        "5.0%": 5,
+        "10.0%": 1
+      },
+      "min": 5.0,
+      "median": 15.0,
+      "p75": 15.0,
+      "max": 15.0
+    },
+    "ArmorItemWeight": {
+      "upgrade_count": 73,
+      "armor_count": 42,
+      "distribution": {
+        "-1": 69,
+        "-2": 2,
+        "-0.5": 1,
+        "-0.25": 1
+      },
+      "min": -2.0,
+      "median": -1.0,
+      "p75": -1.0,
+      "max": -0.25
+    },
+    "AdditionalInventoryWeight": {
+      "upgrade_count": 26,
+      "armor_count": 26,
+      "distribution": {
+        "10.0%": 26
+      },
+      "min": 10.0,
+      "median": 10.0,
+      "p75": 10.0,
+      "max": 10.0
+    },
+    "PenaltyLessWeight": {
+      "upgrade_count": 26,
+      "armor_count": 26,
+      "distribution": {
+        "10.0%": 26
+      },
+      "min": 10.0,
+      "median": 10.0,
+      "p75": 10.0,
+      "max": 10.0
+    },
+    "RegenStamina": {
+      "upgrade_count": 24,
+      "armor_count": 23,
+      "distribution": {
+        "5.0%": 24
+      },
+      "min": 5.0,
+      "median": 5.0,
+      "p75": 5.0,
+      "max": 5.0
+    }
+  },
+  "module_effects": [
+    {
+      "module": "REINFORCED_PLATING",
+      "group": "CONSTRUCTION",
+      "category": "HELMET",
+      "effect": "ProtectionStrike",
+      "value": "25%",
+      "numeric_value": 25.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 81,
+        "armor_count": 44,
+        "distribution": {
+          "20.0%": 32,
+          "15.0%": 20,
+          "10.0%": 10,
+          "30.0%": 9,
+          "40.0%": 9,
+          "35.0%": 1
+        },
+        "min": 10.0,
+        "median": 20.0,
+        "p75": 20.0,
+        "max": 40.0
+      }
+    },
+    {
+      "module": "REINFORCED_PLATING",
+      "group": "CONSTRUCTION",
+      "category": "HELMET",
+      "effect": "ArmorItemWeight",
+      "value": 0.5,
+      "numeric_value": 0.5,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 73,
+        "armor_count": 42,
+        "distribution": {
+          "-1": 69,
+          "-2": 2,
+          "-0.5": 1,
+          "-0.25": 1
+        },
+        "min": -2.0,
+        "median": -1.0,
+        "p75": -1.0,
+        "max": -0.25
+      }
+    },
+    {
+      "module": "REINFORCED_PLATING",
+      "group": "CONSTRUCTION",
+      "category": "SUIT",
+      "effect": "ProtectionStrike",
+      "value": "30%",
+      "numeric_value": 30.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 81,
+        "armor_count": 44,
+        "distribution": {
+          "20.0%": 32,
+          "15.0%": 20,
+          "10.0%": 10,
+          "30.0%": 9,
+          "40.0%": 9,
+          "35.0%": 1
+        },
+        "min": 10.0,
+        "median": 20.0,
+        "p75": 20.0,
+        "max": 40.0
+      }
+    },
+    {
+      "module": "REINFORCED_PLATING",
+      "group": "CONSTRUCTION",
+      "category": "SUIT",
+      "effect": "ArmorItemWeight",
+      "value": 1,
+      "numeric_value": 1.0,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 73,
+        "armor_count": 42,
+        "distribution": {
+          "-1": 69,
+          "-2": 2,
+          "-0.5": 1,
+          "-0.25": 1
+        },
+        "min": -2.0,
+        "median": -1.0,
+        "p75": -1.0,
+        "max": -0.25
+      }
+    },
+    {
+      "module": "REINFORCED_PLATING",
+      "group": "CONSTRUCTION",
+      "category": "FULL_BODY_SUIT",
+      "effect": "ProtectionStrike",
+      "value": "40%",
+      "numeric_value": 40.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 81,
+        "armor_count": 44,
+        "distribution": {
+          "20.0%": 32,
+          "15.0%": 20,
+          "10.0%": 10,
+          "30.0%": 9,
+          "40.0%": 9,
+          "35.0%": 1
+        },
+        "min": 10.0,
+        "median": 20.0,
+        "p75": 20.0,
+        "max": 40.0
+      }
+    },
+    {
+      "module": "REINFORCED_PLATING",
+      "group": "CONSTRUCTION",
+      "category": "FULL_BODY_SUIT",
+      "effect": "ArmorItemWeight",
+      "value": 1.5,
+      "numeric_value": 1.5,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 73,
+        "armor_count": 42,
+        "distribution": {
+          "-1": 69,
+          "-2": 2,
+          "-0.5": 1,
+          "-0.25": 1
+        },
+        "min": -2.0,
+        "median": -1.0,
+        "p75": -1.0,
+        "max": -0.25
+      }
+    },
+    {
+      "module": "LIGHTWEIGHT_MATERIALS",
+      "group": "CONSTRUCTION",
+      "category": "HELMET",
+      "effect": "ArmorItemWeight",
+      "value": -0.5,
+      "numeric_value": -0.5,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 73,
+        "armor_count": 42,
+        "distribution": {
+          "-1": 69,
+          "-2": 2,
+          "-0.5": 1,
+          "-0.25": 1
+        },
+        "min": -2.0,
+        "median": -1.0,
+        "p75": -1.0,
+        "max": -0.25
+      }
+    },
+    {
+      "module": "LIGHTWEIGHT_MATERIALS",
+      "group": "CONSTRUCTION",
+      "category": "HELMET",
+      "effect": "RegenStamina",
+      "value": "5%",
+      "numeric_value": 5.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 24,
+        "armor_count": 23,
+        "distribution": {
+          "5.0%": 24
+        },
+        "min": 5.0,
+        "median": 5.0,
+        "p75": 5.0,
+        "max": 5.0
+      }
+    },
+    {
+      "module": "LIGHTWEIGHT_MATERIALS",
+      "group": "CONSTRUCTION",
+      "category": "HELMET",
+      "effect": "MaxDurability",
+      "value": "-10%",
+      "numeric_value": -10.0,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 87,
+        "armor_count": 48,
+        "distribution": {
+          "15.0%": 28,
+          "20.0%": 27,
+          "25.0%": 22,
+          "10.0%": 6,
+          "5.0%": 2,
+          "30.0%": 2
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 25.0,
+        "max": 30.0
+      }
+    },
+    {
+      "module": "LIGHTWEIGHT_MATERIALS",
+      "group": "CONSTRUCTION",
+      "category": "SUIT",
+      "effect": "ArmorItemWeight",
+      "value": -1,
+      "numeric_value": -1.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 73,
+        "armor_count": 42,
+        "distribution": {
+          "-1": 69,
+          "-2": 2,
+          "-0.5": 1,
+          "-0.25": 1
+        },
+        "min": -2.0,
+        "median": -1.0,
+        "p75": -1.0,
+        "max": -0.25
+      }
+    },
+    {
+      "module": "LIGHTWEIGHT_MATERIALS",
+      "group": "CONSTRUCTION",
+      "category": "SUIT",
+      "effect": "RegenStamina",
+      "value": "5%",
+      "numeric_value": 5.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 24,
+        "armor_count": 23,
+        "distribution": {
+          "5.0%": 24
+        },
+        "min": 5.0,
+        "median": 5.0,
+        "p75": 5.0,
+        "max": 5.0
+      }
+    },
+    {
+      "module": "LIGHTWEIGHT_MATERIALS",
+      "group": "CONSTRUCTION",
+      "category": "SUIT",
+      "effect": "MaxDurability",
+      "value": "-15%",
+      "numeric_value": -15.0,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 87,
+        "armor_count": 48,
+        "distribution": {
+          "15.0%": 28,
+          "20.0%": 27,
+          "25.0%": 22,
+          "10.0%": 6,
+          "5.0%": 2,
+          "30.0%": 2
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 25.0,
+        "max": 30.0
+      }
+    },
+    {
+      "module": "LIGHTWEIGHT_MATERIALS",
+      "group": "CONSTRUCTION",
+      "category": "FULL_BODY_SUIT",
+      "effect": "ArmorItemWeight",
+      "value": -1.5,
+      "numeric_value": -1.5,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 73,
+        "armor_count": 42,
+        "distribution": {
+          "-1": 69,
+          "-2": 2,
+          "-0.5": 1,
+          "-0.25": 1
+        },
+        "min": -2.0,
+        "median": -1.0,
+        "p75": -1.0,
+        "max": -0.25
+      }
+    },
+    {
+      "module": "LIGHTWEIGHT_MATERIALS",
+      "group": "CONSTRUCTION",
+      "category": "FULL_BODY_SUIT",
+      "effect": "RegenStamina",
+      "value": "5%",
+      "numeric_value": 5.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 24,
+        "armor_count": 23,
+        "distribution": {
+          "5.0%": 24
+        },
+        "min": 5.0,
+        "median": 5.0,
+        "p75": 5.0,
+        "max": 5.0
+      }
+    },
+    {
+      "module": "LIGHTWEIGHT_MATERIALS",
+      "group": "CONSTRUCTION",
+      "category": "FULL_BODY_SUIT",
+      "effect": "MaxDurability",
+      "value": "-20%",
+      "numeric_value": -20.0,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 87,
+        "armor_count": 48,
+        "distribution": {
+          "15.0%": 28,
+          "20.0%": 27,
+          "25.0%": 22,
+          "10.0%": 6,
+          "5.0%": 2,
+          "30.0%": 2
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 25.0,
+        "max": 30.0
+      }
+    },
+    {
+      "module": "LOAD_BEARING_SYSTEM",
+      "group": "UTILITY",
+      "category": "SUIT",
+      "effect": "Composite",
+      "value": "15%",
+      "numeric_value": 15.0,
+      "positive": "Positive",
+      "vanilla": null
+    },
+    {
+      "module": "LOAD_BEARING_SYSTEM",
+      "group": "UTILITY",
+      "category": "SUIT",
+      "effect": "RegenStamina",
+      "value": "-5%",
+      "numeric_value": -5.0,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 24,
+        "armor_count": 23,
+        "distribution": {
+          "5.0%": 24
+        },
+        "min": 5.0,
+        "median": 5.0,
+        "p75": 5.0,
+        "max": 5.0
+      }
+    },
+    {
+      "module": "LOAD_BEARING_SYSTEM",
+      "group": "UTILITY",
+      "category": "FULL_BODY_SUIT",
+      "effect": "Composite",
+      "value": "20%",
+      "numeric_value": 20.0,
+      "positive": "Positive",
+      "vanilla": null
+    },
+    {
+      "module": "LOAD_BEARING_SYSTEM",
+      "group": "UTILITY",
+      "category": "FULL_BODY_SUIT",
+      "effect": "RegenStamina",
+      "value": "-10%",
+      "numeric_value": -10.0,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 24,
+        "armor_count": 23,
+        "distribution": {
+          "5.0%": 24
+        },
+        "min": 5.0,
+        "median": 5.0,
+        "p75": 5.0,
+        "max": 5.0
+      }
+    },
+    {
+      "module": "HARDENED_COMPONENTS",
+      "group": "CONSTRUCTION",
+      "category": "HELMET",
+      "effect": "MaxDurability",
+      "value": "20%",
+      "numeric_value": 20.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 87,
+        "armor_count": 48,
+        "distribution": {
+          "15.0%": 28,
+          "20.0%": 27,
+          "25.0%": 22,
+          "10.0%": 6,
+          "5.0%": 2,
+          "30.0%": 2
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 25.0,
+        "max": 30.0
+      }
+    },
+    {
+      "module": "HARDENED_COMPONENTS",
+      "group": "CONSTRUCTION",
+      "category": "HELMET",
+      "effect": "ArmorItemWeight",
+      "value": 0.5,
+      "numeric_value": 0.5,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 73,
+        "armor_count": 42,
+        "distribution": {
+          "-1": 69,
+          "-2": 2,
+          "-0.5": 1,
+          "-0.25": 1
+        },
+        "min": -2.0,
+        "median": -1.0,
+        "p75": -1.0,
+        "max": -0.25
+      }
+    },
+    {
+      "module": "HARDENED_COMPONENTS",
+      "group": "CONSTRUCTION",
+      "category": "SUIT",
+      "effect": "MaxDurability",
+      "value": "25%",
+      "numeric_value": 25.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 87,
+        "armor_count": 48,
+        "distribution": {
+          "15.0%": 28,
+          "20.0%": 27,
+          "25.0%": 22,
+          "10.0%": 6,
+          "5.0%": 2,
+          "30.0%": 2
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 25.0,
+        "max": 30.0
+      }
+    },
+    {
+      "module": "HARDENED_COMPONENTS",
+      "group": "CONSTRUCTION",
+      "category": "SUIT",
+      "effect": "ArmorItemWeight",
+      "value": 0.75,
+      "numeric_value": 0.75,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 73,
+        "armor_count": 42,
+        "distribution": {
+          "-1": 69,
+          "-2": 2,
+          "-0.5": 1,
+          "-0.25": 1
+        },
+        "min": -2.0,
+        "median": -1.0,
+        "p75": -1.0,
+        "max": -0.25
+      }
+    },
+    {
+      "module": "HARDENED_COMPONENTS",
+      "group": "CONSTRUCTION",
+      "category": "FULL_BODY_SUIT",
+      "effect": "MaxDurability",
+      "value": "30%",
+      "numeric_value": 30.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 87,
+        "armor_count": 48,
+        "distribution": {
+          "15.0%": 28,
+          "20.0%": 27,
+          "25.0%": 22,
+          "10.0%": 6,
+          "5.0%": 2,
+          "30.0%": 2
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 25.0,
+        "max": 30.0
+      }
+    },
+    {
+      "module": "HARDENED_COMPONENTS",
+      "group": "CONSTRUCTION",
+      "category": "FULL_BODY_SUIT",
+      "effect": "ArmorItemWeight",
+      "value": 1,
+      "numeric_value": 1.0,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 73,
+        "armor_count": 42,
+        "distribution": {
+          "-1": 69,
+          "-2": 2,
+          "-0.5": 1,
+          "-0.25": 1
+        },
+        "min": -2.0,
+        "median": -1.0,
+        "p75": -1.0,
+        "max": -0.25
+      }
+    },
+    {
+      "module": "THERMAL_INSULATION",
+      "group": "ENVIRONMENTAL",
+      "category": "HELMET",
+      "effect": "ProtectionBurn",
+      "value": "20%",
+      "numeric_value": 20.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 96,
+        "armor_count": 47,
+        "distribution": {
+          "20.0%": 40,
+          "15.0%": 30,
+          "30.0%": 20,
+          "5.0%": 5,
+          "10.0%": 1
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 20.0,
+        "max": 30.0
+      }
+    },
+    {
+      "module": "THERMAL_INSULATION",
+      "group": "ENVIRONMENTAL",
+      "category": "HELMET",
+      "effect": "ProtectionShock",
+      "value": "-10%",
+      "numeric_value": -10.0,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 84,
+        "armor_count": 44,
+        "distribution": {
+          "20.0%": 33,
+          "15.0%": 30,
+          "30.0%": 14,
+          "5.0%": 4,
+          "10.0%": 3
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 20.0,
+        "max": 30.0
+      }
+    },
+    {
+      "module": "THERMAL_INSULATION",
+      "group": "ENVIRONMENTAL",
+      "category": "SUIT",
+      "effect": "ProtectionBurn",
+      "value": "30%",
+      "numeric_value": 30.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 96,
+        "armor_count": 47,
+        "distribution": {
+          "20.0%": 40,
+          "15.0%": 30,
+          "30.0%": 20,
+          "5.0%": 5,
+          "10.0%": 1
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 20.0,
+        "max": 30.0
+      }
+    },
+    {
+      "module": "THERMAL_INSULATION",
+      "group": "ENVIRONMENTAL",
+      "category": "SUIT",
+      "effect": "ProtectionShock",
+      "value": "-15%",
+      "numeric_value": -15.0,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 84,
+        "armor_count": 44,
+        "distribution": {
+          "20.0%": 33,
+          "15.0%": 30,
+          "30.0%": 14,
+          "5.0%": 4,
+          "10.0%": 3
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 20.0,
+        "max": 30.0
+      }
+    },
+    {
+      "module": "THERMAL_INSULATION",
+      "group": "ENVIRONMENTAL",
+      "category": "FULL_BODY_SUIT",
+      "effect": "ProtectionBurn",
+      "value": "40%",
+      "numeric_value": 40.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 96,
+        "armor_count": 47,
+        "distribution": {
+          "20.0%": 40,
+          "15.0%": 30,
+          "30.0%": 20,
+          "5.0%": 5,
+          "10.0%": 1
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 20.0,
+        "max": 30.0
+      }
+    },
+    {
+      "module": "THERMAL_INSULATION",
+      "group": "ENVIRONMENTAL",
+      "category": "FULL_BODY_SUIT",
+      "effect": "ProtectionShock",
+      "value": "-20%",
+      "numeric_value": -20.0,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 84,
+        "armor_count": 44,
+        "distribution": {
+          "20.0%": 33,
+          "15.0%": 30,
+          "30.0%": 14,
+          "5.0%": 4,
+          "10.0%": 3
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 20.0,
+        "max": 30.0
+      }
+    },
+    {
+      "module": "CONDUCTIVE_MESH",
+      "group": "ENVIRONMENTAL",
+      "category": "HELMET",
+      "effect": "ProtectionShock",
+      "value": "20%",
+      "numeric_value": 20.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 84,
+        "armor_count": 44,
+        "distribution": {
+          "20.0%": 33,
+          "15.0%": 30,
+          "30.0%": 14,
+          "5.0%": 4,
+          "10.0%": 3
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 20.0,
+        "max": 30.0
+      }
+    },
+    {
+      "module": "CONDUCTIVE_MESH",
+      "group": "ENVIRONMENTAL",
+      "category": "HELMET",
+      "effect": "ProtectionBurn",
+      "value": "-10%",
+      "numeric_value": -10.0,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 96,
+        "armor_count": 47,
+        "distribution": {
+          "20.0%": 40,
+          "15.0%": 30,
+          "30.0%": 20,
+          "5.0%": 5,
+          "10.0%": 1
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 20.0,
+        "max": 30.0
+      }
+    },
+    {
+      "module": "CONDUCTIVE_MESH",
+      "group": "ENVIRONMENTAL",
+      "category": "SUIT",
+      "effect": "ProtectionShock",
+      "value": "30%",
+      "numeric_value": 30.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 84,
+        "armor_count": 44,
+        "distribution": {
+          "20.0%": 33,
+          "15.0%": 30,
+          "30.0%": 14,
+          "5.0%": 4,
+          "10.0%": 3
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 20.0,
+        "max": 30.0
+      }
+    },
+    {
+      "module": "CONDUCTIVE_MESH",
+      "group": "ENVIRONMENTAL",
+      "category": "SUIT",
+      "effect": "ProtectionBurn",
+      "value": "-15%",
+      "numeric_value": -15.0,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 96,
+        "armor_count": 47,
+        "distribution": {
+          "20.0%": 40,
+          "15.0%": 30,
+          "30.0%": 20,
+          "5.0%": 5,
+          "10.0%": 1
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 20.0,
+        "max": 30.0
+      }
+    },
+    {
+      "module": "CONDUCTIVE_MESH",
+      "group": "ENVIRONMENTAL",
+      "category": "FULL_BODY_SUIT",
+      "effect": "ProtectionShock",
+      "value": "40%",
+      "numeric_value": 40.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 84,
+        "armor_count": 44,
+        "distribution": {
+          "20.0%": 33,
+          "15.0%": 30,
+          "30.0%": 14,
+          "5.0%": 4,
+          "10.0%": 3
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 20.0,
+        "max": 30.0
+      }
+    },
+    {
+      "module": "CONDUCTIVE_MESH",
+      "group": "ENVIRONMENTAL",
+      "category": "FULL_BODY_SUIT",
+      "effect": "ProtectionBurn",
+      "value": "-20%",
+      "numeric_value": -20.0,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 96,
+        "armor_count": 47,
+        "distribution": {
+          "20.0%": 40,
+          "15.0%": 30,
+          "30.0%": 20,
+          "5.0%": 5,
+          "10.0%": 1
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 20.0,
+        "max": 30.0
+      }
+    },
+    {
+      "module": "CHEMICAL_SEALING",
+      "group": "ENVIRONMENTAL",
+      "category": "HELMET",
+      "effect": "ProtectionChemical",
+      "value": "20%",
+      "numeric_value": 20.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 84,
+        "armor_count": 45,
+        "distribution": {
+          "20.0%": 38,
+          "15.0%": 25,
+          "30.0%": 17,
+          "5.0%": 4
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 20.0,
+        "max": 30.0
+      }
+    },
+    {
+      "module": "CHEMICAL_SEALING",
+      "group": "ENVIRONMENTAL",
+      "category": "HELMET",
+      "effect": "RegenStamina",
+      "value": "-5%",
+      "numeric_value": -5.0,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 24,
+        "armor_count": 23,
+        "distribution": {
+          "5.0%": 24
+        },
+        "min": 5.0,
+        "median": 5.0,
+        "p75": 5.0,
+        "max": 5.0
+      }
+    },
+    {
+      "module": "CHEMICAL_SEALING",
+      "group": "ENVIRONMENTAL",
+      "category": "SUIT",
+      "effect": "ProtectionChemical",
+      "value": "30%",
+      "numeric_value": 30.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 84,
+        "armor_count": 45,
+        "distribution": {
+          "20.0%": 38,
+          "15.0%": 25,
+          "30.0%": 17,
+          "5.0%": 4
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 20.0,
+        "max": 30.0
+      }
+    },
+    {
+      "module": "CHEMICAL_SEALING",
+      "group": "ENVIRONMENTAL",
+      "category": "SUIT",
+      "effect": "RegenStamina",
+      "value": "-5%",
+      "numeric_value": -5.0,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 24,
+        "armor_count": 23,
+        "distribution": {
+          "5.0%": 24
+        },
+        "min": 5.0,
+        "median": 5.0,
+        "p75": 5.0,
+        "max": 5.0
+      }
+    },
+    {
+      "module": "CHEMICAL_SEALING",
+      "group": "ENVIRONMENTAL",
+      "category": "FULL_BODY_SUIT",
+      "effect": "ProtectionChemical",
+      "value": "40%",
+      "numeric_value": 40.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 84,
+        "armor_count": 45,
+        "distribution": {
+          "20.0%": 38,
+          "15.0%": 25,
+          "30.0%": 17,
+          "5.0%": 4
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 20.0,
+        "max": 30.0
+      }
+    },
+    {
+      "module": "CHEMICAL_SEALING",
+      "group": "ENVIRONMENTAL",
+      "category": "FULL_BODY_SUIT",
+      "effect": "RegenStamina",
+      "value": "-10%",
+      "numeric_value": -10.0,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 24,
+        "armor_count": 23,
+        "distribution": {
+          "5.0%": 24
+        },
+        "min": 5.0,
+        "median": 5.0,
+        "p75": 5.0,
+        "max": 5.0
+      }
+    },
+    {
+      "module": "RADIATION_LINING",
+      "group": "UTILITY",
+      "category": "HELMET",
+      "effect": "ProtectionRadiation",
+      "value": "10%",
+      "numeric_value": 10.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 80,
+        "armor_count": 44,
+        "distribution": {
+          "15.0%": 74,
+          "5.0%": 5,
+          "10.0%": 1
+        },
+        "min": 5.0,
+        "median": 15.0,
+        "p75": 15.0,
+        "max": 15.0
+      }
+    },
+    {
+      "module": "RADIATION_LINING",
+      "group": "UTILITY",
+      "category": "HELMET",
+      "effect": "ArmorItemWeight",
+      "value": 0.25,
+      "numeric_value": 0.25,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 73,
+        "armor_count": 42,
+        "distribution": {
+          "-1": 69,
+          "-2": 2,
+          "-0.5": 1,
+          "-0.25": 1
+        },
+        "min": -2.0,
+        "median": -1.0,
+        "p75": -1.0,
+        "max": -0.25
+      }
+    },
+    {
+      "module": "RADIATION_LINING",
+      "group": "UTILITY",
+      "category": "SUIT",
+      "effect": "ProtectionRadiation",
+      "value": "15%",
+      "numeric_value": 15.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 80,
+        "armor_count": 44,
+        "distribution": {
+          "15.0%": 74,
+          "5.0%": 5,
+          "10.0%": 1
+        },
+        "min": 5.0,
+        "median": 15.0,
+        "p75": 15.0,
+        "max": 15.0
+      }
+    },
+    {
+      "module": "RADIATION_LINING",
+      "group": "UTILITY",
+      "category": "SUIT",
+      "effect": "ArmorItemWeight",
+      "value": 0.5,
+      "numeric_value": 0.5,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 73,
+        "armor_count": 42,
+        "distribution": {
+          "-1": 69,
+          "-2": 2,
+          "-0.5": 1,
+          "-0.25": 1
+        },
+        "min": -2.0,
+        "median": -1.0,
+        "p75": -1.0,
+        "max": -0.25
+      }
+    },
+    {
+      "module": "RADIATION_LINING",
+      "group": "UTILITY",
+      "category": "FULL_BODY_SUIT",
+      "effect": "ProtectionRadiation",
+      "value": "20%",
+      "numeric_value": 20.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 80,
+        "armor_count": 44,
+        "distribution": {
+          "15.0%": 74,
+          "5.0%": 5,
+          "10.0%": 1
+        },
+        "min": 5.0,
+        "median": 15.0,
+        "p75": 15.0,
+        "max": 15.0
+      }
+    },
+    {
+      "module": "RADIATION_LINING",
+      "group": "UTILITY",
+      "category": "FULL_BODY_SUIT",
+      "effect": "ArmorItemWeight",
+      "value": 0.75,
+      "numeric_value": 0.75,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 73,
+        "armor_count": 42,
+        "distribution": {
+          "-1": 69,
+          "-2": 2,
+          "-0.5": 1,
+          "-0.25": 1
+        },
+        "min": -2.0,
+        "median": -1.0,
+        "p75": -1.0,
+        "max": -0.25
+      }
+    },
+    {
+      "module": "ENHANCED_FILTRATION",
+      "group": "UTILITY",
+      "category": "HELMET",
+      "effect": "ProtectionChemical",
+      "value": "20%",
+      "numeric_value": 20.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 84,
+        "armor_count": 45,
+        "distribution": {
+          "20.0%": 38,
+          "15.0%": 25,
+          "30.0%": 17,
+          "5.0%": 4
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 20.0,
+        "max": 30.0
+      }
+    },
+    {
+      "module": "ENHANCED_FILTRATION",
+      "group": "UTILITY",
+      "category": "HELMET",
+      "effect": "ProtectionRadiation",
+      "value": "10%",
+      "numeric_value": 10.0,
+      "positive": "Positive",
+      "vanilla": {
+        "upgrade_count": 80,
+        "armor_count": 44,
+        "distribution": {
+          "15.0%": 74,
+          "5.0%": 5,
+          "10.0%": 1
+        },
+        "min": 5.0,
+        "median": 15.0,
+        "p75": 15.0,
+        "max": 15.0
+      }
+    },
+    {
+      "module": "ENHANCED_FILTRATION",
+      "group": "UTILITY",
+      "category": "HELMET",
+      "effect": "MaxDurability",
+      "value": "-15%",
+      "numeric_value": -15.0,
+      "positive": "Negative",
+      "vanilla": {
+        "upgrade_count": 87,
+        "armor_count": 48,
+        "distribution": {
+          "15.0%": 28,
+          "20.0%": 27,
+          "25.0%": 22,
+          "10.0%": 6,
+          "5.0%": 2,
+          "30.0%": 2
+        },
+        "min": 5.0,
+        "median": 20.0,
+        "p75": 25.0,
+        "max": 30.0
+      }
+    }
+  ]
+}

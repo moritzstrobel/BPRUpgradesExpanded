@@ -1,0 +1,40 @@
+{
+  "packs": {
+    "Deluxe": [
+      {
+        "sid": "HeavyAnomaly_SIRCA_Armor",
+        "faction": "WARD",
+        "category": "FULL_BODY_SUIT",
+        "base_armor_sid": "HeavyAnomaly_Scientific_Armor"
+      },
+      {
+        "sid": "SEVA_Monolith_Armor",
+        "faction": "MONOLITH",
+        "category": "FULL_BODY_SUIT",
+        "base_armor_sid": "SEVA_Neutral_Armor"
+      },
+      {
+        "sid": "UltraLight_Mercenaries_Armor",
+        "faction": "MERCENARY",
+        "category": "SUIT",
+        "base_armor_sid": "Light_Mercenaries_Armor"
+      }
+    ],
+    "PreOrder": [
+      {
+        "sid": "Zorya_Tourist_Armor",
+        "faction": "FREE_STALKER",
+        "category": "SUIT",
+        "base_armor_sid": "Zorya_Neutral_Armor"
+      }
+    ],
+    "Ultimate": [
+      {
+        "sid": "HeavyExoskeleton_Varta_Armor",
+        "faction": "WARD",
+        "category": "FULL_BODY_SUIT",
+        "base_armor_sid": "Exoskeleton_Neutral_Armor"
+      }
+    ]
+  }
+}

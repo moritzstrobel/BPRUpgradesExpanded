@@ -1,0 +1,95 @@
+{
+  "summary": {
+    "expected_weapons": 11,
+    "generated_setups": 11,
+    "generated_upgrades": 185,
+    "duplicate_generated_sids": 0,
+    "known_effect_sids": 2574,
+    "errors": 0
+  },
+  "packs": {
+    "Deluxe": {
+      "expected_weapons": 6,
+      "generated_setups": 6,
+      "generated_upgrades": 104,
+      "prototype_errors": 0,
+      "registration_errors": 0,
+      "retention_errors": 0,
+      "vanilla_prefix_errors": 0,
+      "blocking_reference_errors": 0,
+      "effect_reference_errors": 0,
+      "section_errors": 0,
+      "output_files": {
+        "upgrades": {
+          "path": "Editions\\GameLite\\DLCGameData\\Deluxe\\UpgradePrototypes\\UpgradePrototypes_patch_BPRUE.cfg",
+          "exists": true
+        },
+        "general_setup": {
+          "path": "Editions\\GameLite\\DLCGameData\\Deluxe\\WeaponData\\WeaponGeneralSetupPrototypes\\WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
+          "exists": true
+        },
+        "sections": {
+          "path": "Editions\\GameLite\\DLCGameData\\Deluxe\\ItemPrototypes\\ItemPrototypes_patch_BPRUE.cfg",
+          "exists": true
+        }
+      },
+      "errors": []
+    },
+    "PreOrder": {
+      "expected_weapons": 1,
+      "generated_setups": 1,
+      "generated_upgrades": 20,
+      "prototype_errors": 0,
+      "registration_errors": 0,
+      "retention_errors": 0,
+      "vanilla_prefix_errors": 0,
+      "blocking_reference_errors": 0,
+      "effect_reference_errors": 0,
+      "section_errors": 0,
+      "output_files": {
+        "upgrades": {
+          "path": "Editions\\GameLite\\DLCGameData\\PreOrder\\UpgradePrototypes\\UpgradePrototypes_patch_BPRUE.cfg",
+          "exists": true
+        },
+        "general_setup": {
+          "path": "Editions\\GameLite\\DLCGameData\\PreOrder\\WeaponData\\WeaponGeneralSetupPrototypes\\WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
+          "exists": true
+        },
+        "sections": {
+          "path": "Editions\\GameLite\\DLCGameData\\PreOrder\\ItemPrototypes\\ItemPrototypes_patch_BPRUE.cfg",
+          "exists": true
+        }
+      },
+      "errors": []
+    },
+    "Ultimate": {
+      "expected_weapons": 4,
+      "generated_setups": 4,
+      "generated_upgrades": 61,
+      "prototype_errors": 0,
+      "registration_errors": 0,
+      "retention_errors": 0,
+      "vanilla_prefix_errors": 0,
+      "blocking_reference_errors": 0,
+      "effect_reference_errors": 0,
+      "section_errors": 0,
+      "output_files": {
+        "upgrades": {
+          "path": "Editions\\GameLite\\DLCGameData\\Ultimate\\UpgradePrototypes\\UpgradePrototypes_patch_BPRUE.cfg",
+          "exists": true
+        },
+        "general_setup": {
+          "path": "Editions\\GameLite\\DLCGameData\\Ultimate\\WeaponData\\WeaponGeneralSetupPrototypes\\WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
+          "exists": true
+        },
+        "sections": {
+          "path": "Editions\\GameLite\\DLCGameData\\Ultimate\\ItemPrototypes\\ItemPrototypes_patch_BPRUE.cfg",
+          "exists": true
+        }
+      },
+      "errors": []
+    }
+  },
+  "duplicate_sids": [],
+  "errors": []
+}
