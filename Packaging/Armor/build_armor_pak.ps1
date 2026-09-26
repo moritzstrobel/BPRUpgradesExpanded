@@ -19,7 +19,7 @@ if (-not $OutputDirectory) {
 
 $PakName = "BPRUpgradesExpanded_Armor.pak"
 $PakPath = Join-Path $OutputDirectory $PakName
-$MountRoot = "../../../Stalker2/Content/GameLite"
+$ContentMountRoot = "../../../Stalker2/Content"
 
 function Find-UnrealPak {
     param([string]$ExplicitPath)
@@ -50,10 +50,27 @@ function To-PakPath {
 }
 
 Write-Host "=== BPRUpgradesExpanded Armor PAK Build ==="
+Write-Host "Content root : $ContentRoot"
 Write-Host "Armor source : $ArmorSourceRoot"
 
 if (-not (Test-Path -LiteralPath $ArmorSourceRoot -PathType Container)) {
     throw "Armor source directory does not exist. Run Python/CFGGenerators/Armor/generate_armor_upgrades.py first: $ArmorSourceRoot"
+}
+
+$requiredFiles = @(
+    "GameData\UpgradePrototypes\UpgradePrototypes_patch_BPRUE_Armor.cfg",
+    "GameData\ItemPrototypes\ArmorPrototypes\ArmorPrototypes_patch_BPRUE_Armor.cfg",
+    "GameData\EffectPrototypes\EffectPrototypes_patch_BPRUE_Armor.cfg",
+    "GameData\NPCPrototypes\NPCPrototypes_patch_BPRUE_Armor.cfg",
+    "DLCGameData\Deluxe\ItemPrototypes\ItemPrototypes_patch_BPRUE_Armor.cfg",
+    "DLCGameData\PreOrder\ItemPrototypes\ItemPrototypes_patch_BPRUE_Armor.cfg",
+    "DLCGameData\Ultimate\ItemPrototypes\ItemPrototypes_patch_BPRUE_Armor.cfg"
+)
+foreach ($relative in $requiredFiles) {
+    $required = Join-Path $ArmorSourceRoot $relative
+    if (-not (Test-Path -LiteralPath $required -PathType Leaf)) {
+        throw "Required Armor file is missing: $required. Run Python/CFGGenerators/Armor/generate_armor_upgrades.py first."
+    }
 }
 
 $sourceFiles = @(Get-ChildItem -LiteralPath $ArmorSourceRoot -File -Recurse | Sort-Object FullName)
@@ -68,7 +85,7 @@ $packageEntries = foreach ($file in $sourceFiles) {
     $relative = $file.FullName.Substring($ArmorSourceRoot.Length).TrimStart('\', '/')
     [PSCustomObject]@{
         File = $file
-        RelativePath = To-PakPath -Path $relative
+        RelativePath = "GameLite/" + (To-PakPath -Path $relative)
     }
 }
 
@@ -78,7 +95,7 @@ $pakEntries = foreach ($entry in $packageEntries) {
     if ($dir) { New-Item -ItemType Directory -Path $dir -Force | Out-Null }
     Copy-Item -LiteralPath $entry.File.FullName -Destination $stagedPath -Force
     $source = To-PakPath -Path $stagedPath
-    $destination = "$MountRoot/$($entry.RelativePath)"
+    $destination = "$ContentMountRoot/$($entry.RelativePath)"
     '"{0}" "{1}"' -f $source, $destination
 }
 
@@ -104,11 +121,11 @@ if (-not $mountMatch.Success) {
     throw "Could not parse PAK mount point from UnrealPak -List output: $mountLine"
 }
 $listedMount = (To-PakPath -Path $mountMatch.Groups[1].Value).TrimEnd('/')
-$gameLitePrefix = (To-PakPath -Path $MountRoot).TrimEnd('/')
-if (-not $listedMount.StartsWith($gameLitePrefix, [System.StringComparison]::OrdinalIgnoreCase)) {
+$contentPrefix = (To-PakPath -Path $ContentMountRoot).TrimEnd('/')
+if (-not $listedMount.StartsWith($contentPrefix, [System.StringComparison]::OrdinalIgnoreCase)) {
     throw "Unexpected PAK mount point: $listedMount"
 }
-$mountRelative = $listedMount.Substring($gameLitePrefix.Length).Trim('/')
+$mountRelative = $listedMount.Substring($contentPrefix.Length).Trim('/')
 
 $expectedRelativePaths = foreach ($entry in $packageEntries) {
     $relativePath = (To-PakPath -Path $entry.RelativePath).TrimStart('/')
@@ -131,12 +148,19 @@ if ($missingPaths.Count -gt 0) {
     throw "Generated Armor PAK is missing $($missingPaths.Count) expected file(s)."
 }
 
+foreach ($relative in $requiredFiles) {
+    $needle = "GameLite/" + (To-PakPath -Path $relative)
+    if (-not ($packageEntries.RelativePath -contains $needle)) {
+        throw "Required Armor entry was not included in the package: $needle"
+    }
+}
+
 $pakInfo = Get-Item -LiteralPath $PakPath
 Write-Host "SUCCESS"
 Write-Host "PAK          : $($pakInfo.FullName)"
 Write-Host "Size         : $([math]::Round($pakInfo.Length / 1KB, 2)) KiB"
 Write-Host "Packed files : $($sourceFiles.Count)"
-Write-Host "Mount root   : $MountRoot"
+Write-Host "Mount root   : $ContentMountRoot"
 
 if (-not $KeepStaging) { Remove-Item -LiteralPath $StagingRoot -Recurse -Force }
 else { Write-Host "Staging kept : $StagingRoot" }
