@@ -9,7 +9,7 @@ Set-StrictMode -Version Latest
 
 $ScriptDirectory = Split-Path -Parent $MyInvocation.MyCommand.Path
 $ContentRoot = (Resolve-Path (Join-Path $ScriptDirectory "..\..")).Path
-$EditionsSourceRoot = Join-Path $ContentRoot "Editions\GameLite\DLCGameData"
+$EditionsSourceRoot = Join-Path $ContentRoot "Editions\GameLite"
 $StagingRoot = Join-Path $ScriptDirectory "staging"
 $PakListPath = Join-Path $StagingRoot "paklist.txt"
 
@@ -67,7 +67,7 @@ if (-not (Test-Path -LiteralPath $EditionsSourceRoot -PathType Container)) {
 
 $sourceFiles = @()
 foreach ($pack in $EditionPacks) {
-    $packRoot = Join-Path $EditionsSourceRoot $pack
+    $packRoot = Join-Path $EditionsSourceRoot "DLCGameData\$pack"
     if (-not (Test-Path -LiteralPath $packRoot -PathType Container)) {
         throw "Expected Edition pack directory does not exist: $packRoot"
     }
@@ -79,6 +79,12 @@ foreach ($pack in $EditionPacks) {
     }
     $sourceFiles += $packFiles
 }
+
+$npcPatch = Join-Path $EditionsSourceRoot "GameData\NPCPrototypes\NPCPrototypes_patch_BPRUE_Editions.cfg"
+if (-not (Test-Path -LiteralPath $npcPatch -PathType Leaf)) {
+    throw "Edition technician patch is missing: $npcPatch. Run Python/generate_all_cfg.py first."
+}
+$sourceFiles += Get-Item -LiteralPath $npcPatch
 
 if ($sourceFiles.Count -eq 0) {
     throw "Editions package contains no source files."
@@ -100,7 +106,7 @@ $packageEntries = foreach ($file in $sourceFiles) {
 
     [PSCustomObject]@{
         File = $file
-        RelativePath = "GameLite/DLCGameData/$relativePath"
+        RelativePath = "GameLite/$relativePath"
     }
 }
 
@@ -179,6 +185,11 @@ if ($missingPaths.Count -gt 0) {
     Write-Host "Missing PAK-relative entries:"
     $missingPaths | ForEach-Object { Write-Host "  $_" }
     throw "Generated PAK is missing $($missingPaths.Count) expected file(s)."
+}
+
+$npcNeedle = "GameLite/GameData/NPCPrototypes/NPCPrototypes_patch_BPRUE_Editions.cfg"
+if (-not ($packageEntries.RelativePath -contains $npcNeedle)) {
+    throw "Edition technician patch was not included in the package."
 }
 
 foreach ($pack in $EditionPacks) {
