@@ -100,3 +100,110 @@ def effective_fitting_entries(vanilla_writes, oxa_writes) -> tuple[dict[str, dic
         oxa_result[prototype] = {"_members": [v for f in effective.values() if (v := _entry_identity(root, f)) is not None]}
     return vanilla_result, oxa_result
 
+def structural_diff(vanilla: dict, oxa: dict) -> dict:
+    vk, ok = set(vanilla), set(oxa)
+    common = vk & ok
+    return {
+        "added": sorted(ok - vk),
+        "removed": sorted(vk - ok),
+        "modified": sorted(key for key in common if vanilla[key] != oxa[key]),
+        "unchanged": sorted(key for key in common if vanilla[key] == oxa[key]),
+    }
+
+
+def source_weapon_sid(source_setup: str) -> str:
+    return "GunArev_ST" if source_setup == "GunArev_ST_GS" else source_setup
+
+
+def changed_fields(before: dict, after: dict) -> dict:
+    keys = sorted(set(before) | set(after))
+    return {
+        key: {"vanilla": before.get(key), "oxa": after.get(key)}
+        for key in keys if before.get(key) != after.get(key)
+    }
+
+
+def main() -> None:
+    registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
+    vanilla_writes = collect_vanilla(VANILLA_ROOT)
+    oxa_writes = collect(OXA_ROOT)
+    vanilla_fitting_all, oxa_fitting_all = effective_fitting_entries(vanilla_writes, oxa_writes)
+    rows, lines, seen = [], ["OXA pseudo-parent structural attachment diff", "============================================", ""], set()
+
+    for pack_name, pack in registry["packs"].items():
+        lines += [pack_name, "=" * len(pack_name)]
+        for weapon in pack["weapons"]:
+            source_setup = weapon["oxa_source_setup"]
+            key = (pack_name, source_setup)
+            if key in seen:
+                continue
+            seen.add(key)
+            source_weapon = source_weapon_sid(source_setup)
+            vanilla_setup, oxa_setup = effective_array_entries(
+                vanilla_writes, oxa_writes, source_setup, "CompatibleAttachments"
+            )
+            vanilla_fit = fitting_memberships(vanilla_fitting_all, source_weapon)
+            oxa_fit = fitting_memberships(oxa_fitting_all, source_weapon)
+            setup_diff = structural_diff(vanilla_setup, oxa_setup)
+            fit_diff = structural_diff(vanilla_fit, oxa_fit)
+            setup_changes = {
+                sid: changed_fields(vanilla_setup[sid], oxa_setup[sid])
+                for sid in setup_diff["modified"]
+            }
+            fit_changes = {
+                sid: {"vanilla": vanilla_fit[sid], "oxa": oxa_fit[sid]}
+                for sid in fit_diff["modified"]
+            }
+            rows.append({
+                "pack": pack_name,
+                "source_setup": source_setup,
+                "source_weapon": source_weapon,
+                "compatible_attachments": {
+                    "vanilla_count": len(vanilla_setup),
+                    "oxa_count": len(oxa_setup),
+                    **setup_diff,
+                    "modified_fields": setup_changes,
+                },
+                "fitting_weapons": {
+                    "vanilla_count": len(vanilla_fit),
+                    "oxa_count": len(oxa_fit),
+                    **fit_diff,
+                    "modified_memberships": fit_changes,
+                },
+            })
+            lines += [
+                f"Pseudo parent: {source_setup} ({source_weapon})",
+                f"  CompatibleAttachments: Vanilla={len(vanilla_setup)}, OXA={len(oxa_setup)}",
+                f"    added={len(setup_diff['added'])}, removed={len(setup_diff['removed'])}, modified={len(setup_diff['modified'])}, unchanged={len(setup_diff['unchanged'])}",
+                f"  FittingWeaponsSIDs: Vanilla={len(vanilla_fit)}, OXA={len(oxa_fit)}",
+                f"    added={len(fit_diff['added'])}, removed={len(fit_diff['removed'])}, modified={len(fit_diff['modified'])}, unchanged={len(fit_diff['unchanged'])}",
+            ]
+            for label in ("added", "removed", "modified"):
+                if setup_diff[label]:
+                    lines.append(f"  CompatibleAttachments {label}:")
+                    for sid in setup_diff[label]:
+                        lines.append(f"    {sid}")
+                        if label == "modified":
+                            for field, values in setup_changes[sid].items():
+                                lines.append(f"      {field}: {values['vanilla']} -> {values['oxa']}")
+            for label in ("added", "removed", "modified"):
+                if fit_diff[label]:
+                    lines.append(f"  FittingWeaponsSIDs {label}:")
+                    for sid in fit_diff[label]:
+                        lines.append(f"    {sid}")
+                        if label == "modified":
+                            lines.append(f"      Vanilla: {', '.join(fit_changes[sid]['vanilla'])}")
+                            lines.append(f"      OXA: {', '.join(fit_changes[sid]['oxa'])}")
+            lines.append("")
+        lines.append("")
+
+    OUT_TXT.parent.mkdir(parents=True, exist_ok=True)
+    OUT_TXT.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+    OUT_JSON.write_text(json.dumps({"pseudo_parents": rows}, indent=2), encoding="utf-8")
+    print(OUT_TXT.read_text(encoding="utf-8"), end="")
+    print(f"Text report: {OUT_TXT.relative_to(ROOT).as_posix()}")
+    print(f"JSON report: {OUT_JSON.relative_to(ROOT).as_posix()}")
+
+
+if __name__ == "__main__":
+    main()
