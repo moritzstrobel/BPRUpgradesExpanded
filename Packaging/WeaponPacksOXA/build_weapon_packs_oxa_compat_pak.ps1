@@ -9,16 +9,23 @@ Set-StrictMode -Version Latest
 
 $ScriptDirectory = Split-Path -Parent $MyInvocation.MyCommand.Path
 $ContentRoot = (Resolve-Path (Join-Path $ScriptDirectory "..\..")).Path
-$CompatRoot = Join-Path $ContentRoot "Compat\WeaponPacksOXA\GameLite"
+$BprueCompatRoot = Join-Path $ContentRoot "Compat\WeaponPacks\GameLite"
+$OxaCompatRoot = Join-Path $ContentRoot "Compat\WeaponPacksOXA\GameLite"
 $StagingRoot = Join-Path $ScriptDirectory "staging"
 $PakListPath = Join-Path $StagingRoot "paklist.txt"
 
 if (-not $OutputDirectory) { $OutputDirectory = Join-Path $ScriptDirectory "output" }
 
-$PakName = "BPRUpgradesExpanded_WeaponPacks_OXA_Compat.pak"
+$PakName = "BPRUpgradesExpanded_WeaponPacks_Compat.pak"
 $PakPath = Join-Path $OutputDirectory $PakName
 $MountRoot = "../../../Stalker2/Content/GameLite"
-$Layers = @("MK17", "ModernAK", "Shared")
+$Sources = @(
+    @{ Name = "BPRUE-MK17"; Root = Join-Path $BprueCompatRoot "MK17" },
+    @{ Name = "BPRUE-ModernAK"; Root = Join-Path $BprueCompatRoot "ModernAK" },
+    @{ Name = "OXA-MK17"; Root = Join-Path $OxaCompatRoot "MK17" },
+    @{ Name = "OXA-ModernAK"; Root = Join-Path $OxaCompatRoot "ModernAK" },
+    @{ Name = "OXA-Shared"; Root = Join-Path $OxaCompatRoot "Shared" }
+)
 
 function Find-UnrealPak {
     param([string]$ExplicitPath)
@@ -50,35 +57,34 @@ function To-PakPath {
 
 Write-Host "=== BPRUpgradesExpanded Weapon Packs x OXA Compat PAK Build ==="
 Write-Host "Content root : $ContentRoot"
-Write-Host "Compat root  : $CompatRoot"
+Write-Host "BPRUE compat : $BprueCompatRoot"
+Write-Host "OXA compat   : $OxaCompatRoot"
 
-if (-not (Test-Path -LiteralPath $CompatRoot -PathType Container)) {
-    throw "Weapon-pack OXA compatibility output does not exist. Run Python/ExternalWeaponPacks/CFGGenerators/generate_oxa_weapon_pack_compat.py first: $CompatRoot"
+foreach ($root in @($BprueCompatRoot, $OxaCompatRoot)) {
+    if (-not (Test-Path -LiteralPath $root -PathType Container)) {
+        throw "Weapon-pack compatibility output does not exist: $root. Run both external weapon-pack generators first."
+    }
 }
 
 $packageEntries = @()
-$seenDestinations = @{}
-
-foreach ($layer in $Layers) {
-    $layerRoot = Join-Path $CompatRoot $layer
-    if (-not (Test-Path -LiteralPath $layerRoot -PathType Container)) {
-        throw "Expected compatibility layer '$layer' does not exist: $layerRoot"
+foreach ($source in $Sources) {
+    $sourceRoot = $source.Root
+    $sourceName = $source.Name
+    if (-not (Test-Path -LiteralPath $sourceRoot -PathType Container)) {
+        throw "Expected compatibility source '$sourceName' does not exist: $sourceRoot"
     }
 
-    $layerFiles = @(Get-ChildItem -LiteralPath $layerRoot -File -Recurse | Sort-Object FullName)
-    if ($layerFiles.Count -eq 0) {
-        throw "Compatibility layer '$layer' contains no generated CFG files."
+    $sourceFiles = @(Get-ChildItem -LiteralPath $sourceRoot -File -Recurse | Sort-Object FullName)
+    if ($sourceFiles.Count -eq 0) {
+        throw "Compatibility source '$sourceName' contains no generated CFG files."
     }
 
-    foreach ($file in $layerFiles) {
-        $relativePath = $file.FullName.Substring($layerRoot.Length).TrimStart('\', '/')
+    foreach ($file in $sourceFiles) {
+        $relativePath = $file.FullName.Substring($sourceRoot.Length).TrimStart('\', '/')
         $relativePath = To-PakPath -Path $relativePath
-
-        # Different staging layers can intentionally contribute to the same CFG path.
-        # Keep them as separate source fragments here; they are merged into one staged CFG below.
         $packageEntries += [PSCustomObject]@{
             File = $file
-            Layer = $layer
+            Layer = $sourceName
             RelativePath = $relativePath
         }
     }
@@ -87,15 +93,16 @@ foreach ($layer in $Layers) {
 $UnrealPak = Find-UnrealPak -ExplicitPath $UnrealPakPath
 Write-Host "UnrealPak    : $UnrealPak"
 Write-Host "Files        : $($packageEntries.Count)"
-foreach ($layer in $Layers) {
-    Write-Host ("  {0,-8}: {1}" -f $layer, @($packageEntries | Where-Object Layer -eq $layer).Count)
+foreach ($source in $Sources) {
+    $name = $source.Name
+    Write-Host ("  {0,-16}: {1}" -f $name, @($packageEntries | Where-Object Layer -eq $name).Count)
 }
 
 if (Test-Path -LiteralPath $StagingRoot) { Remove-Item -LiteralPath $StagingRoot -Recurse -Force }
 New-Item -ItemType Directory -Path $StagingRoot -Force | Out-Null
 New-Item -ItemType Directory -Path $OutputDirectory -Force | Out-Null
 
-# Flatten MK17/ModernAK/Shared into one real GameLite tree. When multiple
+# Flatten BPRUE and OXA compatibility sources into one real GameLite tree. When multiple
 # layers target the same CFG path, concatenate the generated CFG fragments.
 $mergedEntries = @()
 foreach ($group in ($packageEntries | Group-Object RelativePath)) {
