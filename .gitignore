@@ -22,3 +22,7 @@ Thumbs.db
 # Python
 __pycache__/
 *.pyc
+
+# Other Mods
+Python/VanillaReference/MK17Data*
+Python/VanillaReference/ModernAKData*
