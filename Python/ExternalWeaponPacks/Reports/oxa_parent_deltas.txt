@@ -4,16 +4,264 @@ OXA pseudo-parent structural attachment diff
 MK17
 ====
 Pseudo parent: GunArev_ST_GS (GunArev_ST)
-  CompatibleAttachments: Vanilla=0, OXA=0
-    added=0, removed=0, modified=0, unchanged=0
+  CompatibleAttachments: Vanilla=18, OXA=70
+    added=53, removed=1, modified=16, unchanged=1
   FittingWeaponsSIDs: Vanilla=0, OXA=0
     added=0, removed=0, modified=0, unchanged=0
+  CompatibleAttachments added:
+    EN_X8Scope_1
+    GunArevLight_MagDefault
+    GunArevPrecise_MagDefault
+    OXABalancedVent_556
+    OXAGripAngled
+    OXAGripContoured
+    OXAGripStubby
+    OXAGripWeighted
+    OXALateralComp_556
+    OXAMuzzleBrake_556
+    OXA_HoloScope_1
+    OXA_Laser_1
+    OXA_Laser_10
+    OXA_Laser_2
+    OXA_Laser_3
+    OXA_Laser_4
+    OXA_Laser_5
+    OXA_Laser_6
+    OXA_Laser_7
+    OXA_Laser_8
+    OXA_Laser_9
+    OXA_Mag_556x45_EMag30r
+    OXA_Mag_556x45_PMag20r
+    OXA_Mag_556x45_PMag30r
+    OXA_Rail_Laser
+    OXA_Scope_Aselsan
+    OXA_Scope_Crossfire
+    OXA_Scope_Cyelee
+    OXA_Scope_EOTech551
+    OXA_Scope_EXPS2
+    OXA_Scope_EXPS3
+    OXA_Scope_Holosun
+    OXA_Scope_MicroT1
+    OXA_Scope_OASYS
+    OXA_Scope_Romeo8T
+    OXA_Scope_Spitfire
+    OXA_Scope_SpitfireAR
+    OXA_Scope_SpitfireHD
+    OXA_Scope_Venom
+    OXA_Scope_XM157
+    OXA_Silen_L2
+    OXA_Silen_M1
+    OXA_Silen_M2
+    OXA_Silen_M3
+    OXA_Silen_M4
+    OXA_Silen_M5
+    OXA_Silen_M6
+    OXA_Silen_M7
+    OXA_Silen_M8
+    OXA_Silen_M9
+    OXA_X2Scope_1
+    RU_ColimScope_1
+    RU_X2Scope_1
+  CompatibleAttachments removed:
+    EN_Grip_1
+  CompatibleAttachments modified:
+    EN_AutMuz_2
+      AdditionalMeshes.[*].MeshPrototypeSID: None -> Ironsights_05_Rear_Close
+      AdditionalMeshes.[*].Socket: None -> IronSightRearCollapsed
+    EN_BuckLaunch_1
+      IconPosX: 0 -> 150
+      IconPosY: 0 -> 30
+      WeaponSpecificIcon: Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_inv_w_arev_bucklauncher.T_inv_w_arev_bucklauncher' -> Texture2D'/Standard/Icons/Weapons/HK433/Underbarrel/T_inv_hk433_enblaunch.T_inv_hk433_enblaunch'
+    EN_ColimScope_1
+      AdditionalMeshes.[*].Socket: IronSightRearCollapsed -> IronSightRear
+      IconPosX: 155 -> 150
+      IconPosY: 9 -> 30
+      Socket: ColimScopeSocket -> ScopeSocketA2
+      WeaponSpecificIcon: Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_inv_w_arev_colimscope.T_inv_w_arev_colimscope' -> Texture2D'/Standard/Icons/Weapons/HK433/Scope/T_inv_hk433_scope_encol.T_inv_hk433_scope_encol'
+    EN_GLaunch_1
+      IconPosX: 0 -> 150
+      IconPosY: 0 -> 30
+      WeaponSpecificIcon: Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_inv_w_arev_glauncher.T_inv_w_arev_glauncher' -> Texture2D'/Standard/Icons/Weapons/HK433/Underbarrel/T_inv_hk433_englaunch.T_inv_hk433_englaunch'
+    EN_GoloScope_1
+      AdditionalMeshes.[*].Socket: IronSightRearCollapsed -> IronSightRear
+      IconPosX: 155 -> 150
+      IconPosY: 9 -> 30
+      Socket: GoloScopeSocket -> ScopeSocketA2
+      WeaponSpecificIcon: Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_inv_w_arev_holoscope.T_inv_w_arev_holoscope' -> Texture2D'/Standard/Icons/Weapons/HK433/Scope/T_inv_hk433_scope_enholo.T_inv_hk433_scope_enholo'
+    EN_Laser_1
+      Muzzle: None -> SilencerMuzzle
+    EN_SinMuz_3
+      AdditionalMeshes.[*].MeshPrototypeSID: None -> Ironsights_05_Rear_Close
+      AdditionalMeshes.[*].Socket: None -> IronSightRearCollapsed
+    EN_X2Scope_1
+      AdditionalMeshes.[*].Socket: IronSightRearCollapsed -> IronSightRear
+      IconPosX: 60 -> 150
+      IconPosY: 0 -> 30
+      Socket: X2ScopeSocket -> ScopeSocketA1
+      WeaponSpecificIcon: Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_inv_w_arev_x2scope.T_inv_w_arev_x2scope' -> Texture2D'/Standard/Icons/Weapons/HK433/Scope/T_inv_hk433_scope_enx2.T_inv_hk433_scope_enx2'
+    EN_X3Scope_1
+      AdditionalMeshes.[*].Socket: IronSightRearCollapsed -> IronSightRear
+      AimMuzzleVFXSocket: X3ScopeMuzzle -> X4ScopeMuzzle
+      AimShellShutterVFXSocket: X3ScopeShells -> X4ScopeShells
+      IconPosX: 60 -> 150
+      IconPosY: 0 -> 30
+      Socket: X3ScopeSocket -> ScopeSocketA1
+      WeaponSpecificIcon: Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_Inv_W_Arev_X3_Scope__01.T_Inv_W_Arev_X3_Scope__01' -> Texture2D'/Standard/Icons/Weapons/HK433/Scope/T_inv_hk433_scope_enx3.T_inv_hk433_scope_enx3'
+    EN_X4Scope_1
+      AdditionalMeshes.[*].Socket: IronSightRearCollapsed -> IronSightRear
+      IconPosX: 60 -> 150
+      IconPosY: 0 -> 30
+      Socket: X4ScopeSocket -> ScopeSocketA1
+      WeaponSpecificIcon: Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_inv_w_arev_x4scope.T_inv_w_arev_x4scope' -> Texture2D'/Standard/Icons/Weapons/HK433/Scope/T_inv_hk433_scope_enx4.T_inv_hk433_scope_enx4'
+    GunArev_DefaultMuz
+      IconPosX: 0 -> 150
+      IconPosY: 0 -> 30
+      Muzzle: MuzzleFOV -> MuzFX_145
+      Socket: MuzzleAttachSocket -> Muzzle_145
+      WeaponSpecificIcon: Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_inv_w_arev_muzzle.T_inv_w_arev_muzzle' -> Texture2D'/Standard/Icons/Weapons/HK433/Muzzle/T_inv_hk433_muz_default.T_inv_hk433_muz_default'
+    GunArev_MagDefault
+      IconPosX: 0 -> 150
+      IconPosY: 0 -> 30
+      WeaponSpecificIcon: Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_inv_w_arev_mag.T_inv_w_arev_mag' -> Texture2D'/Standard/Icons/Weapons/HK433/Magazine/T_inv_hk433_mag_default.T_inv_hk433_mag_default'
+    GunFora_MagIncreased
+      IconPosX: 0 -> 150
+      IconPosY: 0 -> 30
+      WeaponSpecificIcon: Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_inv_w_arev_Bigmag.T_inv_w_arev_Bigmag' -> Texture2D'/Standard/Icons/Weapons/HK433/Magazine/T_inv_hk433_mag_ext.T_inv_hk433_mag_ext'
+    GunM16_MagIncreased
+      IconPosX: 0 -> 150
+      IconPosY: 0 -> 30
+      WeaponSpecificIcon: Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_inv_w_arev_Roundmag.T_inv_w_arev_Roundmag' -> Texture2D'/Standard/Icons/Weapons/HK433/Magazine/T_inv_hk433_mag_drum.T_inv_hk433_mag_drum'
+    HP_Laser_2
+      AimMuzzleVFXSocket: None -> X2ScopeMuzzle
+      AimShellShutterVFXSocket: None -> X2ScopeShells
+    Ironsights_05
+      AdditionalMeshes.[*].MeshPrototypeSID: None -> Ironsights_05_Rear_Close
+      AdditionalMeshes.[*].Socket: None -> IronSightRearCollapsed
+      AimMuzzleVFXSocket: None -> X4ScopeMuzzle
+      AimShellShutterVFXSocket: None -> X4ScopeShells
+      IconPosX: 0 -> 150
+      IconPosY: 0 -> 30
+      WeaponSpecificIcon: Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_inv_w_arev_ironsights.T_inv_w_arev_ironsights' -> Texture2D'/Standard/Icons/Weapons/HK433/Scope/T_inv_hk433_ironsight_05.T_inv_hk433_ironsight_05'
 
 
 ModernAK
 ========
 Pseudo parent: GunAK74_ST (GunAK74_ST)
-  CompatibleAttachments: Vanilla=0, OXA=0
-    added=0, removed=0, modified=0, unchanged=0
-  FittingWeaponsSIDs: Vanilla=7, OXA=7
-    added=0, removed=0, modified=0, unchanged=7
+  CompatibleAttachments: Vanilla=9, OXA=69
+    added=61, removed=1, modified=8, unchanged=0
+  FittingWeaponsSIDs: Vanilla=7, OXA=11
+    added=6, removed=2, modified=1, unchanged=4
+  CompatibleAttachments added:
+    EN_ColimScope_1
+    EN_GoloScope_1
+    EN_X2Scope_1
+    EN_X3Scope_1
+    EN_X4Scope_1
+    EN_X8Scope_1
+    GunAK74_MagIncreased2
+    GunAK9_MagDefault
+    GunDrowned_GLaunch
+    GunDrowned_MagPaired
+    IronsightEnabler
+    OXABalancedVent_545
+    OXALateralComp_545
+    OXAMuzzleBrake_545
+    OXA_HoloScope_1
+    OXA_Laser_1
+    OXA_Laser_10
+    OXA_Laser_2
+    OXA_Laser_3
+    OXA_Laser_4
+    OXA_Laser_5
+    OXA_Laser_6
+    OXA_Laser_7
+    OXA_Laser_8
+    OXA_Laser_9
+    OXA_Mag_545x39_PMag30r
+    OXA_Scope_1OP50
+    OXA_Scope_1P63
+    OXA_Scope_1P78
+    OXA_Scope_1P87
+    OXA_Scope_Aselsan
+    OXA_Scope_Crossfire
+    OXA_Scope_Cyelee
+    OXA_Scope_EOTech551
+    OXA_Scope_EXPS2
+    OXA_Scope_EXPS3
+    OXA_Scope_Holosun
+    OXA_Scope_MicroT1
+    OXA_Scope_OASYS
+    OXA_Scope_OKP7
+    OXA_Scope_Romeo8T
+    OXA_Scope_Spitfire
+    OXA_Scope_SpitfireAR
+    OXA_Scope_SpitfireHD
+    OXA_Scope_Venom
+    OXA_Scope_XM157
+    OXA_Silen_M1
+    OXA_Silen_M2
+    OXA_Silen_M3
+    OXA_Silen_M4
+    OXA_Silen_M5
+    OXA_Silen_M6
+    OXA_Silen_M7
+    OXA_Silen_M8
+    OXA_X2Scope_1
+    RU_ColimScope_1
+    RU_SideRail_1
+    RU_Silen_2Alt
+    RU_X2Scope_1
+    RU_X8Scope_1
+    TopRailAKU
+  CompatibleAttachments removed:
+    RU_ColimScope_2
+  CompatibleAttachments modified:
+    AK74_DefaultMuz
+      IconPosX: 0 -> 150
+      IconPosY: 0 -> 30
+      Muzzle: MuzzleFOV -> MuzFX_163
+      Socket: SPSocket -> Muzzle_163
+      WeaponSpecificIcon: Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/AK74/T_inv_w_ak74_muz_01.T_inv_w_ak74_muz_01' -> Texture2D'/Standard/Icons/Weapons/AKS74N/Muzzle/T_inv_aks74n_muz_default.T_inv_aks74n_muz_default'
+    GunAK74_MagDefault
+      IconPosX: 0 -> 150
+      IconPosY: 0 -> 30
+      WeaponSpecificIcon: Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/AK74/T_inv_w_ak74_defaultmag.T_inv_w_ak74_defaultmag' -> Texture2D'/Standard/Icons/Weapons/AKS74N/Magazine/T_inv_aks74n_mag_default.T_inv_aks74n_mag_default'
+    GunAK74_MagIncreased
+      IconPosX: 0 -> 150
+      IconPosY: 0 -> 30
+      WeaponSpecificIcon: Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/AK74/T_inv_w_ak74_bigmag.T_inv_w_ak74_bigmag' -> Texture2D'/Standard/Icons/Weapons/AKS74N/Magazine/T_inv_aks74n_mag_ext1.T_inv_aks74n_mag_ext1'
+    GunAK_MagPaired
+      IconPosX: 0 -> 150
+      IconPosY: 0 -> 30
+      WeaponSpecificIcon: Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/AK74/T_inv_w_ak74_doublemag.T_inv_w_ak74_doublemag' -> Texture2D'/Standard/Icons/Weapons/AKS74N/Magazine/T_inv_aks74n_mag_paired.T_inv_aks74n_mag_paired'
+    RU_GLaunch_1
+      IconPosX: 0 -> 150
+      IconPosY: 0 -> 30
+      WeaponSpecificIcon: Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/AK74/T_inv_w_ak74_granade_launcher.T_inv_w_ak74_granade_launcher' -> Texture2D'/Standard/Icons/Weapons/AKS74N/Underbarrel/T_inv_aks74n_ruglaunch.T_inv_aks74n_ruglaunch'
+    RU_Silen_2
+      IconPosX: 205 -> 150
+      IconPosY: 9 -> 30
+      Muzzle: SilencerMuzzle -> SilFX_163
+      Socket: SilencerMuzzleSocket -> Silencer_163
+    RU_SinMuz_2
+      IconPosX: 205 -> 150
+      IconPosY: 9 -> 30
+    RU_X4Scope_1
+      IconPosX: 60 -> 150
+      IconPosY: 0 -> 30
+      Socket: X4ScopeSocket -> ScopeSocketB
+      WeaponSpecificIcon: Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/AK74/T_inv_w_ak74_scope.T_inv_w_ak74_scope' -> Texture2D'/Standard/Icons/Weapons/AKS74N/Scope/T_inv_aks74n_scope_rux4.T_inv_aks74n_scope_rux4'
+  FittingWeaponsSIDs added:
+    GunAK74_MagIncreased2
+    OXABalancedVent_545
+    OXALateralComp_545
+    OXAMuzzleBrake_545
+    OXA_Mag_545x39_PMag30r
+    OXA_Mag_762x39_PMag30r
+  FittingWeaponsSIDs removed:
+    RU_Silen_2
+    RU_X4Scope_1
+  FittingWeaponsSIDs modified:
+    GunAK74_MagIncreased
+      Vanilla: GunAK74_ST, GunDnipro_ST
+      OXA: GunAK74_ST, GunAKU_PP, GunDnipro_ST

@@ -5,13 +5,365 @@
       "source_setup": "GunArev_ST_GS",
       "source_weapon": "GunArev_ST",
       "compatible_attachments": {
-        "vanilla_count": 0,
-        "oxa_count": 0,
-        "added": [],
-        "removed": [],
-        "modified": [],
-        "unchanged": [],
-        "modified_fields": {}
+        "vanilla_count": 18,
+        "oxa_count": 70,
+        "added": [
+          "EN_X8Scope_1",
+          "GunArevLight_MagDefault",
+          "GunArevPrecise_MagDefault",
+          "OXABalancedVent_556",
+          "OXAGripAngled",
+          "OXAGripContoured",
+          "OXAGripStubby",
+          "OXAGripWeighted",
+          "OXALateralComp_556",
+          "OXAMuzzleBrake_556",
+          "OXA_HoloScope_1",
+          "OXA_Laser_1",
+          "OXA_Laser_10",
+          "OXA_Laser_2",
+          "OXA_Laser_3",
+          "OXA_Laser_4",
+          "OXA_Laser_5",
+          "OXA_Laser_6",
+          "OXA_Laser_7",
+          "OXA_Laser_8",
+          "OXA_Laser_9",
+          "OXA_Mag_556x45_EMag30r",
+          "OXA_Mag_556x45_PMag20r",
+          "OXA_Mag_556x45_PMag30r",
+          "OXA_Rail_Laser",
+          "OXA_Scope_Aselsan",
+          "OXA_Scope_Crossfire",
+          "OXA_Scope_Cyelee",
+          "OXA_Scope_EOTech551",
+          "OXA_Scope_EXPS2",
+          "OXA_Scope_EXPS3",
+          "OXA_Scope_Holosun",
+          "OXA_Scope_MicroT1",
+          "OXA_Scope_OASYS",
+          "OXA_Scope_Romeo8T",
+          "OXA_Scope_Spitfire",
+          "OXA_Scope_SpitfireAR",
+          "OXA_Scope_SpitfireHD",
+          "OXA_Scope_Venom",
+          "OXA_Scope_XM157",
+          "OXA_Silen_L2",
+          "OXA_Silen_M1",
+          "OXA_Silen_M2",
+          "OXA_Silen_M3",
+          "OXA_Silen_M4",
+          "OXA_Silen_M5",
+          "OXA_Silen_M6",
+          "OXA_Silen_M7",
+          "OXA_Silen_M8",
+          "OXA_Silen_M9",
+          "OXA_X2Scope_1",
+          "RU_ColimScope_1",
+          "RU_X2Scope_1"
+        ],
+        "removed": [
+          "EN_Grip_1"
+        ],
+        "modified": [
+          "EN_AutMuz_2",
+          "EN_BuckLaunch_1",
+          "EN_ColimScope_1",
+          "EN_GLaunch_1",
+          "EN_GoloScope_1",
+          "EN_Laser_1",
+          "EN_SinMuz_3",
+          "EN_X2Scope_1",
+          "EN_X3Scope_1",
+          "EN_X4Scope_1",
+          "GunArev_DefaultMuz",
+          "GunArev_MagDefault",
+          "GunFora_MagIncreased",
+          "GunM16_MagIncreased",
+          "HP_Laser_2",
+          "Ironsights_05"
+        ],
+        "unchanged": [
+          "EN_Silen_3"
+        ],
+        "modified_fields": {
+          "EN_AutMuz_2": {
+            "AdditionalMeshes.[*].MeshPrototypeSID": {
+              "vanilla": null,
+              "oxa": "Ironsights_05_Rear_Close"
+            },
+            "AdditionalMeshes.[*].Socket": {
+              "vanilla": null,
+              "oxa": "IronSightRearCollapsed"
+            }
+          },
+          "EN_BuckLaunch_1": {
+            "IconPosX": {
+              "vanilla": "0",
+              "oxa": "150"
+            },
+            "IconPosY": {
+              "vanilla": "0",
+              "oxa": "30"
+            },
+            "WeaponSpecificIcon": {
+              "vanilla": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_inv_w_arev_bucklauncher.T_inv_w_arev_bucklauncher'",
+              "oxa": "Texture2D'/Standard/Icons/Weapons/HK433/Underbarrel/T_inv_hk433_enblaunch.T_inv_hk433_enblaunch'"
+            }
+          },
+          "EN_ColimScope_1": {
+            "AdditionalMeshes.[*].Socket": {
+              "vanilla": "IronSightRearCollapsed",
+              "oxa": "IronSightRear"
+            },
+            "IconPosX": {
+              "vanilla": "155",
+              "oxa": "150"
+            },
+            "IconPosY": {
+              "vanilla": "9",
+              "oxa": "30"
+            },
+            "Socket": {
+              "vanilla": "ColimScopeSocket",
+              "oxa": "ScopeSocketA2"
+            },
+            "WeaponSpecificIcon": {
+              "vanilla": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_inv_w_arev_colimscope.T_inv_w_arev_colimscope'",
+              "oxa": "Texture2D'/Standard/Icons/Weapons/HK433/Scope/T_inv_hk433_scope_encol.T_inv_hk433_scope_encol'"
+            }
+          },
+          "EN_GLaunch_1": {
+            "IconPosX": {
+              "vanilla": "0",
+              "oxa": "150"
+            },
+            "IconPosY": {
+              "vanilla": "0",
+              "oxa": "30"
+            },
+            "WeaponSpecificIcon": {
+              "vanilla": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_inv_w_arev_glauncher.T_inv_w_arev_glauncher'",
+              "oxa": "Texture2D'/Standard/Icons/Weapons/HK433/Underbarrel/T_inv_hk433_englaunch.T_inv_hk433_englaunch'"
+            }
+          },
+          "EN_GoloScope_1": {
+            "AdditionalMeshes.[*].Socket": {
+              "vanilla": "IronSightRearCollapsed",
+              "oxa": "IronSightRear"
+            },
+            "IconPosX": {
+              "vanilla": "155",
+              "oxa": "150"
+            },
+            "IconPosY": {
+              "vanilla": "9",
+              "oxa": "30"
+            },
+            "Socket": {
+              "vanilla": "GoloScopeSocket",
+              "oxa": "ScopeSocketA2"
+            },
+            "WeaponSpecificIcon": {
+              "vanilla": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_inv_w_arev_holoscope.T_inv_w_arev_holoscope'",
+              "oxa": "Texture2D'/Standard/Icons/Weapons/HK433/Scope/T_inv_hk433_scope_enholo.T_inv_hk433_scope_enholo'"
+            }
+          },
+          "EN_Laser_1": {
+            "Muzzle": {
+              "vanilla": null,
+              "oxa": "SilencerMuzzle"
+            }
+          },
+          "EN_SinMuz_3": {
+            "AdditionalMeshes.[*].MeshPrototypeSID": {
+              "vanilla": null,
+              "oxa": "Ironsights_05_Rear_Close"
+            },
+            "AdditionalMeshes.[*].Socket": {
+              "vanilla": null,
+              "oxa": "IronSightRearCollapsed"
+            }
+          },
+          "EN_X2Scope_1": {
+            "AdditionalMeshes.[*].Socket": {
+              "vanilla": "IronSightRearCollapsed",
+              "oxa": "IronSightRear"
+            },
+            "IconPosX": {
+              "vanilla": "60",
+              "oxa": "150"
+            },
+            "IconPosY": {
+              "vanilla": "0",
+              "oxa": "30"
+            },
+            "Socket": {
+              "vanilla": "X2ScopeSocket",
+              "oxa": "ScopeSocketA1"
+            },
+            "WeaponSpecificIcon": {
+              "vanilla": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_inv_w_arev_x2scope.T_inv_w_arev_x2scope'",
+              "oxa": "Texture2D'/Standard/Icons/Weapons/HK433/Scope/T_inv_hk433_scope_enx2.T_inv_hk433_scope_enx2'"
+            }
+          },
+          "EN_X3Scope_1": {
+            "AdditionalMeshes.[*].Socket": {
+              "vanilla": "IronSightRearCollapsed",
+              "oxa": "IronSightRear"
+            },
+            "AimMuzzleVFXSocket": {
+              "vanilla": "X3ScopeMuzzle",
+              "oxa": "X4ScopeMuzzle"
+            },
+            "AimShellShutterVFXSocket": {
+              "vanilla": "X3ScopeShells",
+              "oxa": "X4ScopeShells"
+            },
+            "IconPosX": {
+              "vanilla": "60",
+              "oxa": "150"
+            },
+            "IconPosY": {
+              "vanilla": "0",
+              "oxa": "30"
+            },
+            "Socket": {
+              "vanilla": "X3ScopeSocket",
+              "oxa": "ScopeSocketA1"
+            },
+            "WeaponSpecificIcon": {
+              "vanilla": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_Inv_W_Arev_X3_Scope__01.T_Inv_W_Arev_X3_Scope__01'",
+              "oxa": "Texture2D'/Standard/Icons/Weapons/HK433/Scope/T_inv_hk433_scope_enx3.T_inv_hk433_scope_enx3'"
+            }
+          },
+          "EN_X4Scope_1": {
+            "AdditionalMeshes.[*].Socket": {
+              "vanilla": "IronSightRearCollapsed",
+              "oxa": "IronSightRear"
+            },
+            "IconPosX": {
+              "vanilla": "60",
+              "oxa": "150"
+            },
+            "IconPosY": {
+              "vanilla": "0",
+              "oxa": "30"
+            },
+            "Socket": {
+              "vanilla": "X4ScopeSocket",
+              "oxa": "ScopeSocketA1"
+            },
+            "WeaponSpecificIcon": {
+              "vanilla": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_inv_w_arev_x4scope.T_inv_w_arev_x4scope'",
+              "oxa": "Texture2D'/Standard/Icons/Weapons/HK433/Scope/T_inv_hk433_scope_enx4.T_inv_hk433_scope_enx4'"
+            }
+          },
+          "GunArev_DefaultMuz": {
+            "IconPosX": {
+              "vanilla": "0",
+              "oxa": "150"
+            },
+            "IconPosY": {
+              "vanilla": "0",
+              "oxa": "30"
+            },
+            "Muzzle": {
+              "vanilla": "MuzzleFOV",
+              "oxa": "MuzFX_145"
+            },
+            "Socket": {
+              "vanilla": "MuzzleAttachSocket",
+              "oxa": "Muzzle_145"
+            },
+            "WeaponSpecificIcon": {
+              "vanilla": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_inv_w_arev_muzzle.T_inv_w_arev_muzzle'",
+              "oxa": "Texture2D'/Standard/Icons/Weapons/HK433/Muzzle/T_inv_hk433_muz_default.T_inv_hk433_muz_default'"
+            }
+          },
+          "GunArev_MagDefault": {
+            "IconPosX": {
+              "vanilla": "0",
+              "oxa": "150"
+            },
+            "IconPosY": {
+              "vanilla": "0",
+              "oxa": "30"
+            },
+            "WeaponSpecificIcon": {
+              "vanilla": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_inv_w_arev_mag.T_inv_w_arev_mag'",
+              "oxa": "Texture2D'/Standard/Icons/Weapons/HK433/Magazine/T_inv_hk433_mag_default.T_inv_hk433_mag_default'"
+            }
+          },
+          "GunFora_MagIncreased": {
+            "IconPosX": {
+              "vanilla": "0",
+              "oxa": "150"
+            },
+            "IconPosY": {
+              "vanilla": "0",
+              "oxa": "30"
+            },
+            "WeaponSpecificIcon": {
+              "vanilla": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_inv_w_arev_Bigmag.T_inv_w_arev_Bigmag'",
+              "oxa": "Texture2D'/Standard/Icons/Weapons/HK433/Magazine/T_inv_hk433_mag_ext.T_inv_hk433_mag_ext'"
+            }
+          },
+          "GunM16_MagIncreased": {
+            "IconPosX": {
+              "vanilla": "0",
+              "oxa": "150"
+            },
+            "IconPosY": {
+              "vanilla": "0",
+              "oxa": "30"
+            },
+            "WeaponSpecificIcon": {
+              "vanilla": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_inv_w_arev_Roundmag.T_inv_w_arev_Roundmag'",
+              "oxa": "Texture2D'/Standard/Icons/Weapons/HK433/Magazine/T_inv_hk433_mag_drum.T_inv_hk433_mag_drum'"
+            }
+          },
+          "HP_Laser_2": {
+            "AimMuzzleVFXSocket": {
+              "vanilla": null,
+              "oxa": "X2ScopeMuzzle"
+            },
+            "AimShellShutterVFXSocket": {
+              "vanilla": null,
+              "oxa": "X2ScopeShells"
+            }
+          },
+          "Ironsights_05": {
+            "AdditionalMeshes.[*].MeshPrototypeSID": {
+              "vanilla": null,
+              "oxa": "Ironsights_05_Rear_Close"
+            },
+            "AdditionalMeshes.[*].Socket": {
+              "vanilla": null,
+              "oxa": "IronSightRearCollapsed"
+            },
+            "AimMuzzleVFXSocket": {
+              "vanilla": null,
+              "oxa": "X4ScopeMuzzle"
+            },
+            "AimShellShutterVFXSocket": {
+              "vanilla": null,
+              "oxa": "X4ScopeShells"
+            },
+            "IconPosX": {
+              "vanilla": "0",
+              "oxa": "150"
+            },
+            "IconPosY": {
+              "vanilla": "0",
+              "oxa": "30"
+            },
+            "WeaponSpecificIcon": {
+              "vanilla": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/Arev/T_inv_w_arev_ironsights.T_inv_w_arev_ironsights'",
+              "oxa": "Texture2D'/Standard/Icons/Weapons/HK433/Scope/T_inv_hk433_ironsight_05.T_inv_hk433_ironsight_05'"
+            }
+          }
+        }
       },
       "fitting_weapons": {
         "vanilla_count": 0,
@@ -28,22 +380,216 @@
       "source_setup": "GunAK74_ST",
       "source_weapon": "GunAK74_ST",
       "compatible_attachments": {
-        "vanilla_count": 0,
-        "oxa_count": 0,
-        "added": [],
-        "removed": [],
-        "modified": [],
+        "vanilla_count": 9,
+        "oxa_count": 69,
+        "added": [
+          "EN_ColimScope_1",
+          "EN_GoloScope_1",
+          "EN_X2Scope_1",
+          "EN_X3Scope_1",
+          "EN_X4Scope_1",
+          "EN_X8Scope_1",
+          "GunAK74_MagIncreased2",
+          "GunAK9_MagDefault",
+          "GunDrowned_GLaunch",
+          "GunDrowned_MagPaired",
+          "IronsightEnabler",
+          "OXABalancedVent_545",
+          "OXALateralComp_545",
+          "OXAMuzzleBrake_545",
+          "OXA_HoloScope_1",
+          "OXA_Laser_1",
+          "OXA_Laser_10",
+          "OXA_Laser_2",
+          "OXA_Laser_3",
+          "OXA_Laser_4",
+          "OXA_Laser_5",
+          "OXA_Laser_6",
+          "OXA_Laser_7",
+          "OXA_Laser_8",
+          "OXA_Laser_9",
+          "OXA_Mag_545x39_PMag30r",
+          "OXA_Scope_1OP50",
+          "OXA_Scope_1P63",
+          "OXA_Scope_1P78",
+          "OXA_Scope_1P87",
+          "OXA_Scope_Aselsan",
+          "OXA_Scope_Crossfire",
+          "OXA_Scope_Cyelee",
+          "OXA_Scope_EOTech551",
+          "OXA_Scope_EXPS2",
+          "OXA_Scope_EXPS3",
+          "OXA_Scope_Holosun",
+          "OXA_Scope_MicroT1",
+          "OXA_Scope_OASYS",
+          "OXA_Scope_OKP7",
+          "OXA_Scope_Romeo8T",
+          "OXA_Scope_Spitfire",
+          "OXA_Scope_SpitfireAR",
+          "OXA_Scope_SpitfireHD",
+          "OXA_Scope_Venom",
+          "OXA_Scope_XM157",
+          "OXA_Silen_M1",
+          "OXA_Silen_M2",
+          "OXA_Silen_M3",
+          "OXA_Silen_M4",
+          "OXA_Silen_M5",
+          "OXA_Silen_M6",
+          "OXA_Silen_M7",
+          "OXA_Silen_M8",
+          "OXA_X2Scope_1",
+          "RU_ColimScope_1",
+          "RU_SideRail_1",
+          "RU_Silen_2Alt",
+          "RU_X2Scope_1",
+          "RU_X8Scope_1",
+          "TopRailAKU"
+        ],
+        "removed": [
+          "RU_ColimScope_2"
+        ],
+        "modified": [
+          "AK74_DefaultMuz",
+          "GunAK74_MagDefault",
+          "GunAK74_MagIncreased",
+          "GunAK_MagPaired",
+          "RU_GLaunch_1",
+          "RU_Silen_2",
+          "RU_SinMuz_2",
+          "RU_X4Scope_1"
+        ],
         "unchanged": [],
-        "modified_fields": {}
+        "modified_fields": {
+          "AK74_DefaultMuz": {
+            "IconPosX": {
+              "vanilla": "0",
+              "oxa": "150"
+            },
+            "IconPosY": {
+              "vanilla": "0",
+              "oxa": "30"
+            },
+            "Muzzle": {
+              "vanilla": "MuzzleFOV",
+              "oxa": "MuzFX_163"
+            },
+            "Socket": {
+              "vanilla": "SPSocket",
+              "oxa": "Muzzle_163"
+            },
+            "WeaponSpecificIcon": {
+              "vanilla": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/AK74/T_inv_w_ak74_muz_01.T_inv_w_ak74_muz_01'",
+              "oxa": "Texture2D'/Standard/Icons/Weapons/AKS74N/Muzzle/T_inv_aks74n_muz_default.T_inv_aks74n_muz_default'"
+            }
+          },
+          "GunAK74_MagDefault": {
+            "IconPosX": {
+              "vanilla": "0",
+              "oxa": "150"
+            },
+            "IconPosY": {
+              "vanilla": "0",
+              "oxa": "30"
+            },
+            "WeaponSpecificIcon": {
+              "vanilla": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/AK74/T_inv_w_ak74_defaultmag.T_inv_w_ak74_defaultmag'",
+              "oxa": "Texture2D'/Standard/Icons/Weapons/AKS74N/Magazine/T_inv_aks74n_mag_default.T_inv_aks74n_mag_default'"
+            }
+          },
+          "GunAK74_MagIncreased": {
+            "IconPosX": {
+              "vanilla": "0",
+              "oxa": "150"
+            },
+            "IconPosY": {
+              "vanilla": "0",
+              "oxa": "30"
+            },
+            "WeaponSpecificIcon": {
+              "vanilla": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/AK74/T_inv_w_ak74_bigmag.T_inv_w_ak74_bigmag'",
+              "oxa": "Texture2D'/Standard/Icons/Weapons/AKS74N/Magazine/T_inv_aks74n_mag_ext1.T_inv_aks74n_mag_ext1'"
+            }
+          },
+          "GunAK_MagPaired": {
+            "IconPosX": {
+              "vanilla": "0",
+              "oxa": "150"
+            },
+            "IconPosY": {
+              "vanilla": "0",
+              "oxa": "30"
+            },
+            "WeaponSpecificIcon": {
+              "vanilla": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/AK74/T_inv_w_ak74_doublemag.T_inv_w_ak74_doublemag'",
+              "oxa": "Texture2D'/Standard/Icons/Weapons/AKS74N/Magazine/T_inv_aks74n_mag_paired.T_inv_aks74n_mag_paired'"
+            }
+          },
+          "RU_GLaunch_1": {
+            "IconPosX": {
+              "vanilla": "0",
+              "oxa": "150"
+            },
+            "IconPosY": {
+              "vanilla": "0",
+              "oxa": "30"
+            },
+            "WeaponSpecificIcon": {
+              "vanilla": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/AK74/T_inv_w_ak74_granade_launcher.T_inv_w_ak74_granade_launcher'",
+              "oxa": "Texture2D'/Standard/Icons/Weapons/AKS74N/Underbarrel/T_inv_aks74n_ruglaunch.T_inv_aks74n_ruglaunch'"
+            }
+          },
+          "RU_Silen_2": {
+            "IconPosX": {
+              "vanilla": "205",
+              "oxa": "150"
+            },
+            "IconPosY": {
+              "vanilla": "9",
+              "oxa": "30"
+            },
+            "Muzzle": {
+              "vanilla": "SilencerMuzzle",
+              "oxa": "SilFX_163"
+            },
+            "Socket": {
+              "vanilla": "SilencerMuzzleSocket",
+              "oxa": "Silencer_163"
+            }
+          },
+          "RU_SinMuz_2": {
+            "IconPosX": {
+              "vanilla": "205",
+              "oxa": "150"
+            },
+            "IconPosY": {
+              "vanilla": "9",
+              "oxa": "30"
+            }
+          },
+          "RU_X4Scope_1": {
+            "IconPosX": {
+              "vanilla": "60",
+              "oxa": "150"
+            },
+            "IconPosY": {
+              "vanilla": "0",
+              "oxa": "30"
+            },
+            "Socket": {
+              "vanilla": "X4ScopeSocket",
+              "oxa": "ScopeSocketB"
+            },
+            "WeaponSpecificIcon": {
+              "vanilla": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/AK74/T_inv_w_ak74_scope.T_inv_w_ak74_scope'",
+              "oxa": "Texture2D'/Standard/Icons/Weapons/AKS74N/Scope/T_inv_aks74n_scope_rux4.T_inv_aks74n_scope_rux4'"
+            }
+          }
+        }
       },
       "fitting_weapons": {
         "vanilla_count": 7,
-        "oxa_count": 7,
-        "added": [],
-        "removed": [],
-        "modified": [],
-        "unchanged": [
-          "GunAK74_MagIncreased",
+        "oxa_count": 11,
+        "added": [
           "GunAK74_MagIncreased2",
           "OXABalancedVent_545",
           "OXALateralComp_545",
@@ -51,7 +597,32 @@
           "OXA_Mag_545x39_PMag30r",
           "OXA_Mag_762x39_PMag30r"
         ],
-        "modified_memberships": {}
+        "removed": [
+          "RU_Silen_2",
+          "RU_X4Scope_1"
+        ],
+        "modified": [
+          "GunAK74_MagIncreased"
+        ],
+        "unchanged": [
+          "A545D",
+          "GunAK_MagPaired",
+          "RU_ColimScope_2",
+          "RU_GLaunch_1"
+        ],
+        "modified_memberships": {
+          "GunAK74_MagIncreased": {
+            "vanilla": [
+              "GunAK74_ST",
+              "GunDnipro_ST"
+            ],
+            "oxa": [
+              "GunAK74_ST",
+              "GunAKU_PP",
+              "GunDnipro_ST"
+            ]
+          }
+        }
       }
     }
   ]
