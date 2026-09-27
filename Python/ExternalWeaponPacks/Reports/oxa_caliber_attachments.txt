@@ -1,0 +1,38 @@
+OXA caliber-specific attachment inventory
+=========================================
+
+A545
+====
+Attachments: 5
+  magazine:
+    OXA_Mag_545x39_PMag30r -> GunAK74_ST, GunAKU_PP, GunDnipro_ST
+  muzzle:
+    OXABalancedVent_545 -> GunAK74_ST, GunAKU_PP, GunDnipro_ST, GunFora_ST
+    OXALateralComp_545 -> GunAK74_ST, GunAKU_PP, GunDnipro_ST, GunFora_ST
+    OXAMuzzleBrake_545 -> GunAK74_ST, GunAKU_PP, GunDnipro_ST, GunFora_ST
+  other:
+    A545D -> GunAK74_ST, GunAKU_PP, GunDnipro_ST, GunFora_ST
+
+A556
+====
+Attachments: 7
+  magazine:
+    OXA_Mag_556x45_EMag30r -> GunFora_ST, GunG37_ST, GunKharod_ST, GunM16_ST
+    OXA_Mag_556x45_PMag20r -> GunFora_ST, GunG37_ST, GunKharod_ST, GunM16_ST
+    OXA_Mag_556x45_PMag30r -> GunFora_ST, GunG37_ST, GunKharod_ST, GunM16_ST
+  muzzle:
+    OXABalancedVent_556 -> GunG37_ST, GunKharod_ST, GunM16_ST
+    OXALateralComp_556 -> GunG37_ST, GunKharod_ST, GunM16_ST
+    OXAMuzzleBrake_556 -> GunG37_ST, GunKharod_ST, GunM16_ST
+  other:
+    A556D -> GunG37_ST, GunKharod_ST, GunM16_ST, nwpack_GunArev_ST
+
+A762
+====
+Attachments: 1
+  magazine:
+    OXA_Mag_762x39_PMag30r -> GunAK74_ST, GunAKU_PP, GunDnipro_ST
+
+A762NATO
+========
+Attachments: 0

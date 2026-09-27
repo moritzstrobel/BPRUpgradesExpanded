@@ -1,0 +1,136 @@
+{
+  "calibers": {
+    "A545": [
+      {
+        "sid": "A545D",
+        "type": "other",
+        "fitting_weapons": [
+          "GunAK74_ST",
+          "GunAKU_PP",
+          "GunDnipro_ST",
+          "GunFora_ST"
+        ]
+      },
+      {
+        "sid": "OXABalancedVent_545",
+        "type": "muzzle",
+        "fitting_weapons": [
+          "GunAK74_ST",
+          "GunAKU_PP",
+          "GunDnipro_ST",
+          "GunFora_ST"
+        ]
+      },
+      {
+        "sid": "OXALateralComp_545",
+        "type": "muzzle",
+        "fitting_weapons": [
+          "GunAK74_ST",
+          "GunAKU_PP",
+          "GunDnipro_ST",
+          "GunFora_ST"
+        ]
+      },
+      {
+        "sid": "OXAMuzzleBrake_545",
+        "type": "muzzle",
+        "fitting_weapons": [
+          "GunAK74_ST",
+          "GunAKU_PP",
+          "GunDnipro_ST",
+          "GunFora_ST"
+        ]
+      },
+      {
+        "sid": "OXA_Mag_545x39_PMag30r",
+        "type": "magazine",
+        "fitting_weapons": [
+          "GunAK74_ST",
+          "GunAKU_PP",
+          "GunDnipro_ST"
+        ]
+      }
+    ],
+    "A556": [
+      {
+        "sid": "A556D",
+        "type": "other",
+        "fitting_weapons": [
+          "GunG37_ST",
+          "GunKharod_ST",
+          "GunM16_ST",
+          "nwpack_GunArev_ST"
+        ]
+      },
+      {
+        "sid": "OXABalancedVent_556",
+        "type": "muzzle",
+        "fitting_weapons": [
+          "GunG37_ST",
+          "GunKharod_ST",
+          "GunM16_ST"
+        ]
+      },
+      {
+        "sid": "OXALateralComp_556",
+        "type": "muzzle",
+        "fitting_weapons": [
+          "GunG37_ST",
+          "GunKharod_ST",
+          "GunM16_ST"
+        ]
+      },
+      {
+        "sid": "OXAMuzzleBrake_556",
+        "type": "muzzle",
+        "fitting_weapons": [
+          "GunG37_ST",
+          "GunKharod_ST",
+          "GunM16_ST"
+        ]
+      },
+      {
+        "sid": "OXA_Mag_556x45_EMag30r",
+        "type": "magazine",
+        "fitting_weapons": [
+          "GunFora_ST",
+          "GunG37_ST",
+          "GunKharod_ST",
+          "GunM16_ST"
+        ]
+      },
+      {
+        "sid": "OXA_Mag_556x45_PMag20r",
+        "type": "magazine",
+        "fitting_weapons": [
+          "GunFora_ST",
+          "GunG37_ST",
+          "GunKharod_ST",
+          "GunM16_ST"
+        ]
+      },
+      {
+        "sid": "OXA_Mag_556x45_PMag30r",
+        "type": "magazine",
+        "fitting_weapons": [
+          "GunFora_ST",
+          "GunG37_ST",
+          "GunKharod_ST",
+          "GunM16_ST"
+        ]
+      }
+    ],
+    "A762": [
+      {
+        "sid": "OXA_Mag_762x39_PMag30r",
+        "type": "magazine",
+        "fitting_weapons": [
+          "GunAK74_ST",
+          "GunAKU_PP",
+          "GunDnipro_ST"
+        ]
+      }
+    ],
+    "A762NATO": []
+  }
+}
