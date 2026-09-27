@@ -155,6 +155,7 @@ def main() -> None:
     oxa = collect(args.oxa_root)
     registry = load_registry()
     fitting_targets: dict[str, set[str]] = defaultdict(set)
+    fitting_effective = effective_fitting_entries(vanilla, oxa)
     setup_outputs: dict[str, list[str]] = defaultdict(list)
     summary = []
 
@@ -168,10 +169,18 @@ def main() -> None:
 
             # Only inherit OXA additions. Parent-specific modifications/removals contain
             # sockets, meshes and icons for the parent weapon and are unsafe to transplant.
-            selected = sorted(sid for sid in added if caliber_allowed(sid, weapon["base_caliber"]))
+            selected_set = {sid for sid in added if caliber_allowed(sid, weapon["base_caliber"])}
+            supplements = set(CALIBER_SUPPLEMENTS.get(weapon["base_caliber"], ()))
+            missing = sorted(sid for sid in supplements if sid not in fitting_effective)
+            if missing:
+                raise ValueError(
+                    f"{pack_name}: configured OXA caliber supplements not found: {', '.join(missing)}"
+                )
+            selected_set.update(supplements)
+            selected = sorted(selected_set)
             entries = []
             for sid in selected:
-                fields = dict(effective[sid])
+                fields = dict(effective[sid]) if sid in effective else {"AttachPrototypeSID": sid}
                 fields["AttachPrototypeSID"] = sid
                 entries.append({"sid": sid, "fields": fields})
                 fitting_targets[sid].add(weapon["weapon_sid"])
@@ -202,8 +211,11 @@ def main() -> None:
 
     print("BPRUE x OXA x external weapon packs")
     print("===================================")
-    for pack, weapon, parent, caliber, available, selected in summary:
-        print(f"{pack}: {weapon} <- {parent} [{caliber}] OXA additions={available}, selected={selected}")
+    for pack, weapon, parent, caliber, available, selected, supplements in summary:
+        print(
+            f"{pack}: {weapon} <- {parent} [{caliber}] "
+            f"OXA additions={available}, selected={selected}, caliber supplements={supplements}"
+        )
     print(f"Unique OXA attachments patched: {len(fitting_targets)}")
     print(f"Output: {args.output_root.relative_to(ROOT).as_posix()}")
 
