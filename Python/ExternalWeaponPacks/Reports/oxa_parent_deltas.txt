@@ -1,0 +1,19 @@
+OXA pseudo-parent structural attachment diff
+============================================
+
+MK17
+====
+Pseudo parent: GunArev_ST_GS (GunArev_ST)
+  CompatibleAttachments: Vanilla=0, OXA=0
+    added=0, removed=0, modified=0, unchanged=0
+  FittingWeaponsSIDs: Vanilla=0, OXA=0
+    added=0, removed=0, modified=0, unchanged=0
+
+
+ModernAK
+========
+Pseudo parent: GunAK74_ST (GunAK74_ST)
+  CompatibleAttachments: Vanilla=0, OXA=0
+    added=0, removed=0, modified=0, unchanged=0
+  FittingWeaponsSIDs: Vanilla=7, OXA=7
+    added=0, removed=0, modified=0, unchanged=7

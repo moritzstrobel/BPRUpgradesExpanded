@@ -1,0 +1,58 @@
+{
+  "pseudo_parents": [
+    {
+      "pack": "MK17",
+      "source_setup": "GunArev_ST_GS",
+      "source_weapon": "GunArev_ST",
+      "compatible_attachments": {
+        "vanilla_count": 0,
+        "oxa_count": 0,
+        "added": [],
+        "removed": [],
+        "modified": [],
+        "unchanged": [],
+        "modified_fields": {}
+      },
+      "fitting_weapons": {
+        "vanilla_count": 0,
+        "oxa_count": 0,
+        "added": [],
+        "removed": [],
+        "modified": [],
+        "unchanged": [],
+        "modified_memberships": {}
+      }
+    },
+    {
+      "pack": "ModernAK",
+      "source_setup": "GunAK74_ST",
+      "source_weapon": "GunAK74_ST",
+      "compatible_attachments": {
+        "vanilla_count": 0,
+        "oxa_count": 0,
+        "added": [],
+        "removed": [],
+        "modified": [],
+        "unchanged": [],
+        "modified_fields": {}
+      },
+      "fitting_weapons": {
+        "vanilla_count": 7,
+        "oxa_count": 7,
+        "added": [],
+        "removed": [],
+        "modified": [],
+        "unchanged": [
+          "GunAK74_MagIncreased",
+          "GunAK74_MagIncreased2",
+          "OXABalancedVent_545",
+          "OXALateralComp_545",
+          "OXAMuzzleBrake_545",
+          "OXA_Mag_545x39_PMag30r",
+          "OXA_Mag_762x39_PMag30r"
+        ],
+        "modified_memberships": {}
+      }
+    }
+  ]
+}
