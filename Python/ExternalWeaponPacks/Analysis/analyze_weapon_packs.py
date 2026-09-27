@@ -82,6 +82,30 @@ def collect_family(game_data: Path, fragment: str) -> dict[str, dict]:
     return result
 
 
+def effective_entry(entries: dict[str, dict], sid: str) -> tuple[dict, list[str]]:
+    """Resolve scalar/array fields through refkey inheritance, child values winning."""
+    fields: dict = {}
+    chain: list[str] = []
+    visiting: set[str] = set()
+
+    def visit(current_sid: str) -> None:
+        if current_sid in visiting:
+            raise ValueError(f"Circular refkey inheritance: {' -> '.join(chain + [current_sid])}")
+        entry = entries.get(current_sid)
+        if entry is None:
+            return
+        visiting.add(current_sid)
+        parents = entry.get("refkeys", [])
+        if parents:
+            visit(parents[-1])
+        fields.update(entry.get("fields", {}))
+        chain.append(current_sid)
+        visiting.remove(current_sid)
+
+    visit(sid)
+    return fields, chain
+
+
 def collect_upgrade_definitions(game_data: Path) -> set[str]:
     result = set()
     upgrade_root = game_data / "UpgradePrototypes"
@@ -125,11 +149,13 @@ def inspect_pack(pack_name: str, spec: dict, vanilla_root: Path) -> dict:
         errors = []
         if item is None: errors.append("weapon prototype not found")
         if setup is None: errors.append("GeneralSetup not found")
-        roots_for_weapon = setup["fields"].get("UpgradePrototypeSIDs", []) if setup else []
+        effective_fields, inheritance_chain = effective_entry(setups, setup_sid) if setup else ({}, [])
+        roots_for_weapon = effective_fields.get("UpgradePrototypeSIDs", [])
         all_pack_roots.update(roots_for_weapon)
         weapons.append({
             **weapon_spec, "category": spec["category"],
-            "detected_caliber": setup["fields"].get("AmmoCaliber") if setup else None,
+            "detected_caliber": effective_fields.get("AmmoCaliber"),
+            "setup_inheritance_chain": inheritance_chain,
             "weapon_refkeys": item["refkeys"] if item else [],
             "setup_refkeys": setup["refkeys"] if setup else [],
             "item_sources": item["sources"] if item else [],
@@ -170,6 +196,8 @@ def render(result: dict) -> str:
         for weapon in pack["weapons"]:
             lines.append(f"{weapon['weapon_sid']} -> {weapon['general_setup_sid']} [{weapon['base_caliber']}]")
             if weapon["detected_caliber"]: lines.append(f"  detected caliber: {weapon['detected_caliber']}")
+            if len(weapon.get("setup_inheritance_chain", [])) > 1:
+                lines.append(f"  setup inheritance: {' -> '.join(weapon['setup_inheritance_chain'])}")
             lines.append(f"  pack upgrade roots: {len(weapon['pack_upgrade_roots'])}")
             lines.append(f"  resolved definitions: {len(weapon['pack_upgrade_definitions'])}")
             if weapon["errors"]: lines.append(f"  ERRORS: {', '.join(weapon['errors'])}")
