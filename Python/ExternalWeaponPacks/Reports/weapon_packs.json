@@ -109,6 +109,7 @@
             "GunScar_Upgrade_Stock_2_2",
             "GunScar_Upgrade_Stock_3"
           ],
+          "native_upgrade_status": "native",
           "errors": []
         },
         {
@@ -179,6 +180,7 @@
             "GunScar_Upgrade_Stock_2_2",
             "GunScar_Upgrade_Stock_3"
           ],
+          "native_upgrade_status": "native",
           "errors": []
         },
         {
@@ -249,6 +251,7 @@
             "GunScar_Upgrade_Stock_2_2",
             "GunScar_Upgrade_Stock_3"
           ],
+          "native_upgrade_status": "native",
           "errors": []
         },
         {
@@ -319,6 +322,7 @@
             "GunScar_Upgrade_Stock_2_2",
             "GunScar_Upgrade_Stock_3"
           ],
+          "native_upgrade_status": "native",
           "errors": []
         }
       ]
@@ -398,6 +402,7 @@
             "GunAKM_Upgrade_Attachment_Offset_Stock",
             "GunAKM_Upgrade_Attachment_SideRail"
           ],
+          "native_upgrade_status": "native",
           "errors": []
         },
         {
@@ -441,6 +446,7 @@
             "GunAKM_Upgrade_Attachment_Laser",
             "GunAKM_Upgrade_Attachment_Offset_Stock"
           ],
+          "native_upgrade_status": "native",
           "errors": []
         },
         {
@@ -467,6 +473,7 @@
           ],
           "pack_upgrade_roots": [],
           "pack_upgrade_definitions": [],
+          "native_upgrade_status": "none",
           "errors": []
         },
         {
@@ -514,6 +521,7 @@
             "GunAKM_Upgrade_Attachment_Laser_3",
             "GunAKM_Upgrade_Attachment_Offset_Stock"
           ],
+          "native_upgrade_status": "native",
           "errors": []
         },
         {
@@ -561,6 +569,7 @@
             "GunAKM_Upgrade_Attachment_Laser_3",
             "GunAKM_Upgrade_Attachment_Offset_Stock"
           ],
+          "native_upgrade_status": "native",
           "errors": []
         }
       ]

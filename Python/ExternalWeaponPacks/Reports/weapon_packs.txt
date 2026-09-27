@@ -56,6 +56,7 @@ GunRD704_ST -> GunRD704_ST [A762]
   setup source: WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_KPYK.cfg
 GunAK_ST -> GunAK_ST [A762]
   pack upgrade roots: 0
+  native upgrades: none (BPRUE compat will initialize the upgrade list)
   resolved definitions: 0
   setup source: WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_KPYK.cfg
 GunType81_ST -> GunType81_ST [A762]
