@@ -41,6 +41,19 @@ CALIBER_SUPPLEMENTS = {
 }
 
 
+# The pseudo-parent selects OXA capabilities; it is NOT a geometry parent.
+# Keep parent-specific sockets, meshes, icons and upgrade gates out of foreign weapons.
+SAFE_COMPAT_FIELDS = {"AttachPrototypeSID", "IconPosX", "IconPosY"}
+
+
+def sanitize_compat_fields(sid: str, fields: dict[str, str]) -> dict[str, str]:
+    clean = {"AttachPrototypeSID": sid}
+    for key, value in fields.items():
+        if key in SAFE_COMPAT_FIELDS:
+            clean[key] = value
+    return clean
+
+
 def semantic_state(vanilla_writes, oxa_writes, prototype: str, root: str):
     key = (prototype, root)
     vg = _semantic_arrays(vanilla_writes)
@@ -180,7 +193,7 @@ def main() -> None:
             selected = sorted(selected_set)
             entries = []
             for sid in selected:
-                fields = dict(effective[sid]) if sid in effective else {"AttachPrototypeSID": sid}
+                fields = sanitize_compat_fields(sid, effective[sid]) if sid in effective else {"AttachPrototypeSID": sid}
                 fields["AttachPrototypeSID"] = sid
                 entries.append({"sid": sid, "fields": fields})
                 fitting_targets[sid].add(weapon["weapon_sid"])
@@ -194,8 +207,8 @@ def main() -> None:
         setup_file.parent.mkdir(parents=True, exist_ok=True)
         setup_file.write_text(
             "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND\n"
-            "// OXA additions inherited through BPRUE pseudo-parent metadata.\n"
-            "// Parent modifications/removals are intentionally not transplanted.\n\n"
+            "// OXA capability additions selected through BPRUE pseudo-parent metadata.\n"
+            "// Pack-owned geometry, sockets, icons and upgrade gates are intentionally untouched.\n\n"
             + "\n".join(chunks), encoding="utf-8"
         )
 
