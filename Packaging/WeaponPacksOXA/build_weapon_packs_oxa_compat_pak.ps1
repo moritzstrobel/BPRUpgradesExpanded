@@ -148,7 +148,7 @@ $missingPaths = @($mergedEntries | Where-Object {
 })
 if ($missingPaths.Count -gt 0) {
     Write-Host "Missing GameLite-relative entries:"
-    $missingPaths | ForEach-Object { Write-Host "  [$($_.Layer)] $($_.RelativePath)" }
+    $missingPaths | ForEach-Object { Write-Host "  [$($_.Layers)] $($_.RelativePath)" }
     throw "Generated PAK is missing $($missingPaths.Count) expected file(s)."
 }
 
