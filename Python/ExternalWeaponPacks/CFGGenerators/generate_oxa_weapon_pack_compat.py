@@ -45,6 +45,15 @@ CALIBER_SUPPLEMENTS = {
 # Keep parent-specific sockets, meshes, icons and upgrade gates out of foreign weapons.
 SAFE_COMPAT_FIELDS = {"AttachPrototypeSID", "IconPosX", "IconPosY"}
 
+# Automatic inheritance is intentionally limited to OXA-owned prototypes.
+# Vanilla/parent-family prototypes (GunArev*, GunAK*, GunDrowned*, EN_*, RU_* ...)
+# are not OXA content and must not leak from the pseudo-parent into a foreign pack.
+OXA_ATTACHMENT_PREFIXES = ("OXA_", "OXA")
+
+
+def is_oxa_attachment(sid: str) -> bool:
+    return sid.startswith(OXA_ATTACHMENT_PREFIXES)
+
 
 def sanitize_compat_fields(sid: str, fields: dict[str, str]) -> dict[str, str]:
     clean = {"AttachPrototypeSID": sid}
@@ -182,7 +191,10 @@ def main() -> None:
 
             # Only inherit OXA additions. Parent-specific modifications/removals contain
             # sockets, meshes and icons for the parent weapon and are unsafe to transplant.
-            selected_set = {sid for sid in added if caliber_allowed(sid, weapon["base_caliber"])}
+            selected_set = {
+                sid for sid in added
+                if is_oxa_attachment(sid) and caliber_allowed(sid, weapon["base_caliber"])
+            }
             supplements = set(CALIBER_SUPPLEMENTS.get(weapon["base_caliber"], ()))
             missing = sorted(sid for sid in supplements if sid not in fitting_effective)
             if missing:
@@ -199,7 +211,7 @@ def main() -> None:
                 fitting_targets[sid].add(weapon["weapon_sid"])
 
             setup_outputs[pack_name].append(render_setup_patch(weapon["general_setup_sid"], entries))
-            summary.append((pack_name, weapon["weapon_sid"], parent_weapon, weapon["base_caliber"], len(added), len(selected), len(supplements)))
+            summary.append((pack_name, weapon["weapon_sid"], parent_weapon, weapon["base_caliber"], len(added), len(selected), len(supplements), len(added) - len({sid for sid in added if is_oxa_attachment(sid)})))
 
     for pack_name, chunks in setup_outputs.items():
         root = args.output_root / pack_name / "GameData"
@@ -224,10 +236,10 @@ def main() -> None:
 
     print("BPRUE x OXA x external weapon packs")
     print("===================================")
-    for pack, weapon, parent, caliber, available, selected, supplements in summary:
+    for pack, weapon, parent, caliber, available, selected, supplements, non_oxa_skipped in summary:
         print(
             f"{pack}: {weapon} <- {parent} [{caliber}] "
-            f"OXA additions={available}, selected={selected}, caliber supplements={supplements}"
+            f"parent additions={available}, selected OXA={selected}, caliber supplements={supplements}, non-OXA skipped={non_oxa_skipped}"
         )
     print(f"Unique OXA attachments patched: {len(fitting_targets)}")
     print(f"Output: {args.output_root.relative_to(ROOT).as_posix()}")
