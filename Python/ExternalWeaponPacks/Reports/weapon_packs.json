@@ -1,0 +1,202 @@
+{
+  "packs": [
+    {
+      "name": "MK17",
+      "root": "G:\\Epic Games\\STALKER2ZoneKit\\Stalker2\\Mods\\BPRUpgradesExpanded\\Content\\Python\\VanillaReference\\MK17Data",
+      "game_data_roots": [
+        "G:\\Epic Games\\STALKER2ZoneKit\\Stalker2\\Mods\\BPRUpgradesExpanded\\Content\\Python\\VanillaReference\\MK17Data\\MK17Stalker2-Windows-OverrideContent\\Stalker2\\Content\\GameLite\\GameData"
+      ],
+      "summary": {
+        "weapon_items": 4,
+        "weapon_setups": 4,
+        "pack_upgrade_roots": 0,
+        "pack_upgrade_definitions": 0
+      },
+      "weapons": [
+        {
+          "weapon_sid": "GunHowa_ST",
+          "general_setup": "GunHowa_ST",
+          "weapon_refkeys": [
+            "TemplateRifle"
+          ],
+          "setup_refkeys": [
+            "TemplateRifle"
+          ],
+          "item_sources": [
+            "ItemPrototypes/Kancolle_ScarH_WP.cfg"
+          ],
+          "setup_sources": [
+            "WeaponData/WeaponGeneralSetupPrototypes/zz_HOWA.cfg"
+          ],
+          "pack_upgrade_roots": [],
+          "pack_upgrade_definitions": [],
+          "compatible_attachments": [],
+          "ammo": [],
+          "technician_sources": []
+        },
+        {
+          "weapon_sid": "GunMk16_ST",
+          "general_setup": "GunMk16_ST",
+          "weapon_refkeys": [
+            "TemplateRifle"
+          ],
+          "setup_refkeys": [
+            "TemplateRifle"
+          ],
+          "item_sources": [
+            "ItemPrototypes/Kancolle_ScarH_WP.cfg"
+          ],
+          "setup_sources": [
+            "WeaponData/WeaponGeneralSetupPrototypes/zz_SCAR.cfg"
+          ],
+          "pack_upgrade_roots": [],
+          "pack_upgrade_definitions": [],
+          "compatible_attachments": [],
+          "ammo": [],
+          "technician_sources": []
+        },
+        {
+          "weapon_sid": "GunMk17_ST",
+          "general_setup": "GunMK17_ST",
+          "weapon_refkeys": [
+            "TemplateRifle"
+          ],
+          "setup_refkeys": [
+            "TemplateRifleSingleFire"
+          ],
+          "item_sources": [
+            "ItemPrototypes/Kancolle_ScarH_WP.cfg"
+          ],
+          "setup_sources": [
+            "WeaponData/WeaponGeneralSetupPrototypes/zz_SCAR_BLK.cfg"
+          ],
+          "pack_upgrade_roots": [],
+          "pack_upgrade_definitions": [],
+          "compatible_attachments": [],
+          "ammo": [],
+          "technician_sources": []
+        },
+        {
+          "weapon_sid": "GunScarl_ST",
+          "general_setup": "GunScarl_ST",
+          "weapon_refkeys": [
+            "TemplateRifle"
+          ],
+          "setup_refkeys": [
+            "TemplateRifle"
+          ],
+          "item_sources": [
+            "ItemPrototypes/Kancolle_ScarH_WP.cfg"
+          ],
+          "setup_sources": [
+            "WeaponData/WeaponGeneralSetupPrototypes/zz_SCAR.cfg"
+          ],
+          "pack_upgrade_roots": [],
+          "pack_upgrade_definitions": [],
+          "compatible_attachments": [],
+          "ammo": [],
+          "technician_sources": []
+        }
+      ]
+    },
+    {
+      "name": "ModernAK",
+      "root": "G:\\Epic Games\\STALKER2ZoneKit\\Stalker2\\Mods\\BPRUpgradesExpanded\\Content\\Python\\VanillaReference\\ModernAKData",
+      "game_data_roots": [
+        "G:\\Epic Games\\STALKER2ZoneKit\\Stalker2\\Mods\\BPRUpgradesExpanded\\Content\\Python\\VanillaReference\\ModernAKData\\KPYKStalker2-Windows-OverrideContent\\Stalker2\\Content\\GameLite\\GameData"
+      ],
+      "summary": {
+        "weapon_items": 4,
+        "weapon_setups": 4,
+        "pack_upgrade_roots": 0,
+        "pack_upgrade_definitions": 0
+      },
+      "weapons": [
+        {
+          "weapon_sid": "GunAK_ST",
+          "general_setup": "GunAK_ST",
+          "weapon_refkeys": [
+            "TemplateRifle"
+          ],
+          "setup_refkeys": [
+            "TemplateRifle"
+          ],
+          "item_sources": [
+            "ItemPrototypes/WeaponPrototypes_KPYK.cfg"
+          ],
+          "setup_sources": [
+            "WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_KPYK.cfg"
+          ],
+          "pack_upgrade_roots": [],
+          "pack_upgrade_definitions": [],
+          "compatible_attachments": [],
+          "ammo": [],
+          "technician_sources": []
+        },
+        {
+          "weapon_sid": "GunRD704_ST",
+          "general_setup": "GunRD704_ST",
+          "weapon_refkeys": [
+            "GunKPYK_ST"
+          ],
+          "setup_refkeys": [
+            "TemplateRifle"
+          ],
+          "item_sources": [
+            "ItemPrototypes/WeaponPrototypes_KPYK.cfg"
+          ],
+          "setup_sources": [
+            "WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_KPYK.cfg"
+          ],
+          "pack_upgrade_roots": [],
+          "pack_upgrade_definitions": [],
+          "compatible_attachments": [],
+          "ammo": [],
+          "technician_sources": []
+        },
+        {
+          "weapon_sid": "GunType81_AR",
+          "general_setup": "GunType81_AR",
+          "weapon_refkeys": [
+            "TemplateRifle"
+          ],
+          "setup_refkeys": [
+            "TemplateRifle"
+          ],
+          "item_sources": [
+            "ItemPrototypes/WeaponPrototypes_KPYK.cfg"
+          ],
+          "setup_sources": [
+            "WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_KPYK.cfg"
+          ],
+          "pack_upgrade_roots": [],
+          "pack_upgrade_definitions": [],
+          "compatible_attachments": [],
+          "ammo": [],
+          "technician_sources": []
+        },
+        {
+          "weapon_sid": "GunType81_ST",
+          "general_setup": "GunType81_ST",
+          "weapon_refkeys": [
+            "TemplateRifle"
+          ],
+          "setup_refkeys": [
+            "TemplateRifle"
+          ],
+          "item_sources": [
+            "ItemPrototypes/WeaponPrototypes_KPYK.cfg"
+          ],
+          "setup_sources": [
+            "WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_KPYK.cfg"
+          ],
+          "pack_upgrade_roots": [],
+          "pack_upgrade_definitions": [],
+          "compatible_attachments": [],
+          "ammo": [],
+          "technician_sources": []
+        }
+      ]
+    }
+  ]
+}

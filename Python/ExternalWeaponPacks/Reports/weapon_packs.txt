@@ -1,0 +1,75 @@
+External weapon pack inventory
+==============================
+Local source data is read only from gitignored VanillaReference directories.
+
+MK17
+====
+Weapons: 4
+GeneralSetups: 4
+Referenced pack upgrade roots: 0
+Upgrade definitions targeting those setups: 0
+
+GunHowa_ST -> GunHowa_ST
+  item refkey: TemplateRifle
+  setup refkey: TemplateRifle
+  pack upgrade roots: 0
+  pack upgrade definitions: 0
+  technician files: -
+  setup source: WeaponData/WeaponGeneralSetupPrototypes/zz_HOWA.cfg
+GunMk16_ST -> GunMk16_ST
+  item refkey: TemplateRifle
+  setup refkey: TemplateRifle
+  pack upgrade roots: 0
+  pack upgrade definitions: 0
+  technician files: -
+  setup source: WeaponData/WeaponGeneralSetupPrototypes/zz_SCAR.cfg
+GunMk17_ST -> GunMK17_ST
+  item refkey: TemplateRifle
+  setup refkey: TemplateRifleSingleFire
+  pack upgrade roots: 0
+  pack upgrade definitions: 0
+  technician files: -
+  setup source: WeaponData/WeaponGeneralSetupPrototypes/zz_SCAR_BLK.cfg
+GunScarl_ST -> GunScarl_ST
+  item refkey: TemplateRifle
+  setup refkey: TemplateRifle
+  pack upgrade roots: 0
+  pack upgrade definitions: 0
+  technician files: -
+  setup source: WeaponData/WeaponGeneralSetupPrototypes/zz_SCAR.cfg
+
+ModernAK
+========
+Weapons: 4
+GeneralSetups: 4
+Referenced pack upgrade roots: 0
+Upgrade definitions targeting those setups: 0
+
+GunAK_ST -> GunAK_ST
+  item refkey: TemplateRifle
+  setup refkey: TemplateRifle
+  pack upgrade roots: 0
+  pack upgrade definitions: 0
+  technician files: -
+  setup source: WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_KPYK.cfg
+GunRD704_ST -> GunRD704_ST
+  item refkey: GunKPYK_ST
+  setup refkey: TemplateRifle
+  pack upgrade roots: 0
+  pack upgrade definitions: 0
+  technician files: -
+  setup source: WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_KPYK.cfg
+GunType81_AR -> GunType81_AR
+  item refkey: TemplateRifle
+  setup refkey: TemplateRifle
+  pack upgrade roots: 0
+  pack upgrade definitions: 0
+  technician files: -
+  setup source: WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_KPYK.cfg
+GunType81_ST -> GunType81_ST
+  item refkey: TemplateRifle
+  setup refkey: TemplateRifle
+  pack upgrade roots: 0
+  pack upgrade definitions: 0
+  technician files: -
+  setup source: WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_KPYK.cfg
