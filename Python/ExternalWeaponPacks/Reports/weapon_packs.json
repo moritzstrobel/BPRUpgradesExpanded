@@ -3,19 +3,54 @@
     {
       "name": "MK17",
       "root": "G:\\Epic Games\\STALKER2ZoneKit\\Stalker2\\Mods\\BPRUpgradesExpanded\\Content\\Python\\VanillaReference\\MK17Data",
+      "category": "AssaultRifle",
       "game_data_roots": [
         "G:\\Epic Games\\STALKER2ZoneKit\\Stalker2\\Mods\\BPRUpgradesExpanded\\Content\\Python\\VanillaReference\\MK17Data\\MK17Stalker2-Windows-OverrideContent\\Stalker2\\Content\\GameLite\\GameData"
       ],
       "summary": {
         "weapon_items": 4,
         "weapon_setups": 4,
-        "pack_upgrade_roots": 0,
-        "pack_upgrade_definitions": 0
+        "pack_upgrade_roots": 22,
+        "resolved_upgrade_definitions": 22,
+        "technicians": 1
+      },
+      "technicians": {
+        "garpia_p99": [
+          "GunScar_Upgrade_Attachment_AutMuz",
+          "GunScar_Upgrade_Attachment_Grip",
+          "GunScar_Upgrade_Attachment_Laser",
+          "GunScar_Upgrade_Attachment_Laser_HP",
+          "GunScar_Upgrade_Attachment_Offset_Stock",
+          "GunScar_Upgrade_Barrel_1",
+          "GunScar_Upgrade_Barrel_2_1",
+          "GunScar_Upgrade_Barrel_2_2",
+          "GunScar_Upgrade_Barrel_3_1",
+          "GunScar_Upgrade_Barrel_3_2",
+          "GunScar_Upgrade_Body_1",
+          "GunScar_Upgrade_Body_2",
+          "GunScar_Upgrade_Grip_1",
+          "GunScar_Upgrade_Grip_2",
+          "GunScar_Upgrade_Grip_3",
+          "GunScar_Upgrade_Handguard_1",
+          "GunScar_Upgrade_Handguard_2_1",
+          "GunScar_Upgrade_Handguard_2_2",
+          "GunScar_Upgrade_Stock_1",
+          "GunScar_Upgrade_Stock_2_1",
+          "GunScar_Upgrade_Stock_2_2",
+          "GunScar_Upgrade_Stock_3"
+        ]
       },
       "weapons": [
         {
           "weapon_sid": "GunHowa_ST",
-          "general_setup": "GunHowa_ST",
+          "general_setup_sid": "GunHowa_ST",
+          "prototype_prefix": "GunHowa",
+          "base_caliber": "A556",
+          "category": "AssaultRifle",
+          "detected_caliber": "A556",
+          "setup_inheritance_chain": [
+            "GunHowa_ST"
+          ],
           "weapon_refkeys": [
             "TemplateRifle"
           ],
@@ -28,15 +63,64 @@
           "setup_sources": [
             "WeaponData/WeaponGeneralSetupPrototypes/zz_HOWA.cfg"
           ],
-          "pack_upgrade_roots": [],
-          "pack_upgrade_definitions": [],
-          "compatible_attachments": [],
-          "ammo": [],
-          "technician_sources": []
+          "pack_upgrade_roots": [
+            "GunScar_Upgrade_Attachment_AutMuz",
+            "GunScar_Upgrade_Attachment_Grip",
+            "GunScar_Upgrade_Attachment_Laser",
+            "GunScar_Upgrade_Barrel_1",
+            "GunScar_Upgrade_Barrel_2_1",
+            "GunScar_Upgrade_Barrel_2_2",
+            "GunScar_Upgrade_Barrel_3_1",
+            "GunScar_Upgrade_Barrel_3_2",
+            "GunScar_Upgrade_Handguard_1",
+            "GunScar_Upgrade_Handguard_2_1",
+            "GunScar_Upgrade_Handguard_2_2",
+            "GunScar_Upgrade_Body_1",
+            "GunScar_Upgrade_Grip_1",
+            "GunScar_Upgrade_Grip_2",
+            "GunScar_Upgrade_Grip_3",
+            "GunScar_Upgrade_Stock_1",
+            "GunScar_Upgrade_Stock_2_1",
+            "GunScar_Upgrade_Stock_2_2",
+            "GunScar_Upgrade_Stock_3",
+            "GunScar_Upgrade_Attachment_Laser_HP",
+            "GunScar_Upgrade_Attachment_Offset_Stock"
+          ],
+          "pack_upgrade_definitions": [
+            "GunScar_Upgrade_Attachment_AutMuz",
+            "GunScar_Upgrade_Attachment_Grip",
+            "GunScar_Upgrade_Attachment_Laser",
+            "GunScar_Upgrade_Attachment_Laser_HP",
+            "GunScar_Upgrade_Attachment_Offset_Stock",
+            "GunScar_Upgrade_Barrel_1",
+            "GunScar_Upgrade_Barrel_2_1",
+            "GunScar_Upgrade_Barrel_2_2",
+            "GunScar_Upgrade_Barrel_3_1",
+            "GunScar_Upgrade_Barrel_3_2",
+            "GunScar_Upgrade_Body_1",
+            "GunScar_Upgrade_Grip_1",
+            "GunScar_Upgrade_Grip_2",
+            "GunScar_Upgrade_Grip_3",
+            "GunScar_Upgrade_Handguard_1",
+            "GunScar_Upgrade_Handguard_2_1",
+            "GunScar_Upgrade_Handguard_2_2",
+            "GunScar_Upgrade_Stock_1",
+            "GunScar_Upgrade_Stock_2_1",
+            "GunScar_Upgrade_Stock_2_2",
+            "GunScar_Upgrade_Stock_3"
+          ],
+          "errors": []
         },
         {
           "weapon_sid": "GunMk16_ST",
-          "general_setup": "GunMk16_ST",
+          "general_setup_sid": "GunMk16_ST",
+          "prototype_prefix": "GunMk16",
+          "base_caliber": "A556",
+          "category": "AssaultRifle",
+          "detected_caliber": "A556",
+          "setup_inheritance_chain": [
+            "GunMk16_ST"
+          ],
           "weapon_refkeys": [
             "TemplateRifle"
           ],
@@ -49,15 +133,64 @@
           "setup_sources": [
             "WeaponData/WeaponGeneralSetupPrototypes/zz_SCAR.cfg"
           ],
-          "pack_upgrade_roots": [],
-          "pack_upgrade_definitions": [],
-          "compatible_attachments": [],
-          "ammo": [],
-          "technician_sources": []
+          "pack_upgrade_roots": [
+            "GunScar_Upgrade_Attachment_AutMuz",
+            "GunScar_Upgrade_Attachment_Grip",
+            "GunScar_Upgrade_Attachment_Laser",
+            "GunScar_Upgrade_Barrel_1",
+            "GunScar_Upgrade_Barrel_2_1",
+            "GunScar_Upgrade_Barrel_2_2",
+            "GunScar_Upgrade_Barrel_3_1",
+            "GunScar_Upgrade_Barrel_3_2",
+            "GunScar_Upgrade_Handguard_1",
+            "GunScar_Upgrade_Handguard_2_1",
+            "GunScar_Upgrade_Handguard_2_2",
+            "GunScar_Upgrade_Body_1",
+            "GunScar_Upgrade_Grip_1",
+            "GunScar_Upgrade_Grip_2",
+            "GunScar_Upgrade_Grip_3",
+            "GunScar_Upgrade_Stock_1",
+            "GunScar_Upgrade_Stock_2_1",
+            "GunScar_Upgrade_Stock_2_2",
+            "GunScar_Upgrade_Stock_3",
+            "GunScar_Upgrade_Attachment_Laser_HP",
+            "GunScar_Upgrade_Attachment_Offset_Stock"
+          ],
+          "pack_upgrade_definitions": [
+            "GunScar_Upgrade_Attachment_AutMuz",
+            "GunScar_Upgrade_Attachment_Grip",
+            "GunScar_Upgrade_Attachment_Laser",
+            "GunScar_Upgrade_Attachment_Laser_HP",
+            "GunScar_Upgrade_Attachment_Offset_Stock",
+            "GunScar_Upgrade_Barrel_1",
+            "GunScar_Upgrade_Barrel_2_1",
+            "GunScar_Upgrade_Barrel_2_2",
+            "GunScar_Upgrade_Barrel_3_1",
+            "GunScar_Upgrade_Barrel_3_2",
+            "GunScar_Upgrade_Body_1",
+            "GunScar_Upgrade_Grip_1",
+            "GunScar_Upgrade_Grip_2",
+            "GunScar_Upgrade_Grip_3",
+            "GunScar_Upgrade_Handguard_1",
+            "GunScar_Upgrade_Handguard_2_1",
+            "GunScar_Upgrade_Handguard_2_2",
+            "GunScar_Upgrade_Stock_1",
+            "GunScar_Upgrade_Stock_2_1",
+            "GunScar_Upgrade_Stock_2_2",
+            "GunScar_Upgrade_Stock_3"
+          ],
+          "errors": []
         },
         {
           "weapon_sid": "GunMk17_ST",
-          "general_setup": "GunMK17_ST",
+          "general_setup_sid": "GunMK17_ST",
+          "prototype_prefix": "GunMk17",
+          "base_caliber": "A762NATO",
+          "category": "AssaultRifle",
+          "detected_caliber": "A762NATO",
+          "setup_inheritance_chain": [
+            "GunMK17_ST"
+          ],
           "weapon_refkeys": [
             "TemplateRifle"
           ],
@@ -70,15 +203,64 @@
           "setup_sources": [
             "WeaponData/WeaponGeneralSetupPrototypes/zz_SCAR_BLK.cfg"
           ],
-          "pack_upgrade_roots": [],
-          "pack_upgrade_definitions": [],
-          "compatible_attachments": [],
-          "ammo": [],
-          "technician_sources": []
+          "pack_upgrade_roots": [
+            "GunScar_Upgrade_Attachment_AutMuz",
+            "GunScar_Upgrade_Attachment_Grip",
+            "GunScar_Upgrade_Attachment_Laser",
+            "GunScar_Upgrade_Barrel_1",
+            "GunScar_Upgrade_Barrel_2_1",
+            "GunScar_Upgrade_Barrel_2_2",
+            "GunScar_Upgrade_Barrel_3_1",
+            "GunScar_Upgrade_Barrel_3_2",
+            "GunScar_Upgrade_Handguard_1",
+            "GunScar_Upgrade_Handguard_2_1",
+            "GunScar_Upgrade_Handguard_2_2",
+            "GunScar_Upgrade_Body_2",
+            "GunScar_Upgrade_Grip_1",
+            "GunScar_Upgrade_Grip_2",
+            "GunScar_Upgrade_Grip_3",
+            "GunScar_Upgrade_Stock_1",
+            "GunScar_Upgrade_Stock_2_1",
+            "GunScar_Upgrade_Stock_2_2",
+            "GunScar_Upgrade_Stock_3",
+            "GunScar_Upgrade_Attachment_Laser_HP",
+            "GunScar_Upgrade_Attachment_Offset_Stock"
+          ],
+          "pack_upgrade_definitions": [
+            "GunScar_Upgrade_Attachment_AutMuz",
+            "GunScar_Upgrade_Attachment_Grip",
+            "GunScar_Upgrade_Attachment_Laser",
+            "GunScar_Upgrade_Attachment_Laser_HP",
+            "GunScar_Upgrade_Attachment_Offset_Stock",
+            "GunScar_Upgrade_Barrel_1",
+            "GunScar_Upgrade_Barrel_2_1",
+            "GunScar_Upgrade_Barrel_2_2",
+            "GunScar_Upgrade_Barrel_3_1",
+            "GunScar_Upgrade_Barrel_3_2",
+            "GunScar_Upgrade_Body_2",
+            "GunScar_Upgrade_Grip_1",
+            "GunScar_Upgrade_Grip_2",
+            "GunScar_Upgrade_Grip_3",
+            "GunScar_Upgrade_Handguard_1",
+            "GunScar_Upgrade_Handguard_2_1",
+            "GunScar_Upgrade_Handguard_2_2",
+            "GunScar_Upgrade_Stock_1",
+            "GunScar_Upgrade_Stock_2_1",
+            "GunScar_Upgrade_Stock_2_2",
+            "GunScar_Upgrade_Stock_3"
+          ],
+          "errors": []
         },
         {
           "weapon_sid": "GunScarl_ST",
-          "general_setup": "GunScarl_ST",
+          "general_setup_sid": "GunScarl_ST",
+          "prototype_prefix": "GunScarl",
+          "base_caliber": "A556",
+          "category": "AssaultRifle",
+          "detected_caliber": "A556",
+          "setup_inheritance_chain": [
+            "GunScarl_ST"
+          ],
           "weapon_refkeys": [
             "TemplateRifle"
           ],
@@ -91,30 +273,94 @@
           "setup_sources": [
             "WeaponData/WeaponGeneralSetupPrototypes/zz_SCAR.cfg"
           ],
-          "pack_upgrade_roots": [],
-          "pack_upgrade_definitions": [],
-          "compatible_attachments": [],
-          "ammo": [],
-          "technician_sources": []
+          "pack_upgrade_roots": [
+            "GunScar_Upgrade_Attachment_AutMuz",
+            "GunScar_Upgrade_Attachment_Grip",
+            "GunScar_Upgrade_Attachment_Laser",
+            "GunScar_Upgrade_Barrel_1",
+            "GunScar_Upgrade_Barrel_2_1",
+            "GunScar_Upgrade_Barrel_2_2",
+            "GunScar_Upgrade_Barrel_3_1",
+            "GunScar_Upgrade_Barrel_3_2",
+            "GunScar_Upgrade_Handguard_1",
+            "GunScar_Upgrade_Handguard_2_1",
+            "GunScar_Upgrade_Handguard_2_2",
+            "GunScar_Upgrade_Body_1",
+            "GunScar_Upgrade_Grip_1",
+            "GunScar_Upgrade_Grip_2",
+            "GunScar_Upgrade_Grip_3",
+            "GunScar_Upgrade_Stock_1",
+            "GunScar_Upgrade_Stock_2_1",
+            "GunScar_Upgrade_Stock_2_2",
+            "GunScar_Upgrade_Stock_3",
+            "GunScar_Upgrade_Attachment_Laser_HP",
+            "GunScar_Upgrade_Attachment_Offset_Stock"
+          ],
+          "pack_upgrade_definitions": [
+            "GunScar_Upgrade_Attachment_AutMuz",
+            "GunScar_Upgrade_Attachment_Grip",
+            "GunScar_Upgrade_Attachment_Laser",
+            "GunScar_Upgrade_Attachment_Laser_HP",
+            "GunScar_Upgrade_Attachment_Offset_Stock",
+            "GunScar_Upgrade_Barrel_1",
+            "GunScar_Upgrade_Barrel_2_1",
+            "GunScar_Upgrade_Barrel_2_2",
+            "GunScar_Upgrade_Barrel_3_1",
+            "GunScar_Upgrade_Barrel_3_2",
+            "GunScar_Upgrade_Body_1",
+            "GunScar_Upgrade_Grip_1",
+            "GunScar_Upgrade_Grip_2",
+            "GunScar_Upgrade_Grip_3",
+            "GunScar_Upgrade_Handguard_1",
+            "GunScar_Upgrade_Handguard_2_1",
+            "GunScar_Upgrade_Handguard_2_2",
+            "GunScar_Upgrade_Stock_1",
+            "GunScar_Upgrade_Stock_2_1",
+            "GunScar_Upgrade_Stock_2_2",
+            "GunScar_Upgrade_Stock_3"
+          ],
+          "errors": []
         }
       ]
     },
     {
       "name": "ModernAK",
       "root": "G:\\Epic Games\\STALKER2ZoneKit\\Stalker2\\Mods\\BPRUpgradesExpanded\\Content\\Python\\VanillaReference\\ModernAKData",
+      "category": "AssaultRifle",
       "game_data_roots": [
         "G:\\Epic Games\\STALKER2ZoneKit\\Stalker2\\Mods\\BPRUpgradesExpanded\\Content\\Python\\VanillaReference\\ModernAKData\\KPYKStalker2-Windows-OverrideContent\\Stalker2\\Content\\GameLite\\GameData"
       ],
       "summary": {
-        "weapon_items": 4,
-        "weapon_setups": 4,
-        "pack_upgrade_roots": 0,
-        "pack_upgrade_definitions": 0
+        "weapon_items": 5,
+        "weapon_setups": 5,
+        "pack_upgrade_roots": 19,
+        "resolved_upgrade_definitions": 10,
+        "technicians": 1
+      },
+      "technicians": {
+        "Surup_akm": [
+          "GunAKM_Upgrade_Attachment_Grip",
+          "GunAKM_Upgrade_Attachment_Grip_3",
+          "GunAKM_Upgrade_Attachment_HP_Laser",
+          "GunAKM_Upgrade_Attachment_HP_Laser_3",
+          "GunAKM_Upgrade_Attachment_Handguard_Rail",
+          "GunAKM_Upgrade_Attachment_Handguard_Viper",
+          "GunAKM_Upgrade_Attachment_Laser",
+          "GunAKM_Upgrade_Attachment_Offset_Stock",
+          "GunAKM_Upgrade_Attachment_SideRail"
+        ]
       },
       "weapons": [
         {
-          "weapon_sid": "GunAK_ST",
-          "general_setup": "GunAK_ST",
+          "weapon_sid": "GunKPYK_ST",
+          "general_setup_sid": "GunAKMN_ST",
+          "prototype_prefix": "GunKPYK",
+          "base_caliber": "A762",
+          "category": "AssaultRifle",
+          "detected_caliber": "A762",
+          "setup_inheritance_chain": [
+            "GunAKMN_ST"
+          ],
           "weapon_refkeys": [
             "TemplateRifle"
           ],
@@ -127,15 +373,43 @@
           "setup_sources": [
             "WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_KPYK.cfg"
           ],
-          "pack_upgrade_roots": [],
-          "pack_upgrade_definitions": [],
-          "compatible_attachments": [],
-          "ammo": [],
-          "technician_sources": []
+          "pack_upgrade_roots": [
+            "GunAK74_Upgrade_Attachment_SinMuz",
+            "GunAK74_Upgrade_Barrel_1",
+            "GunAK74_Upgrade_Barrel_2_1",
+            "GunAK74_Upgrade_Barrel_2_2",
+            "GunAK74_Upgrade_Body_1",
+            "GunAK74_Upgrade_Body_2",
+            "GunAK74_Upgrade_Stock_1",
+            "GunAK74_Upgrade_Stock_2",
+            "GunAK74_Upgrade_Stock_3",
+            "GunAKM_Upgrade_Attachment_Offset_Stock",
+            "GunAKM_Upgrade_Attachment_Laser",
+            "GunAKM_Upgrade_Attachment_HP_Laser",
+            "GunAKM_Upgrade_Attachment_Grip",
+            "GunAKM_Upgrade_Attachment_Handguard_Rail",
+            "GunAKM_Upgrade_Attachment_SideRail"
+          ],
+          "pack_upgrade_definitions": [
+            "GunAKM_Upgrade_Attachment_Grip",
+            "GunAKM_Upgrade_Attachment_HP_Laser",
+            "GunAKM_Upgrade_Attachment_Handguard_Rail",
+            "GunAKM_Upgrade_Attachment_Laser",
+            "GunAKM_Upgrade_Attachment_Offset_Stock",
+            "GunAKM_Upgrade_Attachment_SideRail"
+          ],
+          "errors": []
         },
         {
           "weapon_sid": "GunRD704_ST",
-          "general_setup": "GunRD704_ST",
+          "general_setup_sid": "GunRD704_ST",
+          "prototype_prefix": "GunRD704",
+          "base_caliber": "A762",
+          "category": "AssaultRifle",
+          "detected_caliber": "A762",
+          "setup_inheritance_chain": [
+            "GunRD704_ST"
+          ],
           "weapon_refkeys": [
             "GunKPYK_ST"
           ],
@@ -148,15 +422,37 @@
           "setup_sources": [
             "WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_KPYK.cfg"
           ],
-          "pack_upgrade_roots": [],
-          "pack_upgrade_definitions": [],
-          "compatible_attachments": [],
-          "ammo": [],
-          "technician_sources": []
+          "pack_upgrade_roots": [
+            "GunAK74_Upgrade_Attachment_SinMuz",
+            "GunAK74_Upgrade_Barrel_1",
+            "GunAK74_Upgrade_Barrel_2_1",
+            "GunAK74_Upgrade_Barrel_2_2",
+            "GunAK74_Upgrade_Body_1",
+            "GunAK74_Upgrade_Body_2",
+            "GunAK74_Upgrade_Stock_1",
+            "GunAK74_Upgrade_Stock_2",
+            "GunAK74_Upgrade_Stock_3",
+            "GunAKM_Upgrade_Attachment_Offset_Stock",
+            "GunAKM_Upgrade_Attachment_Laser",
+            "GunAKM_Upgrade_Attachment_HP_Laser"
+          ],
+          "pack_upgrade_definitions": [
+            "GunAKM_Upgrade_Attachment_HP_Laser",
+            "GunAKM_Upgrade_Attachment_Laser",
+            "GunAKM_Upgrade_Attachment_Offset_Stock"
+          ],
+          "errors": []
         },
         {
-          "weapon_sid": "GunType81_AR",
-          "general_setup": "GunType81_AR",
+          "weapon_sid": "GunAK_ST",
+          "general_setup_sid": "GunAK_ST",
+          "prototype_prefix": "GunAK",
+          "base_caliber": "A762",
+          "category": "AssaultRifle",
+          "detected_caliber": null,
+          "setup_inheritance_chain": [
+            "GunAK_ST"
+          ],
           "weapon_refkeys": [
             "TemplateRifle"
           ],
@@ -171,13 +467,18 @@
           ],
           "pack_upgrade_roots": [],
           "pack_upgrade_definitions": [],
-          "compatible_attachments": [],
-          "ammo": [],
-          "technician_sources": []
+          "errors": []
         },
         {
           "weapon_sid": "GunType81_ST",
-          "general_setup": "GunType81_ST",
+          "general_setup_sid": "GunType81_ST",
+          "prototype_prefix": "GunType81",
+          "base_caliber": "A762",
+          "category": "AssaultRifle",
+          "detected_caliber": "A762",
+          "setup_inheritance_chain": [
+            "GunType81_ST"
+          ],
           "weapon_refkeys": [
             "TemplateRifle"
           ],
@@ -190,11 +491,77 @@
           "setup_sources": [
             "WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_KPYK.cfg"
           ],
-          "pack_upgrade_roots": [],
-          "pack_upgrade_definitions": [],
-          "compatible_attachments": [],
-          "ammo": [],
-          "technician_sources": []
+          "pack_upgrade_roots": [
+            "GunAK74_Upgrade_Attachment_SinMuz",
+            "GunAK74_Upgrade_Barrel_1",
+            "GunAK74_Upgrade_Barrel_2_1",
+            "GunAK74_Upgrade_Barrel_2_2",
+            "GunAK74_Upgrade_Body_1",
+            "GunAK74_Upgrade_Body_2",
+            "GunAK74_Upgrade_Stock_1",
+            "GunAK74_Upgrade_Stock_2",
+            "GunAK74_Upgrade_Stock_3",
+            "GunAKM_Upgrade_Attachment_Offset_Stock",
+            "GunAKM_Upgrade_Attachment_Laser_3",
+            "GunAKM_Upgrade_Attachment_HP_Laser_3",
+            "GunAKM_Upgrade_Attachment_Grip_3",
+            "GunAKM_Upgrade_Attachment_Handguard_Viper"
+          ],
+          "pack_upgrade_definitions": [
+            "GunAKM_Upgrade_Attachment_Grip_3",
+            "GunAKM_Upgrade_Attachment_HP_Laser_3",
+            "GunAKM_Upgrade_Attachment_Handguard_Viper",
+            "GunAKM_Upgrade_Attachment_Laser_3",
+            "GunAKM_Upgrade_Attachment_Offset_Stock"
+          ],
+          "errors": []
+        },
+        {
+          "weapon_sid": "GunType81_AR",
+          "general_setup_sid": "GunType81_AR",
+          "prototype_prefix": "GunType81AR",
+          "base_caliber": "A762",
+          "category": "AssaultRifle",
+          "detected_caliber": "A762",
+          "setup_inheritance_chain": [
+            "GunType81_AR"
+          ],
+          "weapon_refkeys": [
+            "TemplateRifle"
+          ],
+          "setup_refkeys": [
+            "TemplateRifle"
+          ],
+          "item_sources": [
+            "ItemPrototypes/WeaponPrototypes_KPYK.cfg"
+          ],
+          "setup_sources": [
+            "WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_KPYK.cfg"
+          ],
+          "pack_upgrade_roots": [
+            "GunAK74_Upgrade_Attachment_SinMuz",
+            "GunAK74_Upgrade_Barrel_1",
+            "GunAK74_Upgrade_Barrel_2_1",
+            "GunAK74_Upgrade_Barrel_2_2",
+            "GunAK74_Upgrade_Body_1",
+            "GunAK74_Upgrade_Body_2",
+            "GunAK74_Upgrade_Stock_1",
+            "GunAK74_Upgrade_Stock_2",
+            "GunAK74_Upgrade_Stock_3",
+            "GunAKM_Upgrade_Attachment_Offset_Stock",
+            "GunAKM_Upgrade_Attachment_Laser_3",
+            "GunAKM_Upgrade_Attachment_HP_Laser_3",
+            "GunAKM_Upgrade_Attachment_Grip_3",
+            "GunAKM_Upgrade_Attachment_Handguard_Viper"
+          ],
+          "pack_upgrade_definitions": [
+            "GunAKM_Upgrade_Attachment_Grip_3",
+            "GunAKM_Upgrade_Attachment_HP_Laser_3",
+            "GunAKM_Upgrade_Attachment_Handguard_Viper",
+            "GunAKM_Upgrade_Attachment_Laser_3",
+            "GunAKM_Upgrade_Attachment_Offset_Stock"
+          ],
+          "errors": []
         }
       ]
     }

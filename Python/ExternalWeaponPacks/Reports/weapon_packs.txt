@@ -1,75 +1,72 @@
 External weapon pack inventory
 ==============================
 Local source data is read only from gitignored VanillaReference directories.
+Weapon category is explicit registry data; it is not guessed from CFG inheritance.
 
 MK17
 ====
+Category: AssaultRifle
 Weapons: 4
 GeneralSetups: 4
-Referenced pack upgrade roots: 0
-Upgrade definitions targeting those setups: 0
+Unique pack upgrade roots: 22
+Resolved upgrade definitions: 22
+Technicians supporting pack upgrades: 1
 
-GunHowa_ST -> GunHowa_ST
-  item refkey: TemplateRifle
-  setup refkey: TemplateRifle
-  pack upgrade roots: 0
-  pack upgrade definitions: 0
-  technician files: -
+GunHowa_ST -> GunHowa_ST [A556]
+  detected caliber: A556
+  pack upgrade roots: 21
+  resolved definitions: 21
   setup source: WeaponData/WeaponGeneralSetupPrototypes/zz_HOWA.cfg
-GunMk16_ST -> GunMk16_ST
-  item refkey: TemplateRifle
-  setup refkey: TemplateRifle
-  pack upgrade roots: 0
-  pack upgrade definitions: 0
-  technician files: -
+GunMk16_ST -> GunMk16_ST [A556]
+  detected caliber: A556
+  pack upgrade roots: 21
+  resolved definitions: 21
   setup source: WeaponData/WeaponGeneralSetupPrototypes/zz_SCAR.cfg
-GunMk17_ST -> GunMK17_ST
-  item refkey: TemplateRifle
-  setup refkey: TemplateRifleSingleFire
-  pack upgrade roots: 0
-  pack upgrade definitions: 0
-  technician files: -
+GunMk17_ST -> GunMK17_ST [A762NATO]
+  detected caliber: A762NATO
+  pack upgrade roots: 21
+  resolved definitions: 21
   setup source: WeaponData/WeaponGeneralSetupPrototypes/zz_SCAR_BLK.cfg
-GunScarl_ST -> GunScarl_ST
-  item refkey: TemplateRifle
-  setup refkey: TemplateRifle
-  pack upgrade roots: 0
-  pack upgrade definitions: 0
-  technician files: -
+GunScarl_ST -> GunScarl_ST [A556]
+  detected caliber: A556
+  pack upgrade roots: 21
+  resolved definitions: 21
   setup source: WeaponData/WeaponGeneralSetupPrototypes/zz_SCAR.cfg
+  technicians:
+    garpia_p99: 22 matching pack upgrades
 
 ModernAK
 ========
-Weapons: 4
-GeneralSetups: 4
-Referenced pack upgrade roots: 0
-Upgrade definitions targeting those setups: 0
+Category: AssaultRifle
+Weapons: 5
+GeneralSetups: 5
+Unique pack upgrade roots: 19
+Resolved upgrade definitions: 10
+Technicians supporting pack upgrades: 1
 
-GunAK_ST -> GunAK_ST
-  item refkey: TemplateRifle
-  setup refkey: TemplateRifle
-  pack upgrade roots: 0
-  pack upgrade definitions: 0
-  technician files: -
+GunKPYK_ST -> GunAKMN_ST [A762]
+  detected caliber: A762
+  pack upgrade roots: 15
+  resolved definitions: 6
   setup source: WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_KPYK.cfg
-GunRD704_ST -> GunRD704_ST
-  item refkey: GunKPYK_ST
-  setup refkey: TemplateRifle
-  pack upgrade roots: 0
-  pack upgrade definitions: 0
-  technician files: -
+GunRD704_ST -> GunRD704_ST [A762]
+  detected caliber: A762
+  pack upgrade roots: 12
+  resolved definitions: 3
   setup source: WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_KPYK.cfg
-GunType81_AR -> GunType81_AR
-  item refkey: TemplateRifle
-  setup refkey: TemplateRifle
+GunAK_ST -> GunAK_ST [A762]
   pack upgrade roots: 0
-  pack upgrade definitions: 0
-  technician files: -
+  resolved definitions: 0
   setup source: WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_KPYK.cfg
-GunType81_ST -> GunType81_ST
-  item refkey: TemplateRifle
-  setup refkey: TemplateRifle
-  pack upgrade roots: 0
-  pack upgrade definitions: 0
-  technician files: -
+GunType81_ST -> GunType81_ST [A762]
+  detected caliber: A762
+  pack upgrade roots: 14
+  resolved definitions: 5
   setup source: WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_KPYK.cfg
+GunType81_AR -> GunType81_AR [A762]
+  detected caliber: A762
+  pack upgrade roots: 14
+  resolved definitions: 5
+  setup source: WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_KPYK.cfg
+  technicians:
+    Surup_akm: 9 matching pack upgrades
