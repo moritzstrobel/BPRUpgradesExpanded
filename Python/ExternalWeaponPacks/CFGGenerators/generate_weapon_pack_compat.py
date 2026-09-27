@@ -78,7 +78,7 @@ def validate_pack(pack_name: str, spec: dict, vanilla_root: Path) -> dict[str, l
             errors.append(f"{weapon['weapon_sid']}: registry caliber {weapon['base_caliber']} != effective CFG {detected}")
         pack_roots = effective_fields.get("UpgradePrototypeSIDs", [])
         if not pack_roots:
-            errors.append(f"{weapon['weapon_sid']}: effective GeneralSetup {setup_sid} has no UpgradePrototypeSIDs")
+            print(f"{pack_name}: {weapon['weapon_sid']} has no native upgrade roots; BPRUE modules will initialize the upgrade list")
         if len(inheritance_chain) > 1:
             print(f"{pack_name}: {weapon['weapon_sid']} setup inheritance: {' -> '.join(inheritance_chain)}")
         all_roots.update(pack_roots)
