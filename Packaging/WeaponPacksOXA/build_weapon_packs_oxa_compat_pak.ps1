@@ -74,11 +74,8 @@ foreach ($layer in $Layers) {
         $relativePath = $file.FullName.Substring($layerRoot.Length).TrimStart('\', '/')
         $relativePath = To-PakPath -Path $relativePath
 
-        if ($seenDestinations.ContainsKey($relativePath)) {
-            throw "Two compatibility layers target the same GameLite path '$relativePath': '$($seenDestinations[$relativePath])' and '$layer'. Merge them in the generator instead of relying on package overwrite order."
-        }
-        $seenDestinations[$relativePath] = $layer
-
+        # Different staging layers can intentionally contribute to the same CFG path.
+        # Keep them as separate source fragments here; they are merged into one staged CFG below.
         $packageEntries += [PSCustomObject]@{
             File = $file
             Layer = $layer
@@ -98,14 +95,32 @@ if (Test-Path -LiteralPath $StagingRoot) { Remove-Item -LiteralPath $StagingRoot
 New-Item -ItemType Directory -Path $StagingRoot -Force | Out-Null
 New-Item -ItemType Directory -Path $OutputDirectory -Force | Out-Null
 
-$pakEntries = foreach ($entry in $packageEntries) {
-    # Flatten MK17/ModernAK/Shared staging layers into one real GameLite tree.
-    $stagedPath = Join-Path $StagingRoot $entry.RelativePath
+# Flatten MK17/ModernAK/Shared into one real GameLite tree. When multiple
+# layers target the same CFG path, concatenate the generated CFG fragments.
+$mergedEntries = @()
+foreach ($group in ($packageEntries | Group-Object RelativePath)) {
+    $relativePath = $group.Name
+    $stagedPath = Join-Path $StagingRoot $relativePath
     $stagedDirectory = Split-Path -Parent $stagedPath
     if ($stagedDirectory) { New-Item -ItemType Directory -Path $stagedDirectory -Force | Out-Null }
-    Copy-Item -LiteralPath $entry.File.FullName -Destination $stagedPath -Force
 
-    $source = To-PakPath -Path $stagedPath
+    $parts = @($group.Group | Sort-Object Layer)
+    $content = foreach ($part in $parts) {
+        "// ---- BPRUE WeaponPack OXA layer: $($part.Layer) ----"
+        Get-Content -LiteralPath $part.File.FullName -Raw
+        ""
+    }
+    $content -join [Environment]::NewLine | Set-Content -LiteralPath $stagedPath -Encoding UTF8
+
+    $mergedEntries += [PSCustomObject]@{
+        RelativePath = $relativePath
+        Layers = ($parts.Layer -join ", ")
+        StagedPath = $stagedPath
+    }
+}
+
+$pakEntries = foreach ($entry in $mergedEntries) {
+    $source = To-PakPath -Path $entry.StagedPath
     $destination = "$MountRoot/$($entry.RelativePath)"
     '"{0}" "{1}"' -f $source, $destination
 }
@@ -127,7 +142,7 @@ if ($LASTEXITCODE -ne 0) {
     throw "UnrealPak failed while validating the generated PAK."
 }
 
-$missingPaths = @($packageEntries | Where-Object {
+$missingPaths = @($mergedEntries | Where-Object {
     $expected = $_.RelativePath
     -not ($listOutput | Where-Object { $_.Replace("\", "/") -like "*$expected*" })
 })
@@ -149,7 +164,8 @@ Write-Host ""
 Write-Host "SUCCESS"
 Write-Host "PAK          : $($pakInfo.FullName)"
 Write-Host "Size         : $([math]::Round($pakInfo.Length / 1KB, 2)) KiB"
-Write-Host "Packed files : $($packageEntries.Count)"
+Write-Host "Source files : $($packageEntries.Count)"
+Write-Host "Packed files : $($mergedEntries.Count)"
 Write-Host "Mount root   : $MountRoot"
 
 if (-not $KeepStaging) { Remove-Item -LiteralPath $StagingRoot -Recurse -Force }
