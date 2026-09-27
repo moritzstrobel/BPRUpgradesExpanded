@@ -162,6 +162,7 @@ def inspect_pack(pack_name: str, spec: dict, vanilla_root: Path) -> dict:
             "setup_sources": setup["sources"] if setup else [],
             "pack_upgrade_roots": roots_for_weapon,
             "pack_upgrade_definitions": sorted(set(roots_for_weapon) & upgrade_defs),
+            "native_upgrade_status": "native" if roots_for_weapon else "none",
             "errors": errors,
         })
 
@@ -199,6 +200,8 @@ def render(result: dict) -> str:
             if len(weapon.get("setup_inheritance_chain", [])) > 1:
                 lines.append(f"  setup inheritance: {' -> '.join(weapon['setup_inheritance_chain'])}")
             lines.append(f"  pack upgrade roots: {len(weapon['pack_upgrade_roots'])}")
+            if weapon["native_upgrade_status"] == "none":
+                lines.append("  native upgrades: none (BPRUE compat will initialize the upgrade list)")
             lines.append(f"  resolved definitions: {len(weapon['pack_upgrade_definitions'])}")
             if weapon["errors"]: lines.append(f"  ERRORS: {', '.join(weapon['errors'])}")
             lines.append(f"  setup source: {', '.join(weapon['setup_sources']) or '-'}")
