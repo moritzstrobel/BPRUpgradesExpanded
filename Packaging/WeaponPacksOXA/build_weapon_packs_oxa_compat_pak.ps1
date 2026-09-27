@@ -142,9 +142,25 @@ if ($LASTEXITCODE -ne 0) {
     throw "UnrealPak failed while validating the generated PAK."
 }
 
+# UnrealPak -List reports paths relative to the deepest common mount point.
+# Derive that mount point and strip its GameLite-relative prefix before validating.
+$mountLine = $listOutput | Where-Object { $_ -like '*with mount point "*' } | Select-Object -First 1
+if (-not $mountLine) { throw "Could not determine PAK mount point from UnrealPak -List output." }
+$mountMatch = [regex]::Match($mountLine, 'with mount point "([^"]+)"')
+if (-not $mountMatch.Success) { throw "Could not parse PAK mount point from UnrealPak -List output: $mountLine" }
+$listedMount = (To-PakPath -Path $mountMatch.Groups[1].Value).TrimEnd('/')
+$mountPrefix = (To-PakPath -Path $MountRoot).TrimEnd('/')
+if (-not $listedMount.StartsWith($mountPrefix, [System.StringComparison]::OrdinalIgnoreCase)) {
+    throw "Unexpected PAK mount point: $listedMount"
+}
+$mountRelative = $listedMount.Substring($mountPrefix.Length).Trim('/')
+
 $missingPaths = @($mergedEntries | Where-Object {
-    $expected = $_.RelativePath
-    -not ($listOutput | Where-Object { $_.Replace("\", "/") -like "*$expected*" })
+    $expected = (To-PakPath -Path $_.RelativePath).TrimStart('/')
+    if ($mountRelative -and $expected.StartsWith("$mountRelative/", [System.StringComparison]::OrdinalIgnoreCase)) {
+        $expected = $expected.Substring($mountRelative.Length + 1)
+    }
+    -not ($listOutput | Where-Object { $_.Replace("\\", "/") -like "*$expected*" })
 })
 if ($missingPaths.Count -gt 0) {
     Write-Host "Missing GameLite-relative entries:"
