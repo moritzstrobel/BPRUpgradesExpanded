@@ -1,8 +1,8 @@
 {
   "summary": {
-    "bprue_cfg_writes": 83389,
+    "bprue_cfg_writes": 83165,
     "oxa_cfg_writes": 46423,
-    "bprue_prototypes": 2060,
+    "bprue_prototypes": 2055,
     "oxa_prototypes": 945,
     "overlapping_prototypes": 116,
     "overlapping_paths": 778,
@@ -32830,7 +32830,6 @@
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A045_Expanding",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A918",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A918_AP",
-        "BPRUEUniqueRatKiller_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Reload_Competition",
@@ -32890,7 +32889,6 @@
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A045_Expanding",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A918",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A918_AP",
-        "BPRUEUniqueRatKiller_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Reload_Competition",
@@ -32952,7 +32950,6 @@
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A045",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A045_AP",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A045_Expanding",
-        "BPRUEUniqueRatKiller_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
@@ -33162,69 +33159,62 @@
         },
         {
           "source_index": "[32]",
-          "identity": "BPRUEUniqueRatKiller_Upgrade_BPRUE_PistolConversion",
-          "fields": {
-            "<value>": "BPRUEUniqueRatKiller_Upgrade_BPRUE_PistolConversion"
-          }
-        },
-        {
-          "source_index": "[33]",
           "identity": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
           "fields": {
             "<value>": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly"
           }
         },
         {
-          "source_index": "[34]",
+          "source_index": "[33]",
           "identity": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
           "fields": {
             "<value>": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly"
           }
         },
         {
-          "source_index": "[35]",
+          "source_index": "[34]",
           "identity": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
           "fields": {
             "<value>": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem"
           }
         },
         {
-          "source_index": "[36]",
+          "source_index": "[35]",
           "identity": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction",
           "fields": {
             "<value>": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction"
           }
         },
         {
-          "source_index": "[37]",
+          "source_index": "[36]",
           "identity": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget",
           "fields": {
             "<value>": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget"
           }
         },
         {
-          "source_index": "[38]",
+          "source_index": "[37]",
           "identity": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing",
           "fields": {
             "<value>": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing"
           }
         },
         {
-          "source_index": "[39]",
+          "source_index": "[38]",
           "identity": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration",
           "fields": {
             "<value>": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration"
           }
         },
         {
-          "source_index": "[40]",
+          "source_index": "[39]",
           "identity": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration",
           "fields": {
             "<value>": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration"
           }
         },
         {
-          "source_index": "[41]",
+          "source_index": "[40]",
           "identity": "BPRUEUniqueRatKiller_Upgrade_BPRUE_Signature_CloseQuartersConversion",
           "fields": {
             "<value>": "BPRUEUniqueRatKiller_Upgrade_BPRUE_Signature_CloseQuartersConversion"
@@ -34035,7 +34025,6 @@
       "bprue_effective": [
         "BPRUEUniqueShakh_Upgrade_BPRUE_Action_Controlled",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Action_HighSpeed",
-        "BPRUEUniqueShakh_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Reload_Competition",
@@ -34082,7 +34071,6 @@
       "bprue_additions": [
         "BPRUEUniqueShakh_Upgrade_BPRUE_Action_Controlled",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Action_HighSpeed",
-        "BPRUEUniqueShakh_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Reload_Competition",
@@ -34132,7 +34120,6 @@
         "BPRUEUniqueShakh_Upgrade_BPRUE_Stock_Lightweight",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Stock_Tactical",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Stock_Stabilized",
-        "BPRUEUniqueShakh_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
         "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
         "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
@@ -34286,69 +34273,62 @@
         },
         {
           "source_index": "[22]",
-          "identity": "BPRUEUniqueShakh_Upgrade_BPRUE_PistolConversion",
-          "fields": {
-            "<value>": "BPRUEUniqueShakh_Upgrade_BPRUE_PistolConversion"
-          }
-        },
-        {
-          "source_index": "[23]",
           "identity": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
           "fields": {
             "<value>": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly"
           }
         },
         {
-          "source_index": "[24]",
+          "source_index": "[23]",
           "identity": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
           "fields": {
             "<value>": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly"
           }
         },
         {
-          "source_index": "[25]",
+          "source_index": "[24]",
           "identity": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
           "fields": {
             "<value>": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem"
           }
         },
         {
-          "source_index": "[26]",
+          "source_index": "[25]",
           "identity": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction",
           "fields": {
             "<value>": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction"
           }
         },
         {
-          "source_index": "[27]",
+          "source_index": "[26]",
           "identity": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget",
           "fields": {
             "<value>": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget"
           }
         },
         {
-          "source_index": "[28]",
+          "source_index": "[27]",
           "identity": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing",
           "fields": {
             "<value>": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing"
           }
         },
         {
-          "source_index": "[29]",
+          "source_index": "[28]",
           "identity": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration",
           "fields": {
             "<value>": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration"
           }
         },
         {
-          "source_index": "[30]",
+          "source_index": "[29]",
           "identity": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration",
           "fields": {
             "<value>": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration"
           }
         },
         {
-          "source_index": "[31]",
+          "source_index": "[30]",
           "identity": "BPRUEUniqueShakh_Upgrade_BPRUE_Signature_ExtendedAssaultFeed",
           "fields": {
             "<value>": "BPRUEUniqueShakh_Upgrade_BPRUE_Signature_ExtendedAssaultFeed"
@@ -34745,7 +34725,6 @@
       "bprue_effective": [
         "BPRUEUniqueSilence_Upgrade_BPRUE_Action_Controlled",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Action_HighSpeed",
-        "BPRUEUniqueSilence_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Reload_Competition",
@@ -34789,7 +34768,6 @@
       "bprue_additions": [
         "BPRUEUniqueSilence_Upgrade_BPRUE_Action_Controlled",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Action_HighSpeed",
-        "BPRUEUniqueSilence_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Reload_Competition",
@@ -34836,7 +34814,6 @@
         "BPRUEUniqueSilence_Upgrade_BPRUE_Stock_Lightweight",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Stock_Tactical",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Stock_Stabilized",
-        "BPRUEUniqueSilence_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
         "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
         "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
@@ -34983,69 +34960,62 @@
         },
         {
           "source_index": "[20]",
-          "identity": "BPRUEUniqueSilence_Upgrade_BPRUE_PistolConversion",
-          "fields": {
-            "<value>": "BPRUEUniqueSilence_Upgrade_BPRUE_PistolConversion"
-          }
-        },
-        {
-          "source_index": "[21]",
           "identity": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
           "fields": {
             "<value>": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly"
           }
         },
         {
-          "source_index": "[22]",
+          "source_index": "[21]",
           "identity": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
           "fields": {
             "<value>": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly"
           }
         },
         {
-          "source_index": "[23]",
+          "source_index": "[22]",
           "identity": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
           "fields": {
             "<value>": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem"
           }
         },
         {
-          "source_index": "[24]",
+          "source_index": "[23]",
           "identity": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction",
           "fields": {
             "<value>": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction"
           }
         },
         {
-          "source_index": "[25]",
+          "source_index": "[24]",
           "identity": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget",
           "fields": {
             "<value>": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget"
           }
         },
         {
-          "source_index": "[26]",
+          "source_index": "[25]",
           "identity": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing",
           "fields": {
             "<value>": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing"
           }
         },
         {
-          "source_index": "[27]",
+          "source_index": "[26]",
           "identity": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration",
           "fields": {
             "<value>": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration"
           }
         },
         {
-          "source_index": "[28]",
+          "source_index": "[27]",
           "identity": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration",
           "fields": {
             "<value>": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration"
           }
         },
         {
-          "source_index": "[29]",
+          "source_index": "[28]",
           "identity": "BPRUEUniqueSilence_Upgrade_BPRUE_Signature_SilentEntryPackage",
           "fields": {
             "<value>": "BPRUEUniqueSilence_Upgrade_BPRUE_Signature_SilentEntryPackage"
@@ -35821,7 +35791,6 @@
       "bprue_effective": [
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Action_Controlled",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Action_HighSpeed",
-        "BPRUEUniqueSpitfire_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Reload_Competition",
@@ -35866,7 +35835,6 @@
       "bprue_additions": [
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Action_Controlled",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Action_HighSpeed",
-        "BPRUEUniqueSpitfire_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Reload_Competition",
@@ -35915,7 +35883,6 @@
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Stock_Lightweight",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Stock_Tactical",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Stock_Stabilized",
-        "BPRUEUniqueSpitfire_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
@@ -36062,69 +36029,62 @@
         },
         {
           "source_index": "[21]",
-          "identity": "BPRUEUniqueSpitfire_Upgrade_BPRUE_PistolConversion",
-          "fields": {
-            "<value>": "BPRUEUniqueSpitfire_Upgrade_BPRUE_PistolConversion"
-          }
-        },
-        {
-          "source_index": "[22]",
           "identity": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
           "fields": {
             "<value>": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly"
           }
         },
         {
-          "source_index": "[23]",
+          "source_index": "[22]",
           "identity": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
           "fields": {
             "<value>": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly"
           }
         },
         {
-          "source_index": "[24]",
+          "source_index": "[23]",
           "identity": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
           "fields": {
             "<value>": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem"
           }
         },
         {
-          "source_index": "[25]",
+          "source_index": "[24]",
           "identity": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction",
           "fields": {
             "<value>": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction"
           }
         },
         {
-          "source_index": "[26]",
+          "source_index": "[25]",
           "identity": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget",
           "fields": {
             "<value>": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget"
           }
         },
         {
-          "source_index": "[27]",
+          "source_index": "[26]",
           "identity": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing",
           "fields": {
             "<value>": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing"
           }
         },
         {
-          "source_index": "[28]",
+          "source_index": "[27]",
           "identity": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration",
           "fields": {
             "<value>": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration"
           }
         },
         {
-          "source_index": "[29]",
+          "source_index": "[28]",
           "identity": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration",
           "fields": {
             "<value>": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration"
           }
         },
         {
-          "source_index": "[30]",
+          "source_index": "[29]",
           "identity": "BPRUEUniqueSpitfire_Upgrade_BPRUE_Signature_OverclockedAction",
           "fields": {
             "<value>": "BPRUEUniqueSpitfire_Upgrade_BPRUE_Signature_OverclockedAction"
@@ -36177,7 +36137,6 @@
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A045_Expanding",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A919",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A919_AP",
-        "BPRUEUniqueSpitter_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Reload_Competition",
@@ -36232,7 +36191,6 @@
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A045_Expanding",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A919",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A919_AP",
-        "BPRUEUniqueSpitter_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Reload_Competition",
@@ -36290,7 +36248,6 @@
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A045",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A045_AP",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A045_Expanding",
-        "BPRUEUniqueSpitter_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
@@ -36486,69 +36443,62 @@
         },
         {
           "source_index": "[29]",
-          "identity": "BPRUEUniqueSpitter_Upgrade_BPRUE_PistolConversion",
-          "fields": {
-            "<value>": "BPRUEUniqueSpitter_Upgrade_BPRUE_PistolConversion"
-          }
-        },
-        {
-          "source_index": "[30]",
           "identity": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
           "fields": {
             "<value>": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly"
           }
         },
         {
-          "source_index": "[31]",
+          "source_index": "[30]",
           "identity": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
           "fields": {
             "<value>": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly"
           }
         },
         {
-          "source_index": "[32]",
+          "source_index": "[31]",
           "identity": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
           "fields": {
             "<value>": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem"
           }
         },
         {
-          "source_index": "[33]",
+          "source_index": "[32]",
           "identity": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction",
           "fields": {
             "<value>": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction"
           }
         },
         {
-          "source_index": "[34]",
+          "source_index": "[33]",
           "identity": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget",
           "fields": {
             "<value>": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget"
           }
         },
         {
-          "source_index": "[35]",
+          "source_index": "[34]",
           "identity": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing",
           "fields": {
             "<value>": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing"
           }
         },
         {
-          "source_index": "[36]",
+          "source_index": "[35]",
           "identity": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration",
           "fields": {
             "<value>": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration"
           }
         },
         {
-          "source_index": "[37]",
+          "source_index": "[36]",
           "identity": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration",
           "fields": {
             "<value>": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration"
           }
         },
         {
-          "source_index": "[38]",
+          "source_index": "[37]",
           "identity": "BPRUEUniqueSpitter_Upgrade_BPRUE_Signature_RecoilCompensationSystem",
           "fields": {
             "<value>": "BPRUEUniqueSpitter_Upgrade_BPRUE_Signature_RecoilCompensationSystem"
@@ -44072,7 +44022,6 @@
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A045_Expanding",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A918",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A918_AP",
-        "BPRUEUniqueRatKiller_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Reload_Competition",
@@ -44241,7 +44190,6 @@
       "bprue_only": [
         "BPRUEUniqueShakh_Upgrade_BPRUE_Action_Controlled",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Action_HighSpeed",
-        "BPRUEUniqueShakh_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Reload_Competition",
@@ -44346,7 +44294,6 @@
       "bprue_only": [
         "BPRUEUniqueSilence_Upgrade_BPRUE_Action_Controlled",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Action_HighSpeed",
-        "BPRUEUniqueSilence_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Reload_Competition",
@@ -44503,7 +44450,6 @@
       "bprue_only": [
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Action_Controlled",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Action_HighSpeed",
-        "BPRUEUniqueSpitfire_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Reload_Competition",
@@ -44560,7 +44506,6 @@
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A045_Expanding",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A919",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A919_AP",
-        "BPRUEUniqueSpitter_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Reload_Competition",
