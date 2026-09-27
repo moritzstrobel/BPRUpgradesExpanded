@@ -32,6 +32,14 @@ CALIBER_TOKENS = {
 }
 ALL_CALIBER_TOKENS = tuple(token for values in CALIBER_TOKENS.values() for token in values)
 
+# OXA exposes some caliber alternatives through attachment fitting membership even
+# when they are not part of the pseudo-parent's CompatibleAttachments delta.
+# Keep this explicit and conservative: only verified OXA attachments belong here.
+CALIBER_SUPPLEMENTS = {
+    "A762": ("OXA_Mag_762x39_PMag30r",),
+    "A762NATO": (),
+}
+
 
 def semantic_state(vanilla_writes, oxa_writes, prototype: str, root: str):
     key = (prototype, root)
@@ -62,6 +70,22 @@ def caliber_allowed(sid: str, caliber: str) -> bool:
         return True
     allowed = {token.lower() for token in CALIBER_TOKENS.get(caliber, ())}
     return all(token.lower() in allowed for token in present)
+
+
+def effective_fitting_entries(vanilla_writes, oxa_writes) -> dict[str, set[str]]:
+    vg = _semantic_arrays(vanilla_writes)
+    og = _writes_by_semantic_group(oxa_writes)
+    keys = {key for key in set(vg) | set(og) if key[1] == "FittingWeaponsSIDs"}
+    result = {}
+    for prototype, root in keys:
+        key = (prototype, root)
+        base = {i: dict(f) for i, f in vg.get(key, {"entries": {}})["entries"].items()}
+        state, _ = _apply_array_patch(base, og.get(key, []), root)
+        result[prototype] = {
+            identity for fields in state.values()
+            if (identity := _entry_identity(root, fields)) is not None
+        }
+    return result
 
 
 def pack_attachment_sids(spec: dict, vanilla_root: Path) -> set[str]:
@@ -153,7 +177,7 @@ def main() -> None:
                 fitting_targets[sid].add(weapon["weapon_sid"])
 
             setup_outputs[pack_name].append(render_setup_patch(weapon["general_setup_sid"], entries))
-            summary.append((pack_name, weapon["weapon_sid"], parent_weapon, weapon["base_caliber"], len(added), len(selected)))
+            summary.append((pack_name, weapon["weapon_sid"], parent_weapon, weapon["base_caliber"], len(added), len(selected), len(supplements)))
 
     for pack_name, chunks in setup_outputs.items():
         root = args.output_root / pack_name / "GameData"
