@@ -6,21 +6,75 @@
       "reference_root": "MK17Data",
       "category": "AssaultRifle",
       "weapons": [
-        {"weapon_sid": "GunHowa_ST", "general_setup_sid": "GunHowa_ST", "prototype_prefix": "GunHowa", "base_caliber": "A556"},
-        {"weapon_sid": "GunMk16_ST", "general_setup_sid": "GunMk16_ST", "prototype_prefix": "GunMk16", "base_caliber": "A556"},
-        {"weapon_sid": "GunMk17_ST", "general_setup_sid": "GunMK17_ST", "prototype_prefix": "GunMk17", "base_caliber": "A762NATO"},
-        {"weapon_sid": "GunScarl_ST", "general_setup_sid": "GunScarl_ST", "prototype_prefix": "GunScarl", "base_caliber": "A556"}
+        {
+          "weapon_sid": "GunHowa_ST",
+          "general_setup_sid": "GunHowa_ST",
+          "prototype_prefix": "GunHowa",
+          "base_caliber": "A556",
+          "oxa_source_setup": "GunArev_ST_GS"
+        },
+        {
+          "weapon_sid": "GunMk16_ST",
+          "general_setup_sid": "GunMk16_ST",
+          "prototype_prefix": "GunMk16",
+          "base_caliber": "A556",
+          "oxa_source_setup": "GunArev_ST_GS"
+        },
+        {
+          "weapon_sid": "GunMk17_ST",
+          "general_setup_sid": "GunMK17_ST",
+          "prototype_prefix": "GunMk17",
+          "base_caliber": "A762NATO",
+          "oxa_source_setup": "GunArev_ST_GS"
+        },
+        {
+          "weapon_sid": "GunScarl_ST",
+          "general_setup_sid": "GunScarl_ST",
+          "prototype_prefix": "GunScarl",
+          "base_caliber": "A556",
+          "oxa_source_setup": "GunArev_ST_GS"
+        }
       ]
     },
     "ModernAK": {
       "reference_root": "ModernAKData",
       "category": "AssaultRifle",
       "weapons": [
-        {"weapon_sid": "GunKPYK_ST", "general_setup_sid": "GunAKMN_ST", "prototype_prefix": "GunKPYK", "base_caliber": "A762"},
-        {"weapon_sid": "GunRD704_ST", "general_setup_sid": "GunRD704_ST", "prototype_prefix": "GunRD704", "base_caliber": "A762"},
-        {"weapon_sid": "GunAK_ST", "general_setup_sid": "GunAK_ST", "prototype_prefix": "GunAK", "base_caliber": "A762"},
-        {"weapon_sid": "GunType81_ST", "general_setup_sid": "GunType81_ST", "prototype_prefix": "GunType81", "base_caliber": "A762"},
-        {"weapon_sid": "GunType81_AR", "general_setup_sid": "GunType81_AR", "prototype_prefix": "GunType81AR", "base_caliber": "A762"}
+        {
+          "weapon_sid": "GunKPYK_ST",
+          "general_setup_sid": "GunAKMN_ST",
+          "prototype_prefix": "GunKPYK",
+          "base_caliber": "A762",
+          "oxa_source_setup": "GunAK74_ST"
+        },
+        {
+          "weapon_sid": "GunRD704_ST",
+          "general_setup_sid": "GunRD704_ST",
+          "prototype_prefix": "GunRD704",
+          "base_caliber": "A762",
+          "oxa_source_setup": "GunAK74_ST"
+        },
+        {
+          "weapon_sid": "GunAK_ST",
+          "general_setup_sid": "GunAK_ST",
+          "prototype_prefix": "GunAK",
+          "base_caliber": "A762",
+          "oxa_source_setup": "GunAK74_ST"
+        },
+        {
+          "weapon_sid": "GunType81_ST",
+          "general_setup_sid": "GunType81_ST",
+          "prototype_prefix": "GunType81",
+          "base_caliber": "A762",
+          "oxa_source_setup": "GunAK74_ST"
+        },
+        {
+          "weapon_sid": "GunType81_AR",
+          "general_setup_sid": "GunType81_AR",
+          "prototype_prefix": "GunType81AR",
+          "base_caliber": "A762",
+          "oxa_source_setup": "GunAK74_ST"
+        }
       ]
     }
   }
