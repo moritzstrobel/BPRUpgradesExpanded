@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_REPORT = ROOT / "Python/Analysis/Reports/oxa_conflicts.json"
 DEFAULT_VANILLA = ROOT / "Python/VanillaReference"
 DEFAULT_OUTPUT = ROOT / "Compat/OXA/GameLite"
+OXA_TRADER_OUTPUT = Path("GameData/ItemGeneratorPrototypes/DynamicItemGenerator/DynamicItemGenerator_patch_BPRUE_OXA.cfg")
 
 ARRAY_TARGETS = {
     "UpgradePrototypeSIDs": (
@@ -156,6 +157,71 @@ def generate(report: dict, vanilla_root: Path, output_root: Path) -> tuple[list[
     return written, skipped
 
 
+
+def _render_oxa_trader_compat() -> str:
+    """Keep OXA's trader graph intact and inject BPRUE conversion kits into it.
+
+    OXA replaces Trader_Attachments_T2/T3/T4 with SubItemGenerator graphs via
+    bskipref. Patching Vanilla array index [0] after that is unsafe. Instead the
+    compatibility patch adds dedicated Attach categories to OXA's own Basic and
+    Standard attachment generators.
+    """
+    tiers = (
+        ("OXATrade_AttachmentBasicGenerator", (
+            "BPRUE_Viper_PistolConversionKit",
+            "BPRUE_AKU_PistolConversionKit",
+            "BPRUE_Bucket_PistolConversionKit",
+            "BPRUE_Fora230_PistolConversionKit",
+        )),
+        ("OXATrade_AttachmentStandardGenerator", (
+            "BPRUE_Integral_PistolConversionKit",
+            "BPRUE_Zubr_PistolConversionKit",
+        )),
+    )
+    lines = [
+        "// -----------------------------------------------------------------------------",
+        "// AUTO-GENERATED FILE - DO NOT EDIT BY HAND",
+        "// BPRUE <-> OXA trader compatibility patch",
+        "// OXA owns Trader_Attachments_T2/T3/T4; BPRUE kits are injected into",
+        "// OXA's attachment generators instead of patching Vanilla array indices.",
+        "// -----------------------------------------------------------------------------",
+        "",
+    ]
+    for generator_sid, kits in tiers:
+        lines += [
+            f"{generator_sid} : struct.begin {{bpatch}}",
+            "   ItemGenerator : struct.begin {bpatch}",
+            "      [*] : struct.begin",
+            "         Category = EItemGenerationCategory::Attach",
+            "         bAllowSameCategoryGeneration = true",
+            "         PossibleItems : struct.begin",
+        ]
+        for kit in kits:
+            lines += [
+                f"            {kit} : struct.begin",
+                f"               ItemPrototypeSID = {kit}",
+                "               Chance = 1",
+                "               MinCount = 1",
+                "               MaxCount = 1",
+                "            struct.end",
+            ]
+        lines += [
+            "         struct.end",
+            "      struct.end",
+            "   struct.end",
+            "struct.end",
+            "",
+        ]
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def _write_oxa_trader_compat(output_root: Path) -> Path:
+    target = output_root / OXA_TRADER_OUTPUT
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text(_render_oxa_trader_compat(), encoding="utf-8")
+    return target
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Generate CFG-only BPRUE compatibility patches for OXA."
@@ -167,6 +233,9 @@ def main() -> None:
 
     report = json.loads(args.report.read_text(encoding="utf-8"))
     written, skipped = generate(report, args.vanilla_root, args.output_root)
+    trader_path = _write_oxa_trader_compat(args.output_root)
+    if trader_path not in written:
+        written.append(trader_path)
 
     print("BPRUE <-> OXA compatibility generator")
     print("=====================================")
