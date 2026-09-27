@@ -9,7 +9,13 @@ REGISTRY = ROOT / "Python/ExternalWeaponPacks/weapon_packs.json"
 OXA_ROOT = ROOT / "Python/VanillaReference/OxaData"
 VANILLA_ROOT = ROOT / "Python/VanillaReference"
 OUT_TXT = ROOT / "Python/ExternalWeaponPacks/Reports/oxa_parent_deltas.txt"
-OUT_JSON = ROOT / "Python/ExternalWeaponPacks/Reports/oxa_parent_deltas.json"\n\nsys.path.insert(0, str(ROOT / "Python/Analysis"))\nfrom analyze_oxa_conflicts import (  # noqa: E402\n    collect, collect_vanilla, _semantic_arrays, _writes_by_semantic_group,\n    _apply_array_patch, _entry_identity,\n)
+OUT_JSON = ROOT / "Python/ExternalWeaponPacks/Reports/oxa_parent_deltas.json"
+
+sys.path.insert(0, str(ROOT / "Python/Analysis"))
+from analyze_oxa_conflicts import (  # noqa: E402
+    collect, collect_vanilla, _semantic_arrays, _writes_by_semantic_group,
+    _apply_array_patch, _entry_identity,
+)
 
 TOP = re.compile(r"(?m)^([A-Za-z0-9_]+)\s*:\s*struct\.begin(?:\s*\{([^}]*)\})?")
 ATTACH_BLOCK = re.compile(r"(?ms)^\s*\[\d+\]\s*:\s*struct\.begin(?:\s*\{[^}]*\})?\s*(.*?)^\s*struct\.end")
