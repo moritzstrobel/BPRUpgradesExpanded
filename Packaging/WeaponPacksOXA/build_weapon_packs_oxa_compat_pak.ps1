@@ -175,9 +175,10 @@ if ($missingPaths.Count -gt 0) {
     throw "Generated PAK is missing $($missingPaths.Count) expected file(s)."
 }
 
-# Staging-only layer names must never appear inside the actual PAK.
-foreach ($layer in $Layers) {
-    if ($listOutput | Where-Object { $_.Replace("\", "/") -like "*/$layer/GameData/*" }) {
+# Source-layer names are staging metadata only and must never appear inside the PAK.
+foreach ($source in $Sources) {
+    $layer = $source.Name
+    if ($listOutput | Where-Object { $_.Replace("\\", "/") -like "*/$layer/GameData/*" }) {
         throw "Staging layer '$layer' leaked into the PAK hierarchy."
     }
 }
