@@ -12,7 +12,7 @@ sys.path.insert(0, str(PYTHON_ROOT))
 sys.path.insert(0, str(COMMON))
 
 from CFGGenerators.AssaultRifles import generate_assault_rifle_upgrades as ar  # noqa: E402
-from ExternalWeaponPacks.Analysis.analyze_weapon_packs import DEFAULT_VANILLA_ROOT, collect_family, collect_upgrade_definitions, game_data_roots, load_registry, technician_owners  # noqa: E402
+from ExternalWeaponPacks.Analysis.analyze_weapon_packs import DEFAULT_VANILLA_ROOT, collect_family, collect_upgrade_definitions, effective_entry, game_data_roots, load_registry, technician_owners  # noqa: E402
 from upgrade_build_model import UpgradeBuildModel  # noqa: E402
 from upgrade_renderers import render_consolidated_upgrade_prototypes, render_general_setup_patch  # noqa: E402
 
@@ -72,12 +72,15 @@ def validate_pack(pack_name: str, spec: dict, vanilla_root: Path) -> dict[str, l
         if setup is None:
             errors.append(f"{weapon['weapon_sid']}: missing GeneralSetup {setup_sid}")
             continue
-        detected = setup["fields"].get("AmmoCaliber")
+        effective_fields, inheritance_chain = effective_entry(setups, setup_sid)
+        detected = effective_fields.get("AmmoCaliber")
         if detected and detected != weapon["base_caliber"]:
-            errors.append(f"{weapon['weapon_sid']}: registry caliber {weapon['base_caliber']} != CFG {detected}")
-        pack_roots = setup["fields"].get("UpgradePrototypeSIDs", [])
+            errors.append(f"{weapon['weapon_sid']}: registry caliber {weapon['base_caliber']} != effective CFG {detected}")
+        pack_roots = effective_fields.get("UpgradePrototypeSIDs", [])
         if not pack_roots:
-            errors.append(f"{weapon['weapon_sid']}: GeneralSetup {setup_sid} has no UpgradePrototypeSIDs")
+            errors.append(f"{weapon['weapon_sid']}: effective GeneralSetup {setup_sid} has no UpgradePrototypeSIDs")
+        if len(inheritance_chain) > 1:
+            print(f"{pack_name}: {weapon['weapon_sid']} setup inheritance: {' -> '.join(inheritance_chain)}")
         all_roots.update(pack_roots)
 
     print(f"{pack_name}: source upgrade roots={len(all_roots)}, locally defined={len(all_roots & upgrade_defs)}, external/Vanilla={len(all_roots - upgrade_defs)}")
