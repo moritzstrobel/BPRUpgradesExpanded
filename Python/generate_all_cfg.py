@@ -24,6 +24,7 @@ from unique_weapon_modules import add_unique_modules, add_unique_signatures, ren
 from vanilla_upgrade_layout import DLC_ROOT, _direct_child, _direct_scalar, _indexed_children, _refkey, _sid, _top_level_blocks, render_vanilla_compaction_patch
 
 from CFGGenerators.AssaultRifles import generate_assault_rifle_upgrades as ar
+from CFGGenerators.Armor import generate_armor_upgrades as armor
 from CFGGenerators.MachineGuns import generate_machine_gun_upgrades as machine_gun
 from CFGGenerators.Pistols import generate_pistol_upgrades as pistol
 from CFGGenerators.Shotguns import generate_shotgun_upgrades as shotgun
@@ -348,7 +349,7 @@ def main():
             edition_npc_text,
         )
     write(EDITIONS_NPC_PATH, edition_npc_text)
-    write(ar.EFFECT_OUTPUT_PATH, ar.render_effect_patch(configs["ar"])); write(smg.EFFECT_OUTPUT_PATH, smg.render_effects()); write(shotgun.EFFECT_OUTPUT, shotgun.render_effects()); write(pistol.EFFECT_OUTPUT, pistol.render_effects()); write(sniper.EFFECT_OUTPUT, sniper.render_effects()); write(MACHINE_GUN_EFFECT_PATH, machine_gun.render_effects()); write(SHARED_EFFECT_PATH, render_shared_effects()); write(UNIQUE_SIGNATURE_EFFECT_PATH, render_unique_signature_effects())
+    # Keep the optional Armor module in sync with the unified generation pass.\n    armor.main()\n    write(ar.EFFECT_OUTPUT_PATH, ar.render_effect_patch(configs["ar"])); write(smg.EFFECT_OUTPUT_PATH, smg.render_effects()); write(shotgun.EFFECT_OUTPUT, shotgun.render_effects()); write(pistol.EFFECT_OUTPUT, pistol.render_effects()); write(sniper.EFFECT_OUTPUT, sniper.render_effects()); write(MACHINE_GUN_EFFECT_PATH, machine_gun.render_effects()); write(SHARED_EFFECT_PATH, render_shared_effects()); write(UNIQUE_SIGNATURE_EFFECT_PATH, render_unique_signature_effects())
     print(f"Validated and rendered {len(model.upgrades)} base/Unique upgrades plus {sum(len(m.upgrades) for m in dlc_models.values())} DLC upgrades plus {sum(len(m.upgrades) for m in edition_models.values())} Edition upgrades.")
 
 
