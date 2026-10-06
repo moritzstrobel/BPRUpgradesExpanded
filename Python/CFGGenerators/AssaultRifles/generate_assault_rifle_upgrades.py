@@ -176,7 +176,7 @@ MODULE_SPECS = {
     ("reload", "competition"): ("Reload", "Competition", "Body", 2800, "sid_bprue_reload_competition_name", "sid_bprue_reload_competition_description", ("BPRUE_ReloadingTimeNeg20Effect", "RecoilNeg15Effect")),
     ("reload", "reinforced"): ("Reload", "Reinforced", "Body", 3000, "sid_bprue_reload_reinforced_name", "sid_bprue_reload_reinforced_description", ("BPRUE_ReloadingTimeNeg10Effect", "DurabilityPerShotPos20Effect", "BPRUE_FireIntervalPos5Effect")),
     ("stock", "lightweight"): ("Stock", "Lightweight", "Stock", 3000, "sid_bprue_stock_lightweight_name", "sid_bprue_stock_lightweight_description", ("AimingTimePos15Effect", "AimingMovementPos10Effect", "RecoilNeg15Effect")),
-    ("stock", "stabilized"): ("Stock", "Stabilized", "Stock", 3200, "sid_bprue_stock_stabilized_name", "sid_bprue_stock_stabilized_description", ("RecoilPos15Effect", "ShotRecoveryPos20Effect", "AimingTimeNeg10Effect")),
+    ("stock", "stabilized"): ("Stock", "Stabilized", "Stock", 3200, "sid_bprue_stock_stabilized_name", "sid_bprue_stock_stabilized_description", ("RecoilPos15Effect", "ShotRecoveryPos10Effect", "AimingTimeNeg10Effect")),
     ("stock", "marksman"): ("Stock", "Marksman", "Stock", 3400, "sid_bprue_stock_marksman_name", "sid_bprue_stock_marksman_description", ("IdleSwayXPos20Effect", "IdleSwayYPos20Effect", "MaxDispersionPos15Effect", "AimingTimeNeg15Effect")),
 }
 
