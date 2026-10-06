@@ -23,7 +23,14 @@ def literal_assignment(path: Path, name: str):
         if isinstance(node, ast.Assign):
             for target in node.targets:
                 if isinstance(target, ast.Name) and target.id == name:
-                    return ast.literal_eval(node.value)
+                    # Generator tables contain icon helper calls. Ignore their display-only
+                    # values without importing generators or executing code.
+                    class IgnoreIcons(ast.NodeTransformer):
+                        def visit_Call(self, call):
+                            if isinstance(call.func, ast.Name) and call.func.id == "_ammo_icon":
+                                return ast.copy_location(ast.Constant(value=None), call)
+                            raise ValueError(f"Unexpected call in {name}: {ast.unparse(call)}")
+                    return ast.literal_eval(IgnoreIcons().visit(node.value))
     raise KeyError(f"{name} not found in {path}")
 
 def load_json(path: Path):
@@ -41,13 +48,14 @@ def effect_label(sid: str) -> str:
     value = re.sub(r"(?<=\D)(\d+)$", r" \1%", value)
     return re.sub(r"\s+", " ", value).strip()
 
-def add(rows, weapon_class, weapon, source, target, effects):
+def add(rows, weapon_class, weapon, source, target, effects, variant="Default"):
     rows.append({
         "class": weapon_class,
         "weapon": weapon,
         "source": source,
         "target": target,
         "effects": tuple(effects),
+        "variant": variant,
     })
 
 def collect_ar(rows):
@@ -55,23 +63,47 @@ def collect_ar(rows):
     gen = GENERATORS["AR"]
     power = literal_assignment(gen, "POWER_CALIBER")
     effects = literal_assignment(gen, "CALIBER_EFFECTS")
+    variant_tables = {
+        "A762": literal_assignment(gen, "A762_CONVERSION_VARIANTS"),
+        "A762Sniper": literal_assignment(gen, "A762SNIPER_CONVERSION_VARIANTS"),
+        "A762NATO": literal_assignment(gen, "A762NATO_CONVERSION_VARIANTS"),
+    }
     for name, family in cfg["families"].items():
         source = family["base_caliber"]
+        targets = []
         if family.get("bprue_caliber_conversion", True) and source in power:
-            target = power[source][0]
-            add(rows, "AR", name, source, target, effects[target][3])
-        for target in family.get("additional_caliber_conversions", []):
-            add(rows, "AR", name, source, target, effects[target][3])
+            targets.append(power[source][0])
+        targets.extend(family.get("additional_caliber_conversions", []))
+        for target in targets:
+            variants = variant_tables.get(target)
+            if variants:
+                for variant, spec in variants.items():
+                    add(rows, "AR", name, source, target, spec["stat_effects"], variant)
+            else:
+                add(rows, "AR", name, source, target, effects[target][3])
 
 def collect_smg(rows):
     cfg = load_json(CONFIGS["SMG"])
-    stat_effects = literal_assignment(GENERATORS["SMG"], "CALIBER_STAT_EFFECTS")
+    gen = GENERATORS["SMG"]
+    stat_effects = literal_assignment(gen, "CALIBER_STAT_EFFECTS")
     for name, family in cfg["caliber_families"].items():
         if not family.get("bprue_caliber_conversion", True):
             continue
         source = family["base_caliber"]
+        prefix = family["prototype_prefix"]
         for target in family["conversions"]:
-            add(rows, "SMG", name, source, target, stat_effects.get((source, target), ()))
+            table_name = None
+            if prefix == "GunM10" and target in ("A919", "A918"):
+                table_name = f"M10_{target}_VARIANTS"
+            elif prefix == "GunBucket" and target in ("A919", "A045"):
+                table_name = f"BUCKET_{target}_VARIANTS"
+            elif prefix == "GunZubr" and target in ("A918", "A045"):
+                table_name = f"ZUBR_{target}_VARIANTS"
+            if table_name:
+                for variant, spec in literal_assignment(gen, table_name).items():
+                    add(rows, "SMG", name, source, target, spec["stat_effects"], variant)
+            else:
+                add(rows, "SMG", name, source, target, stat_effects.get((source, target), ()))
 
 def collect_sniper(rows):
     cfg = load_json(CONFIGS["Sniper"])
@@ -82,20 +114,21 @@ def collect_sniper(rows):
         source = family["base_caliber"]
         conversion = conversions.get(source)
         if conversion:
-            target = conversion[0]
-            add(rows, "Sniper", name, source, target, conversion[5][3:])
+            target = conversion["target"]
+            for variant, spec in conversion["variants"].items():
+                add(rows, "Sniper", name, source, target, spec[4], variant)
 
 def print_rows(rows):
     grouped = defaultdict(list)
     for row in rows:
-        key = (row["class"], row["source"], row["target"], row["effects"])
+        key = (row["class"], row["source"], row["target"], row["variant"], row["effects"])
         grouped[key].append(row["weapon"])
 
     print("BPRUE caliber conversion stat profiles")
     print()
-    for (weapon_class, source, target, effects), weapons in sorted(grouped.items()):
+    for (weapon_class, source, target, variant, effects), weapons in sorted(grouped.items()):
         print(f"{weapon_class}: {', '.join(sorted(weapons))}")
-        print(f"  Conversion: {source} -> {target}")
+        print(f"  Conversion: {source} -> {target} ({variant})")
         if effects:
             print("  Stat effects:")
             for sid in effects:
