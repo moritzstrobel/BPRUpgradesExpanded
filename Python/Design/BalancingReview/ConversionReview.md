@@ -1,12 +1,12 @@
 # Caliber conversion review — implementation plan (2026-10-06)
 
-**Status:** partial implementation. Sniper/DMR Default conversion generator changed; maintainer regenerated and pushed CFGs, but generated effects and in-game behavior are not yet verified. AP/Supersonic and AR/SMG conversions remain unchanged. Original tester feedback is archived in `balacingBaseOverview.txt`; track dispositions in `TesterFeedbackProgress.md`.
+**Status:** partial implementation. Sniper/DMR Default, AP and Supersonic conversion profiles changed in generator sources. Default CFGs were previously regenerated and pushed by the maintainer; latest specialization CFGs still require regeneration. In-game behavior is not yet verified. AR/SMG conversions remain unchanged. Original tester feedback is archived in `balacingBaseOverview.txt`; track dispositions in `TesterFeedbackProgress.md`.
 
 ## Observed generator baseline
 
 - Sniper/DMR: `CALIBER_CONVERSIONS` in `Snipers/generate_sniper_upgrades.py` maps `A762Sniper` (7.62×54R) to `A762NATO` (.308) and vice versa. Each direction has Default/AP/Supersonic variants, distinct ammo restriction effects and mutually blocking variants. Seven configured families: SVDM, SVU, Mark, M701, SIC, ThreeLine, GP3A.
-- Sniper .308 → 7.62×54R Default (current): −10% projectile speed, −10% flatness, −15% damage drop-off length, 10% recoil penalty and 10% additional wear per shot; no damage/AP modifiers. AP: +5% damage, +25% AP, recoil penalty 20%, wear penalty 15%. Supersonic: +10% damage, +10% AP, recoil penalty 15%, wear penalty 15%, +15% flatness. The extra damage/AP bonuses are the primary economy-versus-power concern.
-- Sniper 7.62×54R → .308 Default (current): +10% projectile speed, +10% flatness, +15% damage drop-off length and +5% recoil control, no damage penalty; AP: +15% AP, +5% recoil control, -15% damage; Supersonic: +10% recoil control, -10% damage, +15% flatness.
+- Sniper .308 → 7.62×54R Default (current): −10% projectile speed, −10% flatness, −15% damage drop-off length, 10% recoil penalty and 10% additional wear per shot; no damage/AP modifiers. AP: inherits Default with +5% AP and -5% damage. Supersonic: inherits Default with +5% projectile speed and +5% additional wear per shot. The extra damage/AP bonuses are the primary economy-versus-power concern.
+- Sniper 7.62×54R → .308 Default (current): +10% projectile speed, +10% flatness, +15% damage drop-off length and +5% recoil control, no damage penalty; AP: inherits Default with +5% AP and -5% damage; Supersonic: inherits Default with +5% projectile speed and +5% additional wear per shot.
 - AR: `POWER_CALIBER` maps `A545` → `A762Sniper`, `A556` → `A762NATO`. AK74 and Gvintar additionally configure `A762` (7.62×39). Fora, Kharod and Dnipro disable BPRUE conversion in favor of vanilla conversion ownership. G37, M16, Arev use 7.62 NATO conversion; Grim and Lavina have no generated conversion under current rules.
 - AR default `A762Sniper` conversion has +15% damage/+15% AP, 25% recoil and 20% wear penalties; default `A762NATO` has +10% damage/+15% AP, 20% recoil and 15% wear penalties. Variant-specific stats also exist.
 - Vanilla conversion reference matrix: `Python/Analysis/Reports/caliber_conversion_matrix.json`; source analysis: `Python/Analysis/analyze_caliber_conversions.py`, `analyze_conversion_profiles.py`. The report is a repository snapshot, **not** proof of runtime effect ordering or technician behavior.
@@ -31,4 +31,4 @@
 4. **AR conversion redesign:** Preserve `A762` and vanilla-owned conversions. Review high-powered AR conversions individually rather than mechanically following the tester's proposed weapon list.
 5. **Validation:** Generate CFGs, check all effect references and localization (EN/RU/ZH), mutual blocking, attachment/layout, variant save behavior, both vanilla-upgrade installation orders, reload/save and representative gameplay/economy comparisons.
 
-**Default Sniper/DMR changes are implemented and CFGs reportedly regenerated, but not validated in-game. Do not mark tester feedback fully addressed or fixed until remaining variants and validation are complete.**
+**All Sniper/DMR variants are now updated in generator sources, but specialization CFG regeneration and in-game validation are outstanding. Barrel Hardening remains open; do not mark feedback fully fixed.**
