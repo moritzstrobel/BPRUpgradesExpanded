@@ -1,0 +1,22 @@
+# Changelog
+
+Notable changes to BPR Upgrades Expanded are recorded here, independently of design proposals and investigation notes.
+
+This file tracks **implemented changes**, not planned features. Entries under **Unreleased** describe source changes on the current development branch; they are **not yet part of a published release**. Generated game CFGs and in-game validation may still be pending.
+
+## [Unreleased]
+
+### Changed
+- **Sniper / DMR – Field Marksman:** Replaced the +10% shot-recovery bonus with a 10% aiming-time penalty to introduce a meaningful trade-off.
+- **Sniper / DMR – Adjustable Stock:** Removed the +10% recoil-control bonus. Aiming stability and aimed movement benefits remain.
+- **Sniper / DMR – Benchrest:** Reduced recoil-control bonus from +15% to +10%.
+- **Sniper / DMR – Precision Stock:** Removed the +20% shot-recovery bonus. Stability, recoil control and slower aiming remain.
+- **Assault rifles – Stabilized Stock:** Reduced shot-recovery bonus from +20% to +10%; other effects remain unchanged.
+- Updated affected module descriptions in English, Russian and Simplified Chinese.
+
+### Development notes
+- Changes above currently affect generator sources and localization definitions. **Generated CFGs have not yet been updated or tested in-game.**
+- Upgrade UI issues and broader balancing ideas remain outside this changelog until actual changes are implemented.
+- 7.62×39 (`A762`) conversions and ammunition behavior remain unchanged.
+
+<!-- Add future implemented changes under Unreleased; move entries into a versioned section when a release is published. -->
