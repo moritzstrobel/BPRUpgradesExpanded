@@ -31,9 +31,11 @@ Recommendation : If possible, I would recommend using only the vanilla attachmen
 ## b) Armor Penetration modules  
 I think it would be best to take the following approach, at least initially :  
    
-Remove all modules that increase or decrease Armor Penetration without involving a caliber change (Soft-Target Module + Armor-Piercing Module).  
+~~Remove all modules that increase or decrease Armor Penetration without involving a caliber change (Soft-Target Module + Armor-Piercing Module).~~  
 Why:  Based on my own testing and the information I have been able to find, Armor Penetration is an extremely important stat that needs to be handled very carefully. Furthermore, its value and usefulness vary considerably depending on the weapon's Tier. Honestly, I think Armor Penetration is one of the few stats that would justify introducing new upgrades rather than modules. It might be worth considering implementing these as actual weapon upgrades instead of modules, reusing the game's existing assets wherever possible, to reach the desirable effect later, during Phase 3.  
    
+> **DONE (generator only)** — Preserved both module upgrade SIDs and their mutual exclusion instead of removing the slots. Soft-Target is now an experimental wounding profile (+10% BleedingChancePerShot, −10% CoverPiercing); Armor-Piercing is renamed **Barrier Module** (+20% CoverPiercing, −10% WeaponDamage). Neither changes ArmorPiercing. **OPEN gameplay validation:** verify whether bleeding chance percentages are multiplicative, additive or absolute, including interaction with ammunition and baseline bleeding. Generated CFGs and in-game testing pending.
+
 ## c) Repair Costs  
 Repair costs are very easy to modify, as all modules and upgrades have a RepairCostModifier = 0.2 property. This means that only 20% of the module's or upgrade's purchase price is factored into the repair cost calculation. This is therefore something that can easily be adjusted later on. Doing so would help prevent a fully upgraded Tier 1 weapon from being as effective, or almost as effective, as a Tier 3 weapon while retaining significantly lower repair costs.  
    
@@ -81,7 +83,7 @@ With the exception of certain unique weapons (such as CoH Luftgarde, which can b
 - ~~CQB Configuration : OK in principle. In my opinion, it should come with a Recoil Recovery penalty, since Spread affects both ADS and hip-fire dispersion.~~
 
 > **DONE** — Added a 10% recoil-recovery penalty for DMR/Sniper; existing upgrade SID retained (generator only).  
-- Soft-Target Module and Armor-Piercing Module : Should be removed.  
+- ~~Soft-Target Module and Armor-Piercing Module : Should be removed.~~ See the general Armor Penetration decision above; retained as distinct wounding/cover modules, not AP modifiers.  
 - ~~Benchrest Setup : Needs to be reworked overall, as it provides far too many benefits to all DMRs and sniper rifles, regardless of whether they are fully automatic or not. Like the Precision Stock, it provides 2 instances of improved Aiming Stability. It should also improve Recoil Recovery instead of Recoil. The penalties are fine as they are.~~   
 
 > **DONE** — Benchrest recoil benefit reduced to 10%; retained the current stability/recoil specialization and penalties instead of adopting the proposed full redesign. Effect stacking and in-game behavior require separate validation.
