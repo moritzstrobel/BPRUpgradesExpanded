@@ -7,18 +7,36 @@
         "lightweight_assembly": {
           "display_name": "Lightweight Assembly",
           "effects": [
-            {"stat": "weight", "value_percent": -15},
-            {"stat": "aiming_time", "value_percent": 10},
-            {"stat": "recoil", "value_percent": -8}
+            {
+              "stat": "weight",
+              "value_percent": -15
+            },
+            {
+              "stat": "aiming_time",
+              "value_percent": 10
+            },
+            {
+              "stat": "recoil",
+              "value_percent": -8
+            }
           ],
           "identity": "Faster, lighter handling at the cost of recoil control."
         },
         "reinforced_assembly": {
           "display_name": "Reinforced Assembly",
           "effects": [
-            {"stat": "recoil", "value_percent": 12},
-            {"stat": "durability", "value_percent": 10},
-            {"stat": "weight", "value_percent": 10}
+            {
+              "stat": "recoil",
+              "value_percent": 12
+            },
+            {
+              "stat": "durability",
+              "value_percent": 10
+            },
+            {
+              "stat": "weight",
+              "value_percent": 10
+            }
           ],
           "identity": "Stable and durable, but heavier."
         }
@@ -29,16 +47,28 @@
         "recoil_control": {
           "display_name": "Recoil Control",
           "effects": [
-            {"stat": "recoil", "value_percent": 15},
-            {"stat": "dispersion", "value_percent": -5}
+            {
+              "stat": "recoil",
+              "value_percent": 15
+            },
+            {
+              "stat": "dispersion",
+              "value_percent": -5
+            }
           ],
           "identity": "Prioritizes controllability during repeated fire over intrinsic precision."
         },
         "precision_tuning": {
           "display_name": "Precision Tuning",
           "effects": [
-            {"stat": "dispersion", "value_percent": 15},
-            {"stat": "recoil", "value_percent": -8}
+            {
+              "stat": "dispersion",
+              "value_percent": 15
+            },
+            {
+              "stat": "recoil",
+              "value_percent": -8
+            }
           ],
           "identity": "Prioritizes shot precision at the cost of stronger recoil."
         }
@@ -49,18 +79,36 @@
         "high_cyclic_system": {
           "display_name": "High-Cyclic System",
           "effects": [
-            {"stat": "fire_rate", "value_percent": 12},
-            {"stat": "recoil", "value_percent": -10},
-            {"stat": "durability_per_shot", "value_percent": -8}
+            {
+              "stat": "fire_rate",
+              "value_percent": 12
+            },
+            {
+              "stat": "recoil",
+              "value_percent": -10
+            },
+            {
+              "stat": "durability_per_shot",
+              "value_percent": -8
+            }
           ],
           "identity": "Aggressive cyclic rate with increased recoil and wear."
         },
         "controlled_action": {
           "display_name": "Controlled Action",
           "effects": [
-            {"stat": "fire_rate", "value_percent": -10},
-            {"stat": "recoil", "value_percent": 10},
-            {"stat": "dispersion", "value_percent": 8}
+            {
+              "stat": "fire_rate",
+              "value_percent": -10
+            },
+            {
+              "stat": "recoil",
+              "value_percent": 5
+            },
+            {
+              "stat": "dispersion",
+              "value_percent": 15
+            }
           ],
           "identity": "Slower cycling in exchange for controllability and precision."
         }
@@ -71,19 +119,44 @@
         "soft_target": {
           "display_name": "Soft-Target Module",
           "effects": [
-            {"effect_sid": "DamagePos15Effect", "stat": "weapon_damage", "value_percent": 15},
-            {"effect_sid": "FlatnessUp10Effect", "stat": "effective_fire_distance", "value_percent": 10},
-            {"effect_sid": "ProjectileSpeedPos10Effect", "stat": "projectile_velocity", "value_percent": 10},
-            {"stat": "armor_piercing", "value_percent": -20}
+            {
+              "effect_sid": "DamagePos15Effect",
+              "stat": "weapon_damage",
+              "value_percent": 15
+            },
+            {
+              "effect_sid": "FlatnessUp10Effect",
+              "stat": "effective_fire_distance",
+              "value_percent": 10
+            },
+            {
+              "effect_sid": "ProjectileSpeedPos10Effect",
+              "stat": "projectile_velocity",
+              "value_percent": 10
+            },
+            {
+              "stat": "armor_piercing",
+              "value_percent": -20
+            }
           ],
           "identity": "High terminal performance and flatter, faster projectiles against lightly protected targets, sacrificing armor penetration."
         },
         "armor_piercing": {
           "display_name": "Armor-Piercing Module",
           "effects": [
-            {"effect_sid": "ArmorPiercingPos25Effect", "stat": "armor_piercing", "value_percent": 25},
-            {"stat": "cover_piercing", "value_percent": 20},
-            {"stat": "weapon_damage", "value_percent": -10}
+            {
+              "effect_sid": "ArmorPiercingPos25Effect",
+              "stat": "armor_piercing",
+              "value_percent": 25
+            },
+            {
+              "stat": "cover_piercing",
+              "value_percent": 20
+            },
+            {
+              "stat": "weapon_damage",
+              "value_percent": -10
+            }
           ],
           "identity": "Optimized for armor and cover penetration at the expense of raw terminal damage."
         }
@@ -94,17 +167,32 @@
         "hardened_components": {
           "display_name": "Hardened Components",
           "effects": [
-            {"stat": "durability", "value_percent": 20},
-            {"stat": "weight", "value_percent": 5}
+            {
+              "stat": "durability",
+              "value_percent": 20
+            },
+            {
+              "stat": "weight",
+              "value_percent": 5
+            }
           ],
           "identity": "Longer service life at a small weight penalty."
         },
         "lightweight_components": {
           "display_name": "Lightweight Components",
           "effects": [
-            {"stat": "weight", "value_percent": -12},
-            {"stat": "durability", "value_percent": -15},
-            {"stat": "aiming_time", "value_percent": 8}
+            {
+              "stat": "weight",
+              "value_percent": -12
+            },
+            {
+              "stat": "durability",
+              "value_percent": -15
+            },
+            {
+              "stat": "aiming_time",
+              "value_percent": 8
+            }
           ],
           "identity": "Improved handling and weight at the cost of service life."
         }
@@ -115,18 +203,37 @@
         "cqb_configuration": {
           "display_name": "CQB Configuration",
           "effects": [
-            {"stat": "aiming_time", "value_percent": 15},
-            {"stat": "dispersion", "value_percent": 10},
-            {"stat": "effective_fire_distance", "value_percent": -10}
+            {
+              "stat": "aiming_time",
+              "value_percent": 15
+            },
+            {
+              "stat": "dispersion",
+              "value_percent": 10
+            },
+            {
+              "stat": "effective_fire_distance",
+              "value_percent": -10
+            }
           ],
           "identity": "Fast close-range handling and practical accuracy with reduced long-range performance."
         },
         "range_configuration": {
           "display_name": "Range Configuration",
           "effects": [
-            {"effect_sid": "FlatnessUp15Effect", "stat": "effective_fire_distance", "value_percent": 15},
-            {"stat": "dispersion", "value_percent": 10},
-            {"stat": "aiming_time", "value_percent": -10}
+            {
+              "effect_sid": "FlatnessUp15Effect",
+              "stat": "effective_fire_distance",
+              "value_percent": 15
+            },
+            {
+              "stat": "dispersion",
+              "value_percent": 10
+            },
+            {
+              "stat": "aiming_time",
+              "value_percent": -10
+            }
           ],
           "identity": "Long-range ballistic and precision tuning at the cost of slower handling."
         }
@@ -134,12 +241,38 @@
     }
   },
   "weapon_class_groups": {
-    "pistol": ["handling", "recoil_precision", "ballistics"],
-    "smg": ["handling", "action", "ballistics", "range_profile"],
-    "assault_rifle": ["recoil_precision", "action", "ballistics", "reliability"],
-    "shotgun": ["handling", "reliability", "range_profile"],
-    "sniper": ["recoil_precision", "ballistics", "reliability", "range_profile"],
-    "machine_gun": ["ballistics", "reliability"]
+    "pistol": [
+      "handling",
+      "recoil_precision",
+      "ballistics"
+    ],
+    "smg": [
+      "handling",
+      "action",
+      "ballistics",
+      "range_profile"
+    ],
+    "assault_rifle": [
+      "recoil_precision",
+      "action",
+      "ballistics",
+      "reliability"
+    ],
+    "shotgun": [
+      "handling",
+      "reliability",
+      "range_profile"
+    ],
+    "sniper": [
+      "recoil_precision",
+      "ballistics",
+      "reliability",
+      "range_profile"
+    ],
+    "machine_gun": [
+      "ballistics",
+      "reliability"
+    ]
   },
   "notes": [
     "Flatness is backed by vanilla EEffectType::EffectiveFireDistance effects (FlatnessUp5Effect through FlatnessUp30Effect).",
