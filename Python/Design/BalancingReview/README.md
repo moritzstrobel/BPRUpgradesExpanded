@@ -236,3 +236,25 @@ Capture unmodified vanilla, current BPRUE, and proposed BPRUE results for repres
 ### Scope note
 
 The external review is valuable test feedback, not the project design authority. In particular, this document does **not** commit to removing unpopular modules, reclassifying VS Vintar, supplying 7.62×39 ammunition, nerfing everything flagged “OP”, or replacing all caliber conversions. Each behavioral change needs a verified current baseline, an intended gameplay role, and regression coverage.
+
+
+## Implementation status against tester feedback (2026-10-06)
+
+This is a **source-level disposition**, not a claim of in-game validation. The original observations and their priority remain valid until verified in a generated tester build.
+
+| Feedback topic | Current disposition | Evidence / remaining validation |
+| --- | --- | --- |
+| DMR/Sniper overstacked stocks, marksman and barrels (DMR-01/02) | **Adjusted, pending tester verification** | Field Marksman, Adjustable/Precision Stock, Benchrest, Match/Heavy Barrel revised; compare full vanilla + BPRUE stacks per weapon |
+| AR extreme accuracy and overlapping stock/action choices (AR-01/02) | **Partially adjusted** | Stabilized Stock, Balanced Fire Rate, Competition/Reinforced Reload and shared Controlled Action revised; stacked accuracy and fire modes still unmeasured |
+| Shared AP vs soft-target scaling (AP-01) | **Open – deliberate deferral** | No AP/damage changes without tiered damage-to-kill evidence |
+| Shared CQB / Range differentiation | **Reviewed, unchanged** | Existing range/aiming trade-offs retained until a demonstrable dominance case |
+| SMG readiness/action/stock overlap | **Adjusted, pending tester verification** | Stabilized Readiness now focuses on sway, Controlled Action and two stocks reduced recovery/control overlap |
+| Pistol action/handling stacking | **Adjusted, pending tester verification** | Balanced and Controlled Action recovery reduced; Stabilized Handling moved to sway; test full stacks and pistol-specific behavior |
+| Shotgun action/furniture stacking | **Adjusted, pending tester verification** | Reinforced Action and Stabilized Furniture recovery reduced; pellet count, pattern, falloff and weapon-family balance unchanged |
+| UI clipping / floating pistol upgrade nodes (UI-01/02) | **Open – not a balance fix** | Need weapon-specific layout reproduction and screenshots |
+| Sniper Barrel Hardening ammunition restriction bypass (CAL-01) | **Open – functional issue** | Reproduce actual ammo lists and effect ordering with vanilla upgrades |
+| Caliber conversion redesign and ammo availability | **Reviewed / not broadly changed** | Keep intentional A762 conversions; investigate other conversions individually, not wholesale |
+| Economy / repair modifiers | **Open** | Compare technician prices and inherited modifiers in game |
+| VS Vintar class identity (CLASS-01) | **Reviewed, no reclassification** | Needs explicit weapon identity decision and dependency audit |
+
+**Tester draft exit criteria:** regenerate affected CFGs, check source/localization/effect-SID consistency, run generator/model validation, inspect mutually exclusive upgrade groups, then test representative vanilla+BPRUE stacked builds. No item in this table is labeled *fixed* solely because its generator was edited.
