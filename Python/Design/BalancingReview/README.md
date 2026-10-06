@@ -1,5 +1,7 @@
 # BPRUE – Balancing & Upgrade Design Review
 
+**Original tester feedback and progress:** [`balacingBaseOverview.txt`](./balacingBaseOverview.txt) is the unmodified source; [`TesterFeedbackProgress.md`](./TesterFeedbackProgress.md) reproduces it in original order with strikethrough for addressed source changes and explicit partial-status notes. Strikethrough does **not** mean verified in game or that every tester-requested solution was adopted.
+
 > **Status:** Design proposal / investigation backlog — **not approved for implementation**  
 > **Base:** `develop` (2026-10-06, `e0f22937`)  
 > **Scope:** Weapons, specializations, caliber conversions, upgrade-tree UI, repair economics  
