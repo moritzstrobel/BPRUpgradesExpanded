@@ -7,9 +7,9 @@ This file tracks **implemented changes**, not planned features. Entries under **
 ## [Unreleased]
 
 ### Changed
-- **AR caliber conversions (generator only):** Added complete shared Default/AP/Supersonic profiles for 5.45 to 7.62x54R and 5.56 to .308, and Default/AP/Expanding for 7.62x39. Reduced unconditional damage/AP gains and introduced trajectory, damage-drop-off, recoil and wear trade-offs. VS Vintar (9x39 to 7.62x39) uses a separate baseline. Ammo restrictions, variant blocking and vanilla-owned conversions remain unchanged. Updated EN/RU/ZH descriptions; regeneration and testing pending.
-- **Sniper/DMR caliber specializations (generator only):** AP and Supersonic conversions now inherit the complete directional Default ballistic profile while retaining their own ammo-type restrictions and mutual blocking. AP adds +5% armor penetration and -5% damage; Supersonic adds +5% projectile speed and +5% wear per shot (without redundant flatness buffs). Updated all six caliber-conversion descriptions (EN/RU/ZH). Generated CFGs and in-game tests pending.
-- **Sniper/DMR Default caliber conversions:** Reworked 7.62x54R to .308 (+10% velocity, +10% flatness, +15% damage drop-off length, +5% recoil control) and .308 to 7.62x54R (-10% velocity, -10% flatness, -15% drop-off length, 10% recoil penalty, 10% wear per shot penalty). Removed Default damage/AP modifiers; AP and Supersonic unchanged. Generator output and gameplay validation are separate steps.
+- **AR caliber conversions (generator only):** Added complete shared Default/AP/Supersonic profiles for 5.45 to 7.62x54R and 5.56 to .308, and Default/AP/Expanding for 7.62x39. Reduced unconditional damage/AP gains and introduced trajectory, damage-drop-off, recoil and wear trade-offs. VS Vintar (9x39 to 7.62x39) uses a separate baseline. Ammo restrictions, variant blocking and vanilla-owned conversions remain unchanged. Updated EN/RU/ZH descriptions; regenerated and pushed by maintainer; in-game validation pending.
+- **Sniper/DMR caliber specializations (generator only):** AP and Supersonic conversions now inherit the complete directional Default ballistic profile while retaining their own ammo-type restrictions and mutual blocking. AP adds +5% armor penetration and -5% damage; Supersonic adds +5% projectile speed and +5% wear per shot (without redundant flatness buffs). Updated all six caliber-conversion descriptions (EN/RU/ZH). regenerated and pushed by maintainer; in-game validation pending.
+- **Sniper/DMR Default caliber conversions:** Reworked 7.62x54R to .308 (+10% velocity, +10% flatness, +15% damage drop-off length, +5% recoil control) and .308 to 7.62x54R (-10% velocity, -10% flatness, -15% drop-off length, 10% recoil penalty, 10% wear per shot penalty). Removed Default damage/AP modifiers; AP and Supersonic subsequently rebalanced as described above. In-game validation pending.
 - **Sniper / DMR – Field Marksman:** Replaced the +10% shot-recovery bonus with a 10% aiming-time penalty to introduce a meaningful trade-off.
 - **Sniper / DMR – Adjustable Stock:** Removed the +10% recoil-control bonus. Aiming stability and aimed movement benefits remain.
 - **Sniper / DMR – Benchrest:** Reduced recoil-control bonus from +15% to +10%.
@@ -33,7 +33,7 @@ This file tracks **implemented changes**, not planned features. Entries under **
 - Updated affected module descriptions in English, Russian and Simplified Chinese.
 
 ### Development notes
-- Changes above currently affect generator sources and localization definitions. **Generated CFGs have not yet been updated or tested in-game.**
+- Generator sources and localization definitions have been updated, and the maintainer has regenerated and pushed CFGs. **In-game behavior has not yet been validated.**
 - Upgrade UI issues and broader balancing ideas remain outside this changelog until actual changes are implemented.
 - 7.62×39 (`A762`) conversions and ammunition behavior remain unchanged.
 
