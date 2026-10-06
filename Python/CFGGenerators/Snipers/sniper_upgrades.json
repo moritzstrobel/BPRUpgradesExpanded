@@ -50,6 +50,14 @@
       "prototype_prefix": "GunGP3A",
       "cost_scale": 1.25,
       "base_caliber": "A762NATO"
+    },
+    "Gvintar": {
+      "weapon_sid": "GunGvintar_ST",
+      "general_setup_sid": "GunGvintar_ST",
+      "prototype_prefix": "GunGvintar",
+      "cost_scale": 1,
+      "base_caliber": "A939",
+      "bprue_caliber_conversion": false
     }
   },
   "module_groups": {

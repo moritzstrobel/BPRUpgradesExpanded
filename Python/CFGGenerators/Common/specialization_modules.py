@@ -15,13 +15,28 @@ MODULE_EFFECTS = {
     "recoil_control": ("RecoilPos15Effect", "BPRUE_Shared_DispersionPenalty5Effect"),
     "precision_tuning": ("DispersionPos15Effect", "BPRUE_Shared_RecoilPenalty8Effect"),
     "high_cyclic_system": ("BPRUE_Shared_FireIntervalNeg12Effect", "BPRUE_Shared_RecoilPenalty10Effect", "BPRUE_Shared_DurabilityPerShotPenalty8Effect"),
-    "controlled_action": ("BPRUE_Shared_FireIntervalPenalty10Effect", "RecoilPos10Effect", "DispersionPos10Effect"),
-    "soft_target": ("DamagePos15Effect", "FlatnessUp10Effect", "ProjectileSpeedPos10Effect", "BPRUE_Shared_ArmorPiercingPenalty20Effect"),
-    "armor_piercing": ("ArmorPiercingPos25Effect", "CoverPiercingPos20Effect", "BPRUE_Shared_DamagePenalty10Effect"),
+    "controlled_action": ("BPRUE_Shared_FireIntervalPenalty10Effect", "RecoilPos5Effect", "DispersionPos15Effect"),
+    "soft_target": ("BPRUE_Shared_BleedingChancePos10Effect", "BPRUE_Shared_CoverPiercingPenalty10Effect"),
+    "armor_piercing": ("CoverPiercingPos20Effect", "BPRUE_Shared_DamagePenalty10Effect"),
     "hardened_components": ("DurabilityPos20Effect", "BPRUE_Shared_WeightPenalty5Effect"),
     "lightweight_components": ("BPRUE_Shared_WeightDown12Effect", "BPRUE_Shared_DurabilityPenalty15Effect", "BPRUE_Shared_AimingTimePos8Effect"),
     "cqb_configuration": ("AimingTimePos15Effect", "DispersionPos10Effect", "BPRUE_Shared_FlatnessPenalty10Effect"),
     "range_configuration": ("FlatnessUp15Effect", "DispersionPos10Effect", "BPRUE_Shared_AimingTimePenalty10Effect"),
+}
+
+# In-place balancing: preserve upgrade SIDs and blocking relations across saves.
+# AR and Sniper/DMR effect bundles and descriptions can differ from shared defaults.
+CLASS_EFFECT_OVERRIDES = {
+    "assault_rifle": {
+        "precision_tuning": ("FlatnessUp10Effect", "BPRUE_Shared_DropOffLengthPos5Effect", "BPRUE_Shared_RecoilPenalty8Effect"),
+        "high_cyclic_system": ("BPRUE_Shared_FireIntervalNeg8Effect", "DispersionPos10Effect", "BPRUE_Shared_RecoilPenalty10Effect", "BPRUE_Shared_DurabilityPerShotPenalty8Effect"),
+        "controlled_action": ("BPRUE_Shared_FireIntervalPenalty10Effect", "DispersionPos15Effect", "ShotRecoveryPos10Effect"),
+    },
+    "sniper": {
+        "range_configuration": ("FlatnessUp15Effect", "DistanceDropOffLengthPos10Effect", "BPRUE_Shared_AimingTimePenalty10Effect"),
+        "cqb_configuration": ("AimingTimePos15Effect", "DispersionPos10Effect", "BPRUE_Shared_FlatnessPenalty10Effect", "BPRUE_Shared_Sniper_ShotRecoveryPenalty10Effect"),
+        "precision_tuning": ("FlatnessUp10Effect", "DistanceDropOffLengthPos10Effect", "BPRUE_Shared_RecoilPenalty8Effect"),
+    },
 }
 
 # IMPORTANT: layout group names are deliberately unique. Existing class-specific
@@ -68,11 +83,11 @@ def build_shared_specializations(*, families: dict, class_key: str, weapon_class
                     group=group_name,
                     target_part=target,
                     text_sid=f"sid_bprue_shared_{key}_name",
-                    hint_sid=f"sid_bprue_shared_{key}_description",
+                    hint_sid=(f"sid_bprue_sniper_{key}_description" if class_key == "sniper" and key in CLASS_EFFECT_OVERRIDES["sniper"] else f"sid_bprue_ar_{key}_description" if class_key == "assault_rifle" and key == "precision_tuning" else f"sid_bprue_shared_{key}_description"),
                     image=image_for_family(family),
                     icon=icon,
                     cost=round(base_cost * scale),
-                    effects=MODULE_EFFECTS[key],
+                    effects=CLASS_EFFECT_OVERRIDES.get(class_key, {}).get(key, MODULE_EFFECTS[key]),
                     blocking_sids=tuple(s for s in group_sids if s != current),
                     vertical_position=vertical,
                     template_sid=template_sid,
@@ -89,14 +104,19 @@ def render_shared_effects() -> str:
         ("BPRUE_Shared_WeightDown12Effect", "WeaponItemWeight", "-12%", "Positive", "bprue_weight"),
         ("BPRUE_Shared_DispersionPenalty5Effect", "Dispersion", "5%", "Negative", "bprue_accuracy"),
         ("BPRUE_Shared_FireIntervalNeg12Effect", "FireInterval", "-12%", "Positive", "bprue_fire_rate"),
+        ("BPRUE_Shared_FireIntervalNeg8Effect", "FireInterval", "-8%", "Positive", "bprue_fire_rate"),
+        ("BPRUE_Shared_ShotRecoveryPos15Effect", "ShotRecovery", "15%", "Positive", "bprue_recoil_recovery"),
+        ("BPRUE_Shared_DropOffLengthPos5Effect", "DistanceDropOffLength", "5%", "Positive", "weapon_flatness"),
         ("BPRUE_Shared_FireIntervalPenalty10Effect", "FireInterval", "10%", "Negative", "bprue_fire_rate"),
         ("BPRUE_Shared_DurabilityPerShotPenalty8Effect", "DurabilityPerShot", "8%", "Negative", "bprue_weapon_wear"),
-        ("BPRUE_Shared_ArmorPiercingPenalty20Effect", "ArmorPiercing", "-20%", "Negative", "bprue_armor_piercing"),
+        ("BPRUE_Shared_BleedingChancePos10Effect", "BleedingChancePerShot", "10%", "Positive", "bprue_bleeding_chance"),
+        ("BPRUE_Shared_CoverPiercingPenalty10Effect", "CoverPiercing", "-10%", "Negative", "bprue_cover_piercing"),
         ("BPRUE_Shared_DamagePenalty10Effect", "WeaponDamage", "-10%", "Negative", "bprue_damage"),
         ("BPRUE_Shared_DurabilityPenalty15Effect", "Durability", "-15%", "Negative", "bprue_durability"),
         ("BPRUE_Shared_AimingTimePos8Effect", "AimingTime", "-8%", "Positive", "bprue_aiming_speed"),
         ("BPRUE_Shared_AimingTimePenalty10Effect", "AimingTime", "10%", "Negative", "bprue_aiming_speed"),
         ("BPRUE_Shared_FlatnessPenalty10Effect", "EffectiveFireDistance", "-10%", "Negative", "bprue_effective_range"),
+        ("BPRUE_Shared_Sniper_ShotRecoveryPenalty10Effect", "ShotRecovery", "-10%", "Negative", "bprue_recoil_recovery"),
     ]
     lines = ["// AUTO-GENERATED - shared specialization effects", ""]
     for sid, effect_type, value, beneficial, loc in defs:

@@ -39,7 +39,7 @@
     "Veteran": {
       "content_pack": "PreOrder",
       "general_setup_sid": "Gun_Veteran_AR_GS",
-      "class": "AssaultRifles",
+      "class": "Snipers",
       "base_family": "Gvintar"
     },
     "Margach": {

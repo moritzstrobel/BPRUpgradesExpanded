@@ -59,8 +59,8 @@
           "display_name": "Controlled Action",
           "effects": [
             {"stat": "fire_rate", "value_percent": -10},
-            {"stat": "recoil", "value_percent": 10},
-            {"stat": "dispersion", "value_percent": 8}
+            {"stat": "recoil", "value_percent": 5},
+            {"stat": "dispersion", "value_percent": 15}
           ],
           "identity": "Slower cycling in exchange for controllability and precision."
         }
@@ -71,21 +71,18 @@
         "soft_target": {
           "display_name": "Soft-Target Module",
           "effects": [
-            {"effect_sid": "DamagePos15Effect", "stat": "weapon_damage", "value_percent": 15},
-            {"effect_sid": "FlatnessUp10Effect", "stat": "effective_fire_distance", "value_percent": 10},
-            {"effect_sid": "ProjectileSpeedPos10Effect", "stat": "projectile_velocity", "value_percent": 10},
-            {"stat": "armor_piercing", "value_percent": -20}
+            {"stat": "bleeding_chance_per_shot", "value_percent": 10},
+            {"stat": "cover_piercing", "value_percent": -10}
           ],
-          "identity": "High terminal performance and flatter, faster projectiles against lightly protected targets, sacrificing armor penetration."
+          "identity": "Experimental wounding profile: improves bleeding chance with reduced cover penetration; engine percentage semantics require in-game validation."
         },
         "armor_piercing": {
-          "display_name": "Armor-Piercing Module",
+          "display_name": "Barrier Module",
           "effects": [
-            {"effect_sid": "ArmorPiercingPos25Effect", "stat": "armor_piercing", "value_percent": 25},
-            {"stat": "cover_piercing", "value_percent": 20},
+            {"effect_sid": "CoverPiercingPos20Effect", "stat": "cover_piercing", "value_percent": 20},
             {"stat": "weapon_damage", "value_percent": -10}
           ],
-          "identity": "Optimized for armor and cover penetration at the expense of raw terminal damage."
+          "identity": "Penetrates cover more effectively at the expense of raw damage, without changing armor penetration."
         }
       }
     },
@@ -131,6 +128,16 @@
           "identity": "Long-range ballistic and precision tuning at the cost of slower handling."
         }
       }
+    }
+  },
+  "class_effect_overrides": {
+    "assault_rifle": {
+      "precision_tuning": "Flatness +10%, damage drop-off length +5%, recoil control -8%"
+    },
+    "sniper": {
+      "range_configuration": "Flatness +15%, damage drop-off length +10%, aiming speed -10%",
+      "cqb_configuration": "Aiming speed +15%, dispersion +10%, flatness -10%, recoil recovery -10%",
+      "precision_tuning": "Flatness +10%, damage drop-off length +10%, recoil control -8%"
     }
   },
   "weapon_class_groups": {
