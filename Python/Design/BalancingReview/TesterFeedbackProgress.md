@@ -75,6 +75,7 @@ Barrel Hardening allows the use of all ammunition types, even when the caliber c
 These modules should either be made incompatible with Barrel Hardening or removed altogether. I would recommend removing them, for the reasons explained in point 5.
 
 > **OPEN — deferred:** Barrel Hardening can reportedly bypass ammunition restrictions. Installation order, reload persistence and effect stacking still need technical verification before a narrow fix is chosen.  
+
 2. DMR/SNIPERS  
    
    
@@ -232,6 +233,7 @@ Stabilized Stock : OP. It should be removed. It is simply too good overall, rega
 Marksman Stock : OK in principe, but needs a slight rework. It should focus on Aimed Stability and Aimed Accuracy, while keeping Aiming Speed as its penalty.
 
 > **ADDRESSED (source only)** — Already provides +20% sway stability on both axes, +15% maximum-dispersion accuracy and −15% aiming speed. Review considered complete pending gameplay testing.  
+
 Hardened Components : OK in principle (types of bonus/malus are fine).  
 Lightweight Components : OK in principle (types of bonus/malus are fine).  
 High-Speed Operation : OK in principle (types of bonus/malus are fine).  
