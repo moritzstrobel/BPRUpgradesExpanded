@@ -17,6 +17,7 @@ This file tracks **implemented changes**, not planned features. Entries under **
 - **Assault rifles – Reinforced Reload:** Removed the 10% faster reload bonus; reduced weapon wear per shot and slower firing cycle remain.
 - **Sniper / DMR – Match Barrel:** Reduced dispersion-improvement bonus from +25% to +15%.
 - **Sniper / DMR – Heavy Barrel:** Reduced shot-recovery bonus from +20% to +10%.
+- **SMGs / Assault rifles – Controlled Action (shared):** Shifted the existing effect bundle from +10% recoil control / +10% dispersion improvement to +5% recoil control / +15% dispersion improvement. The 10% slower firing cycle remains; High-Cyclic System is unchanged. Updated the shared module catalog to match the generator.
 - Updated affected module descriptions in English, Russian and Simplified Chinese.
 
 ### Development notes
