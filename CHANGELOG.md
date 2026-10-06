@@ -7,6 +7,7 @@ This file tracks **implemented changes**, not planned features. Entries under **
 ## [Unreleased]
 
 ### Changed
+- **Sniper/DMR caliber specializations (generator only):** AP and Supersonic conversions now inherit the complete directional Default ballistic profile while retaining their own ammo-type restrictions and mutual blocking. AP adds +5% armor penetration and -5% damage; Supersonic adds +5% projectile speed and +5% wear per shot (without redundant flatness buffs). Updated all six caliber-conversion descriptions (EN/RU/ZH). Generated CFGs and in-game tests pending.
 - **Sniper/DMR Default caliber conversions:** Reworked 7.62x54R to .308 (+10% velocity, +10% flatness, +15% damage drop-off length, +5% recoil control) and .308 to 7.62x54R (-10% velocity, -10% flatness, -15% drop-off length, 10% recoil penalty, 10% wear per shot penalty). Removed Default damage/AP modifiers; AP and Supersonic unchanged. Generator output and gameplay validation are separate steps.
 - **Sniper / DMR – Field Marksman:** Replaced the +10% shot-recovery bonus with a 10% aiming-time penalty to introduce a meaningful trade-off.
 - **Sniper / DMR – Adjustable Stock:** Removed the +10% recoil-control bonus. Aiming stability and aimed movement benefits remain.
