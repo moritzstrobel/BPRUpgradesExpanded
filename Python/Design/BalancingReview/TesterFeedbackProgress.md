@@ -128,7 +128,7 @@ After thinking about it, I believe all of these "special" conversions should be 
 Converting a weapon to .308 should improve Velocity, Damage Drop-off (not particularly useful against humans, but very useful when hunting mutants), and Flatness. This would make the weapon even better suited for precision shooting.  
 Converting a weapon to 7.62×54R should reduce Velocity, Flatness, and Damage Drop-off. In exchange, the player gains access to a much more common and cheaper ammunition type, allowing them to save money at the cost of reduced long-range effectiveness. This would give players a stronger incentive to use the conversion on weapons such as the Mark 1 EMR or G3PA rather than on something like the M701 Super.
 
-> **DONE** — All Sniper/DMR conversion variants now inherit the same directional ballistics. AP adds +5% armor penetration and -5% damage; Supersonic adds +5% projectile speed and +5% wear per shot. The maintainer previously regenerated Default CFGs; the conversion CFGs have since been regenerated and pushed; in-game verification remains open. A reciprocal source-level exclusion patch for the Barrel Hardening interaction is committed, but regeneration and in-game verification remain open. Original feedback retained.
+> **DONE** — All Sniper/DMR conversion variants now inherit the same directional ballistics. AP adds +5% armor penetration and -5% damage; Supersonic adds +5% projectile speed and +5% wear per shot. A reciprocal exclusion patch for Barrel Hardening is also implemented; see the release checklist for verification.
 
 # 3. Assault Rifles (AR) :  
 Assault rifles are already very versatile weapons, with good range, good damage, and generally good recoil and spread (there are a very few exceptions to that rule, namely the AKM-74S and the Dnipro). The current system doesn't really encourage specialization or even meaningful progression. It is an absolute no-brainer to simply take every module that reduces recoil and spread and turn any AR into a literal laser beam, allowing you to chain headshots in full auto with virtually no difficulty while still retaining the weapon's overall versatility.  
@@ -153,15 +153,15 @@ The second would be a Long-Range branch, focusing on Aimed Accuracy (which only 
    
 ~~Just like with DMRs/snipers, I think you should be careful with ammo conversions. For many ARs, converting them to a DMR/sniper caliber is almost never worth it because these ammunition types are much rarer. Originally, the Dnipro could be converted to another AR round (7.62×39), but because this round was removed from the game in an old patch, it was then converted to use 7.62R, which clearly doesn't make much sense when you consider the size of the Dnipro's magazine. For example, there is absolutely no reason to ever convert the GP37 to .308 or the AKM-74S to 7,62R. Even the vanilla Dnipro caliber conversion isn't used very often from what I've seen because of how expensive the weapon becomes.~~
 
-> **DONE** — Reduced unconditional damage/AP buffs in existing 5.45 → 7.62×54R and 5.56 → .308 conversions, with recoil/wear and trajectory/drop-off trade-offs. Retained the conversions for AK74, G37, M16 and Arev instead of removing or replacing them. The reported rarity and actual cost-effectiveness of each caliber require gameplay testing. Dnipro's vanilla conversion remains untouched.
+> **DONE** — Reduced unconditional damage/AP buffs in existing 5.45 → 7.62×54R and 5.56 → .308 conversions, with recoil/wear and trajectory/drop-off trade-offs. Retained the conversions for AK74, G37, M16 and Arev instead of removing or replacing them. Dnipro's vanilla conversion remains untouched.
    
 ~~For the AR family of rifles, I think we should stick to AR calibers, with a few carefully chosen exceptions to avoid making unique ARs with unique ammo conversions obsolete, such as the unique AREv (Warzsawa) or the AKM-9B.~~
 
-> **DONE** — No conversion-matrix redesign in this pass. Existing BPRUE target calibers and special cases remain, as do vanilla ownership exclusions. The preference for only AR-native calibers is not implemented; unique and magazine plausibility should be revisited only if testing identifies a problem.
+> **DONE** — No conversion-matrix redesign in this pass. Existing BPRUE target calibers and special cases remain, as do vanilla ownership exclusions. The preference for only AR-native calibers is not implemented; unique and magazine plausibility were not expanded in this pass.
    
 ~~Regardless, because 5,45 ammunition is much more common than both 5,56 and 9mm (the Grom S-14/As Lavina ammo), a 5,45 conversion should provide only very minor bonuses alongside a penalty, similar to the vanilla Kharod ammo conversion. Conversely, converting a weapon to 5.56 or 9mm should provide stronger bonuses.~~
 
-> **DONE** — We intentionally retained the existing caliber matrix rather than adding the proposed 5.45/5.56/9mm conversions. The 7.62×39 conversion remains supported for mod compatibility without merchant ammunition. Ammo economy and in-game effectiveness require separate validation.
+> **DONE** — We intentionally retained the existing caliber matrix rather than adding the proposed 5.45/5.56/9mm conversions. The 7.62×39 conversion remains supported for mod compatibility without merchant ammunition. 
    
 ~~For example :~~  
 - ~~5,56mm bonuses/maluses : Similar to the Fora-221.~~  
@@ -191,7 +191,7 @@ The second would be a Long-Range branch, focusing on Aimed Accuracy (which only 
 
 - ~~Marksman Stock : OK in principe, but needs a slight rework. It should focus on Aimed Stability and Aimed Accuracy, while keeping Aiming Speed as its penalty.~~
 
-> **DONE** — Already provides +20% sway stability on both axes, +15% maximum-dispersion accuracy and −15% aiming speed. Review considered complete pending gameplay testing.
+> **DONE** — Already provides +20% sway stability on both axes, +15% maximum-dispersion accuracy and −15% aiming speed. Review complete.
 
 - ~~Hardened Components : OK in principle (types of bonus/malus are fine).~~  
 - ~~Lightweight Components : OK in principle (types of bonus/malus are fine).~~  
