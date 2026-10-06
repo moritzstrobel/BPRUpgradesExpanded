@@ -7,6 +7,7 @@ This file tracks **implemented changes**, not planned features. Entries under **
 ## [Unreleased]
 
 ### Changed
+- **Sniper caliber conversions vs. Vanilla ammo upgrades:** Added reciprocal blocking between Default/AP/Supersonic caliber conversions and the conflicting terminal Vanilla barrel ammunition upgrades for SVD (`GunSVDM_Upgrade_Barrel_3_2`), SVU (`GunSVU_Upgrade_Barrel_3_2`), Three-Line (`GunThreeLine_Upgrade_Barrel_3`) and M701 (`GunM701_Upgrade_Barrel_3_2`). Vanilla upgrades are extended through a separate generated `bpatch` file rather than modifying the original Vanilla definitions; existing Vanilla blocking entries are intended to remain intact. BPRUE conversion SIDs are unchanged. **Source and reciprocal patch file committed; full generator regeneration, CFG merge behavior, both installation orders and in-game ammo restrictions remain unverified.**
 - **Shared ballistic modules:** Reworked Soft-Target into an experimental bleeding-chance profile (+10% BleedingChancePerShot, −10% CoverPiercing) and renamed Armor-Piercing to Barrier Module (+20% CoverPiercing, −10% weapon damage). Both no longer modify ArmorPiercing; upgrade SIDs and mutual blocking remain unchanged. Updated catalog and EN/RU/ZH localization. **Bleeding percentage semantics are unverified** (relative/additive/absolute), so CFG regeneration and in-game balancing validation are required before release.
 - **DMR/Sniper module profiles:** Range Configuration, CQB Configuration and Precision Tuning now use sniper-specific effect bundles. Existing upgrade SIDs and blocking remain intact; regeneration and in-game save verification pending.
 - **AR fire-control specializations:** Burst replaces automatic with semi-auto + burst; Precision retains semi-auto only, trades former damage/AP bonuses for +15% maximum-dispersion accuracy, +10% recoil recovery and -10% aiming movement. Localization updated; regeneration and in-game verification pending.
@@ -37,7 +38,7 @@ This file tracks **implemented changes**, not planned features. Entries under **
 - Updated affected module descriptions in English, Russian and Simplified Chinese.
 
 ### Development notes
-- Generator sources and localization definitions have been updated, and the maintainer has regenerated and pushed CFGs. **In-game behavior has not yet been validated.**
+- Earlier balancing generator/localization changes were regenerated and pushed by the maintainer; the newer Vanilla ammo-exclusion change is committed in generator sources and a dedicated patch file, but the complete unified CFG regeneration is still pending. **In-game behavior has not yet been validated.**
 - Upgrade UI issues and broader balancing ideas remain outside this changelog until actual changes are implemented.
 - 7.62×39 (`A762`) conversions and ammunition behavior remain unchanged.
 
