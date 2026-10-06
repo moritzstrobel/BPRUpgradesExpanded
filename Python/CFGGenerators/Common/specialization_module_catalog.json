@@ -133,6 +133,13 @@
       }
     }
   },
+  "class_effect_overrides": {
+    "sniper": {
+      "range_configuration": "Flatness +15%, damage drop-off length +10%, aiming speed -10%",
+      "cqb_configuration": "Aiming speed +15%, dispersion +10%, flatness -10%, recoil recovery -10%",
+      "precision_tuning": "Flatness +10%, damage drop-off length +10%, recoil control -8%"
+    }
+  },
   "weapon_class_groups": {
     "pistol": ["handling", "recoil_precision", "ballistics"],
     "smg": ["handling", "action", "ballistics", "range_profile"],
