@@ -1,6 +1,6 @@
-# Original tester feedback — annotated progress
+# Original feedback — annotated progress
 
-> Source: `balacingBaseOverview.txt` (verbatim copy alongside this file). Original wording and ordering preserved below. Strikethrough means **a balancing response has been implemented in generator sources**, **not** that the tester's exact solution was accepted or verified in game. Other addressed-but-incomplete items carry `PARTIAL`; untouched points stay open. This is not a test sign-off.
+> Source: `balacingBaseOverview.txt` (verbatim copy alongside this file). Original wording and ordering preserved below. Strikethrough means **a balancing response has been implemented in generator sources**, **not** that the exact proposed solution was accepted or verified in game. Other addressed-but-incomplete items carry `PARTIAL`; untouched points stay open. This is not a test sign-off.
 
 Here's a quick overview :  
    
@@ -9,7 +9,6 @@ DMRs / Snipers
 Assault Rifles (ARs)  
 I haven't been able to test much with the SMGs / Pistols yet 😕
 
-> **PARTIAL — SMG conversion review (generator only):** M10, Bucket and Zubr Default/AP/Expanding variants now share complete weapon-specific baseline profiles; AP adds +5% armor penetration, and Expanding relies on ammo modifiers. This is a proactive balancing pass, **not** a verified resolution of detailed tester feedback (the tester explicitly had limited SMG testing). Generated CFGs, ammo economy and in-game behavior still require validation.  
    
    
    
@@ -54,20 +53,26 @@ d) Bugs and Functionality Checks
    
 - Modules that change the caliber to 7.62×39 (not to be confused with 7.62×54R) : These are essentially traps. This caliber was removed from the game in a very old patch and is no longer available. The mod does not reintroduce it either.  
    
-Recommendation : Either remove these modules or add this caliber to merchants' inventories. I would strongly recommend removing them since they cannot be find on NPCs (unless the player use another mod that reintroduces it).  
+Recommendation : Either remove these modules or add this caliber to merchants' inventories. I would strongly recommend removing them since they cannot be find on NPCs (unless the player use another mod that reintroduces it).
+
+> **DECIDED — retained:** 7.62×39 support remains for compatibility with other mods. No merchant injection is planned; the missing vanilla ammunition supply is a known limitation.  
    
 - Caliber conversion modules for sniper rifles (SVD, SVU, Three-Line Rifle and M701 Super) : These have some strange interactions with the vanilla Barrel Hardening upgrade, which allows the use of standard ammunition instead of only high-quality ammunition.  
    
 Barrel Hardening allows the use of all ammunition types, even when the caliber conversion module is supposed to restrict ammunition choices to AP or Supersonic rounds, depending on the module.  
    
-These modules should either be made incompatible with Barrel Hardening or removed altogether. I would recommend removing them, for the reasons explained in point 5.  
+These modules should either be made incompatible with Barrel Hardening or removed altogether. I would recommend removing them, for the reasons explained in point 5.
+
+> **OPEN — deferred:** Barrel Hardening can reportedly bypass ammunition restrictions. Installation order, reload persistence and effect stacking still need technical verification before a narrow fix is chosen.  
 2. DMR/SNIPERS  
    
    
    
 a) VS Vintar  
    
-In the current version of your mod, the VS Vintar is treated as an Assault Rifle and not a DMR/Sniper. The AS Lavina is explicitly an assault version of the VS Vintar and I think the VS Vintar should instead benefits from the DMR/Snipers modules.  
+In the current version of your mod, the VS Vintar is treated as an Assault Rifle and not a DMR/Sniper. The AS Lavina is explicitly an assault version of the VS Vintar and I think the VS Vintar should instead benefits from the DMR/Snipers modules.
+
+> **OPEN — classification unchanged:** VS Vintar remains in the AR configuration; moving it to DMR/Sniper modules was not part of the conversion balancing pass.  
    
    
    
@@ -144,10 +149,12 @@ After thinking about it, I believe all of these "special" conversions should be 
    
 Recommendation :  
    
-> **PARTIAL (generator updated; in-game unverified)** — All Sniper/DMR conversion variants now inherit the same directional ballistics. AP adds +5% armor penetration and -5% damage; Supersonic adds +5% projectile speed and +5% wear per shot. The maintainer previously regenerated Default CFGs; the latest specialization changes still need regeneration and verification. The Barrel Hardening restriction issue remains open. Original tester feedback retained.
 
 Converting a weapon to .308 should improve Velocity, Damage Drop-off (not particularly useful against humans, but very useful when hunting mutants), and Flatness. This would make the weapon even better suited for precision shooting.  
-Converting a weapon to 7.62×54R should reduce Velocity, Flatness, and Damage Drop-off. In exchange, the player gains access to a much more common and cheaper ammunition type, allowing them to save money at the cost of reduced long-range effectiveness. This would give players a stronger incentive to use the conversion on weapons such as the Mark 1 EMR or G3PA rather than on something like the M701 Super.  
+Converting a weapon to 7.62×54R should reduce Velocity, Flatness, and Damage Drop-off. In exchange, the player gains access to a much more common and cheaper ammunition type, allowing them to save money at the cost of reduced long-range effectiveness. This would give players a stronger incentive to use the conversion on weapons such as the Mark 1 EMR or G3PA rather than on something like the M701 Super.
+> **PARTIAL (generator updated; in-game unverified)** — All Sniper/DMR conversion variants now inherit the same directional ballistics. AP adds +5% armor penetration and -5% damage; Supersonic adds +5% projectile speed and +5% wear per shot. The maintainer previously regenerated Default CFGs; the conversion CFGs have since been regenerated and pushed; in-game verification remains open. The Barrel Hardening restriction issue remains open. Original feedback retained.
+  
+
 3. Assault Rifles (AR) :  
 Assault rifles are already very versatile weapons, with good range, good damage, and generally good recoil and spread (there are a very few exceptions to that rule, namely the AKM-74S and the Dnipro). The current system doesn't really encourage specialization or even meaningful progression. It is an absolute no-brainer to simply take every module that reduces recoil and spread and turn any AR into a literal laser beam, allowing you to chain headshots in full auto with virtually no difficulty while still retaining the weapon's overall versatility.  
    
@@ -160,7 +167,9 @@ The second would be a Long-Range branch, focusing on Aimed Accuracy (which only 
 a) Firing mode modules  
    
 Precision Fire Control : In my opinion, this is a rather pointless module. ARs already have fairly low recoil when firing in semi-auto, and forcing an AR to fire exclusively in semi-auto isn't particularly interesting unless it also comes with HUGE damage boosts, like the unique Clusterf*#@ and Jagerblick ARs. However, giving the module such massive damage boosts would reduce the uniqueness of those two weapons. I think this module should therefore be removed.  
-Burst Fire Control : This is more interesting, but because it gives access to full-auto, it still isn't particularly interesting as a specialization option. In my opinion, Burst Fire should instead replace Full Auto, leaving the weapon with only Semi-Auto and Burst Fire. This is the one exception where I wouldn't add an additional penalty : the penalty is already built into the loss of Full Auto.  
+Burst Fire Control : This is more interesting, but because it gives access to full-auto, it still isn't particularly interesting as a specialization option. In my opinion, Burst Fire should instead replace Full Auto, leaving the weapon with only Semi-Auto and Burst Fire. This is the one exception where I wouldn't add an additional penalty : the penalty is already built into the loss of Full Auto.
+
+> **OPEN — unchanged:** The proposed removal of Precision Fire Control and replacement of Full Auto with Burst Fire have not been implemented.  
    
    
 b) Caliber conversion modules  
@@ -175,7 +184,7 @@ Just like with DMRs/snipers, I think you should be careful with ammo conversions
    
 For the AR family of rifles, I think we should stick to AR calibers, with a few carefully chosen exceptions to avoid making unique ARs with unique ammo conversions obsolete, such as the unique AREv (Warzsawa) or the AKM-9B.
 
-> **DECIDED — different scope:** No conversion-matrix redesign in this pass. Existing BPRUE target calibers and special cases remain, as do vanilla ownership exclusions. The tester's preference for only AR-native calibers is not implemented; unique and magazine plausibility should be revisited only if testing identifies a problem.  
+> **DECIDED — different scope:** No conversion-matrix redesign in this pass. Existing BPRUE target calibers and special cases remain, as do vanilla ownership exclusions. The preference for only AR-native calibers is not implemented; unique and magazine plausibility should be revisited only if testing identifies a problem.  
    
 Regardless, because 5,45 ammunition is much more common than both 5,56 and 9mm (the Grom S-14/As Lavina ammo), a 5,45 conversion should provide only very minor bonuses alongside a penalty, similar to the vanilla Kharod ammo conversion. Conversely, converting a weapon to 5.56 or 9mm should provide stronger bonuses.
 
@@ -207,7 +216,7 @@ d) Modules
 Lightweight Stock : OK.  
 Stabilized Stock : OP. It should be removed. It is simply too good overall, regardless of what you want the weapon to specialize in, and clearly overshadows all the other options.  
 
-> **PARTIAL** — AR Stabilized Stock recovery reduced; tester asked for removal, which was not adopted.
+> **PARTIAL** — AR Stabilized Stock recovery reduced; removal was proposed, which was not adopted.
 
 Marksman Stock : OK in principe, but needs a slight rework. It should focus on Aimed Stability and Aimed Accuracy, while keeping Aiming Speed as its penalty.  
 Hardened Components : OK in principle (types of bonus/malus are fine).  
@@ -224,9 +233,10 @@ Recoil Control : OK.
 Precision Tuning : Doesn't really improve precision in a meaningful way. In my opinion, it should increase Flatness or reduce Damage Drop-off instead of improving Spread.  
 ~~Competition Reload System : OK in principe (I would just switch the Recoil malus to a heavy Spread malus).~~  
 
-> **ADDRESSED (source only)** — Competition Reload recoil penalty replaced by dispersion penalty; value chosen is 5%, not the tester's suggested heavy penalty.
+> **ADDRESSED (source only)** — Competition Reload recoil penalty replaced by dispersion penalty; value chosen is 5%, not the proposed heavy penalty.
 
 Reinforced Feed System : OK in principle (I would remove the bonus to Reload Speed however and switch the current bonus to Wear & Tear since the bonus to external wear & tear is straight up inferior since it doesn't always apply).  
 
 > **PARTIAL** — Reinforced Reload speed bonus removed; wear-related behavior still needs testing.
 
+> **PARTIAL — SMG conversion review (generator only):** M10, Bucket and Zubr Default/AP/Expanding variants now share complete weapon-specific baseline profiles; AP adds +5% armor penetration, and Expanding relies on ammo modifiers. This is a proactive balancing pass, **not** a verified resolution of detailed tester feedback (the tester explicitly had limited SMG testing). Generated CFGs, ammo economy and in-game behavior still require validation.
