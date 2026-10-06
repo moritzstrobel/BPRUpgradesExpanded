@@ -2,6 +2,17 @@
 
 > Source: `balacingBaseOverview.txt` (verbatim copy alongside this file). Original wording and ordering preserved below. Strikethrough means **a balancing response has been implemented in generator sources**, **not** that the exact proposed solution was accepted or verified in game. Other addressed-but-incomplete items carry `PARTIAL`; untouched points stay open. This is not a test sign-off.
 
+## Remaining non-technical design / balancing decisions (2026-10-06)
+
+The original feedback below is preserved. An alternative balancing decision is not automatically an open task; source-level changes still need in-game validation.
+
+- **OPEN — cross-weapon:** Decide whether standalone Armor-Piercing / Soft-Target modules should remain, be removed or become upgrades; separately review repair-cost scaling via `RepairCostModifier`.
+- **OPEN — DMR/Sniper:** VS Vintar classification; Range Configuration usefulness/removal; CQB Configuration recovery penalty; Precision Tuning's spread versus flatness/drop-off role.
+- **PARTIAL — DMR/Sniper:** Benchrest's overall role versus other modules; recoil has already been reduced. Other stock and barrel decisions are considered addressed or explicitly decided pending gameplay tests.
+- **OPEN — AR:** Tuned Gas System fire-rate bonus; Precision Tuning's spread versus flatness/drop-off role.
+- **PARTIAL — AR:** High-Cyclic / Controlled Action differentiation and the wider assault-versus-long-range branch concept. Stocks, reload modules and fire-mode decisions are considered handled at source level.
+- **DECIDED — conversions:** Retain the current caliber matrix and mutually exclusive specializations instead of implementing every alternative caliber proposal; ammo economy and runtime behavior remain validation topics, not unmade design decisions.
+
 Here's a quick overview :  
    
 General Feedback  
@@ -99,7 +110,7 @@ Lightweight Stock : OK.
 
 Precision Stock : OP. It provides 2 instances of improved Aiming Stability and should only improve Recoil Recovery instead of Recoil.  
 
-> **PARTIAL** — Precision Stock adjusted, but the tester's requested recoil-to-recovery replacement was not implemented.
+> **DECIDED (source updated)** — Precision Stock was rebalanced with +30% sway stability on both axes, +20% recoil control and −15% aiming speed. Replacing recoil control with recovery was not adopted. No further source change planned before gameplay testing.
 
 Hardened Components : OK in principle (types of bonus/malus are fine).  
 Lightweight Components : OK in principle (types of bonus/malus are fine).  
@@ -108,11 +119,11 @@ CQB Configuration : OK in principle. In my opinion, it should come with a Recoil
 Soft-Target Module and Armor-Piercing Module : Should be removed.  
 Benchrest Setup : Needs to be reworked overall, as it provides far too many benefits to all DMRs and sniper rifles, regardless of whether they are fully automatic or not.  
 
-> **PARTIAL** — Benchrest recoil reduced; comprehensive rework/stack test outstanding.
+> **PARTIAL — design review:** Benchrest recoil benefit was reduced to 10%; its overall specialization relative to other DMR options remains open. Effect stacking is a separate technical validation task.
 
 Like the Precision Stock, it provides 2 instances of improved Aiming Stability. It should also improve Recoil Recovery instead of Recoil. The penalties are fine as they are.  
 
-> **PARTIAL** — Sway-axis semantics and suggested recoil-to-recovery swap still require evaluation.
+> **DECIDED (source updated)** — The current Benchrest profile keeps stability on both sway axes and recoil control rather than swapping to recovery. No additional source change planned until the broader Benchrest design review.
 
 Snapshooter : OK.  
 ~~Field Marksman : OP. In my opinion, it needs to be nerfed or removed altogether. It is essentially a straight buff and doesn't really offer any meaningful specialization, so I would personally remove it.~~  
@@ -124,11 +135,11 @@ Precision Tuning : Doesn't really improve precision in a meaningful way. In my o
 High-Velocity Ballistics : OK in principle (types of bonus/malus are fine).  
 Match Barrel : OP with current values, but OK in principle. It should come with a Durability penalty imo.  
 
-> **PARTIAL** — Match Barrel dispersion bonus reduced; requested durability downside not implemented.
+> **DECIDED (source updated)** — Match Barrel dispersion benefit reduced to 15%; aiming-time penalty retained at 10%. A durability downside was not adopted. Gameplay validation remains.
 
 Heavy Barrel : OP with current values, but OK in principle. It should come with a Readiness penalty imo.  
 
-> **PARTIAL** — Heavy Barrel recovery reduced; requested readiness penalty not implemented.
+> **DECIDED (source updated)** — Heavy Barrel recovery reduced to 10%; weight and aiming-time penalties remain. An additional readiness penalty was not adopted. Gameplay validation remains.
 
 Rapid Action : OK.  
 Precision Action : OK in principle (types of bonus/malus are fine).  
@@ -216,16 +227,18 @@ d) Modules
 Lightweight Stock : OK.  
 Stabilized Stock : OP. It should be removed. It is simply too good overall, regardless of what you want the weapon to specialize in, and clearly overshadows all the other options.  
 
-> **PARTIAL** — AR Stabilized Stock recovery reduced; removal was proposed, which was not adopted.
+> **DECIDED (source updated)** — Stabilized Stock was rebalanced rather than removed: +15% recoil control, +10% recoil recovery, −10% aiming speed. No further source change planned before gameplay testing.
 
-Marksman Stock : OK in principe, but needs a slight rework. It should focus on Aimed Stability and Aimed Accuracy, while keeping Aiming Speed as its penalty.  
+Marksman Stock : OK in principe, but needs a slight rework. It should focus on Aimed Stability and Aimed Accuracy, while keeping Aiming Speed as its penalty.
+
+> **ADDRESSED (source only)** — Already provides +20% sway stability on both axes, +15% maximum-dispersion accuracy and −15% aiming speed. Review considered complete pending gameplay testing.  
 Hardened Components : OK in principle (types of bonus/malus are fine).  
 Lightweight Components : OK in principle (types of bonus/malus are fine).  
 High-Speed Operation : OK in principle (types of bonus/malus are fine).  
 Tuned Gas System : OK in principle but I would remove the increased Fire Rate. The module is already very, very good without it.  
 High-Cyclic System and Controlled Action : These are completely redundant with High-Speed Operation and Tuned Gas System. They should be entirely reworked and renamed to match the two branches described above, if you decide to go in that direction. For example :  
 
-> **PARTIAL** — Shared Controlled Action tuned toward precision; wholesale redesign and naming request not implemented.
+> **PARTIAL — design choice remains:** Controlled Action was tuned toward precision, but the distinction from High-Cyclic System and the suggested broader assault/long-range branch redesign have not been fully evaluated.
 
 Quality Pencil Barrel (Assault): +Readiness, +Slowing Spread Increase, -Recoil Recovery.  
 Reinforced Heavy Barrel (Long Range): +Aimed Accuracy, +Flatness, +Damage Drop-off, -Aiming Speed, +Weight (more weight), -Speed while aiming.  
@@ -237,6 +250,6 @@ Precision Tuning : Doesn't really improve precision in a meaningful way. In my o
 
 Reinforced Feed System : OK in principle (I would remove the bonus to Reload Speed however and switch the current bonus to Wear & Tear since the bonus to external wear & tear is straight up inferior since it doesn't always apply).  
 
-> **PARTIAL** — Reinforced Reload speed bonus removed; wear-related behavior still needs testing.
+> **ADDRESSED (source only)** — Reinforced Feed no longer grants reload speed; its profile now uses +20% durability per shot and a 5% fire-interval penalty. Gameplay validation remains.
 
-> **PARTIAL — SMG conversion review (generator only):** M10, Bucket and Zubr Default/AP/Expanding variants now share complete weapon-specific baseline profiles; AP adds +5% armor penetration, and Expanding relies on ammo modifiers. This is a proactive balancing pass, **not** a verified resolution of detailed tester feedback (the tester explicitly had limited SMG testing). Generated CFGs, ammo economy and in-game behavior still require validation.
+> **PARTIAL — SMG conversion review (generator only):** M10, Bucket and Zubr Default/AP/Expanding variants now share complete weapon-specific baseline profiles; AP adds +5% armor penetration, and Expanding relies on ammo modifiers. This is a proactive balancing pass, **not** a verified resolution of detailed SMG feedback (the original feedback notes limited SMG testing). Generated CFGs, ammo economy and in-game behavior still require validation.
