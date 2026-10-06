@@ -24,6 +24,7 @@ from unique_weapon_modules import add_unique_modules, add_unique_signatures, ren
 from vanilla_upgrade_layout import DLC_ROOT, _direct_child, _direct_scalar, _indexed_children, _refkey, _sid, _top_level_blocks, render_vanilla_compaction_patch
 
 from CFGGenerators.AssaultRifles import generate_assault_rifle_upgrades as ar
+from CFGGenerators.Armor import generate_armor_upgrades as armor
 from CFGGenerators.MachineGuns import generate_machine_gun_upgrades as machine_gun
 from CFGGenerators.Pistols import generate_pistol_upgrades as pistol
 from CFGGenerators.Shotguns import generate_shotgun_upgrades as shotgun
@@ -46,6 +47,7 @@ WEAPON_PATH = CONTENT_ROOT / "GameLite/GameData/ItemPrototypes/WeaponPrototypes/
 CONVERSION_WEAPON_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/ItemPrototypes/WeaponPrototypes/BPRUE_WeaponPrototypes.cfg"
 NPC_PATH = CONTENT_ROOT / "GameLite/GameData/NPCPrototypes/NPCPrototypes_patch_BPRUE.cfg"
 VANILLA_COMPACTION_PATH = CONTENT_ROOT / "GameLite/GameData/UpgradePrototypes/UpgradePrototypes_patch_BPRUE.cfg"
+VANILLA_AMMO_BLOCK_PATH = CONTENT_ROOT / "GameLite/GameData/UpgradePrototypes/UpgradePrototypes_patch_BPRUE_AmmoExclusions.cfg"
 VANILLA_EFFECT_UI_PATH = CONTENT_ROOT / "GameLite/GameData/EffectPrototypes/EffectPrototypes_patch_BPRUE_UI.cfg"
 MACHINE_GUN_EFFECT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_MachineGunEffectPrototypes.cfg"
 SHARED_EFFECT_PATH = CONTENT_ROOT / "GameLite/ModGameData/BPRUpgradesExpanded/EffectPrototypes/BPRUE_SharedEffectPrototypes.cfg"
@@ -60,6 +62,8 @@ VANILLA_EFFECT_LOCALIZATION_OVERRIDES = {
     "RecoilDown15Effect": "bprue_recoil",
     "WeightDown15Effect": "bprue_weight",
     "DistanceDropOffLengthPos20Effect": "bprue_effective_range",
+    "DistanceDropOffLengthPos15Effect": "bprue_effective_range",
+    "FlatnessUp5Effect": "bprue_effective_range",
     "FlatnessUp10Effect": "bprue_effective_range",
     "FlatnessUp15Effect": "bprue_effective_range",
 }
@@ -228,6 +232,8 @@ def render_weapon_sections_patch(model, content_pack=None):
         lines = [f"{weapon_sid} : struct.begin {{bpatch}}", "   SectionSettings : struct.begin {bpatch}"]
         for entry, position, moved in changed:
             lines += [f"      [{entry['index']}] : struct.begin {{bpatch}}", "         SectionIsEnabled = true"]
+            if entry["target"] in ("EUpgradeTargetPartType::Barrel", "EUpgradeTargetPartType::Handguard"):
+                lines.append("         ModuleLineDirection = ELineDirection::Left")
             if moved: lines += [f"         // BPRUE hotspot moved from ({entry['origin'][0]:.6f}, {entry['origin'][1]:.6f}) for UI spacing", f"         LeftPosition = {position[0]:.6f}", f"         TopPosition = {position[1]:.6f}"]
             lines.append("      struct.end")
         lines += ["   struct.end", "struct.end", ""]; patches.extend(lines)
@@ -268,6 +274,7 @@ def render_conversion_weapon_prototypes(model):
                     continue
                 sections.append({
                     "index": _section_index(section),
+                    "target": target,
                     "enabled": (_direct_scalar(section, "SectionIsEnabled") or "").lower() == "true",
                     "origin": (left, top),
                 })
@@ -295,6 +302,8 @@ def render_conversion_weapon_prototypes(model):
                     f"      [{entry['index']}] : struct.begin {{bpatch}}",
                     "         SectionIsEnabled = true",
                 ]
+                if entry["target"] in ("EUpgradeTargetPartType::Barrel", "EUpgradeTargetPartType::Handguard"):
+                    lines.append("         ModuleLineDirection = ELineDirection::Left")
                 if moved:
                     lines += [
                         f"         // BPRUE hotspot moved from ({entry['origin'][0]:.6f}, {entry['origin'][1]:.6f}) for UI spacing",
@@ -332,7 +341,7 @@ def main():
     attachments = {sid: attachment_block(sid, data) for sid, data in CONVERSION_ATTACHMENTS.items()}
     upgrade_text = render_consolidated_upgrade_prototypes(model); setup_text = render_final_general_setup_patch(model, attachments); npc_text = render_technician_patch(model, dlc_models=dlc_models); weapon_text = render_weapon_sections_patch(model); conversion_weapon_text = render_conversion_weapon_prototypes(model)
     validate_rendered_outputs(model, upgrade_text, setup_text, npc_text)
-    write(UPGRADES_PATH, upgrade_text); write(GENERAL_SETUP_PATH, setup_text); write(WEAPON_PATH, weapon_text); write(CONVERSION_WEAPON_PATH, conversion_weapon_text); write(NPC_PATH, npc_text); write(VANILLA_COMPACTION_PATH, render_vanilla_compaction_patch())
+    write(UPGRADES_PATH, upgrade_text); write(GENERAL_SETUP_PATH, setup_text); write(WEAPON_PATH, weapon_text); write(CONVERSION_WEAPON_PATH, conversion_weapon_text); write(NPC_PATH, npc_text); write(VANILLA_COMPACTION_PATH, render_vanilla_compaction_patch()); write(VANILLA_AMMO_BLOCK_PATH, sniper.vanilla_ammo_blocking_patch(configs["sniper"]))
     write(VANILLA_EFFECT_UI_PATH, render_vanilla_effect_ui_patch()); _remove_obsolete_bprue_effect_ui_patch(); _remove_independent_dlc_output()
     _render_content_pack_outputs(dlc_models, DLC_OUTPUT_ROOT, signature_effects=True)
     _render_content_pack_outputs(edition_models, EDITIONS_OUTPUT_ROOT, signature_effects=False)
@@ -348,6 +357,8 @@ def main():
             edition_npc_text,
         )
     write(EDITIONS_NPC_PATH, edition_npc_text)
+    # Keep the optional Armor module in sync with the unified generation pass.
+    armor.main()
     write(ar.EFFECT_OUTPUT_PATH, ar.render_effect_patch(configs["ar"])); write(smg.EFFECT_OUTPUT_PATH, smg.render_effects()); write(shotgun.EFFECT_OUTPUT, shotgun.render_effects()); write(pistol.EFFECT_OUTPUT, pistol.render_effects()); write(sniper.EFFECT_OUTPUT, sniper.render_effects()); write(MACHINE_GUN_EFFECT_PATH, machine_gun.render_effects()); write(SHARED_EFFECT_PATH, render_shared_effects()); write(UNIQUE_SIGNATURE_EFFECT_PATH, render_unique_signature_effects())
     print(f"Validated and rendered {len(model.upgrades)} base/Unique upgrades plus {sum(len(m.upgrades) for m in dlc_models.values())} DLC upgrades plus {sum(len(m.upgrades) for m in edition_models.values())} Edition upgrades.")
 

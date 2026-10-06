@@ -57,16 +57,6 @@
       "bprue_caliber_conversion": false,
       "image": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/Dnipro/Barrel/Upgrade/T_Dnipro_upgr_1.T_Dnipro_upgr_1'"
     },
-    "Gvintar": {
-      "weapon_sid": "GunGvintar_ST",
-      "general_setup_sid": "GunGvintar_ST",
-      "prototype_prefix": "GunGvintar",
-      "base_caliber": "A939",
-      "image": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Assault/Gvintar/Barrel/Upgrade/T_Gvintar_upgr_1.T_Gvintar_upgr_1'",
-      "additional_caliber_conversions": [
-        "A762"
-      ]
-    },
     "Grim": {
       "weapon_sid": "GunGrim_ST",
       "general_setup_sid": "GunGrim_ST",

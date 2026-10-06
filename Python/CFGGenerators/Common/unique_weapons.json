@@ -20,7 +20,7 @@
     "Krivenko": {"general_setup_sid":"Gun_Krivenko_HG_GS","class":"Pistols","base_family":"UDP"},
     "Lummox": {"general_setup_sid":"Gun_Lummox_AR_GS","class":"AssaultRifles","base_family":"AK74"},
     "Lynx": {"general_setup_sid":"Gun_Lynx_SR_GS","class":"Snipers","base_family":"SVDM"},
-    "Merc": {"general_setup_sid":"Gun_Merc_AR_GS","class":"AssaultRifles","base_family":"Gvintar"},
+    "Merc": {"general_setup_sid":"Gun_Merc_AR_GS","class":"Snipers","base_family":"Gvintar"},
     "Partner": {"general_setup_sid":"Gun_Partner_SR_GS","class":"Snipers","base_family":"Mark"},
     "Predator": {"general_setup_sid":"Gun_Predator_SG_GS","class":"Shotguns","base_family":"M860"},
     "RatKiller": {"general_setup_sid":"Gun_RatKiller_SMG_GS","class":"SMGs","base_family":"Zubr"},

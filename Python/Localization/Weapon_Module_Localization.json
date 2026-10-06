@@ -92,9 +92,9 @@
     {
       "sid": "sid_bprue_pistol_stabilized_description",
       "languages": {
-        "English": "Improves recoil control and recovery at the cost of slower aiming.",
-        "Russian": "Улучшает контроль и восстановление отдачи ценой более медленного прицеливания.",
-        "ChineseSimplified": "提升后坐力控制与恢复，但瞄准速度变慢。"
+        "English": "Improves recoil control and reduces idle sway on both axes by 15%, at the cost of slower aiming.",
+        "Russian": "Улучшает контроль отдачи и уменьшает колебания прицела по обеим осям на 15% ценой более медленного прицеливания.",
+        "ChineseSimplified": "改善后坐力控制，并将两个方向的瞄准晃动降低 15%，但瞄准速度变慢。"
       }
     },
     {
@@ -348,9 +348,9 @@
     {
       "sid": "sid_bprue_sniper_match_barrel_description",
       "languages": {
-        "English": "A precision barrel tuned for tighter dispersion and consistent long-range accuracy.",
-        "Russian": "Высокоточный ствол, настроенный на меньший разброс и стабильную точность на дальней дистанции.",
-        "ChineseSimplified": "精准枪管，调校为更小的散布与稳定的远距离精度。"
+        "English": "A precision barrel tuned for tighter dispersion and consistent long-range accuracy, at the cost of aiming speed.",
+        "Russian": "Высокоточный ствол, уменьшающий разброс и повышающий точность на дальней дистанции ценой скорости прицеливания.",
+        "ChineseSimplified": "精准枪管，减少散布并提升远距离精度，但瞄准速度变慢。"
       }
     },
     {
@@ -444,9 +444,9 @@
     {
       "sid": "sid_bprue_sniper_field_marksman_description",
       "languages": {
-        "English": "Balances aiming speed, stability and practical accuracy for general marksman use.",
-        "Russian": "Балансирует скорость прицеливания, стабильность и практическую точность для универсального стрелка.",
-        "ChineseSimplified": "平衡瞄准速度、稳定性与实用精度，适合通用精确射手用途。"
+        "English": "Improves aimed movement and stability for field use, at the cost of slower target acquisition.",
+        "Russian": "Улучшает движение при прицеливании и устойчивость для полевой стрельбы ценой более медленного прицеливания.",
+        "ChineseSimplified": "提升瞄准移动能力与稳定性，适合野外作战，但瞄准速度更慢。"
       }
     },
     {

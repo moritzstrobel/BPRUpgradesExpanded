@@ -1328,6 +1328,30 @@
         "Russian": "Гемостатическая подкладка улучшает остановку кровотечения ценой снижения электрозащиты для этого предмета.",
         "ChineseSimplified": "止血衬层改善全身护甲的止血恢复能力，但会牺牲电气防护。"
       }
+    },
+    {
+      "sid": "sid_bprue_armor_cuirass_prototype_sprint_name",
+      "languages": {
+        "English": "Prototype Servo System",
+        "Russian": "Прототип сервосистемы",
+        "ChineseSimplified": "原型伺服系统"
+      }
+    },
+    {
+      "sid": "sid_bprue_armor_cuirass_prototype_sprint_description",
+      "languages": {
+        "English": "An early prototype of the sprint-capable servo system later refined for modern exoskeletons. It enables sprinting, but the bulky actuators add 15 kg and reduce stamina regeneration by 20%. The unfinished retrofit also compromises thermal, electrical, chemical, radiation, and psi protection by 10%, while leaving the Cuirass's physical protection intact.",
+        "Russian": "Ранний прототип сервосистемы для бега, позднее доработанной для современных экзоскелетов. Позволяет бегать, но громоздкие приводы добавляют 15 кг и снижают восстановление выносливости на 20%. Незавершённая модернизация также снижает термическую, электрическую, химическую, радиационную и пси-защиту на 10%, не затрагивая физическую защиту «Кирасы».",
+        "ChineseSimplified": "这是后来被现代外骨骼进一步完善的奔跑伺服系统早期原型。它允许穿戴者奔跑，但笨重的执行机构会增加15千克重量，并使耐力恢复降低20%。尚未成熟的改装还会使热能、电气、化学、辐射和心灵防护降低10%，但不会影响胸甲外骨骼的物理防护。"
+      }
+    },
+    {
+      "sid": "sid_effects_armor_protectionPSY_name",
+      "languages": {
+        "English": "PSY Protection",
+        "Russian": "Пси-защита",
+        "ChineseSimplified": "心灵防护"
+      }
     }
   ]
 }
