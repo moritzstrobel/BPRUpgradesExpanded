@@ -216,6 +216,22 @@
         "Russian": "Улучшает настильность и дальность снижения урона на 10% ценой ухудшения контроля отдачи на 8%.",
         "ChineseSimplified": "弹道平直度和伤害衰减距离各提升10%，但后坐力控制降低8%。"
       }
+    },
+    {
+      "sid": "bprue_bleeding_chance",
+      "languages": {
+        "English": "Bleeding chance",
+        "Russian": "Шанс кровотечения",
+        "ChineseSimplified": "流血几率"
+      }
+    },
+    {
+      "sid": "bprue_cover_piercing",
+      "languages": {
+        "English": "Cover penetration",
+        "Russian": "Пробитие укрытий",
+        "ChineseSimplified": "掩体穿透"
+      }
     }
   ]
 }
