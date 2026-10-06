@@ -7,7 +7,9 @@ Here's a quick overview :
 General Feedback  
 DMRs / Snipers  
 Assault Rifles (ARs)  
-I haven't been able to test much with the SMGs / Pistols yet 😕  
+I haven't been able to test much with the SMGs / Pistols yet 😕
+
+> **PARTIAL — SMG conversion review (generator only):** M10, Bucket and Zubr Default/AP/Expanding variants now share complete weapon-specific baseline profiles; AP adds +5% armor penetration, and Expanding relies on ammo modifiers. This is a proactive balancing pass, **not** a verified resolution of detailed tester feedback (the tester explicitly had limited SMG testing). Generated CFGs, ammo economy and in-game behavior still require validation.  
    
    
    
