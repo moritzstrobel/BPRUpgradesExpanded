@@ -31,7 +31,7 @@ CALIBER_CONVERSIONS={
         "target":"A762NATO","suffix":"762NATO","cost":4800,
         "change_effect":"BPRUE_ChangeCaliber762NATOEffect","remove_effect":"BPRUE_ChangeAmmoTypesNo762Effect",
         "variants":{
-            "Default":("","sid_bprue_caliber_762_nato_name","sid_bprue_sniper_caliber_762sniper_to_762nato_description","BPRUE_ChangeAmmoTypes762NATOEffect",("RecoilPos10Effect","BPRUE_Shared_DamagePenalty10Effect"),_ammo_icon("762x51")),
+            "Default":("","sid_bprue_caliber_762_nato_name","sid_bprue_sniper_caliber_762sniper_to_762nato_description","BPRUE_ChangeAmmoTypes762NATOEffect",("ProjectileSpeedPos10Effect","FlatnessUp10Effect","DistanceDropOffLengthPos15Effect","RecoilPos5Effect"),_ammo_icon("762x51")),
             "AP":("_AP","sid_bprue_sniper_caliber_762nato_ap_name","sid_bprue_sniper_caliber_762nato_ap_description","BPRUE_Sniper_ChangeAmmoTypes762NATOAPEffect",("BPRUE_Sniper_ArmorPiercingPos15Effect","BPRUE_Sniper_RecoilPos5Effect","BPRUE_Sniper_DamagePenalty15Effect"),_ammo_icon("762x51_ap")),
             "Supersonic":("_Supersonic","sid_bprue_sniper_caliber_762nato_supersonic_name","sid_bprue_sniper_caliber_762nato_supersonic_description","BPRUE_Sniper_ChangeAmmoTypes762NATOSupersonicEffect",("RecoilPos10Effect","BPRUE_Shared_DamagePenalty10Effect","BPRUE_Sniper_FlatnessPos15Effect"),_ammo_icon("762x51_ss")),
         },
@@ -40,7 +40,7 @@ CALIBER_CONVERSIONS={
         "target":"A762Sniper","suffix":"762Sniper","cost":5000,
         "change_effect":"ChangeCaliber762Effect","remove_effect":"BPRUE_ChangeAmmoTypesNo762NATOEffect",
         "variants":{
-            "Default":("","sid_bprue_caliber_762_eastern_name","sid_bprue_sniper_caliber_762nato_to_762sniper_description","ChangeAmmoTypes762Effect",("BPRUE_DamagePos10Effect","BPRUE_ArmorPiercingPos15Effect","BPRUE_Sniper_RecoilPenalty15Effect","BPRUE_DurabilityPerShotNeg15Effect"),_ammo_icon("762x54")),
+            "Default":("","sid_bprue_caliber_762_eastern_name","sid_bprue_sniper_caliber_762nato_to_762sniper_description","ChangeAmmoTypes762Effect",("BPRUE_Sniper_ProjectileSpeedPenalty10Effect","BPRUE_Sniper_FlatnessPenalty10Effect","BPRUE_Sniper_DropOffPenalty15Effect","BPRUE_Sniper_RecoilPenalty10Effect","BPRUE_DurabilityPerShotNeg10Effect"),_ammo_icon("762x54")),
             "AP":("_AP","sid_bprue_sniper_caliber_762sniper_ap_name","sid_bprue_sniper_caliber_762sniper_ap_description","BPRUE_Sniper_ChangeAmmoTypes762SniperAPEffect",("BPRUE_Sniper_DamagePos5Effect","BPRUE_Sniper_ArmorPiercingPos25Effect","BPRUE_Sniper_RecoilPenalty20Effect","BPRUE_DurabilityPerShotNeg15Effect"),_ammo_icon("762x54_ap")),
             "Supersonic":("_Supersonic","sid_bprue_sniper_caliber_762sniper_supersonic_name","sid_bprue_sniper_caliber_762sniper_supersonic_description","BPRUE_Sniper_ChangeAmmoTypes762SniperSupersonicEffect",("BPRUE_DamagePos10Effect","BPRUE_Sniper_ArmorPiercingPos10Effect","BPRUE_Sniper_RecoilPenalty15Effect","BPRUE_DurabilityPerShotNeg15Effect","BPRUE_Sniper_FlatnessPos15Effect"),_ammo_icon("762x54_ss")),
         },
@@ -76,6 +76,14 @@ def render_effects():
     lines=['// AUTO-GENERATED - Source: sniper_upgrades.json','']
     for sid,effect_type,value,beneficial in definitions:
         lines += [f'{sid} : struct.begin {{refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}}',f'   SID = {sid}',f'   Type = EEffectType::{effect_type}',f'   LocalizationSID = {EFFECT_LOCALIZATION[effect_type]}',f'   ValueMin = {value}',f'   ValueMax = {value}','   bIsPermanent = true',f'   Positive = EBeneficial::{beneficial}','   ShowUpgradeEffectValue = true','   ShowUpgradeEffect = true','struct.end','']
+    # Default-conversion penalties; positive ProjectileSpeed effects use negative
+    # BulletSpeedSlowdown, so the penalty deliberately uses a positive value.
+    for sid,effect_type,value,localization in [
+        ('BPRUE_Sniper_ProjectileSpeedPenalty10Effect','BulletSpeedSlowdown','10%','weapon_velocity'),
+        ('BPRUE_Sniper_FlatnessPenalty10Effect','EffectiveFireDistance','-10%','bprue_effective_range'),
+        ('BPRUE_Sniper_DropOffPenalty15Effect','DistanceDropOffLength','-15%','weapon_flatness'),
+    ]:
+        lines += [f'{sid} : struct.begin {{refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}}',f'   SID = {sid}',f'   Type = EEffectType::{effect_type}',f'   LocalizationSID = {localization}',f'   ValueMin = {value}',f'   ValueMax = {value}','   bIsPermanent = true','   Positive = EBeneficial::Negative','   ShowUpgradeEffectValue = true','   ShowUpgradeEffect = true','struct.end','']
     for sid,projectile,ammo_type in [
         ("BPRUE_Sniper_ChangeAmmoTypes762NATOAPEffect","P762NATO","ArmorPiercing"),
         ("BPRUE_Sniper_ChangeAmmoTypes762NATOSupersonicEffect","P762NATO","Supersonic"),
