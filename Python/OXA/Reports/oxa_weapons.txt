@@ -1,7 +1,7 @@
 OXA weapon inventory
 ====================
 OXA prototypes: 945
-Vanilla/DLC prototypes: 6667
+Vanilla/DLC prototypes: 6817
 Real weapon candidates: 81
 New OXA SIDs: 4
 OXA new platforms: 0
