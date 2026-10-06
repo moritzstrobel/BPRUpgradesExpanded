@@ -135,7 +135,7 @@ DEFAULT_ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgr
 CALIBER_ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_CaliberChange.T_PDA_Upgrades_Icon_CaliberChange'"
 MODULE_SPECS = {
     ("fire_control", "burst"): ("FireControl", "Burst", "Body", 3000, "sid_bprue_fire_control_burst_name", "sid_bprue_fire_control_burst_description", ("BPRUE_AddBurstFireModeEffect", "RecoilPos5Effect", "BPRUE_DurabilityPerShotNeg10Effect")),
-    ("fire_control", "precision"): ("FireControl", "Precision", "Body", 3600, "sid_bprue_fire_control_precision_name", "sid_bprue_fire_control_precision_description", ("BPRUE_SemiAutoOnlyEffect", "BPRUE_DamagePos10Effect", "ArmorPiercingPos15Effect", "BPRUE_DurabilityPerShotNeg20Effect")),
+    ("fire_control", "precision"): ("FireControl", "Precision", "Body", 3600, "sid_bprue_fire_control_precision_name", "sid_bprue_fire_control_precision_description", ("BPRUE_SemiAutoOnlyEffect", "MaxDispersionPos15Effect", "ShotRecoveryPos10Effect", "AimingMovementNeg10Effect")),
     ("fire_rate", "high_speed"): ("FireRate", "HighSpeed", "Barrel", 3400, "sid_bprue_fire_rate_high_speed_name", "sid_bprue_fire_rate_high_speed_description", ("BPRUE_FireIntervalNeg20Effect", "RecoilNeg15Effect", "BPRUE_DurabilityPerShotNeg20Effect")),
     ("fire_rate", "balanced"): ("FireRate", "Balanced", "Barrel", 3200, "sid_bprue_fire_rate_balanced_name", "sid_bprue_fire_rate_balanced_description", ("BPRUE_FireIntervalNeg10Effect", "RecoilPos10Effect", "ShotRecoveryPos10Effect", "BPRUE_DurabilityPerShotNeg10Effect")),
     ("reload", "competition"): ("Reload", "Competition", "Body", 2800, "sid_bprue_reload_competition_name", "sid_bprue_reload_competition_description", ("BPRUE_ReloadingTimeNeg20Effect", "BPRUE_Shared_DispersionPenalty5Effect")),
@@ -671,8 +671,8 @@ BPRUE_AddBurstFireModeEffect : struct.begin {refurl=@BaseGame/EffectPrototypes.c
    LocalizationSID = bprue_fire_modes_burst_auto
    bIsPermanent = true
    FireTypes : struct.begin
-      [0] = EFireType::Queue
-      [1] = EFireType::Automatic
+      [0] = EFireType::SemiAutomatic
+      [1] = EFireType::Queue
    struct.end
    ShowUpgradeEffectValue = false
    ShowUpgradeEffect = true
