@@ -136,8 +136,8 @@ CALIBER_ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgr
 MODULE_SPECS = {
     ("fire_control", "burst"): ("FireControl", "Burst", "Body", 3000, "sid_bprue_fire_control_burst_name", "sid_bprue_fire_control_burst_description", ("BPRUE_AddBurstFireModeEffect", "RecoilPos5Effect", "BPRUE_DurabilityPerShotNeg10Effect")),
     ("fire_control", "precision"): ("FireControl", "Precision", "Body", 3600, "sid_bprue_fire_control_precision_name", "sid_bprue_fire_control_precision_description", ("BPRUE_SemiAutoOnlyEffect", "MaxDispersionPos15Effect", "ShotRecoveryPos10Effect", "AimingMovementNeg10Effect")),
-    ("fire_rate", "high_speed"): ("FireRate", "HighSpeed", "Barrel", 3400, "sid_bprue_fire_rate_high_speed_name", "sid_bprue_fire_rate_high_speed_description", ("BPRUE_FireIntervalNeg20Effect", "RecoilNeg15Effect", "BPRUE_DurabilityPerShotNeg20Effect")),
-    ("fire_rate", "balanced"): ("FireRate", "Balanced", "Barrel", 3200, "sid_bprue_fire_rate_balanced_name", "sid_bprue_fire_rate_balanced_description", ("BPRUE_FireIntervalNeg10Effect", "RecoilPos10Effect", "ShotRecoveryPos10Effect", "BPRUE_DurabilityPerShotNeg10Effect")),
+    ("fire_rate", "high_speed"): ("FireRate", "HighSpeed", "Barrel", 3400, "sid_bprue_fire_rate_high_speed_name", "sid_bprue_fire_rate_high_speed_description", ("BPRUE_FireIntervalNeg12Effect", "RecoilNeg15Effect", "BPRUE_DurabilityPerShotNeg20Effect")),
+    ("fire_rate", "balanced"): ("FireRate", "Balanced", "Barrel", 3200, "sid_bprue_fire_rate_balanced_name", "sid_bprue_fire_rate_balanced_description", ("BPRUE_FireIntervalNeg5Effect", "RecoilPos5Effect", "BPRUE_Shared_ShotRecoveryPos15Effect", "BPRUE_DurabilityPerShotNeg10Effect")),
     ("reload", "competition"): ("Reload", "Competition", "Body", 2800, "sid_bprue_reload_competition_name", "sid_bprue_reload_competition_description", ("BPRUE_ReloadingTimeNeg20Effect", "BPRUE_Shared_DispersionPenalty5Effect")),
     ("reload", "reinforced"): ("Reload", "Reinforced", "Body", 3000, "sid_bprue_reload_reinforced_name", "sid_bprue_reload_reinforced_description", ("DurabilityPerShotPos20Effect", "BPRUE_FireIntervalPos5Effect")),
     ("stock", "lightweight"): ("Stock", "Lightweight", "Stock", 3000, "sid_bprue_stock_lightweight_name", "sid_bprue_stock_lightweight_description", ("AimingTimePos15Effect", "AimingMovementPos10Effect", "RecoilNeg15Effect")),
@@ -260,6 +260,30 @@ BPRUE_Shared_DropOffPenalty10Effect : struct.begin {refurl=@BaseGame/EffectProto
    ValueMax = -10%
    bIsPermanent = true
    Positive = EBeneficial::Negative
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
+BPRUE_FireIntervalNeg5Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_FireIntervalNeg5Effect
+   Type = EEffectType::FireInterval
+   LocalizationSID = bprue_fire_rate
+   ValueMin = -5%
+   ValueMax = -5%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
+BPRUE_FireIntervalNeg12Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_FireIntervalNeg12Effect
+   Type = EEffectType::FireInterval
+   LocalizationSID = bprue_fire_rate
+   ValueMin = -12%
+   ValueMax = -12%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
    ShowUpgradeEffectValue = true
    ShowUpgradeEffect = true
 struct.end
