@@ -444,9 +444,9 @@
     {
       "sid": "sid_bprue_sniper_field_marksman_description",
       "languages": {
-        "English": "Balances aiming speed, stability and practical accuracy for general marksman use.",
-        "Russian": "Балансирует скорость прицеливания, стабильность и практическую точность для универсального стрелка.",
-        "ChineseSimplified": "平衡瞄准速度、稳定性与实用精度，适合通用精确射手用途。"
+        "English": "Improves aimed movement and stability for field use, at the cost of slower target acquisition.",
+        "Russian": "Улучшает движение при прицеливании и устойчивость для полевой стрельбы ценой более медленного прицеливания.",
+        "ChineseSimplified": "提升瞄准移动能力与稳定性，适合野外作战，但瞄准速度更慢。"
       }
     },
     {
