@@ -148,8 +148,6 @@ Recommendation :
 
 Converting a weapon to .308 should improve Velocity, Damage Drop-off (not particularly useful against humans, but very useful when hunting mutants), and Flatness. This would make the weapon even better suited for precision shooting.  
 Converting a weapon to 7.62×54R should reduce Velocity, Flatness, and Damage Drop-off. In exchange, the player gains access to a much more common and cheaper ammunition type, allowing them to save money at the cost of reduced long-range effectiveness. This would give players a stronger incentive to use the conversion on weapons such as the Mark 1 EMR or G3PA rather than on something like the M701 Super.  
-> **PARTIAL — AR caliber conversions (generated, not tested):** Rebalanced the existing 5.45 → 7.62×54R and 5.56 → .308 power conversions and 7.62×39 conversions, including a separate 9×39 → 7.62×39 baseline for VS Vintar. Default/AP/Supersonic (or Default/AP/Expanding) remain mutually exclusive complete conversion profiles. Unconditional damage and AP buffs were reduced, while recoil, wear, trajectory and damage drop-off trade-offs were added. The maintainer has regenerated and pushed CFGs; runtime and ammunition-economy testing remain open. The tester's recommendation to favor AR-native calibers and a different per-weapon conversion matrix was **not adopted**; neither ammo availability nor the risk of a conversion becoming a no-brainer is verified. Vanilla-owned conversions and 7.62×39 compatibility remain intentionally unchanged.
-
 3. Assault Rifles (AR) :  
 Assault rifles are already very versatile weapons, with good range, good damage, and generally good recoil and spread (there are a very few exceptions to that rule, namely the AKM-74S and the Dnipro). The current system doesn't really encourage specialization or even meaningful progression. It is an absolute no-brainer to simply take every module that reduces recoil and spread and turn any AR into a literal laser beam, allowing you to chain headshots in full auto with virtually no difficulty while still retaining the weapon's overall versatility.  
    
@@ -167,13 +165,21 @@ Burst Fire Control : This is more interesting, but because it gives access to fu
    
 b) Caliber conversion modules  
    
-Overall, I think that, just like with DMRs/snipers, the single generic caliber conversion should be retained instead of dividing the bonuses and penalties between three different ammunition types every time for the same reason as the DMR/Snipers.  
+Overall, I think that, just like with DMRs/snipers, the single generic caliber conversion should be retained instead of dividing the bonuses and penalties between three different ammunition types every time for the same reason as the DMR/Snipers.
+
+> **DECIDED — not adopted:** Keep Default/AP/Supersonic (and 7.62×39 Expanding) as mutually exclusive full conversion choices. All variants now inherit the same directional baseline rather than each having an unrelated set of stats. They are not cumulative modules; ammo access remains specialized. Generated output still needs in-game verification.  
    
-Just like with DMRs/snipers, I think you should be careful with ammo conversions. For many ARs, converting them to a DMR/sniper caliber is almost never worth it because these ammunition types are much rarer. Originally, the Dnipro could be converted to another AR round (7.62×39), but because this round was removed from the game in an old patch, it was then converted to use 7.62R, which clearly doesn't make much sense when you consider the size of the Dnipro's magazine. For example, there is absolutely no reason to ever convert the GP37 to .308 or the AKM-74S to 7,62R. Even the vanilla Dnipro caliber conversion isn't used very often from what I've seen because of how expensive the weapon becomes.  
+Just like with DMRs/snipers, I think you should be careful with ammo conversions. For many ARs, converting them to a DMR/sniper caliber is almost never worth it because these ammunition types are much rarer. Originally, the Dnipro could be converted to another AR round (7.62×39), but because this round was removed from the game in an old patch, it was then converted to use 7.62R, which clearly doesn't make much sense when you consider the size of the Dnipro's magazine. For example, there is absolutely no reason to ever convert the GP37 to .308 or the AKM-74S to 7,62R. Even the vanilla Dnipro caliber conversion isn't used very often from what I've seen because of how expensive the weapon becomes.
+
+> **PARTIAL — balance changed, economy unverified:** Reduced unconditional damage/AP buffs in existing 5.45 → 7.62×54R and 5.56 → .308 conversions, with recoil/wear and trajectory/drop-off trade-offs. Retained the conversions for AK74, G37, M16 and Arev instead of removing or replacing them. The reported rarity and actual cost-effectiveness of each caliber require gameplay testing. Dnipro's vanilla conversion remains untouched.  
    
-For the AR family of rifles, I think we should stick to AR calibers, with a few carefully chosen exceptions to avoid making unique ARs with unique ammo conversions obsolete, such as the unique AREv (Warzsawa) or the AKM-9B.  
+For the AR family of rifles, I think we should stick to AR calibers, with a few carefully chosen exceptions to avoid making unique ARs with unique ammo conversions obsolete, such as the unique AREv (Warzsawa) or the AKM-9B.
+
+> **DECIDED — different scope:** No conversion-matrix redesign in this pass. Existing BPRUE target calibers and special cases remain, as do vanilla ownership exclusions. The tester's preference for only AR-native calibers is not implemented; unique and magazine plausibility should be revisited only if testing identifies a problem.  
    
-Regardless, because 5,45 ammunition is much more common than both 5,56 and 9mm (the Grom S-14/As Lavina ammo), a 5,45 conversion should provide only very minor bonuses alongside a penalty, similar to the vanilla Kharod ammo conversion. Conversely, converting a weapon to 5.56 or 9mm should provide stronger bonuses.  
+Regardless, because 5,45 ammunition is much more common than both 5,56 and 9mm (the Grom S-14/As Lavina ammo), a 5,45 conversion should provide only very minor bonuses alongside a penalty, similar to the vanilla Kharod ammo conversion. Conversely, converting a weapon to 5.56 or 9mm should provide stronger bonuses.
+
+> **OPEN — not directly implemented:** The proposed availability-based 5.45/5.56/9mm direction-specific scheme does not match our retained conversion matrix. No new 5.45/5.56/9mm conversions were added. The existing 7.62×39 conversion remains intentionally supported without adding merchant ammunition. Reassess no-brainer choices after tester/in-game feedback.  
    
 For example :  
    
@@ -191,7 +197,9 @@ AS Lavina : No conversion. An integrally suppressed weapon doesn't really make s
 AREv : 9mm conversion.  
 VS Vintar : No conversion. An integrally suppressed weapon doesn't really make sense with a supersonic round.  
 Kharod : No change, keep it like vanilla.  
-Dnipro : No change, keep it like vanilla.  
+Dnipro : No change, keep it like vanilla.
+
+> **Per-weapon disposition (source configuration, not runtime verification):** AKM-74S/AK74 retains 7.62×54R and optional 7.62×39 rather than the proposed 5.56; AKMU-74S is not added to the AR conversion configuration; AR416/M16 retains .308 rather than 5.45; GP37/G37 retains .308 rather than 5.56. Fora-221, Kharod and Dnipro retain vanilla conversion ownership. AS Lavina remains without BPRUE conversion; AREv retains .308 rather than proposed 9mm; VS Vintar retains its explicit 7.62×39 exception instead of removing it. **No changes to these choices were made in this balancing pass.**  
    
    
 d) Modules   
