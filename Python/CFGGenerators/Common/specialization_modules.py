@@ -27,7 +27,7 @@ MODULE_EFFECTS = {
 # In-place balancing: preserve upgrade SIDs and blocking relations across saves.
 # Only Sniper/DMR effect bundles and descriptions differ from shared defaults.
 CLASS_EFFECT_OVERRIDES = {
-    "ar": {
+    "assault_rifle": {
         "high_cyclic_system": ("BPRUE_Shared_FireIntervalNeg8Effect", "DispersionPos10Effect", "BPRUE_Shared_RecoilPenalty10Effect", "BPRUE_Shared_DurabilityPerShotPenalty8Effect"),
         "controlled_action": ("BPRUE_Shared_FireIntervalPenalty10Effect", "DispersionPos15Effect", "ShotRecoveryPos10Effect"),
     },
