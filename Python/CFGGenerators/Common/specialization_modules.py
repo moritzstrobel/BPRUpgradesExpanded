@@ -24,6 +24,16 @@ MODULE_EFFECTS = {
     "range_configuration": ("FlatnessUp15Effect", "DispersionPos10Effect", "BPRUE_Shared_AimingTimePenalty10Effect"),
 }
 
+# In-place balancing: preserve upgrade SIDs and blocking relations across saves.
+# Only Sniper/DMR effect bundles and descriptions differ from shared defaults.
+CLASS_EFFECT_OVERRIDES = {
+    "sniper": {
+        "range_configuration": ("FlatnessUp15Effect", "DistanceDropOffLengthPos10Effect", "BPRUE_Shared_AimingTimePenalty10Effect"),
+        "cqb_configuration": ("AimingTimePos15Effect", "DispersionPos10Effect", "BPRUE_Shared_FlatnessPenalty10Effect", "BPRUE_Shared_Sniper_ShotRecoveryPenalty10Effect"),
+        "precision_tuning": ("FlatnessUp10Effect", "DistanceDropOffLengthPos10Effect", "BPRUE_Shared_RecoilPenalty8Effect"),
+    },
+}
+
 # IMPORTANT: layout group names are deliberately unique. Existing class-specific
 # generators already use names such as Handling, Action and Ballistics. Reusing
 # those names causes apply_module_layout to merge both module families into one
@@ -68,11 +78,11 @@ def build_shared_specializations(*, families: dict, class_key: str, weapon_class
                     group=group_name,
                     target_part=target,
                     text_sid=f"sid_bprue_shared_{key}_name",
-                    hint_sid=f"sid_bprue_shared_{key}_description",
+                    hint_sid=(f"sid_bprue_sniper_{key}_description" if class_key == "sniper" and key in CLASS_EFFECT_OVERRIDES["sniper"] else f"sid_bprue_shared_{key}_description"),
                     image=image_for_family(family),
                     icon=icon,
                     cost=round(base_cost * scale),
-                    effects=MODULE_EFFECTS[key],
+                    effects=CLASS_EFFECT_OVERRIDES.get(class_key, {}).get(key, MODULE_EFFECTS[key]),
                     blocking_sids=tuple(s for s in group_sids if s != current),
                     vertical_position=vertical,
                     template_sid=template_sid,
@@ -97,6 +107,7 @@ def render_shared_effects() -> str:
         ("BPRUE_Shared_AimingTimePos8Effect", "AimingTime", "-8%", "Positive", "bprue_aiming_speed"),
         ("BPRUE_Shared_AimingTimePenalty10Effect", "AimingTime", "10%", "Negative", "bprue_aiming_speed"),
         ("BPRUE_Shared_FlatnessPenalty10Effect", "EffectiveFireDistance", "-10%", "Negative", "bprue_effective_range"),
+        ("BPRUE_Shared_Sniper_ShotRecoveryPenalty10Effect", "ShotRecovery", "-10%", "Negative", "bprue_recoil_recovery"),
     ]
     lines = ["// AUTO-GENERATED - shared specialization effects", ""]
     for sid, effect_type, value, beneficial, loc in defs:
