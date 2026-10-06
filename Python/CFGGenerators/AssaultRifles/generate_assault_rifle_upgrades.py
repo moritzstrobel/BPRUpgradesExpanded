@@ -50,7 +50,7 @@ A762_CONVERSION_VARIANTS = {
         "text_sid": "sid_bprue_caliber_762x39_expanding_name",
         "hint_sid": "sid_bprue_caliber_762x39_expanding_description",
         "ammo_effect": "BPRUE_ChangeAmmoTypes762x39ExpandingEffect",
-        "stat_effects": ("ProjectileSpeedPos5Effect",),
+        "stat_effects": (),
         "cost": 2600,
         "icon": _ammo_icon("762x39_hp"),
     },
