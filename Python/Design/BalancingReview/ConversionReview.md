@@ -1,6 +1,6 @@
 # Caliber conversion review — implementation plan (2026-10-06)
 
-**Status:** partial implementation. Sniper/DMR and AR conversion profiles changed in generator sources; the maintainer has regenerated and pushed CFGs. The generated AR shared effects have been confirmed present, but full upgrade wiring, effect stacking, ammo behavior and in-game results remain unverified. SMG conversions remain unchanged. Original tester feedback is archived in `balacingBaseOverview.txt`; track dispositions in `TesterFeedbackProgress.md`.
+**Status:** partial implementation. Sniper/DMR and AR conversion profiles changed in generator sources; the maintainer has regenerated and pushed CFGs. The generated AR shared effects have been confirmed present, but full upgrade wiring, effect stacking, ammo behavior and in-game results remain unverified. SMG M10/Bucket/Zubr specializations now inherit complete weapon-specific Default profiles (generator only). AP adds +5% armor penetration; .45 ACP Expanding adds no unconditional damage bonus. Regeneration and runtime tests are pending. Original tester feedback is archived in `balacingBaseOverview.txt`; track dispositions in `TesterFeedbackProgress.md`.
 
 ## Observed generator baseline
 
@@ -23,6 +23,12 @@
 | AR conversions are overly broad and favor DMR calibers | Existing target-caliber matrix retained as project choice, despite tester's AR-native-caliber recommendations | Reduced unconditional damage/AP buffs, added trajectory/drop-off/recoil/wear trade-offs and separate VS Vintar profile; test whether ammunition economy still makes any conversion a no-brainer | **PARTIAL — generated, unverified; matrix not adopted** |
 | 7.62×39 is unavailable in base-game economy | Valid external-mod compatibility concern | **Keep `A762` support unchanged** as explicit project policy; no ammo vendor injections | **DECIDED — unchanged, not a fix** |
 | Integrated-suppressor families should not receive implausible conversions | Grim/Lavina currently lack BPRUE conversion; Gvintar has `A762` | Keep current state pending weapon identity/compatibility tests; no blanket changes | **REVIEWED** |
+
+## SMG implementation update
+
+- M10 (.45 ACP to 9x19 or 9x18), Bucket (9x18 to 9x19 or .45 ACP) and Zubr (9x19 to 9x18 or .45 ACP): each Default/AP/Expanding option now uses a shared direction-specific base effect bundle.
+- AP adds +5% armor penetration; Expanding relies on ammunition properties. Existing SIDs, blocking, restrictions and vanilla-owned conversion exclusions remain unchanged.
+- **PARTIAL:** Generator and localization updated; generated CFGs and in-game behavior not yet checked. The tester supplied limited direct SMG feedback, so ammo economy and per-weapon value still need testing.
 
 ## Implementation stages and gates
 
