@@ -572,9 +572,9 @@
     {
       "sid": "sid_bprue_smg_caliber_a919_ap_description",
       "languages": {
-        "English": "Converts the weapon to 9x19 mm armor-piercing ammunition only. Improves armor penetration and weapon control, but reduces damage and provides less effective range than the standard 9x19 mm conversion. This specialization is permanent.",
-        "Russian": "Переводит оружие исключительно на бронебойные боеприпасы 9x19 мм. Повышает бронепробиваемость и управляемость оружия, но снижает урон и дает меньшую эффективную дальность по сравнению со стандартной конверсией на 9x19 мм. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器仅转换为 9x19 毫米穿甲弹药。提升护甲穿透与武器操控，但伤害降低，且有效射程不如标准 9x19 毫米转换。此专精为永久性。"
+        "English": "Permanently converts to 9x19 mm armor-piercing ammunition only. Inherits the complete weapon-specific standard conversion profile and adds +5% armor penetration. The ammunition itself determines additional projectile behavior. Mutually exclusive with other caliber conversions.",
+        "Russian": "Постоянная конверсия на 9x19 mm: только бронебойные патроны. Сохраняет все эффекты стандартной конверсии для данного оружия и добавляет +5% бронепробиваемости. Дополнительные свойства определяются патронами. Несовместима с другими конверсиями.",
+        "ChineseSimplified": "永久转换为9x19 mm穿甲弹药。继承该武器标准转换的全部效果，额外增加5%护甲穿透。弹药本身决定其他弹道属性。不能与其他口径转换同时安装。"
       }
     },
     {
@@ -588,9 +588,9 @@
     {
       "sid": "sid_bprue_smg_caliber_a918_ap_description",
       "languages": {
-        "English": "Converts the weapon to 9x18 mm armor-piercing ammunition only. Improves armor penetration and weapon control, but further reduces damage and provides less effective range than the standard 9x18 mm conversion. This specialization is permanent.",
-        "Russian": "Переводит оружие исключительно на бронебойные боеприпасы 9x18 мм. Повышает бронепробиваемость и управляемость оружия, но дополнительно снижает урон и дает меньшую эффективную дальность по сравнению со стандартной конверсией на 9x18 мм. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器仅转换为 9x18 毫米穿甲弹药。提升护甲穿透与武器操控，但伤害进一步降低，且有效射程不如标准 9x18 毫米转换。此专精为永久性。"
+        "English": "Permanently converts to 9x18 mm armor-piercing ammunition only. Inherits the complete weapon-specific standard conversion profile and adds +5% armor penetration. The ammunition itself determines additional projectile behavior. Mutually exclusive with other caliber conversions.",
+        "Russian": "Постоянная конверсия на 9x18 mm: только бронебойные патроны. Сохраняет все эффекты стандартной конверсии для данного оружия и добавляет +5% бронепробиваемости. Дополнительные свойства определяются патронами. Несовместима с другими конверсиями.",
+        "ChineseSimplified": "永久转换为9x18 mm穿甲弹药。继承该武器标准转换的全部效果，额外增加5%护甲穿透。弹药本身决定其他弹道属性。不能与其他口径转换同时安装。"
       }
     },
     {
@@ -604,9 +604,9 @@
     {
       "sid": "sid_bprue_smg_caliber_a045_ap_description",
       "languages": {
-        "English": "Converts the weapon to .45 ACP armor-piercing ammunition only. Improves armor penetration while retaining increased damage, at the cost of heavier recoil and reduced effective range. This specialization is permanent.",
-        "Russian": "Переводит оружие исключительно на бронебойные боеприпасы .45 ACP. Повышает бронепробиваемость и сохраняет повышенный урон ценой более сильной отдачи и меньшей эффективной дальности. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器仅转换为 .45 ACP 穿甲弹药。提升护甲穿透并保留提升的伤害，但后坐力更强、有效射程下降。此专精为永久性。"
+        "English": "Permanently converts to .45 ACP armor-piercing ammunition only. Inherits the complete weapon-specific standard conversion profile and adds +5% armor penetration. The ammunition itself determines additional projectile behavior. Mutually exclusive with other caliber conversions.",
+        "Russian": "Постоянная конверсия на .45 ACP: только бронебойные патроны. Сохраняет все эффекты стандартной конверсии для данного оружия и добавляет +5% бронепробиваемости. Дополнительные свойства определяются патронами. Несовместима с другими конверсиями.",
+        "ChineseSimplified": "永久转换为.45 ACP穿甲弹药。继承该武器标准转换的全部效果，额外增加5%护甲穿透。弹药本身决定其他弹道属性。不能与其他口径转换同时安装。"
       }
     },
     {
@@ -620,9 +620,9 @@
     {
       "sid": "sid_bprue_smg_caliber_a045_expanding_description",
       "languages": {
-        "English": "Converts the weapon to .45 ACP expanding ammunition only. Maximizes damage at the cost of heavier recoil and substantially reduced effective range. This specialization is permanent.",
-        "Russian": "Переводит оружие исключительно на экспансивные боеприпасы .45 ACP. Максимизирует урон ценой более сильной отдачи и значительно меньшей эффективной дальности. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器仅转换为 .45 ACP 扩张弹药。最大化伤害，但后坐力更强、有效射程大幅下降。此专精为永久性。"
+        "English": "Permanently converts to .45 ACP expanding ammunition only. Inherits the complete weapon-specific standard conversion profile. The ammunition itself determines additional projectile behavior. Mutually exclusive with other caliber conversions.",
+        "Russian": "Постоянная конверсия на .45 ACP: только экспансивные патроны. Сохраняет все эффекты стандартной конверсии для данного оружия. Дополнительные свойства определяются патронами. Несовместима с другими конверсиями.",
+        "ChineseSimplified": "永久转换为.45 ACP扩张弹药。继承该武器标准转换的全部效果。弹药本身决定其他弹道属性。不能与其他口径转换同时安装。"
       }
     },
     {
