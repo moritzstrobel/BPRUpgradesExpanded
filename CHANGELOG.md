@@ -7,6 +7,7 @@ This file tracks **implemented changes**, not planned features. Entries under **
 ## [Unreleased]
 
 ### Changed
+- **Sniper/DMR Default caliber conversions:** Reworked 7.62x54R to .308 (+10% velocity, +10% flatness, +15% damage drop-off length, +5% recoil control) and .308 to 7.62x54R (-10% velocity, -10% flatness, -15% drop-off length, 10% recoil penalty, 10% wear per shot penalty). Removed Default damage/AP modifiers; AP and Supersonic unchanged. Generator output and gameplay validation are separate steps.
 - **Sniper / DMR – Field Marksman:** Replaced the +10% shot-recovery bonus with a 10% aiming-time penalty to introduce a meaningful trade-off.
 - **Sniper / DMR – Adjustable Stock:** Removed the +10% recoil-control bonus. Aiming stability and aimed movement benefits remain.
 - **Sniper / DMR – Benchrest:** Reduced recoil-control bonus from +15% to +10%.
