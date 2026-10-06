@@ -192,6 +192,30 @@
         "Russian": "Улучшает настильность траектории и точность для стрельбы на дальних дистанциях ценой более медленного прицеливания.",
         "ChineseSimplified": "提升远距离射击的弹道平直度与精度，但瞄准速度变慢。"
       }
+    },
+    {
+      "sid": "sid_bprue_sniper_range_configuration_description",
+      "languages": {
+        "English": "Improves trajectory flatness by 15% and damage drop-off length by 10%, but slows aiming by 10%.",
+        "Russian": "Улучшает настильность на 15% и дальность снижения урона на 10%, но замедляет прицеливание на 10%.",
+        "ChineseSimplified": "弹道平直度提升15%，伤害衰减距离提升10%，但瞄准速度降低10%。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_cqb_configuration_description",
+      "languages": {
+        "English": "Improves aiming speed by 15% and dispersion by 10%, at the cost of 10% flatness and 10% recoil recovery.",
+        "Russian": "Ускоряет прицеливание на 15% и уменьшает разброс на 10%, но снижает настильность и восстановление после отдачи на 10%.",
+        "ChineseSimplified": "瞄准速度提升15%，散布改善10%，但弹道平直度和后坐力恢复各降低10%。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_precision_tuning_description",
+      "languages": {
+        "English": "Improves flatness and damage drop-off length by 10% each, at the cost of 8% recoil control.",
+        "Russian": "Улучшает настильность и дальность снижения урона на 10% ценой ухудшения контроля отдачи на 8%.",
+        "ChineseSimplified": "弹道平直度和伤害衰减距离各提升10%，但后坐力控制降低8%。"
+      }
     }
   ]
 }
