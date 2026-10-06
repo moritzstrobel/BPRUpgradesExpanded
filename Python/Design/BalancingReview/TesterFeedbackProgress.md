@@ -142,6 +142,8 @@ After thinking about it, I believe all of these "special" conversions should be 
    
 Recommendation :  
    
+> **PARTIAL (generator updated; in-game unverified)** — Sniper/DMR Default conversions now use directional velocity, flatness and damage drop-off effects without unconditional damage/AP bonuses. The maintainer has regenerated and pushed CFGs; generated output and runtime behavior still require verification. AP/Supersonic specializations and the Barrel Hardening restriction issue remain open. Original tester feedback retained.
+
 Converting a weapon to .308 should improve Velocity, Damage Drop-off (not particularly useful against humans, but very useful when hunting mutants), and Flatness. This would make the weapon even better suited for precision shooting.  
 Converting a weapon to 7.62×54R should reduce Velocity, Flatness, and Damage Drop-off. In exchange, the player gains access to a much more common and cheaper ammunition type, allowing them to save money at the cost of reduced long-range effectiveness. This would give players a stronger incentive to use the conversion on weapons such as the Mark 1 EMR or G3PA rather than on something like the M701 Super.  
 3. Assault Rifles (AR) :  
