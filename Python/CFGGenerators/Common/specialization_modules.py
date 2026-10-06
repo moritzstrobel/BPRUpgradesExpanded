@@ -25,9 +25,10 @@ MODULE_EFFECTS = {
 }
 
 # In-place balancing: preserve upgrade SIDs and blocking relations across saves.
-# Only Sniper/DMR effect bundles and descriptions differ from shared defaults.
+# AR and Sniper/DMR effect bundles and descriptions can differ from shared defaults.
 CLASS_EFFECT_OVERRIDES = {
     "assault_rifle": {
+        "precision_tuning": ("FlatnessUp10Effect", "DistanceDropOffLengthPos5Effect", "BPRUE_Shared_RecoilPenalty8Effect"),
         "high_cyclic_system": ("BPRUE_Shared_FireIntervalNeg8Effect", "DispersionPos10Effect", "BPRUE_Shared_RecoilPenalty10Effect", "BPRUE_Shared_DurabilityPerShotPenalty8Effect"),
         "controlled_action": ("BPRUE_Shared_FireIntervalPenalty10Effect", "DispersionPos15Effect", "ShotRecoveryPos10Effect"),
     },
@@ -82,7 +83,7 @@ def build_shared_specializations(*, families: dict, class_key: str, weapon_class
                     group=group_name,
                     target_part=target,
                     text_sid=f"sid_bprue_shared_{key}_name",
-                    hint_sid=(f"sid_bprue_sniper_{key}_description" if class_key == "sniper" and key in CLASS_EFFECT_OVERRIDES["sniper"] else f"sid_bprue_shared_{key}_description"),
+                    hint_sid=(f"sid_bprue_sniper_{key}_description" if class_key == "sniper" and key in CLASS_EFFECT_OVERRIDES["sniper"] else f"sid_bprue_ar_{key}_description" if class_key == "assault_rifle" and key == "precision_tuning" else f"sid_bprue_shared_{key}_description"),
                     image=image_for_family(family),
                     icon=icon,
                     cost=round(base_cost * scale),
