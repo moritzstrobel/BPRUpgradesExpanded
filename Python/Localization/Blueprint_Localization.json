@@ -108,9 +108,9 @@
     {
       "sid": "sid_bprue_fire_rate_high_speed_description",
       "languages": {
-        "English": "Pushes the action for 20% faster fire rate, but increases recoil by 15% and weapon wear by 20%. Choosing this fire-rate specialization is permanent.",
-        "Russian": "Ускоряет работу автоматики, повышая темп стрельбы на 20%, но увеличивая отдачу на 15% и износ оружия на 20%. Выбор этой специализации на скорострельность необратим.",
-        "ChineseSimplified": "强化自动机，使射速提升 20%，但后坐力增加 15%、武器磨损增加 20%。选择此射速专精为永久性。"
+        "English": "Reduces firing interval by 12% for aggressive close-range fire, but increases recoil by 15% and weapon wear by 20%. Choosing this fire-rate specialization is permanent.",
+        "Russian": "Сокращает интервал между выстрелами на 12%, но увеличивает отдачу на 15% и износ оружия на 20%. Выбор этой специализации на скорострельность необратим.",
+        "ChineseSimplified": "将射击间隔缩短 12%，但后坐力增加 15%、武器磨损增加 20%。选择此射速专精为永久性。"
       }
     },
     {
@@ -124,9 +124,9 @@
     {
       "sid": "sid_bprue_fire_rate_balanced_description",
       "languages": {
-        "English": "Provides 10% faster fire rate, 10% lower recoil and 10% faster recoil recovery, at the cost of 10% increased weapon wear. Choosing this fire-rate specialization is permanent.",
-        "Russian": "Повышает темп стрельбы на 10%, снижает отдачу на 10% и ускоряет восстановление после отдачи на 10%, но увеличивает износ оружия на 10%. Выбор этой специализации на скорострельность необратим.",
-        "ChineseSimplified": "射速提升 10%、后坐力降低 10%、后坐力恢复加快 10%，但武器磨损增加 10%。选择此射速专精为永久性。"
+        "English": "Reduces firing interval by 5%, recoil by 5% and improves recoil recovery by 15%, at the cost of 10% increased weapon wear. Choosing this fire-rate specialization is permanent.",
+        "Russian": "Сокращает интервал между выстрелами на 5%, снижает отдачу на 5% и улучшает восстановление после отдачи на 15%, но увеличивает износ оружия на 10%. Выбор этой специализации на скорострельность необратим.",
+        "ChineseSimplified": "射击间隔缩短 5%、后坐力降低 5%、后坐力恢复改善 15%，但武器磨损增加 10%。选择此射速专精为永久性。"
       }
     },
     {
