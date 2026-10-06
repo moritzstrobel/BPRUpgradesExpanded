@@ -203,6 +203,8 @@ The second would be a Long-Range branch, focusing on Aimed Accuracy (which only 
 
 - ~~Recoil Control : OK.~~  
 ~~Precision Tuning : Doesn't really improve precision in a meaningful way. In my opinion, it should increase Flatness or reduce Damage Drop-off instead of improving Spread.~~  
+> **DONE (source only)** — AR Precision Tuning now grants +10% flatness and +5% damage drop-off length instead of −15% dispersion; +8% recoil penalty retained. Recoil Control and Controlled Action remain unchanged. AR-only override and description; CFG regeneration and in-game validation pending.
+
 ~~Competition Reload System : OK in principe (I would just switch the Recoil malus to a heavy Spread malus).~~  
 
 > **DONE** — Competition Reload recoil penalty replaced by dispersion penalty; value chosen is 5%, not the proposed heavy penalty.
