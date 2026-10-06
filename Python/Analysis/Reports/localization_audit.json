@@ -55,13 +55,11 @@
     }
   },
   "effects": {
-    "referenced_effect_count": 212,
+    "referenced_effect_count": 211,
     "visible_effect_count": 174,
     "vanilla_localization_count": 39,
-    "error_count": 1,
-    "errors": [
-      "DistanceDropOffLengthPos5Effect: referenced by BaseGame, DLC1, PreOrder but no effect prototype could be resolved"
-    ],
+    "error_count": 0,
+    "errors": [],
     "effects": [
       {
         "sid": "AimingMovementNeg10Effect",
@@ -1871,6 +1869,7 @@
           "BaseGame",
           "DLC1",
           "Deluxe",
+          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
@@ -3216,19 +3215,6 @@
         "status": "ok"
       },
       {
-        "sid": "DistanceDropOffLengthPos5Effect",
-        "scopes": [
-          "BaseGame",
-          "DLC1",
-          "PreOrder"
-        ],
-        "visible": true,
-        "localization_sid": null,
-        "resolution_chain": [],
-        "sources": [],
-        "status": "unresolved"
-      },
-      {
         "sid": "DurabilityPerShotPos20Effect",
         "scopes": [
           "BaseGame",
@@ -3797,5 +3783,5 @@
   },
   "unique_missing_upgrade_sid_count": 0,
   "missing_upgrade_sids": {},
-  "error_count": 1
+  "error_count": 0
 }
