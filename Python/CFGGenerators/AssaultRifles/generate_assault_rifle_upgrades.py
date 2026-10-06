@@ -124,12 +124,12 @@ CALIBER_EFFECTS = {
 # Complete, direction-specific conversion profiles. Specializations inherit these
 # values and replace ammunition access, rather than stacking onto Default modules.
 CALIBER_BASE_EFFECTS = {
-    "A762Sniper": ("BPRUE_DamagePos5Effect", "BPRUE_RecoilPenalty25Effect", "BPRUE_DurabilityPerShotNeg20Effect", "BPRUE_Shared_FlatnessPenalty5Effect", "DistanceDropOffLengthPos5Effect"),
+    "A762Sniper": ("BPRUE_DamagePos5Effect", "BPRUE_RecoilPenalty25Effect", "BPRUE_DurabilityPerShotNeg20Effect", "BPRUE_Shared_FlatnessPenalty5Effect", "BPRUE_Shared_DropOffLengthPos5Effect"),
     "A762NATO": ("BPRUE_DamagePos5Effect", "BPRUE_RecoilPenalty20Effect", "BPRUE_DurabilityPerShotNeg15Effect", "FlatnessUp5Effect", "DistanceDropOffLengthPos10Effect"),
     "A762": ("BPRUE_DamagePos5Effect", "BPRUE_RecoilPenalty15Effect", "BPRUE_DurabilityPerShotNeg10Effect", "BPRUE_Shared_FlatnessPenalty10Effect", "BPRUE_Shared_DropOffPenalty10Effect"),
 }
 # 9x39 to 7.62x39 is not equivalent to 5.45 to 7.62x39.
-GVINTAR_762_BASE_EFFECTS = ("ProjectileSpeedPos5Effect", "DistanceDropOffLengthPos5Effect", "BPRUE_RecoilPenalty15Effect", "BPRUE_DurabilityPerShotNeg10Effect")
+GVINTAR_762_BASE_EFFECTS = ("ProjectileSpeedPos5Effect", "BPRUE_Shared_DropOffLengthPos5Effect", "BPRUE_RecoilPenalty15Effect", "BPRUE_DurabilityPerShotNeg10Effect")
 
 DEFAULT_ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_Recoil.T_PDA_Upgrades_Icon_Recoil'"
 CALIBER_ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_CaliberChange.T_PDA_Upgrades_Icon_CaliberChange'"
