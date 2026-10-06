@@ -12,6 +12,11 @@ This file tracks **implemented changes**, not planned features. Entries under **
 - **Sniper / DMR – Benchrest:** Reduced recoil-control bonus from +15% to +10%.
 - **Sniper / DMR – Precision Stock:** Removed the +20% shot-recovery bonus. Stability, recoil control and slower aiming remain.
 - **Assault rifles – Stabilized Stock:** Reduced shot-recovery bonus from +20% to +10%; other effects remain unchanged.
+- **Assault rifles – Balanced Fire Rate:** Reduced shot-recovery bonus from +20% to +10%.
+- **Assault rifles – Competition Reload:** Replaced the 15% recoil penalty with the existing 5% dispersion penalty; the 20% faster reload remains.
+- **Assault rifles – Reinforced Reload:** Removed the 10% faster reload bonus; reduced weapon wear per shot and slower firing cycle remain.
+- **Sniper / DMR – Match Barrel:** Reduced dispersion-improvement bonus from +25% to +15%.
+- **Sniper / DMR – Heavy Barrel:** Reduced shot-recovery bonus from +20% to +10%.
 - Updated affected module descriptions in English, Russian and Simplified Chinese.
 
 ### Development notes
