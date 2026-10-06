@@ -15,7 +15,7 @@ MODULE_EFFECTS = {
     "recoil_control": ("RecoilPos15Effect", "BPRUE_Shared_DispersionPenalty5Effect"),
     "precision_tuning": ("DispersionPos15Effect", "BPRUE_Shared_RecoilPenalty8Effect"),
     "high_cyclic_system": ("BPRUE_Shared_FireIntervalNeg12Effect", "BPRUE_Shared_RecoilPenalty10Effect", "BPRUE_Shared_DurabilityPerShotPenalty8Effect"),
-    "controlled_action": ("BPRUE_Shared_FireIntervalPenalty10Effect", "RecoilPos10Effect", "DispersionPos10Effect"),
+    "controlled_action": ("BPRUE_Shared_FireIntervalPenalty10Effect", "RecoilPos5Effect", "DispersionPos15Effect"),
     "soft_target": ("DamagePos15Effect", "FlatnessUp10Effect", "ProjectileSpeedPos10Effect", "BPRUE_Shared_ArmorPiercingPenalty20Effect"),
     "armor_piercing": ("ArmorPiercingPos25Effect", "CoverPiercingPos20Effect", "BPRUE_Shared_DamagePenalty10Effect"),
     "hardened_components": ("DurabilityPos20Effect", "BPRUE_Shared_WeightPenalty5Effect"),
