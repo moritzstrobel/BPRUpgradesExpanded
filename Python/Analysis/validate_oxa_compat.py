@@ -130,6 +130,20 @@ def _apply_against_vanilla(report: dict, actual: dict[tuple[str, str], dict]) ->
 
 def validate(report: dict, compat_root: Path) -> dict:
     actual, syntax_errors = parse_compat(compat_root)
+    # This validator checks the three-way Vanilla/BPRUE/OXA merge only.
+    # OXA-native weapons and Edition projections have their own generation
+    # paths and must not be compared to the base analyzer's candidate set.
+    # Filter by source file, not prototype: the same setup SID may also be
+    # patched legitimately by the base compatibility generator.
+    integration_suffixes = (
+        "_patch_BPRUE_OXA_Weapons.cfg",
+        "_patch_BPRUE_OXA_Editions.cfg",
+    )
+    actual = {
+        key: group
+        for key, group in actual.items()
+        if not group["source"].endswith(integration_suffixes)
+    }
     expected, unresolved = expected_groups(report)
 
     missing = []
