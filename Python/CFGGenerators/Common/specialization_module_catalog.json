@@ -131,6 +131,9 @@
     }
   },
   "class_effect_overrides": {
+    "assault_rifle": {
+      "precision_tuning": "Flatness +10%, damage drop-off length +5%, recoil control -8%"
+    },
     "sniper": {
       "range_configuration": "Flatness +15%, damage drop-off length +10%, aiming speed -10%",
       "cqb_configuration": "Aiming speed +15%, dispersion +10%, flatness -10%, recoil recovery -10%",
