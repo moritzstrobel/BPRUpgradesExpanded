@@ -7,6 +7,7 @@ This file tracks **implemented changes**, not planned features. Entries under **
 ## [Unreleased]
 
 ### Changed
+- **Shared ballistic modules (generator only):** Reworked Soft-Target into an experimental bleeding-chance profile (+10% BleedingChancePerShot, −10% CoverPiercing) and renamed Armor-Piercing to Barrier Module (+20% CoverPiercing, −10% weapon damage). Both no longer modify ArmorPiercing; upgrade SIDs and mutual blocking remain unchanged. Updated catalog and EN/RU/ZH localization. **Bleeding percentage semantics are unverified** (relative/additive/absolute), so CFG regeneration and in-game balancing validation are required before release.
 - **DMR/Sniper module profiles (generator only):** Range Configuration, CQB Configuration and Precision Tuning now use sniper-specific effect bundles. Existing upgrade SIDs and blocking remain intact; regeneration and in-game save verification pending.
 - **AR fire-control specializations (generator only):** Burst replaces automatic with semi-auto + burst; Precision retains semi-auto only, trades former damage/AP bonuses for +15% maximum-dispersion accuracy, +10% recoil recovery and -10% aiming movement. Localization updated; regeneration and in-game verification pending.
 - **SMG conversion specializations (generator only):** M10, Bucket and Zubr variants inherit full Default profiles. AP adds 5% armor penetration; Expanding uses ammunition modifiers. Existing conversion choices and restrictions remain intact. Localization updated; regeneration and testing pending.
