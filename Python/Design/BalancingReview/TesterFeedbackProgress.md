@@ -54,9 +54,9 @@ Repair costs are very easy to modify, as all modules and upgrades have a RepairC
    
 ## a) VS Vintar  
    
-In the current version of your mod, the VS Vintar is treated as an Assault Rifle and not a DMR/Sniper. The AS Lavina is explicitly an assault version of the VS Vintar and I think the VS Vintar should instead benefits from the DMR/Snipers modules.
+~~In the current version of your mod, the VS Vintar is treated as an Assault Rifle and not a DMR/Sniper. The AS Lavina is explicitly an assault version of the VS Vintar and I think the VS Vintar should instead benefits from the DMR/Snipers modules.~~
 
-> **OPEN** — VS Vintar remains in the AR configuration; moving it to DMR/Sniper modules was not part of the conversion balancing pass.  
+> **DONE (generator sources)** — VS Vintar moved to Sniper/DMR modules, while AS Lavina remains AR. Merc unique now follows the Vintar Sniper family. The existing Vintar 7.62×39 conversion SIDs and profiles are retained; AR specialization slots are intentionally removed (breaking change for saves). **OPEN validation:** unified CFG regeneration, Merc unique behavior, save compatibility and gameplay checks.  
    
 ## b) Modules  
    
