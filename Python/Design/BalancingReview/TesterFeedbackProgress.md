@@ -109,14 +109,14 @@ Lightweight Stock : OK.
 
 > **ADDRESSED (source only)** — Adjusted Adjustable Stock instead of removing it; pending in-game validation.
 
-Precision Stock : OP. It provides 2 instances of improved Aiming Stability and should only improve Recoil Recovery instead of Recoil.  
+~~Precision Stock : OP. It provides 2 instances of improved Aiming Stability and should only improve Recoil Recovery instead of Recoil.~~  
 
 > **DECIDED (source updated)** — Precision Stock was rebalanced with +30% sway stability on both axes, +20% recoil control and −15% aiming speed. Replacing recoil control with recovery was not adopted. No further source change planned before gameplay testing.
 
 Hardened Components : OK in principle (types of bonus/malus are fine).  
 Lightweight Components : OK in principle (types of bonus/malus are fine).  
-Range Configuration : Should be removed. It doesn't add anything meaningful to the role of a DMR or sniper rifle, as these weapons are already excellent at long range.  
-CQB Configuration : OK in principle. In my opinion, it should come with a Recoil Recovery penalty, since Spread affects both ADS and hip-fire dispersion.  
+~~Range Configuration : Should be removed. It doesn't add anything meaningful to the role of a DMR or sniper rifle, as these weapons are already excellent at long range.~~  
+~~CQB Configuration : OK in principle. In my opinion, it should come with a Recoil Recovery penalty, since Spread affects both ADS and hip-fire dispersion.~~  
 Soft-Target Module and Armor-Piercing Module : Should be removed.  
 Benchrest Setup : Needs to be reworked overall, as it provides far too many benefits to all DMRs and sniper rifles, regardless of whether they are fully automatic or not.  
 
@@ -132,13 +132,13 @@ Snapshooter : OK.
 > **ADDRESSED (source only)** — Field Marksman now has an aiming-time penalty instead of the recovery buff; retained as a meaningful option.
 
 Recoil Control : OK.  
-Precision Tuning : Doesn't really improve precision in a meaningful way. In my opinion, it should increase Flatness or reduce Damage Drop-off instead of improving Spread.  
+~~Precision Tuning : Doesn't really improve precision in a meaningful way. In my opinion, it should increase Flatness or reduce Damage Drop-off instead of improving Spread.~~  
 High-Velocity Ballistics : OK in principle (types of bonus/malus are fine).  
-Match Barrel : OP with current values, but OK in principle. It should come with a Durability penalty imo.  
+~~Match Barrel : OP with current values, but OK in principle. It should come with a Durability penalty imo.~~  
 
 > **DECIDED (source updated)** — Match Barrel dispersion benefit reduced to 15%; aiming-time penalty retained at 10%. A durability downside was not adopted. Gameplay validation remains.
 
-Heavy Barrel : OP with current values, but OK in principle. It should come with a Readiness penalty imo.  
+~~Heavy Barrel : OP with current values, but OK in principle. It should come with a Readiness penalty imo.~~  
 
 > **DECIDED (source updated)** — Heavy Barrel recovery reduced to 10%; weight and aiming-time penalties remain. An additional readiness penalty was not adopted. Gameplay validation remains.
 
@@ -179,15 +179,15 @@ The second would be a Long-Range branch, focusing on Aimed Accuracy (which only 
    
 a) Firing mode modules  
    
-Precision Fire Control : In my opinion, this is a rather pointless module. ARs already have fairly low recoil when firing in semi-auto, and forcing an AR to fire exclusively in semi-auto isn't particularly interesting unless it also comes with HUGE damage boosts, like the unique Clusterf*#@ and Jagerblick ARs. However, giving the module such massive damage boosts would reduce the uniqueness of those two weapons. I think this module should therefore be removed.  
-Burst Fire Control : This is more interesting, but because it gives access to full-auto, it still isn't particularly interesting as a specialization option. In my opinion, Burst Fire should instead replace Full Auto, leaving the weapon with only Semi-Auto and Burst Fire. This is the one exception where I wouldn't add an additional penalty : the penalty is already built into the loss of Full Auto.
+~~Precision Fire Control : In my opinion, this is a rather pointless module. ARs already have fairly low recoil when firing in semi-auto, and forcing an AR to fire exclusively in semi-auto isn't particularly interesting unless it also comes with HUGE damage boosts, like the unique Clusterf*#@ and Jagerblick ARs. However, giving the module such massive damage boosts would reduce the uniqueness of those two weapons. I think this module should therefore be removed.~~  
+~~Burst Fire Control : This is more interesting, but because it gives access to full-auto, it still isn't particularly interesting as a specialization option. In my opinion, Burst Fire should instead replace Full Auto, leaving the weapon with only Semi-Auto and Burst Fire. This is the one exception where I wouldn't add an additional penalty : the penalty is already built into the loss of Full Auto.~~
 
 > **PARTIAL (generator only):** Precision Fire Control is retained as a semi-auto-only handling specialization (15% lower maximum dispersion, 10% faster recoil recovery, 10% slower aiming movement), rather than removed. Burst Fire Control now replaces Full Auto with Semi + Burst. Its existing 5% recoil benefit and 10% additional wear remain, so the proposal to use mode loss as the sole trade-off was not adopted. Regeneration and in-game checks are pending.  
    
    
 b) Caliber conversion modules  
    
-Overall, I think that, just like with DMRs/snipers, the single generic caliber conversion should be retained instead of dividing the bonuses and penalties between three different ammunition types every time for the same reason as the DMR/Snipers.
+~~Overall, I think that, just like with DMRs/snipers, the single generic caliber conversion should be retained instead of dividing the bonuses and penalties between three different ammunition types every time for the same reason as the DMR/Snipers.~~
 
 > **DECIDED — not adopted:** Keep Default/AP/Supersonic (and 7.62×39 Expanding) as mutually exclusive full conversion choices. All variants now inherit the same directional baseline rather than each having an unrelated set of stats. They are not cumulative modules; ammo access remains specialized. Generated output still needs in-game verification.  
    
@@ -195,7 +195,7 @@ Just like with DMRs/snipers, I think you should be careful with ammo conversions
 
 > **PARTIAL — balance changed, economy unverified:** Reduced unconditional damage/AP buffs in existing 5.45 → 7.62×54R and 5.56 → .308 conversions, with recoil/wear and trajectory/drop-off trade-offs. Retained the conversions for AK74, G37, M16 and Arev instead of removing or replacing them. The reported rarity and actual cost-effectiveness of each caliber require gameplay testing. Dnipro's vanilla conversion remains untouched.  
    
-For the AR family of rifles, I think we should stick to AR calibers, with a few carefully chosen exceptions to avoid making unique ARs with unique ammo conversions obsolete, such as the unique AREv (Warzsawa) or the AKM-9B.
+~~For the AR family of rifles, I think we should stick to AR calibers, with a few carefully chosen exceptions to avoid making unique ARs with unique ammo conversions obsolete, such as the unique AREv (Warzsawa) or the AKM-9B.~~
 
 > **DECIDED — different scope:** No conversion-matrix redesign in this pass. Existing BPRUE target calibers and special cases remain, as do vanilla ownership exclusions. The preference for only AR-native calibers is not implemented; unique and magazine plausibility should be revisited only if testing identifies a problem.  
    
@@ -227,11 +227,11 @@ Dnipro : No change, keep it like vanilla.
 d) Modules   
    
 Lightweight Stock : OK.  
-Stabilized Stock : OP. It should be removed. It is simply too good overall, regardless of what you want the weapon to specialize in, and clearly overshadows all the other options.  
+~~Stabilized Stock : OP. It should be removed. It is simply too good overall, regardless of what you want the weapon to specialize in, and clearly overshadows all the other options.~~  
 
 > **DECIDED (source updated)** — Stabilized Stock was rebalanced rather than removed: +15% recoil control, +10% recoil recovery, −10% aiming speed. No further source change planned before gameplay testing.
 
-Marksman Stock : OK in principe, but needs a slight rework. It should focus on Aimed Stability and Aimed Accuracy, while keeping Aiming Speed as its penalty.
+~~Marksman Stock : OK in principe, but needs a slight rework. It should focus on Aimed Stability and Aimed Accuracy, while keeping Aiming Speed as its penalty.~~
 
 > **ADDRESSED (source only)** — Already provides +20% sway stability on both axes, +15% maximum-dispersion accuracy and −15% aiming speed. Review considered complete pending gameplay testing.  
 
@@ -246,12 +246,12 @@ High-Cyclic System and Controlled Action : These are completely redundant with H
 Quality Pencil Barrel (Assault): +Readiness, +Slowing Spread Increase, -Recoil Recovery.  
 Reinforced Heavy Barrel (Long Range): +Aimed Accuracy, +Flatness, +Damage Drop-off, -Aiming Speed, +Weight (more weight), -Speed while aiming.  
 Recoil Control : OK.  
-Precision Tuning : Doesn't really improve precision in a meaningful way. In my opinion, it should increase Flatness or reduce Damage Drop-off instead of improving Spread.  
+~~Precision Tuning : Doesn't really improve precision in a meaningful way. In my opinion, it should increase Flatness or reduce Damage Drop-off instead of improving Spread.~~  
 ~~Competition Reload System : OK in principe (I would just switch the Recoil malus to a heavy Spread malus).~~  
 
 > **ADDRESSED (source only)** — Competition Reload recoil penalty replaced by dispersion penalty; value chosen is 5%, not the proposed heavy penalty.
 
-Reinforced Feed System : OK in principle (I would remove the bonus to Reload Speed however and switch the current bonus to Wear & Tear since the bonus to external wear & tear is straight up inferior since it doesn't always apply).  
+~~Reinforced Feed System : OK in principle (I would remove the bonus to Reload Speed however and switch the current bonus to Wear & Tear since the bonus to external wear & tear is straight up inferior since it doesn't always apply).~~  
 
 > **ADDRESSED (source only)** — Reinforced Feed no longer grants reload speed; its profile now uses +20% durability per shot and a 5% fire-interval penalty. Gameplay validation remains.
 
