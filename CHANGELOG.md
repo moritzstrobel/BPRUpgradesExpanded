@@ -7,6 +7,7 @@ This file tracks **implemented changes**, not planned features. Entries under **
 ## [Unreleased]
 
 ### Changed
+- DMR/Sniper module profiles (generator only): Range Configuration, CQB Configuration and Precision Tuning now use sniper-specific effect bundles. Existing upgrade SIDs and blocking remain intact; regeneration and in-game save verification pending.
 - AR fire-control specializations (generator only): Burst replaces automatic with semi-auto + burst; Precision retains semi-auto only, trades former damage/AP bonuses for +15% maximum-dispersion accuracy, +10% recoil recovery and -10% aiming movement. Localization updated; regeneration and in-game verification pending.
 - SMG conversion specializations (generator only): M10, Bucket and Zubr variants inherit full Default profiles. AP adds 5% armor penetration; Expanding uses ammunition modifiers. Existing conversion choices and restrictions remain intact. Localization updated; regeneration and testing pending.
 - **AR caliber conversions (generator only):** Added complete shared Default/AP/Supersonic profiles for 5.45 to 7.62x54R and 5.56 to .308, and Default/AP/Expanding for 7.62x39. Reduced unconditional damage/AP gains and introduced trajectory, damage-drop-off, recoil and wear trade-offs. VS Vintar (9x39 to 7.62x39) uses a separate baseline. Ammo restrictions, variant blocking and vanilla-owned conversions remain unchanged. Updated EN/RU/ZH descriptions; regenerated and pushed by maintainer; in-game validation pending.
