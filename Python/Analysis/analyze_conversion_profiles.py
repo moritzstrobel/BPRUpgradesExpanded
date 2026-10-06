@@ -44,7 +44,7 @@ def effect_label(sid: str) -> str:
     )
     value = sid
     for old, new in replacements:
-        value = value.replace(old, new)
+        value = value.replace(old, new) if old != "Effect" else re.sub(r"Effect$", "", value)
     value = re.sub(r"(?<=\D)(\d+)$", r" \1%", value)
     return re.sub(r"\s+", " ", value).strip()
 
