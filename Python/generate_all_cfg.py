@@ -230,6 +230,8 @@ def render_weapon_sections_patch(model, content_pack=None):
         lines = [f"{weapon_sid} : struct.begin {{bpatch}}", "   SectionSettings : struct.begin {bpatch}"]
         for entry, position, moved in changed:
             lines += [f"      [{entry['index']}] : struct.begin {{bpatch}}", "         SectionIsEnabled = true"]
+            if entry["target"] in ("EUpgradeTargetPartType::Barrel", "EUpgradeTargetPartType::Handguard"):
+                lines.append("         ModuleLineDirection = ELineDirection::Left")
             if moved: lines += [f"         // BPRUE hotspot moved from ({entry['origin'][0]:.6f}, {entry['origin'][1]:.6f}) for UI spacing", f"         LeftPosition = {position[0]:.6f}", f"         TopPosition = {position[1]:.6f}"]
             lines.append("      struct.end")
         lines += ["   struct.end", "struct.end", ""]; patches.extend(lines)
@@ -270,6 +272,7 @@ def render_conversion_weapon_prototypes(model):
                     continue
                 sections.append({
                     "index": _section_index(section),
+                    "target": target,
                     "enabled": (_direct_scalar(section, "SectionIsEnabled") or "").lower() == "true",
                     "origin": (left, top),
                 })
@@ -297,6 +300,8 @@ def render_conversion_weapon_prototypes(model):
                     f"      [{entry['index']}] : struct.begin {{bpatch}}",
                     "         SectionIsEnabled = true",
                 ]
+                if entry["target"] in ("EUpgradeTargetPartType::Barrel", "EUpgradeTargetPartType::Handguard"):
+                    lines.append("         ModuleLineDirection = ELineDirection::Left")
                 if moved:
                     lines += [
                         f"         // BPRUE hotspot moved from ({entry['origin'][0]:.6f}, {entry['origin'][1]:.6f}) for UI spacing",
