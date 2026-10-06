@@ -4,10 +4,10 @@
 
 ## Remaining non-technical design / balancing decisions (2026-10-06)
 
-The original feedback below is preserved. An alternative balancing decision is not automatically an open task; source-level changes still need in-game validation.
+**IMPLEMENTED (generator only) — DMR/Sniper range/precision pass:** Range Configuration now uses +15% flatness, +10% damage drop-off length, −10% aiming speed; CQB Configuration adds −10% recoil recovery; Precision Tuning now uses +10% flatness, +10% damage drop-off length, −8% recoil control. Existing upgrade SIDs and blocking relationships are retained. Other classes keep shared effects. Regeneration, localization integration, and in-game/save verification remain pending.\n\nThe original feedback below is preserved. An alternative balancing decision is not automatically an open task; source-level changes still need in-game validation.
 
 - **OPEN — cross-weapon:** Decide whether standalone Armor-Piercing / Soft-Target modules should remain, be removed or become upgrades; separately review repair-cost scaling via `RepairCostModifier`.
-- **OPEN — DMR/Sniper:** VS Vintar classification; Range Configuration usefulness/removal; CQB Configuration recovery penalty; Precision Tuning's spread versus flatness/drop-off role.
+- **OPEN — DMR/Sniper:** VS Vintar classification. Range Configuration, CQB Configuration and Precision Tuning have been rebalanced in generator source; gameplay validation is pending.
 - **PARTIAL — DMR/Sniper:** Benchrest's overall role versus other modules; recoil has already been reduced. Other stock and barrel decisions are considered addressed or explicitly decided pending gameplay tests.
 - **OPEN — AR:** Tuned Gas System fire-rate bonus; Precision Tuning's spread versus flatness/drop-off role.
 - **PARTIAL — AR:** High-Cyclic / Controlled Action differentiation and the wider assault-versus-long-range branch concept. Stocks, reload modules and fire-mode decisions are considered handled at source level.
