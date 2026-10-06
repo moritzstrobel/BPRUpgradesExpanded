@@ -23,12 +23,12 @@ PATTERN = {
 ACTION = {
     'high_speed': ('High-Speed Action', 'Cuts the firing cycle by 20%, but increases recoil by 15% and weapon wear by 20%.', 3200, ['BPRUE_FireIntervalNeg20Effect', 'BPRUE_SG_RecoilPenalty15Effect', 'BPRUE_DurabilityPerShotNeg20Effect']),
     'tuned': ('Tuned Action', 'Cuts the firing cycle by 10% and reduces recoil by 10%, at the cost of 10% increased weapon wear.', 3000, ['BPRUE_FireIntervalNeg10Effect', 'RecoilDown10Effect', 'BPRUE_DurabilityPerShotNeg10Effect']),
-    'reinforced': ('Reinforced Action', 'Slows the firing cycle by 10% in exchange for 15% less recoil and 20% faster recoil recovery.', 3000, ['BPRUE_SG_FireIntervalPos10Effect', 'RecoilDown15Effect', 'ShotRecoveryPos20Effect']),
+    'reinforced': ('Reinforced Action', 'Slows the firing cycle by 10% in exchange for 15% less recoil and 20% faster recoil recovery.', 3000, ['BPRUE_SG_FireIntervalPos10Effect', 'RecoilDown15Effect', 'ShotRecoveryPos10Effect']),
 }
 HANDLING = {
     'lightweight': ('Lightweight Furniture', 'Cuts weapon weight by 15% and speeds aiming by 15%, but increases recoil by 15%.', 2800, ['WeightDown15Effect', 'AimingTimePos15Effect', 'BPRUE_SG_RecoilPenalty15Effect']),
     'combat': ('Combat Furniture', 'Improves close-range handling with 10% faster aiming, 10% faster movement while aiming and 10% faster recoil recovery, but increases weapon wear by 10%.', 3000, ['AimingTimePos10Effect', 'AimingMovementPos10Effect', 'ShotRecoveryPos10Effect', 'BPRUE_DurabilityPerShotNeg10Effect']),
-    'stabilized': ('Stabilized Furniture', 'Reduces recoil by 15% and improves recoil recovery by 20%, but makes the weapon 5% heavier and aiming 10% slower.', 3200, ['RecoilDown15Effect', 'ShotRecoveryPos20Effect', 'BPRUE_SG_WeightPos5Effect', 'AimingTimeNeg10Effect']),
+    'stabilized': ('Stabilized Furniture', 'Reduces recoil by 15% and improves recoil recovery by 20%, but makes the weapon 5% heavier and aiming 10% slower.', 3200, ['RecoilDown15Effect', 'ShotRecoveryPos10Effect', 'BPRUE_SG_WeightPos5Effect', 'AimingTimeNeg10Effect']),
 }
 GROUPS = [('Pattern', PATTERN, 'Barrel'), ('Action', ACTION, 'Body'), ('Handling', HANDLING, 'Body')]
 
