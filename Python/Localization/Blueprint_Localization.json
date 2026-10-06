@@ -140,9 +140,9 @@
     {
       "sid": "sid_bprue_fire_control_burst_description",
       "languages": {
-        "English": "Adds a three-round burst mode while retaining semi-automatic and automatic fire. Recoil is reduced by 5%, but weapon wear increases by 10%. Choosing this fire-control specialization is permanent.",
-        "Russian": "Добавляет режим отсечки по три выстрела, сохраняя одиночный и автоматический огонь. Отдача снижается на 5%, но износ оружия увеличивается на 10%. Выбор этой специализации по управлению огнем является необратимым.",
-        "ChineseSimplified": "在保留半自动与全自动射击的同时加入三发点射模式。后坐力降低 5%，但武器磨损增加 10%。选择此击发控制专精为永久性。"
+        "English": "Replaces automatic fire with three-round bursts; only semi-automatic and burst modes remain. Recoil is reduced by 5%, but weapon wear increases by 10%. This specialization is permanent.",
+        "Russian": "Заменяет автоматический огонь отсечкой по три выстрела: остаются только одиночный огонь и отсечка. Отдача снижается на 5%, износ увеличивается на 10%. Специализация необратима.",
+        "ChineseSimplified": "将全自动射击替换为三发点射，仅保留半自动和点射模式。后坐力降低5%，武器磨损增加10%。此专精不可撤销。"
       }
     },
     {
@@ -156,9 +156,9 @@
     {
       "sid": "sid_bprue_fire_control_precision_description",
       "languages": {
-        "English": "Reconfigures the fire-control group for semi-automatic fire only, removing automatic and burst modes. In exchange, damage is increased by 10% and armor penetration by 15%, while weapon wear increases by 20%. Choosing this fire-control specialization is permanent.",
-        "Russian": "Перенастраивает ударно-спусковой механизм только на одиночный огонь, отключая автоматический режим и отсечку очереди. Взамен урон увеличивается на 10%, бронепробиваемость — на 15%, а износ оружия — на 20%. Выбор этой специализации по управлению огнем является необратимым.",
-        "ChineseSimplified": "将击发机构重新配置为仅支持半自动射击，移除全自动与点射模式。作为交换，伤害提升 10%、护甲穿透提升 15%，但武器磨损增加 20%。选择此击发控制专精为永久性。"
+        "English": "Restricts the weapon to semi-automatic fire. Improves accuracy (maximum dispersion) by 15% and recoil recovery by 10%, but reduces movement speed while aiming by 10%. This specialization is permanent.",
+        "Russian": "Оставляет только одиночный режим. Улучшает точность (максимальный разброс) на 15% и восстановление после отдачи на 10%, но снижает скорость движения при прицеливании на 10%. Специализация необратима.",
+        "ChineseSimplified": "仅保留半自动射击。最大散布改善15%，后坐力恢复改善10%，但瞄准移动速度降低10%。此专精不可撤销。"
       }
     },
     {
