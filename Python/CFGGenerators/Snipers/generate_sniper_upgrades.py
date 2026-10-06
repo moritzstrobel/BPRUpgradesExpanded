@@ -88,6 +88,21 @@ def build_upgrades(config):
                 current=f"{prefix}_Upgrade_BPRUE_Sniper_Caliber_{conversion['suffix']}{suffix}"
                 effects=(conversion["change_effect"],conversion["remove_effect"],ammo_effect,*conversion["base_effects"],*stats)
                 upgrades.append(UpgradeDefinition(sid=current,general_setup_sid=setup,weapon_class='Sniper',group='Caliber',target_part='Body',text_sid=text,hint_sid=hint,image=IMAGE,icon=CALIBER_ICON,cost=round(conversion["cost"]*scale),effects=tuple(effects),blocking_sids=tuple(x for x in variant_sids if x!=current) + ((VANILLA_AMMO_CONFLICTS[prefix],) if prefix in VANILLA_AMMO_CONFLICTS else ()),template_sid=TEMPLATE_SID,layout_group=f"Caliber_{conversion['target']}",module_image=icon))
+        # Preserve the existing VS Vintar 9x39 -> 7.62x39 conversion SIDs,
+        # including their Default/AP/Expanding ammo restrictions and effects.
+        # Only specialization modules change class; conversions stay compatible.
+        if prefix == "GunGvintar":
+            from CFGGenerators.AssaultRifles import generate_assault_rifle_upgrades as ar
+            ar_family = {
+                "weapon_sid": family["weapon_sid"],
+                "general_setup_sid": setup,
+                "prototype_prefix": prefix,
+                "base_caliber": "A939",
+                "additional_caliber_conversions": ["A762"],
+                "image": IMAGE,
+            }
+            for old in ar.build_upgrades({"families": {"Gvintar": ar_family}, "module_groups": {}}):
+                upgrades.append(UpgradeDefinition(**{**old.__dict__, "weapon_class": "Sniper"}))
         for group,definitions,target,vertical in GROUPS:
             group_sids=[module_sid(prefix,group,key) for key in definitions]
             for key,(cost,effects) in definitions.items():
