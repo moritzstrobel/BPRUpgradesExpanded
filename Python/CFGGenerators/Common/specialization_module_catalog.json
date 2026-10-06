@@ -71,21 +71,18 @@
         "soft_target": {
           "display_name": "Soft-Target Module",
           "effects": [
-            {"effect_sid": "DamagePos15Effect", "stat": "weapon_damage", "value_percent": 15},
-            {"effect_sid": "FlatnessUp10Effect", "stat": "effective_fire_distance", "value_percent": 10},
-            {"effect_sid": "ProjectileSpeedPos10Effect", "stat": "projectile_velocity", "value_percent": 10},
-            {"stat": "armor_piercing", "value_percent": -20}
+            {"stat": "bleeding_chance_per_shot", "value_percent": 10},
+            {"stat": "cover_piercing", "value_percent": -10}
           ],
-          "identity": "High terminal performance and flatter, faster projectiles against lightly protected targets, sacrificing armor penetration."
+          "identity": "Experimental wounding profile: improves bleeding chance with reduced cover penetration; engine percentage semantics require in-game validation."
         },
         "armor_piercing": {
-          "display_name": "Armor-Piercing Module",
+          "display_name": "Barrier Module",
           "effects": [
-            {"effect_sid": "ArmorPiercingPos25Effect", "stat": "armor_piercing", "value_percent": 25},
-            {"stat": "cover_piercing", "value_percent": 20},
+            {"effect_sid": "CoverPiercingPos20Effect", "stat": "cover_piercing", "value_percent": 20},
             {"stat": "weapon_damage", "value_percent": -10}
           ],
-          "identity": "Optimized for armor and cover penetration at the expense of raw terminal damage."
+          "identity": "Penetrates cover more effectively at the expense of raw damage, without changing armor penetration."
         }
       }
     },
