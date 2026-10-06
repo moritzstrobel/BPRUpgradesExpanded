@@ -92,9 +92,9 @@
     {
       "sid": "sid_bprue_pistol_stabilized_description",
       "languages": {
-        "English": "Improves recoil control and recovery at the cost of slower aiming.",
-        "Russian": "Улучшает контроль и восстановление отдачи ценой более медленного прицеливания.",
-        "ChineseSimplified": "提升后坐力控制与恢复，但瞄准速度变慢。"
+        "English": "Improves recoil control and reduces idle sway on both axes by 15%, at the cost of slower aiming.",
+        "Russian": "Улучшает контроль отдачи и уменьшает колебания прицела по обеим осям на 15% ценой более медленного прицеливания.",
+        "ChineseSimplified": "改善后坐力控制，并将两个方向的瞄准晃动降低 15%，但瞄准速度变慢。"
       }
     },
     {
