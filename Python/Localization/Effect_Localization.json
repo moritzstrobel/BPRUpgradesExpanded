@@ -128,6 +128,22 @@
         "Russian": "Режим огня: одиночный",
         "ChineseSimplified": "射击模式：半自动"
       }
+    },
+    {
+      "sid": "sid_effects_bprue_bleeding_chance_name",
+      "languages": {
+        "English": "Bleeding chance",
+        "Russian": "Шанс кровотечения",
+        "ChineseSimplified": "流血几率"
+      }
+    },
+    {
+      "sid": "sid_effects_bprue_cover_piercing_name",
+      "languages": {
+        "English": "Cover penetration",
+        "Russian": "Пробитие укрытий",
+        "ChineseSimplified": "掩体穿透"
+      }
     }
   ]
 }
