@@ -196,10 +196,10 @@ The second would be a Long-Range branch, focusing on Aimed Accuracy (which only 
 - ~~Hardened Components : OK in principle (types of bonus/malus are fine).~~  
 - ~~Lightweight Components : OK in principle (types of bonus/malus are fine).~~  
 - ~~High-Speed Operation : OK in principle (types of bonus/malus are fine).~~  
-- Tuned Gas System : OK in principle but I would remove the increased Fire Rate. The module is already very, very good without it.  
-- High-Cyclic System and Controlled Action : These are completely redundant with High-Speed Operation and Tuned Gas System. They should be entirely reworked and renamed to match the two branches described above, if you decide to go in that direction. 
+~~- Tuned Gas System : OK in principle but I would remove the increased Fire Rate. The module is already very, very good without it.~~  
+~~- High-Cyclic System and Controlled Action : These are completely redundant with High-Speed Operation and Tuned Gas System. They should be entirely reworked and renamed to match the two branches described above, if you decide to go in that direction.~~ 
 
-> **OPEN** — Controlled Action was tuned toward precision, but differentiation from High-Cyclic System and the broader assault/long-range branch design still need a decision.
+> **DONE (source only)** — Preserve two independently exclusive groups, FireRate and Shared Action, with CQB vs. mid/long-range options. High-Speed: −12% FireInterval, +15% recoil, +20% wear; Tuned Gas: −5% FireInterval, +5% recoil control, +15% recovery, +10% wear; AR High-Cyclic: −8% FireInterval, +10% accuracy, +10% recoil, +8% wear; AR Controlled Action: +10% FireInterval, +15% accuracy, +10% recovery. Shared Action changes apply to AR only; SIDs/blockers unchanged. Fire rate deliberately retained as a BPRUE differentiator. Generated CFGs and gameplay validation pending.
 
 - ~~Recoil Control : OK.~~  
 ~~Precision Tuning : Doesn't really improve precision in a meaningful way. In my opinion, it should increase Flatness or reduce Damage Drop-off instead of improving Spread.~~  
