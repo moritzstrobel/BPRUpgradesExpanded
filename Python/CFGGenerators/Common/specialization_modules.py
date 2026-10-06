@@ -28,7 +28,7 @@ MODULE_EFFECTS = {
 # AR and Sniper/DMR effect bundles and descriptions can differ from shared defaults.
 CLASS_EFFECT_OVERRIDES = {
     "assault_rifle": {
-        "precision_tuning": ("FlatnessUp10Effect", "DistanceDropOffLengthPos5Effect", "BPRUE_Shared_RecoilPenalty8Effect"),
+        "precision_tuning": ("FlatnessUp10Effect", "BPRUE_Shared_DropOffLengthPos5Effect", "BPRUE_Shared_RecoilPenalty8Effect"),
         "high_cyclic_system": ("BPRUE_Shared_FireIntervalNeg8Effect", "DispersionPos10Effect", "BPRUE_Shared_RecoilPenalty10Effect", "BPRUE_Shared_DurabilityPerShotPenalty8Effect"),
         "controlled_action": ("BPRUE_Shared_FireIntervalPenalty10Effect", "DispersionPos15Effect", "ShotRecoveryPos10Effect"),
     },
@@ -106,6 +106,7 @@ def render_shared_effects() -> str:
         ("BPRUE_Shared_FireIntervalNeg12Effect", "FireInterval", "-12%", "Positive", "bprue_fire_rate"),
         ("BPRUE_Shared_FireIntervalNeg8Effect", "FireInterval", "-8%", "Positive", "bprue_fire_rate"),
         ("BPRUE_Shared_ShotRecoveryPos15Effect", "ShotRecovery", "15%", "Positive", "bprue_recoil_recovery"),
+        ("BPRUE_Shared_DropOffLengthPos5Effect", "DistanceDropOffLength", "5%", "Positive", "weapon_flatness"),
         ("BPRUE_Shared_FireIntervalPenalty10Effect", "FireInterval", "10%", "Negative", "bprue_fire_rate"),
         ("BPRUE_Shared_DurabilityPerShotPenalty8Effect", "DurabilityPerShot", "8%", "Negative", "bprue_weapon_wear"),
         ("BPRUE_Shared_BleedingChancePos10Effect", "BleedingChancePerShot", "10%", "Positive", "bprue_bleeding_chance"),
