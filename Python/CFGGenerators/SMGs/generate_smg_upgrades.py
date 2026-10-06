@@ -67,7 +67,7 @@ M10_A919_VARIANTS = {
         "text_sid": "sid_bprue_smg_caliber_a919_name",
         "hint_sid": "sid_bprue_smg_caliber_a919_description",
         "ammo_effect": "BPRUE_SMG_ChangeAmmoTypes919Effect",
-        "stat_effects": ("BPRUE_SMG_RecoilPos10Effect", "BPRUE_SMG_EffectiveRangePos10Effect", "BPRUE_SMG_DamagePenalty10Effect"),
+        "stat_effects": (),
         "icon": _ammo_icon("9x19"),
     },
     "AP": {
@@ -75,7 +75,7 @@ M10_A919_VARIANTS = {
         "text_sid": "sid_bprue_smg_caliber_a919_ap_name",
         "hint_sid": "sid_bprue_smg_caliber_a919_ap_description",
         "ammo_effect": "BPRUE_SMG_ChangeAmmoTypes919APEffect",
-        "stat_effects": ("BPRUE_SMG_ArmorPiercingPos15Effect", "BPRUE_SMG_RecoilPos10Effect", "BPRUE_SMG_EffectiveRangePos5Effect", "BPRUE_SMG_DamagePenalty15Effect"),
+        "stat_effects": ("BPRUE_SMG_ArmorPiercingPos5Effect",),
         "icon": _ammo_icon("9x19_ap"),
     },
 }
@@ -87,7 +87,7 @@ M10_A918_VARIANTS = {
         "text_sid": "sid_bprue_smg_caliber_a918_name",
         "hint_sid": "sid_bprue_smg_caliber_a918_description",
         "ammo_effect": "ChangeAmmoTypes918Effect",
-        "stat_effects": ("BPRUE_SMG_RecoilPos15Effect", "BPRUE_SMG_EffectiveRangePos15Effect", "BPRUE_SMG_DamagePenalty15Effect"),
+        "stat_effects": (),
         "icon": _ammo_icon("9x18"),
     },
     "AP": {
@@ -95,7 +95,7 @@ M10_A918_VARIANTS = {
         "text_sid": "sid_bprue_smg_caliber_a918_ap_name",
         "hint_sid": "sid_bprue_smg_caliber_a918_ap_description",
         "ammo_effect": "BPRUE_SMG_ChangeAmmoTypes918APEffect",
-        "stat_effects": ("BPRUE_SMG_ArmorPiercingPos15Effect", "BPRUE_SMG_RecoilPos15Effect", "BPRUE_SMG_EffectiveRangePos10Effect", "BPRUE_SMG_DamagePenalty20Effect"),
+        "stat_effects": ("BPRUE_SMG_ArmorPiercingPos5Effect",),
         "icon": _ammo_icon("9x18_ap"),
     },
 }
@@ -107,7 +107,7 @@ BUCKET_A919_VARIANTS = {
         "text_sid": "sid_bprue_smg_caliber_a919_name",
         "hint_sid": "sid_bprue_smg_caliber_a919_description",
         "ammo_effect": "BPRUE_SMG_ChangeAmmoTypes919Effect",
-        "stat_effects": ("BPRUE_SMG_DamagePos10Effect", "BPRUE_SMG_EffectiveRangePos10Effect", "BPRUE_SMG_RecoilPenalty10Effect", "BPRUE_DurabilityPerShotNeg10Effect"),
+        "stat_effects": (),
         "icon": _ammo_icon("9x19"),
     },
     "AP": {
@@ -115,7 +115,7 @@ BUCKET_A919_VARIANTS = {
         "text_sid": "sid_bprue_smg_caliber_a919_ap_name",
         "hint_sid": "sid_bprue_smg_caliber_a919_ap_description",
         "ammo_effect": "BPRUE_SMG_ChangeAmmoTypes919APEffect",
-        "stat_effects": ("BPRUE_SMG_DamagePos5Effect", "BPRUE_SMG_ArmorPiercingPos15Effect", "BPRUE_SMG_EffectiveRangePos5Effect", "BPRUE_SMG_RecoilPenalty15Effect", "BPRUE_DurabilityPerShotNeg10Effect"),
+        "stat_effects": ("BPRUE_SMG_ArmorPiercingPos5Effect",),
         "icon": _ammo_icon("9x19_ap"),
     },
 }
@@ -126,7 +126,7 @@ BUCKET_A045_VARIANTS = {
         "text_sid": "sid_bprue_smg_caliber_a045_name",
         "hint_sid": "sid_bprue_smg_caliber_a045_description",
         "ammo_effect": "ChangeAmmoTypes045Effect",
-        "stat_effects": ("BPRUE_SMG_DamagePos15Effect", "BPRUE_SMG_RecoilPenalty25Effect", "BPRUE_SMG_EffectiveRangePenalty15Effect"),
+        "stat_effects": (),
         "icon": _ammo_icon("45acp"),
     },
     "AP": {
@@ -134,7 +134,7 @@ BUCKET_A045_VARIANTS = {
         "text_sid": "sid_bprue_smg_caliber_a045_ap_name",
         "hint_sid": "sid_bprue_smg_caliber_a045_ap_description",
         "ammo_effect": "BPRUE_SMG_ChangeAmmoTypes045APEffect",
-        "stat_effects": ("BPRUE_SMG_DamagePos10Effect", "BPRUE_SMG_ArmorPiercingPos15Effect", "BPRUE_SMG_RecoilPenalty30Effect", "BPRUE_SMG_EffectiveRangePenalty15Effect"),
+        "stat_effects": ("BPRUE_SMG_ArmorPiercingPos5Effect",),
         "icon": _ammo_icon("45acp_ap"),
     },
     "Expanding": {
@@ -142,7 +142,7 @@ BUCKET_A045_VARIANTS = {
         "text_sid": "sid_bprue_smg_caliber_a045_expanding_name",
         "hint_sid": "sid_bprue_smg_caliber_a045_expanding_description",
         "ammo_effect": "BPRUE_SMG_ChangeAmmoTypes045ExpandingEffect",
-        "stat_effects": ("BPRUE_SMG_DamagePos20Effect", "BPRUE_SMG_RecoilPenalty30Effect", "BPRUE_SMG_EffectiveRangePenalty20Effect"),
+        "stat_effects": (),
         "icon": _ammo_icon("45acp_hp"),
     },
 }
@@ -154,7 +154,7 @@ ZUBR_A918_VARIANTS = {
         "text_sid": "sid_bprue_smg_caliber_a918_name",
         "hint_sid": "sid_bprue_smg_caliber_a918_description",
         "ammo_effect": "ChangeAmmoTypes918Effect",
-        "stat_effects": ("BPRUE_SMG_RecoilPos15Effect", "BPRUE_SMG_DurabilityPerShotPos10Effect", "BPRUE_SMG_DamagePenalty10Effect", "BPRUE_SMG_EffectiveRangePenalty10Effect"),
+        "stat_effects": (),
         "icon": _ammo_icon("9x18"),
     },
     "AP": {
@@ -162,7 +162,7 @@ ZUBR_A918_VARIANTS = {
         "text_sid": "sid_bprue_smg_caliber_a918_ap_name",
         "hint_sid": "sid_bprue_smg_caliber_a918_ap_description",
         "ammo_effect": "BPRUE_SMG_ChangeAmmoTypes918APEffect",
-        "stat_effects": ("BPRUE_SMG_ArmorPiercingPos15Effect", "BPRUE_SMG_RecoilPos15Effect", "BPRUE_SMG_DurabilityPerShotPos10Effect", "BPRUE_SMG_DamagePenalty15Effect", "BPRUE_SMG_EffectiveRangePenalty15Effect"),
+        "stat_effects": ("BPRUE_SMG_ArmorPiercingPos5Effect",),
         "icon": _ammo_icon("9x18_ap"),
     },
 }
@@ -173,7 +173,7 @@ ZUBR_A045_VARIANTS = {
         "text_sid": "sid_bprue_smg_caliber_a045_name",
         "hint_sid": "sid_bprue_smg_caliber_a045_description",
         "ammo_effect": "ChangeAmmoTypes045Effect",
-        "stat_effects": ("BPRUE_SMG_DamagePos15Effect", "BPRUE_SMG_RecoilPenalty20Effect", "BPRUE_SMG_EffectiveRangePenalty10Effect"),
+        "stat_effects": (),
         "icon": _ammo_icon("45acp"),
     },
     "AP": {
@@ -181,7 +181,7 @@ ZUBR_A045_VARIANTS = {
         "text_sid": "sid_bprue_smg_caliber_a045_ap_name",
         "hint_sid": "sid_bprue_smg_caliber_a045_ap_description",
         "ammo_effect": "BPRUE_SMG_ChangeAmmoTypes045APEffect",
-        "stat_effects": ("BPRUE_SMG_DamagePos10Effect", "BPRUE_SMG_ArmorPiercingPos15Effect", "BPRUE_SMG_RecoilPenalty25Effect", "BPRUE_SMG_EffectiveRangePenalty10Effect"),
+        "stat_effects": ("BPRUE_SMG_ArmorPiercingPos5Effect",),
         "icon": _ammo_icon("45acp_ap"),
     },
     "Expanding": {
@@ -189,9 +189,18 @@ ZUBR_A045_VARIANTS = {
         "text_sid": "sid_bprue_smg_caliber_a045_expanding_name",
         "hint_sid": "sid_bprue_smg_caliber_a045_expanding_description",
         "ammo_effect": "BPRUE_SMG_ChangeAmmoTypes045ExpandingEffect",
-        "stat_effects": ("BPRUE_SMG_DamagePos20Effect", "BPRUE_SMG_RecoilPenalty25Effect", "BPRUE_SMG_EffectiveRangePenalty15Effect"),
+        "stat_effects": (),
         "icon": _ammo_icon("45acp_hp"),
     },
+}
+
+SMG_CONVERSION_BASE_EFFECTS = {
+    "M10_A919_VARIANTS": ("BPRUE_SMG_RecoilPos10Effect", "BPRUE_SMG_EffectiveRangePos5Effect", "BPRUE_SMG_DamagePenalty10Effect"),
+    "M10_A918_VARIANTS": ("BPRUE_SMG_RecoilPos15Effect", "BPRUE_SMG_EffectiveRangePos10Effect", "BPRUE_SMG_DamagePenalty15Effect"),
+    "BUCKET_A919_VARIANTS": ("BPRUE_SMG_DamagePos5Effect", "BPRUE_SMG_EffectiveRangePos5Effect", "BPRUE_SMG_RecoilPenalty10Effect", "BPRUE_DurabilityPerShotNeg10Effect"),
+    "BUCKET_A045_VARIANTS": ("BPRUE_SMG_DamagePos5Effect", "BPRUE_SMG_RecoilPenalty25Effect", "BPRUE_SMG_EffectiveRangePenalty15Effect"),
+    "ZUBR_A918_VARIANTS": ("BPRUE_SMG_RecoilPos15Effect", "BPRUE_SMG_DurabilityPerShotPos10Effect", "BPRUE_SMG_DamagePenalty10Effect", "BPRUE_SMG_EffectiveRangePenalty10Effect"),
+    "ZUBR_A045_VARIANTS": ("BPRUE_SMG_DamagePos5Effect", "BPRUE_SMG_RecoilPenalty20Effect", "BPRUE_SMG_EffectiveRangePenalty10Effect"),
 }
 
 def load_config() -> dict: return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
@@ -236,7 +245,7 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
             if variants:
                 for spec in variants.values():
                     current=f"{family['prototype_prefix']}_Upgrade_BPRUE_Caliber_{spec['suffix']}"
-                    upgrades.append(UpgradeDefinition(sid=current,general_setup_sid=family["general_setup_sid"],weapon_class="SMG",group="Caliber",target_part="Body",text_sid=spec["text_sid"],hint_sid=spec["hint_sid"],image=IMAGE,icon=CALIBER_ICON,cost=data["cost"],effects=(data["change_effect"],source_remove,spec["ammo_effect"],*spec["stat_effects"]),blocking_sids=tuple(x for x in conversion_sids if x!=current),template_sid=TEMPLATE_SID,layout_group=f"Caliber_{caliber}",module_image=spec["icon"]))
+                    upgrades.append(UpgradeDefinition(sid=current,general_setup_sid=family["general_setup_sid"],weapon_class="SMG",group="Caliber",target_part="Body",text_sid=spec["text_sid"],hint_sid=spec["hint_sid"],image=IMAGE,icon=CALIBER_ICON,cost=data["cost"],effects=(data["change_effect"],source_remove,spec["ammo_effect"],*SMG_CONVERSION_BASE_EFFECTS[("M10" if family["prototype_prefix"] == "GunM10" else "BUCKET" if family["prototype_prefix"] == "GunBucket" else "ZUBR") + "_" + caliber + "_VARIANTS"],*spec["stat_effects"]),blocking_sids=tuple(x for x in conversion_sids if x!=current),template_sid=TEMPLATE_SID,layout_group=f"Caliber_{caliber}",module_image=spec["icon"]))
                 continue
             current=caliber_sid(family,caliber); stat_effects=CALIBER_STAT_EFFECTS.get((source_caliber, caliber), ())
             upgrades.append(UpgradeDefinition(sid=current,general_setup_sid=family["general_setup_sid"],weapon_class="SMG",group="Caliber",target_part="Body",text_sid=data["name_sid"],hint_sid=data["hint_sid"],image=IMAGE,icon=CALIBER_ICON,cost=data["cost"],effects=(data["change_effect"],source_remove,data["add_ammo_effect"],*stat_effects),blocking_sids=tuple(x for x in conversion_sids if x!=current),template_sid=TEMPLATE_SID))
@@ -251,6 +260,7 @@ def render_effects() -> str:
         ("BPRUE_SMG_DamagePos5Effect", "WeaponDamage", "5%", "Positive", "bprue_damage"),
         ("BPRUE_SMG_DamagePos20Effect", "WeaponDamage", "20%", "Positive", "bprue_damage"),
         ("BPRUE_SMG_ArmorPiercingPos15Effect", "ArmorPiercing", "15%", "Positive", "bprue_armor_piercing"),
+        ("BPRUE_SMG_ArmorPiercingPos5Effect", "ArmorPiercing", "5%", "Positive", "bprue_armor_piercing"),
         ("BPRUE_SMG_DamagePenalty10Effect", "WeaponDamage", "-10%", "Negative", "bprue_damage"),
         ("BPRUE_SMG_DamagePenalty15Effect", "WeaponDamage", "-15%", "Negative", "bprue_damage"),
         ("BPRUE_SMG_DamagePenalty20Effect", "WeaponDamage", "-20%", "Negative", "bprue_damage"),
