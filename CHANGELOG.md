@@ -7,6 +7,7 @@ This file tracks **implemented changes**, not planned features. Entries under **
 ## [Unreleased]
 
 ### Changed
+- **Effect localization audit:** Added Bleeding Chance and Cover Piercing labels (EN/RU/ZH), plus Vanilla UI localization overrides for `DistanceDropOffLengthPos15Effect` and `FlatnessUp5Effect`. Re-export localization assets and regenerate CFGs before re-running the audit; the stale `DistanceDropOffLengthPos5Effect` reference is still under investigation.
 - **Repair cost balancing:** BPRUE-generated upgrades now explicitly set `RepairCostModifier` to `0.35` for standard modules or `0.25` for caliber conversions (`Caliber`/`AdditionalCaliber` and upgrades using `ChangeCaliber` effects), consistently across weapon classes and content packs. Generated CFGs and in-game validation pending.
 - **Upgrade hotspot orientation:** Newly enabled `Barrel` and `Handguard` sections now explicitly use `ModuleLineDirection = ELineDirection::Left` in base-game, DLC and pistol-slot conversion weapon patches. Already-enabled Vanilla sections remain untouched; generated outputs and gameplay verification pending.
 - **AR Precision Tuning:** Replaced −15% dispersion with +10% flatness and +5% damage drop-off length, retaining +8% recoil as the drawback. Uses an AR-specific localization and effect override; Recoil Control, Controlled Action, upgrade SIDs, and blocking remain unchanged. Generator sources updated; CFG regeneration and gameplay verification pending.
