@@ -32,11 +32,7 @@ A762_CONVERSION_VARIANTS = {
         "text_sid": "sid_bprue_caliber_762x39_name",
         "hint_sid": "sid_bprue_caliber_762x39_description",
         "ammo_effect": "BPRUE_ChangeAmmoTypes762x39Effect",
-        "stat_effects": (
-            "BPRUE_DamagePos15Effect",
-            "BPRUE_RecoilPenalty15Effect",
-            "BPRUE_Shared_FlatnessPenalty10Effect",
-        ),
+        "stat_effects": (),
         "cost": 2600,
         "icon": _ammo_icon("762x39"),
     },
@@ -45,12 +41,7 @@ A762_CONVERSION_VARIANTS = {
         "text_sid": "sid_bprue_caliber_762x39_ap_name",
         "hint_sid": "sid_bprue_caliber_762x39_ap_description",
         "ammo_effect": "BPRUE_ChangeAmmoTypes762x39APEffect",
-        "stat_effects": (
-            "BPRUE_DamagePos10Effect",
-            "BPRUE_ArmorPiercingPos15Effect",
-            "BPRUE_RecoilPenalty20Effect",
-            "BPRUE_Shared_FlatnessPenalty10Effect",
-        ),
+        "stat_effects": ("BPRUE_ArmorPiercingPos5Effect",),
         "cost": 2600,
         "icon": _ammo_icon("762x39_ap"),
     },
@@ -59,11 +50,7 @@ A762_CONVERSION_VARIANTS = {
         "text_sid": "sid_bprue_caliber_762x39_expanding_name",
         "hint_sid": "sid_bprue_caliber_762x39_expanding_description",
         "ammo_effect": "BPRUE_ChangeAmmoTypes762x39ExpandingEffect",
-        "stat_effects": (
-            "BPRUE_DamagePos20Effect",
-            "BPRUE_RecoilPenalty20Effect",
-            "BPRUE_Shared_FlatnessPenalty15Effect",
-        ),
+        "stat_effects": ("ProjectileSpeedPos5Effect",),
         "cost": 2600,
         "icon": _ammo_icon("762x39_hp"),
     },
@@ -75,12 +62,7 @@ A762SNIPER_CONVERSION_VARIANTS = {
         "text_sid": "sid_bprue_caliber_762_eastern_name",
         "hint_sid": "sid_bprue_caliber_762_eastern_description",
         "ammo_effect": "ChangeAmmoTypes762Effect",
-        "stat_effects": (
-            "BPRUE_DamagePos15Effect",
-            "BPRUE_ArmorPiercingPos15Effect",
-            "BPRUE_RecoilPenalty25Effect",
-            "BPRUE_DurabilityPerShotNeg20Effect",
-        ),
+        "stat_effects": (),
         "cost": 2800,
         "icon": _ammo_icon("762x54"),
     },
@@ -89,12 +71,7 @@ A762SNIPER_CONVERSION_VARIANTS = {
         "text_sid": "sid_bprue_caliber_762_eastern_ap_name",
         "hint_sid": "sid_bprue_caliber_762_eastern_ap_description",
         "ammo_effect": "BPRUE_ChangeAmmoTypes762SniperAPEffect",
-        "stat_effects": (
-            "BPRUE_DamagePos10Effect",
-            "BPRUE_ArmorPiercingPos25Effect",
-            "BPRUE_RecoilPenalty30Effect",
-            "BPRUE_DurabilityPerShotNeg20Effect",
-        ),
+        "stat_effects": ("BPRUE_ArmorPiercingPos5Effect",),
         "cost": 2800,
         "icon": _ammo_icon("762x54_ap"),
     },
@@ -103,13 +80,7 @@ A762SNIPER_CONVERSION_VARIANTS = {
         "text_sid": "sid_bprue_caliber_762_eastern_supersonic_name",
         "hint_sid": "sid_bprue_caliber_762_eastern_supersonic_description",
         "ammo_effect": "BPRUE_ChangeAmmoTypes762SniperSupersonicEffect",
-        "stat_effects": (
-            "BPRUE_DamagePos15Effect",
-            "BPRUE_ArmorPiercingPos10Effect",
-            "BPRUE_RecoilPenalty25Effect",
-            "BPRUE_DurabilityPerShotNeg20Effect",
-            "BPRUE_Shared_FlatnessPos15Effect",
-        ),
+        "stat_effects": ("ProjectileSpeedPos5Effect",),
         "cost": 2800,
         "icon": _ammo_icon("762x54_ss"),
     },
@@ -121,12 +92,7 @@ A762NATO_CONVERSION_VARIANTS = {
         "text_sid": "sid_bprue_caliber_762_nato_name",
         "hint_sid": "sid_bprue_caliber_762_nato_description",
         "ammo_effect": "BPRUE_ChangeAmmoTypes762NATOEffect",
-        "stat_effects": (
-            "BPRUE_DamagePos10Effect",
-            "BPRUE_ArmorPiercingPos15Effect",
-            "BPRUE_RecoilPenalty20Effect",
-            "BPRUE_DurabilityPerShotNeg15Effect",
-        ),
+        "stat_effects": (),
         "cost": 3200,
         "icon": _ammo_icon("762x51"),
     },
@@ -135,12 +101,7 @@ A762NATO_CONVERSION_VARIANTS = {
         "text_sid": "sid_bprue_caliber_762_nato_ap_name",
         "hint_sid": "sid_bprue_caliber_762_nato_ap_description",
         "ammo_effect": "BPRUE_ChangeAmmoTypes762NATOAPEffect",
-        "stat_effects": (
-            "BPRUE_DamagePos5Effect",
-            "BPRUE_ArmorPiercingPos25Effect",
-            "BPRUE_RecoilPenalty25Effect",
-            "BPRUE_DurabilityPerShotNeg15Effect",
-        ),
+        "stat_effects": ("BPRUE_ArmorPiercingPos5Effect",),
         "cost": 3200,
         "icon": _ammo_icon("762x51_ap"),
     },
@@ -149,23 +110,27 @@ A762NATO_CONVERSION_VARIANTS = {
         "text_sid": "sid_bprue_caliber_762_nato_supersonic_name",
         "hint_sid": "sid_bprue_caliber_762_nato_supersonic_description",
         "ammo_effect": "BPRUE_ChangeAmmoTypes762NATOSupersonicEffect",
-        "stat_effects": (
-            "BPRUE_DamagePos10Effect",
-            "BPRUE_ArmorPiercingPos10Effect",
-            "BPRUE_RecoilPenalty20Effect",
-            "BPRUE_DurabilityPerShotNeg15Effect",
-            "BPRUE_Shared_FlatnessPos15Effect",
-        ),
+        "stat_effects": ("ProjectileSpeedPos5Effect",),
         "cost": 3200,
         "icon": _ammo_icon("762x51_ss"),
     },
 }
 
 CALIBER_EFFECTS = {
-    "A762": ("BPRUE_ChangeCaliber762x39Effect", ("ChangeAmmoTypesNo545Effect", "ChangeAmmoTypesNo556Effect", "BPRUE_ChangeAmmoTypesNo762Effect", "BPRUE_ChangeAmmoTypesNo762NATOEffect", "ChangeAmmoTypesNo939Effect"), "BPRUE_ChangeAmmoTypes762x39Effect", ("BPRUE_DamagePos15Effect", "BPRUE_RecoilPenalty15Effect", "BPRUE_Shared_FlatnessPenalty10Effect")),
-    "A762Sniper": ("ChangeCaliber762Effect", ("ChangeAmmoTypesNo545Effect", "ChangeAmmoTypesNo556Effect", "BPRUE_ChangeAmmoTypesNo762NATOEffect", "ChangeAmmoTypesNo939Effect"), "ChangeAmmoTypes762Effect", ("BPRUE_DamagePos15Effect", "BPRUE_ArmorPiercingPos15Effect", "BPRUE_RecoilPenalty25Effect", "BPRUE_DurabilityPerShotNeg20Effect")),
-    "A762NATO": ("BPRUE_ChangeCaliber762NATOEffect", ("ChangeAmmoTypesNo545Effect", "ChangeAmmoTypesNo556Effect", "BPRUE_ChangeAmmoTypesNo762Effect", "ChangeAmmoTypesNo939Effect"), "BPRUE_ChangeAmmoTypes762NATOEffect", ("BPRUE_DamagePos10Effect", "BPRUE_ArmorPiercingPos15Effect", "BPRUE_RecoilPenalty20Effect", "BPRUE_DurabilityPerShotNeg15Effect")),
+    "A762": ("BPRUE_ChangeCaliber762x39Effect", ("ChangeAmmoTypesNo545Effect", "ChangeAmmoTypesNo556Effect", "BPRUE_ChangeAmmoTypesNo762Effect", "BPRUE_ChangeAmmoTypesNo762NATOEffect", "ChangeAmmoTypesNo939Effect"), "BPRUE_ChangeAmmoTypes762x39Effect", ()),
+    "A762Sniper": ("ChangeCaliber762Effect", ("ChangeAmmoTypesNo545Effect", "ChangeAmmoTypesNo556Effect", "BPRUE_ChangeAmmoTypesNo762NATOEffect", "ChangeAmmoTypesNo939Effect"), "ChangeAmmoTypes762Effect", ()),
+    "A762NATO": ("BPRUE_ChangeCaliber762NATOEffect", ("ChangeAmmoTypesNo545Effect", "ChangeAmmoTypesNo556Effect", "BPRUE_ChangeAmmoTypesNo762Effect", "ChangeAmmoTypesNo939Effect"), "BPRUE_ChangeAmmoTypes762NATOEffect", ()),
 }
+# Complete, direction-specific conversion profiles. Specializations inherit these
+# values and replace ammunition access, rather than stacking onto Default modules.
+CALIBER_BASE_EFFECTS = {
+    "A762Sniper": ("BPRUE_DamagePos5Effect", "BPRUE_RecoilPenalty25Effect", "BPRUE_DurabilityPerShotNeg20Effect", "BPRUE_Shared_FlatnessPenalty5Effect", "DistanceDropOffLengthPos5Effect"),
+    "A762NATO": ("BPRUE_DamagePos5Effect", "BPRUE_RecoilPenalty20Effect", "BPRUE_DurabilityPerShotNeg15Effect", "FlatnessUp5Effect", "DistanceDropOffLengthPos10Effect"),
+    "A762": ("BPRUE_DamagePos5Effect", "BPRUE_RecoilPenalty15Effect", "BPRUE_DurabilityPerShotNeg10Effect", "BPRUE_Shared_FlatnessPenalty10Effect", "BPRUE_Shared_DropOffPenalty10Effect"),
+}
+# 9x39 to 7.62x39 is not equivalent to 5.45 to 7.62x39.
+GVINTAR_762_BASE_EFFECTS = ("ProjectileSpeedPos5Effect", "DistanceDropOffLengthPos5Effect", "BPRUE_RecoilPenalty15Effect", "BPRUE_DurabilityPerShotNeg10Effect")
+
 DEFAULT_ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_Recoil.T_PDA_Upgrades_Icon_Recoil'"
 CALIBER_ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_CaliberChange.T_PDA_Upgrades_Icon_CaliberChange'"
 MODULE_SPECS = {
@@ -209,7 +174,7 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
                         spec["cost"],
                         spec["text_sid"],
                         spec["hint_sid"],
-                        (change, *removes, spec["ammo_effect"], *spec["stat_effects"]),
+                        (change, *removes, spec["ammo_effect"], *CALIBER_BASE_EFFECTS[caliber], *spec["stat_effects"]),
                         CALIBER_ICON,
                         module_image=spec["icon"],
                     ))
@@ -233,7 +198,7 @@ def build_upgrades(config: dict) -> list[UpgradeDefinition]:
                     spec["cost"],
                     spec["text_sid"],
                     spec["hint_sid"],
-                    (change, *removes, spec["ammo_effect"], *spec["stat_effects"]),
+                    (change, *removes, spec["ammo_effect"], *(GVINTAR_762_BASE_EFFECTS if family["base_caliber"] == "A939" else CALIBER_BASE_EFFECTS[caliber]), *spec["stat_effects"]),
                     CALIBER_ICON,
                     module_image=spec["icon"],
                 ))
@@ -262,6 +227,42 @@ def configure_general_setups(config: dict, model: UpgradeBuildModel) -> None:
 def render_effect_patch(config: dict) -> str: return _EFFECTS
 
 _EFFECTS = r'''// AUTO-GENERATED - BPRUE assault-rifle shared effects
+
+BPRUE_ArmorPiercingPos5Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_ArmorPiercingPos5Effect
+   Type = EEffectType::ArmorPiercing
+   LocalizationSID = bprue_armor_piercing
+   ValueMin = 5%
+   ValueMax = 5%
+   bIsPermanent = true
+   Positive = EBeneficial::Positive
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
+BPRUE_Shared_FlatnessPenalty5Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Shared_FlatnessPenalty5Effect
+   Type = EEffectType::EffectiveFireDistance
+   LocalizationSID = bprue_effective_range
+   ValueMin = -5%
+   ValueMax = -5%
+   bIsPermanent = true
+   Positive = EBeneficial::Negative
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
+
+BPRUE_Shared_DropOffPenalty10Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
+   SID = BPRUE_Shared_DropOffPenalty10Effect
+   Type = EEffectType::DistanceDropOffLength
+   LocalizationSID = weapon_flatness
+   ValueMin = -10%
+   ValueMax = -10%
+   bIsPermanent = true
+   Positive = EBeneficial::Negative
+   ShowUpgradeEffectValue = true
+   ShowUpgradeEffect = true
+struct.end
 
 BPRUE_FireIntervalNeg10Effect : struct.begin {refurl=@BaseGame/EffectPrototypes.cfg;refkey=[0]}
    SID = BPRUE_FireIntervalNeg10Effect
