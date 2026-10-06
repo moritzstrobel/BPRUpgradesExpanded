@@ -169,7 +169,7 @@ a) Firing mode modules
 Precision Fire Control : In my opinion, this is a rather pointless module. ARs already have fairly low recoil when firing in semi-auto, and forcing an AR to fire exclusively in semi-auto isn't particularly interesting unless it also comes with HUGE damage boosts, like the unique Clusterf*#@ and Jagerblick ARs. However, giving the module such massive damage boosts would reduce the uniqueness of those two weapons. I think this module should therefore be removed.  
 Burst Fire Control : This is more interesting, but because it gives access to full-auto, it still isn't particularly interesting as a specialization option. In my opinion, Burst Fire should instead replace Full Auto, leaving the weapon with only Semi-Auto and Burst Fire. This is the one exception where I wouldn't add an additional penalty : the penalty is already built into the loss of Full Auto.
 
-> **OPEN — unchanged:** The proposed removal of Precision Fire Control and replacement of Full Auto with Burst Fire have not been implemented.  
+> **PARTIAL (generator only):** Precision Fire Control is retained as a semi-auto-only handling specialization (15% lower maximum dispersion, 10% faster recoil recovery, 10% slower aiming movement), rather than removed. Burst Fire Control now replaces Full Auto with Semi + Burst. Its existing 5% recoil benefit and 10% additional wear remain, so the proposal to use mode loss as the sole trade-off was not adopted. Regeneration and in-game checks are pending.  
    
    
 b) Caliber conversion modules  
