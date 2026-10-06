@@ -5,6 +5,22 @@
 > **Scope:** Weapons, specializations, caliber conversions, upgrade-tree UI, repair economics  
 > **Input:** External playtest feedback (`balacingBaseOverview.txt`). This document is a **BPRUE-specific interpretation**, not a copy or automatic acceptance of the review.
 
+## Quick-win pass 1 (implemented in this branch; generated CFGs pending)
+
+The following deliberately small changes have been made in the **source generators**, without broad rebalancing, UI work, ammo changes or new effects:
+
+| Module | Previous | New | Source |
+|---|---|---|---|
+| Sniper Field Marksman | +10% shot recovery, no explicit downside | Replace recovery bonus with existing 10% aiming-time penalty | `generate_sniper_upgrades.py` |
+| Sniper Adjustable Stock | +10% recoil control alongside sway and aiming movement | Remove recoil bonus; preserve sway and aiming movement | `generate_sniper_upgrades.py` |
+| Sniper Benchrest | +15% recoil control | +10% recoil control; other trade-offs unchanged | `generate_sniper_upgrades.py` |
+| Sniper Precision Stock | +20% shot recovery on top of sway/recoil | Remove shot recovery; preserve aiming-time cost | `generate_sniper_upgrades.py` |
+| AR Stabilized Stock | +20% shot recovery | +10% shot recovery; recoil and aiming-time trade-offs unchanged | `generate_assault_rifle_upgrades.py` |
+
+Affected localization descriptions have been aligned (English, Russian, Simplified Chinese). **This branch currently changes the source only.** Regenerate outputs and run in-game checks before considering these gameplay-ready; percentages and outcomes are provisional. UI bugs remain *nice to fix later*. `A762` remains unchanged and explicitly out of scope.
+
+---
+
 ## 1. Principles and non-goals
 
 BPRUE exists to expand meaningful upgrade choices and extend progression. Strong modules are acceptable, but *unconditional upgrades that dominate every alternative* undermine specialization. Balance must be judged **per weapon and in combination with vanilla upgrades and other BPRUE groups**, not merely by individual effect percentages.
