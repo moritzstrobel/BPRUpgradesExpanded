@@ -49,6 +49,30 @@ CALIBER_CONVERSIONS={
     },
 }
 
+# Terminal Vanilla ammo upgrades that conflict with BPRUE caliber conversions.
+VANILLA_AMMO_CONFLICTS = {
+    "GunSVDM": "GunSVDM_Upgrade_Barrel_3_2",
+    "GunSVU": "GunSVU_Upgrade_Barrel_3_2",
+    "GunThreeLine": "GunThreeLine_Upgrade_Barrel_3",
+    "GunM701": "GunM701_Upgrade_Barrel_3_2",
+}
+
+def vanilla_ammo_blocking_patch(config):
+    """Reciprocal vanilla patches; retain existing blocking entries."""
+    lines = ["// AUTO-GENERATED: vanilla ammo/conversion exclusions.", ""]
+    for family in config["families"].values():
+        prefix = family["prototype_prefix"]
+        vanilla_sid = VANILLA_AMMO_CONFLICTS.get(prefix)
+        conversion = CALIBER_CONVERSIONS.get(family.get("base_caliber")) if family.get("bprue_caliber_conversion", True) else None
+        if not vanilla_sid or not conversion:
+            continue
+        sids = [f"{prefix}_Upgrade_BPRUE_Sniper_Caliber_{conversion['suffix']}{v[0]}" for v in conversion["variants"].values()]
+        lines += [f"{vanilla_sid} : struct.begin {{bpatch}}",
+                  "   BlockingUpgradePrototypeSIDs : struct.begin" + (" {bpatch}" if prefix != "GunThreeLine" else ""),
+                  *(f"      [*] = {sid}" for sid in sids),
+                  "   struct.end", "struct.end", ""]
+    return "\n".join(lines)
+
 def load_config(): return json.loads(CONFIG_PATH.read_text(encoding='utf-8'))
 def module_sid(prefix,group,key): return f"{prefix}_Upgrade_BPRUE_Sniper_{group}_{key.title().replace('_','')}"
 
@@ -63,7 +87,7 @@ def build_upgrades(config):
                 suffix,text,hint,ammo_effect,stats,icon=spec
                 current=f"{prefix}_Upgrade_BPRUE_Sniper_Caliber_{conversion['suffix']}{suffix}"
                 effects=(conversion["change_effect"],conversion["remove_effect"],ammo_effect,*conversion["base_effects"],*stats)
-                upgrades.append(UpgradeDefinition(sid=current,general_setup_sid=setup,weapon_class='Sniper',group='Caliber',target_part='Body',text_sid=text,hint_sid=hint,image=IMAGE,icon=CALIBER_ICON,cost=round(conversion["cost"]*scale),effects=tuple(effects),blocking_sids=tuple(x for x in variant_sids if x!=current),template_sid=TEMPLATE_SID,layout_group=f"Caliber_{conversion['target']}",module_image=icon))
+                upgrades.append(UpgradeDefinition(sid=current,general_setup_sid=setup,weapon_class='Sniper',group='Caliber',target_part='Body',text_sid=text,hint_sid=hint,image=IMAGE,icon=CALIBER_ICON,cost=round(conversion["cost"]*scale),effects=tuple(effects),blocking_sids=tuple(x for x in variant_sids if x!=current) + ((VANILLA_AMMO_CONFLICTS[prefix],) if prefix in VANILLA_AMMO_CONFLICTS else ()),template_sid=TEMPLATE_SID,layout_group=f"Caliber_{conversion['target']}",module_image=icon))
         for group,definitions,target,vertical in GROUPS:
             group_sids=[module_sid(prefix,group,key) for key in definitions]
             for key,(cost,effects) in definitions.items():
