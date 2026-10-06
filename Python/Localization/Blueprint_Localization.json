@@ -12,9 +12,9 @@
     {
       "sid": "sid_bprue_caliber_762_eastern_description",
       "languages": {
-        "English": "Converts the weapon to the game's 7.62 mm sniper cartridge. Increases damage, recoil and weapon wear. This specialization is permanent.",
-        "Russian": "Переводит оружие на боеприпасы 7,62х54 мм. Увеличивает урон, отдачу и износ оружия. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器转换为游戏中的 7.62 毫米狙击弹。提升伤害、后坐力与武器磨损。此专精为永久性。"
+        "English": "Converts 5.45 mm to 7.62x54 mm with all ammunition types. +5% damage, -5% flatness, +5% damage retention range, 25% worse recoil control and +20% wear per shot.",
+        "Russian": "Конверсия 5,45 мм в 7,62x54 мм (все типы патронов). +5% урона, -5% настильности, +5% дальности сохранения урона, ухудшение контроля отдачи на 25% и +20% износа за выстрел.",
+        "ChineseSimplified": "将5.45毫米转换为7.62x54毫米，支持全部弹药类型。伤害+5%，弹道平直度-5%，伤害衰减距离+5%，后坐力控制降低25%，每发磨损+20%。"
       }
     },
     {
@@ -28,9 +28,9 @@
     {
       "sid": "sid_bprue_caliber_762x39_description",
       "languages": {
-        "English": "Converts the weapon to 7.62x39 mm ammunition for greater close- to mid-range stopping power, at the cost of increased recoil and a less effective trajectory. This specialization is permanent.",
-        "Russian": "Переводит оружие на боеприпасы 7,62x39 мм для повышения останавливающего действия на ближней и средней дистанции ценой большей отдачи и менее настильной траектории. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器转换为 7.62x39 毫米弹药，提升中近距离的停止作用，但后坐力增加、弹道表现下降。此专精为永久性。"
+        "English": "Converts to 7.62x39 mm with all ammunition types. For 5.45 mm weapons: +5% damage, -10% flatness, -10% damage retention range, 15% worse recoil control and +10% wear. VS Vintar (9x39 mm) uses a separate profile: +5% velocity, +5% damage retention range, 15% worse recoil control and +10% wear.",
+        "Russian": "Конверсия в 7,62x39 мм (все типы патронов). Для оружия 5,45 мм: +5% урона, -10% настильности, -10% дальности сохранения урона, ухудшение контроля отдачи на 15%, +10% износа. Для Винтаря (9x39 мм): +5% скорости пули и дальности сохранения урона, ухудшение контроля отдачи на 15%, +10% износа.",
+        "ChineseSimplified": "转换为7.62x39毫米，支持全部弹药类型。5.45毫米武器：伤害+5%，弹道平直度-10%，伤害衰减距离-10%，后坐力控制降低15%，磨损+10%。文塔尔(9x39毫米)：弹速及伤害衰减距离+5%，后坐力控制降低15%，磨损+10%。"
       }
     },
     {
@@ -44,9 +44,9 @@
     {
       "sid": "sid_bprue_caliber_762_nato_description",
       "languages": {
-        "English": "Converts the weapon to 7.62x51 mm NATO ammunition. Increases damage, recoil and weapon wear. This specialization is permanent.",
-        "Russian": "Переводит оружие на боеприпасы 7,62x51 мм НАТО. Увеличивает урон, отдачу и износ оружия. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器转换为 7.62x51 毫米北约弹药。提升伤害、后坐力与武器磨损。此专精为永久性。"
+        "English": "Converts 5.56 mm to 7.62x51 mm NATO with all ammunition types. +5% damage, +5% flatness, +10% damage retention range, 20% worse recoil control and +15% wear per shot.",
+        "Russian": "Конверсия 5,56 мм в 7,62x51 мм НАТО (все типы патронов). +5% урона, +5% настильности, +10% дальности сохранения урона, ухудшение контроля отдачи на 20% и +15% износа за выстрел.",
+        "ChineseSimplified": "将5.56毫米转换为7.62x51毫米北约口径，支持全部弹药类型。伤害+5%，弹道平直度+5%，伤害衰减距离+10%，后坐力控制降低20%，每发磨损+15%。"
       }
     },
     {
@@ -460,9 +460,9 @@
     {
       "sid": "sid_bprue_caliber_762x39_ap_description",
       "languages": {
-        "English": "Converts the weapon to 7.62x39 mm ammunition and supports standard and armor-piercing rounds. This specialization is permanent.",
-        "Russian": "Переводит оружие на боеприпасы 7,62×39 мм с поддержкой стандартных и бронебойных патронов. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器转换为 7.62x39 毫米弹药，支持标准与穿甲弹。此专精为永久性。"
+        "English": "Converts to 7.62x39 mm . For 5.45 mm weapons: +5% damage, -10% flatness, -10% damage retention range, 15% worse recoil control and +10% wear. VS Vintar (9x39 mm) uses a separate profile: +5% velocity, +5% damage retention range, 15% worse recoil control and +10% wear. Restricted to AP ammunition; additional +5% armor penetration.",
+        "Russian": "Конверсия в 7,62x39 мм (все типы патронов). Для оружия 5,45 мм: +5% урона, -10% настильности, -10% дальности сохранения урона, ухудшение контроля отдачи на 15%, +10% износа. Для Винтаря (9x39 мм): +5% скорости пули и дальности сохранения урона, ухудшение контроля отдачи на 15%, +10% износа. Только боеприпасы AP. Дополнительно +5% бронепробиваемости.",
+        "ChineseSimplified": "转换为7.62x39毫米，支持全部弹药类型。5.45毫米武器：伤害+5%，弹道平直度-10%，伤害衰减距离-10%，后坐力控制降低15%，磨损+10%。文塔尔(9x39毫米)：弹速及伤害衰减距离+5%，后坐力控制降低15%，磨损+10%。 仅限AP弹药。额外护甲穿透+5%。"
       }
     },
     {
@@ -476,9 +476,9 @@
     {
       "sid": "sid_bprue_caliber_762x39_expanding_description",
       "languages": {
-        "English": "Converts the weapon to 7.62x39 mm ammunition and supports standard and expanding rounds. This specialization is permanent.",
-        "Russian": "Переводит оружие на боеприпасы 7,62×39 мм с поддержкой стандартных и экспансивных патронов. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器转换为 7.62x39 毫米弹药，支持标准与扩张弹。此专精为永久性。"
+        "English": "Converts to 7.62x39 mm . For 5.45 mm weapons: +5% damage, -10% flatness, -10% damage retention range, 15% worse recoil control and +10% wear. VS Vintar (9x39 mm) uses a separate profile: +5% velocity, +5% damage retention range, 15% worse recoil control and +10% wear. Restricted to Expanding ammunition; expanding ammunition supplies its own damage modifiers.",
+        "Russian": "Конверсия в 7,62x39 мм (все типы патронов). Для оружия 5,45 мм: +5% урона, -10% настильности, -10% дальности сохранения урона, ухудшение контроля отдачи на 15%, +10% износа. Для Винтаря (9x39 мм): +5% скорости пули и дальности сохранения урона, ухудшение контроля отдачи на 15%, +10% износа. Только боеприпасы Expanding. Дополнительные свойства задаются патронами.",
+        "ChineseSimplified": "转换为7.62x39毫米，支持全部弹药类型。5.45毫米武器：伤害+5%，弹道平直度-10%，伤害衰减距离-10%，后坐力控制降低15%，磨损+10%。文塔尔(9x39毫米)：弹速及伤害衰减距离+5%，后坐力控制降低15%，磨损+10%。 仅限Expanding弹药。扩张弹药具有独立伤害属性。"
       }
     },
     {
@@ -508,9 +508,9 @@
     {
       "sid": "sid_bprue_caliber_762_nato_ap_description",
       "languages": {
-        "English": "Converts the weapon to 7.62x51 mm NATO armor-piercing ammunition only. Prioritizes armor penetration at the cost of increased recoil and weapon wear. This specialization is permanent.",
-        "Russian": "Переводит оружие исключительно на бронебойные боеприпасы 7,62x51 мм НАТО. Повышает бронепробиваемость ценой большей отдачи и износа оружия. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器仅转换为 7.62x51 毫米北约穿甲弹药。优先提升护甲穿透，但后坐力与武器磨损增加。此专精为永久性。"
+        "English": "Converts 5.56 mm to 7.62x51 mm NATO . +5% damage, +5% flatness, +10% damage retention range, 20% worse recoil control and +15% wear per shot. Restricted to AP ammunition; additional +5% armor penetration.",
+        "Russian": "Конверсия 5,56 мм в 7,62x51 мм НАТО (все типы патронов). +5% урона, +5% настильности, +10% дальности сохранения урона, ухудшение контроля отдачи на 20% и +15% износа за выстрел. Только боеприпасы AP. Дополнительно +5% бронепробиваемости.",
+        "ChineseSimplified": "将5.56毫米转换为7.62x51毫米北约口径，支持全部弹药类型。伤害+5%，弹道平直度+5%，伤害衰减距离+10%，后坐力控制降低20%，每发磨损+15%。 仅限AP弹药。额外护甲穿透+5%。"
       }
     },
     {
@@ -524,9 +524,9 @@
     {
       "sid": "sid_bprue_caliber_762_nato_supersonic_description",
       "languages": {
-        "English": "Converts the weapon to 7.62x51 mm NATO supersonic ammunition only. Provides a flatter, more effective trajectory while retaining increased damage, recoil and weapon wear. This specialization is permanent.",
-        "Russian": "Переводит оружие исключительно на сверхзвуковые боеприпасы 7,62x51 мм НАТО. Обеспечивает более настильную и эффективную траекторию, сохраняя повышенные урон, отдачу и износ оружия. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器仅转换为 7.62x51 毫米北约超音速弹药。提供更平直、更有效的弹道，同时保留提升的伤害、后坐力与武器磨损。此专精为永久性。"
+        "English": "Converts 5.56 mm to 7.62x51 mm NATO . +5% damage, +5% flatness, +10% damage retention range, 20% worse recoil control and +15% wear per shot. Restricted to Supersonic ammunition; additional +5% projectile speed.",
+        "Russian": "Конверсия 5,56 мм в 7,62x51 мм НАТО (все типы патронов). +5% урона, +5% настильности, +10% дальности сохранения урона, ухудшение контроля отдачи на 20% и +15% износа за выстрел. Только боеприпасы Supersonic. Дополнительно +5% скорости пули.",
+        "ChineseSimplified": "将5.56毫米转换为7.62x51毫米北约口径，支持全部弹药类型。伤害+5%，弹道平直度+5%，伤害衰减距离+10%，后坐力控制降低20%，每发磨损+15%。 仅限Supersonic弹药。额外弹速+5%。"
       }
     },
     {
@@ -540,9 +540,9 @@
     {
       "sid": "sid_bprue_caliber_762_eastern_ap_description",
       "languages": {
-        "English": "Converts the weapon to 7.62x54 mm armor-piercing ammunition only. Prioritizes armor penetration at the cost of increased recoil and weapon wear. This specialization is permanent.",
-        "Russian": "Переводит оружие исключительно на бронебойные боеприпасы 7,62x54 мм. Повышает бронепробиваемость ценой большей отдачи и износа оружия. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器仅转换为 7.62x54 毫米穿甲弹药。优先提升护甲穿透，但后坐力与武器磨损增加。此专精为永久性。"
+        "English": "Converts 5.45 mm to 7.62x54 mm . +5% damage, -5% flatness, +5% damage retention range, 25% worse recoil control and +20% wear per shot. Restricted to AP ammunition; additional +5% armor penetration.",
+        "Russian": "Конверсия 5,45 мм в 7,62x54 мм (все типы патронов). +5% урона, -5% настильности, +5% дальности сохранения урона, ухудшение контроля отдачи на 25% и +20% износа за выстрел. Только боеприпасы AP. Дополнительно +5% бронепробиваемости.",
+        "ChineseSimplified": "将5.45毫米转换为7.62x54毫米，支持全部弹药类型。伤害+5%，弹道平直度-5%，伤害衰减距离+5%，后坐力控制降低25%，每发磨损+20%。 仅限AP弹药。额外护甲穿透+5%。"
       }
     },
     {
@@ -556,9 +556,9 @@
     {
       "sid": "sid_bprue_caliber_762_eastern_supersonic_description",
       "languages": {
-        "English": "Converts the weapon to 7.62x54 mm supersonic ammunition only. Provides a flatter, more effective trajectory while retaining increased damage, recoil and weapon wear. This specialization is permanent.",
-        "Russian": "Переводит оружие исключительно на сверхзвуковые боеприпасы 7,62x54 мм. Обеспечивает более настильную и эффективную траекторию, сохраняя повышенные урон, отдачу и износ оружия. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器仅转换为 7.62x54 毫米超音速弹药。提供更平直、更有效的弹道，同时保留提升的伤害、后坐力与武器磨损。此专精为永久性。"
+        "English": "Converts 5.45 mm to 7.62x54 mm . +5% damage, -5% flatness, +5% damage retention range, 25% worse recoil control and +20% wear per shot. Restricted to Supersonic ammunition; additional +5% projectile speed.",
+        "Russian": "Конверсия 5,45 мм в 7,62x54 мм (все типы патронов). +5% урона, -5% настильности, +5% дальности сохранения урона, ухудшение контроля отдачи на 25% и +20% износа за выстрел. Только боеприпасы Supersonic. Дополнительно +5% скорости пули.",
+        "ChineseSimplified": "将5.45毫米转换为7.62x54毫米，支持全部弹药类型。伤害+5%，弹道平直度-5%，伤害衰减距离+5%，后坐力控制降低25%，每发磨损+20%。 仅限Supersonic弹药。额外弹速+5%。"
       }
     },
     {
