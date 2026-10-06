@@ -17,11 +17,11 @@ TEMPLATE_SID = "BPRUE_SMGModuleTemplate"
 
 MODULES = {
     "quick_draw": ("Readiness_QuickDraw", "sid_bprue_smg_quick_draw_name", "sid_bprue_smg_quick_draw_description", 2200, "Top", "Body", ["AimingTimePos15Effect", "AimingMovementPos10Effect", "BPRUE_SMG_ReloadingTimePos10Effect"]),
-    "stabilized": ("Readiness_Stabilized", "sid_bprue_smg_stabilized_name", "sid_bprue_smg_stabilized_description", 2400, "Top", "Body", ["RecoilPos15Effect", "ShotRecoveryPos20Effect", "AimingTimeNeg10Effect"]),
+    "stabilized": ("Readiness_Stabilized", "sid_bprue_smg_stabilized_name", "sid_bprue_smg_stabilized_description", 2400, "Top", "Body", ["IdleSwayXPos15Effect", "IdleSwayYPos15Effect", "AimingTimeNeg10Effect"]),
     "competition_reload": ("Reload_Competition", "sid_bprue_smg_competition_reload_name", "sid_bprue_smg_competition_reload_description", 2400, "Down", "Body", ["BPRUE_ReloadingTimeNeg20Effect", "AimingTimeNeg10Effect"]),
     "tactical_reload": ("Reload_Tactical", "sid_bprue_smg_tactical_reload_name", "sid_bprue_smg_tactical_reload_description", 2300, "Down", "Body", ["BPRUE_ReloadingTimeNeg10Effect", "AimingTimePos15Effect", "BPRUE_DurabilityPerShotNeg10Effect"]),
     "high_speed_action": ("Action_HighSpeed", "sid_bprue_smg_high_speed_action_name", "sid_bprue_smg_high_speed_action_description", 3000, "Top", "Barrel", ["BPRUE_FireIntervalNeg20Effect", "RecoilNeg15Effect", "BPRUE_DurabilityPerShotNeg20Effect", "BPRUE_SMG_ReloadingTimePos10Effect"]),
-    "controlled_action": ("Action_Controlled", "sid_bprue_smg_controlled_action_name", "sid_bprue_smg_controlled_action_description", 2800, "Top", "Barrel", ["BPRUE_FireIntervalPos5Effect", "RecoilPos15Effect", "ShotRecoveryPos20Effect", "BPRUE_ReloadingTimeNeg10Effect"]),
+    "controlled_action": ("Action_Controlled", "sid_bprue_smg_controlled_action_name", "sid_bprue_smg_controlled_action_description", 2800, "Top", "Barrel", ["BPRUE_FireIntervalPos5Effect", "RecoilPos15Effect", "ShotRecoveryPos10Effect", "BPRUE_ReloadingTimeNeg10Effect"]),
     "stock_lightweight": ("Stock_Lightweight", "sid_bprue_smg_stock_lightweight_name", "sid_bprue_smg_stock_lightweight_description", 2500, "Top", "Stock", ["AimingTimePos15Effect", "AimingMovementPos10Effect", "RecoilNeg15Effect"]),
     "stock_tactical": ("Stock_Tactical", "sid_bprue_smg_stock_tactical_name", "sid_bprue_smg_stock_tactical_description", 2700, "Down", "Stock", ["RecoilPos15Effect", "ShotRecoveryPos20Effect", "AimingTimeNeg10Effect"]),
     "stock_stabilized": ("Stock_Stabilized", "sid_bprue_smg_stock_stabilized_name", "sid_bprue_smg_stock_stabilized_description", 2900, None, "Stock", ["RecoilPos20Effect", "MaxDispersionPos15Effect", "BPRUE_Sniper_WeightPenalty10Effect"]),
