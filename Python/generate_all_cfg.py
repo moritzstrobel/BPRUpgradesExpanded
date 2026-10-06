@@ -62,6 +62,8 @@ VANILLA_EFFECT_LOCALIZATION_OVERRIDES = {
     "RecoilDown15Effect": "bprue_recoil",
     "WeightDown15Effect": "bprue_weight",
     "DistanceDropOffLengthPos20Effect": "bprue_effective_range",
+    "DistanceDropOffLengthPos15Effect": "bprue_effective_range",
+    "FlatnessUp5Effect": "bprue_effective_range",
     "FlatnessUp10Effect": "bprue_effective_range",
     "FlatnessUp15Effect": "bprue_effective_range",
 }
