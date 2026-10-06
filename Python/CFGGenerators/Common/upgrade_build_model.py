@@ -105,7 +105,10 @@ class UpgradeBuildModel:
                     f"{upgrade.sid}: RequiredUpgradePrototypeSIDs not generated: "
                     + ", ".join(unknown_requirements)
                 )
-            unknown_blocks = [sid for sid in upgrade.blocking_sids if sid not in known and sid not in {\n                "GunSVDM_Upgrade_Barrel_3_2", "GunSVU_Upgrade_Barrel_3_2",\n                "GunThreeLine_Upgrade_Barrel_3", "GunM701_Upgrade_Barrel_3_2",\n            }]
+            unknown_blocks = [sid for sid in upgrade.blocking_sids if sid not in known and sid not in {
+                "GunSVDM_Upgrade_Barrel_3_2", "GunSVU_Upgrade_Barrel_3_2",
+                "GunThreeLine_Upgrade_Barrel_3", "GunM701_Upgrade_Barrel_3_2",
+            }]
             if unknown_blocks:
                 errors.append(
                     f"{upgrade.sid}: BlockingUpgradePrototypeSIDs not generated: "
