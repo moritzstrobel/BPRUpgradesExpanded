@@ -1,6 +1,6 @@
 {
   "asset_path": "/BPRUpgradesExpanded/Localization/L_BPRUpgradesExpanded",
-  "entry_count": 527,
+  "entry_count": 529,
   "entries": [
     {
       "sid": "sid_effects_bprue_fire_rate_name",
@@ -4212,6 +4212,22 @@
     },
     {
       "sid": "bprue_cover_piercing",
+      "languages": {
+        "English": "Cover penetration",
+        "Russian": "Пробитие укрытий",
+        "ChineseSimplified": "掩体穿透"
+      }
+    },
+    {
+      "sid": "sid_effects_bprue_bleeding_chance_name",
+      "languages": {
+        "English": "Bleeding chance",
+        "Russian": "Шанс кровотечения",
+        "ChineseSimplified": "流血几率"
+      }
+    },
+    {
+      "sid": "sid_effects_bprue_cover_piercing_name",
       "languages": {
         "English": "Cover penetration",
         "Russian": "Пробитие укрытий",

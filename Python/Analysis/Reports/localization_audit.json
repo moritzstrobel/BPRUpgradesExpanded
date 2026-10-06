@@ -1,5 +1,5 @@
 {
-  "localization_sid_count": 527,
+  "localization_sid_count": 529,
   "required_languages": [
     "English",
     "Russian",
@@ -58,13 +58,9 @@
     "referenced_effect_count": 212,
     "visible_effect_count": 174,
     "vanilla_localization_count": 39,
-    "error_count": 5,
+    "error_count": 1,
     "errors": [
-      "BPRUE_Shared_BleedingChancePos10Effect: visible BPRUE effect references missing localization sid_effects_bprue_bleeding_chance_name (BaseGame, DLC1, Deluxe, PreOrder, Ultimate)",
-      "BPRUE_Shared_CoverPiercingPenalty10Effect: visible BPRUE effect references missing localization sid_effects_bprue_cover_piercing_name (BaseGame, DLC1, Deluxe, PreOrder, Ultimate)",
-      "DistanceDropOffLengthPos15Effect: visible effect referenced by BaseGame, DLC1 has no effective LocalizationSID",
-      "DistanceDropOffLengthPos5Effect: referenced by BaseGame, DLC1, PreOrder but no effect prototype could be resolved",
-      "FlatnessUp5Effect: visible effect referenced by BaseGame, DLC1, Deluxe has no effective LocalizationSID"
+      "DistanceDropOffLengthPos5Effect: referenced by BaseGame, DLC1, PreOrder but no effect prototype could be resolved"
     ],
     "effects": [
       {
@@ -1810,7 +1806,7 @@
         "sources": [
           "BPRUE_SharedEffectPrototypes.cfg"
         ],
-        "status": "missing_bprue_localization_asset"
+        "status": "ok"
       },
       {
         "sid": "BPRUE_Shared_CoverPiercingPenalty10Effect",
@@ -1829,7 +1825,7 @@
         "sources": [
           "BPRUE_SharedEffectPrototypes.cfg"
         ],
-        "status": "missing_bprue_localization_asset"
+        "status": "ok"
       },
       {
         "sid": "BPRUE_Shared_DamagePenalty10Effect",
@@ -3192,16 +3188,14 @@
           "DLC1"
         ],
         "visible": true,
-        "localization_sid": null,
+        "localization_sid": "bprue_effective_range",
         "resolution_chain": [
-          "DistanceDropOffLengthPos15Effect",
-          "DistanceDropOffLengthTemplate"
+          "DistanceDropOffLengthPos15Effect"
         ],
         "sources": [
-          "BaseGame",
-          "BaseGame"
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
         ],
-        "status": "visible_without_localization"
+        "status": "ok"
       },
       {
         "sid": "DistanceDropOffLengthPos20Effect",
@@ -3378,14 +3372,14 @@
           "Deluxe"
         ],
         "visible": true,
-        "localization_sid": null,
+        "localization_sid": "bprue_effective_range",
         "resolution_chain": [
           "FlatnessUp5Effect"
         ],
         "sources": [
-          "BaseGame"
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
         ],
-        "status": "visible_without_localization"
+        "status": "ok"
       },
       {
         "sid": "IdleSwayXPos15Effect",
@@ -3781,8 +3775,8 @@
   },
   "asset_snapshot": {
     "available": true,
-    "asset_entry_count": 527,
-    "source_entry_count": 527,
+    "asset_entry_count": 529,
+    "source_entry_count": 529,
     "missing_count": 0,
     "missing_sids": [],
     "asset_only_count": 0,
@@ -3803,5 +3797,5 @@
   },
   "unique_missing_upgrade_sid_count": 0,
   "missing_upgrade_sids": {},
-  "error_count": 5
+  "error_count": 1
 }
