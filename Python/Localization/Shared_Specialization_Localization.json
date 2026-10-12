@@ -108,25 +108,25 @@
     {
       "sid": "sid_bprue_shared_soft_target_description",
       "languages": {
-        "English": "Increases damage and improves projectile velocity and flatness against lightly protected targets, sacrificing armor penetration.",
-        "Russian": "Повышает урон, скорость пули и настильность траектории против слабо защищённых целей ценой снижения бронепробиваемости.",
-        "ChineseSimplified": "对轻防护目标提升伤害、弹速与弹道平直度，但牺牲护甲穿透。"
+        "English": "Experimental: increases bleeding chance by 10% at the cost of 10% cover penetration. Bleeding scaling requires in-game validation.",
+        "Russian": "Экспериментально: повышает шанс кровотечения на 10% ценой снижения пробития укрытий на 10%. Требуется проверка в игре.",
+        "ChineseSimplified": "实验性：流血几率提高10%，掩体穿透降低10%。流血计算方式仍需游戏内验证。"
       }
     },
     {
       "sid": "sid_bprue_shared_armor_piercing_name",
       "languages": {
-        "English": "Armor-Piercing Module",
-        "Russian": "Бронебойный модуль",
-        "ChineseSimplified": "穿甲模块"
+        "English": "Barrier Module",
+        "Russian": "Модуль пробития укрытий",
+        "ChineseSimplified": "掩体穿透模块"
       }
     },
     {
       "sid": "sid_bprue_shared_armor_piercing_description",
       "languages": {
-        "English": "Improves armor and cover penetration at the cost of raw weapon damage.",
-        "Russian": "Повышает пробитие брони и укрытий ценой снижения базового урона оружия.",
-        "ChineseSimplified": "提升对护甲与掩体的穿透，但降低武器基础伤害。"
+        "English": "Improves cover penetration by 20% at the cost of 10% weapon damage. Does not increase armor penetration.",
+        "Russian": "Повышает пробитие укрытий на 20% ценой снижения урона на 10%. Не увеличивает бронепробитие.",
+        "ChineseSimplified": "掩体穿透提高20%，武器伤害降低10%，不增加护甲穿透。"
       }
     },
     {
@@ -191,6 +191,54 @@
         "English": "Improves flatness and precision for longer-range fire at the cost of slower aiming.",
         "Russian": "Улучшает настильность траектории и точность для стрельбы на дальних дистанциях ценой более медленного прицеливания.",
         "ChineseSimplified": "提升远距离射击的弹道平直度与精度，但瞄准速度变慢。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_range_configuration_description",
+      "languages": {
+        "English": "Improves trajectory flatness by 15% and damage drop-off length by 10%, but slows aiming by 10%.",
+        "Russian": "Улучшает настильность на 15% и дальность снижения урона на 10%, но замедляет прицеливание на 10%.",
+        "ChineseSimplified": "弹道平直度提升15%，伤害衰减距离提升10%，但瞄准速度降低10%。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_cqb_configuration_description",
+      "languages": {
+        "English": "Improves aiming speed by 15% and dispersion by 10%, at the cost of 10% flatness and 10% recoil recovery.",
+        "Russian": "Ускоряет прицеливание на 15% и уменьшает разброс на 10%, но снижает настильность и восстановление после отдачи на 10%.",
+        "ChineseSimplified": "瞄准速度提升15%，散布改善10%，但弹道平直度和后坐力恢复各降低10%。"
+      }
+    },
+    {
+      "sid": "sid_bprue_ar_precision_tuning_description",
+      "languages": {
+        "English": "Improves trajectory flatness by 10% and damage drop-off length by 5%, at the cost of 8% recoil control.",
+        "Russian": "Улучшает настильность траектории на 10% и дальность снижения урона на 5%, но ухудшает контроль отдачи на 8%.",
+        "ChineseSimplified": "弹道平直度提升10%，伤害衰减距离提升5%，但后坐力控制降低8%。"
+      }
+    },
+    {
+      "sid": "sid_bprue_sniper_precision_tuning_description",
+      "languages": {
+        "English": "Improves flatness and damage drop-off length by 10% each, at the cost of 8% recoil control.",
+        "Russian": "Улучшает настильность и дальность снижения урона на 10% ценой ухудшения контроля отдачи на 8%.",
+        "ChineseSimplified": "弹道平直度和伤害衰减距离各提升10%，但后坐力控制降低8%。"
+      }
+    },
+    {
+      "sid": "bprue_bleeding_chance",
+      "languages": {
+        "English": "Bleeding chance",
+        "Russian": "Шанс кровотечения",
+        "ChineseSimplified": "流血几率"
+      }
+    },
+    {
+      "sid": "bprue_cover_piercing",
+      "languages": {
+        "English": "Cover penetration",
+        "Russian": "Пробитие укрытий",
+        "ChineseSimplified": "掩体穿透"
       }
     }
   ]

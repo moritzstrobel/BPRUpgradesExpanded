@@ -1,11 +1,11 @@
 {
   "summary": {
-    "oxa_prototypes": 945,
-    "vanilla_prototypes": 6667,
-    "weapon_candidates": 81,
+    "oxa_prototypes": 950,
+    "vanilla_prototypes": 6817,
+    "weapon_candidates": 84,
     "oxa_new_sid": 4,
     "oxa_new_platforms": 0,
-    "oxa_patched_vanilla": 77
+    "oxa_patched_vanilla": 80
   },
   "oxa_new_sid": [
     {
@@ -156,8 +156,8 @@
       "prototype_modes": [
         "bpatch"
       ],
-      "write_count": 487,
-      "explicit_path_count": 485,
+      "write_count": 498,
+      "explicit_path_count": 496,
       "semantic_roots": [
         "CompatibleAttachments",
         "UpgradePrototypeSIDs"
@@ -370,6 +370,26 @@
       ]
     },
     {
+      "sid": "GunFallschirmjager_DMR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "WeaponGeneralSetupPrototypes_DLC1"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 664,
+      "explicit_path_count": 663,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
       "sid": "GunFora230_PP_GS",
       "classification": "OXA_PATCHED_VANILLA",
       "vanilla_families": [],
@@ -527,8 +547,28 @@
       "prototype_modes": [
         "bpatch"
       ],
-      "write_count": 412,
-      "explicit_path_count": 410,
+      "write_count": 417,
+      "explicit_path_count": 415,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
+      "sid": "GunHSG72_DMR_GS",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "WeaponGeneralSetupPrototypes_DLC1"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 325,
+      "explicit_path_count": 324,
       "semantic_roots": [
         "CompatibleAttachments",
         "UpgradePrototypeSIDs"
@@ -548,8 +588,8 @@
       "prototype_modes": [
         "bpatch"
       ],
-      "write_count": 622,
-      "explicit_path_count": 569,
+      "write_count": 616,
+      "explicit_path_count": 563,
       "semantic_roots": [
         "CompatibleAttachments",
         "UpgradePrototypeSIDs"
@@ -807,6 +847,27 @@
       ]
     },
     {
+      "sid": "GunSPSA_Sniper_SG",
+      "classification": "OXA_PATCHED_VANILLA",
+      "vanilla_families": [],
+      "oxa_families": [
+        "WeaponGeneralSetupPrototypes_DLC1"
+      ],
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/ItemPrototypes/ItemPrototypes_DLC1.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg"
+      ],
+      "prototype_modes": [
+        "bpatch"
+      ],
+      "write_count": 369,
+      "explicit_path_count": 367,
+      "semantic_roots": [
+        "CompatibleAttachments",
+        "UpgradePrototypeSIDs"
+      ]
+    },
+    {
       "sid": "GunSVDM_SP",
       "classification": "OXA_PATCHED_VANILLA",
       "vanilla_families": [],
@@ -841,8 +902,8 @@
       "prototype_modes": [
         "bpatch"
       ],
-      "write_count": 515,
-      "explicit_path_count": 513,
+      "write_count": 532,
+      "explicit_path_count": 530,
       "semantic_roots": [
         "CompatibleAttachments",
         "UpgradePrototypeSIDs"
@@ -862,8 +923,8 @@
       "prototype_modes": [
         "bpatch"
       ],
-      "write_count": 506,
-      "explicit_path_count": 504,
+      "write_count": 523,
+      "explicit_path_count": 521,
       "semantic_roots": [
         "CompatibleAttachments",
         "UpgradePrototypeSIDs"
@@ -1104,8 +1165,8 @@
       "prototype_modes": [
         "bpatch"
       ],
-      "write_count": 449,
-      "explicit_path_count": 448,
+      "write_count": 444,
+      "explicit_path_count": 443,
       "semantic_roots": [
         "CompatibleAttachments",
         "UpgradePrototypeSIDs"
@@ -1204,8 +1265,8 @@
       "prototype_modes": [
         "bpatch"
       ],
-      "write_count": 408,
-      "explicit_path_count": 407,
+      "write_count": 413,
+      "explicit_path_count": 412,
       "semantic_roots": [
         "CompatibleAttachments",
         "UpgradePrototypeSIDs"
@@ -1445,8 +1506,8 @@
       "prototype_modes": [
         "bpatch"
       ],
-      "write_count": 489,
-      "explicit_path_count": 488,
+      "write_count": 500,
+      "explicit_path_count": 499,
       "semantic_roots": [
         "CompatibleAttachments",
         "UpgradePrototypeSIDs"
@@ -1505,8 +1566,8 @@
       "prototype_modes": [
         "bpatch"
       ],
-      "write_count": 486,
-      "explicit_path_count": 485,
+      "write_count": 497,
+      "explicit_path_count": 496,
       "semantic_roots": [
         "CompatibleAttachments",
         "UpgradePrototypeSIDs"
@@ -1625,8 +1686,8 @@
       "prototype_modes": [
         "bpatch"
       ],
-      "write_count": 414,
-      "explicit_path_count": 413,
+      "write_count": 419,
+      "explicit_path_count": 418,
       "semantic_roots": [
         "CompatibleAttachments",
         "UpgradePrototypeSIDs"
@@ -1645,8 +1706,8 @@
       "prototype_modes": [
         "bpatch"
       ],
-      "write_count": 505,
-      "explicit_path_count": 504,
+      "write_count": 522,
+      "explicit_path_count": 521,
       "semantic_roots": [
         "CompatibleAttachments",
         "UpgradePrototypeSIDs"

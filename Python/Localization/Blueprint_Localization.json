@@ -12,9 +12,9 @@
     {
       "sid": "sid_bprue_caliber_762_eastern_description",
       "languages": {
-        "English": "Converts the weapon to the game's 7.62 mm sniper cartridge. Increases damage, recoil and weapon wear. This specialization is permanent.",
-        "Russian": "Переводит оружие на боеприпасы 7,62х54 мм. Увеличивает урон, отдачу и износ оружия. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器转换为游戏中的 7.62 毫米狙击弹。提升伤害、后坐力与武器磨损。此专精为永久性。"
+        "English": "Converts 5.45 mm to 7.62x54 mm with all ammunition types. +5% damage, -5% flatness, +5% damage retention range, 25% worse recoil control and +20% wear per shot.",
+        "Russian": "Конверсия 5,45 мм в 7,62x54 мм (все типы патронов). +5% урона, -5% настильности, +5% дальности сохранения урона, ухудшение контроля отдачи на 25% и +20% износа за выстрел.",
+        "ChineseSimplified": "将5.45毫米转换为7.62x54毫米，支持全部弹药类型。伤害+5%，弹道平直度-5%，伤害衰减距离+5%，后坐力控制降低25%，每发磨损+20%。"
       }
     },
     {
@@ -28,9 +28,9 @@
     {
       "sid": "sid_bprue_caliber_762x39_description",
       "languages": {
-        "English": "Converts the weapon to 7.62x39 mm ammunition for greater close- to mid-range stopping power, at the cost of increased recoil and a less effective trajectory. This specialization is permanent.",
-        "Russian": "Переводит оружие на боеприпасы 7,62x39 мм для повышения останавливающего действия на ближней и средней дистанции ценой большей отдачи и менее настильной траектории. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器转换为 7.62x39 毫米弹药，提升中近距离的停止作用，但后坐力增加、弹道表现下降。此专精为永久性。"
+        "English": "Converts to 7.62x39 mm with all ammunition types. For 5.45 mm weapons: +5% damage, -10% flatness, -10% damage retention range, 15% worse recoil control and +10% wear. VS Vintar (9x39 mm) uses a separate profile: +5% velocity, +5% damage retention range, 15% worse recoil control and +10% wear.",
+        "Russian": "Конверсия в 7,62x39 мм (все типы патронов). Для оружия 5,45 мм: +5% урона, -10% настильности, -10% дальности сохранения урона, ухудшение контроля отдачи на 15%, +10% износа. Для Винтаря (9x39 мм): +5% скорости пули и дальности сохранения урона, ухудшение контроля отдачи на 15%, +10% износа.",
+        "ChineseSimplified": "转换为7.62x39毫米，支持全部弹药类型。5.45毫米武器：伤害+5%，弹道平直度-10%，伤害衰减距离-10%，后坐力控制降低15%，磨损+10%。文塔尔(9x39毫米)：弹速及伤害衰减距离+5%，后坐力控制降低15%，磨损+10%。"
       }
     },
     {
@@ -44,25 +44,25 @@
     {
       "sid": "sid_bprue_caliber_762_nato_description",
       "languages": {
-        "English": "Converts the weapon to 7.62x51 mm NATO ammunition. Increases damage, recoil and weapon wear. This specialization is permanent.",
-        "Russian": "Переводит оружие на боеприпасы 7,62x51 мм НАТО. Увеличивает урон, отдачу и износ оружия. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器转换为 7.62x51 毫米北约弹药。提升伤害、后坐力与武器磨损。此专精为永久性。"
+        "English": "Converts 5.56 mm to 7.62x51 mm NATO with all ammunition types. +5% damage, +5% flatness, +10% damage retention range, 20% worse recoil control and +15% wear per shot.",
+        "Russian": "Конверсия 5,56 мм в 7,62x51 мм НАТО (все типы патронов). +5% урона, +5% настильности, +10% дальности сохранения урона, ухудшение контроля отдачи на 20% и +15% износа за выстрел.",
+        "ChineseSimplified": "将5.56毫米转换为7.62x51毫米北约口径，支持全部弹药类型。伤害+5%，弹道平直度+5%，伤害衰减距离+10%，后坐力控制降低20%，每发磨损+15%。"
       }
     },
     {
       "sid": "sid_bprue_sniper_caliber_762sniper_to_762nato_description",
       "languages": {
-        "English": "Permanently converts the weapon from the game's 7.62 mm sniper cartridge to 7.62x51 mm NATO ammunition. Recoil is reduced by 10%, but damage is reduced by 10%. This specialization cannot be combined with another caliber conversion.",
-        "Russian": "Навсегда переводит оружие с снайперского патрона 7,62х54 мм на боеприпасы 7,62x51 мм НАТО. Отдача снижается на 10%, но урон также снижается на 10%. Эту специализацию нельзя совместить с другой конверсией калибра.",
-        "ChineseSimplified": "将武器从游戏中的 7.62 毫米狙击弹永久转换为 7.62x51 毫米北约弹药。后坐力降低 10%，但伤害降低 10%。此专精无法与其他口径转换叠加。"
+        "English": "Permanently converts to 7.62x51 mm NATO, allowing all ammunition types. Improves projectile speed (+10%), trajectory flatness (+10%), damage retention range (+15%) and recoil control (+5%). Mutually exclusive with other conversions.",
+        "Russian": "Постоянная конверсия на 7,62x51 мм НАТО, все типы патронов. +10% скорости пули, +10% настильности, +15% дальности сохранения урона и +5% контроля отдачи.",
+        "ChineseSimplified": "永久转换为 7.62x51 毫米北约口径，可使用所有弹药类型。弹速提高10%，弹道平直度提高10%，伤害衰减距离提高15%，后坐力控制提高5%。"
       }
     },
     {
       "sid": "sid_bprue_sniper_caliber_762nato_to_762sniper_description",
       "languages": {
-        "English": "Permanently converts the weapon from 7.62x51 mm NATO to the game's 7.62 mm sniper cartridge. Damage increases by 10% and armor penetration by 15%, but recoil and weapon wear increase by 15%. This specialization cannot be combined with another caliber conversion.",
-        "Russian": "Навсегда переводит оружие с 7,62x51 мм НАТО на снайперский патрон 7,62х54 мм. Урон увеличивается на 10%, бронепробиваемость — на 15%, но отдача и износ оружия также увеличиваются на 15%. Эту специализацию нельзя совместить с другой конверсией калибра.",
-        "ChineseSimplified": "将武器从 7.62x51 毫米北约永久转换为游戏中的 7.62 毫米狙击弹。伤害提升 10%、护甲穿透提升 15%，但后坐力与武器磨损增加 15%。此专精无法与其他口径转换叠加。"
+        "English": "Permanently converts to 7.62x54 mm, allowing all ammunition types. Reduces projectile speed (-10%), trajectory flatness (-10%) and damage retention range (-15%); increases recoil and wear per shot by 10%. Mutually exclusive with other conversions.",
+        "Russian": "Постоянная конверсия на 7,62x54 мм, все типы патронов. -10% скорости пули, -10% настильности, -15% дальности сохранения урона, +10% отдачи и износа за выстрел.",
+        "ChineseSimplified": "永久转换为 7.62x54 毫米口径，可使用所有弹药类型。弹速降低10%，弹道平直度降低10%，伤害衰减距离降低15%，后坐力和每发磨损增加10%。"
       }
     },
     {
@@ -76,9 +76,9 @@
     {
       "sid": "sid_bprue_reload_competition_description",
       "languages": {
-        "English": "Optimizes magazine handling for 20% faster reloads, at the cost of 15% increased recoil. Choosing this reload specialization is permanent.",
-        "Russian": "Оптимизирует работу с магазином, ускоряя перезарядку на 20%, но увеличивая отдачу на 15%. Выбор этой специализации перезарядки необратим.",
-        "ChineseSimplified": "优化弹匣操作，使装填速度提升 20%，但后坐力增加 15%。选择此装填专精为永久性。"
+        "English": "Optimizes magazine handling for 20% faster reloads, at the cost of 5% worse dispersion. Choosing this reload specialization is permanent.",
+        "Russian": "Оптимизирует работу с магазином, ускоряя перезарядку на 20%, но ухудшая кучность стрельбы на 5%. Выбор этой специализации перезарядки необратим.",
+        "ChineseSimplified": "优化弹匣操作，使装填速度提升 20%，但射击散布恶化 5%。选择此装填专精为永久性。"
       }
     },
     {
@@ -92,9 +92,9 @@
     {
       "sid": "sid_bprue_reload_reinforced_description",
       "languages": {
-        "English": "A reinforced feed setup provides 10% faster reloads and reduces weapon wear by 20%, but slows the firing cycle by 5%. Choosing this reload specialization is permanent.",
-        "Russian": "Усиленная система подачи ускоряет перезарядку на 10% и снижает износ оружия на 20%, но замедляет цикл стрельбы на 5%. Выбор этой специализации перезарядки необратим.",
-        "ChineseSimplified": "强化供弹配置使装填速度提升 10%、武器磨损降低 20%，但射击循环速度降低 5%。选择此装填专精为永久性。"
+        "English": "A reinforced feed setup reduces weapon wear per shot by 20%, but slows the firing cycle by 5%. Choosing this reload specialization is permanent.",
+        "Russian": "Усиленная система подачи снижает износ оружия при выстреле на 20%, но замедляет цикл стрельбы на 5%. Выбор этой специализации перезарядки необратим.",
+        "ChineseSimplified": "强化供弹配置使每次射击的武器磨损降低 20%，但射击循环速度降低 5%。选择此装填专精为永久性。"
       }
     },
     {
@@ -108,9 +108,9 @@
     {
       "sid": "sid_bprue_fire_rate_high_speed_description",
       "languages": {
-        "English": "Pushes the action for 20% faster fire rate, but increases recoil by 15% and weapon wear by 20%. Choosing this fire-rate specialization is permanent.",
-        "Russian": "Ускоряет работу автоматики, повышая темп стрельбы на 20%, но увеличивая отдачу на 15% и износ оружия на 20%. Выбор этой специализации на скорострельность необратим.",
-        "ChineseSimplified": "强化自动机，使射速提升 20%，但后坐力增加 15%、武器磨损增加 20%。选择此射速专精为永久性。"
+        "English": "Reduces firing interval by 12% for aggressive close-range fire, but increases recoil by 15% and weapon wear by 20%. Choosing this fire-rate specialization is permanent.",
+        "Russian": "Сокращает интервал между выстрелами на 12%, но увеличивает отдачу на 15% и износ оружия на 20%. Выбор этой специализации на скорострельность необратим.",
+        "ChineseSimplified": "将射击间隔缩短 12%，但后坐力增加 15%、武器磨损增加 20%。选择此射速专精为永久性。"
       }
     },
     {
@@ -124,9 +124,9 @@
     {
       "sid": "sid_bprue_fire_rate_balanced_description",
       "languages": {
-        "English": "Provides 10% faster fire rate, 10% lower recoil and 20% faster recoil recovery, at the cost of 10% increased weapon wear. Choosing this fire-rate specialization is permanent.",
-        "Russian": "Повышает темп стрельбы на 10%, снижает отдачу на 10% и ускоряет восстановление после отдачи на 20%, но увеличивает износ оружия на 10%. Выбор этой специализации на скорострельность необратим.",
-        "ChineseSimplified": "射速提升 10%、后坐力降低 10%、后坐力恢复加快 20%，但武器磨损增加 10%。选择此射速专精为永久性。"
+        "English": "Reduces firing interval by 5%, recoil by 5% and improves recoil recovery by 15%, at the cost of 10% increased weapon wear. Choosing this fire-rate specialization is permanent.",
+        "Russian": "Сокращает интервал между выстрелами на 5%, снижает отдачу на 5% и улучшает восстановление после отдачи на 15%, но увеличивает износ оружия на 10%. Выбор этой специализации на скорострельность необратим.",
+        "ChineseSimplified": "射击间隔缩短 5%、后坐力降低 5%、后坐力恢复改善 15%，但武器磨损增加 10%。选择此射速专精为永久性。"
       }
     },
     {
@@ -140,9 +140,9 @@
     {
       "sid": "sid_bprue_fire_control_burst_description",
       "languages": {
-        "English": "Adds a three-round burst mode while retaining semi-automatic and automatic fire. Recoil is reduced by 5%, but weapon wear increases by 10%. Choosing this fire-control specialization is permanent.",
-        "Russian": "Добавляет режим отсечки по три выстрела, сохраняя одиночный и автоматический огонь. Отдача снижается на 5%, но износ оружия увеличивается на 10%. Выбор этой специализации по управлению огнем является необратимым.",
-        "ChineseSimplified": "在保留半自动与全自动射击的同时加入三发点射模式。后坐力降低 5%，但武器磨损增加 10%。选择此击发控制专精为永久性。"
+        "English": "Replaces automatic fire with three-round bursts; only semi-automatic and burst modes remain. Recoil is reduced by 5%, but weapon wear increases by 10%. This specialization is permanent.",
+        "Russian": "Заменяет автоматический огонь отсечкой по три выстрела: остаются только одиночный огонь и отсечка. Отдача снижается на 5%, износ увеличивается на 10%. Специализация необратима.",
+        "ChineseSimplified": "将全自动射击替换为三发点射，仅保留半自动和点射模式。后坐力降低5%，武器磨损增加10%。此专精不可撤销。"
       }
     },
     {
@@ -156,9 +156,9 @@
     {
       "sid": "sid_bprue_fire_control_precision_description",
       "languages": {
-        "English": "Reconfigures the fire-control group for semi-automatic fire only, removing automatic and burst modes. In exchange, damage is increased by 10% and armor penetration by 15%, while weapon wear increases by 20%. Choosing this fire-control specialization is permanent.",
-        "Russian": "Перенастраивает ударно-спусковой механизм только на одиночный огонь, отключая автоматический режим и отсечку очереди. Взамен урон увеличивается на 10%, бронепробиваемость — на 15%, а износ оружия — на 20%. Выбор этой специализации по управлению огнем является необратимым.",
-        "ChineseSimplified": "将击发机构重新配置为仅支持半自动射击，移除全自动与点射模式。作为交换，伤害提升 10%、护甲穿透提升 15%，但武器磨损增加 20%。选择此击发控制专精为永久性。"
+        "English": "Restricts the weapon to semi-automatic fire. Improves accuracy (maximum dispersion) by 15% and recoil recovery by 10%, but reduces movement speed while aiming by 10%. This specialization is permanent.",
+        "Russian": "Оставляет только одиночный режим. Улучшает точность (максимальный разброс) на 15% и восстановление после отдачи на 10%, но снижает скорость движения при прицеливании на 10%. Специализация необратима.",
+        "ChineseSimplified": "仅保留半自动射击。最大散布改善15%，后坐力恢复改善10%，但瞄准移动速度降低10%。此专精不可撤销。"
       }
     },
     {
@@ -268,9 +268,9 @@
     {
       "sid": "sid_bprue_smg_stabilized_description",
       "languages": {
-        "English": "Prioritizes firing stability with 15% lower recoil and 20% faster recoil recovery, but aiming is 10% slower. Choosing this readiness specialization is permanent.",
-        "Russian": "Повышает устойчивость при стрельбе: отдача снижается на 15%, восстановление после отдачи ускоряется на 20%, но прицеливание становится на 10% медленнее. Выбор этой специализации готовности является необратимым.",
-        "ChineseSimplified": "优先提升射击稳定性：后坐力降低 15%、后坐力恢复加快 20%，但瞄准速度降低 10%。选择此备战专精为永久性。"
+        "English": "Improves aiming stability by reducing idle sway on both axes by 15%, but aiming is 10% slower. Choosing this readiness specialization is permanent.",
+        "Russian": "Уменьшает колебания прицела по обеим осям на 15%, но замедляет прицеливание на 10%. Выбор этой специализации готовности необратим.",
+        "ChineseSimplified": "使两个方向的瞄准晃动均减少 15%，但瞄准速度降低 10%。选择此备战专精为永久性。"
       }
     },
     {
@@ -332,9 +332,9 @@
     {
       "sid": "sid_bprue_smg_controlled_action_description",
       "languages": {
-        "English": "Lengthens the firing cycle by 5% in exchange for 15% lower recoil, 20% faster recoil recovery and 10% faster reloads. Choosing this action specialization is permanent.",
-        "Russian": "Удлиняет цикл стрельбы на 5%, взамен снижая отдачу на 15%, ускоряя восстановление после отдачи на 20% и перезарядку на 10%. Выбор этой специализации автоматики является необратимым.",
-        "ChineseSimplified": "射击循环延长 5%，以换取后坐力降低 15%、后坐力恢复加快 20%、装填提升 10%。选择此自动机专精为永久性。"
+        "English": "Lengthens the firing cycle by 5% in exchange for 15% lower recoil, 10% faster recoil recovery and 10% faster reloads. Choosing this action specialization is permanent.",
+        "Russian": "Удлиняет цикл стрельбы на 5%, взамен снижая отдачу на 15%, ускоряя восстановление после отдачи на 10% и перезарядку на 10%. Выбор этой специализации автоматики необратим.",
+        "ChineseSimplified": "射击循环延长 5%，以换取后坐力降低 15%、后坐力恢复加快 10% 以及装填速度提升 10%。选择此自动机专精为永久性。"
       }
     },
     {
@@ -460,9 +460,9 @@
     {
       "sid": "sid_bprue_caliber_762x39_ap_description",
       "languages": {
-        "English": "Converts the weapon to 7.62x39 mm ammunition and supports standard and armor-piercing rounds. This specialization is permanent.",
-        "Russian": "Переводит оружие на боеприпасы 7,62×39 мм с поддержкой стандартных и бронебойных патронов. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器转换为 7.62x39 毫米弹药，支持标准与穿甲弹。此专精为永久性。"
+        "English": "Converts to 7.62x39 mm . For 5.45 mm weapons: +5% damage, -10% flatness, -10% damage retention range, 15% worse recoil control and +10% wear. VS Vintar (9x39 mm) uses a separate profile: +5% velocity, +5% damage retention range, 15% worse recoil control and +10% wear. Restricted to AP ammunition; additional +5% armor penetration.",
+        "Russian": "Конверсия в 7,62x39 мм (все типы патронов). Для оружия 5,45 мм: +5% урона, -10% настильности, -10% дальности сохранения урона, ухудшение контроля отдачи на 15%, +10% износа. Для Винтаря (9x39 мм): +5% скорости пули и дальности сохранения урона, ухудшение контроля отдачи на 15%, +10% износа. Только боеприпасы AP. Дополнительно +5% бронепробиваемости.",
+        "ChineseSimplified": "转换为7.62x39毫米，支持全部弹药类型。5.45毫米武器：伤害+5%，弹道平直度-10%，伤害衰减距离-10%，后坐力控制降低15%，磨损+10%。文塔尔(9x39毫米)：弹速及伤害衰减距离+5%，后坐力控制降低15%，磨损+10%。 仅限AP弹药。额外护甲穿透+5%。"
       }
     },
     {
@@ -476,9 +476,9 @@
     {
       "sid": "sid_bprue_caliber_762x39_expanding_description",
       "languages": {
-        "English": "Converts the weapon to 7.62x39 mm ammunition and supports standard and expanding rounds. This specialization is permanent.",
-        "Russian": "Переводит оружие на боеприпасы 7,62×39 мм с поддержкой стандартных и экспансивных патронов. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器转换为 7.62x39 毫米弹药，支持标准与扩张弹。此专精为永久性。"
+        "English": "Converts to 7.62x39 mm . For 5.45 mm weapons: +5% damage, -10% flatness, -10% damage retention range, 15% worse recoil control and +10% wear. VS Vintar (9x39 mm) uses a separate profile: +5% velocity, +5% damage retention range, 15% worse recoil control and +10% wear. Restricted to Expanding ammunition; expanding ammunition supplies its own damage modifiers.",
+        "Russian": "Конверсия в 7,62x39 мм (все типы патронов). Для оружия 5,45 мм: +5% урона, -10% настильности, -10% дальности сохранения урона, ухудшение контроля отдачи на 15%, +10% износа. Для Винтаря (9x39 мм): +5% скорости пули и дальности сохранения урона, ухудшение контроля отдачи на 15%, +10% износа. Только боеприпасы Expanding. Дополнительные свойства задаются патронами.",
+        "ChineseSimplified": "转换为7.62x39毫米，支持全部弹药类型。5.45毫米武器：伤害+5%，弹道平直度-10%，伤害衰减距离-10%，后坐力控制降低15%，磨损+10%。文塔尔(9x39毫米)：弹速及伤害衰减距离+5%，后坐力控制降低15%，磨损+10%。 仅限Expanding弹药。扩张弹药具有独立伤害属性。"
       }
     },
     {
@@ -508,9 +508,9 @@
     {
       "sid": "sid_bprue_caliber_762_nato_ap_description",
       "languages": {
-        "English": "Converts the weapon to 7.62x51 mm NATO armor-piercing ammunition only. Prioritizes armor penetration at the cost of increased recoil and weapon wear. This specialization is permanent.",
-        "Russian": "Переводит оружие исключительно на бронебойные боеприпасы 7,62x51 мм НАТО. Повышает бронепробиваемость ценой большей отдачи и износа оружия. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器仅转换为 7.62x51 毫米北约穿甲弹药。优先提升护甲穿透，但后坐力与武器磨损增加。此专精为永久性。"
+        "English": "Converts 5.56 mm to 7.62x51 mm NATO . +5% damage, +5% flatness, +10% damage retention range, 20% worse recoil control and +15% wear per shot. Restricted to AP ammunition; additional +5% armor penetration.",
+        "Russian": "Конверсия 5,56 мм в 7,62x51 мм НАТО (все типы патронов). +5% урона, +5% настильности, +10% дальности сохранения урона, ухудшение контроля отдачи на 20% и +15% износа за выстрел. Только боеприпасы AP. Дополнительно +5% бронепробиваемости.",
+        "ChineseSimplified": "将5.56毫米转换为7.62x51毫米北约口径，支持全部弹药类型。伤害+5%，弹道平直度+5%，伤害衰减距离+10%，后坐力控制降低20%，每发磨损+15%。 仅限AP弹药。额外护甲穿透+5%。"
       }
     },
     {
@@ -524,9 +524,9 @@
     {
       "sid": "sid_bprue_caliber_762_nato_supersonic_description",
       "languages": {
-        "English": "Converts the weapon to 7.62x51 mm NATO supersonic ammunition only. Provides a flatter, more effective trajectory while retaining increased damage, recoil and weapon wear. This specialization is permanent.",
-        "Russian": "Переводит оружие исключительно на сверхзвуковые боеприпасы 7,62x51 мм НАТО. Обеспечивает более настильную и эффективную траекторию, сохраняя повышенные урон, отдачу и износ оружия. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器仅转换为 7.62x51 毫米北约超音速弹药。提供更平直、更有效的弹道，同时保留提升的伤害、后坐力与武器磨损。此专精为永久性。"
+        "English": "Converts 5.56 mm to 7.62x51 mm NATO . +5% damage, +5% flatness, +10% damage retention range, 20% worse recoil control and +15% wear per shot. Restricted to Supersonic ammunition; additional +5% projectile speed.",
+        "Russian": "Конверсия 5,56 мм в 7,62x51 мм НАТО (все типы патронов). +5% урона, +5% настильности, +10% дальности сохранения урона, ухудшение контроля отдачи на 20% и +15% износа за выстрел. Только боеприпасы Supersonic. Дополнительно +5% скорости пули.",
+        "ChineseSimplified": "将5.56毫米转换为7.62x51毫米北约口径，支持全部弹药类型。伤害+5%，弹道平直度+5%，伤害衰减距离+10%，后坐力控制降低20%，每发磨损+15%。 仅限Supersonic弹药。额外弹速+5%。"
       }
     },
     {
@@ -540,9 +540,9 @@
     {
       "sid": "sid_bprue_caliber_762_eastern_ap_description",
       "languages": {
-        "English": "Converts the weapon to 7.62x54 mm armor-piercing ammunition only. Prioritizes armor penetration at the cost of increased recoil and weapon wear. This specialization is permanent.",
-        "Russian": "Переводит оружие исключительно на бронебойные боеприпасы 7,62x54 мм. Повышает бронепробиваемость ценой большей отдачи и износа оружия. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器仅转换为 7.62x54 毫米穿甲弹药。优先提升护甲穿透，但后坐力与武器磨损增加。此专精为永久性。"
+        "English": "Converts 5.45 mm to 7.62x54 mm . +5% damage, -5% flatness, +5% damage retention range, 25% worse recoil control and +20% wear per shot. Restricted to AP ammunition; additional +5% armor penetration.",
+        "Russian": "Конверсия 5,45 мм в 7,62x54 мм (все типы патронов). +5% урона, -5% настильности, +5% дальности сохранения урона, ухудшение контроля отдачи на 25% и +20% износа за выстрел. Только боеприпасы AP. Дополнительно +5% бронепробиваемости.",
+        "ChineseSimplified": "将5.45毫米转换为7.62x54毫米，支持全部弹药类型。伤害+5%，弹道平直度-5%，伤害衰减距离+5%，后坐力控制降低25%，每发磨损+20%。 仅限AP弹药。额外护甲穿透+5%。"
       }
     },
     {
@@ -556,9 +556,9 @@
     {
       "sid": "sid_bprue_caliber_762_eastern_supersonic_description",
       "languages": {
-        "English": "Converts the weapon to 7.62x54 mm supersonic ammunition only. Provides a flatter, more effective trajectory while retaining increased damage, recoil and weapon wear. This specialization is permanent.",
-        "Russian": "Переводит оружие исключительно на сверхзвуковые боеприпасы 7,62x54 мм. Обеспечивает более настильную и эффективную траекторию, сохраняя повышенные урон, отдачу и износ оружия. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器仅转换为 7.62x54 毫米超音速弹药。提供更平直、更有效的弹道，同时保留提升的伤害、后坐力与武器磨损。此专精为永久性。"
+        "English": "Converts 5.45 mm to 7.62x54 mm . +5% damage, -5% flatness, +5% damage retention range, 25% worse recoil control and +20% wear per shot. Restricted to Supersonic ammunition; additional +5% projectile speed.",
+        "Russian": "Конверсия 5,45 мм в 7,62x54 мм (все типы патронов). +5% урона, -5% настильности, +5% дальности сохранения урона, ухудшение контроля отдачи на 25% и +20% износа за выстрел. Только боеприпасы Supersonic. Дополнительно +5% скорости пули.",
+        "ChineseSimplified": "将5.45毫米转换为7.62x54毫米，支持全部弹药类型。伤害+5%，弹道平直度-5%，伤害衰减距离+5%，后坐力控制降低25%，每发磨损+20%。 仅限Supersonic弹药。额外弹速+5%。"
       }
     },
     {
@@ -572,9 +572,9 @@
     {
       "sid": "sid_bprue_smg_caliber_a919_ap_description",
       "languages": {
-        "English": "Converts the weapon to 9x19 mm armor-piercing ammunition only. Improves armor penetration and weapon control, but reduces damage and provides less effective range than the standard 9x19 mm conversion. This specialization is permanent.",
-        "Russian": "Переводит оружие исключительно на бронебойные боеприпасы 9x19 мм. Повышает бронепробиваемость и управляемость оружия, но снижает урон и дает меньшую эффективную дальность по сравнению со стандартной конверсией на 9x19 мм. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器仅转换为 9x19 毫米穿甲弹药。提升护甲穿透与武器操控，但伤害降低，且有效射程不如标准 9x19 毫米转换。此专精为永久性。"
+        "English": "Permanently converts to 9x19 mm armor-piercing ammunition only. Inherits the complete weapon-specific standard conversion profile and adds +5% armor penetration. The ammunition itself determines additional projectile behavior. Mutually exclusive with other caliber conversions.",
+        "Russian": "Постоянная конверсия на 9x19 mm: только бронебойные патроны. Сохраняет все эффекты стандартной конверсии для данного оружия и добавляет +5% бронепробиваемости. Дополнительные свойства определяются патронами. Несовместима с другими конверсиями.",
+        "ChineseSimplified": "永久转换为9x19 mm穿甲弹药。继承该武器标准转换的全部效果，额外增加5%护甲穿透。弹药本身决定其他弹道属性。不能与其他口径转换同时安装。"
       }
     },
     {
@@ -588,9 +588,9 @@
     {
       "sid": "sid_bprue_smg_caliber_a918_ap_description",
       "languages": {
-        "English": "Converts the weapon to 9x18 mm armor-piercing ammunition only. Improves armor penetration and weapon control, but further reduces damage and provides less effective range than the standard 9x18 mm conversion. This specialization is permanent.",
-        "Russian": "Переводит оружие исключительно на бронебойные боеприпасы 9x18 мм. Повышает бронепробиваемость и управляемость оружия, но дополнительно снижает урон и дает меньшую эффективную дальность по сравнению со стандартной конверсией на 9x18 мм. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器仅转换为 9x18 毫米穿甲弹药。提升护甲穿透与武器操控，但伤害进一步降低，且有效射程不如标准 9x18 毫米转换。此专精为永久性。"
+        "English": "Permanently converts to 9x18 mm armor-piercing ammunition only. Inherits the complete weapon-specific standard conversion profile and adds +5% armor penetration. The ammunition itself determines additional projectile behavior. Mutually exclusive with other caliber conversions.",
+        "Russian": "Постоянная конверсия на 9x18 mm: только бронебойные патроны. Сохраняет все эффекты стандартной конверсии для данного оружия и добавляет +5% бронепробиваемости. Дополнительные свойства определяются патронами. Несовместима с другими конверсиями.",
+        "ChineseSimplified": "永久转换为9x18 mm穿甲弹药。继承该武器标准转换的全部效果，额外增加5%护甲穿透。弹药本身决定其他弹道属性。不能与其他口径转换同时安装。"
       }
     },
     {
@@ -604,9 +604,9 @@
     {
       "sid": "sid_bprue_smg_caliber_a045_ap_description",
       "languages": {
-        "English": "Converts the weapon to .45 ACP armor-piercing ammunition only. Improves armor penetration while retaining increased damage, at the cost of heavier recoil and reduced effective range. This specialization is permanent.",
-        "Russian": "Переводит оружие исключительно на бронебойные боеприпасы .45 ACP. Повышает бронепробиваемость и сохраняет повышенный урон ценой более сильной отдачи и меньшей эффективной дальности. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器仅转换为 .45 ACP 穿甲弹药。提升护甲穿透并保留提升的伤害，但后坐力更强、有效射程下降。此专精为永久性。"
+        "English": "Permanently converts to .45 ACP armor-piercing ammunition only. Inherits the complete weapon-specific standard conversion profile and adds +5% armor penetration. The ammunition itself determines additional projectile behavior. Mutually exclusive with other caliber conversions.",
+        "Russian": "Постоянная конверсия на .45 ACP: только бронебойные патроны. Сохраняет все эффекты стандартной конверсии для данного оружия и добавляет +5% бронепробиваемости. Дополнительные свойства определяются патронами. Несовместима с другими конверсиями.",
+        "ChineseSimplified": "永久转换为.45 ACP穿甲弹药。继承该武器标准转换的全部效果，额外增加5%护甲穿透。弹药本身决定其他弹道属性。不能与其他口径转换同时安装。"
       }
     },
     {
@@ -620,9 +620,9 @@
     {
       "sid": "sid_bprue_smg_caliber_a045_expanding_description",
       "languages": {
-        "English": "Converts the weapon to .45 ACP expanding ammunition only. Maximizes damage at the cost of heavier recoil and substantially reduced effective range. This specialization is permanent.",
-        "Russian": "Переводит оружие исключительно на экспансивные боеприпасы .45 ACP. Максимизирует урон ценой более сильной отдачи и значительно меньшей эффективной дальности. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器仅转换为 .45 ACP 扩张弹药。最大化伤害，但后坐力更强、有效射程大幅下降。此专精为永久性。"
+        "English": "Permanently converts to .45 ACP expanding ammunition only. Inherits the complete weapon-specific standard conversion profile. The ammunition itself determines additional projectile behavior. Mutually exclusive with other caliber conversions.",
+        "Russian": "Постоянная конверсия на .45 ACP: только экспансивные патроны. Сохраняет все эффекты стандартной конверсии для данного оружия. Дополнительные свойства определяются патронами. Несовместима с другими конверсиями.",
+        "ChineseSimplified": "永久转换为.45 ACP扩张弹药。继承该武器标准转换的全部效果。弹药本身决定其他弹道属性。不能与其他口径转换同时安装。"
       }
     },
     {
@@ -636,9 +636,9 @@
     {
       "sid": "sid_bprue_sniper_caliber_762nato_ap_description",
       "languages": {
-        "English": "Converts the weapon to 7.62x51 mm NATO armor-piercing ammunition only. Improves armor penetration and retains some recoil control at the cost of reduced damage. This specialization is permanent.",
-        "Russian": "Переводит оружие исключительно на бронебойные боеприпасы 7,62x51 мм НАТО. Повышает бронепробиваемость и сохраняет часть преимущества в контроле отдачи ценой снижения урона. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器仅转换为 7.62x51 毫米北约穿甲弹药。提升护甲穿透并保留部分后坐力控制优势，但伤害降低。此专精为永久性。"
+        "English": "Converts to 7.62x51 mm NATO AP ammunition only. Inherits +10% projectile speed, +10% flatness, +15% damage retention range and +5% recoil control. Additional +5% armor penetration and -5% damage. Permanent and mutually exclusive.",
+        "Russian": "Только патроны 7.62x51 mm NATO (AP). Базовые эффекты: +10% скорости пули, +10% настильности, +15% дальности сохранения урона, +5% контроля отдачи. Дополнительно +5% бронепробиваемости и -5% урона. Постоянная конверсия.",
+        "ChineseSimplified": "仅可使用 7.62x51 mm NATO AP 弹药。基础效果：弹速+10%、弹道平直度+10%、伤害衰减距离+15%、后坐力控制+5%。额外护甲穿透+5%，伤害-5%。永久转换，不能与其他口径转换同时安装。"
       }
     },
     {
@@ -652,9 +652,9 @@
     {
       "sid": "sid_bprue_sniper_caliber_762nato_supersonic_description",
       "languages": {
-        "English": "Converts the weapon to 7.62x51 mm NATO supersonic ammunition only. Retains improved recoil control and provides a flatter, more effective trajectory at the cost of reduced damage. This specialization is permanent.",
-        "Russian": "Переводит оружие исключительно на сверхзвуковые боеприпасы 7,62x51 мм НАТО. Сохраняет улучшенный контроль отдачи и обеспечивает более настильную и эффективную траекторию ценой снижения урона. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器仅转换为 7.62x51 毫米北约超音速弹药。保留改善的后坐力控制，并提供更平直、更有效的弹道，但伤害降低。此专精为永久性。"
+        "English": "Converts to 7.62x51 mm NATO Supersonic ammunition only. Inherits +10% projectile speed, +10% flatness, +15% damage retention range and +5% recoil control. Additional +5% projectile speed and +5% wear per shot; supersonic ammunition already improves flatness. Permanent and mutually exclusive.",
+        "Russian": "Только патроны 7.62x51 mm NATO (Supersonic). Базовые эффекты: +10% скорости пули, +10% настильности, +15% дальности сохранения урона, +5% контроля отдачи. Дополнительно +5% скорости пули и +5% износа за выстрел; сверхзвуковые патроны уже повышают настильность. Постоянная конверсия.",
+        "ChineseSimplified": "仅可使用 7.62x51 mm NATO Supersonic 弹药。基础效果：弹速+10%、弹道平直度+10%、伤害衰减距离+15%、后坐力控制+5%。额外弹速+5%，每发磨损+5%；超音速弹药本身已改善弹道平直度。永久转换，不能与其他口径转换同时安装。"
       }
     },
     {
@@ -668,9 +668,9 @@
     {
       "sid": "sid_bprue_sniper_caliber_762sniper_ap_description",
       "languages": {
-        "English": "Converts the weapon to 7.62x54 mm armor-piercing ammunition only. Prioritizes armor penetration while retaining increased damage, at the cost of increased recoil and weapon wear. This specialization is permanent.",
-        "Russian": "Переводит оружие исключительно на бронебойные боеприпасы 7,62x54 мм. Повышает бронепробиваемость и сохраняет повышенный урон ценой большей отдачи и износа оружия. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器仅转换为 7.62x54 毫米穿甲弹药。优先提升护甲穿透并保留提升的伤害，但后坐力与武器磨损增加。此专精为永久性。"
+        "English": "Converts to 7.62x54 mm AP ammunition only. Inherits -10% projectile speed, -10% flatness, -15% damage retention range, +10% recoil and +10% wear per shot. Additional +5% armor penetration and -5% damage. Permanent and mutually exclusive.",
+        "Russian": "Только патроны 7.62x54 mm (AP). Базовые эффекты: -10% скорости пули, -10% настильности, -15% дальности сохранения урона, +10% отдачи и износа за выстрел. Дополнительно +5% бронепробиваемости и -5% урона. Постоянная конверсия.",
+        "ChineseSimplified": "仅可使用 7.62x54 mm AP 弹药。基础效果：弹速-10%、弹道平直度-10%、伤害衰减距离-15%、后坐力及每发磨损+10%。额外护甲穿透+5%，伤害-5%。永久转换，不能与其他口径转换同时安装。"
       }
     },
     {
@@ -684,9 +684,9 @@
     {
       "sid": "sid_bprue_sniper_caliber_762sniper_supersonic_description",
       "languages": {
-        "English": "Converts the weapon to 7.62x54 mm supersonic ammunition only. Provides a flatter, more effective trajectory while retaining increased damage, at the cost of increased recoil and weapon wear. This specialization is permanent.",
-        "Russian": "Переводит оружие исключительно на сверхзвуковые боеприпасы 7,62x54 мм. Обеспечивает более настильную и эффективную траекторию и сохраняет повышенный урон ценой большей отдачи и износа оружия. Эта специализация является постоянной.",
-        "ChineseSimplified": "将武器仅转换为 7.62x54 毫米超音速弹药。提供更平直、更有效的弹道并保留提升的伤害，但后坐力与武器磨损增加。此专精为永久性。"
+        "English": "Converts to 7.62x54 mm Supersonic ammunition only. Inherits -10% projectile speed, -10% flatness, -15% damage retention range, +10% recoil and +10% wear per shot. Additional +5% projectile speed and +5% wear per shot; supersonic ammunition already improves flatness. Permanent and mutually exclusive.",
+        "Russian": "Только патроны 7.62x54 mm (Supersonic). Базовые эффекты: -10% скорости пули, -10% настильности, -15% дальности сохранения урона, +10% отдачи и износа за выстрел. Дополнительно +5% скорости пули и +5% износа за выстрел; сверхзвуковые патроны уже повышают настильность. Постоянная конверсия.",
+        "ChineseSimplified": "仅可使用 7.62x54 mm Supersonic 弹药。基础效果：弹速-10%、弹道平直度-10%、伤害衰减距离-15%、后坐力及每发磨损+10%。额外弹速+5%，每发磨损+5%；超音速弹药本身已改善弹道平直度。永久转换，不能与其他口径转换同时安装。"
       }
     }
   ]

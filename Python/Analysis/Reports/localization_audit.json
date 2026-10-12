@@ -1,5 +1,5 @@
 {
-  "localization_sid_count": 518,
+  "localization_sid_count": 529,
   "required_languages": [
     "English",
     "Russian",
@@ -9,9 +9,9 @@
   "missing_languages": [],
   "scopes": {
     "BaseGame": {
-      "upgrade_count": 1352,
+      "upgrade_count": 1358,
       "text_sid_count": 124,
-      "hint_sid_count": 126,
+      "hint_sid_count": 130,
       "missing_count": 0,
       "missing_sids": [],
       "incomplete_upgrade_count": 0,
@@ -20,7 +20,7 @@
     "DLC1": {
       "upgrade_count": 246,
       "text_sid_count": 67,
-      "hint_sid_count": 69,
+      "hint_sid_count": 72,
       "missing_count": 0,
       "missing_sids": [],
       "incomplete_upgrade_count": 0,
@@ -29,16 +29,16 @@
     "Deluxe": {
       "upgrade_count": 104,
       "text_sid_count": 63,
-      "hint_sid_count": 63,
+      "hint_sid_count": 67,
       "missing_count": 0,
       "missing_sids": [],
       "incomplete_upgrade_count": 0,
       "incomplete_upgrades": []
     },
     "PreOrder": {
-      "upgrade_count": 20,
-      "text_sid_count": 20,
-      "hint_sid_count": 20,
+      "upgrade_count": 23,
+      "text_sid_count": 23,
+      "hint_sid_count": 23,
       "missing_count": 0,
       "missing_sids": [],
       "incomplete_upgrade_count": 0,
@@ -47,7 +47,7 @@
     "Ultimate": {
       "upgrade_count": 61,
       "text_sid_count": 45,
-      "hint_sid_count": 45,
+      "hint_sid_count": 46,
       "missing_count": 0,
       "missing_sids": [],
       "incomplete_upgrade_count": 0,
@@ -55,12 +55,32 @@
     }
   },
   "effects": {
-    "referenced_effect_count": 217,
-    "visible_effect_count": 179,
-    "vanilla_localization_count": 35,
+    "referenced_effect_count": 211,
+    "visible_effect_count": 174,
+    "vanilla_localization_count": 39,
     "error_count": 0,
     "errors": [],
     "effects": [
+      {
+        "sid": "AimingMovementNeg10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_aimMovement",
+        "resolution_chain": [
+          "AimingMovementNeg10Effect",
+          "AimingMovementTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
       {
         "sid": "AimingMovementPos10Effect",
         "scopes": [
@@ -87,7 +107,8 @@
         "scopes": [
           "BaseGame",
           "DLC1",
-          "Deluxe"
+          "Deluxe",
+          "PreOrder"
         ],
         "visible": true,
         "localization_sid": "weapon_aimMovement",
@@ -124,7 +145,6 @@
           "BaseGame",
           "DLC1",
           "Deluxe",
-          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
@@ -145,7 +165,6 @@
           "BaseGame",
           "DLC1",
           "Deluxe",
-          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
@@ -202,54 +221,11 @@
         "status": "vanilla_localization"
       },
       {
-        "sid": "ArmorPiercingPos15Effect",
-        "scopes": [
-          "BaseGame",
-          "DLC1",
-          "Deluxe",
-          "PreOrder",
-          "Ultimate"
-        ],
-        "visible": true,
-        "localization_sid": "weapon_armorPiercing",
-        "resolution_chain": [
-          "ArmorPiercingPos15Effect",
-          "ArmorPiercingTemplate"
-        ],
-        "sources": [
-          "BaseGame",
-          "BaseGame"
-        ],
-        "status": "vanilla_localization"
-      },
-      {
-        "sid": "ArmorPiercingPos25Effect",
-        "scopes": [
-          "BaseGame",
-          "DLC1",
-          "Deluxe",
-          "PreOrder",
-          "Ultimate"
-        ],
-        "visible": true,
-        "localization_sid": "weapon_armorPiercing",
-        "resolution_chain": [
-          "ArmorPiercingPos25Effect",
-          "ArmorPiercingTemplate"
-        ],
-        "sources": [
-          "BaseGame",
-          "BaseGame"
-        ],
-        "status": "vanilla_localization"
-      },
-      {
         "sid": "BPRUE_AddBurstFireModeEffect",
         "scopes": [
           "BaseGame",
           "DLC1",
           "Deluxe",
-          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
@@ -263,29 +239,9 @@
         "status": "ok"
       },
       {
-        "sid": "BPRUE_ArmorPiercingPos10Effect",
-        "scopes": [
-          "BaseGame",
-          "DLC1",
-          "Deluxe"
-        ],
-        "visible": true,
-        "localization_sid": "bprue_armor_piercing",
-        "resolution_chain": [
-          "BPRUE_ArmorPiercingPos10Effect"
-        ],
-        "sources": [
-          "BPRUE_EffectPrototypes.cfg"
-        ],
-        "status": "ok"
-      },
-      {
         "sid": "BPRUE_ArmorPiercingPos15Effect",
         "scopes": [
-          "BaseGame",
-          "DLC1",
-          "Deluxe",
-          "PreOrder"
+          "BaseGame"
         ],
         "visible": true,
         "localization_sid": "bprue_armor_piercing",
@@ -298,16 +254,17 @@
         "status": "ok"
       },
       {
-        "sid": "BPRUE_ArmorPiercingPos25Effect",
+        "sid": "BPRUE_ArmorPiercingPos5Effect",
         "scopes": [
           "BaseGame",
           "DLC1",
-          "Deluxe"
+          "Deluxe",
+          "PreOrder"
         ],
         "visible": true,
         "localization_sid": "bprue_armor_piercing",
         "resolution_chain": [
-          "BPRUE_ArmorPiercingPos25Effect"
+          "BPRUE_ArmorPiercingPos5Effect"
         ],
         "sources": [
           "BPRUE_EffectPrototypes.cfg"
@@ -924,56 +881,14 @@
         "status": "ok"
       },
       {
-        "sid": "BPRUE_DamagePos10Effect",
-        "scopes": [
-          "BaseGame",
-          "DLC1",
-          "Deluxe",
-          "PreOrder",
-          "Ultimate"
-        ],
-        "visible": true,
-        "localization_sid": "bprue_damage",
-        "resolution_chain": [
-          "BPRUE_DamagePos10Effect",
-          "DamageTemplate"
-        ],
-        "sources": [
-          "BPRUE_EffectPrototypes.cfg",
-          "BaseGame"
-        ],
-        "status": "ok"
-      },
-      {
         "sid": "BPRUE_DamagePos15Effect",
         "scopes": [
-          "BaseGame",
-          "DLC1",
-          "PreOrder"
+          "BaseGame"
         ],
         "visible": true,
         "localization_sid": "bprue_damage",
         "resolution_chain": [
           "BPRUE_DamagePos15Effect",
-          "DamageTemplate"
-        ],
-        "sources": [
-          "BPRUE_EffectPrototypes.cfg",
-          "BaseGame"
-        ],
-        "status": "ok"
-      },
-      {
-        "sid": "BPRUE_DamagePos20Effect",
-        "scopes": [
-          "BaseGame",
-          "DLC1",
-          "PreOrder"
-        ],
-        "visible": true,
-        "localization_sid": "bprue_damage",
-        "resolution_chain": [
-          "BPRUE_DamagePos20Effect",
           "DamageTemplate"
         ],
         "sources": [
@@ -1066,13 +981,30 @@
           "BaseGame",
           "DLC1",
           "Deluxe",
-          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
         "localization_sid": "bprue_fire_rate",
         "resolution_chain": [
           "BPRUE_FireIntervalNeg10Effect"
+        ],
+        "sources": [
+          "BPRUE_EffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_FireIntervalNeg12Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_fire_rate",
+        "resolution_chain": [
+          "BPRUE_FireIntervalNeg12Effect"
         ],
         "sources": [
           "BPRUE_EffectPrototypes.cfg"
@@ -1099,12 +1031,29 @@
         "status": "ok"
       },
       {
+        "sid": "BPRUE_FireIntervalNeg5Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_fire_rate",
+        "resolution_chain": [
+          "BPRUE_FireIntervalNeg5Effect"
+        ],
+        "sources": [
+          "BPRUE_EffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
         "sid": "BPRUE_FireIntervalPos5Effect",
         "scopes": [
           "BaseGame",
           "DLC1",
           "Deluxe",
-          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
@@ -1254,8 +1203,7 @@
         "scopes": [
           "BaseGame",
           "DLC1",
-          "Deluxe",
-          "PreOrder"
+          "Deluxe"
         ],
         "visible": true,
         "localization_sid": "bprue_recoil",
@@ -1273,8 +1221,7 @@
         "sid": "BPRUE_RecoilPenalty25Effect",
         "scopes": [
           "BaseGame",
-          "DLC1",
-          "Deluxe"
+          "DLC1"
         ],
         "visible": true,
         "localization_sid": "bprue_recoil",
@@ -1289,30 +1236,10 @@
         "status": "ok"
       },
       {
-        "sid": "BPRUE_RecoilPenalty30Effect",
-        "scopes": [
-          "BaseGame",
-          "DLC1"
-        ],
-        "visible": true,
-        "localization_sid": "bprue_recoil",
-        "resolution_chain": [
-          "BPRUE_RecoilPenalty30Effect",
-          "RecoilTemplate"
-        ],
-        "sources": [
-          "BPRUE_EffectPrototypes.cfg",
-          "BaseGame"
-        ],
-        "status": "ok"
-      },
-      {
         "sid": "BPRUE_ReloadingTimeNeg10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1",
           "Deluxe",
-          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
@@ -1331,7 +1258,6 @@
           "BaseGame",
           "DLC1",
           "Deluxe",
-          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
@@ -1477,14 +1403,14 @@
         "status": "ok"
       },
       {
-        "sid": "BPRUE_SMG_ArmorPiercingPos15Effect",
+        "sid": "BPRUE_SMG_ArmorPiercingPos5Effect",
         "scopes": [
           "BaseGame"
         ],
         "visible": true,
         "localization_sid": "bprue_armor_piercing",
         "resolution_chain": [
-          "BPRUE_SMG_ArmorPiercingPos15Effect"
+          "BPRUE_SMG_ArmorPiercingPos5Effect"
         ],
         "sources": [
           "BPRUE_SMGEffectPrototypes.cfg"
@@ -1624,66 +1550,6 @@
         "status": "ok"
       },
       {
-        "sid": "BPRUE_SMG_DamagePenalty20Effect",
-        "scopes": [
-          "BaseGame"
-        ],
-        "visible": true,
-        "localization_sid": "bprue_damage",
-        "resolution_chain": [
-          "BPRUE_SMG_DamagePenalty20Effect"
-        ],
-        "sources": [
-          "BPRUE_SMGEffectPrototypes.cfg"
-        ],
-        "status": "ok"
-      },
-      {
-        "sid": "BPRUE_SMG_DamagePos10Effect",
-        "scopes": [
-          "BaseGame"
-        ],
-        "visible": true,
-        "localization_sid": "bprue_damage",
-        "resolution_chain": [
-          "BPRUE_SMG_DamagePos10Effect"
-        ],
-        "sources": [
-          "BPRUE_SMGEffectPrototypes.cfg"
-        ],
-        "status": "ok"
-      },
-      {
-        "sid": "BPRUE_SMG_DamagePos15Effect",
-        "scopes": [
-          "BaseGame"
-        ],
-        "visible": true,
-        "localization_sid": "bprue_damage",
-        "resolution_chain": [
-          "BPRUE_SMG_DamagePos15Effect"
-        ],
-        "sources": [
-          "BPRUE_SMGEffectPrototypes.cfg"
-        ],
-        "status": "ok"
-      },
-      {
-        "sid": "BPRUE_SMG_DamagePos20Effect",
-        "scopes": [
-          "BaseGame"
-        ],
-        "visible": true,
-        "localization_sid": "bprue_damage",
-        "resolution_chain": [
-          "BPRUE_SMG_DamagePos20Effect"
-        ],
-        "sources": [
-          "BPRUE_SMGEffectPrototypes.cfg"
-        ],
-        "status": "ok"
-      },
-      {
         "sid": "BPRUE_SMG_DamagePos5Effect",
         "scopes": [
           "BaseGame"
@@ -1744,21 +1610,6 @@
         "status": "ok"
       },
       {
-        "sid": "BPRUE_SMG_EffectiveRangePenalty20Effect",
-        "scopes": [
-          "BaseGame"
-        ],
-        "visible": true,
-        "localization_sid": "bprue_effective_range",
-        "resolution_chain": [
-          "BPRUE_SMG_EffectiveRangePenalty20Effect"
-        ],
-        "sources": [
-          "BPRUE_SMGEffectPrototypes.cfg"
-        ],
-        "status": "ok"
-      },
-      {
         "sid": "BPRUE_SMG_EffectiveRangePos10Effect",
         "scopes": [
           "BaseGame"
@@ -1767,21 +1618,6 @@
         "localization_sid": "bprue_effective_range",
         "resolution_chain": [
           "BPRUE_SMG_EffectiveRangePos10Effect"
-        ],
-        "sources": [
-          "BPRUE_SMGEffectPrototypes.cfg"
-        ],
-        "status": "ok"
-      },
-      {
-        "sid": "BPRUE_SMG_EffectiveRangePos15Effect",
-        "scopes": [
-          "BaseGame"
-        ],
-        "visible": true,
-        "localization_sid": "bprue_effective_range",
-        "resolution_chain": [
-          "BPRUE_SMG_EffectiveRangePos15Effect"
         ],
         "sources": [
           "BPRUE_SMGEffectPrototypes.cfg"
@@ -1819,21 +1655,6 @@
         "status": "ok"
       },
       {
-        "sid": "BPRUE_SMG_RecoilPenalty15Effect",
-        "scopes": [
-          "BaseGame"
-        ],
-        "visible": true,
-        "localization_sid": "bprue_recoil",
-        "resolution_chain": [
-          "BPRUE_SMG_RecoilPenalty15Effect"
-        ],
-        "sources": [
-          "BPRUE_SMGEffectPrototypes.cfg"
-        ],
-        "status": "ok"
-      },
-      {
         "sid": "BPRUE_SMG_RecoilPenalty20Effect",
         "scopes": [
           "BaseGame"
@@ -1857,21 +1678,6 @@
         "localization_sid": "bprue_recoil",
         "resolution_chain": [
           "BPRUE_SMG_RecoilPenalty25Effect"
-        ],
-        "sources": [
-          "BPRUE_SMGEffectPrototypes.cfg"
-        ],
-        "status": "ok"
-      },
-      {
-        "sid": "BPRUE_SMG_RecoilPenalty30Effect",
-        "scopes": [
-          "BaseGame"
-        ],
-        "visible": true,
-        "localization_sid": "bprue_recoil",
-        "resolution_chain": [
-          "BPRUE_SMG_RecoilPenalty30Effect"
         ],
         "sources": [
           "BPRUE_SMGEffectPrototypes.cfg"
@@ -1931,7 +1737,6 @@
           "BaseGame",
           "DLC1",
           "Deluxe",
-          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
@@ -1950,6 +1755,7 @@
           "BaseGame",
           "DLC1",
           "Deluxe",
+          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
@@ -1982,7 +1788,7 @@
         "status": "ok"
       },
       {
-        "sid": "BPRUE_Shared_ArmorPiercingPenalty20Effect",
+        "sid": "BPRUE_Shared_BleedingChancePos10Effect",
         "scopes": [
           "BaseGame",
           "DLC1",
@@ -1991,12 +1797,31 @@
           "Ultimate"
         ],
         "visible": true,
-        "localization_sid": "bprue_armor_piercing",
+        "localization_sid": "bprue_bleeding_chance",
         "resolution_chain": [
-          "BPRUE_Shared_ArmorPiercingPenalty20Effect"
+          "BPRUE_Shared_BleedingChancePos10Effect"
         ],
         "sources": [
-          "BPRUE_SharedSpecializationEffectPrototypes.cfg"
+          "BPRUE_SharedEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Shared_CoverPiercingPenalty10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_cover_piercing",
+        "resolution_chain": [
+          "BPRUE_Shared_CoverPiercingPenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_SharedEffectPrototypes.cfg"
         ],
         "status": "ok"
       },
@@ -2039,6 +1864,41 @@
         "status": "ok"
       },
       {
+        "sid": "BPRUE_Shared_DropOffLengthPos5Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_flatness",
+        "resolution_chain": [
+          "BPRUE_Shared_DropOffLengthPos5Effect"
+        ],
+        "sources": [
+          "BPRUE_SharedEffectPrototypes.cfg"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "BPRUE_Shared_DropOffPenalty10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_flatness",
+        "resolution_chain": [
+          "BPRUE_Shared_DropOffPenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_EffectPrototypes.cfg"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
         "sid": "BPRUE_Shared_DurabilityPenalty15Effect",
         "scopes": [
           "BaseGame",
@@ -2063,7 +1923,6 @@
           "BaseGame",
           "DLC1",
           "Deluxe",
-          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
@@ -2080,9 +1939,7 @@
         "sid": "BPRUE_Shared_FireIntervalNeg12Effect",
         "scopes": [
           "BaseGame",
-          "DLC1",
           "Deluxe",
-          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
@@ -2096,12 +1953,29 @@
         "status": "ok"
       },
       {
+        "sid": "BPRUE_Shared_FireIntervalNeg8Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_fire_rate",
+        "resolution_chain": [
+          "BPRUE_Shared_FireIntervalNeg8Effect"
+        ],
+        "sources": [
+          "BPRUE_SharedEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
         "sid": "BPRUE_Shared_FireIntervalPenalty10Effect",
         "scopes": [
           "BaseGame",
           "DLC1",
           "Deluxe",
-          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
@@ -2134,33 +2008,15 @@
         "status": "ok"
       },
       {
-        "sid": "BPRUE_Shared_FlatnessPenalty15Effect",
+        "sid": "BPRUE_Shared_FlatnessPenalty5Effect",
         "scopes": [
           "BaseGame",
-          "DLC1",
-          "PreOrder"
+          "DLC1"
         ],
         "visible": true,
         "localization_sid": "bprue_effective_range",
         "resolution_chain": [
-          "BPRUE_Shared_FlatnessPenalty15Effect"
-        ],
-        "sources": [
-          "BPRUE_EffectPrototypes.cfg"
-        ],
-        "status": "ok"
-      },
-      {
-        "sid": "BPRUE_Shared_FlatnessPos15Effect",
-        "scopes": [
-          "BaseGame",
-          "DLC1",
-          "Deluxe"
-        ],
-        "visible": true,
-        "localization_sid": "bprue_effective_range",
-        "resolution_chain": [
-          "BPRUE_Shared_FlatnessPos15Effect"
+          "BPRUE_Shared_FlatnessPenalty5Effect"
         ],
         "sources": [
           "BPRUE_EffectPrototypes.cfg"
@@ -2173,7 +2029,6 @@
           "BaseGame",
           "DLC1",
           "Deluxe",
-          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
@@ -2202,6 +2057,42 @@
         ],
         "sources": [
           "BPRUE_SharedSpecializationEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Shared_ShotRecoveryPos15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1",
+          "Deluxe",
+          "Ultimate"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_recoil_recovery",
+        "resolution_chain": [
+          "BPRUE_Shared_ShotRecoveryPos15Effect"
+        ],
+        "sources": [
+          "BPRUE_SharedEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Shared_Sniper_ShotRecoveryPenalty10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1",
+          "Deluxe",
+          "PreOrder"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_recoil_recovery",
+        "resolution_chain": [
+          "BPRUE_Shared_Sniper_ShotRecoveryPenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_SharedEffectPrototypes.cfg"
         ],
         "status": "ok"
       },
@@ -2266,7 +2157,8 @@
         "scopes": [
           "BaseGame",
           "DLC1",
-          "Deluxe"
+          "Deluxe",
+          "PreOrder"
         ],
         "visible": true,
         "localization_sid": "bprue_aiming_speed",
@@ -2283,7 +2175,8 @@
         "scopes": [
           "BaseGame",
           "DLC1",
-          "Deluxe"
+          "Deluxe",
+          "PreOrder"
         ],
         "visible": true,
         "localization_sid": "bprue_aiming_speed",
@@ -2300,7 +2193,8 @@
         "scopes": [
           "BaseGame",
           "DLC1",
-          "Deluxe"
+          "Deluxe",
+          "PreOrder"
         ],
         "visible": true,
         "localization_sid": "bprue_aiming_speed",
@@ -2313,7 +2207,7 @@
         "status": "ok"
       },
       {
-        "sid": "BPRUE_Sniper_ArmorPiercingPos10Effect",
+        "sid": "BPRUE_Sniper_ArmorPiercingPos5Effect",
         "scopes": [
           "BaseGame",
           "DLC1",
@@ -2322,40 +2216,7 @@
         "visible": true,
         "localization_sid": "bprue_armor_piercing",
         "resolution_chain": [
-          "BPRUE_Sniper_ArmorPiercingPos10Effect"
-        ],
-        "sources": [
-          "BPRUE_SniperEffectPrototypes.cfg"
-        ],
-        "status": "ok"
-      },
-      {
-        "sid": "BPRUE_Sniper_ArmorPiercingPos15Effect",
-        "scopes": [
-          "BaseGame",
-          "DLC1"
-        ],
-        "visible": true,
-        "localization_sid": "bprue_armor_piercing",
-        "resolution_chain": [
-          "BPRUE_Sniper_ArmorPiercingPos15Effect"
-        ],
-        "sources": [
-          "BPRUE_SniperEffectPrototypes.cfg"
-        ],
-        "status": "ok"
-      },
-      {
-        "sid": "BPRUE_Sniper_ArmorPiercingPos25Effect",
-        "scopes": [
-          "BaseGame",
-          "DLC1",
-          "Deluxe"
-        ],
-        "visible": true,
-        "localization_sid": "bprue_armor_piercing",
-        "resolution_chain": [
-          "BPRUE_Sniper_ArmorPiercingPos25Effect"
+          "BPRUE_Sniper_ArmorPiercingPos5Effect"
         ],
         "sources": [
           "BPRUE_SniperEffectPrototypes.cfg"
@@ -2437,23 +2298,7 @@
         "status": "ok"
       },
       {
-        "sid": "BPRUE_Sniper_DamagePenalty15Effect",
-        "scopes": [
-          "BaseGame",
-          "DLC1"
-        ],
-        "visible": true,
-        "localization_sid": "bprue_damage",
-        "resolution_chain": [
-          "BPRUE_Sniper_DamagePenalty15Effect"
-        ],
-        "sources": [
-          "BPRUE_SniperEffectPrototypes.cfg"
-        ],
-        "status": "ok"
-      },
-      {
-        "sid": "BPRUE_Sniper_DamagePos5Effect",
+        "sid": "BPRUE_Sniper_DamagePenalty5Effect",
         "scopes": [
           "BaseGame",
           "DLC1",
@@ -2462,7 +2307,41 @@
         "visible": true,
         "localization_sid": "bprue_damage",
         "resolution_chain": [
-          "BPRUE_Sniper_DamagePos5Effect"
+          "BPRUE_Sniper_DamagePenalty5Effect"
+        ],
+        "sources": [
+          "BPRUE_SniperEffectPrototypes.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "BPRUE_Sniper_DropOffPenalty15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1",
+          "Deluxe"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_flatness",
+        "resolution_chain": [
+          "BPRUE_Sniper_DropOffPenalty15Effect"
+        ],
+        "sources": [
+          "BPRUE_SniperEffectPrototypes.cfg"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "BPRUE_Sniper_DurabilityPerShotPenalty5Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1",
+          "Deluxe"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_weapon_wear",
+        "resolution_chain": [
+          "BPRUE_Sniper_DurabilityPerShotPenalty5Effect"
         ],
         "sources": [
           "BPRUE_SniperEffectPrototypes.cfg"
@@ -2474,7 +2353,8 @@
         "scopes": [
           "BaseGame",
           "DLC1",
-          "Deluxe"
+          "Deluxe",
+          "PreOrder"
         ],
         "visible": true,
         "localization_sid": "bprue_fire_rate",
@@ -2487,7 +2367,7 @@
         "status": "ok"
       },
       {
-        "sid": "BPRUE_Sniper_FlatnessPos15Effect",
+        "sid": "BPRUE_Sniper_FlatnessPenalty10Effect",
         "scopes": [
           "BaseGame",
           "DLC1",
@@ -2496,7 +2376,7 @@
         "visible": true,
         "localization_sid": "bprue_effective_range",
         "resolution_chain": [
-          "BPRUE_Sniper_FlatnessPos15Effect"
+          "BPRUE_Sniper_FlatnessPenalty10Effect"
         ],
         "sources": [
           "BPRUE_SniperEffectPrototypes.cfg"
@@ -2508,7 +2388,8 @@
         "scopes": [
           "BaseGame",
           "DLC1",
-          "Deluxe"
+          "Deluxe",
+          "PreOrder"
         ],
         "visible": true,
         "localization_sid": "bprue_aiming_stability",
@@ -2525,7 +2406,8 @@
         "scopes": [
           "BaseGame",
           "DLC1",
-          "Deluxe"
+          "Deluxe",
+          "PreOrder"
         ],
         "visible": true,
         "localization_sid": "bprue_aiming_stability",
@@ -2538,11 +2420,29 @@
         "status": "ok"
       },
       {
-        "sid": "BPRUE_Sniper_RecoilPenalty10Effect",
+        "sid": "BPRUE_Sniper_ProjectileSpeedPenalty10Effect",
         "scopes": [
           "BaseGame",
           "DLC1",
           "Deluxe"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_velocity",
+        "resolution_chain": [
+          "BPRUE_Sniper_ProjectileSpeedPenalty10Effect"
+        ],
+        "sources": [
+          "BPRUE_SniperEffectPrototypes.cfg"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "BPRUE_Sniper_RecoilPenalty10Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1",
+          "Deluxe",
+          "PreOrder"
         ],
         "visible": true,
         "localization_sid": "bprue_recoil",
@@ -2559,7 +2459,8 @@
         "scopes": [
           "BaseGame",
           "DLC1",
-          "Deluxe"
+          "Deluxe",
+          "PreOrder"
         ],
         "visible": true,
         "localization_sid": "bprue_recoil",
@@ -2572,44 +2473,12 @@
         "status": "ok"
       },
       {
-        "sid": "BPRUE_Sniper_RecoilPenalty20Effect",
-        "scopes": [
-          "BaseGame",
-          "DLC1",
-          "Deluxe"
-        ],
-        "visible": true,
-        "localization_sid": "bprue_recoil",
-        "resolution_chain": [
-          "BPRUE_Sniper_RecoilPenalty20Effect"
-        ],
-        "sources": [
-          "BPRUE_SniperEffectPrototypes.cfg"
-        ],
-        "status": "ok"
-      },
-      {
-        "sid": "BPRUE_Sniper_RecoilPos5Effect",
-        "scopes": [
-          "BaseGame",
-          "DLC1"
-        ],
-        "visible": true,
-        "localization_sid": "bprue_recoil",
-        "resolution_chain": [
-          "BPRUE_Sniper_RecoilPos5Effect"
-        ],
-        "sources": [
-          "BPRUE_SniperEffectPrototypes.cfg"
-        ],
-        "status": "ok"
-      },
-      {
         "sid": "BPRUE_Sniper_ShotRecoveryPos30Effect",
         "scopes": [
           "BaseGame",
           "DLC1",
-          "Deluxe"
+          "Deluxe",
+          "PreOrder"
         ],
         "visible": true,
         "localization_sid": "bprue_recoil_recovery",
@@ -2627,6 +2496,7 @@
           "BaseGame",
           "DLC1",
           "Deluxe",
+          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
@@ -3174,27 +3044,6 @@
         "status": "ok"
       },
       {
-        "sid": "DamagePos15Effect",
-        "scopes": [
-          "BaseGame",
-          "DLC1",
-          "Deluxe",
-          "PreOrder",
-          "Ultimate"
-        ],
-        "visible": false,
-        "localization_sid": "weapon_damage",
-        "resolution_chain": [
-          "DamagePos15Effect",
-          "DamageTemplate"
-        ],
-        "sources": [
-          "BaseGame",
-          "BaseGame"
-        ],
-        "status": "ok"
-      },
-      {
         "sid": "DispersionNeg40Effect",
         "scopes": [
           "BaseGame",
@@ -3276,9 +3125,7 @@
       {
         "sid": "DispersionPos25Effect",
         "scopes": [
-          "BaseGame",
-          "DLC1",
-          "Deluxe"
+          "BaseGame"
         ],
         "visible": true,
         "localization_sid": "weapon_reductionSpread",
@@ -3318,6 +3165,7 @@
           "BaseGame",
           "DLC1",
           "Deluxe",
+          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
@@ -3331,6 +3179,22 @@
           "BaseGame"
         ],
         "status": "vanilla_localization"
+      },
+      {
+        "sid": "DistanceDropOffLengthPos15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_effective_range",
+        "resolution_chain": [
+          "DistanceDropOffLengthPos15Effect"
+        ],
+        "sources": [
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
+        ],
+        "status": "ok"
       },
       {
         "sid": "DistanceDropOffLengthPos20Effect",
@@ -3356,7 +3220,6 @@
           "BaseGame",
           "DLC1",
           "Deluxe",
-          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
@@ -3434,7 +3297,8 @@
         "scopes": [
           "BaseGame",
           "DLC1",
-          "Deluxe"
+          "Deluxe",
+          "PreOrder"
         ],
         "visible": true,
         "localization_sid": "weapon_range",
@@ -3473,6 +3337,7 @@
           "BaseGame",
           "DLC1",
           "Deluxe",
+          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
@@ -3486,11 +3351,30 @@
         "status": "ok"
       },
       {
-        "sid": "IdleSwayXPos15Effect",
+        "sid": "FlatnessUp5Effect",
         "scopes": [
           "BaseGame",
           "DLC1",
           "Deluxe"
+        ],
+        "visible": true,
+        "localization_sid": "bprue_effective_range",
+        "resolution_chain": [
+          "FlatnessUp5Effect"
+        ],
+        "sources": [
+          "EffectPrototypes_patch_BPRUE_UI.cfg"
+        ],
+        "status": "ok"
+      },
+      {
+        "sid": "IdleSwayXPos15Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1",
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": true,
         "localization_sid": "weapon_aimAccuracy",
@@ -3510,7 +3394,6 @@
           "BaseGame",
           "DLC1",
           "Deluxe",
-          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
@@ -3530,7 +3413,9 @@
         "scopes": [
           "BaseGame",
           "DLC1",
-          "Deluxe"
+          "Deluxe",
+          "PreOrder",
+          "Ultimate"
         ],
         "visible": false,
         "localization_sid": "weapon_aimAccuracy",
@@ -3550,7 +3435,6 @@
           "BaseGame",
           "DLC1",
           "Deluxe",
-          "PreOrder",
           "Ultimate"
         ],
         "visible": false,
@@ -3571,7 +3455,6 @@
           "BaseGame",
           "DLC1",
           "Deluxe",
-          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
@@ -3590,10 +3473,7 @@
         "sid": "ProjectileSpeedPos10Effect",
         "scopes": [
           "BaseGame",
-          "DLC1",
-          "Deluxe",
-          "PreOrder",
-          "Ultimate"
+          "DLC1"
         ],
         "visible": true,
         "localization_sid": "weapon_velocity",
@@ -3629,12 +3509,33 @@
         "scopes": [
           "BaseGame",
           "DLC1",
-          "Deluxe"
+          "Deluxe",
+          "PreOrder"
         ],
         "visible": true,
         "localization_sid": "weapon_velocity",
         "resolution_chain": [
           "ProjectileSpeedPos20Effect",
+          "ProjectileSpeedTemplate"
+        ],
+        "sources": [
+          "BaseGame",
+          "BaseGame"
+        ],
+        "status": "vanilla_localization"
+      },
+      {
+        "sid": "ProjectileSpeedPos5Effect",
+        "scopes": [
+          "BaseGame",
+          "DLC1",
+          "Deluxe",
+          "PreOrder"
+        ],
+        "visible": true,
+        "localization_sid": "weapon_velocity",
+        "resolution_chain": [
+          "ProjectileSpeedPos5Effect",
           "ProjectileSpeedTemplate"
         ],
         "sources": [
@@ -3685,7 +3586,6 @@
           "BaseGame",
           "DLC1",
           "Deluxe",
-          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
@@ -3748,7 +3648,7 @@
           "BaseGame",
           "DLC1",
           "Deluxe",
-          "Ultimate"
+          "PreOrder"
         ],
         "visible": true,
         "localization_sid": "weapon_reductionImpact",
@@ -3768,7 +3668,6 @@
           "BaseGame",
           "DLC1",
           "Deluxe",
-          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
@@ -3789,6 +3688,7 @@
           "BaseGame",
           "DLC1",
           "Deluxe",
+          "PreOrder",
           "Ultimate"
         ],
         "visible": true,
@@ -3806,11 +3706,7 @@
       {
         "sid": "ShotRecoveryPos20Effect",
         "scopes": [
-          "BaseGame",
-          "DLC1",
-          "Deluxe",
-          "PreOrder",
-          "Ultimate"
+          "BaseGame"
         ],
         "visible": true,
         "localization_sid": "weapon_aimReturn",
@@ -3865,8 +3761,8 @@
   },
   "asset_snapshot": {
     "available": true,
-    "asset_entry_count": 518,
-    "source_entry_count": 518,
+    "asset_entry_count": 529,
+    "source_entry_count": 529,
     "missing_count": 0,
     "missing_sids": [],
     "asset_only_count": 0,
@@ -3879,7 +3775,7 @@
     "errors": []
   },
   "generated_cfg": {
-    "referenced_sid_count": 427,
+    "referenced_sid_count": 431,
     "missing_count": 0,
     "missing": [],
     "case_mismatch_count": 0,

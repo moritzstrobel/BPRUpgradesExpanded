@@ -1,53 +1,53 @@
 {
   "summary": {
-    "bprue_cfg_writes": 83389,
-    "oxa_cfg_writes": 46423,
-    "bprue_prototypes": 2060,
-    "oxa_prototypes": 945,
-    "overlapping_prototypes": 116,
-    "overlapping_paths": 778,
-    "overlap_records": 865,
+    "bprue_cfg_writes": 85459,
+    "oxa_cfg_writes": 47892,
+    "bprue_prototypes": 2085,
+    "oxa_prototypes": 950,
+    "overlapping_prototypes": 118,
+    "overlapping_paths": 789,
+    "overlap_records": 878,
     "severity_counts": {
-      "CONFLICT": 471,
-      "PROTOTYPE_OVERLAP": 203,
+      "CONFLICT": 477,
+      "PROTOTYPE_OVERLAP": 207,
       "SAME_VALUE": 33,
-      "STRUCTURAL": 158
+      "STRUCTURAL": 161
     },
-    "oxa_multi_source_prototypes": 38,
+    "oxa_multi_source_prototypes": 39,
     "semantic_arrays": {
-      "groups": 82,
+      "groups": 85,
       "severity_counts": {
         "CONTENT_CONFLICT": 6,
         "INDEX_COLLISION": 1,
-        "MERGE_REQUIRED": 75
+        "MERGE_REQUIRED": 78
       },
       "array_counts": {
         "CompatibleAttachments": 6,
         "FittingWeaponsSIDs": 8,
-        "UpgradePrototypeSIDs": 68
+        "UpgradePrototypeSIDs": 71
       }
     },
     "three_way": {
       "groups": 102,
       "classification_counts": {
         "BOTH_EXTEND_BASELINE": 1,
-        "BPRUE_ADDITION": 25,
-        "OXA_REMOVAL_REINTRODUCED": 76
+        "BPRUE_ADDITION": 22,
+        "OXA_REMOVAL_REINTRODUCED": 79
       },
       "array_counts": {
         "CompatibleAttachments": 6,
         "FittingWeaponsSIDs": 13,
         "UpgradePrototypeSIDs": 83
       },
-      "reintroduced_oxa_removal_entries": 234,
+      "reintroduced_oxa_removal_entries": 239,
       "oxa_inherited_arrays": 94,
       "oxa_replaced_arrays": 8
     },
     "removal_identity_mismatches": {
-      "count": 3,
+      "count": 4,
       "resolution_counts": {
         "comment_identity": 1,
-        "unresolved_comment_identity": 2
+        "unresolved_comment_identity": 3
       }
     },
     "removal_analysis": {
@@ -55,8 +55,8 @@
         "AutMuz": 15,
         "Grip": 9,
         "Laser": 12,
-        "Laser_HP": 44,
-        "Offset": 52,
+        "Laser_HP": 46,
+        "Offset": 55,
         "OtherGameplayUpgrade": 6,
         "Rail": 5,
         "SinMuz": 27
@@ -71,8 +71,8 @@
       "AutMuz": 15,
       "Grip": 9,
       "Laser": 12,
-      "Laser_HP": 44,
-      "Offset": 52,
+      "Laser_HP": 46,
+      "Offset": 55,
       "OtherGameplayUpgrade": 6,
       "Rail": 5,
       "SinMuz": 27
@@ -262,6 +262,10 @@
           "sid": "GunDnipro_Upgrade_Attachment_Laser_HP"
         },
         {
+          "prototype": "GunFallschirmjager_DMR_GS",
+          "sid": "GunGP3A_Upgrade_Attachment_Laser_HP"
+        },
+        {
           "prototype": "GunFora230_PP_GS",
           "sid": "GunFora230_Upgrade_Attachment_Laser_HP"
         },
@@ -288,6 +292,10 @@
         {
           "prototype": "GunGvintar_ST",
           "sid": "GunGvintar_Upgrade_Attachment_Laser_HP"
+        },
+        {
+          "prototype": "GunHSG72_DMR_GS",
+          "sid": "GunGP3A_Upgrade_Attachment_Laser_HP"
         },
         {
           "prototype": "GunIntegral_PP",
@@ -444,6 +452,10 @@
           "sid": "GunDnipro_Upgrade_Attachment_Offset_Stock"
         },
         {
+          "prototype": "GunFallschirmjager_DMR_GS",
+          "sid": "GunGP3A_Upgrade_Attachment_Offset_Stock"
+        },
+        {
           "prototype": "GunFora230_PP_GS",
           "sid": "GunFora230_Upgrade_Attachment_Offset_Stock"
         },
@@ -470,6 +482,10 @@
         {
           "prototype": "GunGvintar_ST",
           "sid": "GunGvintar_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunHSG72_DMR_GS",
+          "sid": "GunGP3A_Upgrade_Attachment_Offset_Stock"
         },
         {
           "prototype": "GunIntegral_PP",
@@ -505,6 +521,10 @@
         },
         {
           "prototype": "GunSPSA_SG",
+          "sid": "GunSPSA_Upgrade_Attachment_Offset_Stock"
+        },
+        {
+          "prototype": "GunSPSA_Sniper_SG",
           "sid": "GunSPSA_Upgrade_Attachment_Offset_Stock"
         },
         {
@@ -1064,10 +1084,10 @@
     "unexpected_gameplay_upgrade_count": 6
   },
   "removal_identity_mismatches": {
-    "count": 3,
+    "count": 4,
     "resolution_counts": {
       "comment_identity": 1,
-      "unresolved_comment_identity": 2
+      "unresolved_comment_identity": 3
     },
     "records": [
       {
@@ -1085,6 +1105,16 @@
         "array": "UpgradePrototypeSIDs",
         "patch_index": "[22]",
         "index_identity": "GunD12_Upgrade_Attachment_Laser_HP",
+        "comment_identity": "GunM860_Upgrade_Attachment_Laser_HP",
+        "resolved_index": null,
+        "resolution": "unresolved_comment_identity",
+        "source": "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg"
+      },
+      {
+        "prototype": "GunSPSA_Sniper_SG",
+        "array": "UpgradePrototypeSIDs",
+        "patch_index": "[17]",
+        "index_identity": "GunSPSA_Upgrade_Attachment_Laser_HP",
         "comment_identity": "GunM860_Upgrade_Attachment_Laser_HP",
         "resolved_index": null,
         "resolution": "unresolved_comment_identity",
@@ -2304,7 +2334,6 @@
         "OXA_Laser_8",
         "OXA_Laser_9",
         "OXA_Mag_545x39_PMag30r",
-        "OXA_Rail_Laser",
         "OXA_Rail_Scope",
         "OXA_Scope_Aselsan",
         "OXA_Scope_Crossfire",
@@ -2363,7 +2392,6 @@
         "OXA_Laser_8",
         "OXA_Laser_9",
         "OXA_Mag_545x39_PMag30r",
-        "OXA_Rail_Laser",
         "OXA_Rail_Scope",
         "OXA_Scope_Aselsan",
         "OXA_Scope_Crossfire",
@@ -2422,7 +2450,6 @@
         "GunAKU_Silence_MagDefault",
         "OXA_Mag_545x39_PMag30r",
         "OXA_Rail_Scope",
-        "OXA_Rail_Laser",
         "EN_X2Scope_1",
         "EN_X3Scope_1",
         "EN_X4Scope_1",
@@ -2702,19 +2729,6 @@
         },
         {
           "source_index": "[20]",
-          "identity": "OXA_Rail_Laser",
-          "fields": {
-            "AttachPrototypeSID": "OXA_Rail_Laser",
-            "MeshPrototypeSID": "OXA_LaserRail_AK",
-            "Socket": "Rail_Laser",
-            "IconPosX": "150",
-            "IconPosY": "30",
-            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74U/Rail/T_inv_aks74u_rail_laser.T_inv_aks74u_rail_laser'",
-            "RequiredUpgradeIDs.[0]": "GunAKU_Upgrade_Attachment_Laser"
-          }
-        },
-        {
-          "source_index": "[21]",
           "identity": "EN_X2Scope_1",
           "fields": {
             "AttachPrototypeSID": "EN_X2Scope_1",
@@ -2726,7 +2740,7 @@
           }
         },
         {
-          "source_index": "[22]",
+          "source_index": "[21]",
           "identity": "EN_X3Scope_1",
           "fields": {
             "AttachPrototypeSID": "EN_X3Scope_1",
@@ -2738,7 +2752,7 @@
           }
         },
         {
-          "source_index": "[23]",
+          "source_index": "[22]",
           "identity": "EN_X4Scope_1",
           "fields": {
             "AttachPrototypeSID": "EN_X4Scope_1",
@@ -2750,7 +2764,7 @@
           }
         },
         {
-          "source_index": "[24]",
+          "source_index": "[23]",
           "identity": "OXA_Scope_Aselsan",
           "fields": {
             "AttachPrototypeSID": "OXA_Scope_Aselsan",
@@ -2762,7 +2776,7 @@
           }
         },
         {
-          "source_index": "[25]",
+          "source_index": "[24]",
           "identity": "OXA_Scope_OASYS",
           "fields": {
             "AttachPrototypeSID": "OXA_Scope_OASYS",
@@ -2774,7 +2788,7 @@
           }
         },
         {
-          "source_index": "[26]",
+          "source_index": "[25]",
           "identity": "OXA_Scope_Spitfire",
           "fields": {
             "AttachPrototypeSID": "OXA_Scope_Spitfire",
@@ -2786,7 +2800,7 @@
           }
         },
         {
-          "source_index": "[27]",
+          "source_index": "[26]",
           "identity": "OXA_Scope_SpitfireAR",
           "fields": {
             "AttachPrototypeSID": "OXA_Scope_SpitfireAR",
@@ -2798,7 +2812,7 @@
           }
         },
         {
-          "source_index": "[28]",
+          "source_index": "[27]",
           "identity": "OXA_Scope_SpitfireHD",
           "fields": {
             "AttachPrototypeSID": "OXA_Scope_SpitfireHD",
@@ -2810,7 +2824,7 @@
           }
         },
         {
-          "source_index": "[29]",
+          "source_index": "[28]",
           "identity": "OXA_Scope_XM157",
           "fields": {
             "AttachPrototypeSID": "OXA_Scope_XM157",
@@ -2822,7 +2836,7 @@
           }
         },
         {
-          "source_index": "[30]",
+          "source_index": "[29]",
           "identity": "OXA_X2Scope_1",
           "fields": {
             "AttachPrototypeSID": "OXA_X2Scope_1",
@@ -2834,7 +2848,7 @@
           }
         },
         {
-          "source_index": "[31]",
+          "source_index": "[30]",
           "identity": "RU_X2Scope_1",
           "fields": {
             "AttachPrototypeSID": "RU_X2Scope_1",
@@ -2846,7 +2860,7 @@
           }
         },
         {
-          "source_index": "[32]",
+          "source_index": "[31]",
           "identity": "EN_ColimScope_1",
           "fields": {
             "AttachPrototypeSID": "EN_ColimScope_1",
@@ -2858,7 +2872,7 @@
           }
         },
         {
-          "source_index": "[33]",
+          "source_index": "[32]",
           "identity": "EN_GoloScope_1",
           "fields": {
             "AttachPrototypeSID": "EN_GoloScope_1",
@@ -2870,7 +2884,7 @@
           }
         },
         {
-          "source_index": "[34]",
+          "source_index": "[33]",
           "identity": "OXA_HoloScope_1",
           "fields": {
             "AttachPrototypeSID": "OXA_HoloScope_1",
@@ -2882,7 +2896,7 @@
           }
         },
         {
-          "source_index": "[35]",
+          "source_index": "[34]",
           "identity": "OXA_Scope_Crossfire",
           "fields": {
             "AttachPrototypeSID": "OXA_Scope_Crossfire",
@@ -2894,7 +2908,7 @@
           }
         },
         {
-          "source_index": "[36]",
+          "source_index": "[35]",
           "identity": "OXA_Scope_Cyelee",
           "fields": {
             "AttachPrototypeSID": "OXA_Scope_Cyelee",
@@ -2906,7 +2920,7 @@
           }
         },
         {
-          "source_index": "[37]",
+          "source_index": "[36]",
           "identity": "OXA_Scope_EOTech551",
           "fields": {
             "AttachPrototypeSID": "OXA_Scope_EOTech551",
@@ -2918,7 +2932,7 @@
           }
         },
         {
-          "source_index": "[38]",
+          "source_index": "[37]",
           "identity": "OXA_Scope_EXPS2",
           "fields": {
             "AttachPrototypeSID": "OXA_Scope_EXPS2",
@@ -2930,7 +2944,7 @@
           }
         },
         {
-          "source_index": "[39]",
+          "source_index": "[38]",
           "identity": "OXA_Scope_EXPS3",
           "fields": {
             "AttachPrototypeSID": "OXA_Scope_EXPS3",
@@ -2942,7 +2956,7 @@
           }
         },
         {
-          "source_index": "[40]",
+          "source_index": "[39]",
           "identity": "OXA_Scope_Holosun",
           "fields": {
             "AttachPrototypeSID": "OXA_Scope_Holosun",
@@ -2954,7 +2968,7 @@
           }
         },
         {
-          "source_index": "[41]",
+          "source_index": "[40]",
           "identity": "OXA_Scope_MicroT1",
           "fields": {
             "AttachPrototypeSID": "OXA_Scope_MicroT1",
@@ -2966,7 +2980,7 @@
           }
         },
         {
-          "source_index": "[42]",
+          "source_index": "[41]",
           "identity": "OXA_Scope_Romeo8T",
           "fields": {
             "AttachPrototypeSID": "OXA_Scope_Romeo8T",
@@ -2978,7 +2992,7 @@
           }
         },
         {
-          "source_index": "[43]",
+          "source_index": "[42]",
           "identity": "OXA_Scope_Venom",
           "fields": {
             "AttachPrototypeSID": "OXA_Scope_Venom",
@@ -2990,7 +3004,7 @@
           }
         },
         {
-          "source_index": "[44]",
+          "source_index": "[43]",
           "identity": "RU_ColimScope_1",
           "fields": {
             "AttachPrototypeSID": "RU_ColimScope_1",
@@ -3002,7 +3016,7 @@
           }
         },
         {
-          "source_index": "[45]",
+          "source_index": "[44]",
           "identity": "OXA_Scope_OKP7",
           "fields": {
             "AttachPrototypeSID": "OXA_Scope_OKP7",
@@ -3013,7 +3027,7 @@
           }
         },
         {
-          "source_index": "[46]",
+          "source_index": "[45]",
           "identity": "OXA_Laser_1",
           "fields": {
             "AttachPrototypeSID": "OXA_Laser_1",
@@ -3021,11 +3035,12 @@
             "IconPosX": "150",
             "IconPosY": "30",
             "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74U/Laser/T_inv_aks74u_laser1.T_inv_aks74u_laser1'",
-            "RequiredUpgradeIDs.[0]": "GunAKU_Upgrade_Attachment_Laser"
+            "AdditionalMeshes.[*].MeshPrototypeSID": "OXA_LaserRail_AK",
+            "AdditionalMeshes.[*].Socket": "Rail_Laser"
           }
         },
         {
-          "source_index": "[47]",
+          "source_index": "[46]",
           "identity": "OXA_Laser_2",
           "fields": {
             "AttachPrototypeSID": "OXA_Laser_2",
@@ -3033,11 +3048,12 @@
             "IconPosX": "150",
             "IconPosY": "30",
             "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74U/Laser/T_inv_aks74u_laser2.T_inv_aks74u_laser2'",
-            "RequiredUpgradeIDs.[0]": "GunAKU_Upgrade_Attachment_Laser"
+            "AdditionalMeshes.[*].MeshPrototypeSID": "OXA_LaserRail_AK",
+            "AdditionalMeshes.[*].Socket": "Rail_Laser"
           }
         },
         {
-          "source_index": "[48]",
+          "source_index": "[47]",
           "identity": "OXA_Laser_3",
           "fields": {
             "AttachPrototypeSID": "OXA_Laser_3",
@@ -3045,11 +3061,12 @@
             "IconPosX": "150",
             "IconPosY": "30",
             "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74U/Laser/T_inv_aks74u_laser3.T_inv_aks74u_laser3'",
-            "RequiredUpgradeIDs.[0]": "GunAKU_Upgrade_Attachment_Laser"
+            "AdditionalMeshes.[*].MeshPrototypeSID": "OXA_LaserRail_AK",
+            "AdditionalMeshes.[*].Socket": "Rail_Laser"
           }
         },
         {
-          "source_index": "[49]",
+          "source_index": "[48]",
           "identity": "OXA_Laser_4",
           "fields": {
             "AttachPrototypeSID": "OXA_Laser_4",
@@ -3057,11 +3074,12 @@
             "IconPosX": "150",
             "IconPosY": "30",
             "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74U/Laser/T_inv_aks74u_laser4.T_inv_aks74u_laser4'",
-            "RequiredUpgradeIDs.[0]": "GunAKU_Upgrade_Attachment_Laser"
+            "AdditionalMeshes.[*].MeshPrototypeSID": "OXA_LaserRail_AK",
+            "AdditionalMeshes.[*].Socket": "Rail_Laser"
           }
         },
         {
-          "source_index": "[50]",
+          "source_index": "[49]",
           "identity": "OXA_Laser_5",
           "fields": {
             "AttachPrototypeSID": "OXA_Laser_5",
@@ -3069,11 +3087,12 @@
             "IconPosX": "150",
             "IconPosY": "30",
             "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74U/Laser/T_inv_aks74u_laser5.T_inv_aks74u_laser5'",
-            "RequiredUpgradeIDs.[0]": "GunAKU_Upgrade_Attachment_Laser"
+            "AdditionalMeshes.[*].MeshPrototypeSID": "OXA_LaserRail_AK",
+            "AdditionalMeshes.[*].Socket": "Rail_Laser"
           }
         },
         {
-          "source_index": "[51]",
+          "source_index": "[50]",
           "identity": "OXA_Laser_6",
           "fields": {
             "AttachPrototypeSID": "OXA_Laser_6",
@@ -3081,11 +3100,12 @@
             "IconPosX": "150",
             "IconPosY": "30",
             "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74U/Laser/T_inv_aks74u_laser6.T_inv_aks74u_laser6'",
-            "RequiredUpgradeIDs.[0]": "GunAKU_Upgrade_Attachment_Laser"
+            "AdditionalMeshes.[*].MeshPrototypeSID": "OXA_LaserRail_AK",
+            "AdditionalMeshes.[*].Socket": "Rail_Laser"
           }
         },
         {
-          "source_index": "[52]",
+          "source_index": "[51]",
           "identity": "OXA_Laser_7",
           "fields": {
             "AttachPrototypeSID": "OXA_Laser_7",
@@ -3093,11 +3113,12 @@
             "IconPosX": "150",
             "IconPosY": "30",
             "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74U/Laser/T_inv_aks74u_laser7.T_inv_aks74u_laser7'",
-            "RequiredUpgradeIDs.[0]": "GunAKU_Upgrade_Attachment_Laser"
+            "AdditionalMeshes.[*].MeshPrototypeSID": "OXA_LaserRail_AK",
+            "AdditionalMeshes.[*].Socket": "Rail_Laser"
           }
         },
         {
-          "source_index": "[53]",
+          "source_index": "[52]",
           "identity": "OXA_Laser_8",
           "fields": {
             "AttachPrototypeSID": "OXA_Laser_8",
@@ -3105,11 +3126,12 @@
             "IconPosX": "150",
             "IconPosY": "30",
             "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74U/Laser/T_inv_aks74u_laser8.T_inv_aks74u_laser8'",
-            "RequiredUpgradeIDs.[0]": "GunAKU_Upgrade_Attachment_Laser"
+            "AdditionalMeshes.[*].MeshPrototypeSID": "OXA_LaserRail_AK",
+            "AdditionalMeshes.[*].Socket": "Rail_Laser"
           }
         },
         {
-          "source_index": "[54]",
+          "source_index": "[53]",
           "identity": "OXA_Laser_9",
           "fields": {
             "AttachPrototypeSID": "OXA_Laser_9",
@@ -3117,11 +3139,12 @@
             "IconPosX": "150",
             "IconPosY": "30",
             "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74U/Laser/T_inv_aks74u_laser9.T_inv_aks74u_laser9'",
-            "RequiredUpgradeIDs.[0]": "GunAKU_Upgrade_Attachment_Laser"
+            "AdditionalMeshes.[*].MeshPrototypeSID": "OXA_LaserRail_AK",
+            "AdditionalMeshes.[*].Socket": "Rail_Laser"
           }
         },
         {
-          "source_index": "[55]",
+          "source_index": "[54]",
           "identity": "OXA_Laser_10",
           "fields": {
             "AttachPrototypeSID": "OXA_Laser_10",
@@ -3129,7 +3152,8 @@
             "IconPosX": "150",
             "IconPosY": "30",
             "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/AKS74U/Laser/T_inv_aks74u_laser10.T_inv_aks74u_laser10'",
-            "RequiredUpgradeIDs.[0]": "GunAKU_Upgrade_Attachment_Laser"
+            "AdditionalMeshes.[*].MeshPrototypeSID": "OXA_LaserRail_AK",
+            "AdditionalMeshes.[*].Socket": "Rail_Laser"
           }
         },
         {
@@ -8652,7 +8676,7 @@
       }
     },
     {
-      "classification": "BPRUE_ADDITION",
+      "classification": "OXA_REMOVAL_REINTRODUCED",
       "prototype": "GunFallschirmjager_DMR_GS",
       "array": "UpgradePrototypeSIDs",
       "vanilla": [
@@ -8739,8 +8763,6 @@
         "GunGP3A_Upgrade_Attachment_AutMuz",
         "GunGP3A_Upgrade_Attachment_Grip",
         "GunGP3A_Upgrade_Attachment_Laser",
-        "GunGP3A_Upgrade_Attachment_Laser_HP",
-        "GunGP3A_Upgrade_Attachment_Offset_Stock",
         "GunGP3A_Upgrade_Attachment_Rail",
         "GunGP3A_Upgrade_Barrel_1_1",
         "GunGP3A_Upgrade_Barrel_1_2",
@@ -8791,16 +8813,20 @@
       ],
       "bprue_removed_vanilla": [],
       "oxa_additions": [],
-      "oxa_removed_vanilla": [],
-      "reintroduced_oxa_removals": [],
+      "oxa_removed_vanilla": [
+        "GunGP3A_Upgrade_Attachment_Laser_HP",
+        "GunGP3A_Upgrade_Attachment_Offset_Stock"
+      ],
+      "reintroduced_oxa_removals": [
+        "GunGP3A_Upgrade_Attachment_Laser_HP",
+        "GunGP3A_Upgrade_Attachment_Offset_Stock"
+      ],
       "shared_additions": [],
       "compatibility_candidate": [
         "GunGP3A_Upgrade_Attachment_Rail",
         "GunGP3A_Upgrade_Attachment_AutMuz",
         "GunGP3A_Upgrade_Attachment_Laser",
-        "GunGP3A_Upgrade_Attachment_Laser_HP",
         "GunGP3A_Upgrade_Attachment_Grip",
-        "GunGP3A_Upgrade_Attachment_Offset_Stock",
         "GunGP3A_Upgrade_Barrel_1_1",
         "GunGP3A_Upgrade_Barrel_1_2",
         "GunGP3A_Upgrade_Barrel_2_1",
@@ -8869,24 +8895,10 @@
           }
         },
         {
-          "source_index": "[3]",
-          "identity": "GunGP3A_Upgrade_Attachment_Laser_HP",
-          "fields": {
-            "<value>": "GunGP3A_Upgrade_Attachment_Laser_HP"
-          }
-        },
-        {
           "source_index": "[4]",
           "identity": "GunGP3A_Upgrade_Attachment_Grip",
           "fields": {
             "<value>": "GunGP3A_Upgrade_Attachment_Grip"
-          }
-        },
-        {
-          "source_index": "[5]",
-          "identity": "GunGP3A_Upgrade_Attachment_Offset_Stock",
-          "fields": {
-            "<value>": "GunGP3A_Upgrade_Attachment_Offset_Stock"
           }
         },
         {
@@ -9206,11 +9218,13 @@
         "inherited": false
       },
       "oxa_array_semantics": {
-        "explicit": false,
+        "explicit": true,
         "replaced": false,
-        "modes": [],
-        "inherited": true,
-        "removal_identity_mismatches": []
+        "modes": [
+          "bpatch"
+        ],
+        "removal_identity_mismatches": [],
+        "inherited": true
       }
     },
     {
@@ -13031,26 +13045,29 @@
         "GunGvintar_Upgrade_Attachment_Laser",
         "GunGvintar_Upgrade_Attachment_Laser_HP",
         "GunGvintar_Upgrade_Attachment_Offset_Stock",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
         "GunGvintar_Upgrade_BPRUE_AdditionalCaliber_762x39",
         "GunGvintar_Upgrade_BPRUE_AdditionalCaliber_762x39_AP",
         "GunGvintar_Upgrade_BPRUE_AdditionalCaliber_762x39_Expanding",
-        "GunGvintar_Upgrade_BPRUE_FireControl_Burst",
-        "GunGvintar_Upgrade_BPRUE_FireControl_Precision",
-        "GunGvintar_Upgrade_BPRUE_FireRate_Balanced",
-        "GunGvintar_Upgrade_BPRUE_FireRate_HighSpeed",
-        "GunGvintar_Upgrade_BPRUE_Reload_Competition",
-        "GunGvintar_Upgrade_BPRUE_Reload_Reinforced",
-        "GunGvintar_Upgrade_BPRUE_Stock_Lightweight",
-        "GunGvintar_Upgrade_BPRUE_Stock_Marksman",
-        "GunGvintar_Upgrade_BPRUE_Stock_Stabilized",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Action_Precision",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Action_Rapid",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Action_Reinforced",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Marksman_Benchrest",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Stock_PrecisionStock",
         "GunGvintar_Upgrade_Barrel_1",
         "GunGvintar_Upgrade_Barrel_2_1",
         "GunGvintar_Upgrade_Barrel_2_2",
@@ -13080,26 +13097,29 @@
         "GunGvintar_Upgrade_Stock_2_2"
       ],
       "bprue_additions": [
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
         "GunGvintar_Upgrade_BPRUE_AdditionalCaliber_762x39",
         "GunGvintar_Upgrade_BPRUE_AdditionalCaliber_762x39_AP",
         "GunGvintar_Upgrade_BPRUE_AdditionalCaliber_762x39_Expanding",
-        "GunGvintar_Upgrade_BPRUE_FireControl_Burst",
-        "GunGvintar_Upgrade_BPRUE_FireControl_Precision",
-        "GunGvintar_Upgrade_BPRUE_FireRate_Balanced",
-        "GunGvintar_Upgrade_BPRUE_FireRate_HighSpeed",
-        "GunGvintar_Upgrade_BPRUE_Reload_Competition",
-        "GunGvintar_Upgrade_BPRUE_Reload_Reinforced",
-        "GunGvintar_Upgrade_BPRUE_Stock_Lightweight",
-        "GunGvintar_Upgrade_BPRUE_Stock_Marksman",
-        "GunGvintar_Upgrade_BPRUE_Stock_Stabilized"
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Action_Precision",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Action_Rapid",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Action_Reinforced",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Marksman_Benchrest",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
       ],
       "bprue_removed_vanilla": [],
       "oxa_additions": [],
@@ -13129,23 +13149,26 @@
         "GunGvintar_Upgrade_BPRUE_AdditionalCaliber_762x39",
         "GunGvintar_Upgrade_BPRUE_AdditionalCaliber_762x39_AP",
         "GunGvintar_Upgrade_BPRUE_AdditionalCaliber_762x39_Expanding",
-        "GunGvintar_Upgrade_BPRUE_FireControl_Burst",
-        "GunGvintar_Upgrade_BPRUE_FireControl_Precision",
-        "GunGvintar_Upgrade_BPRUE_FireRate_HighSpeed",
-        "GunGvintar_Upgrade_BPRUE_FireRate_Balanced",
-        "GunGvintar_Upgrade_BPRUE_Reload_Competition",
-        "GunGvintar_Upgrade_BPRUE_Reload_Reinforced",
-        "GunGvintar_Upgrade_BPRUE_Stock_Lightweight",
-        "GunGvintar_Upgrade_BPRUE_Stock_Stabilized",
-        "GunGvintar_Upgrade_BPRUE_Stock_Marksman",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents"
+        "GunGvintar_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Action_Rapid",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Action_Precision",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Action_Reinforced",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Marksman_Benchrest",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Stock_PrecisionStock",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration"
       ],
       "compatibility_candidate_entries": [
         {
@@ -13262,121 +13285,142 @@
         },
         {
           "source_index": "[18]",
-          "identity": "GunGvintar_Upgrade_BPRUE_FireControl_Burst",
+          "identity": "GunGvintar_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity",
           "fields": {
-            "<value>": "GunGvintar_Upgrade_BPRUE_FireControl_Burst"
+            "<value>": "GunGvintar_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity"
           }
         },
         {
           "source_index": "[19]",
-          "identity": "GunGvintar_Upgrade_BPRUE_FireControl_Precision",
+          "identity": "GunGvintar_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
           "fields": {
-            "<value>": "GunGvintar_Upgrade_BPRUE_FireControl_Precision"
+            "<value>": "GunGvintar_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel"
           }
         },
         {
           "source_index": "[20]",
-          "identity": "GunGvintar_Upgrade_BPRUE_FireRate_HighSpeed",
+          "identity": "GunGvintar_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel",
           "fields": {
-            "<value>": "GunGvintar_Upgrade_BPRUE_FireRate_HighSpeed"
+            "<value>": "GunGvintar_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel"
           }
         },
         {
           "source_index": "[21]",
-          "identity": "GunGvintar_Upgrade_BPRUE_FireRate_Balanced",
+          "identity": "GunGvintar_Upgrade_BPRUE_Sniper_Action_Rapid",
           "fields": {
-            "<value>": "GunGvintar_Upgrade_BPRUE_FireRate_Balanced"
+            "<value>": "GunGvintar_Upgrade_BPRUE_Sniper_Action_Rapid"
           }
         },
         {
           "source_index": "[22]",
-          "identity": "GunGvintar_Upgrade_BPRUE_Reload_Competition",
+          "identity": "GunGvintar_Upgrade_BPRUE_Sniper_Action_Precision",
           "fields": {
-            "<value>": "GunGvintar_Upgrade_BPRUE_Reload_Competition"
+            "<value>": "GunGvintar_Upgrade_BPRUE_Sniper_Action_Precision"
           }
         },
         {
           "source_index": "[23]",
-          "identity": "GunGvintar_Upgrade_BPRUE_Reload_Reinforced",
+          "identity": "GunGvintar_Upgrade_BPRUE_Sniper_Action_Reinforced",
           "fields": {
-            "<value>": "GunGvintar_Upgrade_BPRUE_Reload_Reinforced"
+            "<value>": "GunGvintar_Upgrade_BPRUE_Sniper_Action_Reinforced"
           }
         },
         {
           "source_index": "[24]",
-          "identity": "GunGvintar_Upgrade_BPRUE_Stock_Lightweight",
+          "identity": "GunGvintar_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
           "fields": {
-            "<value>": "GunGvintar_Upgrade_BPRUE_Stock_Lightweight"
+            "<value>": "GunGvintar_Upgrade_BPRUE_Sniper_Marksman_SnapShooter"
           }
         },
         {
           "source_index": "[25]",
-          "identity": "GunGvintar_Upgrade_BPRUE_Stock_Stabilized",
+          "identity": "GunGvintar_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
           "fields": {
-            "<value>": "GunGvintar_Upgrade_BPRUE_Stock_Stabilized"
+            "<value>": "GunGvintar_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman"
           }
         },
         {
           "source_index": "[26]",
-          "identity": "GunGvintar_Upgrade_BPRUE_Stock_Marksman",
+          "identity": "GunGvintar_Upgrade_BPRUE_Sniper_Marksman_Benchrest",
           "fields": {
-            "<value>": "GunGvintar_Upgrade_BPRUE_Stock_Marksman"
+            "<value>": "GunGvintar_Upgrade_BPRUE_Sniper_Marksman_Benchrest"
           }
         },
         {
           "source_index": "[27]",
-          "identity": "GunGvintar_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
+          "identity": "GunGvintar_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
           "fields": {
-            "<value>": "GunGvintar_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl"
+            "<value>": "GunGvintar_Upgrade_BPRUE_Sniper_Stock_LightweightStock"
           }
         },
         {
           "source_index": "[28]",
-          "identity": "GunGvintar_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
+          "identity": "GunGvintar_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
           "fields": {
-            "<value>": "GunGvintar_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning"
+            "<value>": "GunGvintar_Upgrade_BPRUE_Sniper_Stock_AdjustableStock"
           }
         },
         {
           "source_index": "[29]",
-          "identity": "GunGvintar_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
+          "identity": "GunGvintar_Upgrade_BPRUE_Sniper_Stock_PrecisionStock",
           "fields": {
-            "<value>": "GunGvintar_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem"
+            "<value>": "GunGvintar_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
           }
         },
         {
           "source_index": "[30]",
-          "identity": "GunGvintar_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
+          "identity": "GunGvintar_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
           "fields": {
-            "<value>": "GunGvintar_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction"
+            "<value>": "GunGvintar_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl"
           }
         },
         {
           "source_index": "[31]",
-          "identity": "GunGvintar_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
+          "identity": "GunGvintar_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
           "fields": {
-            "<value>": "GunGvintar_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget"
+            "<value>": "GunGvintar_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning"
           }
         },
         {
           "source_index": "[32]",
-          "identity": "GunGvintar_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing",
+          "identity": "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
           "fields": {
-            "<value>": "GunGvintar_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing"
+            "<value>": "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget"
           }
         },
         {
           "source_index": "[33]",
-          "identity": "GunGvintar_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
+          "identity": "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
           "fields": {
-            "<value>": "GunGvintar_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents"
+            "<value>": "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing"
           }
         },
         {
           "source_index": "[34]",
-          "identity": "GunGvintar_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
+          "identity": "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
           "fields": {
-            "<value>": "GunGvintar_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents"
+            "<value>": "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents"
+          }
+        },
+        {
+          "source_index": "[35]",
+          "identity": "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents",
+          "fields": {
+            "<value>": "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents"
+          }
+        },
+        {
+          "source_index": "[36]",
+          "identity": "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+          "fields": {
+            "<value>": "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration"
+          }
+        },
+        {
+          "source_index": "[37]",
+          "identity": "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration",
+          "fields": {
+            "<value>": "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration"
           }
         }
       ],
@@ -13398,7 +13442,7 @@
       }
     },
     {
-      "classification": "BPRUE_ADDITION",
+      "classification": "OXA_REMOVAL_REINTRODUCED",
       "prototype": "GunHSG72_DMR_GS",
       "array": "UpgradePrototypeSIDs",
       "vanilla": [
@@ -13477,8 +13521,6 @@
       ],
       "oxa_effective": [
         "GunGP3A_Upgrade_Attachment_Laser",
-        "GunGP3A_Upgrade_Attachment_Laser_HP",
-        "GunGP3A_Upgrade_Attachment_Offset_Stock",
         "GunGP3A_Upgrade_Barrel_1_1",
         "GunGP3A_Upgrade_Barrel_1_2",
         "GunGP3A_Upgrade_Barrel_2_1",
@@ -13528,13 +13570,17 @@
       ],
       "bprue_removed_vanilla": [],
       "oxa_additions": [],
-      "oxa_removed_vanilla": [],
-      "reintroduced_oxa_removals": [],
+      "oxa_removed_vanilla": [
+        "GunGP3A_Upgrade_Attachment_Laser_HP",
+        "GunGP3A_Upgrade_Attachment_Offset_Stock"
+      ],
+      "reintroduced_oxa_removals": [
+        "GunGP3A_Upgrade_Attachment_Laser_HP",
+        "GunGP3A_Upgrade_Attachment_Offset_Stock"
+      ],
       "shared_additions": [],
       "compatibility_candidate": [
         "GunGP3A_Upgrade_Attachment_Laser",
-        "GunGP3A_Upgrade_Attachment_Laser_HP",
-        "GunGP3A_Upgrade_Attachment_Offset_Stock",
         "GunGP3A_Upgrade_Barrel_1_1",
         "GunGP3A_Upgrade_Barrel_1_2",
         "GunGP3A_Upgrade_Barrel_2_1",
@@ -13586,20 +13632,6 @@
           "identity": "GunGP3A_Upgrade_Attachment_Laser",
           "fields": {
             "<value>": "GunGP3A_Upgrade_Attachment_Laser"
-          }
-        },
-        {
-          "source_index": "[1]",
-          "identity": "GunGP3A_Upgrade_Attachment_Laser_HP",
-          "fields": {
-            "<value>": "GunGP3A_Upgrade_Attachment_Laser_HP"
-          }
-        },
-        {
-          "source_index": "[2]",
-          "identity": "GunGP3A_Upgrade_Attachment_Offset_Stock",
-          "fields": {
-            "<value>": "GunGP3A_Upgrade_Attachment_Offset_Stock"
           }
         },
         {
@@ -13919,11 +13951,13 @@
         "inherited": false
       },
       "oxa_array_semantics": {
-        "explicit": false,
+        "explicit": true,
         "replaced": false,
-        "modes": [],
-        "inherited": true,
-        "removal_identity_mismatches": []
+        "modes": [
+          "bpatch"
+        ],
+        "removal_identity_mismatches": [],
+        "inherited": true
       }
     },
     {
@@ -14456,8 +14490,7 @@
             "Socket": "GripSocket",
             "IconPosX": "150",
             "IconPosY": "30",
-            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/Vector/Foregrip/T_inv_vector_grip_contoured.T_inv_vector_grip_contoured'",
-            "RequiredUpgradeIDs.[0]": "GunIntegral_Upgrade_Attachment_Grip"
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/Vector/Foregrip/T_inv_vector_grip_contoured.T_inv_vector_grip_contoured'"
           }
         },
         {
@@ -14468,8 +14501,7 @@
             "Socket": "GripSocket",
             "IconPosX": "150",
             "IconPosY": "30",
-            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/Vector/Foregrip/T_inv_vector_grip_stubby.T_inv_vector_grip_stubby'",
-            "RequiredUpgradeIDs.[0]": "GunIntegral_Upgrade_Attachment_Grip"
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/Vector/Foregrip/T_inv_vector_grip_stubby.T_inv_vector_grip_stubby'"
           }
         },
         {
@@ -14480,8 +14512,7 @@
             "Socket": "GripSocket",
             "IconPosX": "150",
             "IconPosY": "30",
-            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/Vector/Foregrip/T_inv_vector_grip_weighted.T_inv_vector_grip_weighted'",
-            "RequiredUpgradeIDs.[0]": "GunIntegral_Upgrade_Attachment_Grip"
+            "WeaponSpecificIcon": "Texture2D'/Standard/Icons/Weapons/Vector/Foregrip/T_inv_vector_grip_weighted.T_inv_vector_grip_weighted'"
           }
         },
         {
@@ -21603,7 +21634,7 @@
       }
     },
     {
-      "classification": "BPRUE_ADDITION",
+      "classification": "OXA_REMOVAL_REINTRODUCED",
       "prototype": "GunSPSA_Sniper_SG",
       "array": "UpgradePrototypeSIDs",
       "vanilla": [
@@ -21668,7 +21699,6 @@
         "GunSPSA_Upgrade_Attachment_Grip",
         "GunSPSA_Upgrade_Attachment_Laser",
         "GunSPSA_Upgrade_Attachment_Laser_HP",
-        "GunSPSA_Upgrade_Attachment_Offset_Stock",
         "GunSPSA_Upgrade_Attachment_Rail",
         "GunSPSA_Upgrade_Attachment_SinMuz",
         "GunSPSA_Upgrade_Barrel_2_1",
@@ -21705,8 +21735,12 @@
       ],
       "bprue_removed_vanilla": [],
       "oxa_additions": [],
-      "oxa_removed_vanilla": [],
-      "reintroduced_oxa_removals": [],
+      "oxa_removed_vanilla": [
+        "GunSPSA_Upgrade_Attachment_Offset_Stock"
+      ],
+      "reintroduced_oxa_removals": [
+        "GunSPSA_Upgrade_Attachment_Offset_Stock"
+      ],
       "shared_additions": [],
       "compatibility_candidate": [
         "GunSPSA_Upgrade_Attachment_Rail",
@@ -21727,7 +21761,6 @@
         "GunSPSA_Upgrade_Stock_2_2",
         "GunSPSA_Upgrade_Stock_3",
         "GunSPSA_Upgrade_Attachment_Laser_HP",
-        "GunSPSA_Upgrade_Attachment_Offset_Stock",
         "BPRUEDLCDLC1SPSASniper_Upgrade_BPRUE_SG_Pattern_Breacher",
         "BPRUEDLCDLC1SPSASniper_Upgrade_BPRUE_SG_Pattern_FieldChoke",
         "BPRUEDLCDLC1SPSASniper_Upgrade_BPRUE_SG_Pattern_FullChoke",
@@ -21873,13 +21906,6 @@
           }
         },
         {
-          "source_index": "[18]",
-          "identity": "GunSPSA_Upgrade_Attachment_Offset_Stock",
-          "fields": {
-            "<value>": "GunSPSA_Upgrade_Attachment_Offset_Stock"
-          }
-        },
-        {
           "source_index": "[19]",
           "identity": "BPRUEDLCDLC1SPSASniper_Upgrade_BPRUE_SG_Pattern_Breacher",
           "fields": {
@@ -22000,11 +22026,22 @@
         "inherited": false
       },
       "oxa_array_semantics": {
-        "explicit": false,
+        "explicit": true,
         "replaced": false,
-        "modes": [],
-        "inherited": true,
-        "removal_identity_mismatches": []
+        "modes": [
+          "bpatch"
+        ],
+        "removal_identity_mismatches": [
+          {
+            "patch_index": "[17]",
+            "index_identity": "GunSPSA_Upgrade_Attachment_Laser_HP",
+            "comment_identity": "GunM860_Upgrade_Attachment_Laser_HP",
+            "resolved_index": null,
+            "resolution": "unresolved_comment_identity",
+            "source": "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg"
+          }
+        ],
+        "inherited": true
       }
     },
     {
@@ -31688,27 +31725,30 @@
         "GunGvintar_Upgrade_Stock_2_2"
       ],
       "bprue_effective": [
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
         "BPRUEUniqueMerc_Upgrade_BPRUE_AdditionalCaliber_762x39",
         "BPRUEUniqueMerc_Upgrade_BPRUE_AdditionalCaliber_762x39_AP",
         "BPRUEUniqueMerc_Upgrade_BPRUE_AdditionalCaliber_762x39_Expanding",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_FireControl_Burst",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_FireControl_Precision",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_FireRate_Balanced",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_FireRate_HighSpeed",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_Reload_Competition",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_Reload_Reinforced",
         "BPRUEUniqueMerc_Upgrade_BPRUE_Signature_ContractorPackage",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_Stock_Lightweight",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_Stock_Marksman",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_Stock_Stabilized",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Action_Precision",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Action_Rapid",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Action_Reinforced",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Marksman_Benchrest",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Stock_PrecisionStock",
         "GunGvintar_Upgrade_Attachment_Laser",
         "GunGvintar_Upgrade_Attachment_Laser_HP",
         "GunGvintar_Upgrade_Attachment_Offset_Stock",
@@ -31741,27 +31781,30 @@
         "GunGvintar_Upgrade_Stock_2_2"
       ],
       "bprue_additions": [
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
         "BPRUEUniqueMerc_Upgrade_BPRUE_AdditionalCaliber_762x39",
         "BPRUEUniqueMerc_Upgrade_BPRUE_AdditionalCaliber_762x39_AP",
         "BPRUEUniqueMerc_Upgrade_BPRUE_AdditionalCaliber_762x39_Expanding",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_FireControl_Burst",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_FireControl_Precision",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_FireRate_Balanced",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_FireRate_HighSpeed",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_Reload_Competition",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_Reload_Reinforced",
         "BPRUEUniqueMerc_Upgrade_BPRUE_Signature_ContractorPackage",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_Stock_Lightweight",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_Stock_Marksman",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_Stock_Stabilized"
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Action_Precision",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Action_Rapid",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Action_Reinforced",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Marksman_Benchrest",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
       ],
       "bprue_removed_vanilla": [],
       "oxa_additions": [],
@@ -31791,23 +31834,26 @@
         "BPRUEUniqueMerc_Upgrade_BPRUE_AdditionalCaliber_762x39",
         "BPRUEUniqueMerc_Upgrade_BPRUE_AdditionalCaliber_762x39_AP",
         "BPRUEUniqueMerc_Upgrade_BPRUE_AdditionalCaliber_762x39_Expanding",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_FireControl_Burst",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_FireControl_Precision",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_FireRate_HighSpeed",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_FireRate_Balanced",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_Reload_Competition",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_Reload_Reinforced",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_Stock_Lightweight",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_Stock_Stabilized",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_Stock_Marksman",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Action_Rapid",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Action_Precision",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Action_Reinforced",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Marksman_Benchrest",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Stock_PrecisionStock",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration",
         "BPRUEUniqueMerc_Upgrade_BPRUE_Signature_ContractorPackage"
       ],
       "compatibility_candidate_entries": [
@@ -31925,125 +31971,146 @@
         },
         {
           "source_index": "[18]",
-          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_FireControl_Burst",
+          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity",
           "fields": {
-            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_FireControl_Burst"
+            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity"
           }
         },
         {
           "source_index": "[19]",
-          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_FireControl_Precision",
+          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
           "fields": {
-            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_FireControl_Precision"
+            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel"
           }
         },
         {
           "source_index": "[20]",
-          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_FireRate_HighSpeed",
+          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel",
           "fields": {
-            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_FireRate_HighSpeed"
+            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel"
           }
         },
         {
           "source_index": "[21]",
-          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_FireRate_Balanced",
+          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Action_Rapid",
           "fields": {
-            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_FireRate_Balanced"
+            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Action_Rapid"
           }
         },
         {
           "source_index": "[22]",
-          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_Reload_Competition",
+          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Action_Precision",
           "fields": {
-            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_Reload_Competition"
+            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Action_Precision"
           }
         },
         {
           "source_index": "[23]",
-          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_Reload_Reinforced",
+          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Action_Reinforced",
           "fields": {
-            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_Reload_Reinforced"
+            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Action_Reinforced"
           }
         },
         {
           "source_index": "[24]",
-          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_Stock_Lightweight",
+          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
           "fields": {
-            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_Stock_Lightweight"
+            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Marksman_SnapShooter"
           }
         },
         {
           "source_index": "[25]",
-          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_Stock_Stabilized",
+          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
           "fields": {
-            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_Stock_Stabilized"
+            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman"
           }
         },
         {
           "source_index": "[26]",
-          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_Stock_Marksman",
+          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Marksman_Benchrest",
           "fields": {
-            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_Stock_Marksman"
+            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Marksman_Benchrest"
           }
         },
         {
           "source_index": "[27]",
-          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
+          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
           "fields": {
-            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl"
+            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Stock_LightweightStock"
           }
         },
         {
           "source_index": "[28]",
-          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
+          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
           "fields": {
-            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning"
+            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Stock_AdjustableStock"
           }
         },
         {
           "source_index": "[29]",
-          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
+          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Stock_PrecisionStock",
           "fields": {
-            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem"
+            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Stock_PrecisionStock"
           }
         },
         {
           "source_index": "[30]",
-          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
+          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
           "fields": {
-            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction"
+            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl"
           }
         },
         {
           "source_index": "[31]",
-          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
+          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
           "fields": {
-            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget"
+            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning"
           }
         },
         {
           "source_index": "[32]",
-          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing",
+          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
           "fields": {
-            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing"
+            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget"
           }
         },
         {
           "source_index": "[33]",
-          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
+          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
           "fields": {
-            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents"
+            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing"
           }
         },
         {
           "source_index": "[34]",
-          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
+          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
           "fields": {
-            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents"
+            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents"
           }
         },
         {
           "source_index": "[35]",
+          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents",
+          "fields": {
+            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents"
+          }
+        },
+        {
+          "source_index": "[36]",
+          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+          "fields": {
+            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration"
+          }
+        },
+        {
+          "source_index": "[37]",
+          "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration",
+          "fields": {
+            "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration"
+          }
+        },
+        {
+          "source_index": "[38]",
           "identity": "BPRUEUniqueMerc_Upgrade_BPRUE_Signature_ContractorPackage",
           "fields": {
             "<value>": "BPRUEUniqueMerc_Upgrade_BPRUE_Signature_ContractorPackage"
@@ -32830,7 +32897,6 @@
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A045_Expanding",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A918",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A918_AP",
-        "BPRUEUniqueRatKiller_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Reload_Competition",
@@ -32890,7 +32956,6 @@
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A045_Expanding",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A918",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A918_AP",
-        "BPRUEUniqueRatKiller_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Reload_Competition",
@@ -32952,7 +33017,6 @@
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A045",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A045_AP",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A045_Expanding",
-        "BPRUEUniqueRatKiller_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
@@ -33162,69 +33226,62 @@
         },
         {
           "source_index": "[32]",
-          "identity": "BPRUEUniqueRatKiller_Upgrade_BPRUE_PistolConversion",
-          "fields": {
-            "<value>": "BPRUEUniqueRatKiller_Upgrade_BPRUE_PistolConversion"
-          }
-        },
-        {
-          "source_index": "[33]",
           "identity": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
           "fields": {
             "<value>": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly"
           }
         },
         {
-          "source_index": "[34]",
+          "source_index": "[33]",
           "identity": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
           "fields": {
             "<value>": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly"
           }
         },
         {
-          "source_index": "[35]",
+          "source_index": "[34]",
           "identity": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
           "fields": {
             "<value>": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem"
           }
         },
         {
-          "source_index": "[36]",
+          "source_index": "[35]",
           "identity": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction",
           "fields": {
             "<value>": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction"
           }
         },
         {
-          "source_index": "[37]",
+          "source_index": "[36]",
           "identity": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget",
           "fields": {
             "<value>": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget"
           }
         },
         {
-          "source_index": "[38]",
+          "source_index": "[37]",
           "identity": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing",
           "fields": {
             "<value>": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing"
           }
         },
         {
-          "source_index": "[39]",
+          "source_index": "[38]",
           "identity": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration",
           "fields": {
             "<value>": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration"
           }
         },
         {
-          "source_index": "[40]",
+          "source_index": "[39]",
           "identity": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration",
           "fields": {
             "<value>": "BPRUEUniqueRatKiller_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration"
           }
         },
         {
-          "source_index": "[41]",
+          "source_index": "[40]",
           "identity": "BPRUEUniqueRatKiller_Upgrade_BPRUE_Signature_CloseQuartersConversion",
           "fields": {
             "<value>": "BPRUEUniqueRatKiller_Upgrade_BPRUE_Signature_CloseQuartersConversion"
@@ -34035,7 +34092,6 @@
       "bprue_effective": [
         "BPRUEUniqueShakh_Upgrade_BPRUE_Action_Controlled",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Action_HighSpeed",
-        "BPRUEUniqueShakh_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Reload_Competition",
@@ -34082,7 +34138,6 @@
       "bprue_additions": [
         "BPRUEUniqueShakh_Upgrade_BPRUE_Action_Controlled",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Action_HighSpeed",
-        "BPRUEUniqueShakh_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Reload_Competition",
@@ -34132,7 +34187,6 @@
         "BPRUEUniqueShakh_Upgrade_BPRUE_Stock_Lightweight",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Stock_Tactical",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Stock_Stabilized",
-        "BPRUEUniqueShakh_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
         "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
         "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
@@ -34286,69 +34340,62 @@
         },
         {
           "source_index": "[22]",
-          "identity": "BPRUEUniqueShakh_Upgrade_BPRUE_PistolConversion",
-          "fields": {
-            "<value>": "BPRUEUniqueShakh_Upgrade_BPRUE_PistolConversion"
-          }
-        },
-        {
-          "source_index": "[23]",
           "identity": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
           "fields": {
             "<value>": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly"
           }
         },
         {
-          "source_index": "[24]",
+          "source_index": "[23]",
           "identity": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
           "fields": {
             "<value>": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly"
           }
         },
         {
-          "source_index": "[25]",
+          "source_index": "[24]",
           "identity": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
           "fields": {
             "<value>": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem"
           }
         },
         {
-          "source_index": "[26]",
+          "source_index": "[25]",
           "identity": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction",
           "fields": {
             "<value>": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction"
           }
         },
         {
-          "source_index": "[27]",
+          "source_index": "[26]",
           "identity": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget",
           "fields": {
             "<value>": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget"
           }
         },
         {
-          "source_index": "[28]",
+          "source_index": "[27]",
           "identity": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing",
           "fields": {
             "<value>": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing"
           }
         },
         {
-          "source_index": "[29]",
+          "source_index": "[28]",
           "identity": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration",
           "fields": {
             "<value>": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration"
           }
         },
         {
-          "source_index": "[30]",
+          "source_index": "[29]",
           "identity": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration",
           "fields": {
             "<value>": "BPRUEUniqueShakh_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration"
           }
         },
         {
-          "source_index": "[31]",
+          "source_index": "[30]",
           "identity": "BPRUEUniqueShakh_Upgrade_BPRUE_Signature_ExtendedAssaultFeed",
           "fields": {
             "<value>": "BPRUEUniqueShakh_Upgrade_BPRUE_Signature_ExtendedAssaultFeed"
@@ -34745,7 +34792,6 @@
       "bprue_effective": [
         "BPRUEUniqueSilence_Upgrade_BPRUE_Action_Controlled",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Action_HighSpeed",
-        "BPRUEUniqueSilence_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Reload_Competition",
@@ -34789,7 +34835,6 @@
       "bprue_additions": [
         "BPRUEUniqueSilence_Upgrade_BPRUE_Action_Controlled",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Action_HighSpeed",
-        "BPRUEUniqueSilence_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Reload_Competition",
@@ -34836,7 +34881,6 @@
         "BPRUEUniqueSilence_Upgrade_BPRUE_Stock_Lightweight",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Stock_Tactical",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Stock_Stabilized",
-        "BPRUEUniqueSilence_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
         "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
         "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
@@ -34983,69 +35027,62 @@
         },
         {
           "source_index": "[20]",
-          "identity": "BPRUEUniqueSilence_Upgrade_BPRUE_PistolConversion",
-          "fields": {
-            "<value>": "BPRUEUniqueSilence_Upgrade_BPRUE_PistolConversion"
-          }
-        },
-        {
-          "source_index": "[21]",
           "identity": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
           "fields": {
             "<value>": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly"
           }
         },
         {
-          "source_index": "[22]",
+          "source_index": "[21]",
           "identity": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
           "fields": {
             "<value>": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly"
           }
         },
         {
-          "source_index": "[23]",
+          "source_index": "[22]",
           "identity": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
           "fields": {
             "<value>": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem"
           }
         },
         {
-          "source_index": "[24]",
+          "source_index": "[23]",
           "identity": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction",
           "fields": {
             "<value>": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction"
           }
         },
         {
-          "source_index": "[25]",
+          "source_index": "[24]",
           "identity": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget",
           "fields": {
             "<value>": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget"
           }
         },
         {
-          "source_index": "[26]",
+          "source_index": "[25]",
           "identity": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing",
           "fields": {
             "<value>": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing"
           }
         },
         {
-          "source_index": "[27]",
+          "source_index": "[26]",
           "identity": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration",
           "fields": {
             "<value>": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration"
           }
         },
         {
-          "source_index": "[28]",
+          "source_index": "[27]",
           "identity": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration",
           "fields": {
             "<value>": "BPRUEUniqueSilence_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration"
           }
         },
         {
-          "source_index": "[29]",
+          "source_index": "[28]",
           "identity": "BPRUEUniqueSilence_Upgrade_BPRUE_Signature_SilentEntryPackage",
           "fields": {
             "<value>": "BPRUEUniqueSilence_Upgrade_BPRUE_Signature_SilentEntryPackage"
@@ -35821,7 +35858,6 @@
       "bprue_effective": [
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Action_Controlled",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Action_HighSpeed",
-        "BPRUEUniqueSpitfire_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Reload_Competition",
@@ -35866,7 +35902,6 @@
       "bprue_additions": [
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Action_Controlled",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Action_HighSpeed",
-        "BPRUEUniqueSpitfire_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Reload_Competition",
@@ -35915,7 +35950,6 @@
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Stock_Lightweight",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Stock_Tactical",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Stock_Stabilized",
-        "BPRUEUniqueSpitfire_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
@@ -36062,69 +36096,62 @@
         },
         {
           "source_index": "[21]",
-          "identity": "BPRUEUniqueSpitfire_Upgrade_BPRUE_PistolConversion",
-          "fields": {
-            "<value>": "BPRUEUniqueSpitfire_Upgrade_BPRUE_PistolConversion"
-          }
-        },
-        {
-          "source_index": "[22]",
           "identity": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
           "fields": {
             "<value>": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly"
           }
         },
         {
-          "source_index": "[23]",
+          "source_index": "[22]",
           "identity": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
           "fields": {
             "<value>": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly"
           }
         },
         {
-          "source_index": "[24]",
+          "source_index": "[23]",
           "identity": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
           "fields": {
             "<value>": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem"
           }
         },
         {
-          "source_index": "[25]",
+          "source_index": "[24]",
           "identity": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction",
           "fields": {
             "<value>": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction"
           }
         },
         {
-          "source_index": "[26]",
+          "source_index": "[25]",
           "identity": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget",
           "fields": {
             "<value>": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget"
           }
         },
         {
-          "source_index": "[27]",
+          "source_index": "[26]",
           "identity": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing",
           "fields": {
             "<value>": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing"
           }
         },
         {
-          "source_index": "[28]",
+          "source_index": "[27]",
           "identity": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration",
           "fields": {
             "<value>": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration"
           }
         },
         {
-          "source_index": "[29]",
+          "source_index": "[28]",
           "identity": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration",
           "fields": {
             "<value>": "BPRUEUniqueSpitfire_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration"
           }
         },
         {
-          "source_index": "[30]",
+          "source_index": "[29]",
           "identity": "BPRUEUniqueSpitfire_Upgrade_BPRUE_Signature_OverclockedAction",
           "fields": {
             "<value>": "BPRUEUniqueSpitfire_Upgrade_BPRUE_Signature_OverclockedAction"
@@ -36177,7 +36204,6 @@
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A045_Expanding",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A919",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A919_AP",
-        "BPRUEUniqueSpitter_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Reload_Competition",
@@ -36232,7 +36258,6 @@
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A045_Expanding",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A919",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A919_AP",
-        "BPRUEUniqueSpitter_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Reload_Competition",
@@ -36290,7 +36315,6 @@
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A045",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A045_AP",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A045_Expanding",
-        "BPRUEUniqueSpitter_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
@@ -36486,69 +36510,62 @@
         },
         {
           "source_index": "[29]",
-          "identity": "BPRUEUniqueSpitter_Upgrade_BPRUE_PistolConversion",
-          "fields": {
-            "<value>": "BPRUEUniqueSpitter_Upgrade_BPRUE_PistolConversion"
-          }
-        },
-        {
-          "source_index": "[30]",
           "identity": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly",
           "fields": {
             "<value>": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleHandling_LightweightAssembly"
           }
         },
         {
-          "source_index": "[31]",
+          "source_index": "[30]",
           "identity": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly",
           "fields": {
             "<value>": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleHandling_ReinforcedAssembly"
           }
         },
         {
-          "source_index": "[32]",
+          "source_index": "[31]",
           "identity": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem",
           "fields": {
             "<value>": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleAction_HighCyclicSystem"
           }
         },
         {
-          "source_index": "[33]",
+          "source_index": "[32]",
           "identity": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction",
           "fields": {
             "<value>": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleAction_ControlledAction"
           }
         },
         {
-          "source_index": "[34]",
+          "source_index": "[33]",
           "identity": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget",
           "fields": {
             "<value>": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleBallistics_SoftTarget"
           }
         },
         {
-          "source_index": "[35]",
+          "source_index": "[34]",
           "identity": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing",
           "fields": {
             "<value>": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleBallistics_ArmorPiercing"
           }
         },
         {
-          "source_index": "[36]",
+          "source_index": "[35]",
           "identity": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration",
           "fields": {
             "<value>": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_CqbConfiguration"
           }
         },
         {
-          "source_index": "[37]",
+          "source_index": "[36]",
           "identity": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration",
           "fields": {
             "<value>": "BPRUEUniqueSpitter_Upgrade_BPRUE_SMGShared_ModuleRangeProfile_RangeConfiguration"
           }
         },
         {
-          "source_index": "[38]",
+          "source_index": "[37]",
           "identity": "BPRUEUniqueSpitter_Upgrade_BPRUE_Signature_RecoilCompensationSystem",
           "fields": {
             "<value>": "BPRUEUniqueSpitter_Upgrade_BPRUE_Signature_RecoilCompensationSystem"
@@ -39427,7 +39444,6 @@
         "OXA_Laser_8",
         "OXA_Laser_9",
         "OXA_Mag_545x39_PMag30r",
-        "OXA_Rail_Laser",
         "OXA_Rail_Scope",
         "OXA_Scope_Aselsan",
         "OXA_Scope_Crossfire",
@@ -39609,7 +39625,7 @@
           "bprue": "155",
           "oxa": "150",
           "bprue_index": "[2]",
-          "oxa_index": "[44]"
+          "oxa_index": "[43]"
         },
         {
           "identity": "RU_ColimScope_1",
@@ -39617,7 +39633,7 @@
           "bprue": "9",
           "oxa": "30",
           "bprue_index": "[2]",
-          "oxa_index": "[44]"
+          "oxa_index": "[43]"
         },
         {
           "identity": "RU_ColimScope_1",
@@ -39625,7 +39641,7 @@
           "bprue": "ColimScopeSocket",
           "oxa": "ScopeSocketA2",
           "bprue_index": "[2]",
-          "oxa_index": "[44]"
+          "oxa_index": "[43]"
         },
         {
           "identity": "RU_ColimScope_1",
@@ -39633,7 +39649,7 @@
           "bprue": "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/Inventory/WeaponAndAttachments/AKU/T_inv_w_aku_colimscope.T_inv_w_aku_colimscope'",
           "oxa": "Texture2D'/Standard/Icons/Weapons/AKS74U/Scope/T_inv_aks74u_scope_rucol.T_inv_aks74u_scope_rucol'",
           "bprue_index": "[2]",
-          "oxa_index": "[44]"
+          "oxa_index": "[43]"
         }
       ]
     },
@@ -40559,6 +40575,77 @@
       "field_conflicts": []
     },
     {
+      "severity": "MERGE_REQUIRED",
+      "prototype": "GunFallschirmjager_DMR_GS",
+      "array": "UpgradePrototypeSIDs",
+      "bprue_sources": [
+        "GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg"
+      ],
+      "oxa_sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg"
+      ],
+      "bprue_modes": [],
+      "oxa_modes": [
+        "bpatch"
+      ],
+      "common": [],
+      "bprue_only": [
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_Signature_AirborneMarksman",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_Sniper_Action_Precision",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_Sniper_Action_Rapid",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_Sniper_Action_Reinforced",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_Sniper_Caliber_762Sniper",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_Sniper_Caliber_762Sniper_AP",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_Sniper_Caliber_762Sniper_Supersonic",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_Sniper_Marksman_Benchrest",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+        "BPRUEDLCDLC1Fallschirmjager_Upgrade_BPRUE_Sniper_Stock_PrecisionStock",
+        "GunGP3A_Upgrade_Attachment_AutMuz",
+        "GunGP3A_Upgrade_Attachment_Grip",
+        "GunGP3A_Upgrade_Attachment_Laser",
+        "GunGP3A_Upgrade_Attachment_Laser_HP",
+        "GunGP3A_Upgrade_Attachment_Offset_Stock",
+        "GunGP3A_Upgrade_Attachment_Rail",
+        "GunGP3A_Upgrade_Barrel_1_1",
+        "GunGP3A_Upgrade_Barrel_1_2",
+        "GunGP3A_Upgrade_Barrel_2_1",
+        "GunGP3A_Upgrade_Barrel_2_2",
+        "GunGP3A_Upgrade_Barrel_3",
+        "GunGP3A_Upgrade_Body_1",
+        "GunGP3A_Upgrade_Body_2_1",
+        "GunGP3A_Upgrade_Body_2_2",
+        "GunGP3A_Upgrade_Grip_1_1",
+        "GunGP3A_Upgrade_Grip_1_2",
+        "GunGP3A_Upgrade_Grip_2_1",
+        "GunGP3A_Upgrade_Grip_2_2",
+        "GunGP3A_Upgrade_Grip_3",
+        "GunGP3A_Upgrade_Handguard_1_1",
+        "GunGP3A_Upgrade_Handguard_1_2",
+        "GunGP3A_Upgrade_Handguard_2_1",
+        "GunGP3A_Upgrade_Handguard_2_2",
+        "GunGP3A_Upgrade_Stock_1",
+        "GunGP3A_Upgrade_Stock_2_1",
+        "GunGP3A_Upgrade_Stock_2_2"
+      ],
+      "oxa_only": [],
+      "index_collisions": [],
+      "field_conflicts": []
+    },
+    {
       "severity": "CONTENT_CONFLICT",
       "prototype": "GunFora230_PP_GS",
       "array": "CompatibleAttachments",
@@ -41345,26 +41432,29 @@
         "GunGvintar_Upgrade_Attachment_Laser",
         "GunGvintar_Upgrade_Attachment_Laser_HP",
         "GunGvintar_Upgrade_Attachment_Offset_Stock",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
-        "GunGvintar_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
         "GunGvintar_Upgrade_BPRUE_AdditionalCaliber_762x39",
         "GunGvintar_Upgrade_BPRUE_AdditionalCaliber_762x39_AP",
         "GunGvintar_Upgrade_BPRUE_AdditionalCaliber_762x39_Expanding",
-        "GunGvintar_Upgrade_BPRUE_FireControl_Burst",
-        "GunGvintar_Upgrade_BPRUE_FireControl_Precision",
-        "GunGvintar_Upgrade_BPRUE_FireRate_Balanced",
-        "GunGvintar_Upgrade_BPRUE_FireRate_HighSpeed",
-        "GunGvintar_Upgrade_BPRUE_Reload_Competition",
-        "GunGvintar_Upgrade_BPRUE_Reload_Reinforced",
-        "GunGvintar_Upgrade_BPRUE_Stock_Lightweight",
-        "GunGvintar_Upgrade_BPRUE_Stock_Marksman",
-        "GunGvintar_Upgrade_BPRUE_Stock_Stabilized",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+        "GunGvintar_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Action_Precision",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Action_Rapid",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Action_Reinforced",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Marksman_Benchrest",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+        "GunGvintar_Upgrade_BPRUE_Sniper_Stock_PrecisionStock",
         "GunGvintar_Upgrade_Barrel_1",
         "GunGvintar_Upgrade_Barrel_2_1",
         "GunGvintar_Upgrade_Barrel_2_2",
@@ -41377,6 +41467,74 @@
         "GunGvintar_Upgrade_Stock_1_2",
         "GunGvintar_Upgrade_Stock_2_1",
         "GunGvintar_Upgrade_Stock_2_2"
+      ],
+      "oxa_only": [],
+      "index_collisions": [],
+      "field_conflicts": []
+    },
+    {
+      "severity": "MERGE_REQUIRED",
+      "prototype": "GunHSG72_DMR_GS",
+      "array": "UpgradePrototypeSIDs",
+      "bprue_sources": [
+        "GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg"
+      ],
+      "oxa_sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg"
+      ],
+      "bprue_modes": [],
+      "oxa_modes": [
+        "bpatch"
+      ],
+      "common": [],
+      "bprue_only": [
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_Signature_MatchFireControl",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_Sniper_Action_Precision",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_Sniper_Action_Rapid",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_Sniper_Action_Reinforced",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_Sniper_Caliber_762Sniper",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_Sniper_Caliber_762Sniper_AP",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_Sniper_Caliber_762Sniper_Supersonic",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_Sniper_Marksman_Benchrest",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+        "BPRUEDLCDLC1HSG72_Upgrade_BPRUE_Sniper_Stock_PrecisionStock",
+        "GunGP3A_Upgrade_Attachment_Laser",
+        "GunGP3A_Upgrade_Attachment_Laser_HP",
+        "GunGP3A_Upgrade_Attachment_Offset_Stock",
+        "GunGP3A_Upgrade_Barrel_1_1",
+        "GunGP3A_Upgrade_Barrel_1_2",
+        "GunGP3A_Upgrade_Barrel_2_1",
+        "GunGP3A_Upgrade_Barrel_2_2",
+        "GunGP3A_Upgrade_Barrel_3",
+        "GunGP3A_Upgrade_Body_1",
+        "GunGP3A_Upgrade_Body_2_1",
+        "GunGP3A_Upgrade_Body_2_2",
+        "GunGP3A_Upgrade_Grip_1_1",
+        "GunGP3A_Upgrade_Grip_1_2",
+        "GunGP3A_Upgrade_Grip_2_1",
+        "GunGP3A_Upgrade_Grip_2_2",
+        "GunGP3A_Upgrade_Grip_3",
+        "GunGP3A_Upgrade_Handguard_1_1",
+        "GunGP3A_Upgrade_Handguard_1_2",
+        "GunGP3A_Upgrade_Handguard_2_1",
+        "GunGP3A_Upgrade_Handguard_2_2",
+        "GunGP3A_Upgrade_Stock_1",
+        "GunGP3A_Upgrade_Stock_2_1",
+        "GunGP3A_Upgrade_Stock_2_2"
       ],
       "oxa_only": [],
       "index_collisions": [],
@@ -42389,6 +42547,62 @@
         "GunSPSA_Upgrade_BPRUE_SG_Pattern_Breacher",
         "GunSPSA_Upgrade_BPRUE_SG_Pattern_FieldChoke",
         "GunSPSA_Upgrade_BPRUE_SG_Pattern_FullChoke",
+        "GunSPSA_Upgrade_Barrel_2_1",
+        "GunSPSA_Upgrade_Barrel_2_2",
+        "GunSPSA_Upgrade_Barrel_3_1",
+        "GunSPSA_Upgrade_Barrel_3_2",
+        "GunSPSA_Upgrade_Body_1",
+        "GunSPSA_Upgrade_Body_2_1",
+        "GunSPSA_Upgrade_Body_2_2",
+        "GunSPSA_Upgrade_Body_3_1",
+        "GunSPSA_Upgrade_Body_3_2",
+        "GunSPSA_Upgrade_Stock_1",
+        "GunSPSA_Upgrade_Stock_2_1",
+        "GunSPSA_Upgrade_Stock_2_2",
+        "GunSPSA_Upgrade_Stock_3"
+      ],
+      "oxa_only": [],
+      "index_collisions": [],
+      "field_conflicts": []
+    },
+    {
+      "severity": "MERGE_REQUIRED",
+      "prototype": "GunSPSA_Sniper_SG",
+      "array": "UpgradePrototypeSIDs",
+      "bprue_sources": [
+        "GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg"
+      ],
+      "oxa_sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg"
+      ],
+      "bprue_modes": [],
+      "oxa_modes": [
+        "bpatch"
+      ],
+      "common": [],
+      "bprue_only": [
+        "BPRUEDLCDLC1SPSASniper_Upgrade_BPRUE_SGShared_ModuleHandling_LightweightAssembly",
+        "BPRUEDLCDLC1SPSASniper_Upgrade_BPRUE_SGShared_ModuleHandling_ReinforcedAssembly",
+        "BPRUEDLCDLC1SPSASniper_Upgrade_BPRUE_SGShared_ModuleRangeProfile_CqbConfiguration",
+        "BPRUEDLCDLC1SPSASniper_Upgrade_BPRUE_SGShared_ModuleRangeProfile_RangeConfiguration",
+        "BPRUEDLCDLC1SPSASniper_Upgrade_BPRUE_SGShared_ModuleReliability_HardenedComponents",
+        "BPRUEDLCDLC1SPSASniper_Upgrade_BPRUE_SGShared_ModuleReliability_LightweightComponents",
+        "BPRUEDLCDLC1SPSASniper_Upgrade_BPRUE_SG_Action_HighSpeed",
+        "BPRUEDLCDLC1SPSASniper_Upgrade_BPRUE_SG_Action_Reinforced",
+        "BPRUEDLCDLC1SPSASniper_Upgrade_BPRUE_SG_Action_Tuned",
+        "BPRUEDLCDLC1SPSASniper_Upgrade_BPRUE_SG_Handling_Combat",
+        "BPRUEDLCDLC1SPSASniper_Upgrade_BPRUE_SG_Handling_Lightweight",
+        "BPRUEDLCDLC1SPSASniper_Upgrade_BPRUE_SG_Handling_Stabilized",
+        "BPRUEDLCDLC1SPSASniper_Upgrade_BPRUE_SG_Pattern_Breacher",
+        "BPRUEDLCDLC1SPSASniper_Upgrade_BPRUE_SG_Pattern_FieldChoke",
+        "BPRUEDLCDLC1SPSASniper_Upgrade_BPRUE_SG_Pattern_FullChoke",
+        "BPRUEDLCDLC1SPSASniper_Upgrade_BPRUE_Signature_FlechetteSpecialist",
+        "GunSPSA_Upgrade_Attachment_Grip",
+        "GunSPSA_Upgrade_Attachment_Laser",
+        "GunSPSA_Upgrade_Attachment_Laser_HP",
+        "GunSPSA_Upgrade_Attachment_Offset_Stock",
+        "GunSPSA_Upgrade_Attachment_Rail",
+        "GunSPSA_Upgrade_Attachment_SinMuz",
         "GunSPSA_Upgrade_Barrel_2_1",
         "GunSPSA_Upgrade_Barrel_2_2",
         "GunSPSA_Upgrade_Barrel_3_1",
@@ -43900,27 +44114,30 @@
       ],
       "common": [],
       "bprue_only": [
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleAction_ControlledAction",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleAction_HighCyclicSystem",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleBallistics_ArmorPiercing",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleBallistics_SoftTarget",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModulePrecision_PrecisionTuning",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModulePrecision_RecoilControl",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleReliability_HardenedComponents",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_ARShared_ModuleReliability_LightweightComponents",
         "BPRUEUniqueMerc_Upgrade_BPRUE_AdditionalCaliber_762x39",
         "BPRUEUniqueMerc_Upgrade_BPRUE_AdditionalCaliber_762x39_AP",
         "BPRUEUniqueMerc_Upgrade_BPRUE_AdditionalCaliber_762x39_Expanding",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_FireControl_Burst",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_FireControl_Precision",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_FireRate_Balanced",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_FireRate_HighSpeed",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_Reload_Competition",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_Reload_Reinforced",
         "BPRUEUniqueMerc_Upgrade_BPRUE_Signature_ContractorPackage",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_Stock_Lightweight",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_Stock_Marksman",
-        "BPRUEUniqueMerc_Upgrade_BPRUE_Stock_Stabilized",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleBallistics_ArmorPiercing",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleBallistics_SoftTarget",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModulePrecision_PrecisionTuning",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModulePrecision_RecoilControl",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_CqbConfiguration",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleRangeProfile_RangeConfiguration",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleReliability_HardenedComponents",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_SniperShared_ModuleReliability_LightweightComponents",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Action_Precision",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Action_Rapid",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Action_Reinforced",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Ballistics_HeavyBarrel",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Ballistics_HighVelocity",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Ballistics_MatchBarrel",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Marksman_Benchrest",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Marksman_FieldMarksman",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Marksman_SnapShooter",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Stock_AdjustableStock",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Stock_LightweightStock",
+        "BPRUEUniqueMerc_Upgrade_BPRUE_Sniper_Stock_PrecisionStock",
         "GunGvintar_Upgrade_Attachment_Laser",
         "GunGvintar_Upgrade_Attachment_Laser_HP",
         "GunGvintar_Upgrade_Attachment_Offset_Stock",
@@ -44072,7 +44289,6 @@
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A045_Expanding",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A918",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Caliber_A918_AP",
-        "BPRUEUniqueRatKiller_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueRatKiller_Upgrade_BPRUE_Reload_Competition",
@@ -44241,7 +44457,6 @@
       "bprue_only": [
         "BPRUEUniqueShakh_Upgrade_BPRUE_Action_Controlled",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Action_HighSpeed",
-        "BPRUEUniqueShakh_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueShakh_Upgrade_BPRUE_Reload_Competition",
@@ -44346,7 +44561,6 @@
       "bprue_only": [
         "BPRUEUniqueSilence_Upgrade_BPRUE_Action_Controlled",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Action_HighSpeed",
-        "BPRUEUniqueSilence_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueSilence_Upgrade_BPRUE_Reload_Competition",
@@ -44503,7 +44717,6 @@
       "bprue_only": [
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Action_Controlled",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Action_HighSpeed",
-        "BPRUEUniqueSpitfire_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueSpitfire_Upgrade_BPRUE_Reload_Competition",
@@ -44560,7 +44773,6 @@
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A045_Expanding",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A919",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Caliber_A919_AP",
-        "BPRUEUniqueSpitter_Upgrade_BPRUE_PistolConversion",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Readiness_QuickDraw",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Readiness_Stabilized",
         "BPRUEUniqueSpitter_Upgrade_BPRUE_Reload_Competition",
@@ -48620,6 +48832,80 @@
     },
     {
       "severity": "PROTOTYPE_OVERLAP",
+      "prototype": "GunFallschirmjager_DMR_GS",
+      "path": "<prototype>",
+      "bprue": {
+        "source": "GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
+        "kind": "prototype",
+        "value": null,
+        "modes": [
+          "bpatch"
+        ]
+      },
+      "oxa": {
+        "source": "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg",
+        "kind": "prototype",
+        "value": null,
+        "modes": [
+          "bpatch"
+        ]
+      }
+    },
+    {
+      "severity": "STRUCTURAL",
+      "prototype": "GunFallschirmjager_DMR_GS",
+      "path": "UpgradePrototypeSIDs",
+      "bprue": {
+        "source": "GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
+        "kind": "struct",
+        "value": null,
+        "modes": []
+      },
+      "oxa": {
+        "source": "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg",
+        "kind": "struct",
+        "value": null,
+        "modes": [
+          "bpatch"
+        ]
+      }
+    },
+    {
+      "severity": "CONFLICT",
+      "prototype": "GunFallschirmjager_DMR_GS",
+      "path": "UpgradePrototypeSIDs.[3]",
+      "bprue": {
+        "source": "GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
+        "kind": "scalar",
+        "value": "GunGP3A_Upgrade_Attachment_Laser_HP",
+        "modes": []
+      },
+      "oxa": {
+        "source": "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg",
+        "kind": "remove",
+        "value": null,
+        "modes": []
+      }
+    },
+    {
+      "severity": "CONFLICT",
+      "prototype": "GunFallschirmjager_DMR_GS",
+      "path": "UpgradePrototypeSIDs.[5]",
+      "bprue": {
+        "source": "GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
+        "kind": "scalar",
+        "value": "GunGP3A_Upgrade_Attachment_Offset_Stock",
+        "modes": []
+      },
+      "oxa": {
+        "source": "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg",
+        "kind": "remove",
+        "value": null,
+        "modes": []
+      }
+    },
+    {
+      "severity": "PROTOTYPE_OVERLAP",
       "prototype": "GunFora230_PP",
       "path": "<prototype>",
       "bprue": {
@@ -51077,6 +51363,80 @@
       },
       "oxa": {
         "source": "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_Vintorez.cfg",
+        "kind": "remove",
+        "value": null,
+        "modes": []
+      }
+    },
+    {
+      "severity": "PROTOTYPE_OVERLAP",
+      "prototype": "GunHSG72_DMR_GS",
+      "path": "<prototype>",
+      "bprue": {
+        "source": "GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
+        "kind": "prototype",
+        "value": null,
+        "modes": [
+          "bpatch"
+        ]
+      },
+      "oxa": {
+        "source": "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg",
+        "kind": "prototype",
+        "value": null,
+        "modes": [
+          "bpatch"
+        ]
+      }
+    },
+    {
+      "severity": "STRUCTURAL",
+      "prototype": "GunHSG72_DMR_GS",
+      "path": "UpgradePrototypeSIDs",
+      "bprue": {
+        "source": "GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
+        "kind": "struct",
+        "value": null,
+        "modes": []
+      },
+      "oxa": {
+        "source": "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg",
+        "kind": "struct",
+        "value": null,
+        "modes": [
+          "bpatch"
+        ]
+      }
+    },
+    {
+      "severity": "CONFLICT",
+      "prototype": "GunHSG72_DMR_GS",
+      "path": "UpgradePrototypeSIDs.[1]",
+      "bprue": {
+        "source": "GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
+        "kind": "scalar",
+        "value": "GunGP3A_Upgrade_Attachment_Laser_HP",
+        "modes": []
+      },
+      "oxa": {
+        "source": "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg",
+        "kind": "remove",
+        "value": null,
+        "modes": []
+      }
+    },
+    {
+      "severity": "CONFLICT",
+      "prototype": "GunHSG72_DMR_GS",
+      "path": "UpgradePrototypeSIDs.[2]",
+      "bprue": {
+        "source": "GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
+        "kind": "scalar",
+        "value": "GunGP3A_Upgrade_Attachment_Offset_Stock",
+        "modes": []
+      },
+      "oxa": {
+        "source": "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg",
         "kind": "remove",
         "value": null,
         "modes": []
@@ -54238,6 +54598,27 @@
       "prototype": "GunSPSA_Sniper_SG",
       "path": "<prototype>",
       "bprue": {
+        "source": "GameLite/DLCGameData/DLC1/ItemPrototypes/ItemPrototypes_patch_BPRUE.cfg",
+        "kind": "prototype",
+        "value": null,
+        "modes": [
+          "bpatch"
+        ]
+      },
+      "oxa": {
+        "source": "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg",
+        "kind": "prototype",
+        "value": null,
+        "modes": [
+          "bpatch"
+        ]
+      }
+    },
+    {
+      "severity": "PROTOTYPE_OVERLAP",
+      "prototype": "GunSPSA_Sniper_SG",
+      "path": "<prototype>",
+      "bprue": {
         "source": "GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
         "kind": "prototype",
         "value": null,
@@ -54252,6 +54633,80 @@
         "modes": [
           "bpatch"
         ]
+      }
+    },
+    {
+      "severity": "PROTOTYPE_OVERLAP",
+      "prototype": "GunSPSA_Sniper_SG",
+      "path": "<prototype>",
+      "bprue": {
+        "source": "GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
+        "kind": "prototype",
+        "value": null,
+        "modes": [
+          "bpatch"
+        ]
+      },
+      "oxa": {
+        "source": "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg",
+        "kind": "prototype",
+        "value": null,
+        "modes": [
+          "bpatch"
+        ]
+      }
+    },
+    {
+      "severity": "STRUCTURAL",
+      "prototype": "GunSPSA_Sniper_SG",
+      "path": "UpgradePrototypeSIDs",
+      "bprue": {
+        "source": "GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
+        "kind": "struct",
+        "value": null,
+        "modes": []
+      },
+      "oxa": {
+        "source": "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg",
+        "kind": "struct",
+        "value": null,
+        "modes": [
+          "bpatch"
+        ]
+      }
+    },
+    {
+      "severity": "CONFLICT",
+      "prototype": "GunSPSA_Sniper_SG",
+      "path": "UpgradePrototypeSIDs.[17]",
+      "bprue": {
+        "source": "GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
+        "kind": "scalar",
+        "value": "GunSPSA_Upgrade_Attachment_Laser_HP",
+        "modes": []
+      },
+      "oxa": {
+        "source": "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg",
+        "kind": "remove",
+        "value": null,
+        "modes": []
+      }
+    },
+    {
+      "severity": "CONFLICT",
+      "prototype": "GunSPSA_Sniper_SG",
+      "path": "UpgradePrototypeSIDs.[18]",
+      "bprue": {
+        "source": "GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_patch_BPRUE.cfg",
+        "kind": "scalar",
+        "value": "GunSPSA_Upgrade_Attachment_Offset_Stock",
+        "modes": []
+      },
+      "oxa": {
+        "source": "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg",
+        "kind": "remove",
+        "value": null,
+        "modes": []
       }
     },
     {
@@ -60887,6 +61342,13 @@
       "sources": [
         "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/ItemPrototypes/WeaponPrototypes_OXA.cfg",
         "Python/VanillaReference/OxaData/OXA_StandardA_P/Stalker2/Content/GameLite/GameData/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_def_SPAS12.cfg"
+      ]
+    },
+    {
+      "prototype": "GunSPSA_Sniper_SG",
+      "sources": [
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/ItemPrototypes/ItemPrototypes_DLC1.cfg",
+        "Python/VanillaReference/OxaData/OXA_StandardC_P/Stalker2/Content/GameLite/DLCGameData/DLC1/WeaponData/WeaponGeneralSetupPrototypes/WeaponGeneralSetupPrototypes_DLC1.cfg"
       ]
     },
     {

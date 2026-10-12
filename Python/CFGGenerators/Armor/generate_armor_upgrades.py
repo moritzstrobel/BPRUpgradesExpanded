@@ -98,6 +98,7 @@ def load_config() -> dict:
     config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
     module_config = json.loads(MODULE_CONFIG_PATH.read_text(encoding="utf-8"))
     config["generic_modules"] = module_config["modules"]
+    config["special_upgrades"] = module_config.get("special_upgrades", {})
     return config
 
 
@@ -229,6 +230,36 @@ def build_upgrades(config: dict | None = None, classification: dict | None = Non
                 content_pack=armor.get("pack"),
                 base_armor_sid=armor.get("base_armor_sid"),
             ))
+
+    # Armor-specific one-off upgrades. These intentionally live outside the generic
+    # module pool because they alter the identity/progression of one concrete armor.
+    for special_id, special_cfg in config.get("special_upgrades", {}).items():
+        armor_sid = special_cfg["armor_sid"]
+        armor = next((item for item in generic_armors if item["sid"] == armor_sid), None)
+        if armor is None:
+            raise ValueError(f"{special_id}: target armor {armor_sid} is not classified")
+        effect_sids = list(special_cfg.get("external_effects", []))
+        effect_sids.extend(
+            f"BPRUE_Armor_Special_{special_id}_Effect_{index + 1}"
+            for index, _ in enumerate(special_cfg.get("effects", []))
+        )
+        result.append(ArmorUpgradeDefinition(
+            sid=f"{armor_sid}_Upgrade_BPRUE_SPECIAL_{special_id.title().replace('_', '')}",
+            armor_sid=armor_sid,
+            faction="SPECIAL",
+            category=armor["category"],
+            signature="Special",
+            target_part="Body",
+            text_sid=special_cfg["text_sid"],
+            hint_sid=special_cfg["hint_sid"],
+            cost=int(special_cfg["cost"]),
+            effects=tuple(effect_sids),
+            tier_index=0,
+            family=f"SPECIAL:{special_id}",
+            image=BPRUE_MODULE_IMAGE,
+            content_pack=armor.get("pack"),
+            base_armor_sid=armor.get("base_armor_sid"),
+        ))
 
     # Generic modules are mutually exclusive only inside their authored trade-off group.
     from dataclasses import replace
@@ -502,6 +533,10 @@ def render_effects(config: dict | None = None) -> str:
                     definitions[sid] = {"type": "Composite", "value": spec["value"], "show": True, "positive": spec.get("positive"), "extra_effects": children}
                 else:
                     definitions[sid] = spec
+    for special_id, special_cfg in config.get("special_upgrades", {}).items():
+        for index, spec in enumerate(special_cfg.get("effects", [])):
+            sid = f"BPRUE_Armor_Special_{special_id}_Effect_{index + 1}"
+            definitions[sid] = spec
     referenced = {
         effect_sid
         for faction_cfg in config["prototype_factions"].values()
@@ -515,6 +550,11 @@ def render_effects(config: dict | None = None) -> str:
         for module_id, module_cfg in config.get("generic_modules", {}).items()
         for category, effects in module_cfg["effects"].items()
         for index, _ in enumerate(effects)
+    )
+    referenced.update(
+        f"BPRUE_Armor_Special_{special_id}_Effect_{index + 1}"
+        for special_id, special_cfg in config.get("special_upgrades", {}).items()
+        for index, _ in enumerate(special_cfg.get("effects", []))
     )
 
     missing = sorted(referenced - set(definitions))

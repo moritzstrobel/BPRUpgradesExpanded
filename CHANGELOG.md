@@ -1,0 +1,50 @@
+# Changelog
+
+Notable changes to BPR Upgrades Expanded are recorded here, independently of design proposals and investigation notes.
+
+This file tracks **implemented changes**, not planned features. Entries under **Unreleased** describe source changes on the current development branch; they are **not yet part of a published release**. Release validation is tracked separately in `Python/Design/BalancingReview/ReleaseValidationChecklist.md`.
+
+## [Unreleased]
+
+### Changed
+- **Effect localization audit:** Added Bleeding Chance and Cover Piercing labels (EN/RU/ZH), plus Vanilla UI localization overrides for `DistanceDropOffLengthPos15Effect` and `FlatnessUp5Effect`. Replaced the unresolved `DistanceDropOffLengthPos5Effect` references in AR/Vintar conversions with `BPRUE_Shared_DropOffLengthPos5Effect`.
+- **Repair cost balancing:** BPRUE-generated upgrades now explicitly set `RepairCostModifier` to `0.35` for standard modules or `0.25` for caliber conversions (`Caliber`/`AdditionalCaliber` and upgrades using `ChangeCaliber` effects), consistently across weapon classes and content packs.
+- **Upgrade hotspot orientation:** Newly enabled `Barrel` and `Handguard` sections now explicitly use `ModuleLineDirection = ELineDirection::Left` in base-game, DLC and pistol-slot conversion weapon patches. Already-enabled Vanilla sections remain untouched;
+- **AR Precision Tuning:** Replaced −15% dispersion with +10% flatness and +5% damage drop-off length, retaining +8% recoil as the drawback. Uses an AR-specific localization and effect override; Recoil Control, Controlled Action, upgrade SIDs, and blocking remain unchanged.
+- **AR close-range vs. marksman specialization:** Rebalanced FireRate (High-Speed Operation: −12% firing interval; Tuned Gas System: −5% firing interval, −5% recoil, +15% recovery, +10% wear) and AR-only shared Action profiles (High-Cyclic: −8% firing interval, +10% accuracy, +10% recoil, +8% wear; Controlled Action: +10% firing interval, +15% accuracy, +10% recovery). Existing upgrade SIDs and within-group exclusions are preserved.
+- **Breaking change — VS Vintar class:** Moved `GunGvintar` from AR specialization modules to the Sniper/DMR family; the Merc unique variant now inherits that class profile. Preserved the Vintar's existing 9×39 → 7.62×39 Default/AP/Expanding conversion upgrade SIDs and effect bundles. Existing AR module installations may no longer be valid on existing saves.
+- **Sniper caliber conversions vs. Vanilla ammo upgrades:** Added reciprocal blocking between Default/AP/Supersonic caliber conversions and the conflicting terminal Vanilla barrel ammunition upgrades for SVD (`GunSVDM_Upgrade_Barrel_3_2`), SVU (`GunSVU_Upgrade_Barrel_3_2`), Three-Line (`GunThreeLine_Upgrade_Barrel_3`) and M701 (`GunM701_Upgrade_Barrel_3_2`). Vanilla upgrades are extended through a separate generated `bpatch` file rather than modifying the original Vanilla definitions; existing Vanilla blocking entries are intended to remain intact. BPRUE conversion SIDs are unchanged.
+- **Shared ballistic modules:** Reworked Soft-Target into an experimental bleeding-chance profile (+10% BleedingChancePerShot, −10% CoverPiercing) and renamed Armor-Piercing to Barrier Module (+20% CoverPiercing, −10% weapon damage). Both no longer modify ArmorPiercing; upgrade SIDs and mutual blocking remain unchanged. Updated catalog and EN/RU/ZH localization.
+- **DMR/Sniper module profiles:** Range Configuration, CQB Configuration and Precision Tuning now use sniper-specific effect bundles. Existing upgrade SIDs and blocking remain intact;
+- **AR fire-control specializations:** Burst replaces automatic with semi-auto + burst; Precision retains semi-auto only, trades former damage/AP bonuses for +15% maximum-dispersion accuracy, +10% recoil recovery and -10% aiming movement.
+- **SMG conversion specializations:** M10, Bucket and Zubr variants inherit full Default profiles. AP adds 5% armor penetration; Expanding uses ammunition modifiers. Existing conversion choices and restrictions remain intact.
+- **AR caliber conversions:** Added complete shared Default/AP/Supersonic profiles for 5.45 to 7.62x54R and 5.56 to .308, and Default/AP/Expanding for 7.62x39. Reduced unconditional damage/AP gains and introduced trajectory, damage-drop-off, recoil and wear trade-offs. VS Vintar (9x39 to 7.62x39) uses a separate baseline. Ammo restrictions, variant blocking and vanilla-owned conversions remain unchanged. Updated EN/RU/ZH descriptions.
+- **Sniper/DMR caliber specializations:** AP and Supersonic conversions now inherit the complete directional Default ballistic profile while retaining their own ammo-type restrictions and mutual blocking. AP adds +5% armor penetration and -5% damage; Supersonic adds +5% projectile speed and +5% wear per shot (without redundant flatness buffs). Updated all six caliber-conversion descriptions (EN/RU/ZH).
+- **Sniper/DMR Default caliber conversions:** Reworked 7.62x54R to .308 (+10% velocity, +10% flatness, +15% damage drop-off length, +5% recoil control) and .308 to 7.62x54R (-10% velocity, -10% flatness, -15% drop-off length, 10% recoil penalty, 10% wear per shot penalty). Removed Default damage/AP modifiers; AP and Supersonic subsequently rebalanced as described above.
+- **Sniper / DMR – Field Marksman:** Replaced the +10% shot-recovery bonus with a 10% aiming-time penalty to introduce a meaningful trade-off.
+- **Sniper / DMR – Adjustable Stock:** Removed the +10% recoil-control bonus. Aiming stability and aimed movement benefits remain.
+- **Sniper / DMR – Benchrest:** Reduced recoil-control bonus from +15% to +10%.
+- **Sniper / DMR – Precision Stock:** Removed the +20% shot-recovery bonus. Stability, recoil control and slower aiming remain.
+- **Assault rifles – Stabilized Stock:** Reduced shot-recovery bonus from +20% to +10%; other effects remain unchanged.
+- **Assault rifles – Balanced Fire Rate:** Reduced shot-recovery bonus from +20% to +10%.
+- **Assault rifles – Competition Reload:** Replaced the 15% recoil penalty with the existing 5% dispersion penalty; the 20% faster reload remains.
+- **Assault rifles – Reinforced Reload:** Removed the 10% faster reload bonus; reduced weapon wear per shot and slower firing cycle remain.
+- **Sniper / DMR – Match Barrel:** Reduced dispersion-improvement bonus from +25% to +15%.
+- **Sniper / DMR – Heavy Barrel:** Reduced shot-recovery bonus from +20% to +10%.
+- **SMGs / Assault rifles – Controlled Action (shared):** Shifted the existing effect bundle from +10% recoil control / +10% dispersion improvement to +5% recoil control / +15% dispersion improvement. The 10% slower firing cycle remains; High-Cyclic System is unchanged. Updated the shared module catalog to match the generator.
+- **SMGs – Stabilized Readiness:** Replaced +15% recoil control and +20% shot recovery with +15% idle-sway stability on both axes; the 10% aiming-time penalty remains. This avoids duplicating Tactical Stock's exact effect bundle.
+- **SMGs – Controlled Action (class-specific):** Reduced shot recovery from +20% to +10%; recoil, reload and fire-cycle effects remain unchanged. This is distinct from the shared Controlled Action module.
+- **SMGs – Tactical Stock:** Reduced shot-recovery bonus from +20% to +10%; recoil control and aiming-time penalty remain unchanged.
+- **SMGs – Stabilized Stock:** Reduced recoil-control bonus from +20% to +15%; dispersion improvement and weight penalty remain unchanged.
+- **Pistols – Balanced Action:** Reduced shot recovery from +20% to +10% to limit combined automatic-fire control.
+- **Pistols – Controlled Action:** Reduced shot recovery from +20% to +10%; slower firing and recoil control remain.
+- **Pistols – Stabilized Handling:** Replaced +20% shot recovery with +15% idle-sway stability on both axes, differentiating steady aiming from action/recoil specialization.
+- **Shotguns – Reinforced Action:** Reduced shot recovery from +20% to +10%; recoil control and slower cycling remain.
+- **Shotguns – Stabilized Furniture:** Reduced shot recovery from +20% to +10%; recoil, weight and aiming penalties remain.
+- Updated affected module descriptions in English, Russian and Simplified Chinese.
+
+### Development notes
+- Gameplay, save compatibility, UI and effect-behavior checks are tracked in `Python/Design/BalancingReview/ReleaseValidationChecklist.md` rather than repeated on individual changelog entries.
+- `7.62×39` (`A762`) conversions remain supported for mod compatibility; vanilla ammunition availability is unchanged.
+
+<!-- Add future implemented changes under Unreleased; move entries into a versioned section when a release is published. -->

@@ -554,5 +554,61 @@
       },
       "group": "HEMOSTATIC"
     }
+  },
+  "special_upgrades": {
+    "CUIRASS_PROTOTYPE_SPRINT": {
+      "armor_sid": "Exoskeleton_Dolg_Armor",
+      "name": "Prototype Servo System",
+      "cost": 25000,
+      "text_sid": "sid_bprue_armor_cuirass_prototype_sprint_name",
+      "hint_sid": "sid_bprue_armor_cuirass_prototype_sprint_description",
+      "external_effects": [
+        "AddSprintEffect"
+      ],
+      "effects": [
+        {
+          "type": "ArmorItemWeight",
+          "value": 15,
+          "positive": "Negative",
+          "show": true
+        },
+        {
+          "type": "RegenStamina",
+          "value": "-20%",
+          "positive": "Negative",
+          "show": true
+        },
+        {
+          "type": "ProtectionBurn",
+          "value": "-10%",
+          "positive": "Negative",
+          "show": false
+        },
+        {
+          "type": "ProtectionShock",
+          "value": "-10%",
+          "positive": "Negative",
+          "show": false
+        },
+        {
+          "type": "ProtectionChemical",
+          "value": "-10%",
+          "positive": "Negative",
+          "show": false
+        },
+        {
+          "type": "ProtectionRadiation",
+          "value": "-10%",
+          "positive": "Negative",
+          "show": false
+        },
+        {
+          "type": "ProtectionPSY",
+          "value": "-10%",
+          "positive": "Negative",
+          "show": false
+        }
+      ]
+    }
   }
 }

@@ -17,13 +17,13 @@ WEAPON_OUTPUT = CONTENT_ROOT / "GameLite/GameData/WeaponData/WeaponGeneralSetupP
 TEMPLATE_SID = "BPRUE_PistolModuleTemplate"
 ACTION = {
     "high_speed": (2200, ["BPRUE_FireIntervalNeg20Effect", "BPRUE_Pistol_RecoilPenalty15Effect", "BPRUE_DurabilityPerShotNeg20Effect"]),
-    "balanced": (2100, ["BPRUE_FireIntervalNeg10Effect", "RecoilPos10Effect", "ShotRecoveryPos20Effect", "BPRUE_DurabilityPerShotNeg10Effect"]),
-    "controlled": (2200, ["BPRUE_Pistol_FireIntervalPos10Effect", "RecoilPos15Effect", "ShotRecoveryPos20Effect"]),
+    "balanced": (2100, ["BPRUE_FireIntervalNeg10Effect", "RecoilPos10Effect", "ShotRecoveryPos10Effect", "BPRUE_DurabilityPerShotNeg10Effect"]),
+    "controlled": (2200, ["BPRUE_Pistol_FireIntervalPos10Effect", "RecoilPos15Effect", "ShotRecoveryPos10Effect"]),
 }
 HANDLING = {
     "quick_draw": (2000, ["WeightPos15Effect", "AimingTimePos15Effect", "BPRUE_Pistol_RecoilPenalty10Effect"]),
     "tactical": (2100, ["AimingTimePos10Effect", "AimingMovementPos10Effect", "ShotRecoveryPos10Effect"]),
-    "stabilized": (2200, ["RecoilPos15Effect", "ShotRecoveryPos20Effect", "AimingTimeNeg10Effect"]),
+    "stabilized": (2200, ["RecoilPos15Effect", "IdleSwayXPos15Effect", "IdleSwayYPos15Effect", "AimingTimeNeg10Effect"]),
 }
 IMAGE = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Weapons/Handgun/APB/Barrel/Upgrade/T_APBU_a_1.T_APBU_a_1'"
 ICON = "Texture2D'/Game/GameLite/FPS_Game/UIRemaster/UITextures/PDA/Upgrades/Icons/T_PDA_Upgrades_Icon_Recoil.T_PDA_Upgrades_Icon_Recoil'"
